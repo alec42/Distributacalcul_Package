@@ -10,16 +10,14 @@ This R package was created in the first place to calculate more quickly and easi
 
 
 
-# Formulas available
-I've tried to make the package pretty simple :
+# Formulas convention
+I've tried to make the package pretty simple to use, the syntax is based on quite the same as some popular R package, like the [`stats` package](https://stat.ethz.ch/R-manual/R-devel/library/stats/html/00Index.html) or the [`actuar` package](https://cran.r-project.org/web/packages/actuar/index.html) :
 
 |Formulas  | `code`|
 |:-----------:|:-----------------:|
 |Mean         |`E_<distribution>` |
 |Variance     |`V_<distribution>` |
 
-## Mean
-if you want to get the mean of a specific function, you just have to enter  `E_*<name of the distribution>`. For example, you can calculate the mean for a $Gamma(\alpha, \beta)$ distribution with `E_gamma(alph, beta)`.
 
 # Updates
 |Date   | modification|
