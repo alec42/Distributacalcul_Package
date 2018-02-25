@@ -12,4 +12,4 @@ This R package was created in the first place to calculate more quickly and easi
 I've tried to make the package pretty simple : 
 
 ## Mean
-if you want to get the mean of a specific function, you just have to enter `E_*problaw`
+if you want to get the mean of a specific function, you just have to enter  `E_*<name of the distribution>`. For example, you can calculate the mean for a $Gamma(\alpha, \beta)$ distribution with `E_gamma(alph, beta)`.
