@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# Introduction\nThis R package was created in the first place to calculate more quickly and easily a lot of formulas (mean, variance, VaR, TVaR, stop-loss function, etc.) related to popular probability distributions, such as :  \n\n- Uniform \n- Binomial\n- Exponential\n- Gamma\n- Pareto\n- \n\n\n\n# Formulas available\nI've tried to make the package pretty simple :\n\n|Formulas  | `code`|\n|:-----------:|:-----------------:|\n|Mean         |`E_<distribution>` |\n|Variance     |`V_<distribution>` |\n\n## Mean\nif you want to get the mean of a specific function, you just have to enter  `E_*<name of the distribution>`. For example, you can calculate the mean for a $Gamma(\\alpha, \\beta)$ distribution with `E_gamma(alph, beta)`.\n\n# Updates\n|Date   | modification|\n|:-----------:|:---------:|\n|24/02/2018 | Intial commit of the package|\n\n",
+    "created" : 1519533541298.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3544971712",
+    "id" : "ECBC3220",
+    "lastKnownWriteTime" : 1519534484,
+    "last_content_update" : 1519534484492,
+    "path" : "~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage/README.md",
+    "project_path" : "README.md",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "markdown"
+}
