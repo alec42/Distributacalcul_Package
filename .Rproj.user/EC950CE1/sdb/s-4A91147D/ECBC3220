@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# Introduction\nThis R package was created in the first place to calculate more quickly and easily a lot of formulas related as popular probability distributions, such as : \n\n- Uniform \n- Binomial\n- Exponential\n- Gamma\n- \n",
+    "created" : 1519533541298.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3524957350",
+    "id" : "ECBC3220",
+    "lastKnownWriteTime" : 1519533658,
+    "last_content_update" : 1519533658202,
+    "path" : "~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage/README.md",
+    "project_path" : "README.md",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "markdown"
+}
