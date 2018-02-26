@@ -1,0 +1,83 @@
+]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage[?1034h$ [K$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rhistory[m
+	[31mmodified:   .Rproj.user/EC950CE1/pcs/windowlayoutstate.pper[m
+	[31mmodified:   .Rproj.user/EC950CE1/rmd-outputs[m
+	[31mdeleted:    .Rproj.user/EC950CE1/sdb/s-DA709164/9539B3F1[m
+	[31mdeleted:    .Rproj.user/EC950CE1/sdb/s-DA709164/ECBC3220[m
+	[31mdeleted:    .Rproj.user/EC950CE1/sdb/s-DA709164/ED4AE73D[m
+	[31mdeleted:    .Rproj.user/EC950CE1/sdb/s-DA709164/F2C215A0[m
+	[31mdeleted:    .Rproj.user/EC950CE1/sdb/s-DA709164/lock_file[m
+	[31mmodified:   README.md[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31m.Rproj.user/EC950CE1/console06/[m
+	[31m.Rproj.user/EC950CE1/sdb/per/[m
+	[31m.Rproj.user/EC950CE1/sources/[m
+	[31m.Rproj.user/shared/[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage$ git[K[K[Kls
+DESCRIPTION		R			tvarPackage.Rproj
+LICENSE			README.md
+NAMESPACE		man
+]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage$ ls -a
+.			.git			README.md
+..			DESCRIPTION		man
+.Rbuildignore		LICENSE			tvarPackage.Rproj
+.Rhistory		NAMESPACE
+.Rproj.user		R
+]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage$ git add -a[KA
+]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage$ git commit "Mi[K[KAdding new form[K[K[Kunctions to package"
+error: pathspec 'Adding new functions to package' did not match any file(s) known to git.
+]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage$ git push
+Everything up-to-date
+]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mmodified:   .Rhistory[m
+	[32mnew file:   .Rproj.user/EC950CE1/console06/4F4AB03C[m
+	[32mnew file:   .Rproj.user/EC950CE1/console06/4F4AB03C.env[m
+	[32mnew file:   .Rproj.user/EC950CE1/console06/INDEX001[m
+	[32mmodified:   .Rproj.user/EC950CE1/pcs/windowlayoutstate.pper[m
+	[32mmodified:   .Rproj.user/EC950CE1/rmd-outputs[m
+	[32mrenamed:    .Rproj.user/EC950CE1/sdb/s-DA709164/9539B3F1 -> .Rproj.user/EC950CE1/sdb/per/t/9539B3F1[m
+	[32mnew file:   .Rproj.user/EC950CE1/sdb/per/t/ECBC3220[m
+	[32mrenamed:    .Rproj.user/EC950CE1/sdb/s-DA709164/F2C215A0 -> .Rproj.user/EC950CE1/sdb/per/t/F2C215A0[m
+	[32mrenamed:    .Rproj.user/EC950CE1/sdb/s-DA709164/ED4AE73D -> .Rproj.user/EC950CE1/sdb/per/u/ED4AE73D[m
+	[32mnew file:   .Rproj.user/EC950CE1/sources/prop/1B2D34D0[m
+	[32mnew file:   .Rproj.user/EC950CE1/sources/prop/7E0E3B8E[m
+	[32mnew file:   .Rproj.user/EC950CE1/sources/prop/A7009ADF[m
+	[32mnew file:   .Rproj.user/EC950CE1/sources/prop/INDEX[m
+	[32mnew file:   .Rproj.user/EC950CE1/sources/s-903DA209/9539B3F1[m
+	[32mnew file:   .Rproj.user/EC950CE1/sources/s-903DA209/9539B3F1-contents[m
+	[32mrenamed:    .Rproj.user/EC950CE1/sdb/s-DA709164/ECBC3220 -> .Rproj.user/EC950CE1/sources/s-903DA209/ECBC3220[m
+	[32mnew file:   .Rproj.user/EC950CE1/sources/s-903DA209/ECBC3220-contents[m
+	[32mnew file:   .Rproj.user/EC950CE1/sources/s-903DA209/ED4AE73D[m
+	[32mnew file:   .Rproj.user/EC950CE1/sources/s-903DA209/F2C215A0[m
+	[32mnew file:   .Rproj.user/EC950CE1/sources/s-903DA209/F2C215A0-contents[m
+	[32mrenamed:    .Rproj.user/EC950CE1/sdb/s-DA709164/lock_file -> .Rproj.user/EC950CE1/sources/s-903DA209/lock_file[m
+	[32mnew file:   .Rproj.user/shared/notebooks/patch-chunk-names[m
+	[32mmodified:   README.md[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/EC950CE1/console06/4F4AB03C[m
+
+]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage$ git add .R
+.Rbuildignore  .Rhistory      .Rproj.user/   
+$ git add .R[K[K[K[K[K[K[K[K[K[Kgit add -A
