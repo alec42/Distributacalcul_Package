@@ -21,7 +21,7 @@ I've tried to make the package pretty simple to use, the syntax is based on quit
 |Limited expected value     |`Elim_<distribution>` |
 |truncated mean     |`Etronq_<distribution>` |
 |Value-at-Risk     |`VaR_<distribution>` |
-|Tail Value-ar-Risk     |`TVaR_<distribution>` |
+|Tail Value-at-Risk     |`TVaR_<distribution>` |
 |Mean Excess-loss    |`Mexcess_<distribution>` |
 
 
@@ -29,4 +29,5 @@ I've tried to make the package pretty simple to use, the syntax is based on quit
 |Date   | modification|
 |:-----------:|:---------:|
 |24/02/2018 | Intial commit of the package|
+|27/02/2018 | adding binomial, uniform and exponential laws|
 
