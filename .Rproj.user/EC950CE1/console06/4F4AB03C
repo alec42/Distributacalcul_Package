@@ -115,3 +115,22 @@ remote: Resolving deltas:   0% (0/5)   [Kremote: Resolving deltas:  20% (1/5) 
 To https://github.com/gabrielcrepeault/tvarPackage.git
    1e8f989..c0fc62b  master -> master
 ]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage$ git add -A
+]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage$ git commit -m "Modifications"
+[master 093dadc] Modifications
+ 10 files changed, 85 insertions(+), 9 deletions(-)
+ create mode 100644 .Rproj.user/EC950CE1/sources/prop/10F9A76E
+ create mode 100644 .Rproj.user/EC950CE1/sources/prop/15F669B4
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-903DA209/A0B445B3
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-903DA209/A0B445B3-contents
+ create mode 100644 .Rproj.user/shared/notebooks/paths
+ create mode 100644 .gitignore
+]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage$ git push
+Counting objects: 19, done.
+Delta compression using up to 4 threads.
+Compressing objects:   5% (1/17)   Compressing objects:  11% (2/17)   Compressing objects:  17% (3/17)   Compressing objects:  23% (4/17)   Compressing objects:  29% (5/17)   Compressing objects:  35% (6/17)   Compressing objects:  41% (7/17)   Compressing objects:  47% (8/17)   Compressing objects:  52% (9/17)   Compressing objects:  58% (10/17)   Compressing objects:  64% (11/17)   Compressing objects:  70% (12/17)   Compressing objects:  76% (13/17)   Compressing objects:  82% (14/17)   Compressing objects:  88% (15/17)   Compressing objects:  94% (16/17)   Compressing objects: 100% (17/17)   Compressing objects: 100% (17/17), done.
+Writing objects:   5% (1/19)   Writing objects:  10% (2/19)   Writing objects:  15% (3/19)   Writing objects:  21% (4/19)   Writing objects:  26% (5/19)   Writing objects:  31% (6/19)   Writing objects:  36% (7/19)   Writing objects:  42% (8/19)   Writing objects:  47% (9/19)   Writing objects:  52% (10/19)   Writing objects:  57% (11/19)   Writing objects:  63% (12/19)   Writing objects:  68% (13/19)   Writing objects:  73% (14/19)   Writing objects:  78% (15/19)   Writing objects:  84% (16/19)   Writing objects:  89% (17/19)   Writing objects:  94% (18/19)   Writing objects: 100% (19/19)   Writing objects: 100% (19/19), 2.89 KiB | 328.00 KiB/s, done.
+Total 19 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/7)   [Kremote: Resolving deltas:  14% (1/7)   [Kremote: Resolving deltas:  28% (2/7)   [Kremote: Resolving deltas:  42% (3/7)   [Kremote: Resolving deltas:  57% (4/7)   [Kremote: Resolving deltas:  71% (5/7)   [Kremote: Resolving deltas: 100% (7/7)   [Kremote: Resolving deltas: 100% (7/7), completed with 6 local objects.[K
+To https://github.com/gabrielcrepeault/tvarPackage.git
+   c0fc62b..093dadc  master -> master
+]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage$ [K$ [K$ [K$ [K$ ]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage[?1034h$ git add -A

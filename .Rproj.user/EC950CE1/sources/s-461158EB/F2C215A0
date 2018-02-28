@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1519534094292.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F2C215A0",
+    "lastKnownWriteTime" : 1519532908,
+    "last_content_update" : 1519532908,
+    "path" : "~/Box Sync/Ulaval/Parascolaire/Programmation/R/script_r/TVaRFormulas/TVaRFormulas.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "9,42",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
