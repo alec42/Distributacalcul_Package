@@ -20,8 +20,8 @@ I've tried to make the package pretty simple to use, the syntax is based on quit
 |stop loss     |`SL_<distribution>` |
 |Limited expected value     |`Elim_<distribution>` |
 |truncated mean     |`Etronq_<distribution>` |
-|$VaR_\kappa$     |`VaR_<distribution>` |
-|$TVaR_\kappa$     |`TVaR_<distribution>` |
+|Value-at-Risk     |`VaR_<distribution>` |
+|Tail Value-ar-Risk     |`TVaR_<distribution>` |
 |Mean Excess-loss    |`Mexcess_<distribution>` |
 
 
