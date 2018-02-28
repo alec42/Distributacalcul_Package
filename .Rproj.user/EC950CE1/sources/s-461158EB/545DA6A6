@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1519792780932.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "766146538",
+    "id" : "545DA6A6",
+    "lastKnownWriteTime" : 1519792811,
+    "last_content_update" : 1519792811050,
+    "path" : "~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage/R/Elim_exp.R",
+    "project_path" : "R/Elim_exp.R",
+    "properties" : {
+        "cursorPosition" : "2,34",
+        "scrollLine" : "0",
+        "tempName" : "Untitled2"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -41,31 +41,9 @@ V_nbinom <- function(r, q) r * ((1-q) / q^2)
 # La loi géométrique est une binomiale négative avec r = 1
 
 ## Loi continues ####
-## Uniforme
-{
-    E_unif <- function(a, b) (a+b) / 2
-    V_unif <- function(a, b) (b-a)^2 / 12
-    Etronq_unif <- function(d,a, b) (d^2 -a^2) / (2*(b-a))
-    VaR_unif <- function(kappa, a, b) a + (b-a) * kappa
-    TVaR_unif <- function(kappa, a, b) a + (1/2)*(b-a)*(1+kappa)
-    SL_unif <- function(d, a, b) (b-d)^2 / (2*(b-a))
-    Mexcess_unif <- function(d, a, b) (b-d) / 2
-    Elim_unif <- function(d, a, b) (d^2 - a^2) / (2*(b-a)) + d*((b-d) / (b-a))
+## Uniforme ok
 
-}
-
-## Exponentielle
-{
-    E_exp <- function(b) 1/b
-    V_exp <- function(b) 1/b^2
-    Etronq_exp <- function(d, b) (1/b)*(1 - exp(-b*d)) - d*exp(-b*d)
-    VaR_exp <- function(kappa, b) -log(1 - kappa) / b
-    TVaR_exp <- function(kappa, b) VaR_exp(b, kappa) + E_exp(b)
-    SL_exp <- function(d, b) exp(-b*d) / b
-    Mexcess_exp <- function(d, b) 1/b
-    Elim_exp <- function(d, b) (1 - exp(-b*d)) / b
-}
-
+## Exponentielle ok
 ## Gamma
 {
     E_gamma <- function(a, b) a/b
