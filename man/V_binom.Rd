@@ -2,8 +2,7 @@
 % Please edit documentation in R/V_binom.R
 \name{V_binom}
 \alias{V_binom}
-\title{Variance d'une loi binomiale
-Calcul la variance d'une loi binomiale}
+\title{Variance d'une loi binomiale}
 \usage{
 V_binom(n, q)
 }
@@ -14,5 +13,4 @@ V_binom(n, q)
 }
 \description{
 Variance d'une loi binomiale
-Calcul la variance d'une loi binomiale
 }

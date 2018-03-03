@@ -277,3 +277,76 @@ To https://github.com/gabrielcrepeault/tvarPackage.git
    7f42844..3be92aa  master -> master
 ]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage$ ]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage[?1034h$ # Script shell pour update mon répertoire Git automatiquement
 ]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage$ git pull
+Already up-to-date.
+]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage$ git add -A
+]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage$ git commit -m "Update  README.md"
+[master d19a24d] Update  README.md
+ 67 files changed, 362 insertions(+), 187 deletions(-)
+ rewrite .Rproj.user/EC950CE1/console06/INDEX001 (87%)
+ create mode 100644 .Rproj.user/EC950CE1/sources/prop/2371E726
+ create mode 100644 .Rproj.user/EC950CE1/sources/prop/3314388C
+ create mode 100644 .Rproj.user/EC950CE1/sources/prop/36BA623F
+ create mode 100644 .Rproj.user/EC950CE1/sources/prop/630F0D9D
+ create mode 100644 .Rproj.user/EC950CE1/sources/prop/6E677F61
+ create mode 100644 .Rproj.user/EC950CE1/sources/prop/9363B921
+ create mode 100644 .Rproj.user/EC950CE1/sources/prop/9452BFEC
+ create mode 100644 .Rproj.user/EC950CE1/sources/prop/E045BCB4
+ create mode 100644 .Rproj.user/EC950CE1/sources/prop/E96FC96F
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-461158EB/131B2774-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-461158EB/1889F39C-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-461158EB/1E314EDD-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-461158EB/2FA0534E-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-461158EB/34D76ED0-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-461158EB/3F2FA4D5-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-461158EB/560ACAAF-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-461158EB/76525B6-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-461158EB/9539B3F1-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-461158EB/B08FE921-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-461158EB/C878D495-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-461158EB/CF9AF2C9-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-461158EB/D4619200
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-461158EB/D70F9CDE-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-461158EB/DAD60406-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-461158EB/E64267F8-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-461158EB/ECBC3220-contents
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-E9ED8391/2531539E
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-E9ED8391/2531539E-contents
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-E9ED8391/29FBF70-contents
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-E9ED8391/37224BEF-contents
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-E9ED8391/3E24EE6A-contents
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-E9ED8391/49963848-contents
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-E9ED8391/4A3CB8E8
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-E9ED8391/4A3CB8E8-contents
+ rename .Rproj.user/EC950CE1/sources/{s-461158EB => s-E9ED8391}/545DA6A6-contents (100%)
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-E9ED8391/6910B517-contents
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-E9ED8391/71A7D11A-contents
+ rename .Rproj.user/EC950CE1/sources/{s-461158EB => s-E9ED8391}/743C4A57 (79%)
+ rename .Rproj.user/EC950CE1/sources/{s-461158EB => s-E9ED8391}/743C4A57-contents (50%)
+ rename .Rproj.user/EC950CE1/sources/{s-461158EB/545DA6A6 => s-E9ED8391/A61E66DD} (57%)
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-E9ED8391/A61E66DD-contents
+ rename .Rproj.user/EC950CE1/sources/{s-461158EB => s-E9ED8391}/D4619200-contents (97%)
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-E9ED8391/D6B1998F
+ rename .Rproj.user/EC950CE1/sources/{s-461158EB/F2C215A0-contents => s-E9ED8391/D6B1998F-contents} (79%)
+ rename .Rproj.user/EC950CE1/sources/{s-461158EB => s-E9ED8391}/lock_file (100%)
+ create mode 100644 R/E_gamma.R
+ create mode 100644 R/Elim_gamma.R
+ create mode 100644 R/Etronq_gamma.R
+ create mode 100644 R/Mexcess_gamma.R
+ create mode 100644 R/SL_gamma.R
+ create mode 100644 R/TVaR_gamma.R
+ create mode 100644 R/V_gamma.R
+ create mode 100644 R/VaR_gamma.R
+]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage$ git push
+Counting objects: 44, done.
+Delta compression using up to 4 threads.
+Compressing objects:   2% (1/43)   Compressing objects:   4% (2/43)   Compressing objects:   6% (3/43)   Compressing objects:   9% (4/43)   Compressing objects:  11% (5/43)   Compressing objects:  13% (6/43)   Compressing objects:  16% (7/43)   Compressing objects:  18% (8/43)   Compressing objects:  20% (9/43)   Compressing objects:  23% (10/43)   Compressing objects:  25% (11/43)   Compressing objects:  27% (12/43)   Compressing objects:  30% (13/43)   Compressing objects:  32% (14/43)   Compressing objects:  34% (15/43)   Compressing objects:  37% (16/43)   Compressing objects:  39% (17/43)   Compressing objects:  41% (18/43)   Compressing objects:  44% (19/43)   Compressing objects:  46% (20/43)   Compressing objects:  48% (21/43)   Compressing objects:  51% (22/43)   Compressing objects:  53% (23/43)   Compressing objects:  55% (24/43)   Compressing objects:  58% (25/43)   Compressing objects:  60% (26/43)   Compressing objects:  62% (27/43)   Compressing objects:  65% (28/43)   Compressing objects:  67% (29/43)   Compressing objects:  69% (30/43)   Compressing objects:  72% (31/43)   Compressing objects:  74% (32/43)   Compressing objects:  76% (33/43)   Compressing objects:  79% (34/43)   Compressing objects:  81% (35/43)   Compressing objects:  83% (36/43)   Compressing objects:  86% (37/43)   Compressing objects:  88% (38/43)   Compressing objects:  90% (39/43)   Compressing objects:  93% (40/43)   Compressing objects:  95% (41/43)   Compressing objects:  97% (42/43)   Compressing objects: 100% (43/43)   Compressing objects: 100% (43/43), done.
+Writing objects:   2% (1/44)   Writing objects:   4% (2/44)   Writing objects:   6% (3/44)   Writing objects:   9% (4/44)   Writing objects:  11% (5/44)   Writing objects:  13% (6/44)   Writing objects:  15% (7/44)   Writing objects:  18% (8/44)   Writing objects:  20% (9/44)   Writing objects:  22% (10/44)   Writing objects:  25% (11/44)   Writing objects:  27% (12/44)   Writing objects:  29% (13/44)   Writing objects:  31% (14/44)   Writing objects:  34% (15/44)   Writing objects:  36% (16/44)   Writing objects:  38% (17/44)   Writing objects:  40% (18/44)   Writing objects:  43% (19/44)   Writing objects:  45% (20/44)   Writing objects:  47% (21/44)   Writing objects:  50% (22/44)   Writing objects:  52% (23/44)   Writing objects:  54% (24/44)   Writing objects:  56% (25/44)   Writing objects:  61% (27/44)   Writing objects:  63% (28/44)   Writing objects:  65% (29/44)   Writing objects:  68% (30/44)   Writing objects:  70% (31/44)   Writing objects:  72% (32/44)   Writing objects:  75% (33/44)   Writing objects:  77% (34/44)   Writing objects:  79% (35/44)   Writing objects:  81% (36/44)   Writing objects:  84% (37/44)   Writing objects:  86% (38/44)   Writing objects:  88% (39/44)   Writing objects:  90% (40/44)   Writing objects:  93% (41/44)   Writing objects:  95% (42/44)   Writing objects:  97% (43/44)   Writing objects: 100% (44/44)   Writing objects: 100% (44/44), 8.80 KiB | 150.00 KiB/s, done.
+Total 44 (delta 15), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/15)   [Kremote: Resolving deltas:  13% (2/15)   [Kremote: Resolving deltas:  20% (3/15)   [Kremote: Resolving deltas:  26% (4/15)   [Kremote: Resolving deltas:  33% (5/15)   [Kremote: Resolving deltas:  40% (6/15)   [Kremote: Resolving deltas:  46% (7/15)   [Kremote: Resolving deltas:  53% (8/15)   [Kremote: Resolving deltas:  60% (9/15)   [Kremote: Resolving deltas:  66% (10/15)   [Kremote: Resolving deltas:  73% (11/15)   [Kremote: Resolving deltas:  80% (12/15)   [Kremote: Resolving deltas:  86% (13/15)   [Kremote: Resolving deltas:  93% (14/15)   [Kremote: Resolving deltas: 100% (15/15)   [Kremote: Resolving deltas: 100% (15/15), completed with 11 local objects.[K
+To https://github.com/gabrielcrepeault/tvarPackage.git
+   3be92aa..d19a24d  master -> master
+]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage$ 
+]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage[?1034h$ git pull
+Already up-to-date.
+# Script shell pour update mon répertoire Git automatiquement
+]0;~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage$ git pull
