@@ -1,5 +1,0 @@
-#' Tail Value-at-risk d'une loi exponentielle
-#' @param b beta
-#' @param kappa pourcentage de confiance
-#' @export
-VaR_exp <- function(kappa, b) -log(1 - kappa) / b

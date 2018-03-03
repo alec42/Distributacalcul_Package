@@ -1,4 +1,4 @@
-#' Stop-loss d'une loi gamma
+#' Stop-loss d'une loi Gamma
 #' @param d déductible
 #' @param a alpha
 #' @param b beta

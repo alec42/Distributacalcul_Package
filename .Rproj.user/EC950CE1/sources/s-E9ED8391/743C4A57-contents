@@ -1,3 +1,4 @@
+# Script shell pour update mon répertoire Git automatiquement
 git pull
 git add -A
 git commit -m "Update  README.md"
