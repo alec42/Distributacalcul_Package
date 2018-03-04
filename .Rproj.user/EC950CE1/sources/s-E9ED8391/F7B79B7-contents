@@ -1,4 +1,0 @@
-library(roxygen2)
-library(devtools)
-document()
-TVaR_gamma(0, 1.5, 1/1000)

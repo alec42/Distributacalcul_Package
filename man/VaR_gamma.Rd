@@ -16,3 +16,6 @@ VaR_gamma(kappa, a, b)
 \description{
 Value-at-risk d'une loi gamma
 }
+\details{
+Pour trouver la VaR d'une gamme, on peut aussi procéder par optimisation numérique (`uniroot()` ou `optimize()`)
+}
