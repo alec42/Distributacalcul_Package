@@ -2,6 +2,7 @@
 # il faut spécifier les modifications dans le commit
 git pull
 git add -A
-git commit -m "Beta distribution added"
+git commit -m "Modification"
 git push
+
 
