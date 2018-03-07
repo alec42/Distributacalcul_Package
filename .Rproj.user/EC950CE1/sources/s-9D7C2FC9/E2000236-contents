@@ -1,0 +1,6 @@
+# Commandes utilisées souvent
+library(devtools)
+
+
+## pour mettre à jour (via Roxygen) le package
+document()

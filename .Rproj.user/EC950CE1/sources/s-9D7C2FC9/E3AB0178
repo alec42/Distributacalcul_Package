@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1520390708360.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3585068362",
+    "id" : "E3AB0178",
+    "lastKnownWriteTime" : 1520390851,
+    "last_content_update" : 1520390851666,
+    "path" : "~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage/R/TVaR_lnorm.R",
+    "project_path" : "R/TVaR_lnorm.R",
+    "properties" : {
+        "cursorPosition" : "3,47",
+        "scrollLine" : "0",
+        "tempName" : "Untitled3"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
