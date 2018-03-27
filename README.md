@@ -27,7 +27,7 @@ I've tried to make the package pretty simple to use, the syntax is based on quit
 
 
 # Updates
-|Date   | modifications|
+|Date   | Modifications|
 |:-----------:|:---------:|
 |24/02/2018 | Intial commit of the package|
 |27/02/2018 | adding binomial, uniform and exponential laws|

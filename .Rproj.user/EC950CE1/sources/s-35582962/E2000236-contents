@@ -1,6 +1,8 @@
 # Commandes utilisées souvent
 library(devtools)
+library(roxygen2)
 
 
 ## pour mettre à jour (via Roxygen) le package
 document()
+    

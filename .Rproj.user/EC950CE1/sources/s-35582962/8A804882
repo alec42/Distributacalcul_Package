@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1522171383856.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1818694330",
+    "id" : "8A804882",
+    "lastKnownWriteTime" : 1522171410,
+    "last_content_update" : 1522171410375,
+    "path" : "~/Box Sync/Ulaval/Parascolaire/Programmation/R/tvarPackage/R/VaR_norm.R",
+    "project_path" : "R/VaR_norm.R",
+    "properties" : {
+        "cursorPosition" : "6,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled2"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
