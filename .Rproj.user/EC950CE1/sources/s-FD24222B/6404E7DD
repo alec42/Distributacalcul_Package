@@ -5,13 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "292654328",
+    "hash" : "0",
     "id" : "6404E7DD",
     "lastKnownWriteTime" : 1523070072,
     "last_content_update" : 1523070072,
     "path" : "~/Box Sync/GitHub/tvarpackage/gh_update.sh",
     "project_path" : "gh_update.sh",
     "properties" : {
+        "cursorPosition" : "7,0",
+        "scrollLine" : "0"
     },
     "read_only" : false,
     "read_only_alternatives" : [

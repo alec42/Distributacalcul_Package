@@ -1,4 +1,4 @@
-Package: tvarpackage
+Package: tvarPackage
 Type: Package
 Title: Calculate Mean, Variance, Truncated Mean, VaR, TVaR, etc for different probability distributions
 Version: 1.1.0
