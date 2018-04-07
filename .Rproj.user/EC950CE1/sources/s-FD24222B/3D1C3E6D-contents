@@ -10,5 +10,4 @@ TVaR_norm <- function(kappa, mu, sig)
     mu + fact_tvar * sig * (1/sqrt(2*pi)) * exp(exposant)
 }
 
-library(tvarPackage)
 
