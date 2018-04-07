@@ -11,5 +11,5 @@ document()
 
 
 ## To download my package
-install_github("gabrielcrepeault/tvarPackage")
+
 

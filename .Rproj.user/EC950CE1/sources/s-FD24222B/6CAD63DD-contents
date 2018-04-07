@@ -1,3 +1,9 @@
+# tvarPackage
+To download this R package on your R session, copy-paste the next code line :
+```
+install_github("gabrielcrepeault/tvarPackage")
+```
+
 # Introduction
 This R package was created in the first place to calculate more quickly and easily a lot of formulas (mean, variance, VaR, TVaR, stop-loss function, etc.) related to popular probability distributions, such as :  
 
