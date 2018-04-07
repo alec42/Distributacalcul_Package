@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1523070632326.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "292654328",
+    "id" : "6404E7DD",
+    "lastKnownWriteTime" : 1523070072,
+    "last_content_update" : 1523070072,
+    "path" : "~/Box Sync/GitHub/tvarpackage/gh_update.sh",
+    "project_path" : "gh_update.sh",
+    "properties" : {
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "sh"
+}

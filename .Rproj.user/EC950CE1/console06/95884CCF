@@ -127,3 +127,28 @@ To https://github.com/gabrielcrepeault/tvarPackage.git
 ]0;~/Box Sync/GitHub/tvarPackage$ 
 ]0;~/Box Sync/GitHub/tvarPackage[?1034h$ ## Shell script to update Package on github. is in .gitignore
 ]0;~/Box Sync/GitHub/tvarPackage$ git pull
+Already up-to-date.
+]0;~/Box Sync/GitHub/tvarPackage$ git add -A
+]0;~/Box Sync/GitHub/tvarPackage$ git commit -m "Modification"
+[master 7ca39f9] Modification
+ 15 files changed, 131 insertions(+), 17 deletions(-)
+ rewrite .Rproj.user/EC950CE1/console06/INDEX001 (84%)
+ create mode 100644 .Rproj.user/EC950CE1/sources/prop/76A3FE69
+ create mode 100644 .Rproj.user/EC950CE1/sources/prop/F5A5D26B
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/B8D35882
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/B8D35882-contents
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/E861B287
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/E861B287-contents
+]0;~/Box Sync/GitHub/tvarPackage$ git push
+Counting objects: 21, done.
+Delta compression using up to 4 threads.
+Compressing objects:   5% (1/20)   Compressing objects:  10% (2/20)   Compressing objects:  15% (3/20)   Compressing objects:  20% (4/20)   Compressing objects:  25% (5/20)   Compressing objects:  30% (6/20)   Compressing objects:  35% (7/20)   Compressing objects:  40% (8/20)   Compressing objects:  45% (9/20)   Compressing objects:  50% (10/20)   Compressing objects:  55% (11/20)   Compressing objects:  60% (12/20)   Compressing objects:  65% (13/20)   Compressing objects:  70% (14/20)   Compressing objects:  75% (15/20)   Compressing objects:  80% (16/20)   Compressing objects:  85% (17/20)   Compressing objects:  90% (18/20)   Compressing objects:  95% (19/20)   Compressing objects: 100% (20/20)   Compressing objects: 100% (20/20), done.
+Writing objects:   4% (1/21)   Writing objects:   9% (2/21)   Writing objects:  14% (3/21)   Writing objects:  19% (4/21)   Writing objects:  23% (5/21)   Writing objects:  28% (6/21)   Writing objects:  33% (7/21)   Writing objects:  38% (8/21)   Writing objects:  42% (9/21)   Writing objects:  47% (10/21)   Writing objects:  52% (11/21)   Writing objects:  57% (12/21)   Writing objects:  61% (13/21)   Writing objects:  66% (14/21)   Writing objects:  71% (15/21)   Writing objects:  76% (16/21)   Writing objects:  80% (17/21)   Writing objects:  90% (19/21)   Writing objects:  95% (20/21)   Writing objects: 100% (21/21)   Writing objects: 100% (21/21), 4.25 KiB | 181.00 KiB/s, done.
+Total 21 (delta 11), reused 1 (delta 0)
+remote: Resolving deltas:   0% (0/11)   [Kremote: Resolving deltas:   9% (1/11)   [Kremote: Resolving deltas:  18% (2/11)   [Kremote: Resolving deltas:  27% (3/11)   [Kremote: Resolving deltas:  36% (4/11)   [Kremote: Resolving deltas:  45% (5/11)   [Kremote: Resolving deltas:  54% (6/11)   [Kremote: Resolving deltas:  63% (7/11)   [Kremote: Resolving deltas:  72% (8/11)   [Kremote: Resolving deltas:  81% (9/11)   [Kremote: Resolving deltas: 100% (11/11)   [Kremote: Resolving deltas: 100% (11/11), completed with 10 local objects.[K
+To https://github.com/gabrielcrepeault/tvarPackage.git
+   e6e855b..7ca39f9  master -> master
+]0;~/Box Sync/GitHub/tvarPackage$ 
+]0;~/Box Sync/GitHub/tvarPackage$ 
+]0;~/Box Sync/GitHub/tvarPackage[?1034h$ ## Shell script to update Package on github. is in .gitignore
+]0;~/Box Sync/GitHub/tvarPackage$ git pull
