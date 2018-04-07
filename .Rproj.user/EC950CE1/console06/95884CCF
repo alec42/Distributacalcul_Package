@@ -1,0 +1,14 @@
+d[Kcd ~
+]0;~$ cd ~/B[K[K[KBox\ Sync/GitHub/
+]0;~/Box Sync/GitHub$ cd tvarPackage/
+]0;~/Box Sync/GitHub/tvarPackage$ ls
+DESCRIPTION		R			tvarpackage.Rproj
+LICENSE			README.md
+NAMESPACE		man
+]0;~/Box Sync/GitHub/tvarPackage$ ls -a
+.			.git			README.md
+..			DESCRIPTION		man
+.Rbuildignore		LICENSE			tvarpackage.Rproj
+.Rhistory		NAMESPACE
+.Rproj.user		R
+]0;~/Box Sync/GitHub/tvarPackage$ git add -A
