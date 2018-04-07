@@ -1,18 +1,18 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1520391303703.000,
+    "created" : 1523072064240.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "654877970",
-    "id" : "E2000236",
+    "hash" : "0",
+    "id" : "BD5D7FC0",
     "lastKnownWriteTime" : 1523070883,
-    "last_content_update" : 1523070883439,
+    "last_content_update" : 1523070883,
     "path" : "~/Box Sync/GitHub/tvarPackage/developp.R",
     "project_path" : null,
     "properties" : {
-        "cursorPosition" : "13,0",
+        "cursorPosition" : "12,0",
         "scrollLine" : "1",
         "tempName" : "Untitled1"
     },

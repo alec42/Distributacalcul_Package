@@ -1,0 +1,7 @@
+## Shell script to update Package on github. is in .gitignore
+git pull
+git add -A
+git commit -m "Ajout loi Pareto et Burr"
+git push
+
+
