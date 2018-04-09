@@ -6,6 +6,6 @@
 #' @export
 TVaR_gamma <- function(kappa, a, b)
 {
-    survie <- 1 - pgamma(VaR_gamma(a, b, kappa),a + 1, b)
+    survie <- 1 - pgamma(qgamma(kappa, a, b),a + 1, b)
     (a * survie) / (b * (1-kappa))
 }

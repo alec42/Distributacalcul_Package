@@ -1,3 +1,9 @@
-## File which will be excluded from going to github
+## Developping file
 *.sh
 developp.R
+.Rbuildignore
+
+## R project file (not usefull for package's users)
+tvarPackage.Rproj
+.Rproj.user
+

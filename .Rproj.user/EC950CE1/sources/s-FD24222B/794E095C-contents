@@ -1,8 +1,0 @@
-# Script shell pour update mon répertoire Git automatiquement
-# il faut spécifier les modifications dans le commit
-git pull
-git add -A
-git commit -m "Modification"
-git push
-
-
