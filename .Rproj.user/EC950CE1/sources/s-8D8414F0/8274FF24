@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1523243812169.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "596792353",
+    "id" : "8274FF24",
+    "lastKnownWriteTime" : 1523243836,
+    "last_content_update" : 1523243836990,
+    "path" : "~/Box Sync/GitHub/tvarpackage/R/TVaR_gamma.R",
+    "project_path" : "R/TVaR_gamma.R",
+    "properties" : {
+        "cursorPosition" : "8,36",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

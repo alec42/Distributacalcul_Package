@@ -377,3 +377,64 @@ To https://github.com/gabrielcrepeault/tvarPackage.git
 ]0;~/Box Sync/GitHub/tvarPackage$ 
 ]0;~/Box Sync/GitHub/tvarPackage$ [K$ [K$ ]0;~/Box Sync/GitHub/tvarPackage[?1034h$ ## Shell script to update Package on github. is in .gitignore
 ]0;~/Box Sync/GitHub/tvarPackage$ git pull
+Already up-to-date.
+]0;~/Box Sync/GitHub/tvarPackage$ git add -A
+]0;~/Box Sync/GitHub/tvarPackage$ git commit -m "Modification"
+[master 242154f] Modification
+ 51 files changed, 133 insertions(+), 583 deletions(-)
+ rewrite .Rproj.user/EC950CE1/console06/INDEX001 (85%)
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/1B73DDD3-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/2B0467F2-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/2BBE858A-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/3D1C3E6D-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/4DAD303A-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/55036F15-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/5AAAF1F1-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/6404E7DD-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/6AC535FA
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/6AC535FA-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/6CAD63DD-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/794E095C-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/79543C7A-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/7F684EA4-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/81E1D1C6-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/8A49F27F-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/8A804882-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/9BF336EC-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/A9583A85-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/AEF91E30-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/AF55B40C-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/B37E04E2-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/B8D35882-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/BD5D7FC0
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/BD5D7FC0-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/BF5B2EC9-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/C3C0083E-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/C52B9975-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/CB40ABE5-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/CBB2E31D-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/D2817DAE-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/DE3906-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/E1CA73CE-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/E2000236-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/E3AB0178-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/E861B287-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/F0794776-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/F0BEDF68-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/FA23667B-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-FD24222B/lock_file
+]0;~/Box Sync/GitHub/tvarPackage$ git push
+Counting objects: 22, done.
+Delta compression using up to 4 threads.
+Compressing objects:   5% (1/20)   Compressing objects:  10% (2/20)   Compressing objects:  15% (3/20)   Compressing objects:  20% (4/20)   Compressing objects:  25% (5/20)   Compressing objects:  30% (6/20)   Compressing objects:  35% (7/20)   Compressing objects:  40% (8/20)   Compressing objects:  45% (9/20)   Compressing objects:  50% (10/20)   Compressing objects:  55% (11/20)   Compressing objects:  60% (12/20)   Compressing objects:  65% (13/20)   Compressing objects:  70% (14/20)   Compressing objects:  75% (15/20)   Compressing objects:  80% (16/20)   Compressing objects:  85% (17/20)   Compressing objects:  90% (18/20)   Compressing objects:  95% (19/20)   Compressing objects: 100% (20/20)   Compressing objects: 100% (20/20), done.
+Writing objects:   4% (1/22)   Writing objects:   9% (2/22)   Writing objects:  13% (3/22)   Writing objects:  18% (4/22)   Writing objects:  22% (5/22)   Writing objects:  27% (6/22)   Writing objects:  31% (7/22)   Writing objects:  36% (8/22)   Writing objects:  40% (9/22)   Writing objects:  45% (10/22)   Writing objects:  50% (11/22)   Writing objects:  54% (12/22)   Writing objects:  59% (13/22)   Writing objects:  63% (14/22)   Writing objects:  68% (15/22)   Writing objects:  72% (16/22)   Writing objects:  77% (17/22)   Writing objects:  81% (18/22)   Writing objects:  86% (19/22)   Writing objects:  90% (20/22)   Writing objects:  95% (21/22)   Writing objects: 100% (22/22)   Writing objects: 100% (22/22), 3.48 KiB | 395.00 KiB/s, done.
+Total 22 (delta 12), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/12)   [Kremote: Resolving deltas:   8% (1/12)   [Kremote: Resolving deltas:  16% (2/12)   [Kremote: Resolving deltas:  25% (3/12)   [Kremote: Resolving deltas:  33% (4/12)   [Kremote: Resolving deltas:  41% (5/12)   [Kremote: Resolving deltas:  50% (6/12)   [Kremote: Resolving deltas:  58% (7/12)   [Kremote: Resolving deltas:  66% (8/12)   [Kremote: Resolving deltas:  75% (9/12)   [Kremote: Resolving deltas:  83% (10/12)   [Kremote: Resolving deltas:  91% (11/12)   [Kremote: Resolving deltas: 100% (12/12)   [Kremote: Resolving deltas: 100% (12/12), completed with 12 local objects.[K
+To https://github.com/gabrielcrepeault/tvarPackage.git
+   44a541e..242154f  master -> master
+]0;~/Box Sync/GitHub/tvarPackage$ 
+]0;~/Box Sync/GitHub/tvarPackage$ 
+]0;~/Box Sync/GitHub/tvarPackage$ ## Shell script to update Package on github. is in .gitignore
+]0;~/Box Sync/GitHub/tvarPackage$ git pull
+Already up-to-date.
+]0;~/Box Sync/GitHub/tvarPackage$ git add -A
