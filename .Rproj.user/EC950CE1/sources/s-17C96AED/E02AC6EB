@@ -1,16 +1,16 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1523243841185.000,
-    "dirty" : false,
+    "created" : 1523830775198.000,
+    "dirty" : true,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "0",
-    "id" : "BDBAD2BC",
+    "id" : "E02AC6EB",
     "lastKnownWriteTime" : 1523072089,
-    "last_content_update" : 1523072089,
-    "path" : "~/Box Sync/GitHub/tvarpackage/gh_update.sh",
-    "project_path" : "gh_update.sh",
+    "last_content_update" : 1523830785152,
+    "path" : "~/Box Sync/GitHub/tvarPackage/gh_update.sh",
+    "project_path" : null,
     "properties" : {
         "cursorPosition" : "7,0",
         "scrollLine" : "0"
@@ -18,7 +18,7 @@
     "read_only" : false,
     "read_only_alternatives" : [
     ],
-    "relative_order" : 3,
+    "relative_order" : 5,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "sh"
