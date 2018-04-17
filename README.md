@@ -10,6 +10,7 @@ This R package was created in the first place to calculate more quickly and easi
 
 - Uniform 
 - Binomial
+- Poisson
 - Exponential
 - Gamma
 - Pareto
@@ -17,6 +18,9 @@ This R package was created in the first place to calculate more quickly and easi
 - Lognormal
 - Pareto
 - Normal
+
+And also some Mortality laws, like
+
 - Gompertz
 
 

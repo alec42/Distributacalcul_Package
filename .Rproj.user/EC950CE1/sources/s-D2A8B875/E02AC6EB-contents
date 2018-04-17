@@ -1,7 +1,7 @@
 ## Shell script to update Package on github. is in .gitignore
 git pull
 git add -A
-git commit -m "adding Gompertz probability law & README update."
+git commit -m "Ajout TVaR Binomiale et Poisson"
 git push
 
 

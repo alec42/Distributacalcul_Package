@@ -1,16 +1,16 @@
 {
     "collab_server" : "",
     "contents" : "",
-    "created" : 1523830591539.000,
+    "created" : 1523925419897.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "0",
-    "id" : "7E8FD811",
-    "lastKnownWriteTime" : 1523830622,
-    "last_content_update" : 1523830622460,
-    "path" : "~/Box Sync/GitHub/tvarpackage/R/Vtx_gompertz.R",
-    "project_path" : "R/Vtx_gompertz.R",
+    "id" : "C24E8709",
+    "lastKnownWriteTime" : 1523830229,
+    "last_content_update" : 1523830229,
+    "path" : "~/Box Sync/GitHub/tvarpackage/R/dgompertz.R",
+    "project_path" : "R/dgompertz.R",
     "properties" : {
         "cursorPosition" : "0,0",
         "scrollLine" : "0",
@@ -19,7 +19,7 @@
     "read_only" : false,
     "read_only_alternatives" : [
     ],
-    "relative_order" : 8,
+    "relative_order" : 4,
     "source_on_save" : false,
     "source_window" : "",
     "type" : "r_source"
