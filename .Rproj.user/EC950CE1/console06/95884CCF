@@ -550,3 +550,53 @@ git pull
 git add -A
 git commit -m "Ajout TVaR Binomiale et Poisson[?1034h$ ## Shell script to update Package on github. is in .gitignore
 ]0;~/Box Sync/GitHub/tvarPackage$ git pull
+Already up-to-date.
+]0;~/Box Sync/GitHub/tvarPackage$ git add -A
+]0;~/Box Sync/GitHub/tvarPackage$ git commit -m "Ajout TVaR Binomiale et Poisson"
+[master 27aaecd] Ajout TVaR Binomiale et Poisson
+ 42 files changed, 294 insertions(+), 298 deletions(-)
+ rewrite .Rproj.user/EC950CE1/console06/INDEX001 (84%)
+ create mode 100644 .Rproj.user/EC950CE1/sources/prop/61113C9C
+ create mode 100644 .Rproj.user/EC950CE1/sources/prop/6540F382
+ create mode 100644 .Rproj.user/EC950CE1/sources/prop/6FC4A129
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-17C96AED/24BD1214
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-17C96AED/24BD1214-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-17C96AED/45FC259B
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-17C96AED/45FC259B-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-17C96AED/6F31F5D7-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-17C96AED/7E8FD811-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-17C96AED/993B9FD3-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-17C96AED/C5174A01-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-17C96AED/CB86AD94-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-17C96AED/E4B138CF-contents
+ delete mode 100644 .Rproj.user/EC950CE1/sources/s-17C96AED/EDBFDB1B-contents
+ rename .Rproj.user/EC950CE1/sources/{s-17C96AED => s-D2A8B875}/48B0E3E4 (72%)
+ rename .Rproj.user/EC950CE1/sources/{s-17C96AED => s-D2A8B875}/48B0E3E4-contents (98%)
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-D2A8B875/70BDAE19
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-D2A8B875/70BDAE19-contents
+ rename .Rproj.user/EC950CE1/sources/{s-17C96AED/7E8FD811 => s-D2A8B875/C24E8709} (59%)
+ rename .Rproj.user/EC950CE1/sources/{s-17C96AED/25429768-contents => s-D2A8B875/C24E8709-contents} (100%)
+ create mode 100644 .Rproj.user/EC950CE1/sources/s-D2A8B875/D474E217
+ rename .Rproj.user/EC950CE1/sources/{s-17C96AED/8D9C2C80-contents => s-D2A8B875/D474E217-contents} (100%)
+ rename .Rproj.user/EC950CE1/sources/{s-17C96AED => s-D2A8B875}/E02AC6EB (76%)
+ rename .Rproj.user/EC950CE1/sources/{s-17C96AED => s-D2A8B875}/E02AC6EB-contents (58%)
+ rename .Rproj.user/EC950CE1/sources/{s-17C96AED => s-D2A8B875}/lock_file (100%)
+ create mode 100644 R/TVaR_binom.R
+ create mode 100644 R/TVaR_pois.R
+ create mode 100644 R/VaR_binom.R
+ create mode 100644 man/TVaR_binom.Rd
+ create mode 100644 man/TVaR_pois.Rd
+ create mode 100644 man/VaR_binom.Rd
+]0;~/Box Sync/GitHub/tvarPackage$ git push
+Counting objects: 37, done.
+Delta compression using up to 4 threads.
+Compressing objects:   2% (1/35)   Compressing objects:   5% (2/35)   Compressing objects:   8% (3/35)   Compressing objects:  11% (4/35)   Compressing objects:  14% (5/35)   Compressing objects:  17% (6/35)   Compressing objects:  20% (7/35)   Compressing objects:  22% (8/35)   Compressing objects:  25% (9/35)   Compressing objects:  28% (10/35)   Compressing objects:  31% (11/35)   Compressing objects:  34% (12/35)   Compressing objects:  37% (13/35)   Compressing objects:  40% (14/35)   Compressing objects:  42% (15/35)   Compressing objects:  45% (16/35)   Compressing objects:  48% (17/35)   Compressing objects:  51% (18/35)   Compressing objects:  54% (19/35)   Compressing objects:  57% (20/35)   Compressing objects:  60% (21/35)   Compressing objects:  62% (22/35)   Compressing objects:  65% (23/35)   Compressing objects:  68% (24/35)   Compressing objects:  71% (25/35)   Compressing objects:  74% (26/35)   Compressing objects:  77% (27/35)   Compressing objects:  80% (28/35)   Compressing objects:  82% (29/35)   Compressing objects:  85% (30/35)   Compressing objects:  88% (31/35)   Compressing objects:  91% (32/35)   Compressing objects:  94% (33/35)   Compressing objects:  97% (34/35)   Compressing objects: 100% (35/35)   Compressing objects: 100% (35/35), done.
+Writing objects:   2% (1/37)   Writing objects:   5% (2/37)   Writing objects:   8% (3/37)   Writing objects:  10% (4/37)   Writing objects:  13% (5/37)   Writing objects:  16% (6/37)   Writing objects:  18% (7/37)   Writing objects:  21% (8/37)   Writing objects:  24% (9/37)   Writing objects:  27% (10/37)   Writing objects:  29% (11/37)   Writing objects:  32% (12/37)   Writing objects:  35% (13/37)   Writing objects:  37% (14/37)   Writing objects:  40% (15/37)   Writing objects:  43% (16/37)   Writing objects:  45% (17/37)   Writing objects:  48% (18/37)   Writing objects:  51% (19/37)   Writing objects:  54% (20/37)   Writing objects:  56% (21/37)   Writing objects:  62% (23/37)   Writing objects:  64% (24/37)   Writing objects:  67% (25/37)   Writing objects:  70% (26/37)   Writing objects:  72% (27/37)   Writing objects:  75% (28/37)   Writing objects:  78% (29/37)   Writing objects:  81% (30/37)   Writing objects:  83% (31/37)   Writing objects:  86% (32/37)   Writing objects:  89% (33/37)   Writing objects:  91% (34/37)   Writing objects:  94% (35/37)   Writing objects:  97% (36/37)   Writing objects: 100% (37/37)   Writing objects: 100% (37/37), 7.80 KiB | 140.00 KiB/s, done.
+Total 37 (delta 17), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/17)   [Kremote: Resolving deltas:  11% (2/17)   [Kremote: Resolving deltas:  17% (3/17)   [Kremote: Resolving deltas:  23% (4/17)   [Kremote: Resolving deltas:  29% (5/17)   [Kremote: Resolving deltas:  35% (6/17)   [Kremote: Resolving deltas:  41% (7/17)   [Kremote: Resolving deltas:  47% (8/17)   [Kremote: Resolving deltas:  52% (9/17)   [Kremote: Resolving deltas:  58% (10/17)   [Kremote: Resolving deltas:  64% (11/17)   [Kremote: Resolving deltas:  70% (12/17)   [Kremote: Resolving deltas:  76% (13/17)   [Kremote: Resolving deltas:  82% (14/17)   [Kremote: Resolving deltas:  88% (15/17)   [Kremote: Resolving deltas:  94% (16/17)   [Kremote: Resolving deltas: 100% (17/17)   [Kremote: Resolving deltas: 100% (17/17), completed with 12 local objects.[K
+To https://github.com/gabrielcrepeault/tvarPackage.git
+   ea2b80e..27aaecd  master -> master
+]0;~/Box Sync/GitHub/tvarPackage$ 
+]0;~/Box Sync/GitHub/tvarPackage$ 
+]0;~/Box Sync/GitHub/tvarPackage$ ]0;~/Box Sync/GitHub/tvarPackage[?1034h$ ## Shell script to update Package on github. is in .gitignore
+]0;~/Box Sync/GitHub/tvarPackage$ git pull

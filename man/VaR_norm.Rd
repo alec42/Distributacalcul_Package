@@ -4,7 +4,7 @@
 \alias{VaR_norm}
 \title{Value-at-Risk d'une loi normale}
 \usage{
-VaR_norm(kappa, mu, sig)
+VaR_norm(kappa, mu = 0, sig = 1)
 }
 \arguments{
 \item{kappa}{pourcentage de confiance désiré}

@@ -65,6 +65,6 @@ For probability laws used in life insurance, there is a special annotation (not 
 |04/03/2018 | adding beta distribution|
 |06/03/2018 | adding Lognormal distribution|
 |06/04/2018 | adding Pareto, Burr and Normal (E[X] & Var(X)) distribution|
-|16/04/2018 | adding Gompertz probability law & README update.|
+|16/04/2018 | adding Gompertz & TVaR function for binomial and poisson|
 
 

@@ -4,7 +4,7 @@
 \alias{TVaR_norm}
 \title{Tail Value-at-Risk d'une loi normale}
 \usage{
-TVaR_norm(kappa, mu, sig)
+TVaR_norm(kappa, mu = 0, sig = 1)
 }
 \arguments{
 \item{kappa}{pourcentage de confiance désiré}
