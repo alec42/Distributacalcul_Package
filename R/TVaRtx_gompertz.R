@@ -8,6 +8,6 @@
 TVaRtx_gompertz <- function(kappa, x = 0, beta, gam)
 {
     # Approche très théorique, pas de forme explicite.
-    f <- function(t) qtxgompertz(t, x, beta, gam)
+    f <- function(t) qgompertz(t, x, beta, gam, Tx = T)
     integrate(f, kappa, 1)$ value / (1-kappa)
 }

@@ -1,8 +1,8 @@
 # tvarPackage
-To download this R package on your R session, copy-paste the next code line :
+To download this R package on your R session, copy-paste the next code line (the package [https://cran.r-project.org/web/packages/devtools/index.html](devtools) is necessary) :
 
 ```
-install_github("gabrielcrepeault/tvarPackage")
+devtools::install_github("gabrielcrepeault/tvarPackage")
 ```
 
 # Introduction
