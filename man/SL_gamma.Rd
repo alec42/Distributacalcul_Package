@@ -2,7 +2,6 @@
 % Please edit documentation in R/SL_gamma.R, R/TVaR_unif.R
 \name{SL_gamma}
 \alias{SL_gamma}
-\alias{SL_gamma}
 \title{Stop-loss d'une loi Gamma}
 \usage{
 SL_gamma(d, a, b)
