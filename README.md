@@ -1,3 +1,7 @@
+---
+permalink: docs/index.html
+---
+
 # tvarPackage
 To download this R package on your R session, copy-paste the next code line (the package [devtools](https://cran.r-project.org/web/packages/devtools/index.html) is necessary) :
 
