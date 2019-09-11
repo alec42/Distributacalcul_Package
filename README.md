@@ -56,3 +56,21 @@ Distributions composées:
 | Répartition                      	|              x              	|          x         	|         x        	|
 | TVaR                             	|              x              	|          x         	|         x        	|
 | VaR (quantile)                   	|              x              	|          x         	|         x        	|
+
+
+Syntaxe: 
+
+| Fonction                         	|       Syntaxe           | 
+|----------------------------------	| ----------------        |
+|             Espérance            	| E_distribution          |   
+|           K-ème moment           	| kthmoment_distribution  |
+|        Espérance tronquéee       	| Etronq_distribution     |
+| Espérance limitée                	| Elim_distribution       |
+| Variance                         	| V_distribution          |
+| Stop-loss                        	| SL_distribution         |
+| Excès-moyen                      	| Mexcess_distribution    |
+| Fonction Génératrice des Moments 	| MGF_distribution        |
+| Densité                          	| ddistribution           |
+| Répartition                      	| pdistribution           |
+| TVaR                             	| TVaR_distribution       |
+| VaR (quantile)                   	| VaR_distribution        |
