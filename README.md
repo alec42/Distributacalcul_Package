@@ -12,8 +12,8 @@ Distributions continues:
 |----------------------------------	|:------:	|:------------------:	|:-------:	|:----:	|:--------------:	|:----:	|:-----:	|:------:	|:-------------:	|:----------:	|:------------:	  |:------:	| :------:|
 | Espérance            	            |    x   	|          x         	|    x    	|   y  	|                	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |    y   	|       	|
 | K-ème moment           	          |    x   	|                    	|    x    	|   x  	|        x       	|   x  	|   x   	|    x   	|               	|      x     	|           	    |       	|      	  |
-| Espérance tronquéee       	      |    x   	|          x         	|    x    	|   x  	|        x       	|      	|       	|        	|               	|            	|            	    |        	|       	|
-| Espérance limitée                	|    x   	|          x         	|    x    	|   x  	|        x       	|      	|       	|        	|               	|            	|            	    |        	|       	|
+| Espérance tronquéee       	      |    x   	|          x         	|    x    	|   x  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |    y   	|   y   	|
+| Espérance limitée                	|    x   	|          x         	|    x    	|   x  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |    y   	|   y   	|
 | Variance                         	|    x   	|          x         	|    x    	|   y  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |    y   	|       	|
 | Stop-loss                        	|    x   	|          x         	|    x    	|   x  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |    y   	|   y   	|
 | Excès-moyen                      	|    x   	|          x         	|    x    	|   x  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|            	    |    y   	|   y   	|
