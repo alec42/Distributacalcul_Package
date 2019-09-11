@@ -2,8 +2,8 @@ Package: Distributacalcul
 Type: Package
 Title: Calculatrice de distributions de probabilité
 Version: 0.1.0
-Author: Alec James van Rassel
-Maintainer: Alec James van Rassel <alec.van-rassel.1@ulaval.ca>
+Authors@R: person("Alec James", "van Rassel", email = "alec.van-rassel.1@ulaval.ca",
+  role = c("aut", "cre"))
 Description: Calculates expected values, variance, different moments (k-th moment, truncated expected value), 
 stop-loss, excess of mean, Value at Risk (VaR) and Tail Value at Risk (TVaR) as well as the density and
 cumulative/survival functions of continuous, discrete and compound distributions.

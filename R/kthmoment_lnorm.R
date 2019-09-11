@@ -1,5 +1,5 @@
 #' k-ème moment de la loi Lognormale
-#' @param k niveau de confiance désiré
+#' @param k k-ème moment
 #' @param mu mu
 #' @param sig sigma = sqrt(sigma^2)
 #' @export

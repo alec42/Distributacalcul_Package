@@ -1,5 +1,5 @@
 #' k-ème moment de la loi Beta
-#' @param k niveau de confiance désiré
+#' @param k k-ème moment
 #' @param a alpha
 #' @param b beta
 #' @export

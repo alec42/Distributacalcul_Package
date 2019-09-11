@@ -1,5 +1,5 @@
 #' k-ème moment de la loi Log-logistique
-#' @param k niveau de confiance désiré
+#' @param k k-ème moment
 #' @param lam lambda
 #' @param tau tau
 #' @export

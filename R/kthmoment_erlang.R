@@ -1,5 +1,5 @@
 #' k-ème moment de la loi Erlang
-#' @param k niveau de confiance désiré
+#' @param k k-ème moment
 #' @param n n
 #' @param b beta
 #' @export

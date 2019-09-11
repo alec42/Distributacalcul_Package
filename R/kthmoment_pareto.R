@@ -1,5 +1,5 @@
 #' k-ème moment de la loi Pareto
-#' @param k niveau de confiance désiré, -1 < k < alpha ou alpha > k
+#' @param k k-ème moment, -1 < k < alpha ou alpha > k
 #' @param alpha alpha
 #' @param lam lambda
 #' @export

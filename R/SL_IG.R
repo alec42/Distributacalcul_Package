@@ -1,4 +1,4 @@
-#' Stop-loss d'une loi Inverse Gaussienne
+#' Stop-loss de la loi inverse gaussienne
 #' @param d montant d de la franchise
 #' @param mu mu
 #' @param beta beta = dispersion * mu^2

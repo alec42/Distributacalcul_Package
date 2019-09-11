@@ -1,5 +1,5 @@
 #' k-ème moment de la loi Burr
-#' @param k niveau de confiance désiré, -tau < k < alpha * tau
+#' @param k k-ème moment, -tau < k < alpha * tau
 #' @param alpha alpha
 #' @param lam lambda
 #' @param tau tau

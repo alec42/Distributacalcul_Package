@@ -1,4 +1,4 @@
-#' Tail Value-at-risk d'une loi Inverse Gaussienne
+#' Tail Value-at-risk de la loi inverse gaussienne
 #' @param k Niveau de confiance désiré
 #' @param vark Value at Risk (VaR) calculé au même niveau de confiance k
 #' @param mu mu
@@ -6,7 +6,7 @@
 #' @param dispersion dispersion, = beta / mu^2
 #' @details Cette formule nécessite la formule de la VaR_IG (déjà installée avec le package tvarPackage)
 #' @export
-TVaR_IG <- function(k, vark, mu, beta = dispersion * mu^2, dispersion = beta / mu^2)
+TVaR_IG <- function(k, mu, beta = dispersion * mu^2, dispersion = beta / mu^2, vark)
 {
     (1/(1 - k)) *
         (mu - vark +

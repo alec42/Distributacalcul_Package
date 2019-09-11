@@ -1,4 +1,4 @@
-#' Espérance limitée d'une loi Inverse Gaussiennee
+#' Espérance limitée de la loi inverse gaussienne
 #' @param d montant d de la limite
 #' @param mu mu
 #' @param beta beta, = dispersion * mu^2

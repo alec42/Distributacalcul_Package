@@ -1,4 +1,4 @@
-#' Fonction génératrice des moments de la loi Inverse Gaussienne
+#' Fonction génératrice des moments de la loi inverse gaussienne
 #' @param t t
 #' @param mu mu
 #' @param beta beta = dispersion * mu^2

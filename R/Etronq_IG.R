@@ -1,8 +1,8 @@
-#' Espérance tronquée d'une loi Inverse Gaussienne
+#' Espérance tronquée de la loi inverse gaussienne
 #' @param d Deductible
-#' @param alpha alpha
-#' @param lam lambda
-#' @param tau tau
+#' @param mu mu
+#' @param beta beta = dispersion * mu^2
+#' @param dispersion dispersion = beta / mu^2
 #' @export
 Etronq_IG <- function(d, mu, beta = dispersion * mu^2, dispersion = beta / mu^2)
 {

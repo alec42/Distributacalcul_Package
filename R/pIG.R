@@ -1,12 +1,12 @@
-#' Value-at-risk de la loi inverse gaussienne
-#' @param k niveau de confiance désiré
+#' Envelope de la densité de la loi inverse gaussienne
+#' @param q quantile
 #' @param mu mu
 #' @param beta beta = dispersion * mu^2
 #' @param dispersion dispersion = beta / mu^2
 #' @details Wrapper pour avoir une notation cohérente avec le reste des fonctions IG, mais utilise la fonction de densité du package ACTUAR.
 #' @export
-VaR_IG <- function(k, mu, beta = dispersion * mu^2, dispersion = beta / mu^2)
+pIG <- function(q, mu, beta = dispersion * mu^2, dispersion = beta / mu^2, lower.tail = T)
 {
     require("actuar")
-    qinvgauss(p = k, mean = mu, dispersion = dispersion)
+    pinvgauss(q = q, mean = mu, dispersion = dispersion, lower.tail = lower.tail)
 }

@@ -1,6 +1,4 @@
 #' Mean-Excess loss d'une loi Log-logistique
-#'
-#'
 #' @param d déductible
 #' @param lam lambda
 #' @param tau tau
