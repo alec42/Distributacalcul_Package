@@ -16,7 +16,7 @@ Distributions continues:
 | Espérance limitée                	|    x   	|          x         	|    x    	|   x  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |    y   	|   y   	|
 | Variance                         	|    x   	|          x         	|    x    	|   y  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |    y   	|       	|
 | Stop-loss                        	|    x   	|          x         	|    x    	|   x  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |    y   	|   y   	|
-| Excès-moyen                      	|    x   	|          x         	|    x    	|   x  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|            	    |    y   	|   y   	|
+| Excès-moyen                      	|    x   	|          x         	|    x    	|   x  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |    y   	|   y   	|
 | Fonction Génératrice des Moments 	|        	|          x         	|         	|      	|                	|      	|       	|        	|               	|            	|            	    |        	|       	|
 | Densité                          	|    x   	|          x         	|         	|      	|                	|      	|       	|        	|               	|            	|            	    |        	|       	|
 | Répartition                      	|    x   	|          x         	|         	|      	|                	|      	|       	|        	|       x       	|            	|            	    |        	|       	|
