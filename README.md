@@ -3,6 +3,7 @@ Package des fonctions pour l'application [distributacalcul](https://alec42.shiny
 
 
 Fonctions incluses marquées par un x.
+
 Fonctions incluses dans le package [TVaR package](https://github.com/gabrielcrepeault/tvarPackage) marquées par y.
 
 Distributions continues:
