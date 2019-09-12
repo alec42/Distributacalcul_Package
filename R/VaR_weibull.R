@@ -1,9 +1,9 @@
 #' Value-at-risk de la loi Weibull
-#' @param k niveau de confiance désiré
+#' @param kappa niveau de confiance désiré
 #' @param tau tau
 #' @param beta beta
 #' @export
-VaR_weibull <- function(k, tau, beta)
+VaR_weibull <- function(kappa, tau, beta)
 {
-    1 / beta * (-log(1 - k))^(1/tau)
+    1 / beta * (-log(1 - kappa))^(1/tau)
 }
