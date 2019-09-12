@@ -1,76 +1,81 @@
 # Distributacalcul_Package
-Package des fonctions pour l'application [distributacalcul](https://alec42.shinyapps.io/distributacalcul/)
+Package of fonctions for the R Shiny application [distributacalcul](https://alec42.shinyapps.io/distributacalcul/)
 
+Functions included in the package are marked by an x, those included in the [TVaR package](https://github.com/gabrielcrepeault/tvarPackage) are marqued by a y.
 
-Fonctions incluses marquées par un x.
+## Continuous Distributions
 
-Fonctions incluses dans le package [TVaR package](https://github.com/gabrielcrepeault/tvarPackage) marquées par y.
-
-Distributions continues:
-
-| Fonction                         	| Erlang 	| Inverse Gaussienne 	| Weibull 	| Burr 	| Log-logistique 	| Beta 	| Gamma 	| Pareto 	| F-Généralisée 	| lognormale 	| Exponentielle 	| Uniforme| Normale | 
+| Function                         	| Erlang 	| Inverse Gaussian 	| Weibull 	| Burr 	| Log-logistic 	| Beta 	| Gamma 	| Pareto 	| Generalized F-distribution 	| Lognormal 	| Exponential 	| Uniform | Normal | 
 |----------------------------------	|:------:	|:------------------:	|:-------:	|:----:	|:--------------:	|:----:	|:-----:	|:------:	|:-------------:	|:----------:	|:------------:	  |:------:	| :------:|
-| Espérance            	            |    x   	|          x         	|    x    	|   y  	|                	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |    y   	|       	|
-| K-ème moment           	          |    x   	|                    	|    x    	|   x  	|        x       	|   x  	|   x   	|    x   	|               	|      x     	|           	    |       	|      	  |
-| Espérance tronquéee       	      |    x   	|          x         	|    x    	|   x  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |    y   	|   y   	|
-| Espérance limitée                	|    x   	|          x         	|    x    	|   x  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |    y   	|   y   	|
+| Mean            	                |    x   	|          x         	|    x    	|   y  	|                	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |    y   	|       	|
+| K-th moment           	          |    x   	|                    	|    x    	|   x  	|        x       	|   x  	|   x   	|    x   	|               	|      x     	|           	    |       	|      	  |
+| Truncated mean       	            |    x   	|          x         	|    x    	|   x  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |    y   	|   y   	|
+| Limited expected value            |    x   	|          x         	|    x    	|   x  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |    y   	|   y   	|
 | Variance                         	|    x   	|          x         	|    x    	|   y  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |    y   	|       	|
 | Stop-loss                        	|    x   	|          x         	|    x    	|   x  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |    y   	|   y   	|
-| Excès-moyen                      	|    x   	|          x         	|    x    	|   x  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |    y   	|   y   	|
-| Fonction Génératrice des Moments 	|        	|          x         	|         	|      	|                	|      	|       	|        	|               	|            	|            	    |        	|       	|
-| Densité                          	|    x   	|          x         	|         	|      	|                	|      	|       	|        	|               	|            	|            	    |        	|       	|
-| Répartition                      	|    x   	|          x         	|         	|      	|                	|      	|       	|        	|       x       	|            	|            	    |        	|       	|
-| TVaR                             	|    x   	|          x         	|    x    	|   x  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |        	|   y   	|
-| VaR (quantile)                   	|        	|          x         	|    x    	|   x  	|        x       	|   y  	|   y   	|    y   	|       x       	|      y     	|       y    	    |    y   	|   y   	|
+| Excess of mean                    |    x   	|          x         	|    x    	|   x  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |    y   	|   y   	|
+| Moment Generating Function 	      |     	  |          x         	|         	|      	|                	|      	|       	|        	|               	|            	|            	    |        	|       	|
+| Density                          	|    x   	|          x         	|         	|      	|                	|      	|       	|        	|               	|            	|            	    |        	|       	|
+| Cumulative density function      	|    x   	|          x         	|         	|      	|                	|      	|       	|        	|       x       	|            	|            	    |        	|       	|
+| Value-at-Risk (percentile)        |        	|          x         	|    x    	|   x  	|        x       	|   y  	|   y   	|    y   	|       x       	|      y     	|       y    	    |    y   	|   y   	|
+| Tail Value-at-Risk                |    x   	|          x         	|    x    	|   x  	|        x       	|   y  	|   y   	|    y   	|               	|      y     	|       y    	    |        	|   y   	|
 
-Distributions discrètes:
+## Discrete Distributions
 
-|             Fonction             	| Binomiale 	| Bernoulli 	| Binomiale Négative 	| Géométrique 	| Poisson 	| Uniforme 	| Logarithmique 	| Hypergéométrique 	|
-|:--------------------------------:	|:---------:	|:---------:	|:------------------:	|:-----------:	|:-------:	|:--------:	|---------------	|------------------	|
-|             Espérance            	|      y     	|           	|          y         	|             	|         	|     x    	| x             	| x                	|
-|           K-ème moment           	|           	|           	|                    	|             	|         	|          	|               	|                  	|
-|        Espérance tronquéee       	|           	|           	|                    	|             	|         	|          	|               	|                  	|
-|         Espérance limitée        	|           	|           	|                    	|             	|         	|          	|               	|                  	|
-|             Variance             	|      y    	|           	|          y         	|             	|         	|     x    	| x             	| x                	|
-|             Stop-loss            	|           	|           	|                    	|             	|         	|          	|               	|                  	|
-|            Excès-moyen           	|           	|           	|                    	|             	|         	|          	|               	|                  	|
-| Fonction Génératrice des Moments 	|           	|           	|                    	|             	|         	|          	|               	|                  	|
-|              Densité             	|           	|           	|                    	|             	|         	|     x    	|               	|                  	|
-|            Répartition           	|           	|           	|                    	|             	|         	|     x    	|               	|                  	|
-|               TVaR               	|      y    	|           	|                    	|             	|    y    	|          	|               	|                  	|
-|          VaR (quantile)          	|      y    	|           	|                    	|             	|         	|          	|               	|                  	|
+|             Function             	| Binomial 	| Bernoulli 	| Negative Binomial 	| Geometric 	| Poisson 	| Uniform	| Logarithmic 	| Hypergeometric 	|
+|----------------------------------	|:---------:	|:---------:	|:------------------:	|:-----------:	|:-------:	|:--------:	| :---------------:	| :------------------:	|
+| Mean            	                |      y     	|           	|          y         	|             	|         	|     x    	| x             	| x                	|
+| K-th moment           	          |           	|           	|                    	|             	|         	|          	|               	|                  	|
+| Truncated mean       	            |           	|           	|                    	|             	|         	|          	|               	|                  	|
+| Limited expected value            |           	|           	|                    	|             	|         	|          	|               	|                  	|
+| Variance                         	|      y    	|           	|          y         	|             	|         	|     x    	| x             	| x                	|
+| Stop-loss                        	|           	|           	|                    	|             	|         	|          	|               	|                  	|
+| Excess of mean                    |           	|           	|                    	|             	|         	|          	|               	|                  	|
+| Moment Generating Function 	      |           	|           	|                    	|             	|         	|          	|               	|                  	|
+| Density                          	|           	|           	|                    	|             	|         	|     x    	|               	|                  	|
+| Cumulative density function      	|           	|           	|                    	|             	|         	|     x    	|               	|                  	|
+| Value-at-Risk (percentile)        |      y    	|           	|                    	|             	|         	|          	|               	|                  	|
+| Tail Value-at-Risk                |      y    	|           	|                    	|             	|    y    	|          	|               	|                  	|
 
-Distributions composées:
 
-| Fonction                         	| Binomiale Négative Composée 	| Binomiale Composée 	| Poisson Composée 	|
+## Compound Distributions:
+
+| Function                         	| Compound Negative Binomial 	| Compound Binomial 	| Compound Poisson 	|
 |----------------------------------	|:---------------------------:	|:------------------:	|:----------------:	|
-|             Espérance            	|              x              	|          x         	|         x        	|
-|           K-ème moment           	|                             	|                    	|                  	|
-|        Espérance tronquéee       	|                             	|                    	|                  	|
-| Espérance limitée                	|                             	|                    	|                  	|
+| Mean            	                |              x              	|          x         	|         x        	|
+| K-th moment           	          |                             	|                    	|                  	|
+| Truncated mean       	            |                             	|                    	|                  	|
+| Limited expected value            |                             	|                    	|                  	|
 | Variance                         	|              x              	|          x         	|         x        	|
 | Stop-loss                        	|                             	|                    	|                  	|
-| Excès-moyen                      	|                             	|                    	|                  	|
-| Fonction Génératrice des Moments 	|                             	|                    	|                  	|
-| Densité                          	|                             	|                    	|                  	|
-| Répartition                      	|              x              	|          x         	|         x        	|
-| TVaR                             	|              x              	|          x         	|         x        	|
-| VaR (quantile)                   	|              x              	|          x         	|         x        	|
+| Excess of mean                    |                             	|                    	|                  	|
+| Moment Generating Function 	      |                             	|                    	|                  	|
+| Density                          	|                             	|                    	|                  	|
+| Cumulative density function      	|              x              	|          x         	|         x        	|
+| Value-at-Risk (percentile)        |              x              	|          x         	|         x        	|
+| Tail Value-at-Risk                |              x              	|          x         	|         x        	|
 
 
-Syntaxe: 
+# Syntax: 
 
-| Fonction                         	|       Syntaxe           | 
+| Function                         	|       Syntax           | 
 |----------------------------------	| ----------------        |
-|             Espérance            	| E_distribution          |   
-|           K-ème moment           	| kthmoment_distribution  |
-|        Espérance tronquéee       	| Etronq_distribution     |
-| Espérance limitée                	| Elim_distribution       |
+| Mean            	                | E_distribution          |   
+| K-th moment           	          | kthmoment_distribution  |
+| Truncated mean       	            | Etronq_distribution     |
+| Limited expected value            | Elim_distribution       |
 | Variance                         	| V_distribution          |
 | Stop-loss                        	| SL_distribution         |
-| Excès-moyen                      	| Mexcess_distribution    |
-| Fonction Génératrice des Moments 	| MGF_distribution        |
-| Densité                          	| ddistribution           |
-| Répartition                      	| pdistribution           |
-| TVaR                             	| TVaR_distribution       |
-| VaR (quantile)                   	| VaR_distribution        |
+| Excess of mean                    | Mexcess_distribution    |
+| Moment Generating Function 	      | MGF_distribution        |
+| Density                          	| ddistribution           |
+| Cumulative density function      	| pdistribution           |
+| Value-at-Risk (percentile)        | TVaR_distribution       |
+| Tail Value-at-Risk                | VaR_distribution        |
+
+
+# Updates
+|     Date    | Modifications |
+|:-----------:| :---------:   |
+| 26/07/2019   | Initial creation of package |
+| 12/09/2019   | Completion of creation of all necessary function files |
