@@ -1,7 +1,7 @@
 # Distributacalcul_Package
-Package of fonctions for the R Shiny application [distributacalcul](https://alec42.shinyapps.io/distributacalcul/)
+Package containing functions used in the R Shiny application [distributacalcul](https://alec42.shinyapps.io/distributacalcul/).
 
-Functions included in the package are marked by an x, those included in the [TVaR package](https://github.com/gabrielcrepeault/tvarPackage) are marqued by a y.
+Functions included in the package are marked by an x, those included in the [TVaR package](https://github.com/gabrielcrepeault/tvarPackage) are marked by a y.
 
 ## Continuous Distributions
 
