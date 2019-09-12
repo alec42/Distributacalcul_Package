@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -59,13 +59,15 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
+
 <div id="distributacalcul_package" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#distributacalcul_package" class="anchor"></a>Distributacalcul_Package</h1></div>
-<p>Package des fonctions pour l’application <a href="https://alec42.shinyapps.io/distributacalcul/">distributacalcul</a></p>
-<p>Fonctions incluses marquées par un x.</p>
-<p>Fonctions incluses dans le package <a href="https://github.com/gabrielcrepeault/tvarPackage">TVaR package</a> marquées par y.</p>
-<p>Distributions continues:</p>
+<p>Package containing functions used in the R Shiny application <a href="https://alec42.shinyapps.io/distributacalcul/">distributacalcul</a>.</p>
+<p>Functions included in the package are marked by an x, those included in the <a href="https://github.com/gabrielcrepeault/tvarPackage">TVaR package</a> are marked by a y.</p>
+<div id="continuous-distributions" class="section level2">
+<h2 class="hasAnchor">
+<a href="#continuous-distributions" class="anchor"></a>Continuous Distributions</h2>
 <table class="table">
 <colgroup>
 <col width="19%">
@@ -84,24 +86,24 @@
 <col width="4%">
 </colgroup>
 <thead><tr class="header">
-<th>Fonction</th>
+<th>Function</th>
 <th align="center">Erlang</th>
-<th align="center">Inverse Gaussienne</th>
+<th align="center">Inverse Gaussian</th>
 <th align="center">Weibull</th>
 <th align="center">Burr</th>
-<th align="center">Log-logistique</th>
+<th align="center">Log-logistic</th>
 <th align="center">Beta</th>
 <th align="center">Gamma</th>
 <th align="center">Pareto</th>
-<th align="center">F-Généralisée</th>
-<th align="center">lognormale</th>
-<th align="center">Exponentielle</th>
-<th align="center">Uniforme</th>
-<th align="center">Normale</th>
+<th align="center">Generalized F-distribution</th>
+<th align="center">Lognormal</th>
+<th align="center">Exponential</th>
+<th align="center">Uniform</th>
+<th align="center">Normal</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td>Espérance</td>
+<td>Mean</td>
 <td align="center">x</td>
 <td align="center">x</td>
 <td align="center">x</td>
@@ -117,7 +119,7 @@
 <td align="center"></td>
 </tr>
 <tr class="even">
-<td>K-ème moment</td>
+<td>K-th moment</td>
 <td align="center">x</td>
 <td align="center"></td>
 <td align="center">x</td>
@@ -133,7 +135,7 @@
 <td align="center"></td>
 </tr>
 <tr class="odd">
-<td>Espérance tronquéee</td>
+<td>Truncated mean</td>
 <td align="center">x</td>
 <td align="center">x</td>
 <td align="center">x</td>
@@ -149,7 +151,7 @@
 <td align="center">y</td>
 </tr>
 <tr class="even">
-<td>Espérance limitée</td>
+<td>Limited expected value</td>
 <td align="center">x</td>
 <td align="center">x</td>
 <td align="center">x</td>
@@ -197,7 +199,7 @@
 <td align="center">y</td>
 </tr>
 <tr class="odd">
-<td>Excès-moyen</td>
+<td>Excess of mean</td>
 <td align="center">x</td>
 <td align="center">x</td>
 <td align="center">x</td>
@@ -213,7 +215,7 @@
 <td align="center">y</td>
 </tr>
 <tr class="even">
-<td>Fonction Génératrice des Moments</td>
+<td>Moment Generating Function</td>
 <td align="center"></td>
 <td align="center">x</td>
 <td align="center"></td>
@@ -229,7 +231,7 @@
 <td align="center"></td>
 </tr>
 <tr class="odd">
-<td>Densité</td>
+<td>Density</td>
 <td align="center">x</td>
 <td align="center">x</td>
 <td align="center"></td>
@@ -245,7 +247,7 @@
 <td align="center"></td>
 </tr>
 <tr class="even">
-<td>Répartition</td>
+<td>Cumulative density function</td>
 <td align="center">x</td>
 <td align="center">x</td>
 <td align="center"></td>
@@ -261,227 +263,233 @@
 <td align="center"></td>
 </tr>
 <tr class="odd">
-<td>TVaR</td>
-<td align="center">x</td>
-<td align="center">x</td>
-<td align="center">x</td>
-<td align="center">x</td>
-<td align="center">x</td>
-<td align="center">y</td>
-<td align="center">y</td>
-<td align="center">y</td>
+<td>Value-at-Risk (percentile)</td>
 <td align="center"></td>
+<td align="center">x</td>
+<td align="center">x</td>
+<td align="center">x</td>
+<td align="center">x</td>
 <td align="center">y</td>
 <td align="center">y</td>
-<td align="center"></td>
+<td align="center">y</td>
+<td align="center">x</td>
+<td align="center">y</td>
+<td align="center">y</td>
+<td align="center">y</td>
 <td align="center">y</td>
 </tr>
 <tr class="even">
-<td>VaR (quantile)</td>
+<td>Tail Value-at-Risk</td>
+<td align="center">x</td>
+<td align="center">x</td>
+<td align="center">x</td>
+<td align="center">x</td>
+<td align="center">x</td>
+<td align="center">y</td>
+<td align="center">y</td>
+<td align="center">y</td>
 <td align="center"></td>
-<td align="center">x</td>
-<td align="center">x</td>
-<td align="center">x</td>
-<td align="center">x</td>
 <td align="center">y</td>
 <td align="center">y</td>
-<td align="center">y</td>
-<td align="center">x</td>
-<td align="center">y</td>
-<td align="center">y</td>
-<td align="center">y</td>
+<td align="center"></td>
 <td align="center">y</td>
 </tr>
 </tbody>
 </table>
-<p>Distributions discrètes:</p>
+</div>
+<div id="discrete-distributions" class="section level2">
+<h2 class="hasAnchor">
+<a href="#discrete-distributions" class="anchor"></a>Discrete Distributions</h2>
 <table class="table">
 <colgroup>
-<col width="24%">
+<col width="23%">
 <col width="7%">
 <col width="7%">
-<col width="14%">
-<col width="9%">
+<col width="13%">
+<col width="8%">
 <col width="6%">
-<col width="7%">
-<col width="10%">
-<col width="12%">
+<col width="6%">
+<col width="11%">
+<col width="13%">
 </colgroup>
 <thead><tr class="header">
-<th align="center">Fonction</th>
-<th align="center">Binomiale</th>
+<th>Function</th>
+<th align="center">Binomial</th>
 <th align="center">Bernoulli</th>
-<th align="center">Binomiale Négative</th>
-<th align="center">Géométrique</th>
+<th align="center">Negative Binomial</th>
+<th align="center">Geometric</th>
 <th align="center">Poisson</th>
-<th align="center">Uniforme</th>
-<th>Logarithmique</th>
-<th>Hypergéométrique</th>
+<th align="center">Uniform</th>
+<th align="center">Logarithmic</th>
+<th align="center">Hypergeometric</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="center">Espérance</td>
+<td>Mean</td>
 <td align="center">y</td>
 <td align="center"></td>
 <td align="center">y</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center">x</td>
-<td>x</td>
-<td>x</td>
+<td align="center">x</td>
+<td align="center">x</td>
 </tr>
 <tr class="even">
-<td align="center">K-ème moment</td>
+<td>K-th moment</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
-<td></td>
-<td></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr class="odd">
-<td align="center">Espérance tronquéee</td>
+<td>Truncated mean</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
-<td></td>
-<td></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr class="even">
-<td align="center">Espérance limitée</td>
+<td>Limited expected value</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
-<td></td>
-<td></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr class="odd">
-<td align="center">Variance</td>
+<td>Variance</td>
 <td align="center">y</td>
 <td align="center"></td>
 <td align="center">y</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center">x</td>
-<td>x</td>
-<td>x</td>
+<td align="center">x</td>
+<td align="center">x</td>
 </tr>
 <tr class="even">
-<td align="center">Stop-loss</td>
+<td>Stop-loss</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
-<td></td>
-<td></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr class="odd">
-<td align="center">Excès-moyen</td>
+<td>Excess of mean</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
-<td></td>
-<td></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr class="even">
-<td align="center">Fonction Génératrice des Moments</td>
+<td>Moment Generating Function</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
-<td></td>
-<td></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr class="odd">
-<td align="center">Densité</td>
+<td>Density</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center">x</td>
-<td></td>
-<td></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr class="even">
-<td align="center">Répartition</td>
+<td>Cumulative density function</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center">x</td>
-<td></td>
-<td></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr class="odd">
-<td align="center">TVaR</td>
+<td>Value-at-Risk (percentile)</td>
 <td align="center">y</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
-<td align="center">y</td>
 <td align="center"></td>
-<td></td>
-<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr class="even">
-<td align="center">VaR (quantile)</td>
+<td>Tail Value-at-Risk</td>
 <td align="center">y</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
+<td align="center">y</td>
 <td align="center"></td>
 <td align="center"></td>
-<td></td>
-<td></td>
+<td align="center"></td>
 </tr>
 </tbody>
 </table>
-<p>Distributions composées:</p>
+</div>
+<div id="compound-distributions" class="section level2">
+<h2 class="hasAnchor">
+<a href="#compound-distributions" class="anchor"></a>Compound Distributions:</h2>
 <table class="table">
 <thead><tr class="header">
-<th>Fonction</th>
-<th align="center">Binomiale Négative Composée</th>
-<th align="center">Binomiale Composée</th>
-<th align="center">Poisson Composée</th>
+<th>Function</th>
+<th align="center">Compound Negative Binomial</th>
+<th align="center">Compound Binomial</th>
+<th align="center">Compound Poisson</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td>Espérance</td>
+<td>Mean</td>
 <td align="center">x</td>
 <td align="center">x</td>
 <td align="center">x</td>
 </tr>
 <tr class="even">
-<td>K-ème moment</td>
+<td>K-th moment</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr class="odd">
-<td>Espérance tronquéee</td>
+<td>Truncated mean</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr class="even">
-<td>Espérance limitée</td>
+<td>Limited expected value</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -499,64 +507,68 @@
 <td align="center"></td>
 </tr>
 <tr class="odd">
-<td>Excès-moyen</td>
+<td>Excess of mean</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr class="even">
-<td>Fonction Génératrice des Moments</td>
+<td>Moment Generating Function</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr class="odd">
-<td>Densité</td>
+<td>Density</td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr class="even">
-<td>Répartition</td>
+<td>Cumulative density function</td>
 <td align="center">x</td>
 <td align="center">x</td>
 <td align="center">x</td>
 </tr>
 <tr class="odd">
-<td>TVaR</td>
+<td>Value-at-Risk (percentile)</td>
 <td align="center">x</td>
 <td align="center">x</td>
 <td align="center">x</td>
 </tr>
 <tr class="even">
-<td>VaR (quantile)</td>
+<td>Tail Value-at-Risk</td>
 <td align="center">x</td>
 <td align="center">x</td>
 <td align="center">x</td>
 </tr>
 </tbody>
 </table>
-<p>Syntaxe:</p>
+</div>
+</div>
+<div id="syntax" class="section level1">
+<h1 class="hasAnchor">
+<a href="#syntax" class="anchor"></a>Syntax:</h1>
 <table class="table">
 <thead><tr class="header">
-<th>Fonction</th>
-<th>Syntaxe</th>
+<th>Function</th>
+<th>Syntax</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td>Espérance</td>
+<td>Mean</td>
 <td>E_distribution</td>
 </tr>
 <tr class="even">
-<td>K-ème moment</td>
+<td>K-th moment</td>
 <td>kthmoment_distribution</td>
 </tr>
 <tr class="odd">
-<td>Espérance tronquéee</td>
+<td>Truncated mean</td>
 <td>Etronq_distribution</td>
 </tr>
 <tr class="even">
-<td>Espérance limitée</td>
+<td>Limited expected value</td>
 <td>Elim_distribution</td>
 </tr>
 <tr class="odd">
@@ -568,32 +580,53 @@
 <td>SL_distribution</td>
 </tr>
 <tr class="odd">
-<td>Excès-moyen</td>
+<td>Excess of mean</td>
 <td>Mexcess_distribution</td>
 </tr>
 <tr class="even">
-<td>Fonction Génératrice des Moments</td>
+<td>Moment Generating Function</td>
 <td>MGF_distribution</td>
 </tr>
 <tr class="odd">
-<td>Densité</td>
+<td>Density</td>
 <td>ddistribution</td>
 </tr>
 <tr class="even">
-<td>Répartition</td>
+<td>Cumulative density function</td>
 <td>pdistribution</td>
 </tr>
 <tr class="odd">
-<td>TVaR</td>
+<td>Value-at-Risk (percentile)</td>
 <td>TVaR_distribution</td>
 </tr>
 <tr class="even">
-<td>VaR (quantile)</td>
+<td>Tail Value-at-Risk</td>
 <td>VaR_distribution</td>
 </tr>
 </tbody>
 </table>
 </div>
+<div id="updates" class="section level1">
+<h1 class="hasAnchor">
+<a href="#updates" class="anchor"></a>Updates</h1>
+<table class="table">
+<thead><tr class="header">
+<th align="center">Date</th>
+<th align="center">Modifications</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="center">26/07/2019</td>
+<td align="center">Initial creation of package</td>
+</tr>
+<tr class="even">
+<td align="center">12/09/2019</td>
+<td align="center">Completion of creation of all necessary function files</td>
+</tr>
+</tbody>
+</table>
+</div>
+
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
