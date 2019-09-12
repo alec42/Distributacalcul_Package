@@ -11,6 +11,7 @@
 #' @export
 TVaR_BNCOMP <- function(k, r, q, shape, rate, vark, ko, distr_severity = "Gamma"){
 
+    require(stats)
     if (vark == 0)
     {
         E_BNComp(r = r, q = q, shape = shape, rate = rate, distr_severity = distr_severity) / (1 - k)

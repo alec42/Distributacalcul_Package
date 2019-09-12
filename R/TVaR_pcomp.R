@@ -10,6 +10,7 @@
 #' @export
 TVaR_PCOMP <- function(k, lambda, shape, rate, vark, ko = 300, distr_severity = "Gamma")
 {
+    require(stats)
     if (vark == 0)
     {
         E_PCOMP(rate, shape, lambda, distr_severity) / (1 - k)

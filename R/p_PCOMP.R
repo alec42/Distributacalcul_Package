@@ -8,6 +8,8 @@
 #' @details Cette formule utilise aussi un choix de 2 distributions pour la sévérité; soit la Gamma ou la Lognormale.
 #' @export
 p_PCOMP <- function(x, lambda, shape, rate, ko = 300, distr_severity = "Gamma"){
+
+    require(stats)
     if(distr_severity == "Gamma")
     {
         (dpois(x = 0, lambda) + sum(sapply(1:ko, function(k) dpois(x = k, lambda) * pgamma(q = x, shape * k, rate))))

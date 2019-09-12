@@ -10,6 +10,7 @@
 #' @export
 VaR_BNCOMP <- function(k, r, q, shape, rate, ko = 300, distr_severity = "Gamma")
 {
+    require(stats)
     if(k <= p_BNCOMP(0, r, q, ko, shape, rate))
         0
     else

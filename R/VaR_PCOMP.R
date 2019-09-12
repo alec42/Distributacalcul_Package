@@ -9,6 +9,7 @@
 #' @export
 VaR_PCOMP <- function(k, lambda, shape, rate, ko = 300, distr_severity = "Gamma")
 {
+    require(stats)
     if(k <= p_PCOMP(x = 0, lambda = lambda, shape = shape, rate = rate, ko = ko))
         0
     else

@@ -10,6 +10,7 @@
 #' @export
 VaR_BINCOMP <- function(k, n, q, shape, rate, ko = 300, distr_severity = "Gamma")
 {
+    require(stats)
     if(k <= p_BINComp(0, n = n, q = q, ko = ko, shape = shape, rate = rate))
         0
     else

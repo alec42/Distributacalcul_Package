@@ -10,6 +10,7 @@
 #' @export
 p_BINCOMP <- function(x, n, q, shape, rate, ko, distr_severity = "Gamma")
 {
+    require(stats)
     if(distr_severity == "Gamma")
     {
         dbinom(x = 0, size = n, prob = q) + sum(sapply(1:ko, function(i) dbinom(x = i, size = n, prob = q) * pgamma(q = x, shape = shape * i, rate = rate)))

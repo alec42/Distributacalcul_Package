@@ -10,6 +10,7 @@
 #' @export
 p_BNCOMP <- function(x, r, q, shape, rate, ko, distr_severity = "Gamma")
 {
+    require(stats)
     if(distr_severity == "Gamma")
     {
         dnbinom(x = 0, size = r, prob = q) + sum(sapply(1:ko, function(i) dnbinom(x = i, size = r, prob = q) * pgamma(q = x, shape = shape * i, rate = rate)))
