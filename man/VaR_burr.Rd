@@ -4,10 +4,10 @@
 \alias{VaR_burr}
 \title{Value-at-risk de la loi Burr}
 \usage{
-VaR_burr(k, alpha, lam, tau)
+VaR_burr(kappa, alpha, lam, tau)
 }
 \arguments{
-\item{k}{niveau de confiance désiré}
+\item{kappa}{niveau de confiance désiré}
 
 \item{alpha}{alpha}
 

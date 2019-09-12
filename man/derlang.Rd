@@ -7,9 +7,11 @@
 derlang(x, n, b)
 }
 \arguments{
-\item{n}{n}
+\item{x}{x}
 
-\item{b}{beta}
+\item{n}{n parameter}
+
+\item{b}{beta parameter}
 }
 \description{
 Fonction de densité de la loi erlang

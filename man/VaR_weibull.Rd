@@ -4,10 +4,10 @@
 \alias{VaR_weibull}
 \title{Value-at-risk de la loi Weibull}
 \usage{
-VaR_weibull(k, tau, beta)
+VaR_weibull(kappa, tau, beta)
 }
 \arguments{
-\item{k}{niveau de confiance désiré}
+\item{kappa}{niveau de confiance désiré}
 
 \item{tau}{tau}
 

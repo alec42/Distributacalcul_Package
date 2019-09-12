@@ -4,10 +4,11 @@
 \alias{TVaR_IG}
 \title{Tail Value-at-risk de la loi inverse gaussienne}
 \usage{
-TVaR_IG(k, mu, beta = dispersion * mu^2, dispersion = beta/mu^2, vark)
+TVaR_IG(kappa, mu, beta = dispersion * mu^2, dispersion = beta/mu^2,
+  vark)
 }
 \arguments{
-\item{k}{Niveau de confiance désiré}
+\item{kappa}{Niveau de confiance désiré}
 
 \item{mu}{mu}
 
@@ -15,7 +16,7 @@ TVaR_IG(k, mu, beta = dispersion * mu^2, dispersion = beta/mu^2, vark)
 
 \item{dispersion}{dispersion, = beta / mu^2}
 
-\item{vark}{Value at Risk (VaR) calculé au même niveau de confiance k}
+\item{vark}{Value at Risk (VaR) calculé au même niveau de confiance kappa}
 }
 \description{
 Tail Value-at-risk de la loi inverse gaussienne

@@ -7,11 +7,13 @@
 perlang(x, n, b, lower.tail = T)
 }
 \arguments{
+\item{x}{x}
+
 \item{n}{n}
 
 \item{b}{beta}
 
-\item{k}{niveau de confiance désiré}
+\item{lower.tail}{Si vrai (défaut) alors fonction de répartition. Si faux, de survie.}
 }
 \description{
 Fonction de répartition de la loi Erlang

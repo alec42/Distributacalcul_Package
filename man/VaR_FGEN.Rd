@@ -4,12 +4,12 @@
 \alias{VaR_FGEN}
 \title{VaR de la F-Généralisé}
 \usage{
-VaR_FGEN(x, k, lambda, alpha, tau)
+VaR_FGEN(x, kappa, lambda, alpha, tau)
 }
 \arguments{
 \item{x}{x}
 
-\item{k}{niveau de confiance désiré}
+\item{kappa}{niveau de confiance désiré}
 
 \item{lambda}{lambda, > 0}
 

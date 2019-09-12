@@ -4,10 +4,10 @@
 \alias{TVaR_llogis}
 \title{Tail Value-at-risk d'une loi Log-logistique}
 \usage{
-TVaR_llogis(k, lam, tau)
+TVaR_llogis(kappa, lam, tau)
 }
 \arguments{
-\item{k}{Niveau de confiance désiré}
+\item{kappa}{Niveau de confiance désiré}
 
 \item{lam}{lam}
 

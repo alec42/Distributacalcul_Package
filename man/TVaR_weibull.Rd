@@ -4,10 +4,10 @@
 \alias{TVaR_weibull}
 \title{Tail Value-at-risk d'une loi Weibull}
 \usage{
-TVaR_weibull(k, tau, beta)
+TVaR_weibull(kappa, tau, beta)
 }
 \arguments{
-\item{k}{Niveau de confiance désiré}
+\item{kappa}{Niveau de confiance désiré}
 
 \item{tau}{tau}
 

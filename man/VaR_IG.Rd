@@ -4,10 +4,10 @@
 \alias{VaR_IG}
 \title{Value-at-risk de la loi inverse gaussienne}
 \usage{
-VaR_IG(k, mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
+VaR_IG(kappa, mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 }
 \arguments{
-\item{k}{niveau de confiance désiré}
+\item{kappa}{niveau de confiance désiré}
 
 \item{mu}{mu}
 

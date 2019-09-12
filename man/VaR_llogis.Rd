@@ -4,10 +4,10 @@
 \alias{VaR_llogis}
 \title{Value-at-risk de la loi Log-logstique}
 \usage{
-VaR_llogis(k, lam, tau)
+VaR_llogis(kappa, lam, tau)
 }
 \arguments{
-\item{k}{niveau de confiance désiré}
+\item{kappa}{niveau de confiance désiré}
 
 \item{lam}{lambda}
 

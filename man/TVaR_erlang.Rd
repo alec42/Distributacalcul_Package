@@ -4,18 +4,16 @@
 \alias{TVaR_erlang}
 \title{Tail Value-at-risk d'une loi Erlang}
 \usage{
-TVaR_erlang(vark, k, n, b)
+TVaR_erlang(kappa, n, b, vark)
 }
 \arguments{
-\item{vark}{Value at Risk (VaR) calculé au même niveau de confiance k}
+\item{kappa}{Niveau de confiance désiré}
 
-\item{k}{Niveau de confiance désiré}
+\item{n}{n}
 
-\item{alpha}{alpha}
+\item{b}{beta}
 
-\item{lam}{lam}
-
-\item{tau}{tau}
+\item{vark}{Value at Risk (VaR) calculé au même niveau de confiance kappa}
 }
 \description{
 Tail Value-at-risk d'une loi Erlang

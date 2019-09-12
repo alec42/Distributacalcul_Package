@@ -7,7 +7,9 @@
 dIG(x, mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 }
 \arguments{
-\item{mu}{mu}
+\item{x}{x}
+
+\item{mu}{mu parameter}
 
 \item{beta}{beta, = dispersion * mu^2}
 

@@ -1,7 +1,8 @@
 #' Fonction de répartition de la loi Erlang
-#' @param k niveau de confiance désiré
+#' @param x x
 #' @param n n
 #' @param b beta
+#' @param lower.tail Si vrai (défaut) alors fonction de répartition. Si faux, de survie.
 #' @export
 perlang <- function(x, n, b, lower.tail = T)
 {

@@ -15,6 +15,8 @@ pIG(q, mu, beta = dispersion * mu^2, dispersion = beta/mu^2,
 \item{beta}{beta = dispersion * mu^2}
 
 \item{dispersion}{dispersion = beta / mu^2}
+
+\item{lower.tail}{Si vrai (défaut) alors fonction de répartition. Si faux, de survie.}
 }
 \description{
 Envelope de la densité de la loi inverse gaussienne

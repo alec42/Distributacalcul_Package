@@ -1,9 +1,8 @@
 #' Tail Value-at-risk d'une loi Erlang
 #' @param kappa Niveau de confiance désiré
 #' @param vark Value at Risk (VaR) calculé au même niveau de confiance kappa
-#' @param alpha alpha
-#' @param lam lam
-#' @param tau tau
+#' @param n n
+#' @param b beta
 #' @details Cette formule nécessite la formule de la VaR_erlang (déjà installée avec le package tvarPackage)
 #' @export
 TVaR_erlang <- function(kappa, n, b, vark)

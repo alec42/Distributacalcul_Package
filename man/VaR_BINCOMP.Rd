@@ -4,10 +4,11 @@
 \alias{VaR_BINCOMP}
 \title{Value-at-risk d'une loi binomiale composée}
 \usage{
-VaR_BINCOMP(k, n, q, shape, rate, ko = 300, distr_severity = "Gamma")
+VaR_BINCOMP(kappa, n, q, shape, rate, ko = 300,
+  distr_severity = "Gamma")
 }
 \arguments{
-\item{k}{Niveau de confiance désiré}
+\item{kappa}{Niveau de confiance désiré}
 
 \item{n}{n pour la binomiale}
 
