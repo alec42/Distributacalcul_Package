@@ -10,10 +10,10 @@ p_negbinom <- function(k, r, p = (1 / (1 + beta)), beta = ((1 - p) / p), nb_trie
 {
     if(lower.tail)
     {
-        sum(sapply(0:k, function(i) d_nbinom(k = i, r, p, nb_tries)))
+        sum(sapply(0:k, function(i) d_negbinom(k = i, r, p, nb_tries)))
     }
     else
     {
-        1 - sum(sapply(0:k, function(i) d_nbinom(k = i, r, p, nb_tries)))
+        1 - sum(sapply(0:k, function(i) d_negbinom(k = i, r, p, nb_tries)))
     }
 }
