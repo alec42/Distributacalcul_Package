@@ -24,16 +24,16 @@ Functions included in the package are marked by an x, those included in the [TVa
 
 |             Function             	| Binomial 	| Bernoulli 	| Negative Binomial 	| Geometric 	| Poisson 	| Uniform	| Logarithmic 	| Hypergeometric 	|
 |----------------------------------	|:---------:	|:---------:	|:------------------:	|:-----------:	|:-------:	|:--------:	| :---------------:	| :------------------:	|
-| Mean            	                |      y     	|           	|          y         	|             	|         	|     x    	| x             	| x                	|
+| Mean            	                |      y     	|           	|         y/x         |             	|         	|     x    	| x             	| x                	|
 | K-th moment           	          |           	|           	|                    	|             	|         	|          	|               	|                  	|
 | Truncated mean       	            |           	|           	|                    	|             	|         	|          	|               	|                  	|
 | Limited expected value            |           	|           	|                    	|             	|         	|          	|               	|                  	|
-| Variance                         	|      y    	|           	|          y         	|             	|         	|     x    	| x             	| x                	|
+| Variance                         	|      y    	|           	|         y/x         |             	|         	|     x    	| x             	| x                	|
 | Stop-loss                        	|           	|           	|                    	|             	|         	|          	|               	|                  	|
 | Excess of mean                    |           	|           	|                    	|             	|         	|          	|               	|                  	|
 | Moment Generating Function 	      |           	|           	|                    	|             	|         	|          	|               	|                  	|
-| Density                          	|           	|           	|                    	|             	|         	|     x    	|               	|                  	|
-| Cumulative density function      	|           	|           	|                    	|             	|         	|     x    	|               	|                  	|
+| Density                          	|           	|           	|          x          |             	|         	|     x    	|               	|                  	|
+| Cumulative density function      	|           	|           	|          x         	|             	|         	|     x    	|               	|                  	|
 | Value-at-Risk (percentile)        |      y    	|           	|                    	|             	|         	|          	|               	|                  	|
 | Tail Value-at-Risk                |      y    	|           	|                    	|             	|    y    	|          	|               	|                  	|
 
