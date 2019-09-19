@@ -8,4 +8,3 @@ kthmoment_gamma <- function(k, shape, rate = 1, scale = 1 / rate)
 {
     kthmoment_erlang(k, shape, rate)
 }
-dgamma()
