@@ -1,4 +1,4 @@
-#' Mean-Excess loss d'une loi erlang
+#' Mean-Excess loss (excès-moyen) d'une loi erlang
 #' @param d déductible
 #' @param n n
 #' @param b beta

@@ -1,4 +1,4 @@
-#' Tail Value-at-risk d'une loi Log-logistique
+#' Tail Value-at-risk d'une loi log-logistique
 #' @param kappa Niveau de confiance désiré
 #' @param lam lam
 #' @param tau tau

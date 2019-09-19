@@ -1,4 +1,4 @@
-#' Envelope de la densité de la loi inverse gaussienne
+#' Envelope de la densité d'une loi inverse gaussienne
 #' @param x x
 #' @param mu mu parameter
 #' @param beta beta, = dispersion * mu^2

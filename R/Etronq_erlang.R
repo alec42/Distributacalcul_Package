@@ -1,5 +1,5 @@
 #' Espérance tronquée d'une loi Erlang
-#' @param d Deductible
+#' @param d valeur où tronquer
 #' @param n n
 #' @param b beta
 #' @export

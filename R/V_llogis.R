@@ -1,4 +1,4 @@
-#' Variance de la loi Log-logstique
+#' Variance d'une loi log-logstique
 #' @param lam lambda
 #' @param tau tau
 #' @export

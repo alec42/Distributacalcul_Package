@@ -1,4 +1,4 @@
-#' k-ème moment de la loi Burr
+#' k-ème moment d'une loi Burr
 #' @param k k-ème moment, -tau < k < alpha * tau
 #' @param alpha alpha
 #' @param lam lambda

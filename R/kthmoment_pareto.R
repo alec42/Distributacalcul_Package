@@ -1,4 +1,4 @@
-#' k-ème moment de la loi Pareto
+#' k-ème moment d'une loi Pareto
 #' @param k k-ème moment, -1 < k < alpha ou alpha > k
 #' @param alpha alpha
 #' @param lam lambda

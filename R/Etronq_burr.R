@@ -1,5 +1,5 @@
 #' Espérance tronquée d'une loi Burr
-#' @param d Deductible
+#' @param d valeur où tronquer
 #' @param alpha alpha
 #' @param lam lambda
 #' @param tau tau

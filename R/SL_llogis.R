@@ -1,4 +1,4 @@
-#' Stop-loss d'une loi Log-logistique
+#' Stop-loss d'une loi log-logistique
 #' @param d montant d de la franchise
 #' @param lam lambda
 #' @param tau tau

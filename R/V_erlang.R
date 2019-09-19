@@ -1,5 +1,5 @@
 #' Variance d'une loi Erlang
-#' @param n tau
+#' @param n n
 #' @param b beta
 #' @export
 V_erlang <- function(n, b)

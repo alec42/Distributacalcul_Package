@@ -1,5 +1,5 @@
 #' Espérance tronquée d'une loi Weibull
-#' @param d Deductible
+#' @param d valeur où tronquer
 #' @param tau tau
 #' @param beta beta
 #' @export

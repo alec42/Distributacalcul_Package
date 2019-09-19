@@ -1,5 +1,5 @@
-#' Espérance tronquée de la loi inverse gaussienne
-#' @param d Deductible
+#' Espérance tronquée d'une loi inverse gaussienne
+#' @param d valeur où tronquer
 #' @param mu mu
 #' @param beta beta = dispersion * mu^2
 #' @param dispersion dispersion = beta / mu^2

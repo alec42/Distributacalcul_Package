@@ -1,4 +1,4 @@
-#' Value-at-risk de la loi Weibull
+#' Value-at-risk d'une loi Weibull
 #' @param kappa niveau de confiance désiré
 #' @param tau tau
 #' @param beta beta

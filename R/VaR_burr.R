@@ -1,4 +1,4 @@
-#' Value-at-risk de la loi Burr
+#' Value-at-risk d'une loi Burr
 #' @param kappa niveau de confiance désiré
 #' @param alpha alpha
 #' @param lam lambda

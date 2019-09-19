@@ -2,11 +2,11 @@
 #' @param kappa Niveau de confiance désiré
 #' @param n n pour la binomiale
 #' @param q probabilité q pour la binomiale
-#' @param shape alpha pour la Gamma et mu pour la lognormale
-#' @param rate beta pour la Gamma et sigma^2 pour la lognormale
+#' @param shape alpha pour la Gamma
+#' @param rate beta pour la Gamma
 #' @param vark Value at Risk (VaR) calculé au même niveau de confiance kappa
 #' @param ko borne pour la somme dans le calcul de la TVaR
-#' @param distr_severity choix de distribution de sévérité. Gamma ou Lognormale
+#' @param distr_severity choix de distribution de sévérité
 #' @details Cette formule nécessite la formule de la VaR_bincomp (déjà installée avec le package tvarPackage). Cette formule utilise aussi un choix de (présentement) 2 distributions pour la sévérité; soit la Gamma ou la Lognormale.
 #' @export
 TVaR_BINCOMP <- function(kappa, n, q, shape, rate, vark, ko, distr_severity = "Gamma"){

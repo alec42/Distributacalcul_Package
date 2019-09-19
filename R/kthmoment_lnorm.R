@@ -1,4 +1,4 @@
-#' k-ème moment de la loi Lognormale
+#' k-ème moment d'une loi lognormale
 #' @param k k-ème moment
 #' @param mu mu
 #' @param sig sigma = sqrt(sigma^2)

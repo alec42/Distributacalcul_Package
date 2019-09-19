@@ -1,4 +1,4 @@
-#' Value-at-risk de la loi Log-logstique
+#' Value-at-risk d'une loi log-logstique
 #' @param kappa niveau de confiance désiré
 #' @param lam lambda
 #' @param tau tau

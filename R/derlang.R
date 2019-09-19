@@ -1,7 +1,7 @@
 #' Fonction de densité de la loi erlang
 #' @param x x
-#' @param n n parameter
-#' @param b beta parameter
+#' @param n n
+#' @param b beta
 #' @export
 derlang <- function(x, n, b)
 {

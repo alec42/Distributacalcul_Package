@@ -1,6 +1,4 @@
-#' Mean-Excess loss d'une loi Weibull
-#'
-#'
+#' Mean-Excess loss (excès-moyen) d'une loi Weibull
 #' @param d déductible
 #' @param tau tau
 #' @param beta beta

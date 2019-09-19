@@ -1,5 +1,5 @@
-#' Espérance tronquée d'une loi Log-logistique
-#' @param d Deductible
+#' Espérance tronquée d'une loi log-logistique
+#' @param d valeur où tronquer
 #' @param lam lambda
 #' @param tau tau
 #' @export

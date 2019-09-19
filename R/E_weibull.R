@@ -1,4 +1,4 @@
-#' k-ème moment de la loi Weibull
+#' k-ème moment d'une loi Weibull
 #' @param tau tau
 #' @param beta beta
 #' @export

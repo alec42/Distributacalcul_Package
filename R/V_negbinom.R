@@ -1,4 +1,4 @@
-#' Variance de la loi binomiale négative
+#' Variance d'une loi binomiale négative
 #' @param r Nombre de succès visé.
 #' @param p Probabilité de succès.
 #' @param beta Deuxième paramétrisation de la loi binomiale négative tel que beta = (1 - p) / p.

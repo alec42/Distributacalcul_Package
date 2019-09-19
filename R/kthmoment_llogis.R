@@ -1,4 +1,4 @@
-#' k-ème moment de la loi Log-logistique
+#' k-ème moment d'une loi log-logistique
 #' @param k k-ème moment
 #' @param lam lambda
 #' @param tau tau

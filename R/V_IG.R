@@ -1,4 +1,4 @@
-#' Variance de la loi inverse gaussienne
+#' Variance d'une loi inverse gaussienne
 #' @param mu mu
 #' @param beta beta = dispersion * mu^2
 #' @param dispersion dispersion = beta / mu^2

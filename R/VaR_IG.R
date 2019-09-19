@@ -1,4 +1,4 @@
-#' Value-at-risk de la loi inverse gaussienne
+#' Value-at-risk d'une loi inverse gaussienne
 #' @param kappa niveau de confiance désiré
 #' @param mu mu
 #' @param beta beta = dispersion * mu^2
