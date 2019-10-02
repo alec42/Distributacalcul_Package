@@ -10,8 +10,8 @@
 VaR_BINCOMP <- function(kappa, n, q, shape, rate, ko = 300, distr_severity = "Gamma")
 {
     require(stats)
-    if(kappa <= p_BINComp(0, n = n, q = q, ko = ko, shape = shape, rate = rate))
+    if(kappa <= p_BINCOMP(0, n = n, q = q, ko = ko, shape = shape, rate = rate))
         0
     else
-        optimize(function(i) abs(p_BINComp(i, n = n, q = q, ko = ko, shape = shape, rate = rate) - kappa), c(0, ko))$minimum
+        optimize(function(i) abs(p_BINCOMP(i, n = n, q = q, ko = ko, shape = shape, rate = rate) - kappa), c(0, ko))$minimum
 }

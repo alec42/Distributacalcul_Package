@@ -19,9 +19,5 @@ TVaR_PCOMP <- function(kappa, lambda, shape, rate, vark, ko = 300, distr_severit
     {
         sum(sapply(1:ko, function(k) dpois(x = k, lambda) * ( shape * k )/rate * pgamma(q = vark, shape = shape * k + 1, rate, lower.tail = F)))/(1 - kappa)
     }
-    else
-    {
-        sum(sapply(1:ko, function(k) dpois(x = k, lambda) * (shape * k ) / rate * plnorm(q = vark, meanlog = shape * k + 1, sdlog = sqrt(rate), lower.tail = F)))/(1 - kappa)
-    }
 
 }

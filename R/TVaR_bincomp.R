@@ -14,14 +14,10 @@ TVaR_BINCOMP <- function(kappa, n, q, shape, rate, vark, ko, distr_severity = "G
     require(stats)
     if (vark == 0)
     {
-        E_BINComp(n = n, q = q, shape = shape, rate = rate, distr_severity = distr_severity) / (1 - kappa)
+        E_BINCOMP(n = n, q = q, shape = shape, rate = rate, distr_severity = distr_severity) / (1 - kappa)
     }
     else if (distr_severity == "Gamma")
     {
         (sum(sapply(1:ko, function(i) dbinom(x = i, size = n, prob = q) * (shape * i / rate) * pgamma(q = vark, shape = shape * i + 1, rate = rate, lower.tail = F))) / (1 - kappa))
-    }
-    else if (distr_severity == "Lognormale")
-    {
-        (sum(sapply(1:ko, function(i) dbinom(x = i, size = n, prob = q) * (shape * i / rate) * plnorm(q = vark, meanlog = shape * i + 1, sdlog = sqrt(rate), lower.tail = F))) / (1 - kappa))
     }
 }
