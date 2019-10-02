@@ -12,7 +12,7 @@ TVaR_burr <- function(kappa, alpha, lam, tau, vark) {
             (lam^(1 / tau)) *
                 gamma(1 + 1 / tau) *
                 gamma(alpha - 1 / tau) *
-                pbeta(q = (var^tau) / (lam + var^tau),
+                pbeta(q = (vark^tau) / (lam + vark^tau),
                       shape1 = 1 + 1 / tau,
                       shape2 = alpha - 1 / tau,
                       lower.tail = F)
