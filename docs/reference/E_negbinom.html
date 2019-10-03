@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Value-at-risk de la loi Burr — VaR_burr • Distributacalcul</title>
+<title>Espérance de la loi binomiale négative — E_negbinom • Distributacalcul</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,8 @@
 
 
 
-<meta property="og:title" content="Value-at-risk de la loi Burr — VaR_burr" />
-<meta property="og:description" content="Value-at-risk de la loi Burr" />
+<meta property="og:title" content="Espérance de la loi binomiale négative — E_negbinom" />
+<meta property="og:description" content="Espérance de la loi binomiale négative" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -100,35 +100,35 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Value-at-risk de la loi Burr</h1>
+    <h1>Espérance de la loi binomiale négative</h1>
     
-    <div class="hidden name"><code>VaR_burr.Rd</code></div>
+    <div class="hidden name"><code>E_negbinom.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Value-at-risk de la loi Burr</p>
+    <p>Espérance de la loi binomiale négative</p>
     </div>
 
-    <pre class="usage"><span class='fu'>VaR_burr</span>(<span class='no'>kappa</span>, <span class='no'>alpha</span>, <span class='no'>lam</span>, <span class='no'>tau</span>)</pre>
+    <pre class="usage"><span class='fu'>E_negbinom</span>(<span class='no'>r</span>, <span class='kw'>p</span> <span class='kw'>=</span> (<span class='fl'>1</span>/(<span class='fl'>1</span> + <span class='no'>beta</span>)), <span class='kw'>beta</span> <span class='kw'>=</span> ((<span class='fl'>1</span> - <span class='no'>p</span>)/<span class='no'>p</span>), <span class='kw'>nb_tries</span> <span class='kw'>=</span> <span class='no'>F</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>kappa</th>
-      <td><p>niveau de confiance désiré</p></td>
+      <th>r</th>
+      <td><p>Nombre de succès visé.</p></td>
     </tr>
     <tr>
-      <th>alpha</th>
-      <td><p>alpha</p></td>
+      <th>p</th>
+      <td><p>Probabilité de succès.</p></td>
     </tr>
     <tr>
-      <th>lam</th>
-      <td><p>lambda</p></td>
+      <th>beta</th>
+      <td><p>Deuxième paramétrisation de la loi binomiale négative tel que beta = (1 - p) / p.</p></td>
     </tr>
     <tr>
-      <th>tau</th>
-      <td><p>tau</p></td>
+      <th>nb_tries</th>
+      <td><p>Stipule si la binomiale est une du nombre d'essais pour le r-ème succès, ou du nombre d'échecs pour le r-ème succès (par défaut).</p></td>
     </tr>
     </table>
 
