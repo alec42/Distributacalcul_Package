@@ -10,7 +10,7 @@
 VaR_BNCOMP <- function(kappa, r, q, shape, rate, ko = 300, distr_severity = "Gamma")
 {
     require(stats)
-    if(kappa <= p_BNCOMP(0, r, q, ko, shape, rate))
+    if(kappa <= p_BNCOMP(0, r, q, shape, rate, ko, distr_severity))
         0
     else
         optimize(function(i) abs(p_BNCOMP(i, r, q, ko, shape, rate) - kappa), c(0, ko))$minimum
