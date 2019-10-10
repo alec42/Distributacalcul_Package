@@ -6,13 +6,16 @@
 #' @param nb_tries Stipule si la binomiale est une du nombre d'essais pour le r-ème succès, ou du nombre d'échecs pour le r-ème succès (par défaut).
 #' @param lower.tail Si vrai (défaut) alors fonction de répartition. Si faux, de survie.
 #' @export
-p_negbinom <- function(k, r, p = (1 / (1 + beta)), beta = ((1 - p) / p), nb_tries = FALSE, lower.tail = T)
-    {
+p_negbinom <- function(k, r, p = (1 / (1 + beta)), beta = ((1 - p) / p), nb_tries = FALSE, lower.tail = T){
+
     start_FX <- ifelse(nb_tries, r, 0)
 
-    if((nb_tries = T) & (k < r)){
-        return(NULL)}
-    else{
+    if((nb_tries == T) & (k < r))
+    {
+        return(NULL)
+    }
+    else
+    {
         if(lower.tail){
             sum(sapply(start_FX:k, function(i) d_negbinom(k = i, r = r, p = p, nb_tries = nb_tries)))
         }
