@@ -1,6 +1,6 @@
 #' @param shape shape parameter \eqn{n}, must be positive integer.
-#' @param scale \eqn{\beta}{beta} is the scale parameter, must be positive.
-#' @param rate alternative parameterization to scale parameter, rate = 1 / scale.
+#' @param rate \eqn{\beta}{beta} is the rate parameter, must be positive.
+#' @param scale alternative parameterization to rate parameter, scale = 1 / rate.
 #'
 #' <%=ifelse(exists("k") && k, "@param k kth-moment.", "") %>
 #' <%=ifelse(exists("x") && x, "@param x quantile.", "") %>

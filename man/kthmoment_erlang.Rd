@@ -4,20 +4,27 @@
 \alias{kthmoment_erlang}
 \title{kth Moment of the Erlang Distribution}
 \usage{
-kthmoment_erlang(k, shape, scale, rate = 1/scale)
+kthmoment_erlang(k, shape = 1/rate, scale, rate = 1/scale)
 }
 \arguments{
 \item{k}{kth-moment.}
 
 \item{shape}{shape parameter \eqn{n}, must be positive integer.}
 
-\item{scale}{\eqn{\beta}{beta} is the scale parameter, must be positive.}
+\item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 
-\item{rate}{alternative parameterization to scale parameter, rate = 1 / scale.}
+\item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
 }
 \description{
 kth-moment of the Erlang distribution with shape parameter \eqn{n}
- and rate parameter \eqn{\beta}{b}.
+ and rate parameter \eqn{\beta}{beta}.
+}
+\details{
+The Erlang distribution with shape parameter \eqn{n} and rate parameter
+  \eqn{\beta}{b} has density:
+  \deqn{f\left(x\right) = \frac{\beta^{n}}{\Gamma(n)} x^{n - 1}%
+   \mathrm{e}^{-\beta x}}{f(x) = b^n / \Gamma(n) x^{n - 1} e^{-b x}}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\beta > 0}{b > 0}, \eqn{n \in \mathcal{N}^+}{n = 1, 2, 3, ...}
 }
 \examples{
 
@@ -29,11 +36,11 @@ kthmoment_erlang(k = 2, shape = 2, rate = 0.2)
 
 }
 \seealso{
-[derlang()] for the probability mass function,
- [perlang()] for the cumulative probability mass function,
- [V_erlang()] for the variance,
- [Mexcess_erlang()] for the Mean Excess Loss,
- [Elim_erlang()] for the limited expected value,
- [Etronq_erlang()] for the truncated mean, and
- [E_erlang()] for the expected value.
+Other Erlang Distribution: \code{\link{.TVaR_erlang}},
+  \code{\link{E_erlang}}, \code{\link{Elim_erlang}},
+  \code{\link{Etronq_erlang}},
+  \code{\link{Mexcess_erlang}}, \code{\link{SL_erlang}},
+  \code{\link{V_erlang}}, \code{\link{derlang}},
+  \code{\link{perlang}}
 }
+\concept{Erlang Distribution}

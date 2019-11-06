@@ -4,30 +4,37 @@
 \alias{.TVaR_erlang}
 \title{Tail Value-at-Risk of the Erlang Distribution}
 \usage{
-.TVaR_erlang(kappa, shape, scale, rate = 1/scale, vark)
+.TVaR_erlang(kappa, shape, scale = 1/rate, rate = 1/scale, vark)
 }
 \arguments{
+\item{kappa}{probability.}
+
 \item{shape}{shape parameter \eqn{n}, must be positive integer.}
 
-\item{scale}{\eqn{\beta}{beta} is the scale parameter, must be positive.}
+\item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 
-\item{rate}{alternative parameterization to scale parameter, rate = 1 / scale.}
+\item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
+
+\item{vark}{Value-at-Risk (VaR) calculated at the given probability kappa.}
 }
 \description{
 Tail Value-at-Risk of the Erlang distribution with shape
- parameter \eqn{n} and rate parameter \eqn{\beta}{b}.
+ parameter \eqn{n} and rate parameter \eqn{\beta}{beta}.
 }
 \details{
+The Erlang distribution with shape parameter \eqn{n} and rate parameter
+  \eqn{\beta}{b} has density:
+  \deqn{f\left(x\right) = \frac{\beta^{n}}{\Gamma(n)} x^{n - 1}%
+   \mathrm{e}^{-\beta x}}{f(x) = b^n / \Gamma(n) x^{n - 1} e^{-b x}}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\beta > 0}{b > 0}, \eqn{n \in \mathcal{N}^+}{n = 1, 2, 3, ...}
+
 Cette formule nécessite la formule de la VaR_erlang (déjà installée avec le package tvarPackage)
 }
 \seealso{
-[derlang()] for the probability mass function,
- [perlang()] for the cumulative probability mass function,
- [V_erlang()] for the variance,
- [Mexcess_erlang()] for the Mean Excess Loss,
- [SL_erlang()] for the stop-loss,
- [Elim_erlang()] for the limited expected value,
- [Etronq_erlang()] for the truncated mean,
- [E_erlang()] for the expected value, and
- [kthmoment_erlang()] for the \eqn{k}th moment.
+Other Erlang Distribution: \code{\link{E_erlang}},
+  \code{\link{Elim_erlang}}, \code{\link{Etronq_erlang}},
+  \code{\link{Mexcess_erlang}}, \code{\link{SL_erlang}},
+  \code{\link{V_erlang}}, \code{\link{derlang}},
+  \code{\link{kthmoment_erlang}}, \code{\link{perlang}}
 }
+\concept{Erlang Distribution}

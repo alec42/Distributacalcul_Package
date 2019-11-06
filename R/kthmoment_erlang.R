@@ -1,20 +1,12 @@
 #' kth Moment of the Erlang Distribution
 #'
 #' @description kth-moment of the Erlang distribution with shape parameter \eqn{n}
-#'  and rate parameter \eqn{\beta}{b}.
+#'  and rate parameter \eqn{\beta}{beta}.
 #'
 #' @templateVar k TRUE
+#' @templateVar q FALSE
+#' @templateVar kappa FALSE
 #' @template erlang-template
-#'
-#' @seealso
-#'  [derlang()] for the probability mass function,
-#'  [perlang()] for the cumulative probability mass function,
-#'  [V_erlang()] for the variance,
-# [TVaR_erlang()] for the Tail Value-at-Risk,
-#'  [Mexcess_erlang()] for the Mean Excess Loss,
-#'  [Elim_erlang()] for the limited expected value,
-#'  [Etronq_erlang()] for the truncated mean, and
-#'  [E_erlang()] for the expected value.
 #'
 #' @export
 #'
@@ -26,7 +18,7 @@
 #' # With rate parameter
 #' kthmoment_erlang(k = 2, shape = 2, rate = 0.2)
 #'
-kthmoment_erlang <- function(k, shape, scale, rate = 1 / scale)
+kthmoment_erlang <- function(k, shape = 1 / rate, scale, rate = 1 / scale)
 {
     prod(sapply(0:(k - 1), function(i) (shape + i))) /
         (rate^k)
