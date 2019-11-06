@@ -4,6 +4,9 @@
 #'  distribution with parameters \eqn{r} (number of successful trials) and
 #'  \eqn{p} (probability of success).
 #'
+#' @templateVar k TRUE
+#' @templateVar q FALSE
+#' @templateVar kappa FALSE
 #' @templateVar lower.tail TRUE
 #' @template negbinom-template
 #'

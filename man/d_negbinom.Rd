@@ -8,6 +8,8 @@ d_negbinom(k, r, p = (1/(1 + beta)), beta = ((1 - p)/p),
   nb_tries = F)
 }
 \arguments{
+\item{k}{quantile.}
+
 \item{r}{Number of successful trials.}
 
 \item{p}{Probability of success.}
