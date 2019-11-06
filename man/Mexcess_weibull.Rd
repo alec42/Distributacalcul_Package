@@ -2,17 +2,45 @@
 % Please edit documentation in R/Mexcess_weibull.R
 \name{Mexcess_weibull}
 \alias{Mexcess_weibull}
-\title{Mean-Excess loss (excès-moyen) d'une loi Weibull}
+\title{Mean-Excess loss of the Weibull Distribution}
 \usage{
-Mexcess_weibull(d, tau, beta)
+Mexcess_weibull(d, shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{d}{déductible}
+\item{d}{cut-off value.}
 
-\item{tau}{tau}
+\item{shape}{shape parameter \eqn{\tau}{tau}, must be positive integer.}
 
-\item{beta}{beta}
+\item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
+
+\item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-Mean-Excess loss (excès-moyen) d'une loi Weibull
+Mean excess loss of the Weibull distribution with shape parameter
+ parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
 }
+\details{
+The Weibull distribution with shape parameter \eqn{\tau}{t} and rate parameter
+  \eqn{\beta}{b} has density:
+  \deqn{f\left(x\right) = \beta \tau \left( \beta x \right) ^{\tau -1} %
+   \mathrm{e}^{-\left( \beta x\right) ^{\tau }}}{f(x) = b t (b x)^(t - 1) %
+   e^{(-b x)^t}}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\beta > 0}{b > 0}, \eqn{\tau > 0}{t > 0}
+}
+\examples{
+
+# With scale parameter
+Mexcess_weibull(d = 2, shape = 3, scale = 4)
+
+# With rate parameter
+Mexcess_weibull(d = 2, shape = 3, rate = 0.25)
+
+}
+\seealso{
+Other Weibull Distribution: \code{\link{E_weibull}},
+  \code{\link{Elim_weibull}}, \code{\link{Etronq_weibull}},
+  \code{\link{SL_weibull}}, \code{\link{TVaR_weibull}},
+  \code{\link{V_weibull}}, \code{\link{VaR_weibull}},
+  \code{\link{kthmoment_weibull}}
+}
+\concept{Weibull Distribution}

@@ -2,17 +2,46 @@
 % Please edit documentation in R/Etronq_weibull.R
 \name{Etronq_weibull}
 \alias{Etronq_weibull}
-\title{Espérance tronquée d'une loi Weibull}
+\title{Truncated Mean of the Weibull Distribution}
 \usage{
-Etronq_weibull(d, tau, beta)
+Etronq_weibull(d, shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{d}{valeur où tronquer}
+\item{d}{cut-off value.}
 
-\item{tau}{tau}
+\item{shape}{shape parameter \eqn{\tau}{tau}, must be positive integer.}
 
-\item{beta}{beta}
+\item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
+
+\item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-Espérance tronquée d'une loi Weibull
+Truncated mean of the Weibull distribution with shape parameter
+ parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
 }
+\details{
+The Weibull distribution with shape parameter \eqn{\tau}{t} and rate parameter
+  \eqn{\beta}{b} has density:
+  \deqn{f\left(x\right) = \beta \tau \left( \beta x \right) ^{\tau -1} %
+   \mathrm{e}^{-\left( \beta x\right) ^{\tau }}}{f(x) = b t (b x)^(t - 1) %
+   e^{(-b x)^t}}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\beta > 0}{b > 0}, \eqn{\tau > 0}{t > 0}
+}
+\examples{
+
+# With scale parameter
+Etronq_weibull(d = 2, shape = 2, scale = 5)
+
+# With rate parameter
+Etronq_weibull(d = 2, shape = 2, rate = 0.2)
+
+}
+\seealso{
+Other Weibull Distribution: \code{\link{E_weibull}},
+  \code{\link{Elim_weibull}},
+  \code{\link{Mexcess_weibull}}, \code{\link{SL_weibull}},
+  \code{\link{TVaR_weibull}}, \code{\link{V_weibull}},
+  \code{\link{VaR_weibull}},
+  \code{\link{kthmoment_weibull}}
+}
+\concept{Weibull Distribution}

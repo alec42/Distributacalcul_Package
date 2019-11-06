@@ -2,17 +2,46 @@
 % Please edit documentation in R/SL_weibull.R
 \name{SL_weibull}
 \alias{SL_weibull}
-\title{Stop-loss d'une loi Weibull}
+\title{Stop-loss of the Weibull Distribution}
 \usage{
-SL_weibull(d, tau, beta)
+SL_weibull(d, shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{d}{montant d de la franchise}
+\item{d}{cut-off value.}
 
-\item{tau}{tau}
+\item{shape}{shape parameter \eqn{\tau}{tau}, must be positive integer.}
 
-\item{beta}{beta}
+\item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
+
+\item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-Stop-loss d'une loi Weibull
+Stop loss of the Weibull distribution with shape parameter
+ parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
 }
+\details{
+The Weibull distribution with shape parameter \eqn{\tau}{t} and rate parameter
+  \eqn{\beta}{b} has density:
+  \deqn{f\left(x\right) = \beta \tau \left( \beta x \right) ^{\tau -1} %
+   \mathrm{e}^{-\left( \beta x\right) ^{\tau }}}{f(x) = b t (b x)^(t - 1) %
+   e^{(-b x)^t}}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\beta > 0}{b > 0}, \eqn{\tau > 0}{t > 0}
+}
+\examples{
+
+# With scale parameter
+SL_weibull(d = 2, shape = 3, scale = 4)
+
+# With rate parameter
+SL_weibull(d = 2, shape = 3, rate = 0.25)
+
+}
+\seealso{
+Other Weibull Distribution: \code{\link{E_weibull}},
+  \code{\link{Elim_weibull}}, \code{\link{Etronq_weibull}},
+  \code{\link{Mexcess_weibull}},
+  \code{\link{TVaR_weibull}}, \code{\link{V_weibull}},
+  \code{\link{VaR_weibull}},
+  \code{\link{kthmoment_weibull}}
+}
+\concept{Weibull Distribution}

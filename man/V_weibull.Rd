@@ -2,15 +2,43 @@
 % Please edit documentation in R/V_weibull.R
 \name{V_weibull}
 \alias{V_weibull}
-\title{Variance d'une loi Weibull}
+\title{Variance of the Weibull Distribution}
 \usage{
-V_weibull(tau, beta)
+V_weibull(shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{tau}{tau}
+\item{shape}{shape parameter \eqn{\tau}{tau}, must be positive integer.}
 
-\item{beta}{beta}
+\item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
+
+\item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-Variance d'une loi Weibull
+Variance of the Weibull distribution with shape parameter
+ \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
 }
+\details{
+The Weibull distribution with shape parameter \eqn{\tau}{t} and rate parameter
+  \eqn{\beta}{b} has density:
+  \deqn{f\left(x\right) = \beta \tau \left( \beta x \right) ^{\tau -1} %
+   \mathrm{e}^{-\left( \beta x\right) ^{\tau }}}{f(x) = b t (b x)^(t - 1) %
+   e^{(-b x)^t}}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\beta > 0}{b > 0}, \eqn{\tau > 0}{t > 0}
+}
+\examples{
+
+# With scale parameter
+V_weibull(shape = 2, scale = 5)
+
+# With rate parameter
+V_weibull(shape = 2, rate = 0.2)
+
+}
+\seealso{
+Other Weibull Distribution: \code{\link{E_weibull}},
+  \code{\link{Elim_weibull}}, \code{\link{Etronq_weibull}},
+  \code{\link{Mexcess_weibull}}, \code{\link{SL_weibull}},
+  \code{\link{TVaR_weibull}}, \code{\link{VaR_weibull}},
+  \code{\link{kthmoment_weibull}}
+}
+\concept{Weibull Distribution}

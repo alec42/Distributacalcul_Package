@@ -1,15 +1,29 @@
-#' Mean-Excess loss (excès-moyen) d'une loi Weibull
-#' @param d déductible
-#' @param tau tau
-#' @param beta beta
+#' Mean-Excess loss of the Weibull Distribution
+#'
+#' @description Mean excess loss of the Weibull distribution with shape parameter
+#'  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
+#'
+#' @templateVar d TRUE
+#' @templateVar kappa FALSE
+#' @template weibull-template
+#'
 #' @export
-Mexcess_weibull <- function(d, tau, beta)
+#'
+#' @examples
+#'
+#' # With scale parameter
+#' Mexcess_weibull(d = 2, shape = 3, scale = 4)
+#'
+#' # With rate parameter
+#' Mexcess_weibull(d = 2, shape = 3, rate = 0.25)
+#'
+Mexcess_weibull <- function(d, shape, rate = 1 / scale, scale = 1 / rate)
 {
-    exp((beta * d)^tau) / beta *
-        gamma(1 + 1/tau) *
-        pgamma(q = d^tau,
-               shape = 1 + 1/tau,
-               scale = beta^tau,
+    exp((rate * d)^shape) / rate *
+        gamma(1 + 1/shape) *
+        pgamma(q = d^shape,
+               shape = 1 + 1/shape,
+               scale = rate^shape,
                lower.tail = F) -
         d
 }

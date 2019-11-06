@@ -1,9 +1,22 @@
-#' Value-at-risk d'une loi Weibull
-#' @param kappa niveau de confiance désiré
-#' @param tau tau
-#' @param beta beta
+#' Value-at-Risk of the Weibull Distribution
+#'
+#' @description Value-at-Risk of the Weibull distribution with shape parameter
+#'  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
+#'
+#' @templateVar kappa TRUE
+#' @template weibull-template
+#'
 #' @export
-VaR_weibull <- function(kappa, tau, beta)
+#'
+#' @examples
+#'
+#' # With scale parameter
+#' VaR_weibull(kappa = .2, shape = 3, scale = 4)
+#'
+#' # With rate parameter
+#' VaR_weibull(kappa = .2, shape = 3, rate = 0.25)
+#'
+VaR_weibull <- function(kappa, shape, rate = 1 / scale, scale = 1 / rate)
 {
-    1 / beta * (-log(1 - kappa))^(1/tau)
+    1 / rate * (-log(1 - kappa))^(1/shape)
 }

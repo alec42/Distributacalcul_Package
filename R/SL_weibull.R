@@ -1,15 +1,29 @@
-#' Stop-loss d'une loi Weibull
-#' @param d montant d de la franchise
-#' @param tau tau
-#' @param beta beta
+#' Stop-loss of the Weibull Distribution
+#'
+#' @description Stop loss of the Weibull distribution with shape parameter
+#'  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
+#'
+#' @templateVar d TRUE
+#' @templateVar kappa FALSE
+#' @template weibull-template
+#'
 #' @export
-SL_weibull <- function(d, tau, beta)
+#'
+#' @examples
+#'
+#' # With scale parameter
+#' SL_weibull(d = 2, shape = 3, scale = 4)
+#'
+#' # With rate parameter
+#' SL_weibull(d = 2, shape = 3, rate = 0.25)
+#'
+SL_weibull <- function(d, shape, rate = 1 / scale, scale = 1 / rate)
 {
-    1 / beta *
-        gamma(1 + 1/tau) *
-        pgamma(q = d^tau,
-               shape = 1 + 1/tau,
-               scale = beta^tau,
+    1 / rate *
+        gamma(1 + 1/shape) *
+        pgamma(q = d^shape,
+               shape = 1 + 1/shape,
+               scale = rate^shape,
                lower.tail = F) -
-        d * exp(-(beta * d)^tau)
+        d * exp(-(rate * d)^shape)
 }
