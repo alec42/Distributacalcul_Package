@@ -1,7 +1,7 @@
 #' Variance d'une loi binomiale négative
 #'
 #' @description Variance of the negative binomial distribution with
-#'  parameters \code{r} (number of successful trials) and \code{p}
+#'  parameters \eqn{r} (number of successful trials) and \eqn{p}
 #'  (probability of success).
 #'
 #' @template negbinom-template

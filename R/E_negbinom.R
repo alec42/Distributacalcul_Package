@@ -1,10 +1,8 @@
 #' Expected value of the negative binomial distribution
 #'
 #' @description Expected value of the negative binomial distribution with
-#'  parameters \code{r} (number of successful trials) and \code{p}
+#'  parameters \eqn{r} (number of successful trials) and \eqn{p}
 #'  (probability of success).
-#'
-#' @template negbinom-template
 #'
 #' @details The expected value of the negative binomial where \eqn{p} is the
 #'  probability of success and:
@@ -16,6 +14,8 @@
 #'
 #'  \eqn{k} is the number of trials until the \eqn{r}th success is:
 #'   \deqn{\text{E}(X) = r \beta}{E(M) = r beta}#'
+#'
+#' @template negbinom-template
 #'
 #' @seealso [d_negbinom()] for the probability mass function, [p_negbinom()]
 #'  for the cumulative probability mass function, and [V_negbinom()]

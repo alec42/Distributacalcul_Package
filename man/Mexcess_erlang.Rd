@@ -2,17 +2,37 @@
 % Please edit documentation in R/Mexcess_erlang.R
 \name{Mexcess_erlang}
 \alias{Mexcess_erlang}
-\title{Mean-Excess loss (excès-moyen) d'une loi erlang}
+\title{Mean Excess Loss of the Erlang Distribution}
 \usage{
-Mexcess_erlang(d, n, b)
+Mexcess_erlang(d, shape, scale, rate = 1/scale)
 }
 \arguments{
-\item{d}{déductible}
+\item{shape}{shape parameter \eqn{n}, must be positive integer.}
 
-\item{n}{n}
+\item{scale}{\eqn{\beta}{beta} is the scale parameter, must be positive.}
 
-\item{b}{beta}
+\item{rate}{alternative parameterization to scale parameter, rate = 1 / scale.}
 }
 \description{
-Mean-Excess loss (excès-moyen) d'une loi erlang
+Mean excess loss of the Erlang distribution with shape
+ parameter \eqn{n} and rate parameter \eqn{\beta}{b}.
+}
+\examples{
+
+# With scale parameter
+Mexcess_erlang(d = 2, shape = 2, scale = 5)
+
+# With rate parameter
+Mexcess_erlang(d = 2, shape = 2, rate = 0.2)
+
+}
+\seealso{
+[derlang()] for the probability mass function,
+ [perlang()] for the cumulative probability mass function,
+ [V_erlang()] for the variance,
+ [SL_erlang()] for the stop-loss,
+ [Elim_erlang()] for the limited expected value,
+ [Etronq_erlang()] for the truncated mean,
+ [E_erlang()] for the expected value, and
+ [kthmoment_erlang()] for the \eqn{k}th moment.
 }

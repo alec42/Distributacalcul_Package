@@ -1,10 +1,10 @@
 #' Fonction de densité de la loi binomiale négative
 #'
 #' @description Probability mass function of the negative binomial distribution
-#'  with parameters \code{r} (number of successful trials) and \code{p}
+#'  with parameters \eqn{r} (number of successful trials) and \eqn{p}
 #'  (probability of success).
 #'
-#' @template negbinom-template-lower-tail
+#' @templateVar lower.tail TRUE
 #' @template negbinom-template
 #'
 #' @seealso [p_negbinom()] for the cumulative probability mass function,

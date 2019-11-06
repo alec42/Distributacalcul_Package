@@ -19,14 +19,12 @@ distribution where beta = (1 - p) / p.}
 until the \code{r}th success, otherwise, number of failures until
 the \code{r}th success.}
 
-\item{lower.tail}{logical; if \code{TRUE} (défaut) probabilities are
-\eqn{\text{Pr}(M \leq k)}{Pr(M <= k)}, otherwise, \eqn{\text{Pr}%
-(M > k)}{Pr(M > k)}.}
+\item{lower.tail}{logical; if \code{TRUE} (défaut) probabilities are \eqn{\text{Pr}(M \leq k)}{Pr(M <= k)}, otherwise, \eqn{\text{Pr}(M > k)}{Pr(M > k)}.}
 }
 \description{
 Cumulative probability mass function of the negative binomial
- distribution with parameters \code{r} (number of successful trials) and
- \code{p} (probability of success).
+ distribution with parameters \eqn{r} (number of successful trials) and
+ \eqn{p} (probability of success).
 }
 \details{
 When \eqn{k} is the number of failures until the \eqn{r}th success,
@@ -42,7 +40,7 @@ When \eqn{k} is the number of failures until the \eqn{r}th success,
   for \eqn{k \in \{r, r + 1, r + 2, \dots \}}{k = r, r + 1, r + 2, ...}
 
  The alternative parameterization of the negative binomial with parameter
-  \eqn{\beta}{beta}, and k being the number of trials, has density:
+  \eqn{\beta}{beta}, and \eqn{k} being the number of trials, has density:
   \deqn{\frac{\Gamma(r + k)}{\Gamma(r) k!} \left(\frac{1}{1 + \beta}\right)^{r}%
    \left(\frac{\beta}{1 +  \beta}\right)^{k - r}}{Pr(M = k) = %
    \Gamma(r + k)/(\Gamma(r) k!) (1/(1 + beta))^r (beta/(1 + beta))^(k - r)}

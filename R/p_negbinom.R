@@ -1,10 +1,10 @@
 #' Fonction de répartition de la loi binomiale négative
 #'
 #' @description Cumulative probability mass function of the negative binomial
-#'  distribution with parameters \code{r} (number of successful trials) and
-#'  \code{p} (probability of success).
+#'  distribution with parameters \eqn{r} (number of successful trials) and
+#'  \eqn{p} (probability of success).
 #'
-#' @template negbinom-template-lower-tail
+#' @templateVar lower.tail TRUE
 #' @template negbinom-template
 #'
 #' @seealso [d_negbinom()] for the probability mass function, [V_negbinom()]

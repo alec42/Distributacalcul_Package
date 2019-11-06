@@ -6,6 +6,8 @@
 #'  until the \code{r}th success, otherwise, number of failures until
 #'  the \code{r}th success.
 #'
+#' <%=ifelse(exists("lower.tail") && lower.tail, "@param lower.tail logical; if \\code{TRUE} (défaut) probabilities are \\eqn{\\text{Pr}(M \\leq k)}{Pr(M <= k)}, otherwise, \\eqn{\\text{Pr}(M > k)}{Pr(M > k)}.", "") %>
+#'
 #' @details
 #'  When \eqn{k} is the number of failures until the \eqn{r}th success,
 #'   with a probability \eqn{p} of a success, the negative binomial has density:

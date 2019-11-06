@@ -2,19 +2,39 @@
 % Please edit documentation in R/perlang.R
 \name{perlang}
 \alias{perlang}
-\title{Fonction de répartition de la loi Erlang}
+\title{Cumulative Density Function of the Erlang Distribution}
 \usage{
-perlang(x, n, b, lower.tail = T)
+perlang(q, shape, scale, rate = 1/scale, lower.tail = T)
 }
 \arguments{
-\item{x}{x}
+\item{q}{quantile.}
 
-\item{n}{n}
+\item{shape}{shape parameter \eqn{n}, must be positive integer.}
 
-\item{b}{beta}
+\item{scale}{\eqn{\beta}{beta} is the scale parameter, must be positive.}
 
-\item{lower.tail}{Si vrai (défaut) alors fonction de répartition. Si faux, de survie.}
+\item{rate}{alternative parameterization to scale parameter, rate = 1 / scale.}
 }
 \description{
-Fonction de répartition de la loi Erlang
+Cumulative density function of the Erlang distribution with shape
+ parameter \eqn{n} and rate parameter \eqn{\beta}{b}.
+}
+\examples{
+
+# With scale parameter
+perlang(q = 2, shape = 2, scale = 5)
+
+# With rate parameter
+perlang(q = 2, shape = 2, rate = 0.2)
+
+}
+\seealso{
+[derlang()] for the probability mass function,
+ [V_erlang()] for the variance,
+ [Mexcess_erlang()] for the Mean Excess Loss,
+ [SL_erlang()] for the stop-loss,
+ [Elim_erlang()] for the limited expected value,
+ [Etronq_erlang()] for the truncated mean,
+ [E_erlang()] for the expected value, and
+ [kthmoment_erlang()] for the \eqn{k}th moment.
 }

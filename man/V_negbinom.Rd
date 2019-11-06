@@ -20,7 +20,7 @@ the \code{r}th success.}
 }
 \description{
 Variance of the negative binomial distribution with
- parameters \code{r} (number of successful trials) and \code{p}
+ parameters \eqn{r} (number of successful trials) and \eqn{p}
  (probability of success).
 }
 \details{
@@ -37,11 +37,20 @@ When \eqn{k} is the number of failures until the \eqn{r}th success,
   for \eqn{k \in \{r, r + 1, r + 2, \dots \}}{k = r, r + 1, r + 2, ...}
 
  The alternative parameterization of the negative binomial with parameter
-  \eqn{\beta}{beta}, and k being the number of trials, has density:
+  \eqn{\beta}{beta}, and \eqn{k} being the number of trials, has density:
   \deqn{\frac{\Gamma(r + k)}{\Gamma(r) k!} \left(\frac{1}{1 + \beta}\right)^{r}%
    \left(\frac{\beta}{1 +  \beta}\right)^{k - r}}{Pr(M = k) = %
    \Gamma(r + k)/(\Gamma(r) k!) (1/(1 + beta))^r (beta/(1 + beta))^(k - r)}
   for \eqn{k \in \{0, 1, \dots \}}{k = 0, 1, 2, ...}
+
+The variance of the negative binomial where \eqn{p} is the
+ probability of success and:
+ \eqn{k} is the number of failures or the number of trials until the
+  \eqn{r}th success is:
+  \deqn{\text{V}(M) = \frac{r(1 - p)}{p^2}}{E(M) = r(1 - p)/(p^2)}
+
+ \eqn{k} is the number of trials until the \eqn{r}th success is:
+  \deqn{\text{V}(X) = r \beta (1 + \beta)}{E(M) = r beta (1 + beta)}
 }
 \examples{
 

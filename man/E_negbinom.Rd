@@ -20,10 +20,21 @@ the \code{r}th success.}
 }
 \description{
 Expected value of the negative binomial distribution with
- parameters \code{r} (number of successful trials) and \code{p}
+ parameters \eqn{r} (number of successful trials) and \eqn{p}
  (probability of success).
 }
 \details{
+The expected value of the negative binomial where \eqn{p} is the
+ probability of success and:
+ \eqn{k} is the number of failures until the \eqn{r}th success is:
+  \deqn{\text{E}(M) = \frac{r(1 - p)}{p}}{E(M) = r(1 - p)/p}
+
+ \eqn{k} is the number of trials until the \eqn{r}th success is:
+  \deqn{\text{E}(M) = \frac{r}{p}}{E(M) = r/p}
+
+ \eqn{k} is the number of trials until the \eqn{r}th success is:
+  \deqn{\text{E}(X) = r \beta}{E(M) = r beta}#'
+
 When \eqn{k} is the number of failures until the \eqn{r}th success,
   with a probability \eqn{p} of a success, the negative binomial has density:
   \deqn{\binom{r + k - 1}{k} (p)^{r} (1 - p)^{k}}{%
@@ -37,7 +48,7 @@ When \eqn{k} is the number of failures until the \eqn{r}th success,
   for \eqn{k \in \{r, r + 1, r + 2, \dots \}}{k = r, r + 1, r + 2, ...}
 
  The alternative parameterization of the negative binomial with parameter
-  \eqn{\beta}{beta}, and k being the number of trials, has density:
+  \eqn{\beta}{beta}, and \eqn{k} being the number of trials, has density:
   \deqn{\frac{\Gamma(r + k)}{\Gamma(r) k!} \left(\frac{1}{1 + \beta}\right)^{r}%
    \left(\frac{\beta}{1 +  \beta}\right)^{k - r}}{Pr(M = k) = %
    \Gamma(r + k)/(\Gamma(r) k!) (1/(1 + beta))^r (beta/(1 + beta))^(k - r)}

@@ -2,17 +2,36 @@
 % Please edit documentation in R/Etronq_erlang.R
 \name{Etronq_erlang}
 \alias{Etronq_erlang}
-\title{Espérance tronquée d'une loi Erlang}
+\title{Truncated Mean of the Erlang Distribution}
 \usage{
-Etronq_erlang(d, n, b)
+Etronq_erlang(d, shape, scale, rate = 1/scale)
 }
 \arguments{
-\item{d}{valeur où tronquer}
+\item{shape}{shape parameter \eqn{n}, must be positive integer.}
 
-\item{n}{n}
+\item{scale}{\eqn{\beta}{beta} is the scale parameter, must be positive.}
 
-\item{b}{beta}
+\item{rate}{alternative parameterization to scale parameter, rate = 1 / scale.}
 }
 \description{
-Espérance tronquée d'une loi Erlang
+Truncated mean of the Erlang distribution with shape parameter
+ \eqn{n} and rate parameter \eqn{\beta}{b}.
+}
+\examples{
+
+# With scale parameter
+Etronq_erlang(d = 2, shape = 2, scale = 5)
+
+# With rate parameter
+Etronq_erlang(d = 2, shape = 2, rate = 0.2)
+
+}
+\seealso{
+[derlang()] for the probability mass function,
+ [perlang()] for the cumulative probability mass function,
+ [V_erlang()] for the variance,
+ [Mexcess_erlang()] for the Mean Excess Loss,
+ [Elim_erlang()] for the limited expected value,
+ [E_erlang()] for the expected value, and
+ [kthmoment_erlang()] for the \eqn{k}th moment.
 }
