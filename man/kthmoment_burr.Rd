@@ -2,7 +2,7 @@
 % Please edit documentation in R/kthmoment_burr.R
 \name{kthmoment_burr}
 \alias{kthmoment_burr}
-\title{k-ème moment de la loi Burr}
+\title{k-ème moment d'une loi Burr}
 \usage{
 kthmoment_burr(k, alpha, lam, tau)
 }
@@ -16,5 +16,5 @@ kthmoment_burr(k, alpha, lam, tau)
 \item{tau}{tau}
 }
 \description{
-k-ème moment de la loi Burr
+k-ème moment d'une loi Burr
 }

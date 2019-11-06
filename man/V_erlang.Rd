@@ -7,7 +7,7 @@
 V_erlang(n, b)
 }
 \arguments{
-\item{n}{tau}
+\item{n}{n}
 
 \item{b}{beta}
 }

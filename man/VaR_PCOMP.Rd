@@ -12,17 +12,14 @@ VaR_PCOMP(kappa, lambda, shape, rate, ko = 300,
 
 \item{lambda}{paramètre lambda pour la poisson}
 
-\item{shape}{alpha pour la Gamma et mu pour la lognormale}
+\item{shape}{alpha pour la Gamma}
 
-\item{rate}{beta pour la Gamma et sigma^2 pour la lognormale}
+\item{rate}{beta pour la Gamma}
 
 \item{ko}{borne pour l'optimisation de la VaR}
 
-\item{distr_severity}{choix de distribution de sévérité. Gamma (par défaut) ou Lognormale}
+\item{distr_severity}{choix de distribution de sévérité.}
 }
 \description{
 Fonction de répartition d'une loi poisson composée
-}
-\details{
-Cette formule utilise aussi un choix de 2 distributions pour la sévérité; soit la Gamma ou la Lognormale.
 }

@@ -7,7 +7,7 @@
 Etronq_erlang(d, n, b)
 }
 \arguments{
-\item{d}{Deductible}
+\item{d}{valeur où tronquer}
 
 \item{n}{n}
 

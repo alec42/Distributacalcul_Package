@@ -1,17 +1,44 @@
-#' Espérance de la loi binomiale négative
-#' @param r Nombre de succès visé.
-#' @param p Probabilité de succès.
-#' @param beta Deuxième paramétrisation de la loi binomiale négative tel que beta = (1 - p) / p.
-#' @param nb_tries Stipule si la binomiale est une du nombre d'essais pour le r-ème succès, ou du nombre d'échecs pour le r-ème succès (par défaut).
+#' Expected value of the negative binomial distribution
+#'
+#' @description Expected value of the negative binomial distribution with
+#'  parameters \code{r} (number of successful trials) and \code{p}
+#'  (probability of success).
+#'
+#' @template negbinom-template
+#'
+#' @details The expected value of the negative binomial where \eqn{p} is the
+#'  probability of success and:
+#'  \eqn{k} is the number of failures until the \eqn{r}th success is:
+#'   \deqn{\text{E}(M) = \frac{r(1 - p)}{p}}{E(M) = r(1 - p)/p}
+#'
+#'  \eqn{k} is the number of trials until the \eqn{r}th success is:
+#'   \deqn{\text{E}(M) = \frac{r}{p}}{E(M) = r/p}
+#'
+#'  \eqn{k} is the number of trials until the \eqn{r}th success is:
+#'   \deqn{\text{E}(X) = r \beta}{E(M) = r beta}#'
+#'
+#' @seealso [d_negbinom()] for the probability mass function, [p_negbinom()]
+#'  for the cumulative probability mass function, and [V_negbinom()]
+#'  for the variance.
+#'
 #' @export
+#'
+#' @examples
+#'
+#' # Where k is the number of trials for a rth success
+#' E_negbinom(r = 2, p = .4)
+#'
+#' # Where k is the number of failures before a rth success
+#' E_negbinom(r = 2, p = .4, nb_tries = T)
+#'
+#' # With alternative parameterization where k is the number of trials
+#' E_negbinom(r = 2, beta = 1.5)
+#'
 E_negbinom <- function(r, p = (1 / (1 + beta)), beta = ((1 - p) / p), nb_tries = F)
 {
-    if(nb_tries)
-    {
+    if (nb_tries) {
         r / p
-    }
-    else
-    {
+    } else {
         r * ((1 - p) / p)
     }
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/VaR_IG.R
 \name{VaR_IG}
 \alias{VaR_IG}
-\title{Value-at-risk de la loi inverse gaussienne}
+\title{Value-at-risk d'une loi inverse gaussienne}
 \usage{
 VaR_IG(kappa, mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 }
@@ -16,7 +16,7 @@ VaR_IG(kappa, mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 \item{dispersion}{dispersion = beta / mu^2}
 }
 \description{
-Value-at-risk de la loi inverse gaussienne
+Value-at-risk d'une loi inverse gaussienne
 }
 \details{
 Wrapper pour avoir une notation cohérente avec le reste des fonctions IG, mais utilise la fonction de densité du package ACTUAR.

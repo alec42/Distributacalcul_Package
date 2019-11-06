@@ -5,21 +5,71 @@
 \title{Fonction de répartition de la loi binomiale négative}
 \usage{
 p_negbinom(k, r, p = (1/(1 + beta)), beta = ((1 - p)/p),
-  nb_tries = F, lower.tail = F)
+  nb_tries = FALSE, lower.tail = T)
 }
 \arguments{
-\item{k}{Nombre de échecs (ou succès) jusqu'où sommer.}
+\item{r}{Number of successful trials.}
 
-\item{r}{Nombre de succès visé.}
+\item{p}{Probability of success.}
 
-\item{p}{Probabilité de succès.}
+\item{beta}{Alternative parameterization of the negative binomial
+distribution where beta = (1 - p) / p.}
 
-\item{beta}{Deuxième paramétrisation de la loi binomiale négative tel que beta = (1 - p) / p.}
+\item{nb_tries}{logical; if \code{FALSE} (default) number of trials
+until the \code{r}th success, otherwise, number of failures until
+the \code{r}th success.}
 
-\item{nb_tries}{Stipule si la binomiale est une du nombre d'essais pour le r-ème succès, ou du nombre d'échecs pour le r-ème succès (par défaut).}
-
-\item{lower.tail}{Si vrai (défaut) alors fonction de répartition. Si faux, de survie.}
+\item{lower.tail}{logical; if \code{TRUE} (défaut) probabilities are
+\eqn{\text{Pr}(M \leq k)}{Pr(M <= k)}, otherwise, \eqn{\text{Pr}%
+(M > k)}{Pr(M > k)}.}
 }
 \description{
-Fonction de répartition de la loi binomiale négative
+Cumulative probability mass function of the negative binomial
+ distribution with parameters \code{r} (number of successful trials) and
+ \code{p} (probability of success).
 }
+\details{
+When \eqn{k} is the number of failures until the \eqn{r}th success,
+  with a probability \eqn{p} of a success, the negative binomial has density:
+  \deqn{\binom{r + k - 1}{k} (p)^{r} (1 - p)^{k}}{%
+   Pr(M = k) = choose(r + k - 1, k) p^r (1 - p)^k}
+  for \eqn{k \in \{0, 1, \dots \}}{k = 0, 1, 2, ...}
+
+ When \eqn{k} is the number of trials until the \eqn{r}th success,
+  with a probability \eqn{p} of a success, the negative binomial has density:
+  \deqn{\binom{k - 1}{r - 1} (p)^{r} (1 - p)^{k - r}}{%
+   Pr(M = k) = choose(k - 1, r - 1) p^r (1 - p)^(k - r)}
+  for \eqn{k \in \{r, r + 1, r + 2, \dots \}}{k = r, r + 1, r + 2, ...}
+
+ The alternative parameterization of the negative binomial with parameter
+  \eqn{\beta}{beta}, and k being the number of trials, has density:
+  \deqn{\frac{\Gamma(r + k)}{\Gamma(r) k!} \left(\frac{1}{1 + \beta}\right)^{r}%
+   \left(\frac{\beta}{1 +  \beta}\right)^{k - r}}{Pr(M = k) = %
+   \Gamma(r + k)/(\Gamma(r) k!) (1/(1 + beta))^r (beta/(1 + beta))^(k - r)}
+  for \eqn{k \in \{0, 1, \dots \}}{k = 0, 1, 2, ...}
+}
+\examples{
+
+# Where k is the number of trials for a rth success
+p_negbinom(k = 3, r = 2, p = .4)
+
+# Where k is the number of failures before a rth success
+p_negbinom(k = 3, r = 2, p = .4, nb_tries = T)
+
+# By definition, k must be greater than r.
+\dontrun{
+ p_negbinom(k = 1, r = 2, p = .4, nb_tries = T)
+}
+
+# With alternative parameterization where k is the number of trials
+p_negbinom(k = 3, r = 2, beta = 1.5)
+
+}
+\seealso{
+[d_negbinom()] for the probability mass function, [V_negbinom()]
+ for the variance, and [E_negbinom()] for the mean.
+
+Other Negative Binomial Distribution: \code{\link{E_negbinom}},
+  \code{\link{V_negbinom}}, \code{\link{d_negbinom}}
+}
+\concept{Negative Binomial Distribution}

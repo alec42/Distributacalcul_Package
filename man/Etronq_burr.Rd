@@ -7,7 +7,7 @@
 Etronq_burr(d, alpha, lam, tau)
 }
 \arguments{
-\item{d}{Deductible}
+\item{d}{valeur où tronquer}
 
 \item{alpha}{alpha}
 

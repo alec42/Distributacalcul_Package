@@ -2,7 +2,7 @@
 % Please edit documentation in R/TVaR_IG.R
 \name{TVaR_IG}
 \alias{TVaR_IG}
-\title{Tail Value-at-risk de la loi inverse gaussienne}
+\title{Tail Value-at-risk d'une loi inverse gaussienne}
 \usage{
 TVaR_IG(kappa, mu, beta = dispersion * mu^2, dispersion = beta/mu^2,
   vark)
@@ -19,7 +19,7 @@ TVaR_IG(kappa, mu, beta = dispersion * mu^2, dispersion = beta/mu^2,
 \item{vark}{Value at Risk (VaR) calculé au même niveau de confiance kappa}
 }
 \description{
-Tail Value-at-risk de la loi inverse gaussienne
+Tail Value-at-risk d'une loi inverse gaussienne
 }
 \details{
 Cette formule nécessite la formule de la VaR_IG (déjà installée avec le package tvarPackage)

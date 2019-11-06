@@ -2,7 +2,7 @@
 % Please edit documentation in R/E_weibull.R
 \name{E_weibull}
 \alias{E_weibull}
-\title{k-ème moment de la loi Weibull}
+\title{k-ème moment d'une loi Weibull}
 \usage{
 E_weibull(tau, beta)
 }
@@ -12,5 +12,5 @@ E_weibull(tau, beta)
 \item{beta}{beta}
 }
 \description{
-k-ème moment de la loi Weibull
+k-ème moment d'une loi Weibull
 }

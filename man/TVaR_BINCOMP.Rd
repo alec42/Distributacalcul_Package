@@ -14,15 +14,15 @@ TVaR_BINCOMP(kappa, n, q, shape, rate, vark, ko,
 
 \item{q}{probabilité q pour la binomiale}
 
-\item{shape}{alpha pour la Gamma et mu pour la lognormale}
+\item{shape}{alpha pour la Gamma}
 
-\item{rate}{beta pour la Gamma et sigma^2 pour la lognormale}
+\item{rate}{beta pour la Gamma}
 
 \item{vark}{Value at Risk (VaR) calculé au même niveau de confiance kappa}
 
 \item{ko}{borne pour la somme dans le calcul de la TVaR}
 
-\item{distr_severity}{choix de distribution de sévérité. Gamma ou Lognormale}
+\item{distr_severity}{choix de distribution de sévérité}
 }
 \description{
 Tail Value-at-risk d'une loi binomiale composée

@@ -2,7 +2,7 @@
 % Please edit documentation in R/Mexcess_erlang.R
 \name{Mexcess_erlang}
 \alias{Mexcess_erlang}
-\title{Mean-Excess loss d'une loi erlang}
+\title{Mean-Excess loss (excès-moyen) d'une loi erlang}
 \usage{
 Mexcess_erlang(d, n, b)
 }
@@ -14,5 +14,5 @@ Mexcess_erlang(d, n, b)
 \item{b}{beta}
 }
 \description{
-Mean-Excess loss d'une loi erlang
+Mean-Excess loss (excès-moyen) d'une loi erlang
 }

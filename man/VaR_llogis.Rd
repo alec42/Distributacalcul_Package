@@ -2,7 +2,7 @@
 % Please edit documentation in R/VaR_llogis.R
 \name{VaR_llogis}
 \alias{VaR_llogis}
-\title{Value-at-risk de la loi Log-logstique}
+\title{Value-at-risk d'une loi log-logstique}
 \usage{
 VaR_llogis(kappa, lam, tau)
 }
@@ -14,5 +14,5 @@ VaR_llogis(kappa, lam, tau)
 \item{tau}{tau}
 }
 \description{
-Value-at-risk de la loi Log-logstique
+Value-at-risk d'une loi log-logstique
 }

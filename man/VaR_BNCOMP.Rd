@@ -14,17 +14,14 @@ VaR_BNCOMP(kappa, r, q, shape, rate, ko = 300,
 
 \item{q}{probabilité q pour la binomiale}
 
-\item{shape}{alpha pour la Gamma et mu pour la lognormale}
+\item{shape}{alpha pour la Gamma}
 
-\item{rate}{beta pour la Gamma et sigma^2 pour la lognormale}
+\item{rate}{beta pour la Gamma}
 
 \item{ko}{borne pour l'optimisation numérique de la VaR}
 
-\item{distr_severity}{choix de distribution de sévérité. Gamma ou Lognormale}
+\item{distr_severity}{choix de distribution de sévérité.}
 }
 \description{
 Value-at-risk d'une loi binomiale négative composée
-}
-\details{
-Cette formule utilise aussi un choix de 2 distributions pour la sévérité; soit la Gamma (par défaut) ou la Lognormale.
 }

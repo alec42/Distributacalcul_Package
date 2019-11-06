@@ -4,10 +4,10 @@
 \alias{punifD}
 \title{Répartition d'une loi uniforme discrète}
 \usage{
-punifD(q, a, b)
+punifD(k, a, b)
 }
 \arguments{
-\item{q}{quantile}
+\item{k}{k}
 
 \item{a}{borne inférieur}
 

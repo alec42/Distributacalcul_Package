@@ -2,7 +2,7 @@
 % Please edit documentation in R/Mexcess_weibull.R
 \name{Mexcess_weibull}
 \alias{Mexcess_weibull}
-\title{Mean-Excess loss d'une loi Weibull}
+\title{Mean-Excess loss (excès-moyen) d'une loi Weibull}
 \usage{
 Mexcess_weibull(d, tau, beta)
 }
@@ -14,5 +14,5 @@ Mexcess_weibull(d, tau, beta)
 \item{beta}{beta}
 }
 \description{
-Mean-Excess loss d'une loi Weibull
+Mean-Excess loss (excès-moyen) d'une loi Weibull
 }

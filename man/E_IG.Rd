@@ -2,7 +2,7 @@
 % Please edit documentation in R/E_IG.R
 \name{E_IG}
 \alias{E_IG}
-\title{Espérance de la loi inverse gaussienne}
+\title{Espérance d'une loi inverse gaussienne}
 \usage{
 E_IG(mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 }
@@ -14,5 +14,5 @@ E_IG(mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 \item{dispersion}{dispersion = beta / mu^2}
 }
 \description{
-Espérance de la loi inverse gaussienne
+Espérance d'une loi inverse gaussienne
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/VaR_burr.R
 \name{VaR_burr}
 \alias{VaR_burr}
-\title{Value-at-risk de la loi Burr}
+\title{Value-at-risk d'une loi Burr}
 \usage{
 VaR_burr(kappa, alpha, lam, tau)
 }
@@ -16,5 +16,5 @@ VaR_burr(kappa, alpha, lam, tau)
 \item{tau}{tau}
 }
 \description{
-Value-at-risk de la loi Burr
+Value-at-risk d'une loi Burr
 }

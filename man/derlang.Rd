@@ -9,9 +9,9 @@ derlang(x, n, b)
 \arguments{
 \item{x}{x}
 
-\item{n}{n parameter}
+\item{n}{n}
 
-\item{b}{beta parameter}
+\item{b}{beta}
 }
 \description{
 Fonction de densité de la loi erlang

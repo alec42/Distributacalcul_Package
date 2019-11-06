@@ -4,18 +4,18 @@
 \alias{TVaR_burr}
 \title{Tail Value-at-risk d'une loi Burr}
 \usage{
-TVaR_burr(kappa, var, alpha, lam, tau)
+TVaR_burr(kappa, alpha, lam, tau, vark)
 }
 \arguments{
 \item{kappa}{Niveau de confiance désiré}
-
-\item{var}{Value at Risk (VaR) calculé au même niveau de risque}
 
 \item{alpha}{alpha}
 
 \item{lam}{lam}
 
 \item{tau}{tau}
+
+\item{vark}{Value at Risk (VaR) calculé au même niveau de risque}
 }
 \description{
 Tail Value-at-risk d'une loi Burr

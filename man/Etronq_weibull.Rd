@@ -7,7 +7,7 @@
 Etronq_weibull(d, tau, beta)
 }
 \arguments{
-\item{d}{Deductible}
+\item{d}{valeur où tronquer}
 
 \item{tau}{tau}
 

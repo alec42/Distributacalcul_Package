@@ -1,6 +1,6 @@
 Package: Distributacalcul
 Type: Package
-Title: Calculatrice de distributions de probabilité
+Title: Probability distribution calculator
 Version: 0.2.0
 Authors@R: c(
   person("Alec James", "van Rassel", email = "alec.van-rassel.1@ulaval.ca", role = c("aut", "cre")), 

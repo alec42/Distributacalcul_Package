@@ -2,7 +2,7 @@
 % Please edit documentation in R/dIG.R
 \name{dIG}
 \alias{dIG}
-\title{Envelope de la densité de la loi inverse gaussienne}
+\title{Envelope de la densité d'une loi inverse gaussienne}
 \usage{
 dIG(x, mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 }
@@ -16,7 +16,7 @@ dIG(x, mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 \item{dispersion}{beta, = beta / mu^2}
 }
 \description{
-Envelope de la densité de la loi inverse gaussienne
+Envelope de la densité d'une loi inverse gaussienne
 }
 \details{
 Wrapper pour avoir une notation cohérente avec le reste des fonctions IG, mais utilise la fonction de densité du package ACTUAR.

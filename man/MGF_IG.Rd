@@ -2,7 +2,7 @@
 % Please edit documentation in R/MGF_IG.R
 \name{MGF_IG}
 \alias{MGF_IG}
-\title{Fonction génératrice des moments de la loi inverse gaussienne}
+\title{Fonction génératrice des moments d'une loi inverse gaussienne}
 \usage{
 MGF_IG(t, mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 }
@@ -16,5 +16,5 @@ MGF_IG(t, mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 \item{dispersion}{dispersion = beta / mu^2}
 }
 \description{
-Fonction génératrice des moments de la loi inverse gaussienne
+Fonction génératrice des moments d'une loi inverse gaussienne
 }

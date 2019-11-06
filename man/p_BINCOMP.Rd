@@ -13,17 +13,14 @@ p_BINCOMP(x, n, q, shape, rate, ko, distr_severity = "Gamma")
 
 \item{q}{probabilité q pour la binomiale}
 
-\item{shape}{alpha pour la Gamma et mu pour la lognormale}
+\item{shape}{alpha pour la Gamma}
 
-\item{rate}{beta pour la Gamma et sigma^2 pour la lognormale}
+\item{rate}{beta pour la Gamma}
 
 \item{ko}{borne pour la somme de la fonction de répartition}
 
-\item{distr_severity}{choix de distribution de sévérité. Gamma ou Lognormale}
+\item{distr_severity}{choix de distribution de sévérité.}
 }
 \description{
 Fonction de répartition d'une loi binomiale composée
-}
-\details{
-Cette formule utilise aussi un choix de 2 distributions pour la sévérité; soit la Gamma ou la Lognormale.
 }

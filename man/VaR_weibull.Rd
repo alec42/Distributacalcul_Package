@@ -2,7 +2,7 @@
 % Please edit documentation in R/VaR_weibull.R
 \name{VaR_weibull}
 \alias{VaR_weibull}
-\title{Value-at-risk de la loi Weibull}
+\title{Value-at-risk d'une loi Weibull}
 \usage{
 VaR_weibull(kappa, tau, beta)
 }
@@ -14,5 +14,5 @@ VaR_weibull(kappa, tau, beta)
 \item{beta}{beta}
 }
 \description{
-Value-at-risk de la loi Weibull
+Value-at-risk d'une loi Weibull
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/kthmoment_pareto.R
 \name{kthmoment_pareto}
 \alias{kthmoment_pareto}
-\title{k-ème moment de la loi Pareto}
+\title{k-ème moment d'une loi Pareto}
 \usage{
 kthmoment_pareto(alpha, lam, k)
 }
@@ -14,5 +14,5 @@ kthmoment_pareto(alpha, lam, k)
 \item{k}{k-ème moment, -1 < k < alpha ou alpha > k}
 }
 \description{
-k-ème moment de la loi Pareto
+k-ème moment d'une loi Pareto
 }

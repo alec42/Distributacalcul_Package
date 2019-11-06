@@ -2,17 +2,17 @@
 % Please edit documentation in R/kthmoment_weibull.R
 \name{kthmoment_weibull}
 \alias{kthmoment_weibull}
-\title{k-ème moment de la loi Weibull}
+\title{k-ème moment d'une loi Weibull}
 \usage{
-kthmoment_weibull(tau, beta, k = 1)
+kthmoment_weibull(k = 1, tau, beta)
 }
 \arguments{
+\item{k}{k-ème moment}
+
 \item{tau}{tau}
 
 \item{beta}{beta}
-
-\item{k}{k-ème moment}
 }
 \description{
-k-ème moment de la loi Weibull
+k-ème moment d'une loi Weibull
 }

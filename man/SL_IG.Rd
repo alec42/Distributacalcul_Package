@@ -2,7 +2,7 @@
 % Please edit documentation in R/SL_IG.R
 \name{SL_IG}
 \alias{SL_IG}
-\title{Stop-loss de la loi inverse gaussienne}
+\title{Stop-loss d'une loi inverse gaussienne}
 \usage{
 SL_IG(d, mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 }
@@ -16,5 +16,5 @@ SL_IG(d, mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 \item{dispersion}{dispersion = beta / mu^2}
 }
 \description{
-Stop-loss de la loi inverse gaussienne
+Stop-loss d'une loi inverse gaussienne
 }

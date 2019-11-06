@@ -2,7 +2,7 @@
 % Please edit documentation in R/Elim_IG.R
 \name{Elim_IG}
 \alias{Elim_IG}
-\title{Espérance limitée de la loi inverse gaussienne}
+\title{Espérance limitée d'une loi inverse gaussienne}
 \usage{
 Elim_IG(d, mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 }
@@ -16,5 +16,5 @@ Elim_IG(d, mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 \item{dispersion}{beta, = beta / mu^2}
 }
 \description{
-Espérance limitée de la loi inverse gaussienne
+Espérance limitée d'une loi inverse gaussienne
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/kthmoment_lnorm.R
 \name{kthmoment_lnorm}
 \alias{kthmoment_lnorm}
-\title{k-ème moment de la loi Lognormale}
+\title{k-ème moment d'une loi lognormale}
 \usage{
 kthmoment_lnorm(k, mu, sig)
 }
@@ -14,5 +14,5 @@ kthmoment_lnorm(k, mu, sig)
 \item{sig}{sigma = sqrt(sigma^2)}
 }
 \description{
-k-ème moment de la loi Lognormale
+k-ème moment d'une loi lognormale
 }

@@ -4,14 +4,16 @@
 \alias{kthmoment_gamma}
 \title{k-ème moment de la loi gamma}
 \usage{
-kthmoment_gamma(k, shape, rate)
+kthmoment_gamma(k, shape, rate = 1, scale = 1/rate)
 }
 \arguments{
 \item{k}{k-ème moment}
 
 \item{shape}{alpha}
 
-\item{rate}{beta}
+\item{rate}{(fréquence) beta, 1 par défaut.}
+
+\item{scale}{(échelle) paramétrisation alternative où = 1 / rate.}
 }
 \description{
 k-ème moment de la loi gamma

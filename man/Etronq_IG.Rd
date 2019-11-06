@@ -2,12 +2,12 @@
 % Please edit documentation in R/Etronq_IG.R
 \name{Etronq_IG}
 \alias{Etronq_IG}
-\title{Espérance tronquée de la loi inverse gaussienne}
+\title{Espérance tronquée d'une loi inverse gaussienne}
 \usage{
 Etronq_IG(d, mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 }
 \arguments{
-\item{d}{Deductible}
+\item{d}{valeur où tronquer}
 
 \item{mu}{mu}
 
@@ -16,5 +16,5 @@ Etronq_IG(d, mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 \item{dispersion}{dispersion = beta / mu^2}
 }
 \description{
-Espérance tronquée de la loi inverse gaussienne
+Espérance tronquée d'une loi inverse gaussienne
 }

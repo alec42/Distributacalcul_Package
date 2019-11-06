@@ -2,7 +2,7 @@
 % Please edit documentation in R/V_IG.R
 \name{V_IG}
 \alias{V_IG}
-\title{Variance de la loi inverse gaussienne}
+\title{Variance d'une loi inverse gaussienne}
 \usage{
 V_IG(mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 }
@@ -14,5 +14,5 @@ V_IG(mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 \item{dispersion}{dispersion = beta / mu^2}
 }
 \description{
-Variance de la loi inverse gaussienne
+Variance d'une loi inverse gaussienne
 }

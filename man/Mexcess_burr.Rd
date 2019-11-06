@@ -2,19 +2,19 @@
 % Please edit documentation in R/Mexcess_burr.R
 \name{Mexcess_burr}
 \alias{Mexcess_burr}
-\title{Mean-Excess loss d'une loi Burr}
+\title{Mean-Excess loss (excès-moyen) d'une loi Burr}
 \usage{
-Mexcess_burr(d, lam, alpha, tau)
+Mexcess_burr(d, alpha, lam, tau)
 }
 \arguments{
 \item{d}{déductible}
 
-\item{lam}{lambda}
-
 \item{alpha}{alpha}
+
+\item{lam}{lambda}
 
 \item{tau}{tau}
 }
 \description{
-Mean-Excess loss d'une loi Burr
+Mean-Excess loss (excès-moyen) d'une loi Burr
 }

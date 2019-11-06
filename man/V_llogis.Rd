@@ -2,7 +2,7 @@
 % Please edit documentation in R/V_llogis.R
 \name{V_llogis}
 \alias{V_llogis}
-\title{Variance de la loi Log-logstique}
+\title{Variance d'une loi log-logstique}
 \usage{
 V_llogis(lam, tau)
 }
@@ -12,5 +12,5 @@ V_llogis(lam, tau)
 \item{tau}{tau}
 }
 \description{
-Variance de la loi Log-logstique
+Variance d'une loi log-logstique
 }
