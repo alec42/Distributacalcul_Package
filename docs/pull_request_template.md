@@ -1,12 +1,16 @@
-## Cours :
+# Pull Request Template 
 
-+ ACT-9999
+## Distributions impacted :
 
-## Changements
++ Gamma
 
-ACT-9999
-  -
-  -
-ACT-9998
-  -
-  -
+## Corrections
+
+### Gamma Distribution
+  - Expected value (E_gamma): error in formula
+  
+
+## Additions
+
+### Weibull Distribution
+  - Added moment generating function (MGF_weibull)
