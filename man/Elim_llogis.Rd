@@ -2,17 +2,42 @@
 % Please edit documentation in R/Elim_llogis.R
 \name{Elim_llogis}
 \alias{Elim_llogis}
-\title{Espérance limitée d'une loi Log-logistique}
+\title{Limited Mean of the Loglogistic Distribution}
 \usage{
-Elim_llogis(d, lam, tau)
+Elim_llogis(d, shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{d}{déductible}
+\item{d}{cut-off value.}
 
-\item{lam}{lambda}
+\item{shape}{shape parameter \eqn{\tau}{tau}, must be positive integer.}
 
-\item{tau}{tau}
+\item{rate}{alternative parameterization the scale parameter, rate = 1 / scale.}
+
+\item{scale}{\eqn{\lambda}{lambda} rate parameter, must be positive.}
 }
 \description{
-Espérance limitée d'une loi Log-logistique
+Limited expected value of the Loglogistic distribution with shape parameter
+ \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.
 }
+\details{
+The Loglogistic distribution with shape parameter \eqn{\tau}{t} and scale parameter
+  \eqn{\lambda}{lam} has density:
+  \deqn{\frac{\tau \lambda^\tau x^{\tau -1}}{(\lambda^{\tau }+x^{\tau })^{2}}}{f(x) = t lam^t x^(t - 1) / (lam^t + x^t)^2}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\lambda, \tau > 0}{lam, t > 0}.
+}
+\examples{
+
+# With scale parameter
+Elim_llogis(d = 2, shape = 2, scale = 5)
+
+# With rate parameter
+Elim_llogis(d = 2, shape = 2, rate = 0.2)
+
+}
+\seealso{
+Other Loglogistic Distribution: \code{\link{Etronq_llogis}},
+  \code{\link{Mexcess_llogis}}, \code{\link{SL_llogis}},
+  \code{\link{TVaR_llogis}}, \code{\link{V_llogis}},
+  \code{\link{VaR_llogis}}, \code{\link{kthmoment_llogis}}
+}
+\concept{Loglogistic Distribution}

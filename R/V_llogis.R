@@ -1,8 +1,23 @@
-#' Variance d'une loi log-logstique
-#' @param lam lambda
-#' @param tau tau
+#' Variance of the Loglogistic Distribution
+#'
+#' @description Variance of the Loglogistic distribution with shape parameter
+#'  \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.
+#'
+#' @templateVar q FALSE
+#' @templateVar kappa FALSE
+#' @template loglogistic-template
+#'
 #' @export
-V_llogis <- function(lam, tau)
+#'
+#' @examples
+#'
+#' # With scale parameter
+#' V_llogis(shape = 3, scale = 5)
+#'
+#' # With rate parameter
+#' V_llogis(shape = 3, rate = 0.2)
+#'
+V_llogis <- function(shape, rate = 1/scale, scale = 1/rate)
 {
-    (kthmoment_llogis(k = 2, lam, tau) - (kthmoment_llogis(k = 1, lam, tau)^2))
+    (kthmoment_llogis(k = 2, shape, rate) - (kthmoment_llogis(k = 1, shape, rate)^2))
 }

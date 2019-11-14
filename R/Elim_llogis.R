@@ -1,16 +1,31 @@
-#' Espérance limitée d'une loi Log-logistique
-#' @param d déductible
-#' @param lam lambda
-#' @param tau tau
+#' Limited Mean of the Loglogistic Distribution
+#'
+#' @description Limited expected value of the Loglogistic distribution with shape parameter
+#'  \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.
+#'
+#' @templateVar d TRUE
+#' @templateVar q FALSE
+#' @templateVar kappa FALSE
+#' @template loglogistic-template
+#'
 #' @export
-Elim_llogis <- function(d, lam, tau)
+#'
+#' @examples
+#'
+#' # With scale parameter
+#' Elim_llogis(d = 2, shape = 2, scale = 5)
+#'
+#' # With rate parameter
+#' Elim_llogis(d = 2, shape = 2, rate = 0.2)
+#'
+Elim_llogis <- function(d, shape, rate = 1/scale, scale = 1/rate)
 {
-    lam *
-        gamma(1 + 1/tau) *
-        gamma(1 - 1/tau) *
-        pbeta(q = (d^tau)/(lam^tau + d^tau),
-              shape1 = 1 + 1/tau,
-              shape2 = 1 - 1/tau) +
-        (d * (lam^tau)) /
-        (lam^tau + d^tau)
+    scale *
+        gamma(1 + 1/shape) *
+        gamma(1 - 1/shape) *
+        pbeta(q = (d^shape)/(scale^shape + d^shape),
+              shape1 = 1 + 1/shape,
+              shape2 = 1 - 1/shape) +
+        (d * (scale^shape)) /
+        (scale^shape + d^shape)
 }

@@ -1,14 +1,29 @@
-#' Espérance tronquée d'une loi log-logistique
-#' @param d valeur où tronquer
-#' @param lam lambda
-#' @param tau tau
+#' Truncated Mean of the Loglogistic Distribution
+#'
+#' @description Truncated mean of the Loglogistic distribution with shape parameter
+#'  \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.
+#'
+#' @templateVar d TRUE
+#' @templateVar q FALSE
+#' @templateVar kappa FALSE
+#' @template loglogistic-template
+#'
 #' @export
-Etronq_llogis <- function(d, lam, tau)
+#'
+#' @examples
+#'
+#' # With scale parameter
+#' Etronq_llogis(d = 2, shape = 2, scale = 5)
+#'
+#' # With rate parameter
+#' Etronq_llogis(d = 2, shape = 2, rate = 0.2)
+#'
+Etronq_llogis <- function(d, shape, rate = 1/scale, scale = 1/rate)
 {
-    lam *
-        gamma(1 + 1/tau) *
-        gamma(1 - 1/tau) *
-        pbeta(q = (d^tau)/(lam^tau + d^tau),
-              shape1 = 1 + 1/tau,
-              shape2 = 1 - 1/tau)
+    scale *
+        gamma(1 + 1/shape) *
+        gamma(1 - 1/shape) *
+        pbeta(q = (d^shape)/(scale^shape + d^shape),
+              shape1 = 1 + 1/shape,
+              shape2 = 1 - 1/shape)
 }

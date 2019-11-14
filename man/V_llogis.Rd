@@ -2,15 +2,41 @@
 % Please edit documentation in R/V_llogis.R
 \name{V_llogis}
 \alias{V_llogis}
-\title{Variance d'une loi log-logstique}
+\title{Variance of the Loglogistic Distribution}
 \usage{
-V_llogis(lam, tau)
+V_llogis(shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{lam}{lambda}
+\item{shape}{shape parameter \eqn{\tau}{tau}, must be positive integer.}
 
-\item{tau}{tau}
+\item{rate}{alternative parameterization the scale parameter, rate = 1 / scale.}
+
+\item{scale}{\eqn{\lambda}{lambda} rate parameter, must be positive.}
 }
 \description{
-Variance d'une loi log-logstique
+Variance of the Loglogistic distribution with shape parameter
+ \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.
 }
+\details{
+The Loglogistic distribution with shape parameter \eqn{\tau}{t} and scale parameter
+  \eqn{\lambda}{lam} has density:
+  \deqn{\frac{\tau \lambda^\tau x^{\tau -1}}{(\lambda^{\tau }+x^{\tau })^{2}}}{f(x) = t lam^t x^(t - 1) / (lam^t + x^t)^2}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\lambda, \tau > 0}{lam, t > 0}.
+}
+\examples{
+
+# With scale parameter
+V_llogis(shape = 3, scale = 5)
+
+# With rate parameter
+V_llogis(shape = 3, rate = 0.2)
+
+}
+\seealso{
+Other Loglogistic Distribution: \code{\link{Elim_llogis}},
+  \code{\link{Etronq_llogis}},
+  \code{\link{Mexcess_llogis}}, \code{\link{SL_llogis}},
+  \code{\link{TVaR_llogis}}, \code{\link{VaR_llogis}},
+  \code{\link{kthmoment_llogis}}
+}
+\concept{Loglogistic Distribution}

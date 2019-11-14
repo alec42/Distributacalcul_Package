@@ -2,17 +2,43 @@
 % Please edit documentation in R/TVaR_llogis.R
 \name{TVaR_llogis}
 \alias{TVaR_llogis}
-\title{Tail Value-at-risk d'une loi log-logistique}
+\title{Tail Value-at-Risk of the Loglogistic Distribution}
 \usage{
-TVaR_llogis(kappa, lam, tau)
+TVaR_llogis(kappa, shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{kappa}{Niveau de confiance désiré}
+\item{kappa}{probability.}
 
-\item{lam}{lam}
+\item{shape}{shape parameter \eqn{\tau}{tau}, must be positive integer.}
 
-\item{tau}{tau}
+\item{rate}{alternative parameterization the scale parameter, rate = 1 / scale.}
+
+\item{scale}{\eqn{\lambda}{lambda} rate parameter, must be positive.}
 }
 \description{
-Tail Value-at-risk d'une loi log-logistique
+Tail Value-at-Risk of the Loglogistic distribution with shape parameter
+ \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.
 }
+\details{
+The Loglogistic distribution with shape parameter \eqn{\tau}{t} and scale parameter
+  \eqn{\lambda}{lam} has density:
+  \deqn{\frac{\tau \lambda^\tau x^{\tau -1}}{(\lambda^{\tau }+x^{\tau })^{2}}}{f(x) = t lam^t x^(t - 1) / (lam^t + x^t)^2}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\lambda, \tau > 0}{lam, t > 0}.
+}
+\examples{
+
+# With scale parameter
+TVaR_llogis(kappa = 0.8, shape = 3, scale = 5)
+
+# With rate parameter
+TVaR_llogis(kappa = 0.8, shape = 3, rate = 0.2)
+
+}
+\seealso{
+Other Loglogistic Distribution: \code{\link{Elim_llogis}},
+  \code{\link{Etronq_llogis}},
+  \code{\link{Mexcess_llogis}}, \code{\link{SL_llogis}},
+  \code{\link{V_llogis}}, \code{\link{VaR_llogis}},
+  \code{\link{kthmoment_llogis}}
+}
+\concept{Loglogistic Distribution}
