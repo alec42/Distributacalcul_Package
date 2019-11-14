@@ -1,17 +1,25 @@
-#' Répartition d'une loi uniforme discrète
-#' @param k k
-#' @param a borne inférieur
-#' @param b borne supérieur
-#' @details loi uniforme discrète
+#' Cumulative probability mass function of the (discrete) Uniform Distribution
+#'
+#' @description Cumulative probability mass function of the (discrete) Uniform distribution
+#'  with min \eqn{a} and max \eqn{b}.
+#'
+#' @templateVar q TRUE
+#' @templateVar kappa FALSE
+#' @template discrete-uniform-template
+#'
 #' @export
-punifD <- function(k, a, b){
-    if(k < a){
+#'
+#' @examples
+#'
+#' # With scale parameter
+#' punifD(q = 2, min = 2, max = 5)
+#'
+punifD <- function(q, min, max){
+    if (q < min) {
         return(0)
-    }
-    else if(a <= k & k < b){
-        (round(k) - a + 1)/(b - a + 1)
-    }
-    else{
+    } else if (min <= q & q < max) {
+        (round(q) - min + 1) / (max - min + 1)
+    } else {
         return(1)
     }
 }

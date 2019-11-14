@@ -2,20 +2,33 @@
 % Please edit documentation in R/dunifD.R
 \name{dunifD}
 \alias{dunifD}
-\title{Densité d'une loi uniforme discrète}
+\title{Probability mass function of the (discrete) Uniform Distribution}
 \usage{
-dunifD(x, a, b)
+dunifD(x = 1, min, max)
 }
 \arguments{
-\item{x}{x n'a aucun impact pour une loi uniforme par définition}
+\item{x}{quantile. By definition, it has no impact on the uniform distribution. Set to 1 by default.}
 
-\item{a}{borne inférieur}
-
-\item{b}{borne supérieur}
+\item{min, max}{lower and upper limits of the distribution. Must be finite.#'}
 }
 \description{
-Densité d'une loi uniforme discrète
+Probability mass function of the (discrete) Uniform distribution
+ with min \eqn{a} and max \eqn{b}.
 }
 \details{
-loi uniforme discrète
+The (discrete) uniform distribution with min and max parameters \eqn{a}
+  and \eqn{b} respectively has density:
+  \deqn{\textrm{Pr}\left(X = x \right) = \frac{1}{b - a + 1}}{Pr(X = x) = 1 / (b - a + 1)}
+  for \eqn{x \in \{a, a + 1, \dots, b - 1, b\}}{x = a, a + 1, ..., b - 1, b}.
 }
+\examples{
+
+# With scale parameter
+dunifD(x = 2, min = 2, max = 5)
+
+}
+\seealso{
+Other Discrete Uniform Distribution: \code{\link{E_unifD}},
+  \code{\link{V_unifD}}, \code{\link{punifD}}
+}
+\concept{Discrete Uniform Distribution}

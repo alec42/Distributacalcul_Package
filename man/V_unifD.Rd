@@ -2,18 +2,31 @@
 % Please edit documentation in R/V_unifD.R
 \name{V_unifD}
 \alias{V_unifD}
-\title{Variance d'une loi uniforme discrète}
+\title{Variance of the (discrete) Uniform Distribution}
 \usage{
-V_unifD(a, b)
+V_unifD(min, max)
 }
 \arguments{
-\item{a}{borne inférieur}
-
-\item{b}{borne supérieur}
+\item{min, max}{lower and upper limits of the distribution. Must be finite.#'}
 }
 \description{
-Variance d'une loi uniforme discrète
+Variance of the (discrete) Uniform distribution
+ with min \eqn{a} and max \eqn{b}.
 }
 \details{
-loi uniforme discrète
+The (discrete) uniform distribution with min and max parameters \eqn{a}
+  and \eqn{b} respectively has density:
+  \deqn{\textrm{Pr}\left(X = x \right) = \frac{1}{b - a + 1}}{Pr(X = x) = 1 / (b - a + 1)}
+  for \eqn{x \in \{a, a + 1, \dots, b - 1, b\}}{x = a, a + 1, ..., b - 1, b}.
 }
+\examples{
+
+# With scale parameter
+V_unifD(min = 2, max = 5)
+
+}
+\seealso{
+Other Discrete Uniform Distribution: \code{\link{E_unifD}},
+  \code{\link{dunifD}}, \code{\link{punifD}}
+}
+\concept{Discrete Uniform Distribution}
