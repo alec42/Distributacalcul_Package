@@ -1,18 +1,36 @@
-#' Mean-Excess loss (excès-moyen) d'une loi Burr
-#' @param d déductible
-#' @param alpha alpha
-#' @param lam lambda
-#' @param tau tau
+#' Mean-Excess loss of the Burr Distribution
+#'
+#' @description Mean excess loss of the Burr distribution with shape parameters
+#'  \eqn{\alpha}{alpha} (shape1) and \eqn{\tau}{tau} (shape2) as well as rate parameter
+#'  \eqn{\lambda}{lambda}.
+#'
+#' @templateVar d TRUE
+#' @templateVar kappa FALSE
+#' @template burr-template
+#'
 #' @export
-Mexcess_burr <- function(d, alpha, lam, tau) {
-    (((lam + d ^ tau) ^ alpha) *
-         gamma(1 + 1 / tau) *
-         gamma(alpha - 1 / tau)) /
-        ((lam ^ (alpha - 1 / tau)) *
-             gamma(alpha)) *
+#'
+#' @examples
+#'
+#' # With scale parameter
+#' Mexcess_burr(d = 2, rate = 2, shape1 = 2, shape2 = 5)
+#'
+#' # With rate parameter
+#' Mexcess_burr(d = 2, scale = 0.5, shape1 = 2, shape2 = 5)
+#'
+Mexcess_burr <- function(d, shape1, shape2, rate = 1 / scale, scale = 1 / rate) {
+    (
+        ((rate + d^shape2)^shape1) *
+            gamma(1 + 1/shape2) *
+            gamma(shape1 - 1/shape2)
+    ) / (
+        (rate ^ (shape1 - 1/shape2)) *
+            gamma(shape1)
+    ) *
         pbeta(
-            q = (d ^ tau) / (lam + (d ^ tau)),
-            shape1 = 1 + 1 / tau,
-            shape2 = alpha - 1 / tau,
-            lower.tail = F) - d
+            q = (d^shape2) / (rate + (d^shape2)),
+            shape1 = 1 + 1/shape2,
+            shape2 = shape1 - 1/shape2,
+            lower.tail = F) -
+        d
 }

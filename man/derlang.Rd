@@ -14,8 +14,6 @@ derlang(x, shape, scale = 1/rate, rate = 1/scale)
 \item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 
 \item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
-
-\item{lower.tail}{logical; if \code{TRUE} (défaut) probabilities are \eqn{\text{Pr}(M \leq k)}{Pr(M <= k)}, otherwise, \eqn{\text{Pr}(M > k)}{Pr(M > k)}.}
 }
 \description{
 Density function of the Erlang distribution with shape

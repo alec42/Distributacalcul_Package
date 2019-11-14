@@ -1,4 +1,4 @@
-#' kth Moment of the Erlang Distribution
+#' kth Moment of the Weibull Distribution
 #'
 #' @description kth-moment of the Weibull distribution with shape parameter
 #'  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.

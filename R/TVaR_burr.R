@@ -1,20 +1,34 @@
-#' Tail Value-at-risk d'une loi Burr
-#' @param kappa Niveau de confiance désiré
-#' @param alpha alpha
-#' @param lam lam
-#' @param tau tau
-#' @param vark Value at Risk (VaR) calculé au même niveau de risque
-#' @details Cette formule nécessite la formule de la VaR_burr (déjà installée avec le package tvarPackage)
+#' Tail Value-at-Risk of the Burr Distribution
+#'
+#' @description Tail Value-at-Risk of the Burr distribution with shape parameters
+#'  \eqn{\alpha}{alpha} (shape1) and \eqn{\tau}{tau} (shape2) as well as rate parameter
+#'  \eqn{\lambda}{lambda}.
+#'
+#' @templateVar kappa TRUE
+#' @template burr-template
+#'
 #' @export
-TVaR_burr <- function(kappa, alpha, lam, tau, vark) {
-    1/((1 - kappa) * gamma(alpha)) *
+#'
+#' @examples
+#'
+#' # With scale parameter
+#' TVaR_burr(kappa = .8, rate = 2, shape1 = 2, shape2 = 5)
+#'
+#' # With rate parameter
+#' TVaR_burr(kappa = .8, scale = 0.5, shape1 = 2, shape2 = 5)
+#'
+TVaR_burr <- function(kappa, shape1, shape2, rate = 1 / scale, scale = 1 / rate) {
+
+    vark <- VaR_burr(kappa, shape1, shape2, rate)
+
+    1/((1 - kappa) * gamma(shape1)) *
         (
-            (lam^(1 / tau)) *
-                gamma(1 + 1 / tau) *
-                gamma(alpha - 1 / tau) *
-                pbeta(q = (vark^tau) / (lam + vark^tau),
-                      shape1 = 1 + 1 / tau,
-                      shape2 = alpha - 1 / tau,
+            (rate^(1/shape2)) *
+                gamma(1 + 1/shape2) *
+                gamma(shape1 - 1/shape2) *
+                pbeta(q = (vark^shape2)/(rate + vark^shape2),
+                      shape1 = 1 + 1/shape2,
+                      shape2 = shape1 - 1/shape2,
                       lower.tail = F)
         )
 

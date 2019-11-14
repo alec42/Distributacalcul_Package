@@ -2,7 +2,7 @@
 % Please edit documentation in R/kthmoment_weibull.R
 \name{kthmoment_weibull}
 \alias{kthmoment_weibull}
-\title{kth Moment of the Erlang Distribution}
+\title{kth Moment of the Weibull Distribution}
 \usage{
 kthmoment_weibull(k = 1, shape, rate = 1/scale, scale = 1/rate)
 }

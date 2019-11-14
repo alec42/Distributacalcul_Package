@@ -21,11 +21,11 @@
 #' p_negbinom(k = 3, r = 2, p = .4)
 #'
 #' # Where k is the number of failures before a rth success
-#' p_negbinom(k = 3, r = 2, p = .4, nb_tries = T)
+#' p_negbinom(k = 3, r = 2, p = .4, nb_tries = TRUE)
 #'
 #' # By definition, k must be greater than r.
 #' \dontrun{
-#'  p_negbinom(k = 1, r = 2, p = .4, nb_tries = T)
+#'  p_negbinom(k = 1, r = 2, p = .4, nb_tries = TRUE)
 #' }
 #'
 #' # With alternative parameterization where k is the number of trials

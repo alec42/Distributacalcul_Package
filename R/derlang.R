@@ -6,7 +6,6 @@
 #' @templateVar x TRUE
 #' @templateVar q FALSE
 #' @templateVar kappa FALSE
-#' @templateVar lower.tail TRUE
 #' @template erlang-template
 #'
 #' @export

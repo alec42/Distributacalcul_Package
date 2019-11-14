@@ -4,7 +4,7 @@
 \alias{perlang}
 \title{Cumulative Density Function of the Erlang Distribution}
 \usage{
-perlang(q, shape, scale = 1/rate, rate = 1/scale, lower.tail = T)
+perlang(q, shape, scale = 1/rate, rate = 1/scale, lower.tail = TRUE)
 }
 \arguments{
 \item{q}{quantile.}
@@ -15,7 +15,7 @@ perlang(q, shape, scale = 1/rate, rate = 1/scale, lower.tail = T)
 
 \item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
 
-\item{lower.tail}{logical; if \code{TRUE} (défaut) probabilities are \eqn{\text{Pr}(M \leq k)}{Pr(M <= k)}, otherwise, \eqn{\text{Pr}(M > k)}{Pr(M > k)}.}
+\item{lower.tail}{logical; if \code{TRUE} (défaut) probabilities are Pr(M <= k), otherwise, Pr(M > k).}
 }
 \description{
 Cumulative density function of the Erlang distribution with shape

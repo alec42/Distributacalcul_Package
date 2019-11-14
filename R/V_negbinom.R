@@ -10,10 +10,10 @@
 #'  probability of success and:
 #'  \eqn{k} is the number of failures or the number of trials until the
 #'   \eqn{r}th success is:
-#'   \deqn{\text{V}(M) = \frac{r(1 - p)}{p^2}}{E(M) = r(1 - p)/(p^2)}
+#'   \deqn{\textrm{V}(M) = \frac{r(1 - p)}{p^2}}{E(M) = r(1 - p)/(p^2)}
 #'
 #'  \eqn{k} is the number of trials until the \eqn{r}th success is:
-#'   \deqn{\text{V}(X) = r \beta (1 + \beta)}{E(M) = r beta (1 + beta)}
+#'   \deqn{\textrm{V}(X) = r \beta (1 + \beta)}{E(M) = r beta (1 + beta)}
 #'
 #'
 #' @seealso [d_negbinom()] for the probability mass function, [p_negbinom()]
@@ -28,7 +28,7 @@
 #' V_negbinom(r = 2, p = .4)
 #'
 #' # Where k is the number of failures before a rth success
-#' V_negbinom(r = 2, p = .4, nb_tries = T)
+#' V_negbinom(r = 2, p = .4, nb_tries = TRUE)
 #'
 #' # With alternative parameterization where k is the number of trials
 #' V_negbinom(r = 2, beta = 1.5)

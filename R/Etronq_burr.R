@@ -1,15 +1,29 @@
-#' Espérance tronquée d'une loi Burr
-#' @param d valeur où tronquer
-#' @param alpha alpha
-#' @param lam lambda
-#' @param tau tau
+#' Truncated Mean of the Burr Distribution
+#'
+#' @description Truncated mean of the Burr distribution with shape parameters
+#'  \eqn{\alpha}{alpha} (shape1) and \eqn{\tau}{tau} (shape2) as well as rate parameter
+#'  \eqn{\lambda}{lambda}.
+#'
+#' @templateVar d TRUE
+#' @templateVar kappa FALSE
+#' @template burr-template
+#'
 #' @export
-Etronq_burr <- function(d, alpha, lam, tau) {
-    1/(gamma(alpha)) *
-        (lam^(1/tau)) *
-        gamma(1 + 1/tau) *
-        gamma(alpha - 1/tau) *
-        pbeta(q = (d^tau / (lam + (d^tau))),
-              shape1 = 1 + 1/tau,
-              shape2 = alpha - 1/tau)
+#'
+#' @examples
+#'
+#' # With rate parameter
+#' Etronq_burr(d = 2, rate = 2, shape1 = 2, shape2 = 5)
+#'
+#' # With scale parameter
+#' Etronq_burr(d = 2, scale = 0.5, shape1 = 2, shape2 = 5)
+#'
+Etronq_burr <- function(d, shape1, shape2, rate = 1 / scale, scale = 1 / rate) {
+    1/(gamma(shape1)) *
+        (rate^(1/shape2)) *
+        gamma(1 + 1/shape2) *
+        gamma(shape1 - 1/shape2) *
+        pbeta(q = (d^shape2 / (rate + (d^shape2))),
+              shape1 = 1 + 1/shape2,
+              shape2 = shape1 - 1/shape2)
 }

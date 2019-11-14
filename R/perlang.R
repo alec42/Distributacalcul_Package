@@ -18,7 +18,7 @@
 #' # With rate parameter
 #' perlang(q = 2, shape = 2, rate = 0.2)
 #'
-perlang <- function(q, shape, scale = 1 / rate, rate = 1 / scale, lower.tail = T)
+perlang <- function(q, shape, scale = 1 / rate, rate = 1 / scale, lower.tail = TRUE)
 {
     Fx <- exp(-rate * q) *
         sum(sapply(0:(shape - 1), function(j) ((rate * q)^j) / factorial(j)))

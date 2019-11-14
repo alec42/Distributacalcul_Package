@@ -8,7 +8,7 @@
 #' <%=ifelse(exists("d") && d, "@param d cut-off value.", "") %>
 #' <%=ifelse(exists("kappa") && kappa, "@param kappa probability.", "") %>
 #' <%=ifelse(exists("vark") && vark, "@param vark Value-at-Risk (VaR) calculated at the given probability kappa.", "") %>
-#' <%=ifelse(exists("lower.tail") && lower.tail, "@param lower.tail logical; if \\code{TRUE} (défaut) probabilities are \\eqn{\\text{Pr}(M \\leq k)}{Pr(M <= k)}, otherwise, \\eqn{\\text{Pr}(M > k)}{Pr(M > k)}.", "") %>
+#' <%=ifelse(exists("lower.tail") && lower.tail, "@param lower.tail logical; if \\code{TRUE} (défaut) probabilities are Pr(M <= k), otherwise, Pr(M > k).", "") %>
 #'
 #' @details
 #'  The Erlang distribution with shape parameter \eqn{n} and rate parameter

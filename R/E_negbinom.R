@@ -7,13 +7,13 @@
 #' @details The expected value of the negative binomial where \eqn{p} is the
 #'  probability of success and:
 #'  \eqn{k} is the number of failures until the \eqn{r}th success is:
-#'   \deqn{\text{E}(M) = \frac{r(1 - p)}{p}}{E(M) = r(1 - p)/p}
+#'   \deqn{\textrm{E}(M) = \frac{r(1 - p)}{p}}{E(M) = r(1 - p)/p}
 #'
 #'  \eqn{k} is the number of trials until the \eqn{r}th success is:
-#'   \deqn{\text{E}(M) = \frac{r}{p}}{E(M) = r/p}
+#'   \deqn{\textrm{E}(M) = \frac{r}{p}}{E(M) = r/p}
 #'
 #'  \eqn{k} is the number of trials until the \eqn{r}th success is:
-#'   \deqn{\text{E}(X) = r \beta}{E(M) = r beta}#'
+#'   \deqn{\textrm{E}(X) = r \beta}{E(M) = r beta}#'
 #'
 #' @template negbinom-template
 #'
@@ -29,7 +29,7 @@
 #' E_negbinom(r = 2, p = .4)
 #'
 #' # Where k is the number of failures before a rth success
-#' E_negbinom(r = 2, p = .4, nb_tries = T)
+#' E_negbinom(r = 2, p = .4, nb_tries = TRUE)
 #'
 #' # With alternative parameterization where k is the number of trials
 #' E_negbinom(r = 2, beta = 1.5)

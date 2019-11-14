@@ -28,7 +28,7 @@ The Erlang distribution with shape parameter \eqn{n} and rate parameter
    \mathrm{e}^{-\beta x}}{f(x) = b^n / \Gamma(n) x^{n - 1} e^{-b x}}
   for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\beta > 0}{b > 0}, \eqn{n \in \mathcal{N}^+}{n = 1, 2, 3, ...}
 
-Cette formule nécessite la formule de la VaR_erlang (déjà installée avec le package tvarPackage)
+This formula needs the formula for the VaR_erlang (already installed with the tvarPackage).
 }
 \seealso{
 Other Erlang Distribution: \code{\link{E_erlang}},

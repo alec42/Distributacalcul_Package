@@ -2,19 +2,45 @@
 % Please edit documentation in R/kthmoment_burr.R
 \name{kthmoment_burr}
 \alias{kthmoment_burr}
-\title{k-ème moment d'une loi Burr}
+\title{kth Moment of the Burr Distribution}
 \usage{
-kthmoment_burr(k, alpha, lam, tau)
+kthmoment_burr(k, shape1, shape2, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{k}{k-ème moment, -tau < k < alpha * tau}
+\item{k}{kth-moment.}
 
-\item{alpha}{alpha}
+\item{shape1}{first shape parameter \eqn{\alpha}{alpha}, must be positive integer.}
 
-\item{lam}{lambda}
+\item{shape2}{second shape parameter \eqn{\tau}{tau}, must be positive integer.}
 
-\item{tau}{tau}
+\item{rate}{\eqn{\lambda}{lambda} is the rate parameter, must be positive.}
+
+\item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-k-ème moment d'une loi Burr
+kth-moment of the Burr distribution with shape parameters
+ \eqn{\alpha}{alpha} (shape1) and \eqn{\tau}{tau} (shape2) as well as rate parameter
+ \eqn{\lambda}{lambda}.
 }
+\details{
+The Burr distribution with rate parameter \eqn{\lambda}{lam} as well as shape
+  parameters \eqn{\alpha}{a} and \eqn{\tau}{t} has density:
+  \deqn{f\left(x\right) = \frac{\alpha \tau \lambda^{ \alpha } x^{ \tau - 1 }}{(\lambda + x^{ \tau })^{\alpha +1}}}{f(x) = (a t lam^a x^(t - 1))/ (lam + x^t)^(a + 1)}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\alpha, \tau, \lambda > 0}{a, t, lam > 0}.
+}
+\examples{
+
+# With scale parameter
+kthmoment_burr(k = 1, rate = 2, shape1 = 2, shape2 = 5)
+
+# With rate parameter
+kthmoment_burr(k = 1, scale = 0.5, shape1 = 2, shape2 = 5)
+
+}
+\seealso{
+Other Burr Distribution: \code{\link{Elim_burr}},
+  \code{\link{Etronq_burr}}, \code{\link{Mexcess_burr}},
+  \code{\link{SL_burr}}, \code{\link{TVaR_burr}},
+  \code{\link{VaR_burr}}
+}
+\concept{Burr Distribution}

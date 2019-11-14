@@ -8,7 +8,7 @@
 #' @templateVar q FALSE
 #' @template erlang-template
 #'
-#' @details Cette formule nécessite la formule de la VaR_erlang (déjà installée avec le package tvarPackage)
+#' @details This formula needs the formula for the VaR_erlang (already installed with the tvarPackage).
 #'
 #' @export
 .TVaR_erlang <- function(kappa, shape, scale = 1 / rate, rate = 1 / scale, vark)

@@ -2,19 +2,45 @@
 % Please edit documentation in R/Etronq_burr.R
 \name{Etronq_burr}
 \alias{Etronq_burr}
-\title{Espérance tronquée d'une loi Burr}
+\title{Truncated Mean of the Burr Distribution}
 \usage{
-Etronq_burr(d, alpha, lam, tau)
+Etronq_burr(d, shape1, shape2, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{d}{valeur où tronquer}
+\item{d}{cut-off value.}
 
-\item{alpha}{alpha}
+\item{shape1}{first shape parameter \eqn{\alpha}{alpha}, must be positive integer.}
 
-\item{lam}{lambda}
+\item{shape2}{second shape parameter \eqn{\tau}{tau}, must be positive integer.}
 
-\item{tau}{tau}
+\item{rate}{\eqn{\lambda}{lambda} is the rate parameter, must be positive.}
+
+\item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-Espérance tronquée d'une loi Burr
+Truncated mean of the Burr distribution with shape parameters
+ \eqn{\alpha}{alpha} (shape1) and \eqn{\tau}{tau} (shape2) as well as rate parameter
+ \eqn{\lambda}{lambda}.
 }
+\details{
+The Burr distribution with rate parameter \eqn{\lambda}{lam} as well as shape
+  parameters \eqn{\alpha}{a} and \eqn{\tau}{t} has density:
+  \deqn{f\left(x\right) = \frac{\alpha \tau \lambda^{ \alpha } x^{ \tau - 1 }}{(\lambda + x^{ \tau })^{\alpha +1}}}{f(x) = (a t lam^a x^(t - 1))/ (lam + x^t)^(a + 1)}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\alpha, \tau, \lambda > 0}{a, t, lam > 0}.
+}
+\examples{
+
+# With rate parameter
+Etronq_burr(d = 2, rate = 2, shape1 = 2, shape2 = 5)
+
+# With scale parameter
+Etronq_burr(d = 2, scale = 0.5, shape1 = 2, shape2 = 5)
+
+}
+\seealso{
+Other Burr Distribution: \code{\link{Elim_burr}},
+  \code{\link{Mexcess_burr}}, \code{\link{SL_burr}},
+  \code{\link{TVaR_burr}}, \code{\link{VaR_burr}},
+  \code{\link{kthmoment_burr}}
+}
+\concept{Burr Distribution}
