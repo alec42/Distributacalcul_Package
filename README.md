@@ -1,4 +1,4 @@
-Pour installer le paquetage à partir de RStudio utiliser cette commande: `devtools::install_github("alec42/Distributacalcul_Package")`
+To instal package from RStudio: `devtools::install_github("alec42/Distributacalcul_Package")`
 
 # Distributacalcul_Package
 Package containing functions used in the R Shiny application [distributacalcul](https://alec42.shinyapps.io/distributacalcul/).
