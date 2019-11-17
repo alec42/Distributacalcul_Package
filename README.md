@@ -81,3 +81,4 @@ Functions included in the package are marked by an x, those included in the [TVa
 |:-----------:| :---------:   |
 | 26/07/2019   | Initial creation of package |
 | 12/09/2019   | Completion of creation of all necessary function files |
+| 17/11/2019   | Merger of tvarPackage, beginning of documentation creation. |
