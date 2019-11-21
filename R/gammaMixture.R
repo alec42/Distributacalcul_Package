@@ -26,6 +26,33 @@
 #' dgammaMixture(x = 15, shape = c(3, 5), scale = c(7, 4))
 #'
 #'
+dgammaMixture <- function(x, shape, rate = 1 / scale, scale = 1 / rate, TOL = 1E-6) {
+    stopifnot(length(rate) == 2,
+              length(rate) == length(shape),
+              shape > 0
+    )
+
+    param_min <- c(shape[which.min(rate)], min(rate))
+    param_max <- c(shape[-which.min(rate)], rate[-min(rate)])
+
+    upper <- qnbinom(TOL, param_min[1], param_min[2]/param_max[2], lower.tail = FALSE)
+
+    fs <- rep(0, length(x))
+    for (i in 0:upper) {
+        fs <- fs + dnbinom(
+            x = i,
+            size = param_min[1],
+            prob = param_min[2] / param_max[2]
+        ) * dgamma(
+            x = x,
+            shape = i + param_min[1] + param_max[1],
+            rate = param_max[2]
+        )
+    }
+
+    return(fs)
+}
+
 pgammaMixture <- function(q, shape, rate = 1 / scale, scale = 1 / rate, TOL = 1E-6, lower.tail = TRUE) {
     stopifnot(length(rate) == 2,
               length(rate) == length(shape),
@@ -56,43 +83,16 @@ pgammaMixture <- function(q, shape, rate = 1 / scale, scale = 1 / rate, TOL = 1E
     }
 }
 
-dgammaMixture <- function(x, shape, rate = 1 / scale, scale = 1 / rate, TOL = 1E-6) {
-    stopifnot(length(rate) == 2,
-              length(rate) == length(shape),
-              shape > 0
-              )
-
-    param_min <- c(shape[which.min(rate)], min(rate))
-    param_max <- c(shape[-which.min(rate)], rate[-min(rate)])
-
-    upper <- qnbinom(TOL, param_min[1], param_min[2]/param_max[2], lower.tail = FALSE)
-
-    fs <- rep(0, length(x))
-    for (i in 0:upper) {
-        fs <- fs + dnbinom(
-            x = i,
-            size = param_min[1],
-            prob = param_min[2] / param_max[2]
-        ) * dgamma(
-            x = x,
-            shape = i + param_min[1] + param_max[1],
-            rate = param_max[2]
-        )
-    }
-
-    return(fs)
-}
-
 library(ggplot2)
 
 ggplot(data = data.frame(x = c(1, 30)), aes(x)) +
     stat_function(fun = dgammaMixture,
-                  args = list(shape = c(8, 15), rate = c(7, 8))) +
+                  args = list(shape = c(8, 12), rate = c(7, 1))) +
     ylab("f(x)") +
     theme_classic() +
     stat_function(
         fun = dgammaMixture,
-        args = list(shape = c(8, 15), rate = c(7, 8)),
+        args = list(shape = c(8, 12), rate = c(7, 1)),
         xlim = c(0, 15),
         geom = "area",
         fill = "red",
