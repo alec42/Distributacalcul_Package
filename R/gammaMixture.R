@@ -49,17 +49,6 @@ pgammaMixture <- function(q, shape, rate = 1 / scale, scale = 1 / rate, TOL = 1E
         )
     }
 
-    # Fs <- sum(sapply(0:upper, function(i)
-    #     dnbinom(
-    #         x = i,
-    #         size = param_min[1],
-    #         prob = param_min[2] / param_max[2]
-    #     ) * pgamma(
-    #         q = q,
-    #         shape = i + param_min[1] + param_max[1],
-    #         rate = param_max[2]
-    #     )))
-
     if (lower.tail) {
         return(Fs)
     } else {
@@ -92,19 +81,6 @@ dgammaMixture <- function(x, shape, rate = 1 / scale, scale = 1 / rate, TOL = 1E
     }
 
     return(fs)
-
-    # fs2 <- sum(sapply(0:upper, function(i)
-    #     dnbinom(
-    #         x = i,
-    #         size = param_min[1],
-    #         prob = param_min[2] / param_max[2]
-    #     ) * dgamma(
-    #         x = x,
-    #         shape = i + param_min[1] + param_max[1],
-    #         rate = param_max[2]
-    #     )))
-    #
-    # return(fs2)
 }
 
 library(ggplot2)
