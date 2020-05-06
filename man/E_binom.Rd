@@ -2,17 +2,31 @@
 % Please edit documentation in R/E_binom.R
 \name{E_binom}
 \alias{E_binom}
-\title{Espérance d'une loi binomiale
-Calcul l'espérance d'une binomiale}
+\title{Expected value of the Binomial distribution}
 \usage{
-E_binom(n, q)
+E_binom(size, prob)
 }
 \arguments{
-\item{n}{nombre d'essais}
+\item{size}{Number of trials (0 or more).}
 
-\item{q}{probabilité d'un succès indépendant}
+\item{prob}{Probability of success on each trial.}
 }
 \description{
-Espérance d'une loi binomiale
-Calcul l'espérance d'une binomiale
+Expected value of the Binomial distribution with size
+ \eqn{n}{n} and probability of success \eqn{p}{p}.
 }
+\details{
+
+}
+\examples{
+
+E_binom(size = 3, prob = 0.5)
+
+}
+\seealso{
+Other Binomial Distribution: 
+\code{\link{Etronq_binom}()},
+\code{\link{MGF_binom}()},
+\code{\link{V_binom}()}
+}
+\concept{Binomial Distribution}

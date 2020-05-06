@@ -3,4 +3,7 @@
 #' @param r nombre d'essais
 #' @param q probabilité d'un succès indépendant
 #' @export
-V_nbinom <- function(r, q) r * ((1-q) / q^2)
+V_nbinom <- function(r, q) {
+    .Deprecated("V_negbinom")
+    r * ((1-q) / q^2)
+}

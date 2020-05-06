@@ -18,7 +18,7 @@ TVaR_pois <- function(kappa, lambda, k0) {
     vark <- qpois(p = kappa, lambda = lambda)
 
     TVaR.approx <- (
-        Etronq_pois(vark, lambda, k0, less.than.d = F) +
+        Etronq_pois(vark, lambda, k0, less.than.d = FALSE) +
             vark * (ppois(q = vark, lambda = lambda) - kappa)
         ) / (1 - kappa)
     # message("This is an approximation") already returned by Etronq_pois

@@ -2,7 +2,7 @@
 % Please edit documentation in R/V_negbinom.R
 \name{V_negbinom}
 \alias{V_negbinom}
-\title{Variance d'une loi binomiale négative}
+\title{Variance of the negative binomial distribution}
 \usage{
 V_negbinom(r, p = (1/(1 + beta)), beta = ((1 - p)/p), nb_tries = F)
 }
@@ -40,15 +40,6 @@ When \eqn{k} is the number of failures until the \eqn{r}th success,
    \left(\frac{\beta}{1 +  \beta}\right)^{k - r}}{Pr(M = k) = %
    (r + k - 1)!/((r - 1)! k!) (1/(1 + beta))^r (beta/(1 + beta))^(k - r)}
   for \eqn{k \in \{0, 1, \dots \}}{k = 0, 1, 2, ...}
-
-The variance of the negative binomial where \eqn{p} is the
- probability of success and:
- \eqn{k} is the number of failures or the number of trials until the
-  \eqn{r}th success is:
-  \deqn{\textrm{V}(M) = \frac{r(1 - p)}{p^2}}{E(M) = r(1 - p)/(p^2)}
-
- \eqn{k} is the number of trials until the \eqn{r}th success is:
-  \deqn{\textrm{V}(X) = r \beta (1 + \beta)}{E(M) = r beta (1 + beta)}
 }
 \examples{
 
@@ -63,10 +54,6 @@ V_negbinom(r = 2, beta = 1.5)
 
 }
 \seealso{
-[d_negbinom()] for the probability mass function, [p_negbinom()]
- for the cumulative probability mass function, and [E_negbinom()]
- for the mean.
-
 Other Negative Binomial Distribution: 
 \code{\link{E_negbinom}()}
 }

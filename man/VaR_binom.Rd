@@ -2,17 +2,21 @@
 % Please edit documentation in R/VaR_binom.R
 \name{VaR_binom}
 \alias{VaR_binom}
-\title{Value-at-risk de la loi binomiale}
+\title{Value-at-risk of the Binomial distribution}
 \usage{
-VaR_binom(kappa, n, p)
+VaR_binom(kappa, size, prob)
 }
 \arguments{
-\item{kappa}{niveau de confiance désiré}
+\item{size}{Number of trials (0 or more).}
 
-\item{n}{nombres d'essais de Bernouilli}
-
-\item{p}{probabilité de succès (pour chaque expérience indépendantes)}
+\item{prob}{Probability of success on each trial.}
 }
 \description{
-Value-at-risk de la loi binomiale
+Value-at-risk of the Binomial distribution with size
+ \eqn{n}{n} and probability of success \eqn{p}{p}. Wrapper of qbinom.
+}
+\examples{
+
+VaR_binom(kappa = 0.8, size = 5, prob = 0.2)
+
 }

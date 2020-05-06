@@ -1,5 +1,18 @@
-#' Variance d'une loi binomiale
-#' @param n nombre d'essais
-#' @param q probabilité d'un succès indépendant
+#' Variance of the Binomial distribution
+#'
+#' @description Variance of the Binomial distribution with size
+#'  \eqn{n}{n} and probability of success \eqn{p}{p}.
+#'
+#' @templateVar q FALSE
+#' @templateVar kappa FALSE
+#' @template binom-template
+#'
+#' @examples
+#'
+#' V_binom(size = 3, prob = 0.5)
+#'
 #' @export
-V_binom <- function(n, q) n * q * (1 - q)
+#'
+V_binom <- function(size, prob) {
+    size * prob * (1 - prob)
+}

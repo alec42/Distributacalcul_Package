@@ -2,17 +2,21 @@
 % Please edit documentation in R/TVaR_binom.R
 \name{TVaR_binom}
 \alias{TVaR_binom}
-\title{Tail Value-at-risk de la loi binomiale}
+\title{Tail Value-at-risk of the Binomial distribution}
 \usage{
-TVaR_binom(kappa, n, p)
+TVaR_binom(kappa, size, prob)
 }
 \arguments{
-\item{kappa}{niveau de confiance désiré}
+\item{size}{Number of trials (0 or more).}
 
-\item{n}{nombres d'essais de Bernouilli}
-
-\item{p}{probabilité de succès (pour chaque expérience indépendantes)}
+\item{prob}{Probability of success on each trial.}
 }
 \description{
-Tail Value-at-risk de la loi binomiale
+Tail Value-at-risk of the Binomial distribution with size
+ \eqn{n}{n} and probability of success \eqn{p}{p}.
+}
+\examples{
+
+TVaR_binom(kappa = 0.8, size = 5, prob = 0.2)
+
 }

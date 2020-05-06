@@ -6,8 +6,10 @@
 #'  until the \code{r}th success, otherwise, number of failures until
 #'  the \code{r}th success.
 #'
+#' <%=ifelse(exists("k0") && k0, "@param k0 point up to which to sum the distribution to approximate the expected value.", "") %>
 #' <%=ifelse(exists("k") && k, "@param k quantile.", "") %>
 #' <%=ifelse(exists("lower.tail") && lower.tail, "@param lower.tail logical; if \\code{TRUE} (défaut) probabilities are Pr(M <= k), otherwise, Pr(M > k).", "") %>
+#' <%=ifelse(exists("d") && d, "@param d cut-off value.", "") %>
 #'
 #' @details
 #'  When \eqn{k} is the number of failures until the \eqn{r}th success,

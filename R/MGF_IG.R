@@ -1,4 +1,4 @@
-#' Fonction génératrice des moments d'une loi inverse gaussienne
+#' Moment Generating Function (MGF) of the Inverse Gaussian distribution
 #' @param t t
 #' @param mu mu
 #' @param beta beta = dispersion * mu^2

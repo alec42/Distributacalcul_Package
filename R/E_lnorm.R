@@ -12,6 +12,7 @@
 #' E_lnorm(meanlog = 3, sdlog = 5)
 #'
 #' @export
+#'
 E_lnorm <- function(meanlog, sdlog) {
     exp(meanlog + (sdlog^2) / 2)
 }

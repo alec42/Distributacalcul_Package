@@ -1,6 +1,18 @@
-#' Espérance d'une loi binomiale
-#' Calcul l'espérance d'une binomiale
-#' @param n nombre d'essais
-#' @param q probabilité d'un succès indépendant
+#' Expected value of the Binomial distribution
+#'
+#' @description Expected value of the Binomial distribution with size
+#'  \eqn{n}{n} and probability of success \eqn{p}{p}.
+#'
+#' @templateVar q FALSE
+#' @templateVar kappa FALSE
+#' @template binom-template
+#'
+#' @examples
+#'
+#' E_binom(size = 3, prob = 0.5)
+#'
 #' @export
-E_binom <- function(n, q) n * q
+#'
+E_binom <- function(size, prob) {
+    size * prob
+}

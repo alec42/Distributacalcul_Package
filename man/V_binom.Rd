@@ -2,15 +2,31 @@
 % Please edit documentation in R/V_binom.R
 \name{V_binom}
 \alias{V_binom}
-\title{Variance d'une loi binomiale}
+\title{Variance of the Binomial distribution}
 \usage{
-V_binom(n, q)
+V_binom(size, prob)
 }
 \arguments{
-\item{n}{nombre d'essais}
+\item{size}{Number of trials (0 or more).}
 
-\item{q}{probabilité d'un succès indépendant}
+\item{prob}{Probability of success on each trial.}
 }
 \description{
-Variance d'une loi binomiale
+Variance of the Binomial distribution with size
+ \eqn{n}{n} and probability of success \eqn{p}{p}.
 }
+\details{
+
+}
+\examples{
+
+V_binom(size = 3, prob = 0.5)
+
+}
+\seealso{
+Other Binomial Distribution: 
+\code{\link{E_binom}()},
+\code{\link{Etronq_binom}()},
+\code{\link{MGF_binom}()}
+}
+\concept{Binomial Distribution}

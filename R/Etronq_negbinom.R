@@ -1,6 +1,6 @@
-#' Variance of the negative binomial distribution
+#' Truncated mean of the Negative Binomial distribution.
 #'
-#' @description Variance of the negative binomial distribution with
+#' @description Truncated mean of the negative binomial distribution with
 #'  parameters \eqn{r} (number of successful trials) and \eqn{p}
 #'  (probability of success).
 #'
@@ -11,15 +11,11 @@
 #' @examples
 #'
 #' # Where k is the number of trials for a rth success
-#' V_negbinom(r = 2, p = .4)
+#' Etronq_negbinom(d = 2, r = 2, p = .4, k0 = 2E2)
 #'
 #' # Where k is the number of failures before a rth success
-#' V_negbinom(r = 2, p = .4, nb_tries = TRUE)
+#' Etronq_negbinom(d = 2, r = 2, p = .4, nb_tries = TRUE, k0 = 2E2)
 #'
 #' # With alternative parameterization where k is the number of trials
-#' V_negbinom(r = 2, beta = 1.5)
+#' Etronq_negbinom(d = 2, r = 2, beta = 1.5, k0 = 2E2)
 #'
-V_negbinom <- function(r, p = (1 / (1 + beta)), beta = ((1 - p) / p), nb_tries = F)
-{
-    r * ((1 - p) / (p^2))
-}

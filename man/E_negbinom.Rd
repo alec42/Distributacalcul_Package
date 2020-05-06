@@ -24,17 +24,6 @@ Expected value of the negative binomial distribution with
  (probability of success).
 }
 \details{
-The expected value of the negative binomial where \eqn{p} is the
- probability of success and:
- \eqn{k} is the number of failures until the \eqn{r}th success is:
-  \deqn{\textrm{E}(M) = \frac{r(1 - p)}{p}}{E(M) = r(1 - p)/p}
-
- \eqn{k} is the number of trials until the \eqn{r}th success is:
-  \deqn{\textrm{E}(M) = \frac{r}{p}}{E(M) = r/p}
-
- \eqn{k} is the number of trials until the \eqn{r}th success is:
-  \deqn{\textrm{E}(X) = r \beta}{E(M) = r beta}#'
-
 When \eqn{k} is the number of failures until the \eqn{r}th success,
   with a probability \eqn{p} of a success, the negative binomial has density:
   \deqn{\left(\frac{r + k - 1}{k}\right) (p)^{r} (1 - p)^{k}}{Pr(M = k) = choose(r + k - 1, k) p^r (1 - p)^k}
@@ -65,10 +54,6 @@ E_negbinom(r = 2, beta = 1.5)
 
 }
 \seealso{
-[d_negbinom()] for the probability mass function, [p_negbinom()]
- for the cumulative probability mass function, and [V_negbinom()]
- for the variance.
-
 Other Negative Binomial Distribution: 
 \code{\link{V_negbinom}()}
 }
