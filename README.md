@@ -29,12 +29,13 @@ Functions included in the package are marked by an x, those included in the [TVa
 | --------------------------- |:--------:|:---------:|:-----------------:|:---------:|:-------:|:-------:|:-----------:|:--------------:|
 | Mean                        | x        |           | x/x               |           |         | x       | x           | x              |
 | K-th moment                 |          |           |                   |           |         |         |             |                |
-| Truncated mean              |          |           |                   |           |         |         |             |                |
+| Truncated mean              | x        |           |                   |           |  x      |         |             |                |
 | Limited expected value      |          |           |                   |           |         |         |             |                |
 | Variance                    | x        |           | x/x               |           |         | x       | x           | x              |
 | Stop-loss                   |          |           |                   |           |         |         |             |                |
 | Excess of mean              |          |           |                   |           |         |         |             |                |
-| Moment Generating Function  |          |           |                   |           |         |         |             |                |
+| Moment Generating Function  | x        |           |                   |           |         |         |             |                |
+| Probability Generating Function | x        |           |                   |           |         |         |             |                |
 | Density                     |          |           | x                 |           |         | x       |             |                |
 | Cumulative density function |          |           | x                 |           |         | x       |             |                |
 | Value-at-Risk (percentile)  | x        |           |                   |           |         |         |             |                |
@@ -69,6 +70,7 @@ Functions included in the package are marked by an x, those included in the [TVa
 | Stop-loss                   | SL_distribution        |
 | Excess of mean              | Mexcess_distribution   |
 | Moment Generating Function  | MGF_distribution       |
+| Probability Generating Function  | PGF_distribution       |
 | Density                     | ddistribution          |
 | Cumulative density function | pdistribution          |
 | Value-at-Risk (percentile)  | TVaR_distribution      |
