@@ -1,11 +1,21 @@
-#' Stop-Loss de la loi normale
-#' @param mu moyenne mu
-#' @param sig sigma
-#' @param d déductible
+#' Stop-loss of the Normal distribution
+#'
+#' @description Stop-loss of the Normal distribution with mean
+#'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
+#'
+#' @templateVar d TRUE
+#' @templateVar q FALSE
+#' @templateVar kappa FALSE
+#' @template norm-template
+#'
 #' @export
-SL_norm <- function(d, mu = 0, sig = 1)
-{
-    phi1 <- (d - mu) / sig
-    fact_norm <- (sig / sqrt(2*pi)) * exp(-phi1^2 / 2)
-    (mu + d)*(1 - pnorm(phi1)) - fact_norm
+#'
+#' @examples
+#'
+#' SL_norm(d = 2, mean = 2, sd = 5)
+#'
+SL_norm <- function(d, mean = 0, sd = 1) {
+    phi1 <- (d - mean) / sd
+    fact_norm <- (sd / sqrt(2*pi)) * exp(-phi1^2 / 2)
+    (mean + d) * pnorm(phi1, lower.tail = F) - fact_norm
 }

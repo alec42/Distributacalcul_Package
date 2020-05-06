@@ -31,13 +31,16 @@
 #' # With alternative parameterization where k is the number of trials
 #' d_negbinom(k = 3, r = 2, beta = 1.5)
 #'
-d_negbinom <- function(k, r, p = (1 / (1 + beta)), beta = ((1 - p) / p), nb_tries = F)
-{
-    if (nb_tries) {
-        stopifnot(k > r)
-        choose((k - 1), (r - 1)) * p^r * (1 - p)^(k - r)
-    } else {
-        choose((r + k - 1), k) * p^r * (1 - p)^k
-    }
-
-}
+# d_negbinom <- function(k, r, p = (1 / (1 + beta)), beta = ((1 - p) / p), nb_tries = FALSE)
+# {
+#     if (nb_tries) {
+#         stopifnot(k > r)
+#     }
+#
+#     if (nb_tries) {
+#         choose((k - 1), (r - 1)) * p^r * (1 - p)^(k - r)
+#     } else {
+#         choose((r + k - 1), k) * p^r * (1 - p)^k
+#     }
+#
+# }

@@ -4,23 +4,30 @@
 \alias{TVaR_PCOMP}
 \title{Tail Value-at-risk d'une loi poisson composée}
 \usage{
-TVaR_PCOMP(kappa, lambda, shape, rate, vark, ko = 300,
-  distr_severity = "Gamma")
+TVaR_PCOMP(
+  kappa,
+  lambda,
+  shape,
+  rate,
+  vark,
+  ko = 300,
+  distr_severity = "Gamma"
+)
 }
 \arguments{
-\item{kappa}{Niveau de confiance désiré}
+\item{kappa}{Desired confidence level}
 
-\item{lambda}{lambda}
+\item{lambda}{lambda rate paramter}
 
-\item{shape}{alpha pour la Gamma}
+\item{shape}{alpha for Gamma}
 
-\item{rate}{beta pour la Gamma}
+\item{rate}{beta for Gamma}
 
 \item{vark}{Value at Risk (VaR) calculé au même niveau de confiance kappa}
 
-\item{ko}{borne pour la somme dans le calcul de la TVaR}
-
 \item{distr_severity}{choix de distribution de sévérité.}
+
+\item{k0}{point up to which to sum the distribution to approximate the expected value.}
 }
 \description{
 Tail Value-at-risk d'une loi poisson composée

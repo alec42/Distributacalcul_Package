@@ -2,7 +2,7 @@
 % Please edit documentation in R/E_PCOMP.R
 \name{E_PCOMP}
 \alias{E_PCOMP}
-\title{Espérance d'une loi poisson composée}
+\title{Expected value of a compound Poisson distribution}
 \usage{
 E_PCOMP(lambda, shape, rate, distr_severity = "Gamma")
 }
@@ -16,7 +16,7 @@ E_PCOMP(lambda, shape, rate, distr_severity = "Gamma")
 \item{distr_severity}{choix de distribution de sévérité. Gamma (par défaut) ou Lognormale}
 }
 \description{
-Espérance d'une loi poisson composée
+Expected value of a compound Poisson distribution
 }
 \details{
 Cette formule utilise aussi un choix de 2 distributions pour la sévérité; soit la Gamma ou la Lognormale.

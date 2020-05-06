@@ -2,7 +2,7 @@
 % Please edit documentation in R/Elim_llogis.R
 \name{Elim_llogis}
 \alias{Elim_llogis}
-\title{Limited Mean of the Loglogistic Distribution}
+\title{Limited Mean of the Loglogistic distribution}
 \usage{
 Elim_llogis(d, shape, rate = 1/scale, scale = 1/rate)
 }
@@ -35,9 +35,13 @@ Elim_llogis(d = 2, shape = 2, rate = 0.2)
 
 }
 \seealso{
-Other Loglogistic Distribution: \code{\link{Etronq_llogis}},
-  \code{\link{Mexcess_llogis}}, \code{\link{SL_llogis}},
-  \code{\link{TVaR_llogis}}, \code{\link{V_llogis}},
-  \code{\link{VaR_llogis}}, \code{\link{kthmoment_llogis}}
+Other Loglogistic Distribution: 
+\code{\link{Etronq_llogis}()},
+\code{\link{Mexcess_llogis}()},
+\code{\link{SL_llogis}()},
+\code{\link{TVaR_llogis}()},
+\code{\link{V_llogis}()},
+\code{\link{VaR_llogis}()},
+\code{\link{kthmoment_llogis}()}
 }
 \concept{Loglogistic Distribution}

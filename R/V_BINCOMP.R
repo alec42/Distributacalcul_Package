@@ -10,8 +10,8 @@ V_BINCOMP <- function(n, q, shape, rate, distr_severity = "Gamma")
 {
     if(distr_severity == "Gamma")
     {
-        (shape / rate)^2 * n * q * (1 - q) + n * q * V_gamma(a = shape, b = rate)
+        (shape / rate)^2 * n * q * (1 - q) + n * q * V_gamma(shape, rate)
     }
     else if (distr_severity == "Lognormale")
-        E_lnorm(mu = shape, sig = sqrt(rate))^2 * n * q * (1 - q) + n * q * V_lnorm(mu = shape, sig = rate)
+        E_lnorm(shape, sqrt(rate))^2 * n * q * (1 - q) + n * q * V_lnorm(shape, rate)
 }

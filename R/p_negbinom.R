@@ -1,4 +1,4 @@
-#' Fonction de répartition de la loi binomiale négative
+#' Cumulative density function of the Negative Binomial distribution
 #'
 #' @description Cumulative probability mass function of the negative binomial
 #'  distribution with parameters \eqn{r} (number of successful trials) and
@@ -31,17 +31,15 @@
 #' # With alternative parameterization where k is the number of trials
 #' p_negbinom(k = 3, r = 2, beta = 1.5)
 #'
-p_negbinom <- function(k, r, p = (1 / (1 + beta)), beta = ((1 - p) / p), nb_tries = FALSE, lower.tail = T){
-
-    start_FX <- ifelse(nb_tries, r, 0)
-
-    if (nb_tries) {
-        stopifnot(k > r)
-    }
-
-    if (lower.tail) {
-        sum(sapply(start_FX:k, function(i) d_negbinom(k = i, r = r, p = p, nb_tries = nb_tries)))
-    } else {
-        1 - sum(sapply(start_FX:k, function(i) d_negbinom(k = i, r = r, p = p, nb_tries = nb_tries)))
-    }
-}
+# p_negbinom <- function(k, r, p = (1 / (1 + beta)), beta = ((1 - p) / p), nb_tries = FALSE, lower.tail = TRUE){
+#
+#     if (nb_tries) {
+#         stopifnot(k > r)
+#     }
+#     start_FX <- ifelse(nb_tries, r, 0)
+#     if (lower.tail) {
+#         sum(sapply(start_FX:k, function(i) d_negbinom(k = i, r = r, p = p, nb_tries = nb_tries)))
+#     } else {
+#         1 - sum(sapply(start_FX:k, function(i) d_negbinom(k = i, r = r, p = p, nb_tries = nb_tries)))
+#     }
+# }

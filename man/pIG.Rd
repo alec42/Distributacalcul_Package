@@ -4,8 +4,7 @@
 \alias{pIG}
 \title{Envelope de la densité de la loi inverse gaussienne}
 \usage{
-pIG(q, mu, beta = dispersion * mu^2, dispersion = beta/mu^2,
-  lower.tail = T)
+pIG(q, mu, beta = dispersion * mu^2, dispersion = beta/mu^2, lower.tail = T)
 }
 \arguments{
 \item{q}{quantile}

@@ -2,7 +2,7 @@
 % Please edit documentation in R/kthmoment_llogis.R
 \name{kthmoment_llogis}
 \alias{kthmoment_llogis}
-\title{Limited Mean of the Loglogistic Distribution}
+\title{Limited Mean of the Loglogistic distribution}
 \usage{
 kthmoment_llogis(k = 1, shape, rate = 1/scale, scale = 1/rate)
 }
@@ -35,10 +35,13 @@ kthmoment_llogis(k = 2, shape = 3, rate = 0.2)
 
 }
 \seealso{
-Other Loglogistic Distribution: \code{\link{Elim_llogis}},
-  \code{\link{Etronq_llogis}},
-  \code{\link{Mexcess_llogis}}, \code{\link{SL_llogis}},
-  \code{\link{TVaR_llogis}}, \code{\link{V_llogis}},
-  \code{\link{VaR_llogis}}
+Other Loglogistic Distribution: 
+\code{\link{Elim_llogis}()},
+\code{\link{Etronq_llogis}()},
+\code{\link{Mexcess_llogis}()},
+\code{\link{SL_llogis}()},
+\code{\link{TVaR_llogis}()},
+\code{\link{V_llogis}()},
+\code{\link{VaR_llogis}()}
 }
 \concept{Loglogistic Distribution}

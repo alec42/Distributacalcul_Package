@@ -33,10 +33,13 @@ V_llogis(shape = 3, rate = 0.2)
 
 }
 \seealso{
-Other Loglogistic Distribution: \code{\link{Elim_llogis}},
-  \code{\link{Etronq_llogis}},
-  \code{\link{Mexcess_llogis}}, \code{\link{SL_llogis}},
-  \code{\link{TVaR_llogis}}, \code{\link{VaR_llogis}},
-  \code{\link{kthmoment_llogis}}
+Other Loglogistic Distribution: 
+\code{\link{Elim_llogis}()},
+\code{\link{Etronq_llogis}()},
+\code{\link{Mexcess_llogis}()},
+\code{\link{SL_llogis}()},
+\code{\link{TVaR_llogis}()},
+\code{\link{VaR_llogis}()},
+\code{\link{kthmoment_llogis}()}
 }
 \concept{Loglogistic Distribution}

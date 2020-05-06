@@ -10,6 +10,6 @@ V_PCOMP <- function(lambda, shape, rate, distr_severity = "Gamma"){
         lambda * kthmoment_gamma(k = 2, shape, rate)
     }
     else if (distr_severity == "Lognormale"){
-        lambda * kthmoment_lnorm(k = 2, mu = shape, sig = sqrt(rate))
+        lambda * kthmoment_lnorm(k = 2, shape, sqrt(rate))
     }
 }

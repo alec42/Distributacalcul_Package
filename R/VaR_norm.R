@@ -1,8 +1,20 @@
-#' Value-at-Risk d'une loi normale
-#' @param mu mu
-#' @param sig sigma
-#' @param kappa pourcentage de confiance désiré
+#' Value-at-Risk of the Normal distribution
+#'
+#' @description Value-at-Risk of the Normal distribution with mean
+#'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
+#'
+#' @templateVar q FALSE
+#' @templateVar kappa TRUE
+#' @template norm-template
+#'
 #' @export
-VaR_norm <- function(kappa, mu = 0, sig = 1) qnorm(kappa, mu, sig)
+#'
+#' @examples
+#'
+#' VaR_norm(kappa = 0.8, mean = 3, sd = 5)
+#'
+VaR_norm <- function(kappa, mean = 0, sd = 1) {
+    qnorm(p = kappa, mean = mean, sd = sd)
+}
 
 

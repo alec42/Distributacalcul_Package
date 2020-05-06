@@ -1,15 +1,26 @@
-#' Tail Value-at-risk de la loi Poisson
-#' @param kappa niveau de confiance désiré
-#' @param lam lambda, nombre d'occurences moyen dans un laps de temps donné.
+#' Tail Value-at-risk of the Poisson distribution
+#'
+#' @description Tail Value-at-Risk of the Poisson distribution with rate parameter
+#'  \eqn{\lambda}{lambda}.
+#'
+#' @templateVar q FALSE
+#' @template pois-template
+#'
 #' @export
-TVaR_pois <- function(kappa, lam)
-{
-    k <- 0:n
-    fx <- dpois(k, lam)
-    ValueAtR <- qpois(kappa, lam)
+#'
+#' @examples
+#'
+#' TVaR_pois(kappa = 0.8, lambda = 3, k0 = 2E2)
+#'
+TVaR_pois <- function(kappa, lambda, k0) {
+    k <- 0:k0 # valeurs possibles
+    fx <- dpois(x = k, lambda = lambda)
+    vark <- qpois(p = kappa, lambda = lambda)
 
-    # Définition de la tvar, tout simplement
-    un      <- sum((k * fx)[k > ValueAtR])
-    deux    <- ValueAtR * (ppois(ValueAtR, n, p) - kappa)
-    sum (un, deux) / (1-kappa)
+    TVaR.approx <- (
+        Etronq_pois(vark, lambda, k0, less.than.d = F) +
+            vark * (ppois(q = vark, lambda = lambda) - kappa)
+        ) / (1 - kappa)
+    # message("This is an approximation") already returned by Etronq_pois
+    return(TVaR.approx)
 }

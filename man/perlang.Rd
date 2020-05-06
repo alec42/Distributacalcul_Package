@@ -38,11 +38,15 @@ perlang(q = 2, shape = 2, rate = 0.2)
 
 }
 \seealso{
-Other Erlang Distribution: \code{\link{.TVaR_erlang}},
-  \code{\link{E_erlang}}, \code{\link{Elim_erlang}},
-  \code{\link{Etronq_erlang}},
-  \code{\link{Mexcess_erlang}}, \code{\link{SL_erlang}},
-  \code{\link{V_erlang}}, \code{\link{derlang}},
-  \code{\link{kthmoment_erlang}}
+Other Erlang Distribution: 
+\code{\link{.TVaR_erlang}()},
+\code{\link{E_erlang}()},
+\code{\link{Elim_erlang}()},
+\code{\link{Etronq_erlang}()},
+\code{\link{Mexcess_erlang}()},
+\code{\link{SL_erlang}()},
+\code{\link{V_erlang}()},
+\code{\link{derlang}()},
+\code{\link{kthmoment_erlang}()}
 }
 \concept{Erlang Distribution}

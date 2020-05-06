@@ -2,17 +2,41 @@
 % Please edit documentation in R/kthmoment_lnorm.R
 \name{kthmoment_lnorm}
 \alias{kthmoment_lnorm}
-\title{k-ème moment d'une loi lognormale}
+\title{kth moment of the Lognormal distribution}
 \usage{
-kthmoment_lnorm(k, mu, sig)
+kthmoment_lnorm(k, meanlog, sdlog)
 }
 \arguments{
-\item{k}{k-ème moment}
+\item{k}{kth-moment.}
 
-\item{mu}{mu}
+\item{meanlog}{mean \eqn{\mu}{mu}.}
 
-\item{sig}{sigma = sqrt(sigma^2)}
+\item{sdlog}{standard deviation \eqn{\sigma}{sigma}}
 }
 \description{
-k-ème moment d'une loi lognormale
+kth moment of the Logormal distribution with mean
+ \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 }
+\details{
+The Log-normal distribution with mean \eqn{\mu}{mu} and standard deviation
+  \eqn{\sigma}{sigma} has density:
+  \deqn{\frac{1}{\sqrt{2\pi}\sigma x}\textrm{e}^{-\frac{1}{2}\left(\frac{\ln(x) - \mu}{\sigma}\right)^2}}{f(x) = e^(-(1/2) ((ln(x) - mu)/sigma)^2) / ((2 pi)^(1/2) sigma x}
+  for \eqn{x \in \mathcal{R}^{+}}{x >= 0}, \eqn{\mu \in \mathcal{R}, \sigma > 0}{mu real, sigma > 0}.
+}
+\examples{
+
+kthmoment_lnorm(k = 2, meanlog = 3, sdlog = 5)
+
+}
+\seealso{
+Other Lognormal distribution: 
+\code{\link{E_lnorm}()},
+\code{\link{Elim_lnorm}()},
+\code{\link{Etronq_lnorm}()},
+\code{\link{Mexcess_lnorm}()},
+\code{\link{SL_lnorm}()},
+\code{\link{TVaR_lnorm}()},
+\code{\link{V_lnorm}()},
+\code{\link{VaR_lnorm}()}
+}
+\concept{Lognormal distribution}

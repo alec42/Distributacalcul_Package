@@ -2,15 +2,19 @@
 % Please edit documentation in R/TVaR_pois.R
 \name{TVaR_pois}
 \alias{TVaR_pois}
-\title{Tail Value-at-risk de la loi Poisson}
+\title{Tail Value-at-risk of the Poisson distribution}
 \usage{
-TVaR_pois(kappa, lam)
+TVaR_pois(kappa, lambda, k0)
 }
 \arguments{
-\item{kappa}{niveau de confiance désiré}
-
-\item{lam}{lambda, nombre d'occurences moyen dans un laps de temps donné.}
+\item{lambda}{Rate parameter \eqn{\lambda}{lambda}.}
 }
 \description{
-Tail Value-at-risk de la loi Poisson
+Tail Value-at-Risk of the Poisson distribution with rate parameter
+ \eqn{\lambda}{lambda}.
+}
+\examples{
+
+TVaR_pois(kappa = 0.8, lambda = 3, k0 = 2E2)
+
 }

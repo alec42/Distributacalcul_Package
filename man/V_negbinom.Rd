@@ -67,7 +67,7 @@ V_negbinom(r = 2, beta = 1.5)
  for the cumulative probability mass function, and [E_negbinom()]
  for the mean.
 
-Other Negative Binomial Distribution: \code{\link{E_negbinom}},
-  \code{\link{d_negbinom}}, \code{\link{p_negbinom}}
+Other Negative Binomial Distribution: 
+\code{\link{E_negbinom}()}
 }
 \concept{Negative Binomial Distribution}

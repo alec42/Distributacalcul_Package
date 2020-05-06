@@ -37,10 +37,14 @@ VaR_weibull(kappa = .2, shape = 3, rate = 0.25)
 
 }
 \seealso{
-Other Weibull Distribution: \code{\link{E_weibull}},
-  \code{\link{Elim_weibull}}, \code{\link{Etronq_weibull}},
-  \code{\link{Mexcess_weibull}}, \code{\link{SL_weibull}},
-  \code{\link{TVaR_weibull}}, \code{\link{V_weibull}},
-  \code{\link{kthmoment_weibull}}
+Other Weibull Distribution: 
+\code{\link{E_weibull}()},
+\code{\link{Elim_weibull}()},
+\code{\link{Etronq_weibull}()},
+\code{\link{Mexcess_weibull}()},
+\code{\link{SL_weibull}()},
+\code{\link{TVaR_weibull}()},
+\code{\link{V_weibull}()},
+\code{\link{kthmoment_weibull}()}
 }
 \concept{Weibull Distribution}

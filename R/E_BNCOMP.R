@@ -13,5 +13,5 @@ E_BNCOMP <- function(r, q, shape, rate, distr_severity = "Gamma")
         (r * (1 - q)/q) * kthmoment_gamma(k = 1, shape, rate)
     }
     else if (distr_severity == "Lognormale")
-        (r * (1 - q)/q) * E_lnorm(mu = shape, sig = sqrt(rate))
+        (r * (1 - q)/q) * E_lnorm(shape, sqrt(rate))
 }

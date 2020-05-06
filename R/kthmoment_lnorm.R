@@ -1,9 +1,19 @@
-#' k-ème moment d'une loi lognormale
-#' @param k k-ème moment
-#' @param mu mu
-#' @param sig sigma = sqrt(sigma^2)
+#' kth moment of the Lognormal distribution
+#'
+#' @description kth moment of the Logormal distribution with mean
+#'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
+#'
+#' @templateVar k TRUE
+#' @templateVar q FALSE
+#' @templateVar kappa FALSE
+#' @template lnorm-template
+#'
 #' @export
-kthmoment_lnorm <- function(k, mu, sig)
-{
-    exp(mu * k + k ^ 2 * (sig ^ 2) / 2)
+#'
+#' @examples
+#'
+#' kthmoment_lnorm(k = 2, meanlog = 3, sdlog = 5)
+#'
+kthmoment_lnorm <- function(k, meanlog, sdlog) {
+    exp(meanlog * k + k^2 * (sdlog^2) / 2)
 }

@@ -2,15 +2,39 @@
 % Please edit documentation in R/V_lnorm.R
 \name{V_lnorm}
 \alias{V_lnorm}
-\title{Variance d'une loi lognormale}
+\title{Variance of the Lognormal distribution}
 \usage{
-V_lnorm(mu, sig)
+V_lnorm(meanlog, sdlog)
 }
 \arguments{
-\item{mu}{mu}
+\item{meanlog}{mean \eqn{\mu}{mu}.}
 
-\item{sig}{sigma}
+\item{sdlog}{standard deviation \eqn{\sigma}{sigma}}
 }
 \description{
-Variance d'une loi lognormale
+Variance of the Lognormal distribution with mean
+ \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 }
+\details{
+The Log-normal distribution with mean \eqn{\mu}{mu} and standard deviation
+  \eqn{\sigma}{sigma} has density:
+  \deqn{\frac{1}{\sqrt{2\pi}\sigma x}\textrm{e}^{-\frac{1}{2}\left(\frac{\ln(x) - \mu}{\sigma}\right)^2}}{f(x) = e^(-(1/2) ((ln(x) - mu)/sigma)^2) / ((2 pi)^(1/2) sigma x}
+  for \eqn{x \in \mathcal{R}^{+}}{x >= 0}, \eqn{\mu \in \mathcal{R}, \sigma > 0}{mu real, sigma > 0}.
+}
+\examples{
+
+V_lnorm(meanlog = 3, sdlog = 5)
+
+}
+\seealso{
+Other Lognormal distribution: 
+\code{\link{E_lnorm}()},
+\code{\link{Elim_lnorm}()},
+\code{\link{Etronq_lnorm}()},
+\code{\link{Mexcess_lnorm}()},
+\code{\link{SL_lnorm}()},
+\code{\link{TVaR_lnorm}()},
+\code{\link{VaR_lnorm}()},
+\code{\link{kthmoment_lnorm}()}
+}
+\concept{Lognormal distribution}

@@ -31,10 +31,15 @@ The Erlang distribution with shape parameter \eqn{n} and rate parameter
 This formula needs the formula for the VaR_erlang (already installed with the tvarPackage).
 }
 \seealso{
-Other Erlang Distribution: \code{\link{E_erlang}},
-  \code{\link{Elim_erlang}}, \code{\link{Etronq_erlang}},
-  \code{\link{Mexcess_erlang}}, \code{\link{SL_erlang}},
-  \code{\link{V_erlang}}, \code{\link{derlang}},
-  \code{\link{kthmoment_erlang}}, \code{\link{perlang}}
+Other Erlang Distribution: 
+\code{\link{E_erlang}()},
+\code{\link{Elim_erlang}()},
+\code{\link{Etronq_erlang}()},
+\code{\link{Mexcess_erlang}()},
+\code{\link{SL_erlang}()},
+\code{\link{V_erlang}()},
+\code{\link{derlang}()},
+\code{\link{kthmoment_erlang}()},
+\code{\link{perlang}()}
 }
 \concept{Erlang Distribution}

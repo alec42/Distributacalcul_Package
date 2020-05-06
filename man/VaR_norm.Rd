@@ -2,17 +2,38 @@
 % Please edit documentation in R/VaR_norm.R
 \name{VaR_norm}
 \alias{VaR_norm}
-\title{Value-at-Risk d'une loi normale}
+\title{Value-at-Risk of the Normal distribution}
 \usage{
-VaR_norm(kappa, mu = 0, sig = 1)
+VaR_norm(kappa, mean = 0, sd = 1)
 }
 \arguments{
-\item{kappa}{pourcentage de confiance désiré}
+\item{kappa}{probability.}
 
-\item{mu}{mu}
+\item{mean}{mean \eqn{\mu}{mu}.}
 
-\item{sig}{sigma}
+\item{sd}{standard deviation \eqn{\sigma}{sigma}}
 }
 \description{
-Value-at-Risk d'une loi normale
+Value-at-Risk of the Normal distribution with mean
+ \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 }
+\details{
+The Normal distribution with mean \eqn{\mu}{mu} and standard deviation
+  \eqn{\sigma}{sigma} has density:
+  \deqn{\frac{1}{\sqrt{2\pi}\sigma}\textrm{e}^{-\frac{1}{2}\left(\frac{x - \mu}{\sigma}\right)^2}}{f(x) = e^(-(1/2) ((x - mu)/sigma)^2) / ((2 pi)^(1/2) sigma}
+  for \eqn{x \in \mathcal{R}}{x real}, \eqn{\mu \in \mathcal{R}, \sigma > 0}{mu real, sigma > 0}.
+}
+\examples{
+
+VaR_norm(kappa = 0.8, mean = 3, sd = 5)
+
+}
+\seealso{
+Other Normal distribution: 
+\code{\link{Elim_norm}()},
+\code{\link{Etronq_norm}()},
+\code{\link{Mexcess_norm}()},
+\code{\link{SL_norm}()},
+\code{\link{TVaR_norm}()}
+}
+\concept{Normal distribution}

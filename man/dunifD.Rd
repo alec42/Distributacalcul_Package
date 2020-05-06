@@ -28,7 +28,9 @@ dunifD(x = 2, min = 2, max = 5)
 
 }
 \seealso{
-Other Discrete Uniform Distribution: \code{\link{E_unifD}},
-  \code{\link{V_unifD}}, \code{\link{punifD}}
+Other Discrete Uniform Distribution: 
+\code{\link{E_unifD}()},
+\code{\link{V_unifD}()},
+\code{\link{punifD}()}
 }
 \concept{Discrete Uniform Distribution}

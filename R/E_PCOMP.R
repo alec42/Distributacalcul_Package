@@ -1,4 +1,4 @@
-#' Espérance d'une loi poisson composée
+#' Expected value of a compound Poisson distribution
 #' @param lambda paramètre lambda pour la poisson
 #' @param shape alpha pour la Gamma et mu pour la lognormale
 #' @param rate beta pour la Gamma et sigma^2 pour la lognormale

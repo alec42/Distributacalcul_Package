@@ -1,7 +1,17 @@
-#' Variance d'une loi lognormale
-#' @param mu mu
-#' @param sig sigma
+#' Variance of the Lognormal distribution
+#'
+#' @description Variance of the Lognormal distribution with mean
+#'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
+#'
+#' @templateVar q FALSE
+#' @templateVar kappa FALSE
+#' @template lnorm-template
+#'
+#' @examples
+#'
+#' V_lnorm(meanlog = 3, sdlog = 5)
+#'
 #' @export
-V_lnorm <- function(mu, sig) exp(2*mu + sig^2)
-
-
+V_lnorm <- function(meanlog, sdlog) {
+    exp(2 * meanlog + sdlog^2) * (exp(sdlog^2) - 1)
+}

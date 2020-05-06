@@ -1,4 +1,4 @@
-#' Limited Mean of the Loglogistic Distribution
+#' Limited Mean of the Loglogistic distribution
 #'
 #' @description Limited expected value of the Loglogistic distribution with shape parameter
 #'  \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.
@@ -18,7 +18,6 @@
 #' # With rate parameter
 #' kthmoment_llogis(k = 2, shape = 3, rate = 0.2)
 #'
-kthmoment_llogis <- function(k = 1, shape, rate = 1/scale, scale = 1/rate)
-{
+kthmoment_llogis <- function(k = 1, shape, rate = 1/scale, scale = 1/rate) {
     scale^k * gamma(1 + k/shape) * gamma(1 - k/shape)
 }

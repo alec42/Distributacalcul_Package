@@ -1,10 +1,10 @@
 #' Tail Value-at-risk d'une loi poisson composée
-#' @param kappa Niveau de confiance désiré
+#' @param kappa Desired confidence level
 #' @param vark Value at Risk (VaR) calculé au même niveau de confiance kappa
-#' @param lambda lambda
-#' @param shape alpha pour la Gamma
-#' @param rate beta pour la Gamma
-#' @param ko borne pour la somme dans le calcul de la TVaR
+#' @param lambda lambda rate paramter
+#' @param shape alpha for Gamma
+#' @param rate beta for Gamma
+#' @param k0 point up to which to sum the distribution to approximate the expected value.
 #' @param distr_severity choix de distribution de sévérité.
 #' @details Cette formule nécessite la formule de la VaR_pcomp (déjà installée avec le package tvarPackage). Cette formule utilise aussi un choix de (présentement) 2 distributions pour la sévérité; soit la Gamma ou la Lognormale.
 #' @export

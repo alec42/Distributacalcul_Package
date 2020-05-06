@@ -1,4 +1,4 @@
-#' Limited Mean of the Loglogistic Distribution
+#' Limited Mean of the Loglogistic distribution
 #'
 #' @description Limited expected value of the Loglogistic distribution with shape parameter
 #'  \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.

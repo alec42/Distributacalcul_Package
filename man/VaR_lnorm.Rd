@@ -2,17 +2,41 @@
 % Please edit documentation in R/VaR_lnorm.R
 \name{VaR_lnorm}
 \alias{VaR_lnorm}
-\title{Value-at-Risk d'une loi lognormale}
+\title{Value-at-Risk of the Lognormal distribution}
 \usage{
-VaR_lnorm(kappa, mu, sig)
+VaR_lnorm(kappa, meanlog, sdlog)
 }
 \arguments{
-\item{kappa}{pourcentage de confiance désirée}
+\item{kappa}{probability.}
 
-\item{mu}{mu}
+\item{meanlog}{mean \eqn{\mu}{mu}.}
 
-\item{sig}{sigma}
+\item{sdlog}{standard deviation \eqn{\sigma}{sigma}}
 }
 \description{
-Value-at-Risk d'une loi lognormale
+Value-at-Risk of the Lognormal distribution with mean
+ \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 }
+\details{
+The Log-normal distribution with mean \eqn{\mu}{mu} and standard deviation
+  \eqn{\sigma}{sigma} has density:
+  \deqn{\frac{1}{\sqrt{2\pi}\sigma x}\textrm{e}^{-\frac{1}{2}\left(\frac{\ln(x) - \mu}{\sigma}\right)^2}}{f(x) = e^(-(1/2) ((ln(x) - mu)/sigma)^2) / ((2 pi)^(1/2) sigma x}
+  for \eqn{x \in \mathcal{R}^{+}}{x >= 0}, \eqn{\mu \in \mathcal{R}, \sigma > 0}{mu real, sigma > 0}.
+}
+\examples{
+
+VaR_lnorm(kappa = 0.8, meanlog = 3, sdlog = 5)
+
+}
+\seealso{
+Other Lognormal distribution: 
+\code{\link{E_lnorm}()},
+\code{\link{Elim_lnorm}()},
+\code{\link{Etronq_lnorm}()},
+\code{\link{Mexcess_lnorm}()},
+\code{\link{SL_lnorm}()},
+\code{\link{TVaR_lnorm}()},
+\code{\link{V_lnorm}()},
+\code{\link{kthmoment_lnorm}()}
+}
+\concept{Lognormal distribution}

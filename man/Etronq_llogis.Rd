@@ -2,7 +2,7 @@
 % Please edit documentation in R/Etronq_llogis.R
 \name{Etronq_llogis}
 \alias{Etronq_llogis}
-\title{Truncated Mean of the Loglogistic Distribution}
+\title{Truncated Mean of the Loglogistic distribution}
 \usage{
 Etronq_llogis(d, shape, rate = 1/scale, scale = 1/rate)
 }
@@ -35,9 +35,13 @@ Etronq_llogis(d = 2, shape = 2, rate = 0.2)
 
 }
 \seealso{
-Other Loglogistic Distribution: \code{\link{Elim_llogis}},
-  \code{\link{Mexcess_llogis}}, \code{\link{SL_llogis}},
-  \code{\link{TVaR_llogis}}, \code{\link{V_llogis}},
-  \code{\link{VaR_llogis}}, \code{\link{kthmoment_llogis}}
+Other Loglogistic Distribution: 
+\code{\link{Elim_llogis}()},
+\code{\link{Mexcess_llogis}()},
+\code{\link{SL_llogis}()},
+\code{\link{TVaR_llogis}()},
+\code{\link{V_llogis}()},
+\code{\link{VaR_llogis}()},
+\code{\link{kthmoment_llogis}()}
 }
 \concept{Loglogistic Distribution}

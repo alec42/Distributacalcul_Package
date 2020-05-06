@@ -4,8 +4,7 @@
 \alias{TVaR_IG}
 \title{Tail Value-at-risk d'une loi inverse gaussienne}
 \usage{
-TVaR_IG(kappa, mu, beta = dispersion * mu^2, dispersion = beta/mu^2,
-  vark)
+TVaR_IG(kappa, mu, beta = dispersion * mu^2, dispersion = beta/mu^2, vark)
 }
 \arguments{
 \item{kappa}{Niveau de confiance désiré}

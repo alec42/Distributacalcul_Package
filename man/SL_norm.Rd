@@ -2,17 +2,38 @@
 % Please edit documentation in R/SL_norm.R
 \name{SL_norm}
 \alias{SL_norm}
-\title{Stop-Loss de la loi normale}
+\title{Stop-loss of the Normal distribution}
 \usage{
-SL_norm(d, mu = 0, sig = 1)
+SL_norm(d, mean = 0, sd = 1)
 }
 \arguments{
-\item{d}{déductible}
+\item{d}{cut-off value.}
 
-\item{mu}{moyenne mu}
+\item{mean}{mean \eqn{\mu}{mu}.}
 
-\item{sig}{sigma}
+\item{sd}{standard deviation \eqn{\sigma}{sigma}}
 }
 \description{
-Stop-Loss de la loi normale
+Stop-loss of the Normal distribution with mean
+ \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 }
+\details{
+The Normal distribution with mean \eqn{\mu}{mu} and standard deviation
+  \eqn{\sigma}{sigma} has density:
+  \deqn{\frac{1}{\sqrt{2\pi}\sigma}\textrm{e}^{-\frac{1}{2}\left(\frac{x - \mu}{\sigma}\right)^2}}{f(x) = e^(-(1/2) ((x - mu)/sigma)^2) / ((2 pi)^(1/2) sigma}
+  for \eqn{x \in \mathcal{R}}{x real}, \eqn{\mu \in \mathcal{R}, \sigma > 0}{mu real, sigma > 0}.
+}
+\examples{
+
+SL_norm(d = 2, mean = 2, sd = 5)
+
+}
+\seealso{
+Other Normal distribution: 
+\code{\link{Elim_norm}()},
+\code{\link{Etronq_norm}()},
+\code{\link{Mexcess_norm}()},
+\code{\link{TVaR_norm}()},
+\code{\link{VaR_norm}()}
+}
+\concept{Normal distribution}

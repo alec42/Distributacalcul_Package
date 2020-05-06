@@ -38,9 +38,12 @@ kthmoment_burr(k = 1, scale = 0.5, shape1 = 2, shape2 = 5)
 
 }
 \seealso{
-Other Burr Distribution: \code{\link{Elim_burr}},
-  \code{\link{Etronq_burr}}, \code{\link{Mexcess_burr}},
-  \code{\link{SL_burr}}, \code{\link{TVaR_burr}},
-  \code{\link{VaR_burr}}
+Other Burr Distribution: 
+\code{\link{Elim_burr}()},
+\code{\link{Etronq_burr}()},
+\code{\link{Mexcess_burr}()},
+\code{\link{SL_burr}()},
+\code{\link{TVaR_burr}()},
+\code{\link{VaR_burr}()}
 }
 \concept{Burr Distribution}

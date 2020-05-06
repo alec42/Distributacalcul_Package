@@ -18,5 +18,5 @@ E_BINCOMP <- function(n, q, shape, rate, distr_severity = "Gamma")
         shape / rate * n * q
     }
     else if (distr_severity == "Lognormale")
-        n * q * E_lnorm(mu = shape, sig = sqrt(rate))
+        n * q * E_lnorm(shape, sqrt(rate))
 }

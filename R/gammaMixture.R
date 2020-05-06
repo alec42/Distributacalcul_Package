@@ -84,15 +84,20 @@ pgammaMixture <- function(q, shape, rate = 1 / scale, scale = 1 / rate, TOL = 1E
 }
 
 library(ggplot2)
+shapes <- c(300, 250)
+rates <- c(69, 500)
+
+# Only takes the beta of the distribution with the highest shape parameter to curve
+# Is that what I want?
 
 ggplot(data = data.frame(x = c(1, 30)), aes(x)) +
     stat_function(fun = dgammaMixture,
-                  args = list(shape = c(8, 12), rate = c(7, 1))) +
+                  args = list(shape = shapes, rate = rates)) +
     ylab("f(x)") +
     theme_classic() +
     stat_function(
         fun = dgammaMixture,
-        args = list(shape = c(8, 12), rate = c(7, 1)),
+        args = list(shape = shapes, rate = rates),
         xlim = c(0, 15),
         geom = "area",
         fill = "red",

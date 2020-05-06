@@ -2,15 +2,39 @@
 % Please edit documentation in R/E_lnorm.R
 \name{E_lnorm}
 \alias{E_lnorm}
-\title{Espérance d'une loi lognormale}
+\title{Expected value of the Lognormal distribution}
 \usage{
-E_lnorm(mu, sig)
+E_lnorm(meanlog, sdlog)
 }
 \arguments{
-\item{mu}{mu}
+\item{meanlog}{mean \eqn{\mu}{mu}.}
 
-\item{sig}{sigma}
+\item{sdlog}{standard deviation \eqn{\sigma}{sigma}}
 }
 \description{
-Espérance d'une loi lognormale
+Expected value of the Lognormal distribution with mean
+ \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 }
+\details{
+The Log-normal distribution with mean \eqn{\mu}{mu} and standard deviation
+  \eqn{\sigma}{sigma} has density:
+  \deqn{\frac{1}{\sqrt{2\pi}\sigma x}\textrm{e}^{-\frac{1}{2}\left(\frac{\ln(x) - \mu}{\sigma}\right)^2}}{f(x) = e^(-(1/2) ((ln(x) - mu)/sigma)^2) / ((2 pi)^(1/2) sigma x}
+  for \eqn{x \in \mathcal{R}^{+}}{x >= 0}, \eqn{\mu \in \mathcal{R}, \sigma > 0}{mu real, sigma > 0}.
+}
+\examples{
+
+E_lnorm(meanlog = 3, sdlog = 5)
+
+}
+\seealso{
+Other Lognormal distribution: 
+\code{\link{Elim_lnorm}()},
+\code{\link{Etronq_lnorm}()},
+\code{\link{Mexcess_lnorm}()},
+\code{\link{SL_lnorm}()},
+\code{\link{TVaR_lnorm}()},
+\code{\link{V_lnorm}()},
+\code{\link{VaR_lnorm}()},
+\code{\link{kthmoment_lnorm}()}
+}
+\concept{Lognormal distribution}

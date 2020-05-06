@@ -13,5 +13,5 @@ V_BNCOMP <- function(r, q, shape, rate, distr_severity = "Gamma")
         (shape / rate)^2 * (r * (1 - q)/(q^2)) + (shape / rate^2) * (r * (1 - q) / q)
     }
     else if (distr_severity == "Lognormale")
-        (r * (1 - q)/q)*(E_lnorm(mu = shape, sig = sqrt(rate))/q + V_lnorm(mu = shape, sig = sqrt(rate)))
+        (r * (1 - q)/q)*(E_lnorm(shape, sqrt(rate))/q + V_lnorm(shape, sqrt(rate)))
 }

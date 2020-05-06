@@ -1,4 +1,4 @@
-#' Value-at-Risk of the Loglogistic Distribution
+#' Value-at-Risk of the Loglogistic distribution
 #'
 #' @description Value-at-Risk of the Loglogistic distribution with shape parameter
 #'  \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.
@@ -17,7 +17,6 @@
 #' # With rate parameter
 #' VaR_llogis(kappa = 0.8, shape = 3, rate = 0.2)
 #'
-VaR_llogis <- function(kappa, shape, rate = 1/scale, scale = 1/rate)
-{
+VaR_llogis <- function(kappa, shape, rate = 1/scale, scale = 1/rate) {
     scale * (kappa^(-1) - 1)^(-1/shape)
 }

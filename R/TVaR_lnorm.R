@@ -1,14 +1,21 @@
-#' Tail Value-at-Risk d'une loi lognormale
-#' @param mu mu
-#' @param sig sigma
-#' @param kappa pourcentage de confiance désiré
+#' Tail Value-at-Risk of the Lognormal distribution
+#'
+#' @description Tail Value-at-Risk of the Lognormal distribution with mean
+#'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
+#'
+#' @templateVar q FALSE
+#' @templateVar kappa TRUE
+#' @template lnorm-template
+#'
 #' @export
-TVaR_lnorm <- function(kappa, mu, sig)
-{
-    fact_tvar <- 1 / (1-kappa)
-    esp <- exp(mu  +(sig^2)/2)
-    phi <- qnorm(kappa) - sig
-    fact_tvar * esp * (1- phi)
+#'
+#' @examples
+#'
+#' TVaR_lnorm(kappa = 0.8, meanlog = 2, sdlog = 5)
+#'
+TVaR_lnorm <- function(kappa, meanlog, sdlog) {
+    phi <- qnorm(kappa) - sdlog
+    (E_lnorm(meanlog, sdlog) * pnorm(phi, lower.tail = F)) / (1 - kappa)
 }
 
 
