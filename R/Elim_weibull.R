@@ -1,4 +1,4 @@
-#' Limited Mean of the Weibull Distribution
+#' Limited mean of the Weibull distribution
 #'
 #' @description Limited expected value of the Weibull distribution with shape
 #'  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
@@ -16,8 +16,7 @@
 #' # With rate parameter
 #' Elim_weibull(d = 2, shape = 2, rate = 0.2)
 #'
-Elim_weibull <- function(d, shape, rate = 1 / scale, scale = 1 / rate)
-{
+Elim_weibull <- function(d, shape, rate = 1 / scale, scale = 1 / rate) {
     1 / rate *
         gamma(1 + 1/shape) *
         pgamma(q = d^shape,

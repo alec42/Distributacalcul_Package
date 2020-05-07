@@ -10,6 +10,8 @@ V_lnorm(meanlog, sdlog)
 \item{meanlog}{mean \eqn{\mu}{mu}.}
 
 \item{sdlog}{standard deviation \eqn{\sigma}{sigma}}
+
+\item{q}{quantile.}
 }
 \description{
 Variance of the Lognormal distribution with mean

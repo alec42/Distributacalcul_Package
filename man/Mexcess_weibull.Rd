@@ -2,7 +2,7 @@
 % Please edit documentation in R/Mexcess_weibull.R
 \name{Mexcess_weibull}
 \alias{Mexcess_weibull}
-\title{Mean-Excess loss of the Weibull Distribution}
+\title{Mean excess loss of the Weibull distribution}
 \usage{
 Mexcess_weibull(d, shape, rate = 1/scale, scale = 1/rate)
 }

@@ -2,17 +2,45 @@
 % Please edit documentation in R/Etronq_beta.R
 \name{Etronq_beta}
 \alias{Etronq_beta}
-\title{Espérance tronquée d'une loi Beta}
+\title{Truncated mean of the Beta distribution}
 \usage{
-Etronq_beta(d, a, b)
+Etronq_beta(d, shape1, shape2, less.than.d = TRUE)
 }
 \arguments{
-\item{d}{déductible}
+\item{d}{cut-off value. Recall the the domain is limited between 0 and 1.}
 
-\item{a}{alpha}
+\item{shape1}{shape parameter \eqn{\alpha}{alpha}, must be positive.}
 
-\item{b}{beta}
+\item{shape2}{shape parameter \eqn{\beta}{beta}, must be positive.}
 }
 \description{
-Espérance tronquée d'une loi Beta
+Truncated mean of the Beta distribution with shape parameters
+ \eqn{\alpha}{alpha} and \eqn{\beta}{beta}.
 }
+\details{
+The Beta distribution with shape parameters \eqn{\alpha}{a} and
+  \eqn{\beta}{b} has density:
+  \deqn{f\left(x\right) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) %
+   \Gamma(\beta)} x^{\alpha - 1} (1 - x)^(\beta - 1)}{f(x) = Γ(a+b) / %
+   (Γ(a)Γ(b))x^(a - 1)(1 - x)^(b - 1)}
+  for \eqn{x \in [0, 1]}{0 ≤ x ≤ 1}, \eqn{\alpha, \beta > 0}{a, b > 0}.
+}
+\examples{
+
+Etronq_beta(d = 0.4, shape1 = 4, shape2 = 5)
+Etronq_beta(d = 0.4, shape1 = 4, shape2 = 5, less.than.d = FALSE)
+
+}
+\seealso{
+Other Beta Distribution: 
+\code{\link{E_beta}()},
+\code{\link{Elim_beta}()},
+\code{\link{MGF_beta}()},
+\code{\link{Mexcess_beta}()},
+\code{\link{SL_beta}()},
+\code{\link{TVaR_beta}()},
+\code{\link{V_beta}()},
+\code{\link{VaR_beta}()},
+\code{\link{kthmoment_beta}()}
+}
+\concept{Beta Distribution}

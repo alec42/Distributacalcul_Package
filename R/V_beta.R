@@ -1,10 +1,17 @@
-#' Variance d'une loi Beta
-#' @param a alpha
-#' @param b beta
-#' @export
-V_beta <- function(a, b)
-{
-    num <- a*b
-    denom <- (a+b)^2 * (a+b+1)
-    num / denom
+#' Variance of the Beta distribution
+#'
+#' @description Variance of the Beta distribution with shape parameters
+#'  \eqn{\alpha}{alpha} and \eqn{\beta}{beta}.
+#'
+#' @template beta-template
+#'
+#' @examples
+#'
+#' V_beta(d = .3, shape1 = 4, shape2 = 5)
+#'
+V_beta <- function(shape1, shape2) {
+    (shape1 * shape2) /
+        (
+            (shape1 + shape2)^2 * (shape1 + shape2 + 1)
+        )
 }

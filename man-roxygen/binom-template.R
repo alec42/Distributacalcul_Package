@@ -1,7 +1,7 @@
 #' @param size Number of trials (0 or more).
 #' @param prob Probability of success on each trial.
 #'
-#' <%=ifelse(exists("k0") && k0, "@param k0 point up to which to sum the distribution to approximate the expected value.", "") %>
+#' <%=ifelse(exists("k0") && k0, "@param k0 point up to which to sum the distribution for the approximation.", "") %>
 #' <%=ifelse(exists("k") && k, "@param k kth-moment.", "") %>
 #' <%=ifelse(exists("x") && x, "@param x quantile.", "") %>
 #' <%=ifelse(exists("q") && q, "@param q quantile.", "") %>

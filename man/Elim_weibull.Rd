@@ -2,7 +2,7 @@
 % Please edit documentation in R/Elim_weibull.R
 \name{Elim_weibull}
 \alias{Elim_weibull}
-\title{Limited Mean of the Weibull Distribution}
+\title{Limited mean of the Weibull distribution}
 \usage{
 Elim_weibull(d, shape, rate = 1/scale, scale = 1/rate)
 }

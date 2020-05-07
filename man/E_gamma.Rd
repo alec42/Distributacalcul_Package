@@ -12,8 +12,6 @@ E_gamma(shape, rate = 1/scale, scale = 1/rate)
 \item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
 
 \item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
-
-\item{d}{cut-off value.}
 }
 \description{
 Expected value of the Gamma distribution with shape

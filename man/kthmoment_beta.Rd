@@ -2,17 +2,44 @@
 % Please edit documentation in R/kthmoment_beta.R
 \name{kthmoment_beta}
 \alias{kthmoment_beta}
-\title{k-ème moment de la loi Beta}
+\title{kth moment of the Beta distribution}
 \usage{
-kthmoment_beta(k, a, b)
+kthmoment_beta(k, shape1, shape2)
 }
 \arguments{
-\item{k}{k-ème moment}
+\item{k}{kth-moment.}
 
-\item{a}{alpha}
+\item{shape1}{shape parameter \eqn{\alpha}{alpha}, must be positive.}
 
-\item{b}{beta}
+\item{shape2}{shape parameter \eqn{\beta}{beta}, must be positive.}
 }
 \description{
-k-ème moment de la loi Beta
+kth moment of the Beta distribution with shape parameters
+ \eqn{\alpha}{alpha} and \eqn{\beta}{beta}.
 }
+\details{
+The Beta distribution with shape parameters \eqn{\alpha}{a} and
+  \eqn{\beta}{b} has density:
+  \deqn{f\left(x\right) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) %
+   \Gamma(\beta)} x^{\alpha - 1} (1 - x)^(\beta - 1)}{f(x) = Γ(a+b) / %
+   (Γ(a)Γ(b))x^(a - 1)(1 - x)^(b - 1)}
+  for \eqn{x \in [0, 1]}{0 ≤ x ≤ 1}, \eqn{\alpha, \beta > 0}{a, b > 0}.
+}
+\examples{
+
+kthmoment_beta(k = 3, shape1 = 4, shape2 = 5)
+
+}
+\seealso{
+Other Beta Distribution: 
+\code{\link{E_beta}()},
+\code{\link{Elim_beta}()},
+\code{\link{Etronq_beta}()},
+\code{\link{MGF_beta}()},
+\code{\link{Mexcess_beta}()},
+\code{\link{SL_beta}()},
+\code{\link{TVaR_beta}()},
+\code{\link{V_beta}()},
+\code{\link{VaR_beta}()}
+}
+\concept{Beta Distribution}

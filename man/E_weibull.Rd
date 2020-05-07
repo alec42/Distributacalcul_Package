@@ -2,7 +2,7 @@
 % Please edit documentation in R/E_weibull.R
 \name{E_weibull}
 \alias{E_weibull}
-\title{Expected Value of the Weibull Distribution}
+\title{Expected value of the Weibull distribution}
 \usage{
 E_weibull(shape, rate = 1/scale, scale = 1/rate)
 }

@@ -12,6 +12,8 @@ Mexcess_lnorm(d, meanlog, sdlog)
 \item{meanlog}{mean \eqn{\mu}{mu}.}
 
 \item{sdlog}{standard deviation \eqn{\sigma}{sigma}}
+
+\item{q}{quantile.}
 }
 \description{
 Mean excess loss of the Lognormal distribution with mean

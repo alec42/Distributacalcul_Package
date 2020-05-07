@@ -2,15 +2,42 @@
 % Please edit documentation in R/E_beta.R
 \name{E_beta}
 \alias{E_beta}
-\title{Espérance d'une loi Beta}
+\title{Expected value of the Beta distribution}
 \usage{
-E_beta(a, b)
+E_beta(shape1, shape2)
 }
 \arguments{
-\item{a}{alpha}
+\item{shape1}{shape parameter \eqn{\alpha}{alpha}, must be positive.}
 
-\item{b}{beta}
+\item{shape2}{shape parameter \eqn{\beta}{beta}, must be positive.}
 }
 \description{
-Espérance d'une loi Beta
+Expected value of the Beta distribution with shape parameters
+ \eqn{\alpha}{alpha} and \eqn{\beta}{beta}.
 }
+\details{
+The Beta distribution with shape parameters \eqn{\alpha}{a} and
+  \eqn{\beta}{b} has density:
+  \deqn{f\left(x\right) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) %
+   \Gamma(\beta)} x^{\alpha - 1} (1 - x)^(\beta - 1)}{f(x) = Γ(a+b) / %
+   (Γ(a)Γ(b))x^(a - 1)(1 - x)^(b - 1)}
+  for \eqn{x \in [0, 1]}{0 ≤ x ≤ 1}, \eqn{\alpha, \beta > 0}{a, b > 0}.
+}
+\examples{
+
+E_beta(shape1 = 3, shape2 = 5)
+
+}
+\seealso{
+Other Beta Distribution: 
+\code{\link{Elim_beta}()},
+\code{\link{Etronq_beta}()},
+\code{\link{MGF_beta}()},
+\code{\link{Mexcess_beta}()},
+\code{\link{SL_beta}()},
+\code{\link{TVaR_beta}()},
+\code{\link{V_beta}()},
+\code{\link{VaR_beta}()},
+\code{\link{kthmoment_beta}()}
+}
+\concept{Beta Distribution}

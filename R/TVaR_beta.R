@@ -1,15 +1,25 @@
-#' Tail Value-at-Risk  d'une loi Beta
+#' Tail Value-at-Risk of the Beta distribution
 #'
-#' @param a alpha
-#' @param b beta
-#' @param kap kappa, doit être entre 0 et 1
+#' @description Tail Value-at-Risk of the Beta distribution with shape
+#'  parameters \eqn{\alpha}{alpha} and \eqn{\beta}{beta}.
 #'
-#' @export
-TVaR_beta <- function(kap, a, b)
-{
-    fbeta <- a / (a+b)
-    ftvar <- 1 / (1-kap)
-    fbeta * ftvar * (pbeta(qbeta(p = kap, a, b, lower.tail = F), a+1, b))
+#' @templateVar kap TRUE
+#' @template beta-template
+#'
+#' @examples
+#'
+#' TVaR_beta(kap = .99, shape1 = 4, shape2 = 5)
+#'
+TVaR_beta <- function(kap, shape1, shape2) {
+
+    if (kap < 0 | kap > 1) {
+        stop("kap must be between 0 and 1")
+    }
+
+    (E_beta(shape1, shape2) / (1 - kap)) *
+        pbeta(q = qbeta(p = kap, shape1, shape2, lower.tail = F),
+              shape1 + 1,
+              shape2)
 }
 
 

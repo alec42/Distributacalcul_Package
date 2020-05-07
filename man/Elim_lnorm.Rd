@@ -12,6 +12,8 @@ Elim_lnorm(d, meanlog, sdlog)
 \item{meanlog}{mean \eqn{\mu}{mu}.}
 
 \item{sdlog}{standard deviation \eqn{\sigma}{sigma}}
+
+\item{q}{quantile.}
 }
 \description{
 Limited expected value of the Lognormal distribution with mean

@@ -7,12 +7,40 @@
 VaR_beta(kap, shape1, shape2)
 }
 \arguments{
-\item{kap}{kap (doit être entre 0 et 1)}
+\item{kap}{probability.}
 
-\item{shape1}{alpha}
+\item{shape1}{shape parameter \eqn{\alpha}{alpha}, must be positive.}
 
-\item{shape2}{beta}
+\item{shape2}{shape parameter \eqn{\beta}{beta}, must be positive.}
 }
 \description{
-Value-at-Risk of the Beta distribution
+Value-at-Risk of the Beta distribution with shape
+ parameters \eqn{\alpha}{alpha} and \eqn{\beta}{beta}.
+ Wrapper of qbeta.
 }
+\details{
+The Beta distribution with shape parameters \eqn{\alpha}{a} and
+  \eqn{\beta}{b} has density:
+  \deqn{f\left(x\right) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) %
+   \Gamma(\beta)} x^{\alpha - 1} (1 - x)^(\beta - 1)}{f(x) = Γ(a+b) / %
+   (Γ(a)Γ(b))x^(a - 1)(1 - x)^(b - 1)}
+  for \eqn{x \in [0, 1]}{0 ≤ x ≤ 1}, \eqn{\alpha, \beta > 0}{a, b > 0}.
+}
+\examples{
+
+VaR_beta(kap = .99, shape1 = 4, shape2 = 5)
+
+}
+\seealso{
+Other Beta Distribution: 
+\code{\link{E_beta}()},
+\code{\link{Elim_beta}()},
+\code{\link{Etronq_beta}()},
+\code{\link{MGF_beta}()},
+\code{\link{Mexcess_beta}()},
+\code{\link{SL_beta}()},
+\code{\link{TVaR_beta}()},
+\code{\link{V_beta}()},
+\code{\link{kthmoment_beta}()}
+}
+\concept{Beta Distribution}
