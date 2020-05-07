@@ -5,7 +5,7 @@
 #'
 #' <%=ifelse(exists("k") && k, "@param k kth-moment.", "") %>
 #' <%=ifelse(exists("d") && d, "@param d cut-off value.", "") %>
-#' <%=ifelse(exists("kappa") && kappa, "@param kappa probability.", "") %>
+#' <%=ifelse(exists("kap"), "@param kap probability.", "") %>
 #'
 #' @details
 #'  The Burr distribution with rate parameter \eqn{\lambda}{lam} as well as shape

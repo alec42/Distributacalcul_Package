@@ -4,10 +4,10 @@
 \alias{VaR_PCOMP}
 \title{Fonction de répartition d'une loi poisson composée}
 \usage{
-VaR_PCOMP(kappa, lambda, shape, rate, ko = 300, distr_severity = "Gamma")
+VaR_PCOMP(kap, lambda, shape, rate, ko = 300, distr_severity = "Gamma")
 }
 \arguments{
-\item{kappa}{niveau de confiance désiré}
+\item{kap}{niveau de confiance désiré}
 
 \item{lambda}{paramètre lambda pour la poisson}
 

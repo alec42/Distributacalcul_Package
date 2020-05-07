@@ -5,7 +5,7 @@
 #' <%=ifelse(exists("x") && x, "@param x quantile.", "") %>
 #' <%=ifelse(exists("q") && q, "@param q quantile.", "") %>
 #' <%=ifelse(exists("d") && d, "@param d cut-off value.", "") %>
-#' <%=ifelse(exists("kappa") && kappa, "@param kappa probability.", "") %>
+#' <%=ifelse(exists("kap"), "@param kap probability.", "") %>
 #' <%=ifelse(exists("lower.tail") && lower.tail, "@param lower.tail logical; if \\code{TRUE} (défaut) probabilities are Pr(M <= k), otherwise, Pr(M > k).", "") %>
 #'
 #' @details

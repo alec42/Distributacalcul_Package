@@ -1,10 +1,22 @@
-#' Value-at-risk d'une loi gamma
-#' @param kappa Niveau de confiance désiré
-#' @param a alpha
-#' @param b beta
-#' @details Pour trouver la VaR d'une gamme, on peut aussi procéder par optimisation numérique (`uniroot()` ou `optimize()`)
+#' Value-at-Risk of the Gamma distribution
+#'
+#' @description Value-at-Risk of the Gamma distribution with shape parameter
+#'  \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}. Wrapper of
+#'  qgamma.
+#'
+#' @templateVar kap TRUE
+#' @template gamma-template
+#'
 #' @export
-VaR_gamma <- function(kappa, a, b)
-{
-    qgamma(kappa, a, b)
+#'
+#' @examples
+#'
+#' # With scale parameter
+#' VaR_gamma(kap = .2, shape = 3, scale = 4)
+#'
+#' # With rate parameter
+#' VaR_gamma(kap = .2, shape = 3, rate = 0.25)
+#'
+VaR_gamma <- function(kap, shape, rate = 1 / scale, scale = 1 / rate) {
+    qgamma(p = kap, shape, rate)
 }

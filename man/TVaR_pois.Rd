@@ -8,13 +8,25 @@ TVaR_pois(kappa, lambda, k0)
 }
 \arguments{
 \item{lambda}{Rate parameter \eqn{\lambda}{lambda}.}
+
+\item{q}{quantile.}
+
+\item{kap}{probability.}
 }
 \description{
 Tail Value-at-Risk of the Poisson distribution with rate parameter
  \eqn{\lambda}{lambda}.
+}
+\details{
+
 }
 \examples{
 
 TVaR_pois(kappa = 0.8, lambda = 3, k0 = 2E2)
 
 }
+\seealso{
+Other Poisson Distribution: 
+\code{\link{Etronq_pois}()}
+}
+\concept{Poisson Distribution}

@@ -2,15 +2,48 @@
 % Please edit documentation in R/E_gamma.R
 \name{E_gamma}
 \alias{E_gamma}
-\title{Espérance d'une loi Gamma}
+\title{Expected value of the Gamma distribution}
 \usage{
-E_gamma(a, b)
+E_gamma(shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{a}{alpha}
+\item{shape}{shape parameter \eqn{\alpha}{alpha}, must be positive integer.}
 
-\item{b}{beta (ou lambda dans certains livres)}
+\item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
+
+\item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
+
+\item{d}{cut-off value.}
 }
 \description{
-Espérance d'une loi Gamma
+Expected value of the Gamma distribution with shape
+ parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
 }
+\details{
+The Gamma distribution with shape parameter \eqn{\alpha}{a} and rate
+   parameter \eqn{\beta}{b} has density:
+  \deqn{f\left(x\right) = \frac{\beta^{\alpha}}{\Gamma(\alpha)} x^{\alpha - 1}%
+   \textrm{e}^{-\beta x}}{f(x) = b^a / \Gamma(a) x^{a - 1} e^{-b x}}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\beta, \alpha > 0}{b, a > 0}.
+}
+\examples{
+
+# With scale parameter
+E_gamma(shape = 3, scale = 4)
+
+# With rate parameter
+E_gamma(shape = 3, rate = 0.25)
+
+}
+\seealso{
+Other Gamma Distribution: 
+\code{\link{Elim_gamma}()},
+\code{\link{Etronq_gamma}()},
+\code{\link{Mexcess_gamma}()},
+\code{\link{SL_gamma}()},
+\code{\link{TVaR_gamma}()},
+\code{\link{V_gamma}()},
+\code{\link{VaR_gamma}()},
+\code{\link{kthmoment_gamma}()}
+}
+\concept{Gamma Distribution}

@@ -2,14 +2,14 @@
 % Please edit documentation in R/VaR_FGEN.R
 \name{VaR_FGEN}
 \alias{VaR_FGEN}
-\title{VaR de la F-Généralisé}
+\title{Value-at-Risk of the F-Generalized distribution}
 \usage{
-VaR_FGEN(x, kappa, lambda, alpha, tau)
+VaR_FGEN(x, kap, lambda, alpha, tau)
 }
 \arguments{
 \item{x}{x}
 
-\item{kappa}{niveau de confiance désiré}
+\item{kap}{niveau de confiance désiré}
 
 \item{lambda}{lambda, > 0}
 
@@ -18,5 +18,5 @@ VaR_FGEN(x, kappa, lambda, alpha, tau)
 \item{tau}{tau, >0}
 }
 \description{
-VaR de la F-Généralisé
+Value-at-Risk of the F-Generalized distribution
 }

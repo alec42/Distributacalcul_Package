@@ -1,9 +1,11 @@
-#' Value-at-risk d'une loi Pareto
-#' @param alph alpha
-#' @param lam lambda
-#' @param kappa kappa
+#' Value-at-risk of the Pareto distribution
+#' @param shape alpha
+#' @param rate lambda
+#' @param kap kap
+#'
 #' @export
-VaR_pareto <- function(kappa, alph, lam)
+#'
+VaR_pareto <- function(kap, shape, rate)
 {
-    lam * ((1-kappa)^(-1/alph) - 1)
+    rate * ((1 - kap)^(-1 / shape) - 1)
 }

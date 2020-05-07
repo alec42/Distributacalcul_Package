@@ -4,10 +4,10 @@
 \alias{TVaR_llogis}
 \title{Tail Value-at-Risk of the Loglogistic Distribution}
 \usage{
-TVaR_llogis(kappa, shape, rate = 1/scale, scale = 1/rate)
+TVaR_llogis(kap, shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{kappa}{probability.}
+\item{kap}{probability.}
 
 \item{shape}{shape parameter \eqn{\tau}{tau}, must be positive integer.}
 
@@ -28,10 +28,10 @@ The Loglogistic distribution with shape parameter \eqn{\tau}{t} and scale parame
 \examples{
 
 # With scale parameter
-TVaR_llogis(kappa = 0.8, shape = 3, scale = 5)
+TVaR_llogis(kap = 0.8, shape = 3, scale = 5)
 
 # With rate parameter
-TVaR_llogis(kappa = 0.8, shape = 3, rate = 0.2)
+TVaR_llogis(kap = 0.8, shape = 3, rate = 0.2)
 
 }
 \seealso{

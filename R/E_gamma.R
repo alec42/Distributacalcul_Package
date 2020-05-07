@@ -1,5 +1,21 @@
-#' Espérance d'une loi Gamma
-#' @param a alpha
-#' @param b beta (ou lambda dans certains livres)
+#' Expected value of the Gamma distribution
+#'
+#' @description Expected value of the Gamma distribution with shape
+#'  parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
+#'
+#' @templateVar d TRUE
+#' @template gamma-template
+#'
 #' @export
-E_gamma <- function(a, b) a/b
+#'
+#' @examples
+#'
+#' # With scale parameter
+#' E_gamma(shape = 3, scale = 4)
+#'
+#' # With rate parameter
+#' E_gamma(shape = 3, rate = 0.25)
+#'
+E_gamma <- function(shape, rate = 1 / scale, scale = 1 / rate) {
+    shape / rate
+}

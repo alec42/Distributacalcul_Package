@@ -16,7 +16,7 @@ Truncated Mean of the Binomial distribution
   with size \eqn{n}{n} and probability of success \eqn{p}{p}.
 }
 \details{
-
+The Binomial distribution
 }
 \examples{
 
@@ -28,6 +28,8 @@ Etronq_binom(d = 2, size = 3, prob = 0.5)
 Other Binomial Distribution: 
 \code{\link{E_binom}()},
 \code{\link{MGF_binom}()},
-\code{\link{V_binom}()}
+\code{\link{TVaR_binom}()},
+\code{\link{V_binom}()},
+\code{\link{VaR_binom}()}
 }
 \concept{Binomial Distribution}

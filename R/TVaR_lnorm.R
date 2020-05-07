@@ -4,18 +4,18 @@
 #'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 #'
 #' @templateVar q FALSE
-#' @templateVar kappa TRUE
+#' @templateVar kap TRUE
 #' @template lnorm-template
 #'
 #' @export
 #'
 #' @examples
 #'
-#' TVaR_lnorm(kappa = 0.8, meanlog = 2, sdlog = 5)
+#' TVaR_lnorm(kap = 0.8, meanlog = 2, sdlog = 5)
 #'
-TVaR_lnorm <- function(kappa, meanlog, sdlog) {
-    phi <- qnorm(kappa) - sdlog
-    (E_lnorm(meanlog, sdlog) * pnorm(phi, lower.tail = F)) / (1 - kappa)
+TVaR_lnorm <- function(kap, meanlog, sdlog) {
+    phi <- qnorm(kap) - sdlog
+    (E_lnorm(meanlog, sdlog) * pnorm(phi, lower.tail = F)) / (1 - kap)
 }
 
 

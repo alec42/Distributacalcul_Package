@@ -1,5 +1,21 @@
-#' Value-at-risk d'une loi uniforme
-#' @param a minimum
-#' @param b maximum
+#' Value-at-Risk of the Uniform distribution
+#'
+#' @description Value-at-Risk of the Uniform distribution with shape
+#'  parameters \eqn{\alpha}{alpha} and \eqn{\beta}{beta}.
+#'
+#' @param kap probability.
+#' @param max maximum
+#' @param max maximum
+# @templateVar kap TRUE
+# @template uniform-template
+#'
 #' @export
-VaR_unif <- function(kappa, a, b) a + (b-a) * kappa
+#'
+# @examples
+#
+# # With scale parameter
+# VaR_unif(kap = .2, min = 3, max = 4)
+#'
+VaR_unif <- function(kap, min, max) {
+    min + (max - min) * kap
+}

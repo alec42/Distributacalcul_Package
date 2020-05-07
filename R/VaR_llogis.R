@@ -4,7 +4,7 @@
 #'  \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.
 #'
 #' @templateVar q FALSE
-#' @templateVar kappa TRUE
+#' @templateVar kap TRUE
 #' @template loglogistic-template
 #'
 #' @export
@@ -12,11 +12,11 @@
 #' @examples
 #'
 #' # With scale parameter
-#' VaR_llogis(kappa = 0.8, shape = 3, scale = 5)
+#' VaR_llogis(kap = 0.8, shape = 3, scale = 5)
 #'
 #' # With rate parameter
-#' VaR_llogis(kappa = 0.8, shape = 3, rate = 0.2)
+#' VaR_llogis(kap = 0.8, shape = 3, rate = 0.2)
 #'
-VaR_llogis <- function(kappa, shape, rate = 1/scale, scale = 1/rate) {
-    scale * (kappa^(-1) - 1)^(-1/shape)
+VaR_llogis <- function(kap, shape, rate = 1/scale, scale = 1/rate) {
+    scale * (kap^(-1) - 1)^(-1/shape)
 }

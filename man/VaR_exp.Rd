@@ -2,18 +2,27 @@
 % Please edit documentation in R/VaR_exp.R
 \name{VaR_exp}
 \alias{VaR_exp}
-\title{Value-at-risk d'une loi exponentielle}
+\title{Value-at-risk of the Exponential distribution}
 \usage{
-VaR_exp(kappa, b)
+VaR_exp(kap, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{kappa}{pourcentage de confiance désiré}
+\item{kap}{pourcentage de confiance désiré.}
 
-\item{b}{beta}
+\item{rate}{beta.}
+
+\item{scale}{alternate parametrization, scale = 1 / rate.}
 }
 \description{
-Value-at-risk d'une loi exponentielle
+Value-at-Risk of the Exponential distribution with rate
+  parameter \eqn{\beta}{beta}.
 }
-\details{
-La VaR est la fonction quantile de la v.a (ici, de la loi exponentielle)
+\examples{
+
+# With scale parameter
+VaR_exp(kap = .2, shape = 3, scale = 4)
+
+# With rate parameter
+VaR_exp(kap = .2, shape = 3, rate = 0.25)
+
 }

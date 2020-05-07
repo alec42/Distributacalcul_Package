@@ -3,7 +3,6 @@
 #' @description Variance of the Weibull distribution with shape parameter
 #'  \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar kappa FALSE
 #' @template weibull-template
 #'
 #' @export

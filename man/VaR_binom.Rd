@@ -4,9 +4,11 @@
 \alias{VaR_binom}
 \title{Value-at-risk of the Binomial distribution}
 \usage{
-VaR_binom(kappa, size, prob)
+VaR_binom(kap, size, prob)
 }
 \arguments{
+\item{kap}{probability.}
+
 \item{size}{Number of trials (0 or more).}
 
 \item{prob}{Probability of success on each trial.}
@@ -15,8 +17,20 @@ VaR_binom(kappa, size, prob)
 Value-at-risk of the Binomial distribution with size
  \eqn{n}{n} and probability of success \eqn{p}{p}. Wrapper of qbinom.
 }
+\details{
+The Binomial distribution
+}
 \examples{
 
-VaR_binom(kappa = 0.8, size = 5, prob = 0.2)
+VaR_binom(kap = 0.8, size = 5, prob = 0.2)
 
 }
+\seealso{
+Other Binomial Distribution: 
+\code{\link{E_binom}()},
+\code{\link{Etronq_binom}()},
+\code{\link{MGF_binom}()},
+\code{\link{TVaR_binom}()},
+\code{\link{V_binom}()}
+}
+\concept{Binomial Distribution}

@@ -4,7 +4,6 @@
 #'  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
 #'
 #' @templateVar d TRUE
-#' @templateVar kappa FALSE
 #' @template weibull-template
 #'
 #' @export

@@ -4,10 +4,10 @@
 \alias{TVaR_pareto}
 \title{Tail Value-at-risk d'une loi Pareto}
 \usage{
-TVaR_pareto(kappa, alph, lam)
+TVaR_pareto(kap, alph, lam)
 }
 \arguments{
-\item{kappa}{kappa}
+\item{kap}{kap}
 
 \item{alph}{alpha}
 

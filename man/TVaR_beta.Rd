@@ -4,10 +4,10 @@
 \alias{TVaR_beta}
 \title{Tail Value-at-Risk  d'une loi Beta}
 \usage{
-TVaR_beta(k, a, b)
+TVaR_beta(kap, a, b)
 }
 \arguments{
-\item{k}{kappa doit être entre 0 et 1}
+\item{kap}{kappa, doit être entre 0 et 1}
 
 \item{a}{alpha}
 

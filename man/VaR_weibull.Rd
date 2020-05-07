@@ -2,12 +2,12 @@
 % Please edit documentation in R/VaR_weibull.R
 \name{VaR_weibull}
 \alias{VaR_weibull}
-\title{Value-at-Risk of the Weibull Distribution}
+\title{Value-at-Risk of the Weibull distribution}
 \usage{
-VaR_weibull(kappa, shape, rate = 1/scale, scale = 1/rate)
+VaR_weibull(kap, shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{kappa}{probability.}
+\item{kap}{probability.}
 
 \item{shape}{shape parameter \eqn{\tau}{tau}, must be positive integer.}
 
@@ -16,7 +16,7 @@ VaR_weibull(kappa, shape, rate = 1/scale, scale = 1/rate)
 \item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-Value-at-Risk of the Weibull distribution with shape parameter
+Value-at-Risk of the Weibull distribution with shape
  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
 }
 \details{
@@ -30,10 +30,10 @@ The Weibull distribution with shape parameter \eqn{\tau}{t} and rate parameter
 \examples{
 
 # With scale parameter
-VaR_weibull(kappa = .2, shape = 3, scale = 4)
+VaR_weibull(kap = .2, shape = 3, scale = 4)
 
 # With rate parameter
-VaR_weibull(kappa = .2, shape = 3, rate = 0.25)
+VaR_weibull(kap = .2, shape = 3, rate = 0.25)
 
 }
 \seealso{

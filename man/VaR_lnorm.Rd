@@ -4,10 +4,10 @@
 \alias{VaR_lnorm}
 \title{Value-at-Risk of the Lognormal distribution}
 \usage{
-VaR_lnorm(kappa, meanlog, sdlog)
+VaR_lnorm(kap, meanlog, sdlog)
 }
 \arguments{
-\item{kappa}{probability.}
+\item{kap}{probability.}
 
 \item{meanlog}{mean \eqn{\mu}{mu}.}
 
@@ -25,7 +25,7 @@ The Log-normal distribution with mean \eqn{\mu}{mu} and standard deviation
 }
 \examples{
 
-VaR_lnorm(kappa = 0.8, meanlog = 3, sdlog = 5)
+VaR_lnorm(kap = 0.8, meanlog = 3, sdlog = 5)
 
 }
 \seealso{

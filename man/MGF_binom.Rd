@@ -19,7 +19,7 @@ Moment Generating Function (MGF) and Probability Generating
    probability of success \eqn{p}{p}.
 }
 \details{
-
+The Binomial distribution
 }
 \examples{
 
@@ -31,6 +31,8 @@ PGF_binom(t = 1, size = 3, prob = 0.5)
 Other Binomial Distribution: 
 \code{\link{E_binom}()},
 \code{\link{Etronq_binom}()},
-\code{\link{V_binom}()}
+\code{\link{TVaR_binom}()},
+\code{\link{V_binom}()},
+\code{\link{VaR_binom}()}
 }
 \concept{Binomial Distribution}

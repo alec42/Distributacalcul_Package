@@ -2,19 +2,48 @@
 % Please edit documentation in R/kthmoment_gamma.R
 \name{kthmoment_gamma}
 \alias{kthmoment_gamma}
-\title{k-ème moment de la loi gamma}
+\title{kth Moment of the Gamma distribution}
 \usage{
-kthmoment_gamma(k, shape, rate = 1, scale = 1/rate)
+kthmoment_gamma(k, shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{k}{k-ème moment}
+\item{k}{kth-moment.}
 
-\item{shape}{alpha}
+\item{shape}{shape parameter \eqn{\alpha}{alpha}, must be positive integer.}
 
-\item{rate}{(fréquence) beta, 1 par défaut.}
+\item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
 
-\item{scale}{(échelle) paramétrisation alternative où = 1 / rate.}
+\item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-k-ème moment de la loi gamma
+kth Moment of the Gamma distribution with shape
+ parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
 }
+\details{
+The Gamma distribution with shape parameter \eqn{\alpha}{a} and rate
+   parameter \eqn{\beta}{b} has density:
+  \deqn{f\left(x\right) = \frac{\beta^{\alpha}}{\Gamma(\alpha)} x^{\alpha - 1}%
+   \textrm{e}^{-\beta x}}{f(x) = b^a / \Gamma(a) x^{a - 1} e^{-b x}}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\beta, \alpha > 0}{b, a > 0}.
+}
+\examples{
+
+# With scale parameter
+kthmoment_gamma(k = 2, shape = 3, scale = 4)
+
+# With rate parameter
+kthmoment_gamma(k = 2, shape = 3, rate = 0.25)
+
+}
+\seealso{
+Other Gamma Distribution: 
+\code{\link{E_gamma}()},
+\code{\link{Elim_gamma}()},
+\code{\link{Etronq_gamma}()},
+\code{\link{Mexcess_gamma}()},
+\code{\link{SL_gamma}()},
+\code{\link{TVaR_gamma}()},
+\code{\link{V_gamma}()},
+\code{\link{VaR_gamma}()}
+}
+\concept{Gamma Distribution}

@@ -2,17 +2,17 @@
 % Please edit documentation in R/VaR_beta.R
 \name{VaR_beta}
 \alias{VaR_beta}
-\title{Value-at-Risk  d'une loi Beta}
+\title{Value-at-Risk of the Beta distribution}
 \usage{
-VaR_beta(k, a, b)
+VaR_beta(kap, shape1, shape2)
 }
 \arguments{
-\item{k}{kappa (doit être entre 0 et 1)}
+\item{kap}{kap (doit être entre 0 et 1)}
 
-\item{a}{alpha}
+\item{shape1}{alpha}
 
-\item{b}{beta}
+\item{shape2}{beta}
 }
 \description{
-Value-at-Risk  d'une loi Beta
+Value-at-Risk of the Beta distribution
 }

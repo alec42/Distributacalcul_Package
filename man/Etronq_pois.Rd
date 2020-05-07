@@ -10,6 +10,8 @@ Etronq_pois(d, lambda, k0, less.than.d = TRUE)
 \item{d}{cut-off value.}
 
 \item{lambda}{Rate parameter \eqn{\lambda}{lambda}.}
+
+\item{q}{quantile.}
 }
 \description{
 Truncated mean of the Poisson distribution with rate parameter
@@ -23,5 +25,9 @@ Truncated mean of the Poisson distribution with rate parameter
 Etronq_pois(d = 0, lambda = 2, k0 = 2E2, less.than.d = FALSE)
 Etronq_pois(d = 2, lambda = 2, k0 = 2E2, less.than.d = TRUE)
 
+}
+\seealso{
+Other Poisson Distribution: 
+\code{\link{TVaR_pois}()}
 }
 \concept{Poisson Distribution}

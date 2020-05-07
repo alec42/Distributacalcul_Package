@@ -4,17 +4,17 @@
 #'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 #'
 #' @templateVar q FALSE
-#' @templateVar kappa TRUE
+#' @templateVar kap TRUE
 #' @template norm-template
 #'
 #' @export
 #'
 #' @examples
 #'
-#' VaR_norm(kappa = 0.8, mean = 3, sd = 5)
+#' VaR_norm(kap = 0.8, mean = 3, sd = 5)
 #'
-VaR_norm <- function(kappa, mean = 0, sd = 1) {
-    qnorm(p = kappa, mean = mean, sd = sd)
+VaR_norm <- function(kap, mean = 0, sd = 1) {
+    qnorm(p = kap, mean = mean, sd = sd)
 }
 
 

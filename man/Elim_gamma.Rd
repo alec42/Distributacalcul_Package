@@ -2,17 +2,48 @@
 % Please edit documentation in R/Elim_gamma.R
 \name{Elim_gamma}
 \alias{Elim_gamma}
-\title{Espérance limitée d'une loi gamma}
+\title{Limited Mean of the Gamma distribution}
 \usage{
-Elim_gamma(d, a, b)
+Elim_gamma(d, shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{d}{déductible}
+\item{d}{cut-off value.}
 
-\item{a}{alpha}
+\item{shape}{shape parameter \eqn{\alpha}{alpha}, must be positive integer.}
 
-\item{b}{beta}
+\item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
+
+\item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-Espérance limitée d'une loi gamma
+Limited Mean of the Gamma distribution with shape
+ parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
 }
+\details{
+The Gamma distribution with shape parameter \eqn{\alpha}{a} and rate
+   parameter \eqn{\beta}{b} has density:
+  \deqn{f\left(x\right) = \frac{\beta^{\alpha}}{\Gamma(\alpha)} x^{\alpha - 1}%
+   \textrm{e}^{-\beta x}}{f(x) = b^a / \Gamma(a) x^{a - 1} e^{-b x}}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\beta, \alpha > 0}{b, a > 0}.
+}
+\examples{
+
+# With scale parameter
+Elim_gamma(d = 2, shape = 3, scale = 4)
+
+# With rate parameter
+Elim_gamma(d = 2, shape = 3, rate = 0.25)
+
+}
+\seealso{
+Other Gamma Distribution: 
+\code{\link{E_gamma}()},
+\code{\link{Etronq_gamma}()},
+\code{\link{Mexcess_gamma}()},
+\code{\link{SL_gamma}()},
+\code{\link{TVaR_gamma}()},
+\code{\link{V_gamma}()},
+\code{\link{VaR_gamma}()},
+\code{\link{kthmoment_gamma}()}
+}
+\concept{Gamma Distribution}

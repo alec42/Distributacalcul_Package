@@ -1,13 +1,23 @@
-#' Mean-Excess loss d'une loi gamma
+#' Mean-Excess loss of the Gamma distribution
 #'
+#' @description Mean-Excess loss of the Gamma distribution with shape
+#'  parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
 #'
-#' @param d déductible
-#' @param a alpha
-#' @param b beta
+#' @templateVar d TRUE
+#' @template gamma-template
+#'
 #' @export
-Mexcess_gamma <- function(d, a, b)
-{
-    numerateur   <- a * (1 - pgamma(d, a+1, b))
-    denominateur <- b * (1 - pgamma(d, a  , b))
-    (numerateur/denominateur) - d
+#'
+#' @examples
+#'
+#' # With scale parameter
+#' Mexcess_gamma(d = 2, shape = 3, scale = 4)
+#'
+#' # With rate parameter
+#' Mexcess_gamma(d = 2, shape = 3, rate = 0.25)
+#'
+Mexcess_gamma <- function(d, shape, rate = 1 / scale, scale = 1 / rate) {
+    E_gamma(shape, rate) *
+        (pgamma(d, shape + 1, rate, lower.tail = F) / pgamma(d, shape, rate, lower.tail = F)) -
+        d
 }

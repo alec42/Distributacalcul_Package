@@ -4,10 +4,10 @@
 \alias{TVaR_burr}
 \title{Tail Value-at-Risk of the Burr Distribution}
 \usage{
-TVaR_burr(kappa, shape1, shape2, rate = 1/scale, scale = 1/rate)
+TVaR_burr(kap, shape1, shape2, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{kappa}{probability.}
+\item{kap}{probability.}
 
 \item{shape1}{first shape parameter \eqn{\alpha}{alpha}, must be positive integer.}
 
@@ -31,10 +31,10 @@ The Burr distribution with rate parameter \eqn{\lambda}{lam} as well as shape
 \examples{
 
 # With scale parameter
-TVaR_burr(kappa = .8, rate = 2, shape1 = 2, shape2 = 5)
+TVaR_burr(kap = .8, rate = 2, shape1 = 2, shape2 = 5)
 
 # With rate parameter
-TVaR_burr(kappa = .8, scale = 0.5, shape1 = 2, shape2 = 5)
+TVaR_burr(kap = .8, scale = 0.5, shape1 = 2, shape2 = 5)
 
 }
 \seealso{

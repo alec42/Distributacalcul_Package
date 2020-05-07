@@ -4,10 +4,10 @@
 \alias{.TVaR_erlang}
 \title{Tail Value-at-Risk of the Erlang Distribution}
 \usage{
-.TVaR_erlang(kappa, shape, scale = 1/rate, rate = 1/scale, vark)
+.TVaR_erlang(kap, shape, scale = 1/rate, rate = 1/scale, vark)
 }
 \arguments{
-\item{kappa}{probability.}
+\item{kap}{probability.}
 
 \item{shape}{shape parameter \eqn{n}, must be positive integer.}
 
@@ -15,7 +15,7 @@
 
 \item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
 
-\item{vark}{Value-at-Risk (VaR) calculated at the given probability kappa.}
+\item{vark}{Value-at-Risk (VaR) calculated at the given probability kap.}
 }
 \description{
 Tail Value-at-Risk of the Erlang distribution with shape

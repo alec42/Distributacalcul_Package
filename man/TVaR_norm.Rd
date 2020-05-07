@@ -4,10 +4,10 @@
 \alias{TVaR_norm}
 \title{Tail Value-at-Risk of the Normal distribution}
 \usage{
-TVaR_norm(kappa, mean = 0, sd = 1)
+TVaR_norm(kap, mean = 0, sd = 1)
 }
 \arguments{
-\item{kappa}{probability.}
+\item{kap}{probability.}
 
 \item{mean}{mean \eqn{\mu}{mu}.}
 
@@ -25,7 +25,7 @@ The Normal distribution with mean \eqn{\mu}{mu} and standard deviation
 }
 \examples{
 
-TVaR_norm(kappa = 0.8, mean = 2, sd = 5)
+TVaR_norm(kap = 0.8, mean = 2, sd = 5)
 
 }
 \seealso{

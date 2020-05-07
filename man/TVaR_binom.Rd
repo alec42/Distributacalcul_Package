@@ -4,9 +4,11 @@
 \alias{TVaR_binom}
 \title{Tail Value-at-risk of the Binomial distribution}
 \usage{
-TVaR_binom(kappa, size, prob)
+TVaR_binom(kap, size, prob)
 }
 \arguments{
+\item{kap}{probability.}
+
 \item{size}{Number of trials (0 or more).}
 
 \item{prob}{Probability of success on each trial.}
@@ -15,8 +17,20 @@ TVaR_binom(kappa, size, prob)
 Tail Value-at-risk of the Binomial distribution with size
  \eqn{n}{n} and probability of success \eqn{p}{p}.
 }
+\details{
+The Binomial distribution
+}
 \examples{
 
-TVaR_binom(kappa = 0.8, size = 5, prob = 0.2)
+TVaR_binom(kap = 0.8, size = 5, prob = 0.2)
 
 }
+\seealso{
+Other Binomial Distribution: 
+\code{\link{E_binom}()},
+\code{\link{Etronq_binom}()},
+\code{\link{MGF_binom}()},
+\code{\link{V_binom}()},
+\code{\link{VaR_binom}()}
+}
+\concept{Binomial Distribution}

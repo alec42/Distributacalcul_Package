@@ -2,20 +2,49 @@
 % Please edit documentation in R/VaR_gamma.R
 \name{VaR_gamma}
 \alias{VaR_gamma}
-\title{Value-at-risk d'une loi gamma}
+\title{Value-at-Risk of the Gamma distribution}
 \usage{
-VaR_gamma(kappa, a, b)
+VaR_gamma(kap, shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{kappa}{Niveau de confiance désiré}
+\item{kap}{probability.}
 
-\item{a}{alpha}
+\item{shape}{shape parameter \eqn{\alpha}{alpha}, must be positive integer.}
 
-\item{b}{beta}
+\item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
+
+\item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-Value-at-risk d'une loi gamma
+Value-at-Risk of the Gamma distribution with shape parameter
+ \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}. Wrapper of
+ qgamma.
 }
 \details{
-Pour trouver la VaR d'une gamme, on peut aussi procéder par optimisation numérique (`uniroot()` ou `optimize()`)
+The Gamma distribution with shape parameter \eqn{\alpha}{a} and rate
+   parameter \eqn{\beta}{b} has density:
+  \deqn{f\left(x\right) = \frac{\beta^{\alpha}}{\Gamma(\alpha)} x^{\alpha - 1}%
+   \textrm{e}^{-\beta x}}{f(x) = b^a / \Gamma(a) x^{a - 1} e^{-b x}}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\beta, \alpha > 0}{b, a > 0}.
 }
+\examples{
+
+# With scale parameter
+VaR_gamma(kap = .2, shape = 3, scale = 4)
+
+# With rate parameter
+VaR_gamma(kap = .2, shape = 3, rate = 0.25)
+
+}
+\seealso{
+Other Gamma Distribution: 
+\code{\link{E_gamma}()},
+\code{\link{Elim_gamma}()},
+\code{\link{Etronq_gamma}()},
+\code{\link{Mexcess_gamma}()},
+\code{\link{SL_gamma}()},
+\code{\link{TVaR_gamma}()},
+\code{\link{V_gamma}()},
+\code{\link{kthmoment_gamma}()}
+}
+\concept{Gamma Distribution}

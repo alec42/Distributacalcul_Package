@@ -4,10 +4,10 @@
 \alias{TVaR_exp}
 \title{Tail Value-at-risk d'une loi exponentielle}
 \usage{
-TVaR_exp(kappa, b)
+TVaR_exp(kap, b)
 }
 \arguments{
-\item{kappa}{pourcentage de confiance désiré}
+\item{kap}{pourcentage de confiance désiré}
 
 \item{b}{beta}
 }

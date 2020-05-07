@@ -1,7 +1,33 @@
-#' Espérance tronquée d'une loi Gamma
-#' @param a alpha
-#' @param b beta (ou lambda dans certains livres)
-#' @param d Deductible
+#' Truncated mean of the Gamma distribution
+#'
+#' @description Truncated mean of the Gamma distribution with shape
+#'  parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
+#'
+#' @templateVar d TRUE
+#' @templateVar less.than.d TRUE
+#' @template gamma-template
+#'
 #' @export
-Etronq_gamma <- function(d, a, b) (a * pgamma(d, a+1, b)) / b
+#'
+#' @examples
+#'
+#' # With scale parameter
+#' Etronq_gamma(d = 2, shape = 3, scale = 4)
+#'
+#' # With rate parameter
+#' Etronq_gamma(d = 2, shape = 3, rate = 0.25)
+#'
+#' # values greather than d
+#' Etronq_gamma(d = 2, shape = 3, rate = 0.25, less.than.d = FALSE)
+#'
+Etronq_gamma <- function(d, shape, rate = 1 / scale, scale = 1 / rate, less.than.d = TRUE) {
+
+    if (less.than.d) {
+        Etronq.gamma <- E_gamma(shape, rate) * pgamma(q = d, shape + 1, rate)
+    } else {
+        Etronq.gamma <- E_gamma(shape, rate) * pgamma(q = d, shape + 1, rate, lower.tail = FALSE)
+    }
+
+    return(Etronq.gamma)
+}
 

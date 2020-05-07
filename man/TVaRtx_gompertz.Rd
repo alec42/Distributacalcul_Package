@@ -4,10 +4,10 @@
 \alias{TVaRtx_gompertz}
 \title{Tail Value-at-risk de Tx pour la loi Gompertz}
 \usage{
-TVaRtx_gompertz(kappa, x = 0, beta, gam)
+TVaRtx_gompertz(kap, x = 0, beta, gam)
 }
 \arguments{
-\item{kappa}{niveau de confiance pour l'évaluation de la TVaR}
+\item{kap}{niveau de confiance pour l'évaluation de la TVaR}
 
 \item{x}{l'âge atteint de l'assuré.}
 

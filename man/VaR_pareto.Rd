@@ -2,17 +2,17 @@
 % Please edit documentation in R/VaR_pareto.R
 \name{VaR_pareto}
 \alias{VaR_pareto}
-\title{Value-at-risk d'une loi Pareto}
+\title{Value-at-risk of the Pareto distribution}
 \usage{
-VaR_pareto(kappa, alph, lam)
+VaR_pareto(kap, shape, rate)
 }
 \arguments{
-\item{kappa}{kappa}
+\item{kap}{kap}
 
-\item{alph}{alpha}
+\item{shape}{alpha}
 
-\item{lam}{lambda}
+\item{rate}{lambda}
 }
 \description{
-Value-at-risk d'une loi Pareto
+Value-at-risk of the Pareto distribution
 }

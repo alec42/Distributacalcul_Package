@@ -4,10 +4,10 @@
 \alias{VaR_BNCOMP}
 \title{Value-at-risk d'une loi binomiale négative composée}
 \usage{
-VaR_BNCOMP(kappa, r, q, shape, rate, ko = 300, distr_severity = "Gamma")
+VaR_BNCOMP(kap, r, q, shape, rate, ko = 300, distr_severity = "Gamma")
 }
 \arguments{
-\item{kappa}{Niveau de confiance désiré}
+\item{kap}{Niveau de confiance désiré}
 
 \item{r}{r pour la binomiale négative (nombre d'échecs).}
 

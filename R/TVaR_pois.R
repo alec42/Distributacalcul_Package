@@ -4,6 +4,7 @@
 #'  \eqn{\lambda}{lambda}.
 #'
 #' @templateVar q FALSE
+#' @templateVar kap TRUE
 #' @template pois-template
 #'
 #' @export

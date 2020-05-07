@@ -4,10 +4,10 @@
 \alias{TVaR_lnorm}
 \title{Tail Value-at-Risk of the Lognormal distribution}
 \usage{
-TVaR_lnorm(kappa, meanlog, sdlog)
+TVaR_lnorm(kap, meanlog, sdlog)
 }
 \arguments{
-\item{kappa}{probability.}
+\item{kap}{probability.}
 
 \item{meanlog}{mean \eqn{\mu}{mu}.}
 
@@ -25,7 +25,7 @@ The Log-normal distribution with mean \eqn{\mu}{mu} and standard deviation
 }
 \examples{
 
-TVaR_lnorm(kappa = 0.8, meanlog = 2, sdlog = 5)
+TVaR_lnorm(kap = 0.8, meanlog = 2, sdlog = 5)
 
 }
 \seealso{

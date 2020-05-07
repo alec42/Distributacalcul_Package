@@ -4,7 +4,7 @@
 #' <%=ifelse(exists("q") && q, "@param q quantile.", "") %>
 #' <%=ifelse(exists("k") && k, "@param k kth-moment.", "") %>
 #' <%=ifelse(exists("d") && d, "@param d cut-off value.", "") %>
-#' <%=ifelse(exists("kappa") && kappa, "@param kappa probability.", "") %>
+#' <%=ifelse(exists("kap"), "@param kap probability.", "") %>
 #'
 #' @details
 #'  The (discrete) uniform distribution with min and max parameters \eqn{a}

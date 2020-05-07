@@ -2,15 +2,16 @@
 % Please edit documentation in R/VaR_unif.R
 \name{VaR_unif}
 \alias{VaR_unif}
-\title{Value-at-risk d'une loi uniforme}
+\title{Value-at-Risk of the Uniform distribution}
 \usage{
-VaR_unif(kappa, a, b)
+VaR_unif(kap, min, max)
 }
 \arguments{
-\item{a}{minimum}
+\item{kap}{probability.}
 
-\item{b}{maximum}
+\item{max}{maximum}
 }
 \description{
-Value-at-risk d'une loi uniforme
+Value-at-Risk of the Uniform distribution with shape
+ parameters \eqn{\alpha}{alpha} and \eqn{\beta}{beta}.
 }

@@ -2,12 +2,12 @@
 % Please edit documentation in R/VaR_BINCOMP.R
 \name{VaR_BINCOMP}
 \alias{VaR_BINCOMP}
-\title{Value-at-risk d'une loi binomiale composée}
+\title{Value-at-risk of the compound Binomiale distribution}
 \usage{
-VaR_BINCOMP(kappa, n, q, shape, rate, ko = 300, distr_severity = "Gamma")
+VaR_BINCOMP(kap, n, q, shape, rate, ko = 300, distr_severity = "Gamma")
 }
 \arguments{
-\item{kappa}{Niveau de confiance désiré}
+\item{kap}{Niveau de confiance désiré}
 
 \item{n}{n pour la binomiale}
 
@@ -22,5 +22,5 @@ VaR_BINCOMP(kappa, n, q, shape, rate, ko = 300, distr_severity = "Gamma")
 \item{distr_severity}{choix de distribution de sévérité. Gamma uniquement pour l'instant.}
 }
 \description{
-Value-at-risk d'une loi binomiale composée
+Value-at-risk of the compound Binomiale distribution
 }

@@ -4,10 +4,10 @@
 \alias{TVaR_weibull}
 \title{Tail Value-at-Risk of the Weibull Distribution}
 \usage{
-TVaR_weibull(kappa, shape, rate = 1/scale, scale = 1/rate)
+TVaR_weibull(kap, shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{kappa}{probability.}
+\item{kap}{probability.}
 
 \item{shape}{shape parameter \eqn{\tau}{tau}, must be positive integer.}
 
@@ -30,10 +30,10 @@ The Weibull distribution with shape parameter \eqn{\tau}{t} and rate parameter
 \examples{
 
 # With scale parameter
-TVaR_weibull(kappa = .2, shape = 3, scale = 4)
+TVaR_weibull(kap = .2, shape = 3, scale = 4)
 
 # With rate parameter
-TVaR_weibull(kappa = .2, shape = 3, rate = 0.25)
+TVaR_weibull(kap = .2, shape = 3, rate = 0.25)
 
 }
 \seealso{
