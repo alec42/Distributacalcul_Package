@@ -10,5 +10,7 @@
 #' E_beta(shape1 = 3, shape2 = 5)
 #'
 E_beta <- function(shape1, shape2) {
+    stopifnot(shape1 > 0, shape2 > 0)
+
     shape1 / (shape1 + shape2)
 }

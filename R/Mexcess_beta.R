@@ -11,10 +11,7 @@
 #' Mexcess_beta(d = .3, shape1 = 4, shape2 = 5)
 #'
 Mexcess_beta <- function(d, shape1, shape2) {
-
-    if (d < 0 | d > 1) {
-        stop("d must be between 0 and 1")
-    }
+    stopifnot(shape1 > 0, shape2 > 0, d >= 0, d <= 1)
 
     (E_beta(shape, shape2) *
             (

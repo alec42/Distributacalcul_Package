@@ -12,10 +12,7 @@
 #' Etronq_beta(d = 0.4, shape1 = 4, shape2 = 5, less.than.d = FALSE)
 #'
 Etronq_beta <- function(d, shape1, shape2, less.than.d = TRUE) {
-
-    if (d < 0 | d > 1) {
-        stop("d must be between 0 and 1")
-    }
+    stopifnot(shape1 > 0, shape2 > 0, d >= 0, d <= 1)
 
     if (less.than.d) {
         Etronq.beta <- E_beta(shape1, shape2) * pbeta(q = d, shape1 + 1, shape2)

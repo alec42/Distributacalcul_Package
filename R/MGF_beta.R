@@ -14,6 +14,8 @@
 #' @export
 #'
 MGF_beta <- function(t, shape1, shape2, k0) {
+    stopifnot(shape1 > 0, shape2 > 0, k0 > 0) # domain for t??
+
     MGF.beta1 <- 1 + sum(
             sapply(1:k0, function(k) {
                 prod(sapply(0:(k - 1), function(j) (shape1 + j) / (shape1 + shape2 + j)),

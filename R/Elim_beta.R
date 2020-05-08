@@ -11,10 +11,7 @@
 #' Elim_beta(d = 0.3, shape1 = 4, shape2 = 5)
 #'
 Elim_beta <- function(d, shape1, shape2) {
-
-    if (d < 0 | d > 1) {
-        stop("d must be between 0 and 1")
-    }
+    stopifnot(shape1 > 0, shape2 > 0, d >= 0, d <= 1)
 
     E_beta(shape1, shape2) * pbeta(q = d, shape1 + 1, shape2) +
         shape2 * pbeta(q = d, shape1, shape2, lower.tail = F)
