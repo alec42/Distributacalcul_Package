@@ -4,24 +4,24 @@
 \alias{TVaR_BNCOMP}
 \title{Tail Value-at-risk d'une loi binomiale négative composée}
 \usage{
-TVaR_BNCOMP(kap, r, q, shape, rate, vark, ko, distr_severity = "Gamma")
+TVaR_BNCOMP(kap, vark, size, prob, shape, rate, distr_severity = "Gamma", ko)
 }
 \arguments{
 \item{kap}{Niveau de confiance désiré}
 
-\item{r}{r pour la binomiale}
-
-\item{q}{probabilité q pour la binomiale négative}
-
-\item{shape}{alpha pour la Gamma}
-
-\item{rate}{beta pour la Gamma}
-
 \item{vark}{Value at Risk (VaR) calculé au même niveau de confiance kap}
 
-\item{ko}{borne pour la somme dans le calcul de la TVaR.}
+\item{size}{r pour la binomiale négative}
 
-\item{distr_severity}{choix de distribution de sévérité.}
+\item{prob}{probabilité q pour la binomiale}
+
+\item{shape}{alpha pour la Gamma et mu pour la lognormale}
+
+\item{rate}{beta pour la Gamma et sigma^2 pour la lognormale}
+
+\item{distr_severity}{choice of severity distribution Gamma (default)ss}
+
+\item{ko}{borne pour la somme dans le calcul de la TVaR.}
 }
 \description{
 Tail Value-at-risk d'une loi binomiale négative composée

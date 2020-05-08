@@ -4,22 +4,27 @@
 \alias{V_BNCOMP}
 \title{Variance d'une loi binomiale négative composée}
 \usage{
-V_BNCOMP(r, q, shape, rate, distr_severity = "Gamma")
+V_BNCOMP(size, prob, shape, rate, distr_severity = "Gamma")
 }
 \arguments{
-\item{r}{r pour la binomiale négative}
+\item{size}{r pour la binomiale négative}
 
-\item{q}{probabilité q pour la binomiale}
+\item{prob}{probabilité q pour la binomiale}
 
 \item{shape}{alpha pour la Gamma et mu pour la lognormale}
 
 \item{rate}{beta pour la Gamma et sigma^2 pour la lognormale}
 
-\item{distr_severity}{choix de distribution de sévérité. Gamma (par défaut) ou Lognormale}
+\item{distr_severity}{choice of severity distribution Gamma (default) or Lognormal}
 }
 \description{
 Variance d'une loi binomiale négative composée
 }
 \details{
 Cette formule utilise aussi un choix de 2 distributions pour la sévérité; soit la Gamma ou la Lognormale.
+}
+\examples{
+
+V_BNCOMP(size = 5, prob = 1/5, shape = 2, rate = 1/5000, distr_severity = "Gamma")
+
 }

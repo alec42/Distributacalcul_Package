@@ -2,24 +2,30 @@
 % Please edit documentation in R/E_BNCOMP.R
 \name{E_BNCOMP}
 \alias{E_BNCOMP}
-\title{Espérance d'une loi binomiale négative composée}
+\title{Expected value of the compound Negative Binomial distribution}
 \usage{
-E_BNCOMP(r, q, shape, rate, distr_severity = "Gamma")
+E_BNCOMP(size, prob, shape, rate, distr_severity = "Gamma")
 }
 \arguments{
-\item{r}{r pour la binomiale négative}
+\item{size}{r pour la binomiale négative}
 
-\item{q}{probabilité q pour la binomiale}
+\item{prob}{probabilité q pour la binomiale}
 
 \item{shape}{alpha pour la Gamma et mu pour la lognormale}
 
 \item{rate}{beta pour la Gamma et sigma^2 pour la lognormale}
 
-\item{distr_severity}{choix de distribution de sévérité. Gamma (par défaut) ou Lognormale}
+\item{distr_severity}{choice of severity distribution Gamma (default) or Lognormal}
 }
 \description{
-Espérance d'une loi binomiale négative composée
+Expected value of the compound Negative Binomial distribution
 }
 \details{
 Cette formule utilise aussi un choix de 2 distributions pour la sévérité; soit la Gamma ou la Lognormale.
+}
+\examples{
+
+E_BNCOMP(size = 4, prob = 0.2, shape = 0, rate = 1, distr_severity = "Lognormal")
+E_BNCOMP(size = 4, prob = 0.4, shape = 0, rate = 2, distr_severity = "lognormal")
+
 }

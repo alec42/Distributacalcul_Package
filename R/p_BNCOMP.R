@@ -1,22 +1,23 @@
 #' Répartition d'une loi binomiale négative composée
 #' @param x x
-#' @param r r pour la binomiale négative (nombre d'échecs).
-#' @param q probabilité q pour la binomiale
+#' @param size r pour la binomiale négative (nombre d'échecs).
+#' @param prob probabilité q pour la binomiale
 #' @param shape alpha pour la Gamma
 #' @param rate beta pour la Gamma
 #' @param ko borne pour la sommation de la fonction de répartition
 #' @param distr_severity choix de distribution de sévérité.
+#'
+#' @examples
+#' p_BNCOMP(x = 5E5, ko = 1E3, size = 5, prob = 1/5, shape = 2, rate = 1/5000, distr_severity = "Gamma")
+#'
 #' @export
-p_BNCOMP <- function(x, r, q, shape, rate, ko, distr_severity = "Gamma")
-{
-    require(stats)
-    if(distr_severity == "Gamma")
-    {
-        dnbinom(x = 0, size = r, prob = q) + sum(sapply(1:ko, function(i) dnbinom(x = i, size = r, prob = q) * pgamma(q = x, shape = shape * i, rate = rate)))
+#'
+p_BNCOMP <- function(x, size, prob, shape, rate, ko, distr_severity = "Gamma") {
+    stopifnot(prob >= 0, prob <= 1, rate > 0)
+    stopifnot(grepl(pattern = "(^Gamma$)", x = distr_severity, ignore.case = TRUE))
+
+    if (grepl(pattern = "^Gamma$", x = distr_severity, ignore.case = TRUE)) {
+        dnbinom(x = 0, size = size, prob = prob) +
+            sum(sapply(1:ko, function(i) dnbinom(x = i, size = size, prob = prob) * pgamma(q = x, shape = shape * i, rate = rate)))
     }
-    # pas bon
-    # else if (distr_severity == "Lognormale")
-    # {
-    #     # dnbinom(x = 0, size = r, prob = q) + sum(sapply(1:ko, function(i) dnbinom(x = i, size = r, prob = q) * plnorm(q = x, meanlog = shape * i, sdlog = sqrt(rate))))
-    # }
 }
