@@ -2,17 +2,47 @@
 % Please edit documentation in R/Mexcess_pareto.R
 \name{Mexcess_pareto}
 \alias{Mexcess_pareto}
-\title{Mean excess loss d'une loi Pareto}
+\title{Mean excess loss of the Pareto distribution}
 \usage{
-Mexcess_pareto(d, alph, lam)
+Mexcess_pareto(d, shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{d}{déductible}
+\item{d}{cut-off value.}
 
-\item{alph}{alpha}
+\item{shape}{shape parameter \eqn{\alpha}{alpha}, must be positive.}
 
-\item{lam}{lambda}
+\item{rate}{\eqn{\lambda}{lambda} rate parameter, must be positive.}
+
+\item{scale}{alternative parameterization to the rate parameter, scale = 1 / rate.}
 }
 \description{
-Mean excess loss d'une loi Pareto
+Mean excess loss of the Pareto distribution with shape
+ parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\lambda}{lambda}.
 }
+\details{
+The Pareto distribution with rate parameter \eqn{\lambda}{lam} as well as shape
+  parameter \eqn{\alpha}{a} has density: \deqn{f\left(x\right) = \frac{\alpha%
+  \lambda^{\alpha}}{(\lambda + x)^{\alpha + 1}}}{f(x) = (a lam^a)/ (lam + x)^(a + 1)}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\alpha, \lambda > 0}{a, lam > 0}.
+}
+\examples{
+
+# With scale parameter
+Mexcess_pareto(d = 6, shape = 5, rate = 2)
+
+# With rate parameter
+Mexcess_pareto(d = 6, shape = 5, scale = 0.5)
+
+}
+\seealso{
+Other Pareto Distribution: 
+\code{\link{E_pareto}()},
+\code{\link{Elim_pareto}()},
+\code{\link{Etronq_pareto}()},
+\code{\link{SL_pareto}()},
+\code{\link{TVaR_pareto}()},
+\code{\link{V_pareto}()},
+\code{\link{VaR_pareto}()},
+\code{\link{kthmoment_pareto}()}
+}
+\concept{Pareto Distribution}

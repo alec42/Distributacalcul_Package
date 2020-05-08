@@ -2,17 +2,47 @@
 % Please edit documentation in R/SL_pareto.R
 \name{SL_pareto}
 \alias{SL_pareto}
-\title{Stop-Loss d'une loi Pareto}
+\title{Stop-loss of the Pareto distribution}
 \usage{
-SL_pareto(d, alph, lam)
+SL_pareto(d, shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{d}{déductible}
+\item{d}{cut-off value.}
 
-\item{alph}{alpha}
+\item{shape}{shape parameter \eqn{\alpha}{alpha}, must be positive.}
 
-\item{lam}{lambda}
+\item{rate}{\eqn{\lambda}{lambda} rate parameter, must be positive.}
+
+\item{scale}{alternative parameterization to the rate parameter, scale = 1 / rate.}
 }
 \description{
-Stop-Loss d'une loi Pareto
+Stop-loss of the Pareto distribution with shape
+ parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\lambda}{lambda}.
 }
+\details{
+The Pareto distribution with rate parameter \eqn{\lambda}{lam} as well as shape
+  parameter \eqn{\alpha}{a} has density: \deqn{f\left(x\right) = \frac{\alpha%
+  \lambda^{\alpha}}{(\lambda + x)^{\alpha + 1}}}{f(x) = (a lam^a)/ (lam + x)^(a + 1)}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\alpha, \lambda > 0}{a, lam > 0}.
+}
+\examples{
+
+# With scale parameter
+SL_pareto(d = 2, shape = 5, rate = 2)
+
+# With rate parameter
+SL_pareto(d = 2, shape = 5, scale = 0.5)
+
+}
+\seealso{
+Other Pareto Distribution: 
+\code{\link{E_pareto}()},
+\code{\link{Elim_pareto}()},
+\code{\link{Etronq_pareto}()},
+\code{\link{Mexcess_pareto}()},
+\code{\link{TVaR_pareto}()},
+\code{\link{V_pareto}()},
+\code{\link{VaR_pareto}()},
+\code{\link{kthmoment_pareto}()}
+}
+\concept{Pareto Distribution}

@@ -2,17 +2,47 @@
 % Please edit documentation in R/Elim_pareto.R
 \name{Elim_pareto}
 \alias{Elim_pareto}
-\title{Espérance limitée d'une loi Pareto}
+\title{Limited mean of the Pareto distribution}
 \usage{
-Elim_pareto(d, alph, lam)
+Elim_pareto(d, shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{d}{déductible}
+\item{d}{cut-off value.}
 
-\item{alph}{alpha}
+\item{shape}{shape parameter \eqn{\alpha}{alpha}, must be positive.}
 
-\item{lam}{lambda}
+\item{rate}{\eqn{\lambda}{lambda} rate parameter, must be positive.}
+
+\item{scale}{alternative parameterization to the rate parameter, scale = 1 / rate.}
 }
 \description{
-Espérance limitée d'une loi Pareto
+Limited mean of the Pareto distribution with shape
+ parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\lambda}{lambda}.
 }
+\details{
+The Pareto distribution with rate parameter \eqn{\lambda}{lam} as well as shape
+  parameter \eqn{\alpha}{a} has density: \deqn{f\left(x\right) = \frac{\alpha%
+  \lambda^{\alpha}}{(\lambda + x)^{\alpha + 1}}}{f(x) = (a lam^a)/ (lam + x)^(a + 1)}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\alpha, \lambda > 0}{a, lam > 0}.
+}
+\examples{
+
+# With scale parameter
+Elim_pareto(d = 4, shape = 5, rate = 2)
+
+# With rate parameter
+Elim_pareto(d = 4, shape = 5, scale = 0.5)
+
+}
+\seealso{
+Other Pareto Distribution: 
+\code{\link{E_pareto}()},
+\code{\link{Etronq_pareto}()},
+\code{\link{Mexcess_pareto}()},
+\code{\link{SL_pareto}()},
+\code{\link{TVaR_pareto}()},
+\code{\link{V_pareto}()},
+\code{\link{VaR_pareto}()},
+\code{\link{kthmoment_pareto}()}
+}
+\concept{Pareto Distribution}

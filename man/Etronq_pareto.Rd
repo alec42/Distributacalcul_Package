@@ -2,15 +2,49 @@
 % Please edit documentation in R/Etronq_pareto.R
 \name{Etronq_pareto}
 \alias{Etronq_pareto}
-\title{Espérance tronquée d'une loi Pareto}
+\title{Truncated mean of the Pareto distribution}
 \usage{
-Etronq_pareto(d, alph, lam)
+Etronq_pareto(d, shape, rate = 1/scale, scale = 1/rate, less.than.d = TRUE)
 }
 \arguments{
-\item{alph}{alpha}
+\item{d}{cut-off value.}
 
-\item{lam}{lambda}
+\item{shape}{shape parameter \eqn{\alpha}{alpha}, must be positive.}
+
+\item{rate}{\eqn{\lambda}{lambda} rate parameter, must be positive.}
+
+\item{scale}{alternative parameterization to the rate parameter, scale = 1 / rate.}
+
+\item{less.than.d}{logical; if \code{TRUE} (défaut) truncated mean for values <= d, otherwise, for values > d.}
 }
 \description{
-Espérance tronquée d'une loi Pareto
+Truncated mean of the Pareto distribution with shape
+ parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\lambda}{lambda}.
 }
+\details{
+The Pareto distribution with rate parameter \eqn{\lambda}{lam} as well as shape
+  parameter \eqn{\alpha}{a} has density: \deqn{f\left(x\right) = \frac{\alpha%
+  \lambda^{\alpha}}{(\lambda + x)^{\alpha + 1}}}{f(x) = (a lam^a)/ (lam + x)^(a + 1)}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\alpha, \lambda > 0}{a, lam > 0}.
+}
+\examples{
+
+# With scale parameter
+Etronq_pareto(d = 4, shape = 5, rate = 2)
+
+# With rate parameter
+Etronq_pareto(d = 4, shape = 5, scale = 0.5)
+
+}
+\seealso{
+Other Pareto Distribution: 
+\code{\link{E_pareto}()},
+\code{\link{Elim_pareto}()},
+\code{\link{Mexcess_pareto}()},
+\code{\link{SL_pareto}()},
+\code{\link{TVaR_pareto}()},
+\code{\link{V_pareto}()},
+\code{\link{VaR_pareto}()},
+\code{\link{kthmoment_pareto}()}
+}
+\concept{Pareto Distribution}

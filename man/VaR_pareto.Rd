@@ -2,17 +2,47 @@
 % Please edit documentation in R/VaR_pareto.R
 \name{VaR_pareto}
 \alias{VaR_pareto}
-\title{Value-at-risk of the Pareto distribution}
+\title{Value-at-Risk of the Pareto distribution}
 \usage{
-VaR_pareto(kap, shape, rate)
+VaR_pareto(kap, shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{kap}{kap}
+\item{kap}{probability.}
 
-\item{shape}{alpha}
+\item{shape}{shape parameter \eqn{\alpha}{alpha}, must be positive.}
 
-\item{rate}{lambda}
+\item{rate}{\eqn{\lambda}{lambda} rate parameter, must be positive.}
+
+\item{scale}{alternative parameterization to the rate parameter, scale = 1 / rate.}
 }
 \description{
-Value-at-risk of the Pareto distribution
+Value-at-Risk of the Pareto distribution with shape
+ parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\lambda}{lambda}.
 }
+\details{
+The Pareto distribution with rate parameter \eqn{\lambda}{lam} as well as shape
+  parameter \eqn{\alpha}{a} has density: \deqn{f\left(x\right) = \frac{\alpha%
+  \lambda^{\alpha}}{(\lambda + x)^{\alpha + 1}}}{f(x) = (a lam^a)/ (lam + x)^(a + 1)}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\alpha, \lambda > 0}{a, lam > 0}.
+}
+\examples{
+
+# With scale parameter
+VaR_pareto(kap = .99, shape = 5, rate = 2)
+
+# With rate parameter
+VaR_pareto(kap = .99, shape = 5, scale = 0.5)
+
+}
+\seealso{
+Other Pareto Distribution: 
+\code{\link{E_pareto}()},
+\code{\link{Elim_pareto}()},
+\code{\link{Etronq_pareto}()},
+\code{\link{Mexcess_pareto}()},
+\code{\link{SL_pareto}()},
+\code{\link{TVaR_pareto}()},
+\code{\link{V_pareto}()},
+\code{\link{kthmoment_pareto}()}
+}
+\concept{Pareto Distribution}
