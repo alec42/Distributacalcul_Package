@@ -1,4 +1,4 @@
-#' Mean Excess-Loss d'une loi uniforme
+#' Mean excess loss d'une loi uniforme
 #' @param a minimum
 #' @param b maximum
 #' @export

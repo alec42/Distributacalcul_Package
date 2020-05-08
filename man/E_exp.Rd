@@ -2,13 +2,43 @@
 % Please edit documentation in R/E_exp.R
 \name{E_exp}
 \alias{E_exp}
-\title{Espérance d'une loi exponentielle}
+\title{Expected value of the Exponential distribution}
 \usage{
-E_exp(b)
+E_exp(rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{b}{Beta}
+\item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
+
+\item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-Espérance d'une loi exponentielle
+Expected value of the Exponential distribution with
+ rate parameter \eqn{\beta}{beta}.
 }
+\details{
+The Exponential distribution with rate parameter \eqn{\beta}{b} has %
+  density: \deqn{f\left(x\right) = \frac{1}{\beta}%
+  \textrm{e}^{-\beta x}}{f(x) = b^a e^{-b x}} for %
+  \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\beta > 0}{b > 0}.
+}
+\examples{
+
+# With scale parameter
+E_exp(scale = 4)
+
+# With rate parameter
+E_exp(rate = 0.25)
+
+}
+\seealso{
+Other Exponential Distribution: 
+\code{\link{Elim_exp}()},
+\code{\link{Etronq_exp}()},
+\code{\link{Mexcess_exp}()},
+\code{\link{SL_exp}()},
+\code{\link{TVaR_exp}()},
+\code{\link{V_exp}()},
+\code{\link{VaR_exp}()},
+\code{\link{kthmoment_exp}()}
+}
+\concept{Exponential Distribution}

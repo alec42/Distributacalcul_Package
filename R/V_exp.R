@@ -1,4 +1,20 @@
-#' Variance d'une loi exponentielle
-#' @param b beta
+#' Variance of the Exponential distribution
+#'
+#' @description Variance of the Exponential distribution with
+#'  rate parameter \eqn{\beta}{beta}.
+#'
+#' @template exp-template
+#'
 #' @export
-V_exp <- function(b) 1/b^2
+#'
+#' @examples
+#'
+#' # With scale parameter
+#' V_exp(scale = 4)
+#'
+#' # With rate parameter
+#' V_exp(rate = 0.25)
+#'
+V_exp <- function(rate = 1 / scale, scale = 1 / rate) {
+    scale^2
+}

@@ -1,4 +1,4 @@
-#' Mean-Excess loss of the Burr Distribution
+#' Mean excess loss of the Burr Distribution
 #'
 #' @description Mean excess loss of the Burr distribution with shape parameters
 #'  \eqn{\alpha}{alpha} (shape1) and \eqn{\tau}{tau} (shape2) as well as rate parameter

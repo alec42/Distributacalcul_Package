@@ -1,4 +1,4 @@
-#' Mean-Excess loss (excès-moyen) d'une loi inverse gaussienne
+#' Mean excess loss (excès-moyen) d'une loi inverse gaussienne
 #' @param d déductible
 #' @param mu mu
 #' @param beta beta = dispersion * mu^2

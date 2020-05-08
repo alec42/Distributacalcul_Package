@@ -2,7 +2,7 @@
 % Please edit documentation in R/Mexcess_lnorm.R
 \name{Mexcess_lnorm}
 \alias{Mexcess_lnorm}
-\title{Mean-Excess loss of the Lognormal distribution}
+\title{Mean excess loss of the Lognormal distribution}
 \usage{
 Mexcess_lnorm(d, meanlog, sdlog)
 }

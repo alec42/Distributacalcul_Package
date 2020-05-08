@@ -1,4 +1,4 @@
-#' Mean Excess-Loss d'une loi Pareto
+#' Mean excess loss d'une loi Pareto
 #' @param alph alpha
 #' @param lam lambda
 #' @param d déductible

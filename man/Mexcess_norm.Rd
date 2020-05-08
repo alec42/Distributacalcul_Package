@@ -2,7 +2,7 @@
 % Please edit documentation in R/Mexcess_norm.R
 \name{Mexcess_norm}
 \alias{Mexcess_norm}
-\title{Mean-Excess loss of the Normal distribution}
+\title{Mean excess loss of the Normal distribution}
 \usage{
 Mexcess_norm(d, mean = 0, sd = 1)
 }

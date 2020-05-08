@@ -2,7 +2,7 @@
 % Please edit documentation in R/Mexcess_pareto.R
 \name{Mexcess_pareto}
 \alias{Mexcess_pareto}
-\title{Mean Excess-Loss d'une loi Pareto}
+\title{Mean excess loss d'une loi Pareto}
 \usage{
 Mexcess_pareto(d, alph, lam)
 }
@@ -14,5 +14,5 @@ Mexcess_pareto(d, alph, lam)
 \item{lam}{lambda}
 }
 \description{
-Mean Excess-Loss d'une loi Pareto
+Mean excess loss d'une loi Pareto
 }

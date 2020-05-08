@@ -2,7 +2,7 @@
 % Please edit documentation in R/Mexcess_unif.R
 \name{Mexcess_unif}
 \alias{Mexcess_unif}
-\title{Mean Excess-Loss d'une loi uniforme}
+\title{Mean excess loss d'une loi uniforme}
 \usage{
 Mexcess_unif(d, a, b)
 }
@@ -12,5 +12,5 @@ Mexcess_unif(d, a, b)
 \item{b}{maximum}
 }
 \description{
-Mean Excess-Loss d'une loi uniforme
+Mean excess loss d'une loi uniforme
 }

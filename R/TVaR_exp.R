@@ -1,5 +1,21 @@
-#' Tail Value-at-risk d'une loi exponentielle
-#' @param b beta
-#' @param kap pourcentage de confiance désiré
+#' Tail Value-at-Risk of the Exponential distribution
+#'
+#' @description Tail Value-at-Risk of the Exponential distribution with
+#'  rate parameter \eqn{\beta}{beta}.
+#'
+#' @templateVar kap TRUE
+#' @template exp-template
+#'
 #' @export
-TVaR_exp <- function(kap, b) VaR_exp(b, kap) + E_exp(b)
+#'
+#' @examples
+#'
+#' # With scale parameter
+#' TVaR_exp(kap = .99, scale = 4)
+#'
+#' # With rate parameter
+#' TVaR_exp(kap = .99, rate = 0.25)
+#'
+TVaR_exp <- function(kap, rate = 1 / scale, scale = 1 / rate) {
+    VaR_exp(kap, rate) + E_exp(rate)
+}

@@ -1,5 +1,21 @@
-#' Mean Excess-loss d'une loi exponentielle
-#' @param b beta
-#' @param d montant d de la franchise
+#' Mean excess loss of the Exponential distribution
+#'
+#' @description Mean excess loss of the Exponential distribution with
+#'  rate parameter \eqn{\beta}{beta}.
+#'
+#' @templateVar d TRUE
+#' @template exp-template
+#'
 #' @export
-Mexcess_exp <- function(d, b) 1/b
+#'
+#' @examples
+#'
+#' # With scale parameter
+#' Mexcess_exp(d = 2, scale = 4)
+#'
+#' # With rate parameter
+#' Mexcess_exp(d = 5, rate = 0.25)
+#'
+Mexcess_exp <- function(d, rate = 1 / scale, scale = 1 / rate) {
+    E_exp(rate)
+}

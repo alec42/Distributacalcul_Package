@@ -2,7 +2,7 @@
 % Please edit documentation in R/Mexcess_IG.R
 \name{Mexcess_IG}
 \alias{Mexcess_IG}
-\title{Mean-Excess loss (excès-moyen) d'une loi inverse gaussienne}
+\title{Mean excess loss (excès-moyen) d'une loi inverse gaussienne}
 \usage{
 Mexcess_IG(d, mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 }
@@ -16,5 +16,5 @@ Mexcess_IG(d, mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
 \item{dispersion}{dispersion = beta / mu^2}
 }
 \description{
-Mean-Excess loss (excès-moyen) d'une loi inverse gaussienne
+Mean excess loss (excès-moyen) d'une loi inverse gaussienne
 }

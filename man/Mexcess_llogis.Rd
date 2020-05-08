@@ -2,7 +2,7 @@
 % Please edit documentation in R/Mexcess_llogis.R
 \name{Mexcess_llogis}
 \alias{Mexcess_llogis}
-\title{Mean-Excess loss of the  Loglogistic Distribution}
+\title{Mean excess loss of the  Loglogistic Distribution}
 \usage{
 Mexcess_llogis(d, shape, rate = 1/scale, scale = 1/rate)
 }

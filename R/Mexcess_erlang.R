@@ -1,4 +1,4 @@
-#' Mean Excess Loss of the Erlang Distribution
+#' Mean excess loss of the Erlang Distribution
 #'
 #' @description Mean excess loss of the Erlang distribution with shape
 #'  parameter \eqn{n} and rate parameter \eqn{\beta}{beta}.

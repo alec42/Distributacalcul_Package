@@ -2,7 +2,7 @@
 % Please edit documentation in R/Mexcess_gamma.R
 \name{Mexcess_gamma}
 \alias{Mexcess_gamma}
-\title{Mean-Excess loss of the Gamma distribution}
+\title{Mean excess loss of the Gamma distribution}
 \usage{
 Mexcess_gamma(d, shape, rate = 1/scale, scale = 1/rate)
 }
@@ -16,7 +16,7 @@ Mexcess_gamma(d, shape, rate = 1/scale, scale = 1/rate)
 \item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-Mean-Excess loss of the Gamma distribution with shape
+Mean excess loss of the Gamma distribution with shape
  parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
 }
 \details{

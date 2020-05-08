@@ -2,7 +2,7 @@
 % Please edit documentation in R/Mexcess_erlang.R
 \name{Mexcess_erlang}
 \alias{Mexcess_erlang}
-\title{Mean Excess Loss of the Erlang Distribution}
+\title{Mean excess loss of the Erlang Distribution}
 \usage{
 Mexcess_erlang(d, shape, scale = 1/rate, rate = 1/scale)
 }

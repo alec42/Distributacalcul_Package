@@ -1,4 +1,4 @@
-#' Mean-Excess loss of the Lognormal distribution
+#' Mean excess loss of the Lognormal distribution
 #'
 #' @description Mean excess loss of the Lognormal distribution with mean
 #'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.

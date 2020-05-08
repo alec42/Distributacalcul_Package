@@ -1,4 +1,4 @@
-#' Mean-Excess loss of the Normal distribution
+#' Mean excess loss of the Normal distribution
 #'
 #' @description Mean excess loss of the Normal distribution with mean
 #'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.

@@ -2,13 +2,43 @@
 % Please edit documentation in R/V_exp.R
 \name{V_exp}
 \alias{V_exp}
-\title{Variance d'une loi exponentielle}
+\title{Variance of the Exponential distribution}
 \usage{
-V_exp(b)
+V_exp(rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{b}{beta}
+\item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
+
+\item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-Variance d'une loi exponentielle
+Variance of the Exponential distribution with
+ rate parameter \eqn{\beta}{beta}.
 }
+\details{
+The Exponential distribution with rate parameter \eqn{\beta}{b} has %
+  density: \deqn{f\left(x\right) = \frac{1}{\beta}%
+  \textrm{e}^{-\beta x}}{f(x) = b^a e^{-b x}} for %
+  \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\beta > 0}{b > 0}.
+}
+\examples{
+
+# With scale parameter
+V_exp(scale = 4)
+
+# With rate parameter
+V_exp(rate = 0.25)
+
+}
+\seealso{
+Other Exponential Distribution: 
+\code{\link{E_exp}()},
+\code{\link{Elim_exp}()},
+\code{\link{Etronq_exp}()},
+\code{\link{Mexcess_exp}()},
+\code{\link{SL_exp}()},
+\code{\link{TVaR_exp}()},
+\code{\link{VaR_exp}()},
+\code{\link{kthmoment_exp}()}
+}
+\concept{Exponential Distribution}

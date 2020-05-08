@@ -2,7 +2,7 @@
 % Please edit documentation in R/Mexcess_burr.R
 \name{Mexcess_burr}
 \alias{Mexcess_burr}
-\title{Mean-Excess loss of the Burr Distribution}
+\title{Mean excess loss of the Burr Distribution}
 \usage{
 Mexcess_burr(d, shape1, shape2, rate = 1/scale, scale = 1/rate)
 }

@@ -1,6 +1,6 @@
-#' Mean-Excess loss of the Gamma distribution
+#' Mean excess loss of the Gamma distribution
 #'
-#' @description Mean-Excess loss of the Gamma distribution with shape
+#' @description Mean excess loss of the Gamma distribution with shape
 #'  parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
 #'
 #' @templateVar d TRUE

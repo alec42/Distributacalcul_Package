@@ -1,4 +1,4 @@
-#' Mean-Excess loss of the  Loglogistic Distribution
+#' Mean excess loss of the  Loglogistic Distribution
 #'
 #' @description Mean excess loss of the Loglogistic distribution with shape parameter
 #'  \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.
