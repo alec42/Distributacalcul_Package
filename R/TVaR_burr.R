@@ -27,7 +27,7 @@ TVaR_burr <- function(kap, shape1, shape2, rate = 1 / scale, scale = 1 / rate) {
             (rate^(1/shape2)) *
                 gamma(1 + 1/shape2) *
                 gamma(shape1 - 1/shape2) *
-                pbeta(q = (vark^shape2)/(rate + vark^shape2),
+                stats::pbeta(q = (vark^shape2)/(rate + vark^shape2),
                       shape1 = 1 + 1/shape2,
                       shape2 = shape1 - 1/shape2,
                       lower.tail = F)

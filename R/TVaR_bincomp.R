@@ -19,6 +19,6 @@ TVaR_BINCOMP <- function(kap, n, q, shape, rate, vark, ko, distr_severity = "Gam
     }
     else if (distr_severity == "Gamma")
     {
-        (sum(sapply(1:ko, function(i) dbinom(x = i, size = n, prob = q) * (shape * i / rate) * pgamma(q = vark, shape = shape * i + 1, rate = rate, lower.tail = F))) / (1 - kap))
+        (sum(sapply(1:ko, function(i) stats::dbinom(x = i, size = n, prob = q) * (shape * i / rate) * stats::pgamma(q = vark, shape = shape * i + 1, rate = rate, lower.tail = F))) / (1 - kap))
     }
 }

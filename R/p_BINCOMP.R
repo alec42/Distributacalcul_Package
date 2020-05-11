@@ -7,12 +7,13 @@
 #' @param ko borne pour la somme de la fonction de répartition
 #' @param distr_severity choix de distribution de sévérité.
 #' @export
+#' @importFrom stats dbinom
 p_BINCOMP <- function(x, n, q, shape, rate, ko, distr_severity = "Gamma")
 {
     require(stats)
     if(distr_severity == "Gamma")
     {
-        dbinom(x = 0, size = n, prob = q) + sum(sapply(1:ko, function(i) dbinom(x = i, size = n, prob = q) * pgamma(q = x, shape = shape * i, rate = rate)))
+        stats::dbinom(x = 0, size = n, prob = q) + sum(sapply(1:ko, function(i) stats::dbinom(x = i, size = n, prob = q) * stats::pgamma(q = x, shape = shape * i, rate = rate)))
     }
     # pas bon
     # else if (distr_severity == "Lognormale")

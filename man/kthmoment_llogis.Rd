@@ -4,7 +4,7 @@
 \alias{kthmoment_llogis}
 \title{kth moment of the Loglogistic distribution}
 \usage{
-kthmoment_llogis(k = 1, shape, rate = 1/scale, scale = 1/rate)
+kthmoment_llogis(k, shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
 \item{k}{kth-moment.}

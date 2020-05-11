@@ -4,7 +4,7 @@
 \alias{VaR_BINCOMP}
 \title{Value-at-Risk of the compound Binomiale distribution}
 \usage{
-VaR_BINCOMP(kap, n, q, shape, rate, ko = 300, distr_severity = "Gamma")
+VaR_BINCOMP(kap, n, q, shape, rate, distr_severity = "Gamma", ko)
 }
 \arguments{
 \item{kap}{Niveau de confiance désiré}
@@ -17,9 +17,9 @@ VaR_BINCOMP(kap, n, q, shape, rate, ko = 300, distr_severity = "Gamma")
 
 \item{rate}{beta pour la Gamma}
 
-\item{ko}{borne pour l'optimisation numérique de la VaR}
-
 \item{distr_severity}{choix de distribution de sévérité. Gamma uniquement pour l'instant.}
+
+\item{ko}{borne pour l'optimisation numérique de la VaR}
 }
 \description{
 Value-at-Risk of the compound Binomiale distribution

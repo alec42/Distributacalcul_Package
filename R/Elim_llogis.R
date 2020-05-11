@@ -20,10 +20,12 @@
 #'
 Elim_llogis <- function(d, shape, rate = 1/scale, scale = 1/rate)
 {
+    stopifnot(d >= 0, shape > 0, rate > 0)
+
     scale *
         gamma(1 + 1/shape) *
         gamma(1 - 1/shape) *
-        pbeta(q = (d^shape)/(scale^shape + d^shape),
+        stats::pbeta(q = (d^shape)/(scale^shape + d^shape),
               shape1 = 1 + 1/shape,
               shape2 = 1 - 1/shape) +
         (d * (scale^shape)) /

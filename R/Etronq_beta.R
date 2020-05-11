@@ -4,7 +4,11 @@
 #'  \eqn{\alpha}{alpha} and \eqn{\beta}{beta}.
 #'
 #' @templateVar d TRUE
+#' @templateVar less.than.d TRUE
 #' @template beta-template
+#'
+#' @export
+#' @importFrom stats pbeta
 #'
 #' @examples
 #'
@@ -15,9 +19,9 @@ Etronq_beta <- function(d, shape1, shape2, less.than.d = TRUE) {
     stopifnot(shape1 > 0, shape2 > 0, d >= 0, d <= 1)
 
     if (less.than.d) {
-        Etronq.beta <- E_beta(shape1, shape2) * pbeta(q = d, shape1 + 1, shape2)
+        Etronq.beta <- E_beta(shape1, shape2) * stats::pbeta(q = d, shape1 + 1, shape2)
     } else {
-        Etronq.beta <- E_beta(shape1, shape2) * pbeta(q = d, shape1 + 1, shape2, lower.tail = FALSE)
+        Etronq.beta <- E_beta(shape1, shape2) * stats::pbeta(q = d, shape1 + 1, shape2, lower.tail = FALSE)
     }
 
     return(Etronq.beta)

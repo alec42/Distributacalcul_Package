@@ -12,6 +12,8 @@ Etronq_beta(d, shape1, shape2, less.than.d = TRUE)
 \item{shape1}{shape parameter \eqn{\alpha}{alpha}, must be positive.}
 
 \item{shape2}{shape parameter \eqn{\beta}{beta}, must be positive.}
+
+\item{less.than.d}{logical; if \code{TRUE} (défaut) truncated mean for values <= d, otherwise, for values > d.}
 }
 \description{
 Truncated mean of the Beta distribution with shape parameters

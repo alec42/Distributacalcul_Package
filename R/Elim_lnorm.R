@@ -15,10 +15,11 @@
 #' Elim_lnorm(d = 2, meanlog = 2, sdlog = 5)
 #'
 Elim_lnorm <- function(d, meanlog, sdlog) {
-    esp <- exp(meanlog + (sdlog^2) / 2)
+    stopifnot(sdlog > 0, d >= 0)
+
     phi1 <- (log(d) - meanlog - sdlog^2) / sdlog
     phi2 <-  (log(d) - meanlog) / sdlog
-    (esp * pnorm(phi1)) + (d * (pnorm(phi2, lower.tail = F)))
+    E_lnorm(meanlog, sdlog) * stats::pnorm(phi1) + d * stats::pnorm(phi2, lower.tail = F)
 }
 
 

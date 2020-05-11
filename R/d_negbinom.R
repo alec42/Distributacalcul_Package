@@ -5,15 +5,12 @@
 #'  (probability of success).
 #'
 #' @templateVar k TRUE
-#' @templateVar q FALSE
-#' @templateVar kappa FALSE
-#' @templateVar lower.tail TRUE
 #' @template negbinom-template
 #'
 #' @seealso [p_negbinom()] for the cumulative probability mass function,
 #' [V_negbinom()] for the variance, and [E_negbinom()] for the mean.
 #'
-#' @export
+# @export
 #'
 #' @examples
 #'

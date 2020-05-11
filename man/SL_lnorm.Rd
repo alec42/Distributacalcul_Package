@@ -12,8 +12,6 @@ SL_lnorm(d, meanlog, sdlog)
 \item{meanlog}{mean \eqn{\mu}{mu}.}
 
 \item{sdlog}{standard deviation \eqn{\sigma}{sigma}}
-
-\item{q}{quantile.}
 }
 \description{
 Stop-loss of the Lognormal distribution with mean

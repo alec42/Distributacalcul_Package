@@ -21,16 +21,16 @@
 #' Etronq_weibull(d = 2, shape = 2, rate = 0.2, less.than.d = FALSE)
 #'
 Etronq_weibull <- function(d, shape, rate = 1 / scale, scale = 1 / rate, less.than.d = TRUE) {
-    stopifnot(shape > 0, rate > 0, kap <= 1, d >= 0)
+    stopifnot(shape > 0, rate > 0, d >= 0)
 
     if (less.than.d) {
         Etronq.weibull <- E_weibull(shape, rate) *
-            pgamma(q = d^shape,
+            stats::pgamma(q = d^shape,
                    shape = 1 + 1/shape,
                    scale = rate^shape)
     } else {
         Etronq.weibull <- E_weibull(shape, rate) *
-            pgamma(q = d^shape,
+            stats::pgamma(q = d^shape,
                    shape = 1 + 1/shape,
                    scale = rate^shape,
                    lower.tail = FALSE)

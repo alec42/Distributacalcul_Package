@@ -17,5 +17,7 @@
 #' Elim_exp(d = 2, rate = 0.25)
 #'
 Elim_exp <- function(d, rate = 1 / scale, scale = 1 / rate) {
-    pexp(q = d, rate, lower.tail = F) * E_exp(rate)
+    stopifnot(d >= 0, rate > 0)
+
+    stats::pexp(q = d, rate, lower.tail = F) * E_exp(rate)
 }

@@ -7,7 +7,7 @@
 #'
 #' @examples
 #'
-#' V_beta(d = .3, shape1 = 4, shape2 = 5)
+#' V_beta(shape1 = 4, shape2 = 5)
 #'
 V_beta <- function(shape1, shape2) {
     stopifnot(shape1 > 0, shape2 > 0)

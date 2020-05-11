@@ -8,6 +8,7 @@
 #' @template exp-template
 #'
 #' @export
+#' @importFrom stats pexp
 #'
 #' @examples
 #'
@@ -18,11 +19,12 @@
 #' Etronq_exp(d = 2, rate = 0.25, less.than.d = FALSE)
 #'
 Etronq_exp <- function(d, rate = 1 / scale, scale = 1 / rate, less.than.d = TRUE) {
+    stopifnot(d >= 0, rate > 0)
 
     if (less.than.d) {
-        Etronq.exp <- E_exp(rate) * pexp(q = d, rate) - d * pexp(q = d, rate, lower.tail = F)
+        Etronq.exp <- E_exp(rate) * stats::pexp(q = d, rate) - d * stats::pexp(q = d, rate, lower.tail = F)
     } else {
-        Etronq.exp <- E_exp(rate) * pexp(q = d, rate, lower.tail = F) + d * pexp(q = d, rate, lower.tail = F)
+        Etronq.exp <- E_exp(rate) * stats::pexp(q = d, rate, lower.tail = F) + d * stats::pexp(q = d, rate, lower.tail = F)
     }
 
     return(Etronq.exp)

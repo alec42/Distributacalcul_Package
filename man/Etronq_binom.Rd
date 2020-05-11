@@ -7,9 +7,13 @@
 Etronq_binom(d, size, prob, less.than.d = TRUE)
 }
 \arguments{
+\item{d}{cut-off value.}
+
 \item{size}{Number of trials (0 or more).}
 
 \item{prob}{Probability of success on each trial.}
+
+\item{less.than.d}{logical; if \code{TRUE} (défaut) truncated mean for values <= d, otherwise, for values > d.}
 }
 \description{
 Truncated mean of the Binomial distribution
@@ -20,14 +24,15 @@ The Binomial distribution
 }
 \examples{
 
-Etronq_binom(d = 0, size = 3, prob = 0.5, less.than.d = FALSE)
 Etronq_binom(d = 2, size = 3, prob = 0.5)
+Etronq_binom(d = 0, size = 3, prob = 0.5, less.than.d = FALSE)
 
 }
 \seealso{
 Other Binomial Distribution: 
 \code{\link{E_binom}()},
 \code{\link{MGF_binom}()},
+\code{\link{PGF_binom}()},
 \code{\link{TVaR_binom}()},
 \code{\link{V_binom}()},
 \code{\link{VaR_binom}()}

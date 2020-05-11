@@ -9,6 +9,7 @@
 #' @template erlang-template
 #'
 #' @export
+#' @importFrom stats pgamma
 #'
 #' @examples
 #'
@@ -20,8 +21,10 @@
 #'
 Elim_erlang <- function(d, shape, scale = 1 / rate, rate = 1 / scale)
 {
+    stopifnot(d >= 0, shape %% 1 == 0, rate > 0)
+
     (shape/rate) *
-        pgamma(q = d, shape = shape + 1, rate = rate) +
+        stats::pgamma(q = d, shape = shape + 1, rate = rate) +
         d *
-        pgamma(q = d, shape = shape, rate = rate, lower.tail = F)
+        stats::pgamma(q = d, shape = shape, rate = rate, lower.tail = F)
 }

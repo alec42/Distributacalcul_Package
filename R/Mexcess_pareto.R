@@ -17,7 +17,7 @@
 #' Mexcess_pareto(d = 6, shape = 5, scale = 0.5)
 #'
 Mexcess_pareto <- function(d, shape, rate = 1 / scale, scale = 1 / rate) {
-    stopifnot(shape > 1, rate > 0, d > 0)
+    stopifnot(shape > 1, rate > 0, d >= 0)
 
     E_pareto(shape, rate + d)
 }

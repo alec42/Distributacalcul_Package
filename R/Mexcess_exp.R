@@ -17,5 +17,7 @@
 #' Mexcess_exp(d = 5, rate = 0.25)
 #'
 Mexcess_exp <- function(d, rate = 1 / scale, scale = 1 / rate) {
+    stopifnot(d >= 0, rate > 0)
+
     E_exp(rate)
 }

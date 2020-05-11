@@ -14,7 +14,7 @@ TVaR_beta <- function(kap, shape1, shape2) {
     stopifnot(shape1 > 0, shape2 > 0, kap >= 0, kap <= 1)
 
     (E_beta(shape1, shape2) / (1 - kap)) *
-        pbeta(q = qbeta(p = kap, shape1, shape2, lower.tail = F),
+        stats::pbeta(q = stats::qbeta(p = kap, shape1, shape2, lower.tail = F),
               shape1 + 1,
               shape2)
 }

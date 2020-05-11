@@ -7,6 +7,8 @@
 Elim_unif(d, a, b)
 }
 \arguments{
+\item{d}{cut-off value}
+
 \item{a}{minimum}
 
 \item{b}{maximum}

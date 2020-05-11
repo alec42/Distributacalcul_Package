@@ -30,6 +30,7 @@ Other Binomial Distribution:
 \code{\link{E_binom}()},
 \code{\link{Etronq_binom}()},
 \code{\link{MGF_binom}()},
+\code{\link{PGF_binom}()},
 \code{\link{TVaR_binom}()},
 \code{\link{V_binom}()}
 }

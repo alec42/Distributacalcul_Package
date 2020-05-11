@@ -19,5 +19,7 @@
 #'
 V_erlang <- function(shape, scale = 1 / rate, rate = 1 / scale)
 {
+    stopifnot(shape %% 2 == 0, rate > 0)
+
     shape / rate^2
 }

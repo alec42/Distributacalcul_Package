@@ -6,6 +6,8 @@
 #' @templateVar k TRUE
 #' @template beta-template
 #'
+#' @export
+#'
 #' @examples
 #'
 #' kthmoment_beta(k = 3, shape1 = 4, shape2 = 5)

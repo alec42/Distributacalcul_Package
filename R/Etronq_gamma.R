@@ -8,6 +8,7 @@
 #' @template gamma-template
 #'
 #' @export
+#' @importFrom stats pgamma
 #'
 #' @examples
 #'
@@ -21,11 +22,12 @@
 #' Etronq_gamma(d = 2, shape = 3, rate = 0.25, less.than.d = FALSE)
 #'
 Etronq_gamma <- function(d, shape, rate = 1 / scale, scale = 1 / rate, less.than.d = TRUE) {
+    stopifnot(d >= 0, shape > 0, rate > 0)
 
     if (less.than.d) {
-        Etronq.gamma <- E_gamma(shape, rate) * pgamma(q = d, shape + 1, rate)
+        Etronq.gamma <- E_gamma(shape, rate) * stats::pgamma(q = d, shape + 1, rate)
     } else {
-        Etronq.gamma <- E_gamma(shape, rate) * pgamma(q = d, shape + 1, rate, lower.tail = FALSE)
+        Etronq.gamma <- E_gamma(shape, rate) * stats::pgamma(q = d, shape + 1, rate, lower.tail = FALSE)
     }
 
     return(Etronq.gamma)

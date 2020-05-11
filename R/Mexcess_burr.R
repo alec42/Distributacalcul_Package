@@ -8,6 +8,7 @@
 #' @template burr-template
 #'
 #' @export
+#' @importFrom stats pbeta
 #'
 #' @examples
 #'
@@ -28,7 +29,7 @@ Mexcess_burr <- function(d, shape1, shape2, rate = 1 / scale, scale = 1 / rate) 
         (rate ^ (shape1 - 1/shape2)) *
             gamma(shape1)
     ) *
-        pbeta(
+        stats::pbeta(
             q = (d^shape2) / (rate + (d^shape2)),
             shape1 = 1 + 1/shape2,
             shape2 = shape1 - 1/shape2,

@@ -7,6 +7,7 @@
 #' @template weibull-template
 #'
 #' @export
+#' @importFrom stats pgamma
 #'
 #' @examples
 #'
@@ -20,7 +21,7 @@ SL_weibull <- function(d, shape, rate = 1 / scale, scale = 1 / rate) {
     stopifnot(shape > 0, rate > 0, d >= 0)
 
     E_weibull(shape, rate) *
-        pgamma(q = d^shape,
+        stats::pgamma(q = d^shape,
                shape = 1 + 1/shape,
                scale = rate^shape,
                lower.tail = F) -

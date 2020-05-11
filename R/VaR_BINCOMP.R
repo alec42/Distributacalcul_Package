@@ -9,11 +9,13 @@
 #' @param distr_severity choix de distribution de sévérité. Gamma uniquement pour l'instant.
 #'
 #' @export
-VaR_BINCOMP <- function(kap, n, q, shape, rate, ko = 300, distr_severity = "Gamma")
+VaR_BINCOMP <- function(kap, n, q, shape, rate, distr_severity = "Gamma", ko)
 {
-    require(stats)
+    stopifnot(kap <= 1, kap >= 0, rate > 0)
+    stopifnot(grepl(pattern = "(^Gamma$)", x = distr_severity, ignore.case = TRUE))
+
     if(kap <= p_BINCOMP(0, n = n, q = q, ko = ko, shape = shape, rate = rate))
         0
     else
-        optimize(function(i) abs(p_BINCOMP(i, n = n, q = q, ko = ko, shape = shape, rate = rate) - kap), c(0, ko))$minimum
+        stats::optimize(function(i) abs(p_BINCOMP(i, n = n, q = q, ko = ko, shape = shape, rate = rate) - kap), c(0, ko))$minimum
 }

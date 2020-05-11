@@ -5,14 +5,15 @@
 #' @param beta beta = dispersion * mu^2
 #' @param dispersion dispersion = beta / mu^2
 #' @export
+#' @importFrom stats pnorm
 SL_IG <- function(d, mu, beta = dispersion * mu^2, dispersion = beta / mu^2)
 {
     (mu - d) *
-        pnorm(q = (d - mu) *
+        stats::pnorm(q = (d - mu) *
                   sqrt(1 / (beta * d)),
               lower.tail = F) +
         (d + mu) *
         exp(2 * mu / beta) *
-        pnorm(q = - (d + mu) *
+        stats::pnorm(q = - (d + mu) *
                   sqrt(1 / (beta * d)))
 }

@@ -15,7 +15,7 @@
 #'
 TVaR_norm <- function(kap, mean = 0, sd = 1) {
     fact_tvar <- 1 / (1 - kap)
-    exposant <- (qnorm(p = kap, mean = mean, sd = sd))^2
+    exposant <- (stats::qnorm(p = kap, mean = mean, sd = sd))^2
     mean + fact_tvar * sd * (1 / sqrt(2 * pi)) * exp(-exposant/2)
 }
 

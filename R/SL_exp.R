@@ -7,6 +7,7 @@
 #' @template exp-template
 #'
 #' @export
+#' @importFrom stats pexp
 #'
 #' @examples
 #'
@@ -17,5 +18,7 @@
 #' SL_exp(d = 2, rate = 0.25)
 #'
 SL_exp <- function(d, rate = 1 / scale, scale = 1 / rate) {
-    E_exp(rate) * pexp(q = d, rate, lower.tail = FALSE)
+    stopifnot(d >= 0, rate > 0)
+
+    E_exp(rate) * stats::pexp(q = d, rate, lower.tail = FALSE)
 }

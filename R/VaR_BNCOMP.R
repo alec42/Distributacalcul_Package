@@ -21,6 +21,6 @@ VaR_BNCOMP <- function(kap, size, prob, shape, rate, distr_severity = "Gamma", k
     if (kap <= p_BNCOMP(x = 0, size, prob, shape, rate, ko = ko, distr_severity = distr_severity)) {
         0
     } else {
-        optimize(function(i) abs(p_BNCOMP(i, size, prob, ko, shape, rate) - kap), c(0, ko))$minimum
+        stats::optimize(function(i) abs(p_BNCOMP(i, size, prob, ko, shape, rate) - kap), c(0, ko))$minimum
     }
 }

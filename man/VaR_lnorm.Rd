@@ -12,8 +12,6 @@ VaR_lnorm(kap, meanlog, sdlog)
 \item{meanlog}{mean \eqn{\mu}{mu}.}
 
 \item{sdlog}{standard deviation \eqn{\sigma}{sigma}}
-
-\item{q}{quantile.}
 }
 \description{
 Value-at-Risk of the Lognormal distribution with mean

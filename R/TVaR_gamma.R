@@ -18,5 +18,5 @@
 #'
 TVaR_gamma <- function(kap, shape, rate = 1 / scale, scale = 1 / rate) {
     (E_gamma(shape, rate) / (1 - kap)) *
-        pgamma(q = VaR_gamma(kap, shape, rate), shape = shape + 1, rate = rate, lower.tail = F)
+        stats::pgamma(q = VaR_gamma(kap, shape, rate), shape = shape + 1, rate = rate, lower.tail = F)
 }

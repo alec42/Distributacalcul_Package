@@ -4,7 +4,7 @@
 \alias{VaR_PCOMP}
 \title{Value-at-Risk d'une loi poisson composée}
 \usage{
-VaR_PCOMP(kap, lambda, shape, rate, ko = 300, distr_severity = "Gamma")
+VaR_PCOMP(kap, lambda, shape, rate, distr_severity = "Gamma", ko)
 }
 \arguments{
 \item{kap}{niveau de confiance désiré}
@@ -15,9 +15,9 @@ VaR_PCOMP(kap, lambda, shape, rate, ko = 300, distr_severity = "Gamma")
 
 \item{rate}{beta pour la Gamma}
 
-\item{ko}{borne pour l'optimisation de la VaR}
-
 \item{distr_severity}{choix de distribution de sévérité.}
+
+\item{ko}{borne pour l'optimisation de la VaR}
 }
 \description{
 Value-at-Risk d'une loi poisson composée

@@ -4,8 +4,6 @@
 #'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 #'
 #' @templateVar k TRUE
-#' @templateVar q FALSE
-#' @templateVar kappa FALSE
 #' @template lnorm-template
 #'
 #' @export
@@ -15,5 +13,7 @@
 #' kthmoment_lnorm(k = 2, meanlog = 3, sdlog = 5)
 #'
 kthmoment_lnorm <- function(k, meanlog, sdlog) {
+    stopifnot(sdlog > 0)
+
     exp(meanlog * k + k^2 * (sdlog^2) / 2)
 }

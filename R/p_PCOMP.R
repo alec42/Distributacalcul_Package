@@ -6,16 +6,11 @@
 #' @param ko borne pour la sommation de la fonction de répartition
 #' @param distr_severity choix de distribution de sévérité.
 #' @export
+#' @importFrom stats dpois
 p_PCOMP <- function(x, lambda, shape, rate, ko = 300, distr_severity = "Gamma"){
 
-    require(stats)
     if(distr_severity == "Gamma")
     {
-        (dpois(x = 0, lambda) + sum(sapply(1:ko, function(k) dpois(x = k, lambda) * pgamma(q = x, shape * k, rate))))
+        (stats::dpois(x = 0, lambda) + sum(sapply(1:ko, function(k) stats::dpois(x = k, lambda) * stats::pgamma(q = x, shape * k, rate))))
     }
-    # pas bon
-    # else if (distr_severity == "Lognormale")
-    # {
-    #     dpois(x = 0, lambda) + sum(sapply(1:ko, function(k) dpois(x = k, lambda) * plnorm(q = x, meanlog = shape * k, sdlog = sqrt(rate))))
-    # }
 }

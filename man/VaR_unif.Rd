@@ -9,6 +9,8 @@ VaR_unif(kap, min, max)
 \arguments{
 \item{kap}{probability.}
 
+\item{min}{minimum}
+
 \item{max}{maximum}
 }
 \description{

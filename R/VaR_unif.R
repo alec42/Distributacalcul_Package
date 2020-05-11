@@ -4,7 +4,7 @@
 #'  parameters \eqn{\alpha}{alpha} and \eqn{\beta}{beta}.
 #'
 #' @param kap probability.
-#' @param max maximum
+#' @param min minimum
 #' @param max maximum
 # @templateVar kap TRUE
 # @template uniform-template

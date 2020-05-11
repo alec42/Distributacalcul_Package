@@ -9,6 +9,7 @@
 #' @template burr-template
 #'
 #' @export
+#' @importFrom stats pbeta
 #'
 #' @examples
 #'
@@ -26,12 +27,12 @@ Etronq_burr <- function(d, shape1, shape2, rate = 1 / scale, scale = 1 / rate, l
 
     if (less.than.d) {
         Etronq.burr <- E_burr(shape1, shape2, rate) *
-            pbeta(q = (d^shape2 / (rate + (d^shape2))),
+            stats::pbeta(q = (d^shape2 / (rate + (d^shape2))),
                   shape1 = 1 + 1/shape2,
                   shape2 = shape1 - 1/shape2)
     } else {
         Etronq.burr <- E_burr(shape1, shape2, rate) *
-            pbeta(q = (d^shape2 / (rate + (d^shape2))),
+            stats::pbeta(q = (d^shape2 / (rate + (d^shape2))),
                   shape1 = 1 + 1/shape2,
                   shape2 = shape1 - 1/shape2,
                   lower.tail = FALSE)

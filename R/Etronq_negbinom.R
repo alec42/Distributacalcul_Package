@@ -6,7 +6,7 @@
 #'
 #' @template negbinom-template
 #'
-#' @export
+# @export
 #'
 #' @examples
 #'

@@ -20,6 +20,8 @@
 #'
 kthmoment_erlang <- function(k, shape = 1 / rate, scale, rate = 1 / scale)
 {
+    stopifnot(shape %% 1 == 0, rate > 0) # k ?
+
     prod(sapply(0:(k - 1), function(i) (shape + i))) /
         (rate^k)
 }

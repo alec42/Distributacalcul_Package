@@ -7,6 +7,7 @@
 #' @template weibull-template
 #'
 #' @export
+#' @importFrom stats pgamma
 #'
 #' @examples
 #'
@@ -21,7 +22,7 @@ Mexcess_weibull <- function(d, shape, rate = 1 / scale, scale = 1 / rate) {
 
     exp((rate * d)^shape) *
         E_weibull(shape, rate) *
-        pgamma(q = d^shape,
+        stats::pgamma(q = d^shape,
                shape = 1 + 1/shape,
                scale = rate^shape,
                lower.tail = F) -

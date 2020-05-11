@@ -3,7 +3,6 @@
 #' @description Tail Value-at-Risk of the Binomial distribution with size
 #'  \eqn{n}{n} and probability of success \eqn{p}{p}.
 #'
-#' @templateVar q FALSE
 #' @templateVar kap TRUE
 #' @template binom-template
 #'
@@ -15,10 +14,10 @@
 #'
 TVaR_binom <- function(kap, size, prob) {
     k <- 0:size
-    fx <- dbinom(x = k, size, prob)
-    vark <- qbinom(p = kap, size, prob)
+    fx <- stats::dbinom(x = k, size, prob)
+    vark <- stats::qbinom(p = kap, size, prob)
 
     (Etronq_binom(d = vark, size, prob, less.than.d = FALSE) +
-            vark * (pbinom(vark, size, prob) - kap)) /
+            vark * (stats::pbinom(vark, size, prob) - kap)) /
         (1 - kap)
 }

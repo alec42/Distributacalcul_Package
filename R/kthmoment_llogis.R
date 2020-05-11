@@ -18,6 +18,8 @@
 #' # With rate parameter
 #' kthmoment_llogis(k = 2, shape = 3, rate = 0.2)
 #'
-kthmoment_llogis <- function(k = 1, shape, rate = 1/scale, scale = 1/rate) {
+kthmoment_llogis <- function(k, shape, rate = 1/scale, scale = 1/rate) {
+    stopifnot(rate > 0, scale > 0)
+
     scale^k * gamma(1 + k/shape) * gamma(1 - k/shape)
 }

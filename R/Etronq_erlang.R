@@ -20,6 +20,8 @@
 #'
 Etronq_erlang <- function(d, shape, scale = 1 / rate, rate = 1 / scale)
 {
+    stopifnot(d >= 0, shape %% 1 == 0, rate > 0)
+
     shape/rate * (1 - exp(-rate * d) *
                       sum(sapply(0:shape, function(j) ((rate * d)^j)/factorial(j))))
 }

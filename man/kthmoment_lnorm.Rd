@@ -12,8 +12,6 @@ kthmoment_lnorm(k, meanlog, sdlog)
 \item{meanlog}{mean \eqn{\mu}{mu}.}
 
 \item{sdlog}{standard deviation \eqn{\sigma}{sigma}}
-
-\item{q}{quantile.}
 }
 \description{
 kth moment of the Logormal distribution with mean

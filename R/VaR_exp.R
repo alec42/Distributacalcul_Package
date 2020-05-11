@@ -17,7 +17,7 @@
 #' VaR_exp(kap = .99, rate = 0.25)
 #'
 VaR_exp <- function(kap, rate = 1 / scale, scale = 1 / rate) {
-    stopifnot(kap >= 0, kap <= 1, rate > 0, shape > 0)
+    stopifnot(kap >= 0, kap <= 1, rate > 0)
 
     E_exp(rate) * -log(1 - kap)
 }

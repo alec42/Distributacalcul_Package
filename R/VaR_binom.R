@@ -3,7 +3,6 @@
 #' @description Value-at-Risk of the Binomial distribution with size
 #'  \eqn{n}{n} and probability of success \eqn{p}{p}. Wrapper of qbinom.
 #'
-#' @templateVar q FALSE
 #' @templateVar kap TRUE
 #' @template binom-template
 #'
@@ -14,5 +13,5 @@
 #' @export
 #'
 VaR_binom <- function(kap, size, prob) {
-    qbinom(p = kap, size, prob)
+    stats::qbinom(p = kap, size, prob)
 }

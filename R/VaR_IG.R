@@ -10,6 +10,5 @@
 #' @export
 VaR_IG <- function(kap, mu, beta = dispersion * mu^2, dispersion = beta / mu^2)
 {
-    require("actuar")
-    qinvgauss(p = kap, mean = mu, dispersion = dispersion)
+    actuar::qinvgauss(p = kap, mean = mu, dispersion = dispersion)
 }

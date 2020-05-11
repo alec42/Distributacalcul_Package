@@ -6,5 +6,5 @@
 #' @export
 Elim_IG <- function(d, mu, beta = dispersion * mu^2, dispersion = beta / mu^2)
 {
-    levinvgauss(limit = d, mean = mu, dispersion = dispersion, order = 1)
+    actuar::levinvgauss(limit = d, mean = mu, dispersion = dispersion, order = 1)
 }

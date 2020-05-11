@@ -17,5 +17,7 @@
 #' kthmoment_exp(k = 2, rate = 0.25)
 #'
 kthmoment_exp <- function(k, rate = 1 / scale, scale = 1 / rate) {
+    stopifnot(rate > 0)
+
     scale^k * factorial(k)
 }

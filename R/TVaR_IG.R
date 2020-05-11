@@ -17,7 +17,7 @@ TVaR_IG <- function(kap, mu, beta = dispersion * mu^2, dispersion = beta / mu^2,
         (1/(1 - kap)) *
         (
             (2 * vark - mu) *
-                pnorm(q = ((vark - mu) *
+                stats::pnorm(q = ((vark - mu) *
                                sqrt(1 / (beta * vark)))
                 )
         )

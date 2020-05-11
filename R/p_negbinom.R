@@ -13,7 +13,7 @@
 #' @seealso [d_negbinom()] for the probability mass function, [V_negbinom()]
 #'  for the variance, and [E_negbinom()] for the mean.
 #'
-#' @export
+# @export
 #'
 #' @examples
 #'

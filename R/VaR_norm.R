@@ -14,7 +14,7 @@
 #' VaR_norm(kap = 0.8, mean = 3, sd = 5)
 #'
 VaR_norm <- function(kap, mean = 0, sd = 1) {
-    qnorm(p = kap, mean = mean, sd = sd)
+    stats::qnorm(p = kap, mean = mean, sd = sd)
 }
 
 

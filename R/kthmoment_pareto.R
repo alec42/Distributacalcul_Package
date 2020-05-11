@@ -20,7 +20,7 @@ kthmoment_pareto <- function(k, shape, rate = 1 / scale, scale = 1 / rate) {
     stopifnot(shape > 0, rate > 0, shape > k)
 
     if (k %% 1 == 0 && k > 0) {
-        kthmoment.pareto <- (rate^k * factorial(k))/prod(shape - seq(from = 1, to = k, by = 1))
+        kthmoment.pareto <- (rate^k * factorial(k)) / prod(shape - seq(from = 1, to = k, by = 1))
     } else if (k > -1) {
         kthmoment.pareto <- (rate^k * gamma(k + 1) * gamma(shape - k))/gamma(shape)
     }

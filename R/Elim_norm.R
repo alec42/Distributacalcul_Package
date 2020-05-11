@@ -15,7 +15,9 @@
 #' Elim_norm(d = 2, mean = 2, sd = 5)
 #'
 Elim_norm <- function(d, mean = 0, sd = 1) {
+    stopifnot(sd > 0)
+
     phi1 <- (d - mean) / sd
     fact_norm <- (sd / sqrt(2*pi)) * exp(-phi1^2 / 2)
-    mean * pnorm(phi1) - fact_norm + d*(pnorm(phi1, lower.tail = F))
+    mean * stats::pnorm(phi1) - fact_norm + d*stats::pnorm(phi1, lower.tail = F)
 }

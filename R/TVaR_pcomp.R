@@ -9,7 +9,8 @@
 #' @param distr_severity choix de distribution de sévérité.
 #' @details Cette formule nécessite la formule de la VaR_pcomp (déjà installée avec le package tvarPackage). Cette formule utilise aussi un choix de (présentement) 2 distributions pour la sévérité; soit la Gamma ou la Lognormale.
 #' @export
-TVaR_PCOMP <- function(kap, lambda, shape, rate, vark, ko = 300, distr_severity = "Gamma")
+#' @importFrom stats pgamma dpois
+TVaR_PCOMP <- function(kap, lambda, shape, rate, vark, distr_severity = "Gamma", k0)
 {
     require(stats)
     if (vark == 0)
@@ -18,7 +19,7 @@ TVaR_PCOMP <- function(kap, lambda, shape, rate, vark, ko = 300, distr_severity 
     }
     else if (distr_severity == "Gamma")
     {
-        sum(sapply(1:ko, function(k) dpois(x = k, lambda) * ( shape * k )/rate * pgamma(q = vark, shape = shape * k + 1, rate, lower.tail = F)))/(1 - kap)
+        sum(sapply(1:k0, function(k) stats::dpois(x = k, lambda) * ( shape * k )/rate * stats::pgamma(q = vark, shape = shape * k + 1, rate, lower.tail = F)))/(1 - kap)
     }
 
 }

@@ -4,7 +4,7 @@
 \alias{TVaR_PCOMP}
 \title{Tail Value-at-Risk d'une loi poisson composée}
 \usage{
-TVaR_PCOMP(kap, lambda, shape, rate, vark, ko = 300, distr_severity = "Gamma")
+TVaR_PCOMP(kap, lambda, shape, rate, vark, distr_severity = "Gamma", k0)
 }
 \arguments{
 \item{kap}{Desired confidence level}

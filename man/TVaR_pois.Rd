@@ -4,14 +4,14 @@
 \alias{TVaR_pois}
 \title{Tail Value-at-Risk of the Poisson distribution}
 \usage{
-TVaR_pois(kappa, lambda, k0)
+TVaR_pois(kap, lambda, k0)
 }
 \arguments{
+\item{kap}{probability.}
+
 \item{lambda}{Rate parameter \eqn{\lambda}{lambda}.}
 
-\item{q}{quantile.}
-
-\item{kap}{probability.}
+\item{k0}{point up to which to sum the distribution to approximate the expected value.}
 }
 \description{
 Tail Value-at-Risk of the Poisson distribution with rate parameter
@@ -22,7 +22,7 @@ Tail Value-at-Risk of the Poisson distribution with rate parameter
 }
 \examples{
 
-TVaR_pois(kappa = 0.8, lambda = 3, k0 = 2E2)
+TVaR_pois(kap = 0.8, lambda = 3, k0 = 2E2)
 
 }
 \seealso{

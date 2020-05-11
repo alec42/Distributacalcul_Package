@@ -22,7 +22,7 @@ TVaR_llogis <- function(kap, shape, rate = 1/scale, scale = 1/rate)
     scale / (1 - kap) *
         gamma(1 + 1/shape) *
         gamma(1 - 1/shape) *
-        pbeta(q = kap,
+        stats::pbeta(q = kap,
               shape1 = 1 + 1/shape,
               shape2 = 1 - 1/shape,
               lower.tail = F)

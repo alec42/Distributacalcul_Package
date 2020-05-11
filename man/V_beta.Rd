@@ -25,7 +25,7 @@ The Beta distribution with shape parameters \eqn{\alpha}{a} and
 }
 \examples{
 
-V_beta(d = .3, shape1 = 4, shape2 = 5)
+V_beta(shape1 = 4, shape2 = 5)
 
 }
 \seealso{

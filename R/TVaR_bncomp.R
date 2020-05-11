@@ -19,12 +19,12 @@ TVaR_BNCOMP <- function(kap, vark, size, prob, shape, rate, distr_severity = "Ga
     stopifnot(grepl(pattern = "(^Gamma$)|(^Lognormal[e]*$)", x = distr_severity, ignore.case = TRUE))
 
     if (vark == 0) {
-        TVaR.BNCOMP <- E_BNComp(size, prob, shape, rate, distr_severity) / (1 - kap)
+        TVaR.BNCOMP <- E_BNCOMP(size, prob, shape, rate, distr_severity) / (1 - kap)
     } else if (grepl(pattern = "^Gamma$", x = distr_severity, ignore.case = TRUE)) {
         TVaR.BNCOMP <- sum(sapply(1:ko, function(i)
-            dnbinom(x = i, size = size, prob = prob) *
+            stats::dnbinom(x = i, size = size, prob = prob) *
                 E_gamma(shape, rate) *
-                pgamma(q = vark, shape = shape * i + 1, rate = rate, lower.tail = F))
+                stats::pgamma(q = vark, shape = shape * i + 1, rate = rate, lower.tail = F))
             ) / (1 - kap)
     } else {
         stop("Please enter a valid distribution choice. 'Gamma'")

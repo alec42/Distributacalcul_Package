@@ -20,6 +20,8 @@
 #'
 perlang <- function(q, shape, scale = 1 / rate, rate = 1 / scale, lower.tail = TRUE)
 {
+    stopifnot(q >= 0, shape %% 1 == 0, rate > 0)
+
     Fx <- exp(-rate * q) *
         sum(sapply(0:(shape - 1), function(j) ((rate * q)^j) / factorial(j)))
 

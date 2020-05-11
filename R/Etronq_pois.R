@@ -4,7 +4,8 @@
 #'  \eqn{\lambda}{lambda}.
 #'
 #' @templateVar d TRUE
-#' @templateVar q FALSE
+#' @templateVar less.than.d TRUE
+#' @templateVar k0 TRUE
 #' @template pois-template
 #'
 #' @export
@@ -15,8 +16,9 @@
 #' Etronq_pois(d = 2, lambda = 2, k0 = 2E2, less.than.d = TRUE)
 #'
 Etronq_pois <- function(d, lambda, k0, less.than.d = TRUE) {
+    stopifnot(lambda > 0)
     k <- 0:k0 # valeurs possibles
-    fx <- dpois(x = k, lambda = lambda)
+    fx <- stats::dpois(x = k, lambda = lambda)
 
     if (less.than.d) {
         Etronq.approx <- sum((k * fx)[k <= d])

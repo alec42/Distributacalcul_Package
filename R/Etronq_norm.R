@@ -9,6 +9,7 @@
 #' @template norm-template
 #'
 #' @export
+#' @importFrom stats pnorm
 #'
 #' @examples
 #'
@@ -16,6 +17,6 @@
 #'
 Etronq_norm <- function(d, mean = 0, sd = 1) {
     phi1 <- (d - mean) / sd
-    mean * pnorm(phi1) -
+    mean * stats::pnorm(phi1) -
         (sd / sqrt(2*pi)) * exp(-phi1^2 / 2)
 }

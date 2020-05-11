@@ -13,7 +13,7 @@
 Elim_beta <- function(d, shape1, shape2) {
     stopifnot(shape1 > 0, shape2 > 0, d >= 0, d <= 1)
 
-    E_beta(shape1, shape2) * pbeta(q = d, shape1 + 1, shape2) +
-        shape2 * pbeta(q = d, shape1, shape2, lower.tail = F)
+    E_beta(shape1, shape2) * stats::pbeta(q = d, shape1 + 1, shape2) +
+        shape2 * stats::pbeta(q = d, shape1, shape2, lower.tail = F)
 }
 

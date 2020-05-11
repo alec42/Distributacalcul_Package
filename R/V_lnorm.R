@@ -3,8 +3,6 @@
 #' @description Variance of the Lognormal distribution with mean
 #'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 #'
-#' @templateVar q FALSE
-#' @templateVar kappa FALSE
 #' @template lnorm-template
 #'
 #' @examples

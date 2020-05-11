@@ -7,6 +7,7 @@
 #' @template gamma-template
 #'
 #' @export
+#' @importFrom stats pgamma
 #'
 #' @examples
 #'
@@ -17,7 +18,9 @@
 #' Mexcess_gamma(d = 2, shape = 3, rate = 0.25)
 #'
 Mexcess_gamma <- function(d, shape, rate = 1 / scale, scale = 1 / rate) {
+    stopifnot(d >= 0, shape > 0, rate > 0)
+
     E_gamma(shape, rate) *
-        (pgamma(d, shape + 1, rate, lower.tail = F) / pgamma(d, shape, rate, lower.tail = F)) -
+        stats::pgamma(d, shape + 1, rate, lower.tail = F) / stats::pgamma(d, shape, rate, lower.tail = F) -
         d
 }

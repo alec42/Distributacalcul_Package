@@ -3,8 +3,6 @@
 #' @description Expected value of the Binomial distribution with size
 #'  \eqn{n}{n} and probability of success \eqn{p}{p}.
 #'
-#' @templateVar q FALSE
-#' @templateVar kappa FALSE
 #' @template binom-template
 #'
 #' @examples

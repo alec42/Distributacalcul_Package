@@ -12,8 +12,6 @@ Etronq_lnorm(d, meanlog, sdlog)
 \item{meanlog}{mean \eqn{\mu}{mu}.}
 
 \item{sdlog}{standard deviation \eqn{\sigma}{sigma}}
-
-\item{q}{quantile.}
 }
 \description{
 Truncated mean of the Logormal distribution with mean
