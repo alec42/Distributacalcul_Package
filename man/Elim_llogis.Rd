@@ -2,7 +2,7 @@
 % Please edit documentation in R/Elim_llogis.R
 \name{Elim_llogis}
 \alias{Elim_llogis}
-\title{Limited Mean of the Loglogistic distribution}
+\title{Limited mean of the Loglogistic distribution}
 \usage{
 Elim_llogis(d, shape, rate = 1/scale, scale = 1/rate)
 }
@@ -16,7 +16,7 @@ Elim_llogis(d, shape, rate = 1/scale, scale = 1/rate)
 \item{scale}{\eqn{\lambda}{lambda} rate parameter, must be positive.}
 }
 \description{
-Limited expected value of the Loglogistic distribution with shape parameter
+Limited mean of the Loglogistic distribution with shape parameter
  \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.
 }
 \details{

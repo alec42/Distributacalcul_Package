@@ -2,7 +2,7 @@
 % Please edit documentation in R/Etronq_erlang.R
 \name{Etronq_erlang}
 \alias{Etronq_erlang}
-\title{Truncated Mean of the Erlang Distribution}
+\title{Truncated mean of the Erlang distribution}
 \usage{
 Etronq_erlang(d, shape, scale = 1/rate, rate = 1/scale)
 }

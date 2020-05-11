@@ -2,7 +2,7 @@
 % Please edit documentation in R/VaR_BNCOMP.R
 \name{VaR_BNCOMP}
 \alias{VaR_BNCOMP}
-\title{Value-at-risk d'une loi binomiale négative composée}
+\title{Value-at-Risk d'une loi binomiale négative composée}
 \usage{
 VaR_BNCOMP(kap, size, prob, shape, rate, distr_severity = "Gamma", ko)
 }
@@ -22,7 +22,7 @@ VaR_BNCOMP(kap, size, prob, shape, rate, distr_severity = "Gamma", ko)
 \item{ko}{borne pour la somme dans le calcul de la TVaR.}
 }
 \description{
-Value-at-risk d'une loi binomiale négative composée
+Value-at-Risk d'une loi binomiale négative composée
 }
 \examples{
 

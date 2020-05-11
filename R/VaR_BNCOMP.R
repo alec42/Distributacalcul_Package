@@ -1,4 +1,4 @@
-#' Value-at-risk d'une loi binomiale négative composée
+#' Value-at-Risk d'une loi binomiale négative composée
 #'
 #' @param kap Niveau de confiance désiré
 #' @param size r pour la binomiale négative

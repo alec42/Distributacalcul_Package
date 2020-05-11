@@ -2,7 +2,7 @@
 % Please edit documentation in R/TVaR_llogis.R
 \name{TVaR_llogis}
 \alias{TVaR_llogis}
-\title{Tail Value-at-Risk of the Loglogistic Distribution}
+\title{Tail Value-at-Risk of the Loglogistic distribution}
 \usage{
 TVaR_llogis(kap, shape, rate = 1/scale, scale = 1/rate)
 }

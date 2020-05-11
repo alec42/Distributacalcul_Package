@@ -2,7 +2,7 @@
 % Please edit documentation in R/TVaR_BNCOMP.R
 \name{TVaR_BNCOMP}
 \alias{TVaR_BNCOMP}
-\title{Tail Value-at-risk d'une loi binomiale négative composée}
+\title{Tail Value-at-Risk d'une loi binomiale négative composée}
 \usage{
 TVaR_BNCOMP(kap, vark, size, prob, shape, rate, distr_severity = "Gamma", ko)
 }
@@ -24,7 +24,7 @@ TVaR_BNCOMP(kap, vark, size, prob, shape, rate, distr_severity = "Gamma", ko)
 \item{ko}{borne pour la somme dans le calcul de la TVaR.}
 }
 \description{
-Tail Value-at-risk d'une loi binomiale négative composée
+Tail Value-at-Risk d'une loi binomiale négative composée
 }
 \details{
 Cette formule nécessite la formule de la VaR_bncomp (déjà installée avec le package tvarPackage). Cette formule utilise aussi un choix de (présentement) 2 distributions pour la sévérité; soit la Gamma ou la Lognormale.

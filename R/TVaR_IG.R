@@ -1,4 +1,5 @@
-#' Tail Value-at-risk d'une loi inverse gaussienne
+#' Tail Value-at-Risk d'une loi inverse gaussienne
+#'
 #' @param kap Niveau de confiance désiré
 #' @param mu mu
 #' @param beta beta, = dispersion * mu^2

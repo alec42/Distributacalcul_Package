@@ -2,7 +2,7 @@
 % Please edit documentation in R/Etronq_norm.R
 \name{Etronq_norm}
 \alias{Etronq_norm}
-\title{Truncated Mean of the Normal Distribution}
+\title{Truncated mean of the Normal distribution}
 \usage{
 Etronq_norm(d, mean = 0, sd = 1)
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/TVaRtx_gompertz.R
 \name{TVaRtx_gompertz}
 \alias{TVaRtx_gompertz}
-\title{Tail Value-at-risk de Tx pour la loi Gompertz}
+\title{Tail Value-at-Risk de Tx pour la loi Gompertz}
 \usage{
 TVaRtx_gompertz(kap, x = 0, beta, gam)
 }
@@ -16,7 +16,7 @@ TVaRtx_gompertz(kap, x = 0, beta, gam)
 \item{gam}{paramètre gamma}
 }
 \description{
-Tail Value-at-risk de Tx pour la loi Gompertz
+Tail Value-at-Risk de Tx pour la loi Gompertz
 }
 \details{
 Cette fonction nécessite d'avoir loadé le package `tvarPackage` au complet, car elle fait appel à une autre fonction (celle équivalente à la VaR) `qgompertz`.

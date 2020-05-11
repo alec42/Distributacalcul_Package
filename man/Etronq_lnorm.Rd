@@ -2,7 +2,7 @@
 % Please edit documentation in R/Etronq_lnorm.R
 \name{Etronq_lnorm}
 \alias{Etronq_lnorm}
-\title{Truncated Mean of the Lognormal distribution}
+\title{Truncated mean of the Lognormal distribution}
 \usage{
 Etronq_lnorm(d, meanlog, sdlog)
 }

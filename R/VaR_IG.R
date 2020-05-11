@@ -1,4 +1,4 @@
-#' Value-at-risk of the Inverse Gaussian distribution
+#' Value-at-Risk of the Inverse Gaussian distribution
 #'
 #' @details Wrapper pour avoir une notation cohérente avec le reste des fonctions IG, mais utilise la fonction de densité du package ACTUAR.
 #'

@@ -2,7 +2,7 @@
 % Please edit documentation in R/kthmoment_erlang.R
 \name{kthmoment_erlang}
 \alias{kthmoment_erlang}
-\title{kth Moment of the Erlang Distribution}
+\title{kth moment of the Erlang distribution}
 \usage{
 kthmoment_erlang(k, shape = 1/rate, scale, rate = 1/scale)
 }
@@ -16,7 +16,7 @@ kthmoment_erlang(k, shape = 1/rate, scale, rate = 1/scale)
 \item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
 }
 \description{
-kth-moment of the Erlang distribution with shape parameter \eqn{n}
+kth moment of the Erlang distribution with shape parameter \eqn{n}
  and rate parameter \eqn{\beta}{beta}.
 }
 \details{

@@ -1,4 +1,4 @@
-#' Stop-Loss of the Erlang Distribution
+#' Stop-loss of the Erlang distribution
 #'
 #' @description Stop-loss of the Erlang distribution with shape
 #'  parameter \eqn{n} and rate parameter \eqn{\beta}{beta}.

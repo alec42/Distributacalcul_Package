@@ -1,6 +1,6 @@
 #' Limited mean of the Weibull distribution
 #'
-#' @description Limited expected value of the Weibull distribution with shape
+#' @description Limited mean of the Weibull distribution with shape
 #'  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
 #'
 #' @templateVar d TRUE

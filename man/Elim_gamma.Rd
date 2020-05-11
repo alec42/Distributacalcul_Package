@@ -2,7 +2,7 @@
 % Please edit documentation in R/Elim_gamma.R
 \name{Elim_gamma}
 \alias{Elim_gamma}
-\title{Limited Mean of the Gamma distribution}
+\title{Limited mean of the Gamma distribution}
 \usage{
 Elim_gamma(d, shape, rate = 1/scale, scale = 1/rate)
 }
@@ -16,7 +16,7 @@ Elim_gamma(d, shape, rate = 1/scale, scale = 1/rate)
 \item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-Limited Mean of the Gamma distribution with shape
+Limited mean of the Gamma distribution with shape
  parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
 }
 \details{

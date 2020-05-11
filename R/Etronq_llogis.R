@@ -1,4 +1,4 @@
-#' Truncated Mean of the Loglogistic distribution
+#' Truncated mean of the Loglogistic distribution
 #'
 #' @description Truncated mean of the Loglogistic distribution with shape parameter
 #'  \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.

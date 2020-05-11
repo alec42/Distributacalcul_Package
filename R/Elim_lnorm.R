@@ -1,6 +1,6 @@
-#' Limited Mean of the Lognormal distribution
+#' Limited mean of the Lognormal distribution
 #'
-#' @description Limited expected value of the Lognormal distribution with mean
+#' @description Limited mean of the Lognormal distribution with mean
 #'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 #'
 #' @templateVar d TRUE

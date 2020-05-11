@@ -1,4 +1,4 @@
-#' Truncated Mean of the Normal Distribution
+#' Truncated mean of the Normal distribution
 #'
 #' @description Truncated mean of the Normal distribution with mean
 #'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.

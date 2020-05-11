@@ -1,4 +1,5 @@
-#' Fonction de répartition d'une loi poisson composée
+#' Value-at-Risk d'une loi poisson composée
+#'
 #' @param kap niveau de confiance désiré
 #' @param lambda paramètre lambda pour la poisson
 #' @param shape alpha pour la Gamma

@@ -2,7 +2,7 @@
 % Please edit documentation in R/kthmoment_gamma.R
 \name{kthmoment_gamma}
 \alias{kthmoment_gamma}
-\title{kth Moment of the Gamma distribution}
+\title{kth moment of the Gamma distribution}
 \usage{
 kthmoment_gamma(k, shape, rate = 1/scale, scale = 1/rate)
 }
@@ -16,7 +16,7 @@ kthmoment_gamma(k, shape, rate = 1/scale, scale = 1/rate)
 \item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-kth Moment of the Gamma distribution with shape
+kth moment of the Gamma distribution with shape
  parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
 }
 \details{

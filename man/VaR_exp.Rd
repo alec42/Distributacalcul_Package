@@ -2,7 +2,7 @@
 % Please edit documentation in R/VaR_exp.R
 \name{VaR_exp}
 \alias{VaR_exp}
-\title{Value-at-risk of the Exponential distribution}
+\title{Value-at-Risk of the Exponential distribution}
 \usage{
 VaR_exp(kap, rate = 1/scale, scale = 1/rate)
 }

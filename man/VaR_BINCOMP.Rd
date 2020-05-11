@@ -2,7 +2,7 @@
 % Please edit documentation in R/VaR_BINCOMP.R
 \name{VaR_BINCOMP}
 \alias{VaR_BINCOMP}
-\title{Value-at-risk of the compound Binomiale distribution}
+\title{Value-at-Risk of the compound Binomiale distribution}
 \usage{
 VaR_BINCOMP(kap, n, q, shape, rate, ko = 300, distr_severity = "Gamma")
 }
@@ -22,5 +22,5 @@ VaR_BINCOMP(kap, n, q, shape, rate, ko = 300, distr_severity = "Gamma")
 \item{distr_severity}{choix de distribution de sévérité. Gamma uniquement pour l'instant.}
 }
 \description{
-Value-at-risk of the compound Binomiale distribution
+Value-at-Risk of the compound Binomiale distribution
 }

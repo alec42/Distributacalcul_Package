@@ -2,7 +2,7 @@
 % Please edit documentation in R/Elim_erlang.R
 \name{Elim_erlang}
 \alias{Elim_erlang}
-\title{Limited Mean of the Erlang Distribution}
+\title{Limited mean of the Erlang distribution}
 \usage{
 Elim_erlang(d, shape, scale = 1/rate, rate = 1/scale)
 }
@@ -16,7 +16,7 @@ Elim_erlang(d, shape, scale = 1/rate, rate = 1/scale)
 \item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
 }
 \description{
-Limited expected value of the Erlang distribution with shape
+Limited mean of the Erlang distribution with shape
  parameter \eqn{n} and rate parameter \eqn{\beta}{beta}.
 }
 \details{

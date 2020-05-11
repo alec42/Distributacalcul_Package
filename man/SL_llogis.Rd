@@ -2,7 +2,7 @@
 % Please edit documentation in R/SL_llogis.R
 \name{SL_llogis}
 \alias{SL_llogis}
-\title{Stop-loss of the Loglogistic Distribution}
+\title{Stop-loss of the Loglogistic distribution}
 \usage{
 SL_llogis(d, shape, rate = 1/scale, scale = 1/rate)
 }

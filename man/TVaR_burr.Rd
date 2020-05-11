@@ -2,7 +2,7 @@
 % Please edit documentation in R/TVaR_burr.R
 \name{TVaR_burr}
 \alias{TVaR_burr}
-\title{Tail Value-at-Risk of the Burr Distribution}
+\title{Tail Value-at-Risk of the Burr distribution}
 \usage{
 TVaR_burr(kap, shape1, shape2, rate = 1/scale, scale = 1/rate)
 }

@@ -1,6 +1,6 @@
-#' Limited Mean of the Burr Distribution
+#' Limited mean of the Burr distribution
 #'
-#' @description Limited expected value of the Burr distribution with shape
+#' @description Limited mean of the Burr distribution with shape
 #'  \eqn{\alpha}{alpha} (shape1) and \eqn{\tau}{tau} (shape2) as well as
 #'  rate parameter \eqn{\lambda}{lambda}.
 #'

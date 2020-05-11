@@ -1,6 +1,6 @@
-#' kth Moment of the Gamma distribution
+#' kth moment of the Gamma distribution
 #'
-#' @description kth Moment of the Gamma distribution with shape
+#' @description kth moment of the Gamma distribution with shape
 #'  parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
 #'
 #' @templateVar k TRUE

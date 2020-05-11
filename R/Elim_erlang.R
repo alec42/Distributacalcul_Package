@@ -1,6 +1,6 @@
-#' Limited Mean of the Erlang Distribution
+#' Limited mean of the Erlang distribution
 #'
-#' @description Limited expected value of the Erlang distribution with shape
+#' @description Limited mean of the Erlang distribution with shape
 #'  parameter \eqn{n} and rate parameter \eqn{\beta}{beta}.
 #'
 #' @templateVar d TRUE

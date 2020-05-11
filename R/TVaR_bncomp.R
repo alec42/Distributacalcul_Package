@@ -1,4 +1,4 @@
-#' Tail Value-at-risk d'une loi binomiale négative composée
+#' Tail Value-at-Risk d'une loi binomiale négative composée
 #'
 #' @details Cette formule nécessite la formule de la VaR_bncomp (déjà installée avec le package tvarPackage). Cette formule utilise aussi un choix de (présentement) 2 distributions pour la sévérité; soit la Gamma ou la Lognormale.
 #'

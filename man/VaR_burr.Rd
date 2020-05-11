@@ -2,7 +2,7 @@
 % Please edit documentation in R/VaR_burr.R
 \name{VaR_burr}
 \alias{VaR_burr}
-\title{Value-at-Risk of the Burr Distribution}
+\title{Value-at-Risk of the Burr distribution}
 \usage{
 VaR_burr(kap, shape1, shape2, rate = 1/scale, scale = 1/rate)
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/Elim_norm.R
 \name{Elim_norm}
 \alias{Elim_norm}
-\title{Limited Mean of the Normal distribution}
+\title{Limited mean of the Normal distribution}
 \usage{
 Elim_norm(d, mean = 0, sd = 1)
 }
@@ -14,7 +14,7 @@ Elim_norm(d, mean = 0, sd = 1)
 \item{sd}{standard deviation \eqn{\sigma}{sigma}}
 }
 \description{
-Limited expected value of the Normal distribution with mean
+Limited mean of the Normal distribution with mean
  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 }
 \details{

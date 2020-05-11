@@ -2,7 +2,7 @@
 % Please edit documentation in R/TVaR_erlang.R
 \name{.TVaR_erlang}
 \alias{.TVaR_erlang}
-\title{Tail Value-at-Risk of the Erlang Distribution}
+\title{Tail Value-at-Risk of the Erlang distribution}
 \usage{
 .TVaR_erlang(kap, shape, scale = 1/rate, rate = 1/scale, vark)
 }

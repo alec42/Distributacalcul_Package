@@ -2,7 +2,7 @@
 % Please edit documentation in R/Etronq_llogis.R
 \name{Etronq_llogis}
 \alias{Etronq_llogis}
-\title{Truncated Mean of the Loglogistic distribution}
+\title{Truncated mean of the Loglogistic distribution}
 \usage{
 Etronq_llogis(d, shape, rate = 1/scale, scale = 1/rate)
 }

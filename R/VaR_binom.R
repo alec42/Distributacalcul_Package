@@ -1,6 +1,6 @@
-#' Value-at-risk of the Binomial distribution
+#' Value-at-Risk of the Binomial distribution
 #'
-#' @description Value-at-risk of the Binomial distribution with size
+#' @description Value-at-Risk of the Binomial distribution with size
 #'  \eqn{n}{n} and probability of success \eqn{p}{p}. Wrapper of qbinom.
 #'
 #' @templateVar q FALSE

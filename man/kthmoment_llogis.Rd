@@ -2,7 +2,7 @@
 % Please edit documentation in R/kthmoment_llogis.R
 \name{kthmoment_llogis}
 \alias{kthmoment_llogis}
-\title{Limited Mean of the Loglogistic distribution}
+\title{kth moment of the Loglogistic distribution}
 \usage{
 kthmoment_llogis(k = 1, shape, rate = 1/scale, scale = 1/rate)
 }
@@ -16,7 +16,7 @@ kthmoment_llogis(k = 1, shape, rate = 1/scale, scale = 1/rate)
 \item{scale}{\eqn{\lambda}{lambda} rate parameter, must be positive.}
 }
 \description{
-Limited expected value of the Loglogistic distribution with shape parameter
+kth moment of the Loglogistic distribution with shape parameter
  \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.
 }
 \details{

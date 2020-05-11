@@ -2,7 +2,7 @@
 % Please edit documentation in R/TVaR_pois.R
 \name{TVaR_pois}
 \alias{TVaR_pois}
-\title{Tail Value-at-risk of the Poisson distribution}
+\title{Tail Value-at-Risk of the Poisson distribution}
 \usage{
 TVaR_pois(kappa, lambda, k0)
 }

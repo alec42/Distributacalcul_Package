@@ -2,7 +2,7 @@
 % Please edit documentation in R/SL_erlang.R
 \name{SL_erlang}
 \alias{SL_erlang}
-\title{Stop-Loss of the Erlang Distribution}
+\title{Stop-loss of the Erlang distribution}
 \usage{
 SL_erlang(d, shape, scale = 1/rate, rate = 1/scale)
 }

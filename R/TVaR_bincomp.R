@@ -1,4 +1,5 @@
-#' Tail Value-at-risk d'une loi binomiale composée
+#' Tail Value-at-Risk d'une loi binomiale composée
+#'
 #' @param kap Niveau de confiance désiré
 #' @param n n pour la binomiale
 #' @param q probabilité q pour la binomiale

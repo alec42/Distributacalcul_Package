@@ -1,4 +1,4 @@
-#' Stop-loss of the Loglogistic Distribution
+#' Stop-loss of the Loglogistic distribution
 #'
 #' @description Stop-loss of the Loglogistic distribution with shape parameter
 #'  \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.

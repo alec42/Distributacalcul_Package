@@ -1,4 +1,4 @@
-#' Value-at-risk of the Exponential distribution
+#' Value-at-Risk of the Exponential distribution
 #'
 #' @description Value-at-Risk of the Exponential distribution with rate
 #'   parameter \eqn{\beta}{beta}.

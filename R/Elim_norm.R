@@ -1,6 +1,6 @@
-#' Limited Mean of the Normal distribution
+#' Limited mean of the Normal distribution
 #'
-#' @description Limited expected value of the Normal distribution with mean
+#' @description Limited mean of the Normal distribution with mean
 #'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 #'
 #' @templateVar d TRUE

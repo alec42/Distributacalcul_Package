@@ -1,4 +1,4 @@
-#' Tail Value-at-Risk of the Loglogistic Distribution
+#' Tail Value-at-Risk of the Loglogistic distribution
 #'
 #' @description Tail Value-at-Risk of the Loglogistic distribution with shape parameter
 #'  \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.

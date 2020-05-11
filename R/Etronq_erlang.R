@@ -1,4 +1,4 @@
-#' Truncated Mean of the Erlang Distribution
+#' Truncated mean of the Erlang distribution
 #'
 #' @description Truncated mean of the Erlang distribution with shape parameter
 #'  \eqn{n} and rate parameter \eqn{\beta}{beta}.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/Elim_lnorm.R
 \name{Elim_lnorm}
 \alias{Elim_lnorm}
-\title{Limited Mean of the Lognormal distribution}
+\title{Limited mean of the Lognormal distribution}
 \usage{
 Elim_lnorm(d, meanlog, sdlog)
 }
@@ -16,7 +16,7 @@ Elim_lnorm(d, meanlog, sdlog)
 \item{q}{quantile.}
 }
 \description{
-Limited expected value of the Lognormal distribution with mean
+Limited mean of the Lognormal distribution with mean
  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 }
 \details{

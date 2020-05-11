@@ -2,7 +2,7 @@
 % Please edit documentation in R/TVaR_binom.R
 \name{TVaR_binom}
 \alias{TVaR_binom}
-\title{Tail Value-at-risk of the Binomial distribution}
+\title{Tail Value-at-Risk of the Binomial distribution}
 \usage{
 TVaR_binom(kap, size, prob)
 }
@@ -14,7 +14,7 @@ TVaR_binom(kap, size, prob)
 \item{prob}{Probability of success on each trial.}
 }
 \description{
-Tail Value-at-risk of the Binomial distribution with size
+Tail Value-at-Risk of the Binomial distribution with size
  \eqn{n}{n} and probability of success \eqn{p}{p}.
 }
 \details{

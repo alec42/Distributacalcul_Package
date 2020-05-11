@@ -1,4 +1,4 @@
-#' kth koment of the Weibull distribution
+#' kth moment of the Weibull distribution
 #'
 #' @description kth moment of the Weibull distribution with shape parameter
 #'  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.

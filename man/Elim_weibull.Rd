@@ -16,7 +16,7 @@ Elim_weibull(d, shape, rate = 1/scale, scale = 1/rate)
 \item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-Limited expected value of the Weibull distribution with shape
+Limited mean of the Weibull distribution with shape
  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
 }
 \details{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/VaR_PCOMP.R
 \name{VaR_PCOMP}
 \alias{VaR_PCOMP}
-\title{Fonction de répartition d'une loi poisson composée}
+\title{Value-at-Risk d'une loi poisson composée}
 \usage{
 VaR_PCOMP(kap, lambda, shape, rate, ko = 300, distr_severity = "Gamma")
 }
@@ -20,5 +20,5 @@ VaR_PCOMP(kap, lambda, shape, rate, ko = 300, distr_severity = "Gamma")
 \item{distr_severity}{choix de distribution de sévérité.}
 }
 \description{
-Fonction de répartition d'une loi poisson composée
+Value-at-Risk d'une loi poisson composée
 }

@@ -1,4 +1,4 @@
-#' Value-at-Risk of the Burr Distribution
+#' Value-at-Risk of the Burr distribution
 #'
 #' @description Value-at-Risk of the Burr distribution with shape parameters
 #'  \eqn{\alpha}{alpha} (shape1) and \eqn{\tau}{tau} (shape2) as well as rate

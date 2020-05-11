@@ -1,4 +1,4 @@
-#' Tail Value-at-risk de Tx pour la loi Gompertz
+#' Tail Value-at-Risk de Tx pour la loi Gompertz
 #' @param kap niveau de confiance pour l'évaluation de la TVaR
 #' @param x l'âge atteint de l'assuré.
 #' @param beta paramètre beta

@@ -1,4 +1,4 @@
-#' Stop-Loss d'une loi uniforme
+#' Stop-loss d'une loi uniforme
 #' @param a minimum
 #' @param b maximum
 #' @export

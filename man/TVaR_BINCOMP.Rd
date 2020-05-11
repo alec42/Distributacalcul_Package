@@ -2,7 +2,7 @@
 % Please edit documentation in R/TVaR_BINCOMP.R
 \name{TVaR_BINCOMP}
 \alias{TVaR_BINCOMP}
-\title{Tail Value-at-risk d'une loi binomiale composée}
+\title{Tail Value-at-Risk d'une loi binomiale composée}
 \usage{
 TVaR_BINCOMP(kap, n, q, shape, rate, vark, ko, distr_severity = "Gamma")
 }
@@ -24,7 +24,7 @@ TVaR_BINCOMP(kap, n, q, shape, rate, vark, ko, distr_severity = "Gamma")
 \item{distr_severity}{choix de distribution de sévérité}
 }
 \description{
-Tail Value-at-risk d'une loi binomiale composée
+Tail Value-at-Risk d'une loi binomiale composée
 }
 \details{
 Cette formule nécessite la formule de la VaR_bincomp (déjà installée avec le package tvarPackage). Cette formule utilise aussi un choix de (présentement) 2 distributions pour la sévérité; soit la Gamma ou la Lognormale.

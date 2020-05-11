@@ -1,6 +1,6 @@
-#' Limited Mean of the Gamma distribution
+#' Limited mean of the Gamma distribution
 #'
-#' @description Limited Mean of the Gamma distribution with shape
+#' @description Limited mean of the Gamma distribution with shape
 #'  parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
 #'
 #' @templateVar d TRUE

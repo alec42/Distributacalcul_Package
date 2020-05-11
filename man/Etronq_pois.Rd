@@ -2,7 +2,7 @@
 % Please edit documentation in R/Etronq_pois.R
 \name{Etronq_pois}
 \alias{Etronq_pois}
-\title{Truncated Mean of the Poisson distribution}
+\title{Truncated mean of the Poisson distribution}
 \usage{
 Etronq_pois(d, lambda, k0, less.than.d = TRUE)
 }

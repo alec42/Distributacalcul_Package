@@ -2,7 +2,7 @@
 % Please edit documentation in R/Etronq_binom.R
 \name{Etronq_binom}
 \alias{Etronq_binom}
-\title{Truncated Mean of the Binomial distribution}
+\title{Truncated mean of the Binomial distribution}
 \usage{
 Etronq_binom(d, size, prob, less.than.d = TRUE)
 }
@@ -12,7 +12,7 @@ Etronq_binom(d, size, prob, less.than.d = TRUE)
 \item{prob}{Probability of success on each trial.}
 }
 \description{
-Truncated Mean of the Binomial distribution
+Truncated mean of the Binomial distribution
   with size \eqn{n}{n} and probability of success \eqn{p}{p}.
 }
 \details{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/Elim_burr.R
 \name{Elim_burr}
 \alias{Elim_burr}
-\title{Limited Mean of the Burr Distribution}
+\title{Limited mean of the Burr distribution}
 \usage{
 Elim_burr(d, shape1, shape2, rate = 1/scale, scale = 1/rate)
 }
@@ -18,7 +18,7 @@ Elim_burr(d, shape1, shape2, rate = 1/scale, scale = 1/rate)
 \item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-Limited expected value of the Burr distribution with shape
+Limited mean of the Burr distribution with shape
  \eqn{\alpha}{alpha} (shape1) and \eqn{\tau}{tau} (shape2) as well as
  rate parameter \eqn{\lambda}{lambda}.
 }

@@ -1,4 +1,4 @@
-#' Tail Value-at-risk of the Poisson distribution
+#' Tail Value-at-Risk of the Poisson distribution
 #'
 #' @description Tail Value-at-Risk of the Poisson distribution with rate parameter
 #'  \eqn{\lambda}{lambda}.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/VaR_binom.R
 \name{VaR_binom}
 \alias{VaR_binom}
-\title{Value-at-risk of the Binomial distribution}
+\title{Value-at-Risk of the Binomial distribution}
 \usage{
 VaR_binom(kap, size, prob)
 }
@@ -14,7 +14,7 @@ VaR_binom(kap, size, prob)
 \item{prob}{Probability of success on each trial.}
 }
 \description{
-Value-at-risk of the Binomial distribution with size
+Value-at-Risk of the Binomial distribution with size
  \eqn{n}{n} and probability of success \eqn{p}{p}. Wrapper of qbinom.
 }
 \details{

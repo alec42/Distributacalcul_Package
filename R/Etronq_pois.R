@@ -1,4 +1,4 @@
-#' Truncated Mean of the Poisson distribution
+#' Truncated mean of the Poisson distribution
 #'
 #' @description Truncated mean of the Poisson distribution with rate parameter
 #'  \eqn{\lambda}{lambda}.

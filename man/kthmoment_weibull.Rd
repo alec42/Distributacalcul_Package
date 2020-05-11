@@ -2,7 +2,7 @@
 % Please edit documentation in R/kthmoment_weibull.R
 \name{kthmoment_weibull}
 \alias{kthmoment_weibull}
-\title{kth koment of the Weibull distribution}
+\title{kth moment of the Weibull distribution}
 \usage{
 kthmoment_weibull(k, shape, rate = 1/scale, scale = 1/rate)
 }

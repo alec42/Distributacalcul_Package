@@ -1,6 +1,6 @@
-#' Truncated Mean of the Binomial distribution
+#' Truncated mean of the Binomial distribution
 #'
-#' @description Truncated Mean of the Binomial distribution
+#' @description Truncated mean of the Binomial distribution
 #'   with size \eqn{n}{n} and probability of success \eqn{p}{p}.
 #'
 #' @templateVar q FALSE

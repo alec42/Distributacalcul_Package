@@ -2,7 +2,7 @@
 % Please edit documentation in R/Etronq_burr.R
 \name{Etronq_burr}
 \alias{Etronq_burr}
-\title{Truncated Mean of the Burr Distribution}
+\title{Truncated mean of the Burr distribution}
 \usage{
 Etronq_burr(
   d,

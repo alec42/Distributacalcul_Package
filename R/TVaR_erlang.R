@@ -1,4 +1,4 @@
-#' Tail Value-at-Risk of the Erlang Distribution
+#' Tail Value-at-Risk of the Erlang distribution
 #'
 #' @description Tail Value-at-Risk of the Erlang distribution with shape
 #'  parameter \eqn{n} and rate parameter \eqn{\beta}{beta}.

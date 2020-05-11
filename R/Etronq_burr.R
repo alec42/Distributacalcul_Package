@@ -1,4 +1,4 @@
-#' Truncated Mean of the Burr Distribution
+#' Truncated mean of the Burr distribution
 #'
 #' @description Truncated mean of the Burr distribution with shape parameters
 #'  \eqn{\alpha}{alpha} (shape1) and \eqn{\tau}{tau} (shape2) as well as rate

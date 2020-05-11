@@ -1,6 +1,6 @@
-#' Tail Value-at-risk of the Binomial distribution
+#' Tail Value-at-Risk of the Binomial distribution
 #'
-#' @description Tail Value-at-risk of the Binomial distribution with size
+#' @description Tail Value-at-Risk of the Binomial distribution with size
 #'  \eqn{n}{n} and probability of success \eqn{p}{p}.
 #'
 #' @templateVar q FALSE

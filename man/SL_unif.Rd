@@ -2,7 +2,7 @@
 % Please edit documentation in R/SL_unif.R
 \name{SL_unif}
 \alias{SL_unif}
-\title{Stop-Loss d'une loi uniforme}
+\title{Stop-loss d'une loi uniforme}
 \usage{
 SL_unif(d, a, b)
 }
@@ -12,5 +12,5 @@ SL_unif(d, a, b)
 \item{b}{maximum}
 }
 \description{
-Stop-Loss d'une loi uniforme
+Stop-loss d'une loi uniforme
 }

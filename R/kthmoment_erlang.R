@@ -1,6 +1,6 @@
-#' kth Moment of the Erlang Distribution
+#' kth moment of the Erlang distribution
 #'
-#' @description kth-moment of the Erlang distribution with shape parameter \eqn{n}
+#' @description kth moment of the Erlang distribution with shape parameter \eqn{n}
 #'  and rate parameter \eqn{\beta}{beta}.
 #'
 #' @templateVar k TRUE

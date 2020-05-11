@@ -1,4 +1,4 @@
-#' Value-at-risk of the compound Binomiale distribution
+#' Value-at-Risk of the compound Binomiale distribution
 #'
 #' @param kap Niveau de confiance désiré
 #' @param n n pour la binomiale

@@ -1,4 +1,5 @@
-#' Tail Value-at-risk d'une loi poisson composée
+#' Tail Value-at-Risk d'une loi poisson composée
+#'
 #' @param kap Desired confidence level
 #' @param vark Value at Risk (VaR) calculé au même niveau de confiance kap
 #' @param lambda lambda rate paramter

@@ -2,7 +2,7 @@
 % Please edit documentation in R/SL_burr.R
 \name{SL_burr}
 \alias{SL_burr}
-\title{Stop-loss of the Burr Distribution}
+\title{Stop-loss of the Burr distribution}
 \usage{
 SL_burr(d, shape1, shape2, rate = 1/scale, scale = 1/rate)
 }
@@ -18,7 +18,7 @@ SL_burr(d, shape1, shape2, rate = 1/scale, scale = 1/rate)
 \item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-Stop loss of the Burr distribution with shape parameters
+Stop-loss of the Burr distribution with shape parameters
  \eqn{\alpha}{alpha} (shape1) and \eqn{\tau}{tau} (shape2) as well as rate
  parameter \eqn{\lambda}{lambda}.
 }
