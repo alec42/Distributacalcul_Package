@@ -2,9 +2,9 @@
 % Please edit documentation in R/Etronq_weibull.R
 \name{Etronq_weibull}
 \alias{Etronq_weibull}
-\title{Truncated Mean of the Weibull Distribution}
+\title{Truncated mean of the Weibull distribution}
 \usage{
-Etronq_weibull(d, shape, rate = 1/scale, scale = 1/rate)
+Etronq_weibull(d, shape, rate = 1/scale, scale = 1/rate, less.than.d = TRUE)
 }
 \arguments{
 \item{d}{cut-off value.}
@@ -14,6 +14,8 @@ Etronq_weibull(d, shape, rate = 1/scale, scale = 1/rate)
 \item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
 
 \item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
+
+\item{less.than.d}{logical; if \code{TRUE} (défaut) truncated mean for values <= d, otherwise, for values > d.}
 }
 \description{
 Truncated mean of the Weibull distribution with shape parameter
@@ -34,6 +36,9 @@ Etronq_weibull(d = 2, shape = 2, scale = 5)
 
 # With rate parameter
 Etronq_weibull(d = 2, shape = 2, rate = 0.2)
+
+# Mean of values greater than d
+Etronq_weibull(d = 2, shape = 2, rate = 0.2, less.than.d = FALSE)
 
 }
 \seealso{

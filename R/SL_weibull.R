@@ -1,6 +1,6 @@
-#' Stop-loss of the Weibull Distribution
+#' Stop-loss of the Weibull distribution
 #'
-#' @description Stop loss of the Weibull distribution with shape parameter
+#' @description Stop-loss of the Weibull distribution with shape parameter
 #'  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
 #'
 #' @templateVar d TRUE
@@ -16,10 +16,10 @@
 #' # With rate parameter
 #' SL_weibull(d = 2, shape = 3, rate = 0.25)
 #'
-SL_weibull <- function(d, shape, rate = 1 / scale, scale = 1 / rate)
-{
-    1 / rate *
-        gamma(1 + 1/shape) *
+SL_weibull <- function(d, shape, rate = 1 / scale, scale = 1 / rate) {
+    stopifnot(shape > 0, rate > 0, d >= 0)
+
+    E_weibull(shape, rate) *
         pgamma(q = d^shape,
                shape = 1 + 1/shape,
                scale = rate^shape,

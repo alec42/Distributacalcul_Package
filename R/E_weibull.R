@@ -16,6 +16,8 @@
 #' E_weibull(shape = 2, rate = 0.2)
 #'
 E_weibull <- function(shape, rate = 1 / scale, scale = 1 / rate) {
+    stopifnot(shape > 0, rate > 0)
+
     1 / (rate) *
         gamma(1 + 1 / shape)
 }

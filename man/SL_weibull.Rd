@@ -2,7 +2,7 @@
 % Please edit documentation in R/SL_weibull.R
 \name{SL_weibull}
 \alias{SL_weibull}
-\title{Stop-loss of the Weibull Distribution}
+\title{Stop-loss of the Weibull distribution}
 \usage{
 SL_weibull(d, shape, rate = 1/scale, scale = 1/rate)
 }
@@ -16,7 +16,7 @@ SL_weibull(d, shape, rate = 1/scale, scale = 1/rate)
 \item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-Stop loss of the Weibull distribution with shape parameter
+Stop-loss of the Weibull distribution with shape parameter
  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
 }
 \details{

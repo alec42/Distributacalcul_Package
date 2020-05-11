@@ -17,8 +17,10 @@
 #' Mexcess_weibull(d = 2, shape = 3, rate = 0.25)
 #'
 Mexcess_weibull <- function(d, shape, rate = 1 / scale, scale = 1 / rate) {
-    exp((rate * d)^shape) / rate *
-        gamma(1 + 1/shape) *
+    stopifnot(shape > 0, rate > 0, d >= 0)
+
+    exp((rate * d)^shape) *
+        E_weibull(shape, rate) *
         pgamma(q = d^shape,
                shape = 1 + 1/shape,
                scale = rate^shape,

@@ -2,9 +2,9 @@
 % Please edit documentation in R/kthmoment_weibull.R
 \name{kthmoment_weibull}
 \alias{kthmoment_weibull}
-\title{kth Moment of the Weibull Distribution}
+\title{kth koment of the Weibull distribution}
 \usage{
-kthmoment_weibull(k = 1, shape, rate = 1/scale, scale = 1/rate)
+kthmoment_weibull(k, shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
 \item{k}{kth-moment.}
@@ -16,7 +16,7 @@ kthmoment_weibull(k = 1, shape, rate = 1/scale, scale = 1/rate)
 \item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-kth-moment of the Weibull distribution with shape parameter
+kth moment of the Weibull distribution with shape parameter
  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
 }
 \details{

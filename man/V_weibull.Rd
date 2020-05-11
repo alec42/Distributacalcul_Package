@@ -2,7 +2,7 @@
 % Please edit documentation in R/V_weibull.R
 \name{V_weibull}
 \alias{V_weibull}
-\title{Variance of the Weibull Distribution}
+\title{Variance of the Weibull distribution}
 \usage{
 V_weibull(shape, rate = 1/scale, scale = 1/rate)
 }

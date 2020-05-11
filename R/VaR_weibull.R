@@ -17,5 +17,9 @@
 #' VaR_weibull(kap = .2, shape = 3, rate = 0.25)
 #'
 VaR_weibull <- function(kap, shape, rate = 1 / scale, scale = 1 / rate) {
-    1 / rate * (-log(1 - kap))^(1/shape)
+    stopifnot(shape > 0, rate > 0, kap <= 1, kap >= 0)
+
+    1 /
+        rate *
+        (-log(1 - kap))^(1/shape)
 }

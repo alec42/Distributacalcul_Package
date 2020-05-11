@@ -5,6 +5,7 @@
 #' <%=ifelse(exists("d"), "@param d cut-off value.", "") %>
 #' <%=ifelse(exists("k"), "@param k kth-moment.", "") %>
 #' <%=ifelse(exists("kap"), "@param kap probability.", "") %>
+#' <%=ifelse(exists("less.than.d"), "@param less.than.d logical; if \\code{TRUE} (défaut) truncated mean for values <= d, otherwise, for values > d.", "") %>
 #'
 #' @details
 #'  The Weibull distribution with shape parameter \eqn{\tau}{t} and rate parameter
