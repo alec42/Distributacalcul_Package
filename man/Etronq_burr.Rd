@@ -4,7 +4,14 @@
 \alias{Etronq_burr}
 \title{Truncated Mean of the Burr Distribution}
 \usage{
-Etronq_burr(d, shape1, shape2, rate = 1/scale, scale = 1/rate)
+Etronq_burr(
+  d,
+  shape1,
+  shape2,
+  rate = 1/scale,
+  scale = 1/rate,
+  less.than.d = TRUE
+)
 }
 \arguments{
 \item{d}{cut-off value.}
@@ -16,11 +23,13 @@ Etronq_burr(d, shape1, shape2, rate = 1/scale, scale = 1/rate)
 \item{rate}{\eqn{\lambda}{lambda} is the rate parameter, must be positive.}
 
 \item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
+
+\item{less.than.d}{logical; if \code{TRUE} (défaut) truncated mean for values <= d, otherwise, for values > d.}
 }
 \description{
 Truncated mean of the Burr distribution with shape parameters
- \eqn{\alpha}{alpha} (shape1) and \eqn{\tau}{tau} (shape2) as well as rate parameter
- \eqn{\lambda}{lambda}.
+ \eqn{\alpha}{alpha} (shape1) and \eqn{\tau}{tau} (shape2) as well as rate
+ parameter \eqn{\lambda}{lambda}.
 }
 \details{
 The Burr distribution with rate parameter \eqn{\lambda}{lam} as well as shape
@@ -36,13 +45,18 @@ Etronq_burr(d = 2, rate = 2, shape1 = 2, shape2 = 5)
 # With scale parameter
 Etronq_burr(d = 2, scale = 0.5, shape1 = 2, shape2 = 5)
 
+# Values greater than d
+Etronq_burr(d = 2, scale = 0.5, shape1 = 2, shape2 = 5, less.than.d = FALSE)
+
 }
 \seealso{
 Other Burr Distribution: 
+\code{\link{E_burr}()},
 \code{\link{Elim_burr}()},
 \code{\link{Mexcess_burr}()},
 \code{\link{SL_burr}()},
 \code{\link{TVaR_burr}()},
+\code{\link{V_burr}()},
 \code{\link{VaR_burr}()},
 \code{\link{kthmoment_burr}()}
 }

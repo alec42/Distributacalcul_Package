@@ -3,9 +3,10 @@
 #' @param rate \eqn{\lambda}{lambda} is the rate parameter, must be positive.
 #' @param scale alternative parameterization to rate parameter, scale = 1 / rate.
 #'
-#' <%=ifelse(exists("k") && k, "@param k kth-moment.", "") %>
-#' <%=ifelse(exists("d") && d, "@param d cut-off value.", "") %>
+#' <%=ifelse(exists("k"), "@param k kth-moment.", "") %>
+#' <%=ifelse(exists("d"), "@param d cut-off value.", "") %>
 #' <%=ifelse(exists("kap"), "@param kap probability.", "") %>
+#' <%=ifelse(exists("less.than.d"), "@param less.than.d logical; if \\code{TRUE} (défaut) truncated mean for values <= d, otherwise, for values > d.", "") %>
 #'
 #' @details
 #'  The Burr distribution with rate parameter \eqn{\lambda}{lam} as well as shape

@@ -2,17 +2,48 @@
 % Please edit documentation in R/V_burr.R
 \name{V_burr}
 \alias{V_burr}
-\title{Variance d'une loi Burr}
+\title{Variance of the Burr Distribution}
 \usage{
-V_burr(lam, alph, rho)
+V_burr(shape1, shape2, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{lam}{lambda}
+\item{shape1}{first shape parameter \eqn{\alpha}{alpha}, must be positive integer.}
 
-\item{alph}{alpha}
+\item{shape2}{second shape parameter \eqn{\tau}{tau}, must be positive integer.}
 
-\item{rho}{rho}
+\item{rate}{\eqn{\lambda}{lambda} is the rate parameter, must be positive.}
+
+\item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-Variance d'une loi Burr
+Variance of the Burr distribution with shape parameters
+ \eqn{\alpha}{alpha} (shape1) and \eqn{\tau}{tau} (shape2) as well as
+ rate parameter \eqn{\lambda}{lambda}.
 }
+\details{
+The Burr distribution with rate parameter \eqn{\lambda}{lam} as well as shape
+  parameters \eqn{\alpha}{a} and \eqn{\tau}{t} has density:
+  \deqn{f\left(x\right) = \frac{\alpha \tau \lambda^{ \alpha } x^{ \tau - 1 }}{(\lambda + x^{ \tau })^{\alpha +1}}}{f(x) = (a t lam^a x^(t - 1))/ (lam + x^t)^(a + 1)}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\alpha, \tau, \lambda > 0}{a, t, lam > 0}.
+}
+\examples{
+
+# With scale parameter
+V_burr(rate = 2, shape1 = 2, shape2 = 5)
+
+# With rate parameter
+V_burr(scale = 0.5, shape1 = 2, shape2 = 5)
+
+}
+\seealso{
+Other Burr Distribution: 
+\code{\link{E_burr}()},
+\code{\link{Elim_burr}()},
+\code{\link{Etronq_burr}()},
+\code{\link{Mexcess_burr}()},
+\code{\link{SL_burr}()},
+\code{\link{TVaR_burr}()},
+\code{\link{VaR_burr}()},
+\code{\link{kthmoment_burr}()}
+}
+\concept{Burr Distribution}

@@ -1,11 +1,11 @@
 #' Truncated Mean of the Burr Distribution
 #'
 #' @description Truncated mean of the Burr distribution with shape parameters
-#'  \eqn{\alpha}{alpha} (shape1) and \eqn{\tau}{tau} (shape2) as well as rate parameter
-#'  \eqn{\lambda}{lambda}.
+#'  \eqn{\alpha}{alpha} (shape1) and \eqn{\tau}{tau} (shape2) as well as rate
+#'  parameter \eqn{\lambda}{lambda}.
 #'
 #' @templateVar d TRUE
-#' @templateVar kappa FALSE
+#' @templateVar less.than.d TRUE
 #' @template burr-template
 #'
 #' @export
@@ -18,12 +18,25 @@
 #' # With scale parameter
 #' Etronq_burr(d = 2, scale = 0.5, shape1 = 2, shape2 = 5)
 #'
-Etronq_burr <- function(d, shape1, shape2, rate = 1 / scale, scale = 1 / rate) {
-    1/(gamma(shape1)) *
-        (rate^(1/shape2)) *
-        gamma(1 + 1/shape2) *
-        gamma(shape1 - 1/shape2) *
-        pbeta(q = (d^shape2 / (rate + (d^shape2))),
-              shape1 = 1 + 1/shape2,
-              shape2 = shape1 - 1/shape2)
+#' # Values greater than d
+#' Etronq_burr(d = 2, scale = 0.5, shape1 = 2, shape2 = 5, less.than.d = FALSE)
+#'
+Etronq_burr <- function(d, shape1, shape2, rate = 1 / scale, scale = 1 / rate, less.than.d = TRUE) {
+    stopifnot(shape1 > 0, shape2 > 0, rate > 0, d >= 0)
+
+    if (less.than.d) {
+        Etronq.burr <- E_burr(shape1, shape2, rate) *
+            pbeta(q = (d^shape2 / (rate + (d^shape2))),
+                  shape1 = 1 + 1/shape2,
+                  shape2 = shape1 - 1/shape2)
+    } else {
+        Etronq.burr <- E_burr(shape1, shape2, rate) *
+            pbeta(q = (d^shape2 / (rate + (d^shape2))),
+                  shape1 = 1 + 1/shape2,
+                  shape2 = shape1 - 1/shape2,
+                  lower.tail = F)
+    }
+
+    return(Etronq.burr)
+
 }

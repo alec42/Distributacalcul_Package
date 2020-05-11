@@ -19,7 +19,8 @@ Elim_burr(d, shape1, shape2, rate = 1/scale, scale = 1/rate)
 }
 \description{
 Limited expected value of the Burr distribution with shape
- parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
+ \eqn{\alpha}{alpha} (shape1) and \eqn{\tau}{tau} (shape2) as well as
+ rate parameter \eqn{\lambda}{lambda}.
 }
 \details{
 The Burr distribution with rate parameter \eqn{\lambda}{lam} as well as shape
@@ -38,10 +39,12 @@ Elim_burr(d = 2, scale = 0.5, shape1 = 2, shape2 = 5)
 }
 \seealso{
 Other Burr Distribution: 
+\code{\link{E_burr}()},
 \code{\link{Etronq_burr}()},
 \code{\link{Mexcess_burr}()},
 \code{\link{SL_burr}()},
 \code{\link{TVaR_burr}()},
+\code{\link{V_burr}()},
 \code{\link{VaR_burr}()},
 \code{\link{kthmoment_burr}()}
 }

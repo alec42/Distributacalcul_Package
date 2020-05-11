@@ -1,10 +1,10 @@
 #' Limited Mean of the Burr Distribution
 #'
 #' @description Limited expected value of the Burr distribution with shape
-#'  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
+#'  \eqn{\alpha}{alpha} (shape1) and \eqn{\tau}{tau} (shape2) as well as
+#'  rate parameter \eqn{\lambda}{lambda}.
 #'
 #' @templateVar d TRUE
-#' @templateVar kappa FALSE
 #' @template burr-template
 #'
 #' @export
@@ -17,8 +17,9 @@
 #' # With scale parameter
 #' Elim_burr(d = 2, scale = 0.5, shape1 = 2, shape2 = 5)
 #'
-Elim_burr <- function(d, shape1, shape2, rate = 1 / scale, scale = 1 / rate)
-{
+Elim_burr <- function(d, shape1, shape2, rate = 1 / scale, scale = 1 / rate) {
+    stopifnot(shape1 > 0, shape2 > 0, rate > 0, d >= 0)
+
     1 / gamma(shape1) *
         rate^(1/shape2) *
         gamma(1 + 1/shape2) *

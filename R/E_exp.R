@@ -16,5 +16,7 @@
 #' E_exp(rate = 0.25)
 #'
 E_exp <- function(rate = 1 / scale, scale = 1 / rate) {
+    stopifnot(shape > 0, rate > 0)
+
     scale
 }
