@@ -3,3 +3,5 @@
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+^inst/tutorials/test\.Rmd$
+^README\.Rmd$

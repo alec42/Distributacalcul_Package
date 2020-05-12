@@ -17,5 +17,7 @@
 # VaR_unif(kap = .2, min = 3, max = 4)
 #'
 VaR_unif <- function(kap, min, max) {
+    stopifnot(kap <= 1, kap >= 0, min < max)
+
     min + (max - min) * kap
 }

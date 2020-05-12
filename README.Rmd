@@ -1,0 +1,235 @@
+---
+output: 
+  md_document:
+    variant: gfm
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+library(tidyverse)
+```
+
+# Distributacalcul
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of Distributacalcul is to simplify the life of students and scientists by offering premade functions for various functions of probability distributions. Functions calculate moments of the distribution (mean, variance, kth moment) as well as the expected value of functions of the distribution (truncated mean, stop-loss, mean excess loss, etc.). In addition, the package includes some risk measures (Value-at-Risk and Tail Value-at-Risk).
+
+This package depends primarily on both the stats package and the actuar package (for the Pareto distribution). 
+
+## Installation
+
+<!-- You can install the released version of Distributacalcul from [CRAN](https://CRAN.R-project.org) with: -->
+
+<!-- ``` r -->
+<!-- install.packages("Distributacalcul") -->
+<!-- ``` -->
+
+<!-- And the development version from [GitHub](https://github.com/) with: -->
+You can install the most recent development version of Distributacalcul from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("alec42/Distributacalcul_Package")
+```
+
+## Example
+
+This is a basic example which shows you how the typical use of the functions:
+
+```{r beta-example}
+library(Distributacalcul)
+##  Various moments:
+E_beta(shape1 = 2, shape2 = 4) # E[X]
+V_beta(shape1 = 2, shape2 = 4) # V(X)
+kthmoment_beta(k = 3, shape1 = 2, shape2 = 4) # E[X^k]
+
+##  Expected value of functions:
+Elim_beta(d = 0.3, shape1 = 2, shape2 = 4) # E[min(X; d)]
+Etronq_beta(d = .3, shape1 = 2, shape2 = 4, less.than.d = TRUE) # E[X * 1_{X <= d}]
+Etronq_beta(d = .3, shape1 = 2, shape2 = 4, less.than.d = FALSE) # E[X * 1_{X > d}]
+Mexcess_beta(d = .3, shape1 = 2, shape2 = 4) # E[(X - d | X > d)]
+SL_beta(d = .3, shape1 = 2, shape2 = 4) # E[max(X - d, 0)]
+
+##  Risk measures:
+TVaR_beta(kap = 0.99, shape1 = 2, shape2 = 4) # TVaR_{k}(X)
+VaR_beta(kap = 0.99, shape1 = 2, shape2 = 4) # VaR_{k}(X) = F_X^(-1)(k)
+```
+
+## Syntax:
+
+| Function                    | Syntax                 |
+| --------------------------- | ---------------------- |
+| Mean                        | E_distribution         |
+| K-th moment                 | kthmoment_distribution |
+| Truncated mean              | Etronq_distribution    |
+| Limited expected value      | Elim_distribution      |
+| Variance                    | V_distribution         |
+| Stop-loss                   | SL_distribution        |
+| Excess of mean              | Mexcess_distribution   |
+| Moment Generating Function  | MGF_distribution       |
+| Probability Generating Function  | PGF_distribution       |
+| Density                     | ddistribution          |
+| Cumulative density function | pdistribution          |
+| Value-at-Risk (percentile)  | TVaR_distribution      |
+| Tail Value-at-Risk          | VaR_distribution       |
+
+
+#   Included distributions and functions
+
+##  Continuous distributions
+
+```{r include=FALSE}
+cont.distr.support <- cbind(
+    Erlang = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
+                  `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
+                  `Moment Generating Function` = F, 
+                  `Probability Density Function` = T, `Cumulative Probability Density Function` = T, 
+                  `Value-at-Risk` = F, `Tail Value-at-Risk` = T
+    ),
+    `Inverse Gaussian` = list(`Mean` = T, `kth moment` = F, `Variance` = T, 
+                              `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
+                              `Moment Generating Function` = T, 
+                              `Probability Density Function` = T, `Cumulative Probability Density Function` = T, 
+                              `Value-at-Risk` = T, `Tail Value-at-Risk` = T
+    ),
+    `Weibull` = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
+                     `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
+                     `Moment Generating Function` = F, 
+                     `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
+                     `Value-at-Risk` = T, `Tail Value-at-Risk` = T
+    ),
+    `Burr` = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
+                  `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
+                  `Moment Generating Function` = F, 
+                  `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
+                  `Value-at-Risk` = T, `Tail Value-at-Risk` = T
+    ),
+    `Log-logistic` = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
+                          `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
+                          `Moment Generating Function` = F, 
+                          `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
+                          `Value-at-Risk` = T, `Tail Value-at-Risk` = T
+    ),
+    `Beta` = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
+                  `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
+                  `Moment Generating Function` = F, 
+                  `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
+                  `Value-at-Risk` = T, `Tail Value-at-Risk` = T
+    ),
+    `Gamma` = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
+                   `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
+                   `Moment Generating Function` = F, 
+                   `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
+                   `Value-at-Risk` = T, `Tail Value-at-Risk` = T
+    ),
+    `Pareto` = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
+                    `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
+                    `Moment Generating Function` = F, 
+                    `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
+                    `Value-at-Risk` = T, `Tail Value-at-Risk` = T
+    ),
+    `Generalized F-distribution` = list(`Mean` = F, `kth moment` = F, `Variance` = F, 
+                                        `Truncated mean` = F, `Limited mean` = F,  `Stop-loss` = F, `Excess of mean` = F, 
+                                        `Moment Generating Function` = F, 
+                                        `Probability Density Function` = F, `Cumulative Probability Density Function` = T, 
+                                        `Value-at-Risk` = T, `Tail Value-at-Risk` = F
+    ),
+    `Lognormal` = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
+                  `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
+                  `Moment Generating Function` = F, 
+                  `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
+                  `Value-at-Risk` = T, `Tail Value-at-Risk` = T
+    ),
+    `Exponential` = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
+                  `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
+                  `Moment Generating Function` = F, 
+                  `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
+                  `Value-at-Risk` = T, `Tail Value-at-Risk` = T
+    ),
+    `Uniform` = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
+                     `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
+                     `Moment Generating Function` = F, 
+                     `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
+                     `Value-at-Risk` = T, `Tail Value-at-Risk` = T
+    ),
+    `Normal` = list(`Mean` = F, `kth moment` = F, `Variance` = F, 
+                     `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
+                     `Moment Generating Function` = F, 
+                     `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
+                     `Value-at-Risk` = T, `Tail Value-at-Risk` = T
+    )
+)
+```
+
+
+```{r}
+cont.distr.support %>% 
+    pander::pander()
+```
+
+##  Discrete distributions
+
+```{r include=FALSE}
+discr.distr.support <- cbind(
+    `Binomial` = list(`Mean` = T, `kth moment` = F, `Variance` = T, 
+                      `Truncated mean` = T, `Limited mean` = F,  `Stop-loss` = F, `Excess of mean` = F, 
+                      `Moment Generating Function` = T, `Probability Generating Function` = T, 
+                      `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
+                      `Value-at-Risk` = T, `Tail Value-at-Risk` = T
+    ),
+    `Negative Binomial` = list(`Mean` = F, `kth moment` = F, `Variance` = F, 
+                               `Truncated mean` = T, `Limited mean` = F,  `Stop-loss` = F, `Excess of mean` = F, 
+                               `Moment Generating Function` = F, `Probability Generating Function` = F, 
+                               `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
+                               `Value-at-Risk` = F, `Tail Value-at-Risk` = T
+    ),
+    `Poisson` = list(`Mean` = T, `kth moment` = F, `Variance` = T, 
+                     `Truncated mean` = T, `Limited mean` = F,  `Stop-loss` = F, `Excess of mean` = F, 
+                     `Moment Generating Function` = T, `Probability Generating Function` = T, 
+                     `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
+                     `Value-at-Risk` = T, `Tail Value-at-Risk` = T
+    ),
+    `Uniform` = list(`Mean` = T, `kth moment` = F, `Variance` = T, 
+                     `Truncated mean` = F, `Limited mean` = F,  `Stop-loss` = F, `Excess of mean` = F, 
+                     `Moment Generating Function` = F, `Probability Generating Function` = F, 
+                     `Probability Density Function` = T, `Cumulative Probability Density Function` = T, 
+                     `Value-at-Risk` = F, `Tail Value-at-Risk` = F
+    ),
+    `Logarithmic` = list(`Mean` = T, `kth moment` = F, `Variance` = T, 
+                         `Truncated mean` = F, `Limited mean` = F,  `Stop-loss` = F, `Excess of mean` = F, 
+                         `Moment Generating Function` = F, `Probability Generating Function` = F, 
+                         `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
+                         `Value-at-Risk` = F, `Tail Value-at-Risk` = F
+    ),
+    `Hypergeometric` = list(`Mean` = T, `kth moment` = F, `Variance` = T, 
+                         `Truncated mean` = F, `Limited mean` = F,  `Stop-loss` = F, `Excess of mean` = F, 
+                         `Moment Generating Function` = F, `Probability Generating Function` = F, 
+                         `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
+                         `Value-at-Risk` = F, `Tail Value-at-Risk` = F
+    )
+)
+```
+
+
+```{r}
+discr.distr.support %>% 
+    pander::pander()
+```
+
+
+# Updates
+
+| Date       | Modifications                                               |
+|:----------:|:-----------------------------------------------------------:|
+| 26/07/2019 | Initial creation of package                                 |
+| 12/09/2019 | Completion of creation of all necessary function files      |
+| 17/11/2019 | Merger of tvarPackage, beginning of documentation creation. |
