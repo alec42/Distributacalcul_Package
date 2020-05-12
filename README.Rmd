@@ -174,7 +174,9 @@ cont.distr.support <- cbind(
 ```{r Continuous-distr-table, echo=FALSE}
 cont.distr.support %>% 
     as.data.frame() %>% 
-    mutate_all(~ifelse(. == T, "X", "")) %>% 
+    rownames_to_column('names') %>% 
+    mutate_if(is.list, ~ifelse(. == T, "X", "")) %>% 
+    column_to_rownames('names') %>% 
     pander::pander()
 ```
 
@@ -225,7 +227,9 @@ discr.distr.support <- cbind(
 ```{r Discrete-distr-table, echo=FALSE}
 discr.distr.support %>% 
     as.data.frame() %>% 
-    mutate_all(~ifelse(. == T, "X", "")) %>% 
+    rownames_to_column('names') %>% 
+    mutate_if(is.list, ~ifelse(. == T, "X", "")) %>% 
+    column_to_rownames('names') %>% 
     pander::pander()
 ```
 

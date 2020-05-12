@@ -94,50 +94,111 @@ VaR_beta(kap = 0.99, shape1 = 2, shape2 = 4) # VaR_{k}(X) = F_X^(-1)(k)
 
 ## Continuous distributions
 
-| Erlang | Inverse Gaussian | Weibull | Burr | Log-logistic | Beta | Gamma |
-| :----: | :--------------: | :-----: | :--: | :----------: | :--: | :---: |
-|   X    |        X         |    X    |  X   |      X       |  X   |   X   |
-|   X    |                  |    X    |  X   |      X       |  X   |   X   |
-|   X    |        X         |    X    |  X   |      X       |  X   |   X   |
-|   X    |        X         |    X    |  X   |      X       |  X   |   X   |
-|   X    |        X         |    X    |  X   |      X       |  X   |   X   |
-|   X    |        X         |    X    |  X   |      X       |  X   |   X   |
-|   X    |        X         |    X    |  X   |      X       |  X   |   X   |
-|        |        X         |         |      |              |      |       |
-|   X    |        X         |         |      |              |      |       |
-|   X    |        X         |         |      |              |      |       |
-|        |        X         |    X    |  X   |      X       |  X   |   X   |
-|   X    |        X         |    X    |  X   |      X       |  X   |   X   |
+|                                             | Erlang | Inverse Gaussian | Weibull | Burr |
+| :-----------------------------------------: | :----: | :--------------: | :-----: | :--: |
+|                  **Mean**                   |   X    |        X         |    X    |  X   |
+|               **kth moment**                |   X    |                  |    X    |  X   |
+|                **Variance**                 |   X    |        X         |    X    |  X   |
+|             **Truncated mean**              |   X    |        X         |    X    |  X   |
+|              **Limited mean**               |   X    |        X         |    X    |  X   |
+|                **Stop-loss**                |   X    |        X         |    X    |  X   |
+|             **Excess of mean**              |   X    |        X         |    X    |  X   |
+|       **Moment Generating Function**        |        |        X         |         |      |
+|      **Probability Density Function**       |   X    |        X         |         |      |
+| **Cumulative Probability Density Function** |   X    |        X         |         |      |
+|              **Value-at-Risk**              |        |        X         |    X    |  X   |
+|           **Tail Value-at-Risk**            |   X    |        X         |    X    |  X   |
 
 Table continues
 below
 
-| Pareto | Generalized F-distribution | Lognormal | Exponential | Uniform | Normal |
-| :----: | :------------------------: | :-------: | :---------: | :-----: | :----: |
-|   X    |                            |     X     |      X      |    X    |        |
-|   X    |                            |     X     |      X      |    X    |        |
-|   X    |                            |     X     |      X      |    X    |        |
-|   X    |                            |     X     |      X      |    X    |   X    |
-|   X    |                            |     X     |      X      |    X    |   X    |
-|   X    |                            |     X     |      X      |    X    |   X    |
-|   X    |                            |     X     |      X      |    X    |   X    |
-|        |             X              |           |             |         |        |
-|   X    |             X              |     X     |      X      |    X    |   X    |
-|   X    |                            |     X     |      X      |    X    |   X    |
+|                                             | Log-logistic | Beta | Gamma | Pareto |
+| :-----------------------------------------: | :----------: | :--: | :---: | :----: |
+|                  **Mean**                   |      X       |  X   |   X   |   X    |
+|               **kth moment**                |      X       |  X   |   X   |   X    |
+|                **Variance**                 |      X       |  X   |   X   |   X    |
+|             **Truncated mean**              |      X       |  X   |   X   |   X    |
+|              **Limited mean**               |      X       |  X   |   X   |   X    |
+|                **Stop-loss**                |      X       |  X   |   X   |   X    |
+|             **Excess of mean**              |      X       |  X   |   X   |   X    |
+|       **Moment Generating Function**        |              |      |       |        |
+|      **Probability Density Function**       |              |      |       |        |
+| **Cumulative Probability Density Function** |              |      |       |        |
+|              **Value-at-Risk**              |      X       |  X   |   X   |   X    |
+|           **Tail Value-at-Risk**            |      X       |  X   |   X   |   X    |
+
+Table continues
+below
+
+|                                             | Generalized F-distribution | Lognormal |
+| :-----------------------------------------: | :------------------------: | :-------: |
+|                  **Mean**                   |                            |     X     |
+|               **kth moment**                |                            |     X     |
+|                **Variance**                 |                            |     X     |
+|             **Truncated mean**              |                            |     X     |
+|              **Limited mean**               |                            |     X     |
+|                **Stop-loss**                |                            |     X     |
+|             **Excess of mean**              |                            |     X     |
+|       **Moment Generating Function**        |                            |           |
+|      **Probability Density Function**       |                            |           |
+| **Cumulative Probability Density Function** |             X              |           |
+|              **Value-at-Risk**              |             X              |     X     |
+|           **Tail Value-at-Risk**            |                            |     X     |
+
+Table continues
+below
+
+|                                             | Exponential | Uniform | Normal |
+| :-----------------------------------------: | :---------: | :-----: | :----: |
+|                  **Mean**                   |      X      |    X    |        |
+|               **kth moment**                |      X      |    X    |        |
+|                **Variance**                 |      X      |    X    |        |
+|             **Truncated mean**              |      X      |    X    |   X    |
+|              **Limited mean**               |      X      |    X    |   X    |
+|                **Stop-loss**                |      X      |    X    |   X    |
+|             **Excess of mean**              |      X      |    X    |   X    |
+|       **Moment Generating Function**        |             |         |        |
+|      **Probability Density Function**       |             |         |        |
+| **Cumulative Probability Density Function** |             |         |        |
+|              **Value-at-Risk**              |      X      |    X    |   X    |
+|           **Tail Value-at-Risk**            |      X      |    X    |   X    |
 
 ## Discrete distributions
 
-| Binomial | Negative Binomial | Poisson | Uniform | Logarithmic | Hypergeometric |
-| :------: | :---------------: | :-----: | :-----: | :---------: | :------------: |
-|    X     |                   |    X    |    X    |      X      |       X        |
-|    X     |                   |    X    |    X    |      X      |       X        |
-|    X     |         X         |    X    |         |             |                |
-|    X     |                   |    X    |         |             |                |
-|    X     |                   |    X    |         |             |                |
-|          |                   |         |    X    |             |                |
-|          |                   |         |    X    |             |                |
-|    X     |                   |    X    |         |             |                |
-|    X     |         X         |    X    |         |             |                |
+|                                             | Binomial | Negative Binomial | Poisson |
+| :-----------------------------------------: | :------: | :---------------: | :-----: |
+|                  **Mean**                   |    X     |                   |    X    |
+|               **kth moment**                |          |                   |         |
+|                **Variance**                 |    X     |                   |    X    |
+|             **Truncated mean**              |    X     |         X         |    X    |
+|              **Limited mean**               |          |                   |         |
+|                **Stop-loss**                |          |                   |         |
+|             **Excess of mean**              |          |                   |         |
+|       **Moment Generating Function**        |    X     |                   |    X    |
+|     **Probability Generating Function**     |    X     |                   |    X    |
+|      **Probability Density Function**       |          |                   |         |
+| **Cumulative Probability Density Function** |          |                   |         |
+|              **Value-at-Risk**              |    X     |                   |    X    |
+|           **Tail Value-at-Risk**            |    X     |         X         |    X    |
+
+Table continues
+below
+
+|                                             | Uniform | Logarithmic | Hypergeometric |
+| :-----------------------------------------: | :-----: | :---------: | :------------: |
+|                  **Mean**                   |    X    |      X      |       X        |
+|               **kth moment**                |         |             |                |
+|                **Variance**                 |    X    |      X      |       X        |
+|             **Truncated mean**              |         |             |                |
+|              **Limited mean**               |         |             |                |
+|                **Stop-loss**                |         |             |                |
+|             **Excess of mean**              |         |             |                |
+|       **Moment Generating Function**        |         |             |                |
+|     **Probability Generating Function**     |         |             |                |
+|      **Probability Density Function**       |    X    |             |                |
+| **Cumulative Probability Density Function** |    X    |             |                |
+|              **Value-at-Risk**              |         |             |                |
+|           **Tail Value-at-Risk**            |         |             |                |
 
 # Updates
 
