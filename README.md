@@ -94,121 +94,50 @@ VaR_beta(kap = 0.99, shape1 = 2, shape2 = 4) # VaR_{k}(X) = F_X^(-1)(k)
 
 ## Continuous distributions
 
-``` r
-cont.distr.support %>% 
-    pander::pander()
-```
-
-|                                             | Erlang | Inverse Gaussian | Weibull | Burr  |
-| :-----------------------------------------: | :----: | :--------------: | :-----: | :---: |
-|                  **Mean**                   |  TRUE  |       TRUE       |  TRUE   | TRUE  |
-|               **kth moment**                |  TRUE  |      FALSE       |  TRUE   | TRUE  |
-|                **Variance**                 |  TRUE  |       TRUE       |  TRUE   | TRUE  |
-|             **Truncated mean**              |  TRUE  |       TRUE       |  TRUE   | TRUE  |
-|              **Limited mean**               |  TRUE  |       TRUE       |  TRUE   | TRUE  |
-|                **Stop-loss**                |  TRUE  |       TRUE       |  TRUE   | TRUE  |
-|             **Excess of mean**              |  TRUE  |       TRUE       |  TRUE   | TRUE  |
-|       **Moment Generating Function**        | FALSE  |       TRUE       |  FALSE  | FALSE |
-|      **Probability Density Function**       |  TRUE  |       TRUE       |  FALSE  | FALSE |
-| **Cumulative Probability Density Function** |  TRUE  |       TRUE       |  FALSE  | FALSE |
-|              **Value-at-Risk**              | FALSE  |       TRUE       |  TRUE   | TRUE  |
-|           **Tail Value-at-Risk**            |  TRUE  |       TRUE       |  TRUE   | TRUE  |
+| Erlang | Inverse Gaussian | Weibull | Burr | Log-logistic | Beta | Gamma |
+| :----: | :--------------: | :-----: | :--: | :----------: | :--: | :---: |
+|   X    |        X         |    X    |  X   |      X       |  X   |   X   |
+|   X    |                  |    X    |  X   |      X       |  X   |   X   |
+|   X    |        X         |    X    |  X   |      X       |  X   |   X   |
+|   X    |        X         |    X    |  X   |      X       |  X   |   X   |
+|   X    |        X         |    X    |  X   |      X       |  X   |   X   |
+|   X    |        X         |    X    |  X   |      X       |  X   |   X   |
+|   X    |        X         |    X    |  X   |      X       |  X   |   X   |
+|        |        X         |         |      |              |      |       |
+|   X    |        X         |         |      |              |      |       |
+|   X    |        X         |         |      |              |      |       |
+|        |        X         |    X    |  X   |      X       |  X   |   X   |
+|   X    |        X         |    X    |  X   |      X       |  X   |   X   |
 
 Table continues
 below
 
-|                                             | Log-logistic | Beta  | Gamma | Pareto |
-| :-----------------------------------------: | :----------: | :---: | :---: | :----: |
-|                  **Mean**                   |     TRUE     | TRUE  | TRUE  |  TRUE  |
-|               **kth moment**                |     TRUE     | TRUE  | TRUE  |  TRUE  |
-|                **Variance**                 |     TRUE     | TRUE  | TRUE  |  TRUE  |
-|             **Truncated mean**              |     TRUE     | TRUE  | TRUE  |  TRUE  |
-|              **Limited mean**               |     TRUE     | TRUE  | TRUE  |  TRUE  |
-|                **Stop-loss**                |     TRUE     | TRUE  | TRUE  |  TRUE  |
-|             **Excess of mean**              |     TRUE     | TRUE  | TRUE  |  TRUE  |
-|       **Moment Generating Function**        |    FALSE     | FALSE | FALSE | FALSE  |
-|      **Probability Density Function**       |    FALSE     | FALSE | FALSE | FALSE  |
-| **Cumulative Probability Density Function** |    FALSE     | FALSE | FALSE | FALSE  |
-|              **Value-at-Risk**              |     TRUE     | TRUE  | TRUE  |  TRUE  |
-|           **Tail Value-at-Risk**            |     TRUE     | TRUE  | TRUE  |  TRUE  |
-
-Table continues
-below
-
-|                                             | Generalized F-distribution | Lognormal |
-| :-----------------------------------------: | :------------------------: | :-------: |
-|                  **Mean**                   |           FALSE            |   TRUE    |
-|               **kth moment**                |           FALSE            |   TRUE    |
-|                **Variance**                 |           FALSE            |   TRUE    |
-|             **Truncated mean**              |           FALSE            |   TRUE    |
-|              **Limited mean**               |           FALSE            |   TRUE    |
-|                **Stop-loss**                |           FALSE            |   TRUE    |
-|             **Excess of mean**              |           FALSE            |   TRUE    |
-|       **Moment Generating Function**        |           FALSE            |   FALSE   |
-|      **Probability Density Function**       |           FALSE            |   FALSE   |
-| **Cumulative Probability Density Function** |            TRUE            |   FALSE   |
-|              **Value-at-Risk**              |            TRUE            |   TRUE    |
-|           **Tail Value-at-Risk**            |           FALSE            |   TRUE    |
-
-Table continues
-below
-
-|                                             | Exponential | Uniform | Normal |
-| :-----------------------------------------: | :---------: | :-----: | :----: |
-|                  **Mean**                   |    TRUE     |  TRUE   | FALSE  |
-|               **kth moment**                |    TRUE     |  TRUE   | FALSE  |
-|                **Variance**                 |    TRUE     |  TRUE   | FALSE  |
-|             **Truncated mean**              |    TRUE     |  TRUE   |  TRUE  |
-|              **Limited mean**               |    TRUE     |  TRUE   |  TRUE  |
-|                **Stop-loss**                |    TRUE     |  TRUE   |  TRUE  |
-|             **Excess of mean**              |    TRUE     |  TRUE   |  TRUE  |
-|       **Moment Generating Function**        |    FALSE    |  FALSE  | FALSE  |
-|      **Probability Density Function**       |    FALSE    |  FALSE  | FALSE  |
-| **Cumulative Probability Density Function** |    FALSE    |  FALSE  | FALSE  |
-|              **Value-at-Risk**              |    TRUE     |  TRUE   |  TRUE  |
-|           **Tail Value-at-Risk**            |    TRUE     |  TRUE   |  TRUE  |
+| Pareto | Generalized F-distribution | Lognormal | Exponential | Uniform | Normal |
+| :----: | :------------------------: | :-------: | :---------: | :-----: | :----: |
+|   X    |                            |     X     |      X      |    X    |        |
+|   X    |                            |     X     |      X      |    X    |        |
+|   X    |                            |     X     |      X      |    X    |        |
+|   X    |                            |     X     |      X      |    X    |   X    |
+|   X    |                            |     X     |      X      |    X    |   X    |
+|   X    |                            |     X     |      X      |    X    |   X    |
+|   X    |                            |     X     |      X      |    X    |   X    |
+|        |             X              |           |             |         |        |
+|   X    |             X              |     X     |      X      |    X    |   X    |
+|   X    |                            |     X     |      X      |    X    |   X    |
 
 ## Discrete distributions
 
-``` r
-discr.distr.support %>% 
-    pander::pander()
-```
-
-|                                             | Binomial | Negative Binomial | Poisson |
-| :-----------------------------------------: | :------: | :---------------: | :-----: |
-|                  **Mean**                   |   TRUE   |       FALSE       |  TRUE   |
-|               **kth moment**                |  FALSE   |       FALSE       |  FALSE  |
-|                **Variance**                 |   TRUE   |       FALSE       |  TRUE   |
-|             **Truncated mean**              |   TRUE   |       TRUE        |  TRUE   |
-|              **Limited mean**               |  FALSE   |       FALSE       |  FALSE  |
-|                **Stop-loss**                |  FALSE   |       FALSE       |  FALSE  |
-|             **Excess of mean**              |  FALSE   |       FALSE       |  FALSE  |
-|       **Moment Generating Function**        |   TRUE   |       FALSE       |  TRUE   |
-|     **Probability Generating Function**     |   TRUE   |       FALSE       |  TRUE   |
-|      **Probability Density Function**       |  FALSE   |       FALSE       |  FALSE  |
-| **Cumulative Probability Density Function** |  FALSE   |       FALSE       |  FALSE  |
-|              **Value-at-Risk**              |   TRUE   |       FALSE       |  TRUE   |
-|           **Tail Value-at-Risk**            |   TRUE   |       TRUE        |  TRUE   |
-
-Table continues
-below
-
-|                                             | Uniform | Logarithmic | Hypergeometric |
-| :-----------------------------------------: | :-----: | :---------: | :------------: |
-|                  **Mean**                   |  TRUE   |    TRUE     |      TRUE      |
-|               **kth moment**                |  FALSE  |    FALSE    |     FALSE      |
-|                **Variance**                 |  TRUE   |    TRUE     |      TRUE      |
-|             **Truncated mean**              |  FALSE  |    FALSE    |     FALSE      |
-|              **Limited mean**               |  FALSE  |    FALSE    |     FALSE      |
-|                **Stop-loss**                |  FALSE  |    FALSE    |     FALSE      |
-|             **Excess of mean**              |  FALSE  |    FALSE    |     FALSE      |
-|       **Moment Generating Function**        |  FALSE  |    FALSE    |     FALSE      |
-|     **Probability Generating Function**     |  FALSE  |    FALSE    |     FALSE      |
-|      **Probability Density Function**       |  TRUE   |    FALSE    |     FALSE      |
-| **Cumulative Probability Density Function** |  TRUE   |    FALSE    |     FALSE      |
-|              **Value-at-Risk**              |  FALSE  |    FALSE    |     FALSE      |
-|           **Tail Value-at-Risk**            |  FALSE  |    FALSE    |     FALSE      |
+| Binomial | Negative Binomial | Poisson | Uniform | Logarithmic | Hypergeometric |
+| :------: | :---------------: | :-----: | :-----: | :---------: | :------------: |
+|    X     |                   |    X    |    X    |      X      |       X        |
+|    X     |                   |    X    |    X    |      X      |       X        |
+|    X     |         X         |    X    |         |             |                |
+|    X     |                   |    X    |         |             |                |
+|    X     |                   |    X    |         |             |                |
+|          |                   |         |    X    |             |                |
+|          |                   |         |    X    |             |                |
+|    X     |                   |    X    |         |             |                |
+|    X     |         X         |    X    |         |             |                |
 
 # Updates
 

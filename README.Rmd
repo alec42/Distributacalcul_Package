@@ -87,7 +87,7 @@ VaR_beta(kap = 0.99, shape1 = 2, shape2 = 4) # VaR_{k}(X) = F_X^(-1)(k)
 
 ##  Continuous distributions
 
-```{r include=FALSE}
+```{r Continuous-distr-table-create, include=FALSE}
 cont.distr.support <- cbind(
     Erlang = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
                   `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
@@ -171,14 +171,16 @@ cont.distr.support <- cbind(
 ```
 
 
-```{r}
+```{r Continuous-distr-table, echo=FALSE}
 cont.distr.support %>% 
+    as.data.frame() %>% 
+    mutate_all(~ifelse(. == T, "X", "")) %>% 
     pander::pander()
 ```
 
 ##  Discrete distributions
 
-```{r include=FALSE}
+```{r Discrete-distr-table-create, include=FALSE}
 discr.distr.support <- cbind(
     `Binomial` = list(`Mean` = T, `kth moment` = F, `Variance` = T, 
                       `Truncated mean` = T, `Limited mean` = F,  `Stop-loss` = F, `Excess of mean` = F, 
@@ -220,8 +222,10 @@ discr.distr.support <- cbind(
 ```
 
 
-```{r}
+```{r Discrete-distr-table, echo=FALSE}
 discr.distr.support %>% 
+    as.data.frame() %>% 
+    mutate_all(~ifelse(. == T, "X", "")) %>% 
     pander::pander()
 ```
 
