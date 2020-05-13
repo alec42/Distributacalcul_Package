@@ -2,7 +2,7 @@
 % Please edit documentation in R/V_llogis.R
 \name{V_llogis}
 \alias{V_llogis}
-\title{Variance of the Loglogistic Distribution}
+\title{Variance of the Loglogistic distribution}
 \usage{
 V_llogis(shape, rate = 1/scale, scale = 1/rate)
 }
@@ -30,6 +30,9 @@ V_llogis(shape = 3, scale = 5)
 
 # With rate parameter
 V_llogis(shape = 3, rate = 0.2)
+
+# Equivalently :
+kthmoment_llogis(k = 2, shape = 3, rate = 0.2) - kthmoment_llogis(k = 1, shape = 3, rate = 0.2)^2
 
 }
 \seealso{

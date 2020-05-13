@@ -16,8 +16,9 @@ Elim_llogis(d, shape, rate = 1/scale, scale = 1/rate)
 \item{scale}{\eqn{\lambda}{lambda} rate parameter, must be positive.}
 }
 \description{
-Limited mean of the Loglogistic distribution with shape parameter
- \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.
+Limited mean of the Loglogistic distribution with
+ shape parameter \eqn{\tau}{tau} and scale parameter
+ \eqn{\lambda}{lambda}.
 }
 \details{
 The Loglogistic distribution with shape parameter \eqn{\tau}{t} and scale parameter

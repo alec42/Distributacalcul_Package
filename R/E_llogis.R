@@ -15,8 +15,8 @@
 #' # With rate parameter
 #' E_llogis(shape = 3, rate = 0.2)
 #'
-E_llogis <- function(shape, rate = 1/scale, scale = 1/rate)
-{
-    stopifnot(shape > 1, rate > 0)
+E_llogis <- function(shape, rate = 1 / scale, scale = 1 / rate) {
+    stopifnot(shape > 1, scale > 0)
+
     scale * gamma(1 + 1/shape) * gamma(1 - 1/shape)
 }

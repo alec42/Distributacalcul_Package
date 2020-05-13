@@ -4,8 +4,6 @@
 #'  \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.
 #'
 #' @templateVar k TRUE
-#' @templateVar q FALSE
-#' @templateVar kappa FALSE
 #' @template loglogistic-template
 #'
 #' @export
@@ -18,8 +16,8 @@
 #' # With rate parameter
 #' kthmoment_llogis(k = 2, shape = 3, rate = 0.2)
 #'
-kthmoment_llogis <- function(k, shape, rate = 1/scale, scale = 1/rate) {
-    stopifnot(rate > 0, scale > 0)
+kthmoment_llogis <- function(k, shape, rate = 1 / scale, scale = 1 / rate) {
+    stopifnot(shape > 0, scale > 0, k > -shape, k < shape)
 
     scale^k * gamma(1 + k/shape) * gamma(1 - k/shape)
 }

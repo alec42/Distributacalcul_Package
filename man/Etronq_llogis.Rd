@@ -4,7 +4,7 @@
 \alias{Etronq_llogis}
 \title{Truncated mean of the Loglogistic distribution}
 \usage{
-Etronq_llogis(d, shape, rate = 1/scale, scale = 1/rate)
+Etronq_llogis(d, shape, rate = 1/scale, scale = 1/rate, less.than.d = TRUE)
 }
 \arguments{
 \item{d}{cut-off value.}
@@ -14,10 +14,13 @@ Etronq_llogis(d, shape, rate = 1/scale, scale = 1/rate)
 \item{rate}{alternative parameterization the scale parameter, rate = 1 / scale.}
 
 \item{scale}{\eqn{\lambda}{lambda} rate parameter, must be positive.}
+
+\item{less.than.d}{logical; if \code{TRUE} (défaut) truncated mean for values <= d, otherwise, for values > d.}
 }
 \description{
-Truncated mean of the Loglogistic distribution with shape parameter
- \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.
+Truncated mean of the Loglogistic distribution with
+ shape parameter \eqn{\tau}{tau} and scale parameter
+ \eqn{\lambda}{lambda}.
 }
 \details{
 The Loglogistic distribution with shape parameter \eqn{\tau}{t} and scale parameter
@@ -32,6 +35,9 @@ Etronq_llogis(d = 2, shape = 2, scale = 5)
 
 # With rate parameter
 Etronq_llogis(d = 2, shape = 2, rate = 0.2)
+
+# values greather than d
+Etronq_llogis(d = 2, shape = 2, rate = 0.2, less.than.d = FALSE)
 
 }
 \seealso{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/Mexcess_llogis.R
 \name{Mexcess_llogis}
 \alias{Mexcess_llogis}
-\title{Mean excess loss of the  Loglogistic Distribution}
+\title{Mean excess loss of the Loglogistic distribution}
 \usage{
 Mexcess_llogis(d, shape, rate = 1/scale, scale = 1/rate)
 }
@@ -16,8 +16,9 @@ Mexcess_llogis(d, shape, rate = 1/scale, scale = 1/rate)
 \item{scale}{\eqn{\lambda}{lambda} rate parameter, must be positive.}
 }
 \description{
-Mean excess loss of the Loglogistic distribution with shape parameter
- \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.
+Mean excess loss of the Loglogistic distribution with
+ shape parameter \eqn{\tau}{tau} and scale parameter
+ \eqn{\lambda}{lambda}.
 }
 \details{
 The Loglogistic distribution with shape parameter \eqn{\tau}{t} and scale parameter

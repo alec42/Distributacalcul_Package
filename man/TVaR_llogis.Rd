@@ -16,8 +16,9 @@ TVaR_llogis(kap, shape, rate = 1/scale, scale = 1/rate)
 \item{scale}{\eqn{\lambda}{lambda} rate parameter, must be positive.}
 }
 \description{
-Tail Value-at-Risk of the Loglogistic distribution with shape parameter
- \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.
+Tail Value-at-Risk of the Loglogistic distribution with
+ shape parameter \eqn{\tau}{tau} and scale parameter
+ \eqn{\lambda}{lambda}.
 }
 \details{
 The Loglogistic distribution with shape parameter \eqn{\tau}{t} and scale parameter
