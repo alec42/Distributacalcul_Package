@@ -38,6 +38,7 @@ Other Gamma Distribution:
 \code{\link{E_gamma}()},
 \code{\link{Elim_gamma}()},
 \code{\link{Etronq_gamma}()},
+\code{\link{MGF_gamma}()},
 \code{\link{Mexcess_gamma}()},
 \code{\link{SL_gamma}()},
 \code{\link{TVaR_gamma}()},

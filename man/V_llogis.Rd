@@ -34,6 +34,7 @@ V_llogis(shape = 3, rate = 0.2)
 }
 \seealso{
 Other Loglogistic Distribution: 
+\code{\link{E_llogis}()},
 \code{\link{Elim_llogis}()},
 \code{\link{Etronq_llogis}()},
 \code{\link{Mexcess_llogis}()},

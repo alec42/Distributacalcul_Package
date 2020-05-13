@@ -17,7 +17,7 @@
 #' kthmoment_gamma(k = 2, shape = 3, rate = 0.25)
 #'
 kthmoment_gamma <- function(k, shape, rate = 1 / scale, scale = 1 / rate) {
-    stopifnot(shape > 0, rate > 0)
+    stopifnot(shape > 0, rate > 0) # k?
 
     prod(sapply(0:(k - 1), function(i) (shape + i))) /
         (rate^k)

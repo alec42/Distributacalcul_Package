@@ -36,6 +36,7 @@ Etronq_llogis(d = 2, shape = 2, rate = 0.2)
 }
 \seealso{
 Other Loglogistic Distribution: 
+\code{\link{E_llogis}()},
 \code{\link{Elim_llogis}()},
 \code{\link{Mexcess_llogis}()},
 \code{\link{SL_llogis}()},

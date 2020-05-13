@@ -25,9 +25,9 @@ Etronq_gamma <- function(d, shape, rate = 1 / scale, scale = 1 / rate, less.than
     stopifnot(d >= 0, shape > 0, rate > 0)
 
     if (less.than.d) {
-        Etronq.gamma <- E_gamma(shape, rate) * stats::pgamma(q = d, shape + 1, rate)
+        Etronq.gamma <- E_gamma(shape, rate) * stats::pgamma(q = d, shape = shape + 1, rate = rate)
     } else {
-        Etronq.gamma <- E_gamma(shape, rate) * stats::pgamma(q = d, shape + 1, rate, lower.tail = FALSE)
+        Etronq.gamma <- E_gamma(shape, rate) * stats::pgamma(q = d, shape = shape + 1, rate = rate, lower.tail = FALSE)
     }
 
     return(Etronq.gamma)

@@ -19,6 +19,6 @@
 Elim_gamma <- function(d, shape, rate = 1 / scale, scale = 1 / rate) {
     stopifnot(d >= 0, shape > 0, rate > 0)
 
-    E_gamma(shape, rate) * stats::pgamma(q = d, shape + 1, rate) +
-        d * stats::pgamma(q = d, shape, rate, lower.tail = F)
+    E_gamma(shape, rate) * stats::pgamma(q = d, shape = shape + 1, rate = rate) +
+        d * stats::pgamma(q = d, shape = shape, rate = rate, lower.tail = F)
 }
