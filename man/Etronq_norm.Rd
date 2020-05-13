@@ -4,7 +4,7 @@
 \alias{Etronq_norm}
 \title{Truncated mean of the Normal distribution}
 \usage{
-Etronq_norm(d, mean = 0, sd = 1)
+Etronq_norm(d, mean = 0, sd = 1, less.than.d = TRUE)
 }
 \arguments{
 \item{d}{cut-off value.}
@@ -12,6 +12,8 @@ Etronq_norm(d, mean = 0, sd = 1)
 \item{mean}{mean \eqn{\mu}{mu}.}
 
 \item{sd}{standard deviation \eqn{\sigma}{sigma}}
+
+\item{less.than.d}{logical; if \code{TRUE} (défaut) truncated mean for values <= d, otherwise, for values > d.}
 }
 \description{
 Truncated mean of the Normal distribution with mean
@@ -31,6 +33,7 @@ Etronq_norm(d = 2, mean = 2, sd = 5)
 \seealso{
 Other Normal distribution: 
 \code{\link{Elim_norm}()},
+\code{\link{MGF_norm}()},
 \code{\link{Mexcess_norm}()},
 \code{\link{SL_norm}()},
 \code{\link{TVaR_norm}()},

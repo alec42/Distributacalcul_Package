@@ -4,7 +4,7 @@
 \alias{Etronq_lnorm}
 \title{Truncated mean of the Lognormal distribution}
 \usage{
-Etronq_lnorm(d, meanlog, sdlog)
+Etronq_lnorm(d, meanlog, sdlog, less.than.d = TRUE)
 }
 \arguments{
 \item{d}{cut-off value.}
@@ -12,6 +12,8 @@ Etronq_lnorm(d, meanlog, sdlog)
 \item{meanlog}{mean \eqn{\mu}{mu}.}
 
 \item{sdlog}{standard deviation \eqn{\sigma}{sigma}}
+
+\item{less.than.d}{logical; if \code{TRUE} (défaut) truncated mean for values <= d, otherwise, for values > d.}
 }
 \description{
 Truncated mean of the Logormal distribution with mean

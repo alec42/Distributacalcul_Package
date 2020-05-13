@@ -31,6 +31,7 @@ Elim_norm(d = 2, mean = 2, sd = 5)
 \seealso{
 Other Normal distribution: 
 \code{\link{Etronq_norm}()},
+\code{\link{MGF_norm}()},
 \code{\link{Mexcess_norm}()},
 \code{\link{SL_norm}()},
 \code{\link{TVaR_norm}()},

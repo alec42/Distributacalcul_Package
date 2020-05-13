@@ -4,19 +4,26 @@
 #'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 #'
 #' @templateVar d TRUE
-#' @templateVar q FALSE
-#' @templateVar kappa FALSE
+#' @templateVar less.than.d TRUE
 #' @template norm-template
 #'
 #' @export
-#' @importFrom stats pnorm
+#' @importFrom stats pnorm dnorm
 #'
 #' @examples
 #'
 #' Etronq_norm(d = 2, mean = 2, sd = 5)
 #'
-Etronq_norm <- function(d, mean = 0, sd = 1) {
-    phi1 <- (d - mean) / sd
-    mean * stats::pnorm(phi1) -
-        (sd / sqrt(2*pi)) * exp(-phi1^2 / 2)
+Etronq_norm <- function(d, mean = 0, sd = 1, less.than.d = TRUE) {
+    stopifnot(sd > 0)
+
+    if (less.than.d) {
+        Etronq.norm <- mean * stats::pnorm(q = d, mean = mean, sd = sd) -
+            sd^2 * stats::dnorm(x = d, mean = mean, sd = sd)
+    } else {
+        Etronq.norm <- mean * stats::pnorm(q = d, mean = mean, sd = sd, lower.tail = F) +
+            sd^2 * stats::dnorm(x = d, mean = mean, sd = sd)
+    }
+
+    return(Etronq.norm)
 }

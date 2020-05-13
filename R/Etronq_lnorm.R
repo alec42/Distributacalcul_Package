@@ -4,8 +4,7 @@
 #'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 #'
 #' @templateVar d TRUE
-#' @templateVar q FALSE
-#' @templateVar kappa FALSE
+#' @templateVar less.than.d TRUE
 #' @template lnorm-template
 #'
 #' @export
@@ -15,11 +14,18 @@
 #'
 #' Etronq_lnorm(d = 2, meanlog = 2, sdlog = 5)
 #'
-Etronq_lnorm <- function(d, meanlog, sdlog) {
+Etronq_lnorm <- function(d, meanlog, sdlog, less.than.d = TRUE) {
     stopifnot(d >= 0, sdlog > 0)
 
-    phi1 <- (log(d) - meanlog  - sdlog^2) / sdlog
-    exp(meanlog  + (sdlog^2) / 2) * stats::pnorm(phi1)
+    if (less.than.d) {
+        Etronq.lnorm <- E_lnorm(meanlog, sdlog) *
+            stats::pnorm(q = log(d) - sdlog^2, mean = meanlog, sd = sdlog)
+    } else {
+        Etronq.lnorm <- E_lnorm(meanlog, sdlog) *
+            stats::pnorm(q = log(d) - sdlog^2, mean = meanlog, sd = sdlog, lower.tail = F)
+    }
+
+    return(Etronq.lnorm)
 }
 
 

@@ -15,7 +15,7 @@ VaR_norm(kap, mean = 0, sd = 1)
 }
 \description{
 Value-at-Risk of the Normal distribution with mean
- \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
+ \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}. Wrapper of qnorm.
 }
 \details{
 The Normal distribution with mean \eqn{\mu}{mu} and standard deviation
@@ -32,6 +32,7 @@ VaR_norm(kap = 0.8, mean = 3, sd = 5)
 Other Normal distribution: 
 \code{\link{Elim_norm}()},
 \code{\link{Etronq_norm}()},
+\code{\link{MGF_norm}()},
 \code{\link{Mexcess_norm}()},
 \code{\link{SL_norm}()},
 \code{\link{TVaR_norm}()}

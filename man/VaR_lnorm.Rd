@@ -15,7 +15,7 @@ VaR_lnorm(kap, meanlog, sdlog)
 }
 \description{
 Value-at-Risk of the Lognormal distribution with mean
- \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
+ \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}. Wrapper of qlnorm.
 }
 \details{
 The Log-normal distribution with mean \eqn{\mu}{mu} and standard deviation

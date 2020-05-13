@@ -5,11 +5,15 @@
 #'
 #' @template lnorm-template
 #'
+#' @export
+#'
 #' @examples
 #'
 #' V_lnorm(meanlog = 3, sdlog = 5)
 #'
-#' @export
 V_lnorm <- function(meanlog, sdlog) {
-    exp(2 * meanlog + sdlog^2) * (exp(sdlog^2) - 1)
+    stopifnot(sdlog > 0)
+
+    exp(2 * meanlog + (sdlog^2)) *
+        (exp(sdlog^2) - 1)
 }
