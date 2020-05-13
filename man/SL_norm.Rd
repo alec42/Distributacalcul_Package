@@ -30,11 +30,13 @@ SL_norm(d = 2, mean = 2, sd = 5)
 }
 \seealso{
 Other Normal distribution: 
+\code{\link{E_norm}()},
 \code{\link{Elim_norm}()},
 \code{\link{Etronq_norm}()},
 \code{\link{MGF_norm}()},
 \code{\link{Mexcess_norm}()},
 \code{\link{TVaR_norm}()},
+\code{\link{V_norm}()},
 \code{\link{VaR_norm}()}
 }
 \concept{Normal distribution}

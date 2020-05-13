@@ -30,11 +30,13 @@ VaR_norm(kap = 0.8, mean = 3, sd = 5)
 }
 \seealso{
 Other Normal distribution: 
+\code{\link{E_norm}()},
 \code{\link{Elim_norm}()},
 \code{\link{Etronq_norm}()},
 \code{\link{MGF_norm}()},
 \code{\link{Mexcess_norm}()},
 \code{\link{SL_norm}()},
-\code{\link{TVaR_norm}()}
+\code{\link{TVaR_norm}()},
+\code{\link{V_norm}()}
 }
 \concept{Normal distribution}
