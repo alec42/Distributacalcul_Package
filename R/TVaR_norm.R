@@ -17,9 +17,8 @@ TVaR_norm <- function(kap, mean = 0, sd = 1) {
     stopifnot(kap >= 0, kap <= 1, sd > 0)
 
     mean +
-        (sd^2) *
-        stats::dnorm(x = stats::qnorm(p = kap, mean = mean, sd = sd)) /
-        (1 - kap)
+        (sd / (1 - kap)) *
+        stats::dnorm(x = stats::qnorm(p = kap))
 }
 
 
