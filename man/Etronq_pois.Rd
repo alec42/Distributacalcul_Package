@@ -30,6 +30,8 @@ Etronq_pois(d = 2, lambda = 2, k0 = 2E2, less.than.d = TRUE)
 }
 \seealso{
 Other Poisson Distribution: 
+\code{\link{MGF_pois}()},
+\code{\link{PGF_pois}()},
 \code{\link{TVaR_pois}()}
 }
 \concept{Poisson Distribution}

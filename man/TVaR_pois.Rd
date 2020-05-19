@@ -27,6 +27,8 @@ TVaR_pois(kap = 0.8, lambda = 3, k0 = 2E2)
 }
 \seealso{
 Other Poisson Distribution: 
-\code{\link{Etronq_pois}()}
+\code{\link{Etronq_pois}()},
+\code{\link{MGF_pois}()},
+\code{\link{PGF_pois}()}
 }
 \concept{Poisson Distribution}
