@@ -55,6 +55,8 @@ E_negbinom(r = 2, beta = 1.5)
 }
 \seealso{
 Other Negative Binomial Distribution: 
+\code{\link{MGF_negbinom}()},
+\code{\link{PGF_negbinom}()},
 \code{\link{V_negbinom}()}
 }
 \concept{Negative Binomial Distribution}

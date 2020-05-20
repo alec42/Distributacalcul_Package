@@ -8,6 +8,7 @@
 #' @template burr-template
 #'
 #' @export
+#' @importFrom stats pbeta
 #'
 #' @examples
 #'
@@ -18,19 +19,13 @@
 #' TVaR_burr(kap = .8, scale = 0.5, shape1 = 2, shape2 = 5)
 #'
 TVaR_burr <- function(kap, shape1, shape2, rate = 1 / scale, scale = 1 / rate) {
-    stopifnot(shape1 > 0, shape2 > 0, rate > 0, kap >= 0, kap <= 1)
+    stopifnot(shape1 > 0, shape2 > 0, rate > 0, kap >= 0, kap <= 1, shape1 * shape2 > 1)
 
-    vark <- VaR_burr(kap, shape1, shape2, rate)
+    vark <- VaR_burr(kap = kap, shape1, shape2, rate)
 
-    1 / ((1 - kap) * gamma(shape1)) *
-        (
-            (rate^(1/shape2)) *
-                gamma(1 + 1/shape2) *
-                gamma(shape1 - 1/shape2) *
-                stats::pbeta(q = (vark^shape2)/(rate + vark^shape2),
-                      shape1 = 1 + 1/shape2,
-                      shape2 = shape1 - 1/shape2,
-                      lower.tail = F)
-        )
-
+    (E_burr(shape1, shape2, rate) / (1 - kap)) *
+        stats::pbeta(q = (vark^shape2)/(rate + vark^shape2),
+                     shape1 = 1 + 1/shape2,
+                     shape2 = shape1 - 1/shape2,
+                     lower.tail = FALSE)
 }

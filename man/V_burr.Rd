@@ -2,7 +2,7 @@
 % Please edit documentation in R/V_burr.R
 \name{V_burr}
 \alias{V_burr}
-\title{Variance of the Burr Distribution}
+\title{Variance of the Burr distribution}
 \usage{
 V_burr(shape1, shape2, rate = 1/scale, scale = 1/rate)
 }

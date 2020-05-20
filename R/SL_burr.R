@@ -19,17 +19,14 @@
 #' SL_burr(d = 2, scale = 0.5, shape1 = 2, shape2 = 5)
 #'
 SL_burr <- function(d, shape1, shape2, rate = 1 / scale, scale = 1 / rate) {
-    stopifnot(shape1 > 0, shape2 > 0, rate > 0, d >= 0)
+    stopifnot(shape1 > 0, shape2 > 0, rate > 0, d >= 0, shape1 * shape2 > 1)
 
-    1/(gamma(shape1)) *
-        (rate^(1/shape2)) *
-        gamma(1 + 1/shape2) *
-        gamma(shape1 - 1/shape2) *
+    E_burr(shape1, shape2, rate) *
         stats::pbeta(
             q = (d^shape2 / (rate + (d^shape2))),
             shape1 = 1 + 1/shape2,
             shape2 = shape1 - 1/shape2,
-            lower.tail = F) -
+            lower.tail = FALSE) -
         d *
         (rate / (rate + d^shape2))^shape1
 }

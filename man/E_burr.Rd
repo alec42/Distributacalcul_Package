@@ -2,7 +2,7 @@
 % Please edit documentation in R/E_burr.R
 \name{E_burr}
 \alias{E_burr}
-\title{Expected value of the Burr Distribution}
+\title{Expected value of the Burr distribution}
 \usage{
 E_burr(shape1, shape2, rate = 1/scale, scale = 1/rate)
 }
