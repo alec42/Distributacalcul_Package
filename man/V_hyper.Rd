@@ -2,17 +2,38 @@
 % Please edit documentation in R/V_hyper.R
 \name{V_hyper}
 \alias{V_hyper}
-\title{Variance d'une loi hypergéométrique}
+\title{Variance of the Hypergeometric distribution}
 \usage{
-V_hyper(N, m, n)
+V_hyper(N = n + m, m, n = N - m, k)
 }
 \arguments{
-\item{N}{nombre total}
+\item{N}{Total number of balls (white and black) in the urn.}
 
-\item{m}{nombre de type 1}
+\item{m}{Number of white balls in the urn.}
 
-\item{n}{taille de l'échantillon}
+\item{n}{Number of black balls in the urn. Can specify n instead of N.}
+
+\item{k}{Number of balls drawn from the urn, k = 0, 1, ..., m + n.}
 }
 \description{
-Variance d'une loi hypergéométrique
+Variance of the Hypergeometric distribution where we
+ have a sample of k balls from an urn containing N of which m are
+ white and n are black.
 }
+\details{
+
+}
+\examples{
+
+# With total balls specified
+V_hyper(N = 5, m = 2, k = 2)
+
+# With number of each colour of balls specified
+V_hyper(m = 2, n = 3, k = 2)
+
+}
+\seealso{
+Other Hypergeometric Distribution: 
+\code{\link{E_hyper}()}
+}
+\concept{Hypergeometric Distribution}

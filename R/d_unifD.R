@@ -11,9 +11,9 @@
 #' @examples
 #'
 #' # With scale parameter
-#' dunifD(x = 2, min = 2, max = 5)
+#' d_unifD(x = 2, min = 2, max = 5)
 #'
-dunifD <- function(x, min = 0, max = 1){
+d_unifD <- function(x, min = 0, max = 1){
     stopifnot(
         min < max
         # ,q %% 1 == 0 # not part of the equation

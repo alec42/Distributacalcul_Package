@@ -4,7 +4,13 @@
 \alias{Etronq_IG}
 \title{Truncated mean of the Inverse Gaussian distribution}
 \usage{
-Etronq_IG(d, mean, shape = dispersion * mean^2, dispersion = shape/mean^2)
+Etronq_IG(
+  d,
+  mean,
+  shape = dispersion * mean^2,
+  dispersion = shape/mean^2,
+  less.than.d = TRUE
+)
 }
 \arguments{
 \item{d}{cut-off value.}
@@ -14,6 +20,8 @@ Etronq_IG(d, mean, shape = dispersion * mean^2, dispersion = shape/mean^2)
 \item{shape}{shape parameter \eqn{\beta}{beta}, must be positive.}
 
 \item{dispersion}{alternative parameterization to the shape parameter, dispersion = 1 / rate.}
+
+\item{less.than.d}{logical; if \code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.}
 }
 \description{
 Truncated mean of the Inverse Gaussian distribution with

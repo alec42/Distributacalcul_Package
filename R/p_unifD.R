@@ -11,9 +11,9 @@
 #' @examples
 #'
 #' # With scale parameter
-#' punifD(q = 2, min = 2, max = 5)
+#' p_unifD(q = 2, min = 2, max = 5)
 #'
-punifD <- function(q, min = 0, max = 1){
+p_unifD <- function(q, min = 0, max = 1){
     stopifnot(
         min < max
         # , q %% 1 == 0 # round
