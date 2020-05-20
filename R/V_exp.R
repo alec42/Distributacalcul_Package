@@ -16,5 +16,7 @@
 #' V_exp(rate = 0.25)
 #'
 V_exp <- function(rate = 1 / scale, scale = 1 / rate) {
-    scale^2
+    stopifnot(rate > 0)
+
+    (1/rate)^2
 }

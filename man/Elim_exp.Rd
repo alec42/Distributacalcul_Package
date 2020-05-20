@@ -36,6 +36,7 @@ Elim_exp(d = 2, rate = 0.25)
 Other Exponential Distribution: 
 \code{\link{E_exp}()},
 \code{\link{Etronq_exp}()},
+\code{\link{MGF_exp}()},
 \code{\link{Mexcess_exp}()},
 \code{\link{SL_exp}()},
 \code{\link{TVaR_exp}()},

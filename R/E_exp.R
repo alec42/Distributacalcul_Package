@@ -18,5 +18,5 @@
 E_exp <- function(rate = 1 / scale, scale = 1 / rate) {
     stopifnot(rate > 0)
 
-    scale
+    1/rate
 }

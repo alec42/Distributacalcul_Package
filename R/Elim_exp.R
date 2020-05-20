@@ -7,6 +7,7 @@
 #' @template exp-template
 #'
 #' @export
+#' @importFrom stats pexp
 #'
 #' @examples
 #'
@@ -19,5 +20,5 @@
 Elim_exp <- function(d, rate = 1 / scale, scale = 1 / rate) {
     stopifnot(d >= 0, rate > 0)
 
-    stats::pexp(q = d, rate, lower.tail = F) * E_exp(rate)
+    E_exp(rate) * stats::pexp(q = d, rate = rate)
 }

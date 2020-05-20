@@ -37,6 +37,7 @@ Other Exponential Distribution:
 \code{\link{E_exp}()},
 \code{\link{Elim_exp}()},
 \code{\link{Etronq_exp}()},
+\code{\link{MGF_exp}()},
 \code{\link{Mexcess_exp}()},
 \code{\link{SL_exp}()},
 \code{\link{TVaR_exp}()},
