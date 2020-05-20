@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Répartition d'une loi uniforme discrète — punifD • Distributacalcul</title>
+<title>Cumulative probability mass function of the (discrete) Uniform distribution — punifD • Distributacalcul</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,9 @@
 
 
 
-<meta property="og:title" content="Répartition d'une loi uniforme discrète — punifD" />
-<meta property="og:description" content="Répartition d'une loi uniforme discrète" />
+<meta property="og:title" content="Cumulative probability mass function of the (discrete) Uniform distribution — punifD" />
+<meta property="og:description" content="Cumulative probability mass function of the (discrete) Uniform
+ distribution with min \(a\) and max \(b\)." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -69,7 +70,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
       </span>
     </div>
 
@@ -86,7 +87,12 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/alec42/Distributacalcul_Package">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -100,44 +106,50 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Répartition d'une loi uniforme discrète</h1>
-    
+    <h1>Cumulative probability mass function of the (discrete) Uniform distribution</h1>
+    <small class="dont-index">Source: <a href='https://github.com/alec42/Distributacalcul_Package/blob/master/R/punifD.R'><code>R/punifD.R</code></a></small>
     <div class="hidden name"><code>punifD.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Répartition d'une loi uniforme discrète</p>
+    <p>Cumulative probability mass function of the (discrete) Uniform
+ distribution with min \(a\) and max \(b\).</p>
     </div>
 
-    <pre class="usage"><span class='fu'>punifD</span>(<span class='no'>q</span>, <span class='no'>a</span>, <span class='no'>b</span>)</pre>
+    <pre class="usage"><span class='fu'>punifD</span>(<span class='no'>q</span>, <span class='kw'>min</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>max</span> <span class='kw'>=</span> <span class='fl'>1</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>q</th>
-      <td><p>quantile</p></td>
+      <td><p>quantile.</p></td>
     </tr>
     <tr>
-      <th>a</th>
-      <td><p>borne inférieur</p></td>
-    </tr>
-    <tr>
-      <th>b</th>
-      <td><p>borne supérieur</p></td>
+      <th>min, max</th>
+      <td><p>lower and upper limits of the distribution. Must be finite.</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>loi uniforme discrète</p>
+    <p>The (discrete) uniform distribution with min and max parameters \(a\)
+  and \(b\) respectively has density:
+  $$\textrm{Pr}\left(X = x \right) = \frac{1}{b - a + 1}$$
+  for \(x \in \{a, a + 1, \dots, b - 1, b\}\).</p>
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'>
+<span class='co'># With scale parameter</span>
+<span class='fu'>punifD</span>(<span class='kw'>q</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>min</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>max</span> <span class='kw'>=</span> <span class='fl'>5</span>)</div><div class='output co'>#&gt; [1] 0.25</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#details">Details</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
@@ -150,7 +162,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
 
       </footer>

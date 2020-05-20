@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>k-ème moment de la loi Beta — kthmoment_beta • Distributacalcul</title>
+<title>kth moment of the Beta distribution — kthmoment_beta • Distributacalcul</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,9 @@
 
 
 
-<meta property="og:title" content="k-ème moment de la loi Beta — kthmoment_beta" />
-<meta property="og:description" content="k-ème moment de la loi Beta" />
+<meta property="og:title" content="kth moment of the Beta distribution — kthmoment_beta" />
+<meta property="og:description" content="kth moment of the Beta distribution with shape parameters
+ \(\alpha\) and \(\beta\)." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -69,7 +70,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
       </span>
     </div>
 
@@ -86,7 +87,12 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/alec42/Distributacalcul_Package">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -100,40 +106,67 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>k-ème moment de la loi Beta</h1>
-    
+    <h1>kth moment of the Beta distribution</h1>
+    <small class="dont-index">Source: <a href='https://github.com/alec42/Distributacalcul_Package/blob/master/R/kthmoment_beta.R'><code>R/kthmoment_beta.R</code></a></small>
     <div class="hidden name"><code>kthmoment_beta.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>k-ème moment de la loi Beta</p>
+    <p>kth moment of the Beta distribution with shape parameters
+ \(\alpha\) and \(\beta\).</p>
     </div>
 
-    <pre class="usage"><span class='fu'>kthmoment_beta</span>(<span class='no'>k</span>, <span class='no'>a</span>, <span class='no'>b</span>)</pre>
+    <pre class="usage"><span class='fu'>kthmoment_beta</span>(<span class='no'>k</span>, <span class='no'>shape1</span>, <span class='no'>shape2</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>k</th>
-      <td><p>k-ème moment</p></td>
+      <td><p>kth-moment.</p></td>
     </tr>
     <tr>
-      <th>a</th>
-      <td><p>alpha</p></td>
+      <th>shape1</th>
+      <td><p>shape parameter \(\alpha\), must be positive.</p></td>
     </tr>
     <tr>
-      <th>b</th>
-      <td><p>beta</p></td>
+      <th>shape2</th>
+      <td><p>shape parameter \(\beta\), must be positive.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
+    <p>The Beta distribution with shape parameters \(\alpha\) and
+  \(\beta\) has density:
+  $$f\left(x\right) = \frac{\Gamma(\alpha + \beta)}{\Gamma(\alpha) %
+   \Gamma(\beta)} x^{\alpha - 1} (1 - x)^(\beta - 1)$$
+  for \(x \in [0, 1]\), \(\alpha, \beta &gt; 0\).</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other Beta Distribution: 
+<code><a href='E_beta.html'>E_beta</a>()</code>,
+<code><a href='Elim_beta.html'>Elim_beta</a>()</code>,
+<code><a href='Etronq_beta.html'>Etronq_beta</a>()</code>,
+<code><a href='MGF_beta.html'>MGF_beta</a>()</code>,
+<code><a href='Mexcess_beta.html'>Mexcess_beta</a>()</code>,
+<code><a href='SL_beta.html'>SL_beta</a>()</code>,
+<code><a href='TVaR_beta.html'>TVaR_beta</a>()</code>,
+<code><a href='V_beta.html'>V_beta</a>()</code>,
+<code><a href='VaR_beta.html'>VaR_beta</a>()</code></p></div>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'>
+<span class='fu'>kthmoment_beta</span>(<span class='kw'>k</span> <span class='kw'>=</span> <span class='fl'>3</span>, <span class='kw'>shape1</span> <span class='kw'>=</span> <span class='fl'>4</span>, <span class='kw'>shape2</span> <span class='kw'>=</span> <span class='fl'>5</span>)</div><div class='output co'>#&gt; [1] 0.1212121</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#see-also">See also</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
@@ -146,7 +179,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
 
       </footer>

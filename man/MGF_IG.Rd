@@ -2,19 +2,44 @@
 % Please edit documentation in R/MGF_IG.R
 \name{MGF_IG}
 \alias{MGF_IG}
-\title{Moment Generating Function (MGF) of the Inverse Gaussian distribution}
+\title{Moment Generating Function of the Inverse Gaussian distribution}
 \usage{
-MGF_IG(t, mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
+MGF_IG(t, mean, shape = dispersion * mean^2, dispersion = shape/mean^2)
 }
 \arguments{
 \item{t}{t}
 
-\item{mu}{mu}
+\item{mean}{mean (location) parameter \eqn{\mu}{mu}, must be positive.}
 
-\item{beta}{beta = dispersion * mu^2}
+\item{shape}{shape parameter \eqn{\beta}{beta}, must be positive.}
 
-\item{dispersion}{dispersion = beta / mu^2}
+\item{dispersion}{alternative parameterization to the shape parameter, dispersion = 1 / rate.}
 }
 \description{
-Moment Generating Function (MGF) of the Inverse Gaussian distribution
+Moment Generating Function (MGF) of the Inverse Gaussian
+  distribution with mean \eqn{\mu}{mu} and shape parameter
+  \eqn{\beta}{beta}.
 }
+\details{
+The Pareto distribution with rate parameter \eqn{\lambda}{lam} as well as shape
+  parameter \eqn{\alpha}{a} has density: \deqn{f\left(x\right) = \frac{\alpha%
+  \lambda^{\alpha}}{(\lambda + x)^{\alpha + 1}}}{f(x) = (a lam^a)/ (lam + x)^(a + 1)}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\alpha, \lambda > 0}{a, lam > 0}.
+}
+\examples{
+
+MGF_IG(t = 1, mean = 2, shape = .5)
+
+}
+\seealso{
+Other Inverse Gaussian Distribution: 
+\code{\link{E_IG}()},
+\code{\link{Elim_IG}()},
+\code{\link{Etronq_IG}()},
+\code{\link{Mexcess_IG}()},
+\code{\link{SL_IG}()},
+\code{\link{TVaR_IG}()},
+\code{\link{V_IG}()},
+\code{\link{VaR_IG}()}
+}
+\concept{Inverse Gaussian Distribution}

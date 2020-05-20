@@ -1,5 +1,5 @@
-#' @param mean mean \eqn{\mu}{mu}.
-#' @param sd standard deviation \eqn{\sigma}{sigma}
+#' @param mean mean (location) parameter \eqn{\mu}{mu}.
+#' @param sd standard deviation \eqn{\sigma}{sigma}, must be positive.
 #'
 #' <%=ifelse(exists("d"), "@param d cut-off value.", "") %>
 #' <%=ifelse(exists("kap"), "@param kap probability.", "") %>

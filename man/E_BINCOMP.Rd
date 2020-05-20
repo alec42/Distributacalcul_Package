@@ -24,7 +24,7 @@ Espérance d'une loi binomiale composée
 Cette formule utilise aussi un choix de 2 distributions pour la sévérité; soit la Gamma ou la Lognormale.
 }
 \examples{
-E_BINCOMP(n = 1, q = 0.2, shape = log(1000) - 0.405, rate = 0.9^2, distr_severity = "Lognormale")
-V_BINCOMP(n = 1, q = 0.2, shape = log(1000) - 0.405, rate = 0.9, distr_severity = "Lognormale") # incoherent use of sigma, to fix!
+E_BINCOMP(n = 1, q = 0.2, shape = log(1000) - 0.405, rate = 0.9^2,
+          distr_severity = "Lognormale")
 
 }

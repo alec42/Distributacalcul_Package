@@ -26,6 +26,7 @@ Value-at-Risk d'une loi binomiale négative composée
 }
 \examples{
 
-VaR_BNCOMP(kap = 0.99, size = 4, prob = 0.4, shape = 5, rate = 10, distr_severity = "Gamma", ko = 1500)
+VaR_BNCOMP(kap = 0.99, size = 4, prob = 0.4,
+           shape = 5, rate = 10, distr_severity = "Gamma", ko = 1500)
 
 }

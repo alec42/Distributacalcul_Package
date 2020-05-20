@@ -1,5 +1,5 @@
-#' @param meanlog mean \eqn{\mu}{mu}.
-#' @param sdlog standard deviation \eqn{\sigma}{sigma}
+#' @param meanlog location parameter \eqn{\mu}{mu}.
+#' @param sdlog standard deviation \eqn{\sigma}{sigma}, must be positive.
 #'
 #' <%=ifelse(exists("d"), "@param d cut-off value.", "") %>
 #' <%=ifelse(exists("kap"), "@param kap probability.", "") %>

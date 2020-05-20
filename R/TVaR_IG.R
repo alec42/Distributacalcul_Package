@@ -1,24 +1,24 @@
-#' Tail Value-at-Risk d'une loi inverse gaussienne
+#' Tail Value-at-Risk of the Inverse Gaussian distribution
 #'
-#' @param kap Niveau de confiance désiré
-#' @param mu mu
-#' @param beta beta, = dispersion * mu^2
-#' @param dispersion dispersion, = beta / mu^2
-#' @param vark Value at Risk (VaR) calculé au même niveau de confiance kap
-#' @details Cette formule nécessite la formule de la VaR_IG (déjà installée avec le package tvarPackage)
+#' @description Tail Value-at-Risk of the Inverse Gaussian distribution with
+#'  mean \eqn{\mu}{mu} and shape parameter \eqn{\beta}{beta}.
+#'
+#' @templateVar kap TRUE
+#' @template IG-template
+#'
 #' @export
-TVaR_IG <- function(kap, mu, beta = dispersion * mu^2, dispersion = beta / mu^2, vark)
-{
-    (1/(1 - kap)) *
-        (mu - vark +
-             (2 * vark + mu) *
-             exp(2 * mu / beta)
-        ) +
-        (1/(1 - kap)) *
-        (
-            (2 * vark - mu) *
-                stats::pnorm(q = ((vark - mu) *
-                               sqrt(1 / (beta * vark)))
-                )
-        )
+#'
+#' @examples
+#'
+#' TVaR_IG(kap = 0.99, mean = 2, shape = 5)
+#'
+TVaR_IG <- function(kap, mean, shape = dispersion * mean^2, dispersion = shape / mean^2) {
+    stopifnot(mean >= 0, shape > 0, kap >= 0, kap < 1)
+
+    vark <- VaR_IG(kap = kap, mean, shape)
+
+    (mean - vark +
+            (2*vark + mean) * exp(2*mean / shape) +
+            (2*vark - mean) * stats::pnorm(q = ((vark - mean) * sqrt(1 / (shape*vark))))
+    ) / (1 - kap)
 }

@@ -13,7 +13,7 @@
 # @export
 .TVaR_erlang <- function(kap, shape, scale = 1 / rate, rate = 1 / scale, vark)
 {
-    stopifnot(kap >= 0, kap <= 1, shape %% 1 == 0, rate > 0)
+    stopifnot(kap >= 0, kap < 1, shape %% 1 == 0, rate > 0, shape >= 0)
 
     (shape / ((1 - kap) * rate)) *
         (exp(-rate * vark) *

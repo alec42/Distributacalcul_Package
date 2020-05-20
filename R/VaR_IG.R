@@ -1,14 +1,22 @@
 #' Value-at-Risk of the Inverse Gaussian distribution
 #'
-#' @details Wrapper pour avoir une notation cohérente avec le reste des fonctions IG, mais utilise la fonction de densité du package ACTUAR.
+#' @description Value-at-Risk of the Inverse Gaussian distribution with
+#'  mean \eqn{\mu}{mu} and shape parameter \eqn{\beta}{beta}.
 #'
-#' @param kap niveau de confiance désiré
-#' @param mu mu
-#' @param beta beta = dispersion * mu^2
-#' @param dispersion dispersion = beta / mu^2
+#' @note Function VaR_IG is a wrapper for the qinvgauss function from the
+#' actuar package.
+#'
+#' @templateVar kap TRUE
+#' @template IG-template
 #'
 #' @export
-VaR_IG <- function(kap, mu, beta = dispersion * mu^2, dispersion = beta / mu^2)
-{
-    actuar::qinvgauss(p = kap, mean = mu, dispersion = dispersion)
+#'
+#' @examples
+#'
+#' VaR_IG(kap = 0.99, mean = 2, shape = 5)
+#'
+VaR_IG <- function(kap, mean, shape = dispersion * mean^2, dispersion = shape / mean^2) {
+    stopifnot(mean >= 0, shape >= 0, kap >= 0, kap < 1)
+
+    actuar::qinvgauss(p = kap, mean = mean, dispersion = dispersion)
 }

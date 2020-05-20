@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Espérance limitée de la loi inverse gaussienne — Elim_IG • Distributacalcul</title>
+<title>Limited mean of the Inverse Gaussian distribution — Elim_IG • Distributacalcul</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,9 @@
 
 
 
-<meta property="og:title" content="Espérance limitée de la loi inverse gaussienne — Elim_IG" />
-<meta property="og:description" content="Espérance limitée de la loi inverse gaussienne" />
+<meta property="og:title" content="Limited mean of the Inverse Gaussian distribution — Elim_IG" />
+<meta property="og:description" content="Limited mean of the Inverse Gaussian distribution with
+ mean \(\mu\) and shape parameter \(\beta\)." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -69,7 +70,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
       </span>
     </div>
 
@@ -86,7 +87,12 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/alec42/Distributacalcul_Package">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -100,44 +106,69 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Espérance limitée de la loi inverse gaussienne</h1>
-    
+    <h1>Limited mean of the Inverse Gaussian distribution</h1>
+    <small class="dont-index">Source: <a href='https://github.com/alec42/Distributacalcul_Package/blob/master/R/Elim_IG.R'><code>R/Elim_IG.R</code></a></small>
     <div class="hidden name"><code>Elim_IG.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Espérance limitée de la loi inverse gaussienne</p>
+    <p>Limited mean of the Inverse Gaussian distribution with
+ mean \(\mu\) and shape parameter \(\beta\).</p>
     </div>
 
-    <pre class="usage"><span class='fu'>Elim_IG</span>(<span class='no'>d</span>, <span class='no'>mu</span>, <span class='kw'>beta</span> <span class='kw'>=</span> <span class='no'>dispersion</span> * <span class='no'>mu</span>^<span class='fl'>2</span>, <span class='kw'>dispersion</span> <span class='kw'>=</span> <span class='no'>beta</span>/<span class='no'>mu</span>^<span class='fl'>2</span>)</pre>
+    <pre class="usage"><span class='fu'>Elim_IG</span>(<span class='no'>d</span>, <span class='no'>mean</span>, <span class='kw'>shape</span> <span class='kw'>=</span> <span class='no'>dispersion</span> * <span class='no'>mean</span>^<span class='fl'>2</span>, <span class='kw'>dispersion</span> <span class='kw'>=</span> <span class='no'>shape</span>/<span class='no'>mean</span>^<span class='fl'>2</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>d</th>
-      <td><p>montant d de la limite</p></td>
+      <td><p>cut-off value.</p></td>
     </tr>
     <tr>
-      <th>mu</th>
-      <td><p>mu</p></td>
+      <th>mean</th>
+      <td><p>mean (location) parameter \(\mu\), must be positive.</p></td>
     </tr>
     <tr>
-      <th>beta</th>
-      <td><p>beta, = dispersion * mu^2</p></td>
+      <th>shape</th>
+      <td><p>shape parameter \(\beta\), must be positive.</p></td>
     </tr>
     <tr>
       <th>dispersion</th>
-      <td><p>beta, = beta / mu^2</p></td>
+      <td><p>alternative parameterization to the shape parameter, dispersion = 1 / rate.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
+    <p>The Pareto distribution with rate parameter \(\lambda\) as well as shape
+  parameter \(\alpha\) has density: $$f\left(x\right) = \frac{\alpha%
+  \lambda^{\alpha}}{(\lambda + x)^{\alpha + 1}}$$
+  for \(x \in \mathcal{R}^+\), \(\alpha, \lambda &gt; 0\).</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other Inverse Gaussian Distribution: 
+<code><a href='E_IG.html'>E_IG</a>()</code>,
+<code><a href='Etronq_IG.html'>Etronq_IG</a>()</code>,
+<code><a href='MGF_IG.html'>MGF_IG</a>()</code>,
+<code><a href='Mexcess_IG.html'>Mexcess_IG</a>()</code>,
+<code><a href='SL_IG.html'>SL_IG</a>()</code>,
+<code><a href='TVaR_IG.html'>TVaR_IG</a>()</code>,
+<code><a href='V_IG.html'>V_IG</a>()</code>,
+<code><a href='VaR_IG.html'>VaR_IG</a>()</code></p></div>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'>
+<span class='fu'>Elim_IG</span>(<span class='kw'>d</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>mean</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>shape</span> <span class='kw'>=</span> <span class='fl'>5</span>)</div><div class='output co'>#&gt; [1] 1.083508</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#see-also">See also</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
@@ -150,7 +181,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
 
       </footer>

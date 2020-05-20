@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tail Value-at-risk d'une loi binomiale composée — TVaR_BINCOMP • Distributacalcul</title>
+<title>Tail Value-at-Risk d'une loi binomiale composée — TVaR_BINCOMP • Distributacalcul</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,8 @@
 
 
 
-<meta property="og:title" content="Tail Value-at-risk d'une loi binomiale composée — TVaR_BINCOMP" />
-<meta property="og:description" content="Tail Value-at-risk d'une loi binomiale composée" />
+<meta property="og:title" content="Tail Value-at-Risk d'une loi binomiale composée — TVaR_BINCOMP" />
+<meta property="og:description" content="Tail Value-at-Risk d'une loi binomiale composée" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -69,7 +69,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
       </span>
     </div>
 
@@ -86,7 +86,12 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/alec42/Distributacalcul_Package">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -100,23 +105,22 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Tail Value-at-risk d'une loi binomiale composée</h1>
-    
+    <h1>Tail Value-at-Risk d'une loi binomiale composée</h1>
+    <small class="dont-index">Source: <a href='https://github.com/alec42/Distributacalcul_Package/blob/master/R/TVaR_BINCOMP.R'><code>R/TVaR_BINCOMP.R</code></a></small>
     <div class="hidden name"><code>TVaR_BINCOMP.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Tail Value-at-risk d'une loi binomiale composée</p>
+    <p>Tail Value-at-Risk d'une loi binomiale composée</p>
     </div>
 
-    <pre class="usage"><span class='fu'>TVaR_BINCOMP</span>(<span class='no'>kappa</span>, <span class='no'>n</span>, <span class='no'>q</span>, <span class='no'>shape</span>, <span class='no'>rate</span>, <span class='no'>vark</span>, <span class='no'>ko</span>,
-  <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Gamma"</span>)</pre>
+    <pre class="usage"><span class='fu'>TVaR_BINCOMP</span>(<span class='no'>kap</span>, <span class='no'>n</span>, <span class='no'>q</span>, <span class='no'>shape</span>, <span class='no'>rate</span>, <span class='no'>vark</span>, <span class='no'>ko</span>, <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Gamma"</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>kappa</th>
+      <th>kap</th>
       <td><p>Niveau de confiance désiré</p></td>
     </tr>
     <tr>
@@ -129,15 +133,15 @@
     </tr>
     <tr>
       <th>shape</th>
-      <td><p>alpha pour la Gamma et mu pour la lognormale</p></td>
+      <td><p>alpha pour la Gamma</p></td>
     </tr>
     <tr>
       <th>rate</th>
-      <td><p>beta pour la Gamma et sigma^2 pour la lognormale</p></td>
+      <td><p>beta pour la Gamma</p></td>
     </tr>
     <tr>
       <th>vark</th>
-      <td><p>Value at Risk (VaR) calculé au même niveau de confiance kappa</p></td>
+      <td><p>Value at Risk (VaR) calculé au même niveau de confiance kap</p></td>
     </tr>
     <tr>
       <th>ko</th>
@@ -145,7 +149,7 @@
     </tr>
     <tr>
       <th>distr_severity</th>
-      <td><p>choix de distribution de sévérité. Gamma ou Lognormale</p></td>
+      <td><p>choix de distribution de sévérité</p></td>
     </tr>
     </table>
 
@@ -171,7 +175,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
 
       </footer>

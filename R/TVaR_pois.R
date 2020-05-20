@@ -15,7 +15,7 @@
 #' TVaR_pois(kap = 0.8, lambda = 3, k0 = 2E2)
 #'
 TVaR_pois <- function(kap, lambda, k0) {
-    stopifnot(kap >= 0, kap <= 1, lambda > 0, k0 > 0)
+    stopifnot(kap >= 0, kap < 1, lambda > 0, k0 > 0)
 
     k <- 0:k0 # valeurs possibles
     fx <- stats::dpois(x = k, lambda = lambda)

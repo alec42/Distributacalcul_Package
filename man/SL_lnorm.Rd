@@ -9,9 +9,9 @@ SL_lnorm(d, meanlog, sdlog)
 \arguments{
 \item{d}{cut-off value.}
 
-\item{meanlog}{mean \eqn{\mu}{mu}.}
+\item{meanlog}{location parameter \eqn{\mu}{mu}.}
 
-\item{sdlog}{standard deviation \eqn{\sigma}{sigma}}
+\item{sdlog}{standard deviation \eqn{\sigma}{sigma}, must be positive.}
 }
 \description{
 Stop-loss of the Lognormal distribution with mean

@@ -9,9 +9,9 @@ VaR_norm(kap, mean = 0, sd = 1)
 \arguments{
 \item{kap}{probability.}
 
-\item{mean}{mean \eqn{\mu}{mu}.}
+\item{mean}{mean (location) parameter \eqn{\mu}{mu}.}
 
-\item{sd}{standard deviation \eqn{\sigma}{sigma}}
+\item{sd}{standard deviation \eqn{\sigma}{sigma}, must be positive.}
 }
 \description{
 Value-at-Risk of the Normal distribution with mean

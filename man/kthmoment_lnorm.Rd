@@ -9,9 +9,9 @@ kthmoment_lnorm(k, meanlog, sdlog)
 \arguments{
 \item{k}{kth-moment.}
 
-\item{meanlog}{mean \eqn{\mu}{mu}.}
+\item{meanlog}{location parameter \eqn{\mu}{mu}.}
 
-\item{sdlog}{standard deviation \eqn{\sigma}{sigma}}
+\item{sdlog}{standard deviation \eqn{\sigma}{sigma}, must be positive.}
 }
 \description{
 kth moment of the Logormal distribution with mean

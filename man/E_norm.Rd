@@ -7,9 +7,9 @@
 E_norm(mean, sd)
 }
 \arguments{
-\item{mean}{mean \eqn{\mu}{mu}.}
+\item{mean}{mean (location) parameter \eqn{\mu}{mu}.}
 
-\item{sd}{standard deviation \eqn{\sigma}{sigma}}
+\item{sd}{standard deviation \eqn{\sigma}{sigma}, must be positive.}
 }
 \description{
 Expected value of the Normal distribution with mean

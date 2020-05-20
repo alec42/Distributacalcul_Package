@@ -8,11 +8,12 @@
 #' @param distr_severity choice of severity distribution Gamma (default) or Lognormal
 #' @param ko borne pour la somme dans le calcul de la TVaR.
 #'
+#' @export
+#'
 #' @examples
 #'
-#' VaR_BNCOMP(kap = 0.99, size = 4, prob = 0.4, shape = 5, rate = 10, distr_severity = "Gamma", ko = 1500)
-#'
-#' @export
+#' VaR_BNCOMP(kap = 0.99, size = 4, prob = 0.4,
+#'            shape = 5, rate = 10, distr_severity = "Gamma", ko = 1500)
 #'
 VaR_BNCOMP <- function(kap, size, prob, shape, rate, distr_severity = "Gamma", ko) {
     stopifnot(prob >= 0, prob <= 1, rate > 0)

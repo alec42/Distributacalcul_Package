@@ -7,9 +7,9 @@
 E_lnorm(meanlog, sdlog)
 }
 \arguments{
-\item{meanlog}{mean \eqn{\mu}{mu}.}
+\item{meanlog}{location parameter \eqn{\mu}{mu}.}
 
-\item{sdlog}{standard deviation \eqn{\sigma}{sigma}}
+\item{sdlog}{standard deviation \eqn{\sigma}{sigma}, must be positive.}
 }
 \description{
 Expected value of the Lognormal distribution with mean

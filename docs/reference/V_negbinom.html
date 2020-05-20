@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Variance de la loi binomiale négative — V_negbinom • Distributacalcul</title>
+<title>Variance of the negative binomial distribution — V_negbinom • Distributacalcul</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,10 @@
 
 
 
-<meta property="og:title" content="Variance de la loi binomiale négative — V_negbinom" />
-<meta property="og:description" content="Variance de la loi binomiale négative" />
+<meta property="og:title" content="Variance of the negative binomial distribution — V_negbinom" />
+<meta property="og:description" content="Variance of the negative binomial distribution with
+ parameters \(r\) (number of successful trials) and \(p\)
+ (probability of success)." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -69,7 +71,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
       </span>
     </div>
 
@@ -86,7 +88,12 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/alec42/Distributacalcul_Package">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -100,13 +107,15 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Variance de la loi binomiale négative</h1>
-    
+    <h1>Variance of the negative binomial distribution</h1>
+    <small class="dont-index">Source: <a href='https://github.com/alec42/Distributacalcul_Package/blob/master/R/V_negbinom.R'><code>R/V_negbinom.R</code></a></small>
     <div class="hidden name"><code>V_negbinom.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Variance de la loi binomiale négative</p>
+    <p>Variance of the negative binomial distribution with
+ parameters \(r\) (number of successful trials) and \(p\)
+ (probability of success).</p>
     </div>
 
     <pre class="usage"><span class='fu'>V_negbinom</span>(<span class='no'>r</span>, <span class='kw'>p</span> <span class='kw'>=</span> (<span class='fl'>1</span>/(<span class='fl'>1</span> + <span class='no'>beta</span>)), <span class='kw'>beta</span> <span class='kw'>=</span> ((<span class='fl'>1</span> - <span class='no'>p</span>)/<span class='no'>p</span>), <span class='kw'>nb_tries</span> <span class='kw'>=</span> <span class='no'>F</span>)</pre>
@@ -116,28 +125,64 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>r</th>
-      <td><p>Nombre de succès visé.</p></td>
+      <td><p>Number of successful trials.</p></td>
     </tr>
     <tr>
       <th>p</th>
-      <td><p>Probabilité de succès.</p></td>
+      <td><p>Probability of success.</p></td>
     </tr>
     <tr>
       <th>beta</th>
-      <td><p>Deuxième paramétrisation de la loi binomiale négative tel que beta = (1 - p) / p.</p></td>
+      <td><p>Alternative parameterization of the negative binomial
+distribution where beta = (1 - p) / p.</p></td>
     </tr>
     <tr>
       <th>nb_tries</th>
-      <td><p>Stipule si la binomiale est une du nombre d'essais pour le r-ème succès, ou du nombre d'échecs pour le r-ème succès (par défaut).</p></td>
+      <td><p>logical; if <code>FALSE</code> (default) number of trials
+until the <code>r</code>th success, otherwise, number of failures until
+the <code>r</code>th success.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
+    <p>When \(k\) is the number of failures until the \(r\)th success,
+  with a probability \(p\) of a success, the negative binomial has density:
+  $$\left(\frac{r + k - 1}{k}\right) (p)^{r} (1 - p)^{k}$$
+  for \(k \in \{0, 1, \dots \}\)</p>
+<p>When \(k\) is the number of trials until the \(r\)th success,
+  with a probability \(p\) of a success, the negative binomial has density:
+  $$\left(\frac{k - 1}{r - 1}\right) (p)^{r} (1 - p)^{k - r}$$
+  for \(k \in \{r, r + 1, r + 2, \dots \}\)</p>
+<p>The alternative parameterization of the negative binomial with parameter
+  \(\beta\), and \(k\) being the number of trials, has density:
+  $$\frac{\Gamma(r + k)}{\Gamma(r) k!} \left(\frac{1}{1 + \beta}\right)^{r}%
+   \left(\frac{\beta}{1 +  \beta}\right)^{k - r}$$
+  for \(k \in \{0, 1, \dots \}\)</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other Negative Binomial Distribution: 
+<code><a href='E_negbinom.html'>E_negbinom</a>()</code>,
+<code><a href='MGF_negbinom.html'>MGF_negbinom</a>()</code>,
+<code><a href='PGF_negbinom.html'>PGF_negbinom</a>()</code></p></div>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'>
+<span class='co'># Where k is the number of trials for a rth success</span>
+<span class='fu'>V_negbinom</span>(<span class='kw'>r</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>p</span> <span class='kw'>=</span> <span class='fl'>.4</span>)</div><div class='output co'>#&gt; [1] 7.5</div><div class='input'>
+<span class='co'># Where k is the number of failures before a rth success</span>
+<span class='fu'>V_negbinom</span>(<span class='kw'>r</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>p</span> <span class='kw'>=</span> <span class='fl'>.4</span>, <span class='kw'>nb_tries</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; [1] 7.5</div><div class='input'>
+<span class='co'># With alternative parameterization where k is the number of trials</span>
+<span class='fu'>V_negbinom</span>(<span class='kw'>r</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>beta</span> <span class='kw'>=</span> <span class='fl'>1.5</span>)</div><div class='output co'>#&gt; [1] 7.5</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#see-also">See also</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
@@ -150,7 +195,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
 
       </footer>

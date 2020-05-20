@@ -9,9 +9,9 @@ VaR_lnorm(kap, meanlog, sdlog)
 \arguments{
 \item{kap}{probability.}
 
-\item{meanlog}{mean \eqn{\mu}{mu}.}
+\item{meanlog}{location parameter \eqn{\mu}{mu}.}
 
-\item{sdlog}{standard deviation \eqn{\sigma}{sigma}}
+\item{sdlog}{standard deviation \eqn{\sigma}{sigma}, must be positive.}
 }
 \description{
 Value-at-Risk of the Lognormal distribution with mean

@@ -1,21 +1,27 @@
-#' Espérance tronquée d'une loi inverse gaussienne
-#' @param d valeur où tronquer
-#' @param mu mu
-#' @param beta beta = dispersion * mu^2
-#' @param dispersion dispersion = beta / mu^2
+#' Truncated mean of the Inverse Gaussian distribution
+#'
+#' @description Truncated mean of the Inverse Gaussian distribution with
+#'  mean \eqn{\mu}{mu} and shape parameter \eqn{\beta}{beta}.
+#'
+#' @templateVar d TRUE
+#' @template IG-template
+#'
 #' @export
 #' @importFrom stats pnorm
 #'
-Etronq_IG <- function(d, mu, beta = dispersion * mu^2, dispersion = beta / mu^2)
-{
-    stopifnot(d >= 0, mu >= 0, beta >= 0)
+#' @examples
+#'
+#' Etronq_IG(d = 2, mean = 2, shape = 5)
+#'
+Etronq_IG <- function(d, mean, shape = dispersion * mean^2, dispersion = shape / mean^2) {
+    stopifnot(d > 0, mean >= 0, shape > 0)
 
     d -
-        (2 * d - mu) *
-        stats::pnorm(q = (d - mu) *
-                  sqrt(1 / (beta * d))) -
-        (2 * d + mu) *
-        exp(2 * mu / beta) *
-        stats::pnorm(q = - (d + mu) *
-                  sqrt(1 / (beta * d)))
+        (2 * d - mean) *
+        stats::pnorm(q = (d - mean) *
+                  sqrt(1 / (shape * d))) -
+        (2 * d + mean) *
+        exp(2 * mean / shape) *
+        stats::pnorm(q = - (d + mean) *
+                  sqrt(1 / (shape * d)))
 }

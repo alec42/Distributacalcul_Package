@@ -14,7 +14,7 @@
 #' TVaR_norm(kap = 0.8, mean = 2, sd = 5)
 #'
 TVaR_norm <- function(kap, mean = 0, sd = 1) {
-    stopifnot(kap >= 0, kap <= 1, sd > 0)
+    stopifnot(kap >= 0, kap < 1, sd > 0)
 
     mean +
         (sd / (1 - kap)) *

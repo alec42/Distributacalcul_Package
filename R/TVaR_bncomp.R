@@ -15,7 +15,7 @@
 #'
 TVaR_BNCOMP <- function(kap, vark, size, prob, shape, rate, distr_severity = "Gamma", ko) {
     warning("This funciton is not ready for usage")
-    stopifnot(prob >= 0, prob <= 1, rate > 0)
+    stopifnot(prob >= 0, prob <= 1, rate > 0, kap < 1, kap >= 0)
     stopifnot(grepl(pattern = "(^Gamma$)|(^Lognormal[e]*$)", x = distr_severity, ignore.case = TRUE))
 
     if (vark == 0) {

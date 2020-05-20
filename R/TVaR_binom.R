@@ -13,6 +13,8 @@
 #' @export
 #'
 TVaR_binom <- function(kap, size, prob) {
+    stopifnot(kap < 1, kap >= 0, prob <= 1, prob >= 0, size >= 0)
+
     k <- 0:size
     fx <- stats::dbinom(x = k, size, prob)
     vark <- stats::qbinom(p = kap, size, prob)

@@ -1,9 +1,18 @@
-#' Variance d'une loi inverse gaussienne
-#' @param mu mu
-#' @param beta beta = dispersion * mu^2
-#' @param dispersion dispersion = beta / mu^2
+#' Variance of the Inverse Gaussian distribution
+#'
+#' @description Variance of the Inverse Gaussian distribution with
+#'  mean \eqn{\mu}{mu} and shape parameter \eqn{\beta}{beta}.
+#'
+#' @template IG-template
+#'
 #' @export
-V_IG <- function(mu, beta = dispersion * mu^2, dispersion = beta / mu^2)
-{
-    mu * beta
+#'
+#' @examples
+#'
+#' V_IG(mean = 2, shape = 5)
+#'
+V_IG <- function(mean, shape = dispersion * mean^2, dispersion = shape / mean^2) {
+    stopifnot(mean >= 0, shape >= 0)
+
+    mean * shape
 }

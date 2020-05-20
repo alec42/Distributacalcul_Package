@@ -18,7 +18,7 @@
 #' TVaR_weibull(kap = .2, shape = 3, rate = 0.25)
 #'
 TVaR_weibull <- function(kap, shape, rate = 1 / scale, scale = 1 / rate) {
-    stopifnot(shape > 0, rate > 0, kap <= 1, kap >= 0)
+    stopifnot(shape > 0, rate > 0, kap < 1, kap >= 0)
 
     E_weibull(shape, rate) /
         (1 - kap) *

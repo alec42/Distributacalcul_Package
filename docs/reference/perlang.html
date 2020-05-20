@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Fonction de répartition de la loi Erlang — perlang • Distributacalcul</title>
+<title>Cumulative Density Function of the Erlang Distribution — perlang • Distributacalcul</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,9 @@
 
 
 
-<meta property="og:title" content="Fonction de répartition de la loi Erlang — perlang" />
-<meta property="og:description" content="Fonction de répartition de la loi Erlang" />
+<meta property="og:title" content="Cumulative Density Function of the Erlang Distribution — perlang" />
+<meta property="og:description" content="Cumulative density function of the Erlang distribution with shape
+ parameter \(n\) and rate parameter \(\beta\)." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -69,7 +70,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
       </span>
     </div>
 
@@ -86,7 +87,12 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/alec42/Distributacalcul_Package">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -100,44 +106,78 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Fonction de répartition de la loi Erlang</h1>
-    
+    <h1>Cumulative Density Function of the Erlang Distribution</h1>
+    <small class="dont-index">Source: <a href='https://github.com/alec42/Distributacalcul_Package/blob/master/R/perlang.R'><code>R/perlang.R</code></a></small>
     <div class="hidden name"><code>perlang.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Fonction de répartition de la loi Erlang</p>
+    <p>Cumulative density function of the Erlang distribution with shape
+ parameter \(n\) and rate parameter \(\beta\).</p>
     </div>
 
-    <pre class="usage"><span class='fu'>perlang</span>(<span class='no'>x</span>, <span class='no'>n</span>, <span class='no'>b</span>, <span class='kw'>lower.tail</span> <span class='kw'>=</span> <span class='no'>T</span>)</pre>
+    <pre class="usage"><span class='fu'>perlang</span>(<span class='no'>q</span>, <span class='no'>shape</span>, <span class='kw'>scale</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>rate</span>, <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>scale</span>, <span class='kw'>lower.tail</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>x</th>
-      <td><p>x</p></td>
+      <th>q</th>
+      <td><p>quantile.</p></td>
     </tr>
     <tr>
-      <th>n</th>
-      <td><p>n</p></td>
+      <th>shape</th>
+      <td><p>shape parameter \(n\), must be positive integer.</p></td>
     </tr>
     <tr>
-      <th>b</th>
-      <td><p>beta</p></td>
+      <th>scale</th>
+      <td><p>alternative parameterization to rate parameter, scale = 1 / rate.</p></td>
+    </tr>
+    <tr>
+      <th>rate</th>
+      <td><p>\(\beta\) is the rate parameter, must be positive.</p></td>
     </tr>
     <tr>
       <th>lower.tail</th>
-      <td><p>Si vrai (défaut) alors fonction de répartition. Si faux, de survie.</p></td>
+      <td><p>logical; if <code>TRUE</code> (défaut) probabilities are Pr(M &lt;= k), otherwise, Pr(M &gt; k).</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
+    <p>The Erlang distribution with shape parameter \(n\) and rate parameter
+  \(\beta\) has density:
+  $$f\left(x\right) = \frac{\beta^{n}}{\Gamma(n)} x^{n - 1}%
+   \mathrm{e}^{-\beta x}$$
+  for \(x \in \mathcal{R}^+\), \(\beta &gt; 0\), \(n \in \mathcal{N}^+\)</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other Erlang Distribution: 
+<code><a href='dot-TVaR_erlang.html'>.TVaR_erlang</a>()</code>,
+<code><a href='E_erlang.html'>E_erlang</a>()</code>,
+<code><a href='Elim_erlang.html'>Elim_erlang</a>()</code>,
+<code><a href='Etronq_erlang.html'>Etronq_erlang</a>()</code>,
+<code><a href='Mexcess_erlang.html'>Mexcess_erlang</a>()</code>,
+<code><a href='SL_erlang.html'>SL_erlang</a>()</code>,
+<code><a href='V_erlang.html'>V_erlang</a>()</code>,
+<code><a href='derlang.html'>derlang</a>()</code>,
+<code><a href='kthmoment_erlang.html'>kthmoment_erlang</a>()</code></p></div>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'>
+<span class='co'># With scale parameter</span>
+<span class='fu'>perlang</span>(<span class='kw'>q</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>shape</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>scale</span> <span class='kw'>=</span> <span class='fl'>5</span>)</div><div class='output co'>#&gt; [1] 0.06155194</div><div class='input'>
+<span class='co'># With rate parameter</span>
+<span class='fu'>perlang</span>(<span class='kw'>q</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>shape</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>0.2</span>)</div><div class='output co'>#&gt; [1] 0.06155194</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#see-also">See also</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
@@ -150,7 +190,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
 
       </footer>

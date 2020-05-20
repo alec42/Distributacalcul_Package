@@ -25,6 +25,7 @@ p_BNCOMP(x, size, prob, shape, rate, ko, distr_severity = "Gamma")
 Répartition d'une loi binomiale négative composée
 }
 \examples{
-p_BNCOMP(x = 5E5, ko = 1E3, size = 5, prob = 1/5, shape = 2, rate = 1/5000, distr_severity = "Gamma")
+p_BNCOMP(x = 5E5, ko = 1E3, size = 5, prob = 1/5,
+         shape = 2, rate = 1/5000, distr_severity = "Gamma")
 
 }

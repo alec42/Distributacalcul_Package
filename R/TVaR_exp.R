@@ -17,7 +17,7 @@
 #' TVaR_exp(kap = .99, rate = 0.25)
 #'
 TVaR_exp <- function(kap, rate = 1 / scale, scale = 1 / rate) {
-    stopifnot(kap >= 0, kap <= 1, rate > 0)
+    stopifnot(kap >= 0, kap < 1, rate > 0)
 
     VaR_exp(kap = kap, rate) + E_exp(rate)
 }

@@ -11,6 +11,7 @@
 #' @details Cette formule nécessite la formule de la VaR_bincomp (déjà installée avec le package tvarPackage). Cette formule utilise aussi un choix de (présentement) 2 distributions pour la sévérité; soit la Gamma ou la Lognormale.
 #' @export
 TVaR_BINCOMP <- function(kap, n, q, shape, rate, vark, ko, distr_severity = "Gamma"){
+    stopifnot(kap < 1, kap >= 0)
 
     require(stats)
     if (vark == 0)

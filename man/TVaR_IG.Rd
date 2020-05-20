@@ -2,24 +2,43 @@
 % Please edit documentation in R/TVaR_IG.R
 \name{TVaR_IG}
 \alias{TVaR_IG}
-\title{Tail Value-at-Risk d'une loi inverse gaussienne}
+\title{Tail Value-at-Risk of the Inverse Gaussian distribution}
 \usage{
-TVaR_IG(kap, mu, beta = dispersion * mu^2, dispersion = beta/mu^2, vark)
+TVaR_IG(kap, mean, shape = dispersion * mean^2, dispersion = shape/mean^2)
 }
 \arguments{
-\item{kap}{Niveau de confiance désiré}
+\item{kap}{probability.}
 
-\item{mu}{mu}
+\item{mean}{mean (location) parameter \eqn{\mu}{mu}, must be positive.}
 
-\item{beta}{beta, = dispersion * mu^2}
+\item{shape}{shape parameter \eqn{\beta}{beta}, must be positive.}
 
-\item{dispersion}{dispersion, = beta / mu^2}
-
-\item{vark}{Value at Risk (VaR) calculé au même niveau de confiance kap}
+\item{dispersion}{alternative parameterization to the shape parameter, dispersion = 1 / rate.}
 }
 \description{
-Tail Value-at-Risk d'une loi inverse gaussienne
+Tail Value-at-Risk of the Inverse Gaussian distribution with
+ mean \eqn{\mu}{mu} and shape parameter \eqn{\beta}{beta}.
 }
 \details{
-Cette formule nécessite la formule de la VaR_IG (déjà installée avec le package tvarPackage)
+The Pareto distribution with rate parameter \eqn{\lambda}{lam} as well as shape
+  parameter \eqn{\alpha}{a} has density: \deqn{f\left(x\right) = \frac{\alpha%
+  \lambda^{\alpha}}{(\lambda + x)^{\alpha + 1}}}{f(x) = (a lam^a)/ (lam + x)^(a + 1)}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\alpha, \lambda > 0}{a, lam > 0}.
 }
+\examples{
+
+TVaR_IG(kap = 0.99, mean = 2, shape = 5)
+
+}
+\seealso{
+Other Inverse Gaussian Distribution: 
+\code{\link{E_IG}()},
+\code{\link{Elim_IG}()},
+\code{\link{Etronq_IG}()},
+\code{\link{MGF_IG}()},
+\code{\link{Mexcess_IG}()},
+\code{\link{SL_IG}()},
+\code{\link{V_IG}()},
+\code{\link{VaR_IG}()}
+}
+\concept{Inverse Gaussian Distribution}

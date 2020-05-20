@@ -9,9 +9,9 @@ Etronq_norm(d, mean = 0, sd = 1, less.than.d = TRUE)
 \arguments{
 \item{d}{cut-off value.}
 
-\item{mean}{mean \eqn{\mu}{mu}.}
+\item{mean}{mean (location) parameter \eqn{\mu}{mu}.}
 
-\item{sd}{standard deviation \eqn{\sigma}{sigma}}
+\item{sd}{standard deviation \eqn{\sigma}{sigma}, must be positive.}
 
 \item{less.than.d}{logical; if \code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.}
 }

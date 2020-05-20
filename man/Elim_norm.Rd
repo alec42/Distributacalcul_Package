@@ -9,9 +9,9 @@ Elim_norm(d, mean = 0, sd = 1)
 \arguments{
 \item{d}{cut-off value.}
 
-\item{mean}{mean \eqn{\mu}{mu}.}
+\item{mean}{mean (location) parameter \eqn{\mu}{mu}.}
 
-\item{sd}{standard deviation \eqn{\sigma}{sigma}}
+\item{sd}{standard deviation \eqn{\sigma}{sigma}, must be positive.}
 }
 \description{
 Limited mean of the Normal distribution with mean

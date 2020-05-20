@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mean-Excess loss d'une loi Burr — Mexcess_burr • Distributacalcul</title>
+<title>Mean excess loss of the Burr distribution — Mexcess_burr • Distributacalcul</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,10 @@
 
 
 
-<meta property="og:title" content="Mean-Excess loss d'une loi Burr — Mexcess_burr" />
-<meta property="og:description" content="Mean-Excess loss d'une loi Burr" />
+<meta property="og:title" content="Mean excess loss of the Burr distribution — Mexcess_burr" />
+<meta property="og:description" content="Mean excess loss of the Burr distribution with shape parameters
+ \(\alpha\) (shape1) and \(\tau\) (shape2) as well as rate
+ parameter \(\lambda\)." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -69,7 +71,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
       </span>
     </div>
 
@@ -86,7 +88,12 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/alec42/Distributacalcul_Package">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -100,44 +107,77 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Mean-Excess loss d'une loi Burr</h1>
-    
+    <h1>Mean excess loss of the Burr distribution</h1>
+    <small class="dont-index">Source: <a href='https://github.com/alec42/Distributacalcul_Package/blob/master/R/Mexcess_burr.R'><code>R/Mexcess_burr.R</code></a></small>
     <div class="hidden name"><code>Mexcess_burr.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Mean-Excess loss d'une loi Burr</p>
+    <p>Mean excess loss of the Burr distribution with shape parameters
+ \(\alpha\) (shape1) and \(\tau\) (shape2) as well as rate
+ parameter \(\lambda\).</p>
     </div>
 
-    <pre class="usage"><span class='fu'>Mexcess_burr</span>(<span class='no'>d</span>, <span class='no'>lam</span>, <span class='no'>alpha</span>, <span class='no'>tau</span>)</pre>
+    <pre class="usage"><span class='fu'>Mexcess_burr</span>(<span class='no'>d</span>, <span class='no'>shape1</span>, <span class='no'>shape2</span>, <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>scale</span>, <span class='kw'>scale</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>rate</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>d</th>
-      <td><p>déductible</p></td>
+      <td><p>cut-off value.</p></td>
     </tr>
     <tr>
-      <th>lam</th>
-      <td><p>lambda</p></td>
+      <th>shape1</th>
+      <td><p>first shape parameter \(\alpha\), must be positive integer.</p></td>
     </tr>
     <tr>
-      <th>alpha</th>
-      <td><p>alpha</p></td>
+      <th>shape2</th>
+      <td><p>second shape parameter \(\tau\), must be positive integer.</p></td>
     </tr>
     <tr>
-      <th>tau</th>
-      <td><p>tau</p></td>
+      <th>rate</th>
+      <td><p>\(\lambda\) is the rate parameter, must be positive.</p></td>
+    </tr>
+    <tr>
+      <th>scale</th>
+      <td><p>alternative parameterization to rate parameter, scale = 1 / rate.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
+    <p>The Burr distribution with rate parameter \(\lambda\) as well as shape
+  parameters \(\alpha\) and \(\tau\) has density:
+  $$f\left(x\right) = \frac{\alpha \tau \lambda^{ \alpha } x^{ \tau - 1 }}{(\lambda + x^{ \tau })^{\alpha +1}}$$
+  for \(x \in \mathcal{R}^+\), \(\alpha, \tau, \lambda &gt; 0\).</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other Burr Distribution: 
+<code><a href='E_burr.html'>E_burr</a>()</code>,
+<code><a href='Elim_burr.html'>Elim_burr</a>()</code>,
+<code><a href='Etronq_burr.html'>Etronq_burr</a>()</code>,
+<code><a href='SL_burr.html'>SL_burr</a>()</code>,
+<code><a href='TVaR_burr.html'>TVaR_burr</a>()</code>,
+<code><a href='V_burr.html'>V_burr</a>()</code>,
+<code><a href='VaR_burr.html'>VaR_burr</a>()</code>,
+<code><a href='kthmoment_burr.html'>kthmoment_burr</a>()</code></p></div>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'>
+<span class='co'># With scale parameter</span>
+<span class='fu'>Mexcess_burr</span>(<span class='kw'>d</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>shape1</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>shape2</span> <span class='kw'>=</span> <span class='fl'>5</span>)</div><div class='output co'>#&gt; [1] 0.2320153</div><div class='input'>
+<span class='co'># With rate parameter</span>
+<span class='fu'>Mexcess_burr</span>(<span class='kw'>d</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>scale</span> <span class='kw'>=</span> <span class='fl'>0.5</span>, <span class='kw'>shape1</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>shape2</span> <span class='kw'>=</span> <span class='fl'>5</span>)</div><div class='output co'>#&gt; [1] 0.2320153</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#see-also">See also</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
@@ -150,7 +190,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
 
       </footer>

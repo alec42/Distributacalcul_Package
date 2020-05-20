@@ -27,10 +27,4 @@ The (discrete) uniform distribution with min and max parameters \eqn{a}
 punifD(q = 2, min = 2, max = 5)
 
 }
-\seealso{
-Other Discrete Uniform Distribution: 
-\code{\link{E_unifD}()},
-\code{\link{V_unifD}()},
-\code{\link{dunifD}()}
-}
 \concept{Discrete Uniform Distribution}

@@ -8,8 +8,8 @@
 #' @export
 #'
 #' @examples
-#' E_BINCOMP(n = 1, q = 0.2, shape = log(1000) - 0.405, rate = 0.9^2, distr_severity = "Lognormale")
-#' V_BINCOMP(n = 1, q = 0.2, shape = log(1000) - 0.405, rate = 0.9, distr_severity = "Lognormale") # incoherent use of sigma, to fix!
+#' E_BINCOMP(n = 1, q = 0.2, shape = log(1000) - 0.405, rate = 0.9^2,
+#'           distr_severity = "Lognormale")
 #'
 E_BINCOMP <- function(n, q, shape, rate, distr_severity = "Gamma")
 {

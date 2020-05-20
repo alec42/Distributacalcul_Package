@@ -1,19 +1,28 @@
-#' Mean excess loss (excès-moyen) d'une loi inverse gaussienne
-#' @param d déductible
-#' @param mu mu
-#' @param beta beta = dispersion * mu^2
-#' @param dispersion dispersion = beta / mu^2
+#' Mean excess loss of the Inverse Gaussian distribution
+#'
+#' @description Truncated mean of the Inverse Gaussian distribution with
+#'  mean \eqn{\mu}{mu} and shape parameter \eqn{\beta}{beta}.
+#'
+#' @templateVar d TRUE
+#' @template IG-template
+#'
 #' @export
 #' @importFrom stats pnorm
-Mexcess_IG <- function(d, mu, beta = dispersion * mu^2, dispersion = beta / mu^2)
-{
-    stopifnot(d >= 0, mu >= 0, beta >= 0)
+#'
+#' @examples
+#'
+#' Mexcess_IG(d = 2, mean = 2, shape = 5)
+#'
+Mexcess_IG <- function(d, mean, shape = dispersion * mean^2, dispersion = shape / mean^2) {
+    stopifnot(d > 0, mean >= 0, shape > 0)
 
-    ((mu - d) * stats::pnorm((d - mu) * sqrt(1 / (beta * d)), lower.tail = F) +
-         (d + mu) * exp((2 * mu) / beta) * stats::pnorm(-(d + mu) * sqrt(1 / (beta * d)))) /
-        (1 - (stats::pnorm(sqrt(1/(beta * d)) * (d - mu)) +
-                  exp((2 * mu) / beta) *
-                  stats::pnorm(-sqrt(1/(beta * d)) * (d + mu))
-              )
-         )
+    (
+        (mean - d) * stats::pnorm((d - mean) * sqrt(1 / (shape*d)), lower.tail = FALSE) +
+        (d + mean) * exp(2*mean / shape) * stats::pnorm(q = -(d + mean) * sqrt(1 / (shape*d)))
+    ) /
+        (1 - (
+              stats::pnorm(q = (d - mean) * sqrt(1 / (shape*d))) +
+              exp(2*mean / shape) * stats::pnorm(q = (d + mean) * -sqrt(1 / (shape*d)))
+             )
+        )
 }

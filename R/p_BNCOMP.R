@@ -8,7 +8,8 @@
 #' @param distr_severity choix de distribution de sévérité.
 #'
 #' @examples
-#' p_BNCOMP(x = 5E5, ko = 1E3, size = 5, prob = 1/5, shape = 2, rate = 1/5000, distr_severity = "Gamma")
+#' p_BNCOMP(x = 5E5, ko = 1E3, size = 5, prob = 1/5,
+#'          shape = 2, rate = 1/5000, distr_severity = "Gamma")
 #'
 #' @export
 #' @importFrom stats dnbinom

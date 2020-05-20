@@ -12,7 +12,8 @@
 #' @importFrom stats pgamma dpois
 TVaR_PCOMP <- function(kap, lambda, shape, rate, vark, distr_severity = "Gamma", k0)
 {
-    require(stats)
+    stopifnot(kap < 1, kap >= 0)
+
     if (vark == 0)
     {
         E_PCOMP(rate, shape, lambda, distr_severity) / (1 - kap)

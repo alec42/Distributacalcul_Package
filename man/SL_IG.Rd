@@ -2,19 +2,43 @@
 % Please edit documentation in R/SL_IG.R
 \name{SL_IG}
 \alias{SL_IG}
-\title{Stop-loss d'une loi inverse gaussienne}
+\title{Stop-loss of the Inverse Gaussian distribution}
 \usage{
-SL_IG(d, mu, beta = dispersion * mu^2, dispersion = beta/mu^2)
+SL_IG(d, mean, shape = dispersion * mean^2, dispersion = shape/mean^2)
 }
 \arguments{
-\item{d}{montant d de la franchise}
+\item{d}{cut-off value.}
 
-\item{mu}{mu}
+\item{mean}{mean (location) parameter \eqn{\mu}{mu}, must be positive.}
 
-\item{beta}{beta = dispersion * mu^2}
+\item{shape}{shape parameter \eqn{\beta}{beta}, must be positive.}
 
-\item{dispersion}{dispersion = beta / mu^2}
+\item{dispersion}{alternative parameterization to the shape parameter, dispersion = 1 / rate.}
 }
 \description{
-Stop-loss d'une loi inverse gaussienne
+Stop-loss of the Inverse Gaussian distribution with
+ mean \eqn{\mu}{mu} and shape parameter \eqn{\beta}{beta}.
 }
+\details{
+The Pareto distribution with rate parameter \eqn{\lambda}{lam} as well as shape
+  parameter \eqn{\alpha}{a} has density: \deqn{f\left(x\right) = \frac{\alpha%
+  \lambda^{\alpha}}{(\lambda + x)^{\alpha + 1}}}{f(x) = (a lam^a)/ (lam + x)^(a + 1)}
+  for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\alpha, \lambda > 0}{a, lam > 0}.
+}
+\examples{
+
+SL_IG(d = 2, mean = 2, shape = 5)
+
+}
+\seealso{
+Other Inverse Gaussian Distribution: 
+\code{\link{E_IG}()},
+\code{\link{Elim_IG}()},
+\code{\link{Etronq_IG}()},
+\code{\link{MGF_IG}()},
+\code{\link{Mexcess_IG}()},
+\code{\link{TVaR_IG}()},
+\code{\link{V_IG}()},
+\code{\link{VaR_IG}()}
+}
+\concept{Inverse Gaussian Distribution}

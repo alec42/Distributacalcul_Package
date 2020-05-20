@@ -69,7 +69,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
       </span>
     </div>
 
@@ -86,7 +86,12 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/alec42/Distributacalcul_Package">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -101,7 +106,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Répartition d'une loi binomiale négative composée</h1>
-    
+    <small class="dont-index">Source: <a href='https://github.com/alec42/Distributacalcul_Package/blob/master/R/p_BNCOMP.R'><code>R/p_BNCOMP.R</code></a></small>
     <div class="hidden name"><code>p_BNCOMP.Rd</code></div>
     </div>
 
@@ -109,7 +114,7 @@
     <p>Répartition d'une loi binomiale négative composée</p>
     </div>
 
-    <pre class="usage"><span class='fu'>p_BNCOMP</span>(<span class='no'>x</span>, <span class='no'>r</span>, <span class='no'>q</span>, <span class='no'>shape</span>, <span class='no'>rate</span>, <span class='no'>ko</span>, <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Gamma"</span>)</pre>
+    <pre class="usage"><span class='fu'>p_BNCOMP</span>(<span class='no'>x</span>, <span class='no'>size</span>, <span class='no'>prob</span>, <span class='no'>shape</span>, <span class='no'>rate</span>, <span class='no'>ko</span>, <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Gamma"</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -119,20 +124,20 @@
       <td><p>x</p></td>
     </tr>
     <tr>
-      <th>r</th>
+      <th>size</th>
       <td><p>r pour la binomiale négative (nombre d'échecs).</p></td>
     </tr>
     <tr>
-      <th>q</th>
+      <th>prob</th>
       <td><p>probabilité q pour la binomiale</p></td>
     </tr>
     <tr>
       <th>shape</th>
-      <td><p>alpha pour la Gamma et mu pour la lognormale</p></td>
+      <td><p>alpha pour la Gamma</p></td>
     </tr>
     <tr>
       <th>rate</th>
-      <td><p>beta pour la Gamma et sigma^2 pour la lognormale</p></td>
+      <td><p>beta pour la Gamma</p></td>
     </tr>
     <tr>
       <th>ko</th>
@@ -140,20 +145,21 @@
     </tr>
     <tr>
       <th>distr_severity</th>
-      <td><p>choix de distribution de sévérité. Gamma ou Lognormale</p></td>
+      <td><p>choix de distribution de sévérité.</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Cette formule utilise aussi un choix de 2 distributions pour la sévérité; soit la Gamma (par défaut) ou la Lognormale.</p>
-
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>p_BNCOMP</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fl'>5E5</span>, <span class='kw'>ko</span> <span class='kw'>=</span> <span class='fl'>1E3</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>5</span>, <span class='kw'>prob</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='fl'>5</span>,
+         <span class='kw'>shape</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='fl'>5000</span>, <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Gamma"</span>)</div><div class='output co'>#&gt; [1] 0.9882276</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#details">Details</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
@@ -166,7 +172,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
 </div>
 
       </footer>

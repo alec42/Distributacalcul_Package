@@ -3,7 +3,6 @@
 #' @description Expected value of the (discrete) Uniform distribution
 #'  with min \eqn{a} and max \eqn{b}.
 #'
-#' @templateVar q FALSE
 #' @template discrete-uniform-template
 #'
 #' @export
