@@ -1,10 +1,7 @@
-#' @param min,max lower and upper limits of the distribution. Must be finite.#'
+#' @param min,max lower and upper limits of the distribution. Must be finite.
 #'
-#' <%=ifelse(exists("x") && x, "@param x quantile. By definition, it has no impact on the uniform distribution. Set to 1 by default.", "") %>
-#' <%=ifelse(exists("q") && q, "@param q quantile.", "") %>
-#' <%=ifelse(exists("k") && k, "@param k kth-moment.", "") %>
-#' <%=ifelse(exists("d") && d, "@param d cut-off value.", "") %>
-#' <%=ifelse(exists("kap"), "@param kap probability.", "") %>
+#' <%=ifelse(exists("x"), "@param x quantile. By definition, it has no impact on the uniform distribution. Set to 1 by default.", "") %>
+#' <%=ifelse(exists("q"), "@param q quantile.", "") %>
 #'
 #' @details
 #'  The (discrete) uniform distribution with min and max parameters \eqn{a}

@@ -2,18 +2,18 @@
 % Please edit documentation in R/punifD.R
 \name{punifD}
 \alias{punifD}
-\title{Cumulative probability mass function of the (discrete) Uniform Distribution}
+\title{Cumulative probability mass function of the (discrete) Uniform distribution}
 \usage{
-punifD(q, min, max)
+punifD(q, min = 0, max = 1)
 }
 \arguments{
 \item{q}{quantile.}
 
-\item{min, max}{lower and upper limits of the distribution. Must be finite.#'}
+\item{min, max}{lower and upper limits of the distribution. Must be finite.}
 }
 \description{
-Cumulative probability mass function of the (discrete) Uniform distribution
- with min \eqn{a} and max \eqn{b}.
+Cumulative probability mass function of the (discrete) Uniform
+ distribution with min \eqn{a} and max \eqn{b}.
 }
 \details{
 The (discrete) uniform distribution with min and max parameters \eqn{a}

@@ -4,16 +4,37 @@
 \alias{VaR_unif}
 \title{Value-at-Risk of the Uniform distribution}
 \usage{
-VaR_unif(kap, min, max)
+VaR_unif(kap, min = 0, max = 1)
 }
 \arguments{
 \item{kap}{probability.}
 
-\item{min}{minimum}
-
-\item{max}{maximum}
+\item{min, max}{lower and upper limits of the distribution. Must be finite.}
 }
 \description{
-Value-at-Risk of the Uniform distribution with shape
- parameters \eqn{\alpha}{alpha} and \eqn{\beta}{beta}.
+Value-at-Risk of the Uniform distribution
+ with min \eqn{a} and max \eqn{b}.
 }
+\details{
+The (continuous) uniform distribution with min and max parameters \eqn{a}
+  and \eqn{b} respectively has density:
+  \deqn{f(x) = \frac{1}{b - a} \times \bm{1}_{\{x \in [a, b] \}}}{f(x) = 1 / (b - a) x 1_\{a <= x <= b\}}
+  for \eqn{x \in [a, b]}{a <= x <= b}.
+}
+\examples{
+
+VaR_unif(kap = .99, min = 3, max = 4)
+
+}
+\seealso{
+Other Continuous Uniform Distribution: 
+\code{\link{E_unif}()},
+\code{\link{Elim_unif}()},
+\code{\link{Etronq_unif}()},
+\code{\link{Mexcess_unif}()},
+\code{\link{SL_unif}()},
+\code{\link{TVaR_unif}()},
+\code{\link{V_unif}()},
+\code{\link{kthmoment_unif}()}
+}
+\concept{Continuous Uniform Distribution}

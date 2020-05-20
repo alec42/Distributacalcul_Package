@@ -1,6 +1,18 @@
-#' Variance d'une loi uniforme
-#' Calcul la variance d'une uniforme
-#' @param a minimum
-#' @param b maximum
+#' Variance of the Uniform distribution
+#'
+#' @description Variance of the Uniform distribution
+#'  with min \eqn{a} and max \eqn{b}.
+#'
+#' @template continuous-uniform-template
+#'
 #' @export
-V_unif <- function(a, b) (b-a)^2 / 12
+#'
+#' @examples
+#'
+#' V_unif(min = 3, max = 4)
+#'
+V_unif <- function(min = 0, max = 1) {
+    stopifnot(min < max)
+
+    ((max - min)^2) / 12
+}

@@ -15,7 +15,7 @@ Etronq_llogis(d, shape, rate = 1/scale, scale = 1/rate, less.than.d = TRUE)
 
 \item{scale}{\eqn{\lambda}{lambda} rate parameter, must be positive.}
 
-\item{less.than.d}{logical; if \code{TRUE} (défaut) truncated mean for values <= d, otherwise, for values > d.}
+\item{less.than.d}{logical; if \code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.}
 }
 \description{
 Truncated mean of the Loglogistic distribution with

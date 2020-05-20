@@ -2,17 +2,37 @@
 % Please edit documentation in R/E_unif.R
 \name{E_unif}
 \alias{E_unif}
-\title{Espérance d'une loi uniforme
-Calcul l'espérance d'une uniforme}
+\title{Expected value of the Uniform distribution}
 \usage{
-E_unif(a, b)
+E_unif(min = 0, max = 1)
 }
 \arguments{
-\item{a}{minimum}
-
-\item{b}{maximum}
+\item{min, max}{lower and upper limits of the distribution. Must be finite.}
 }
 \description{
-Espérance d'une loi uniforme
-Calcul l'espérance d'une uniforme
+Expected value of the Uniform distribution
+ with min \eqn{a} and max \eqn{b}.
 }
+\details{
+The (continuous) uniform distribution with min and max parameters \eqn{a}
+  and \eqn{b} respectively has density:
+  \deqn{f(x) = \frac{1}{b - a} \times \bm{1}_{\{x \in [a, b] \}}}{f(x) = 1 / (b - a) x 1_\{a <= x <= b\}}
+  for \eqn{x \in [a, b]}{a <= x <= b}.
+}
+\examples{
+
+E_unif(min = 3, max = 4)
+
+}
+\seealso{
+Other Continuous Uniform Distribution: 
+\code{\link{Elim_unif}()},
+\code{\link{Etronq_unif}()},
+\code{\link{Mexcess_unif}()},
+\code{\link{SL_unif}()},
+\code{\link{TVaR_unif}()},
+\code{\link{V_unif}()},
+\code{\link{VaR_unif}()},
+\code{\link{kthmoment_unif}()}
+}
+\concept{Continuous Uniform Distribution}

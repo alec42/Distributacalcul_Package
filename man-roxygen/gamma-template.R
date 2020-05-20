@@ -5,7 +5,7 @@
 #' <%=ifelse(exists("d"), "@param d cut-off value.", "") %>
 #' <%=ifelse(exists("kap"), "@param kap probability.", "") %>
 #' <%=ifelse(exists("k"), "@param k kth-moment.", "") %>
-#' <%=ifelse(exists("less.than.d"), "@param less.than.d logical; if \\code{TRUE} (défaut) truncated mean for values <= d, otherwise, for values > d.", "") %>
+#' <%=ifelse(exists("less.than.d"), "@param less.than.d logical; if \\code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.", "") %>
 #'
 #' @details
 #'  The Gamma distribution with shape parameter \eqn{\alpha}{a} and rate

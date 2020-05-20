@@ -13,7 +13,7 @@ Etronq_lnorm(d, meanlog, sdlog, less.than.d = TRUE)
 
 \item{sdlog}{standard deviation \eqn{\sigma}{sigma}}
 
-\item{less.than.d}{logical; if \code{TRUE} (défaut) truncated mean for values <= d, otherwise, for values > d.}
+\item{less.than.d}{logical; if \code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.}
 }
 \description{
 Truncated mean of the Logormal distribution with mean

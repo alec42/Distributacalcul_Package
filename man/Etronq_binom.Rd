@@ -13,7 +13,7 @@ Etronq_binom(d, size, prob, less.than.d = TRUE)
 
 \item{prob}{Probability of success on each trial.}
 
-\item{less.than.d}{logical; if \code{TRUE} (défaut) truncated mean for values <= d, otherwise, for values > d.}
+\item{less.than.d}{logical; if \code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.}
 }
 \description{
 Truncated mean of the Binomial distribution

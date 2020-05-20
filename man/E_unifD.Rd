@@ -2,12 +2,14 @@
 % Please edit documentation in R/E_unifD.R
 \name{E_unifD}
 \alias{E_unifD}
-\title{Expected value of the (discrete) Uniform Distribution}
+\title{Expected value of the (discrete) Uniform distribution}
 \usage{
-E_unifD(min, max)
+E_unifD(min = 0, max = 1)
 }
 \arguments{
-\item{min, max}{lower and upper limits of the distribution. Must be finite.#'}
+\item{min, max}{lower and upper limits of the distribution. Must be finite.}
+
+\item{q}{quantile.}
 }
 \description{
 Expected value of the (discrete) Uniform distribution

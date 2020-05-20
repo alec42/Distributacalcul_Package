@@ -24,7 +24,7 @@ Etronq_burr(
 
 \item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 
-\item{less.than.d}{logical; if \code{TRUE} (défaut) truncated mean for values <= d, otherwise, for values > d.}
+\item{less.than.d}{logical; if \code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.}
 }
 \description{
 Truncated mean of the Burr distribution with shape parameters

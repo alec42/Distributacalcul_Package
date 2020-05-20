@@ -8,7 +8,7 @@
 #'
 #' <%=ifelse(exists("k0"), "@param k0 point up to which to sum the distribution to approximate the expected value.", "") %>
 #' <%=ifelse(exists("k"), "@param k quantile.", "") %>
-#' <%=ifelse(exists("lower.tail"), "@param lower.tail logical; if \\code{TRUE} (défaut) probabilities are Pr(M <= k), otherwise, Pr(M > k).", "") %>
+#' <%=ifelse(exists("lower.tail"), "@param lower.tail logical; if \\code{TRUE} (default) probabilities are Pr(M <= k), otherwise, Pr(M > k).", "") %>
 #' <%=ifelse(exists("d"), "@param d cut-off value.", "") %>
 #'
 #' @details

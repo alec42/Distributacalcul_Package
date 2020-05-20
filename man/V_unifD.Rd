@@ -2,12 +2,14 @@
 % Please edit documentation in R/V_unifD.R
 \name{V_unifD}
 \alias{V_unifD}
-\title{Variance of the (discrete) Uniform Distribution}
+\title{Variance of the (discrete) Uniform distribution}
 \usage{
-V_unifD(min, max)
+V_unifD(min = 0, max = 1)
 }
 \arguments{
-\item{min, max}{lower and upper limits of the distribution. Must be finite.#'}
+\item{min, max}{lower and upper limits of the distribution. Must be finite.}
+
+\item{q}{quantile.}
 }
 \description{
 Variance of the (discrete) Uniform distribution

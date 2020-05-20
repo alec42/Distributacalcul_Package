@@ -13,7 +13,7 @@ Etronq_pois(d, lambda, k0, less.than.d = TRUE)
 
 \item{k0}{point up to which to sum the distribution to approximate the expected value.}
 
-\item{less.than.d}{logical; if \code{TRUE} (défaut) truncated mean for values <= d, otherwise, for values > d.}
+\item{less.than.d}{logical; if \code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.}
 }
 \description{
 Truncated mean of the Poisson distribution with rate parameter

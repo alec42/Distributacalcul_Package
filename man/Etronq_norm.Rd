@@ -13,7 +13,7 @@ Etronq_norm(d, mean = 0, sd = 1, less.than.d = TRUE)
 
 \item{sd}{standard deviation \eqn{\sigma}{sigma}}
 
-\item{less.than.d}{logical; if \code{TRUE} (défaut) truncated mean for values <= d, otherwise, for values > d.}
+\item{less.than.d}{logical; if \code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.}
 }
 \description{
 Truncated mean of the Normal distribution with mean

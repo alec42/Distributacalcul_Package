@@ -1,22 +1,18 @@
 #' Value-at-Risk of the Uniform distribution
 #'
-#' @description Value-at-Risk of the Uniform distribution with shape
-#'  parameters \eqn{\alpha}{alpha} and \eqn{\beta}{beta}.
+#' @description Value-at-Risk of the Uniform distribution
+#'  with min \eqn{a} and max \eqn{b}.
 #'
-#' @param kap probability.
-#' @param min minimum
-#' @param max maximum
-# @templateVar kap TRUE
-# @template uniform-template
+#' @templateVar kap TRUE
+#' @template continuous-uniform-template
 #'
 #' @export
 #'
-# @examples
-#
-# # With scale parameter
-# VaR_unif(kap = .2, min = 3, max = 4)
+#' @examples
 #'
-VaR_unif <- function(kap, min, max) {
+#' VaR_unif(kap = .99, min = 3, max = 4)
+#'
+VaR_unif <- function(kap, min = 0, max = 1) {
     stopifnot(kap <= 1, kap >= 0, min < max)
 
     min + (max - min) * kap

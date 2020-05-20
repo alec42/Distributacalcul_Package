@@ -2,18 +2,20 @@
 % Please edit documentation in R/dunifD.R
 \name{dunifD}
 \alias{dunifD}
-\title{Probability mass function of the (discrete) Uniform Distribution}
+\title{Probability mass function of the (discrete) Uniform distribution}
 \usage{
-dunifD(x = 1, min, max)
+dunifD(x, min = 0, max = 1)
 }
 \arguments{
 \item{x}{quantile. By definition, it has no impact on the uniform distribution. Set to 1 by default.}
 
-\item{min, max}{lower and upper limits of the distribution. Must be finite.#'}
+\item{min, max}{lower and upper limits of the distribution. Must be finite.}
+
+\item{q}{quantile.}
 }
 \description{
-Probability mass function of the (discrete) Uniform distribution
- with min \eqn{a} and max \eqn{b}.
+Probability mass function of the (discrete) Uniform
+ distribution with min \eqn{a} and max \eqn{b}.
 }
 \details{
 The (discrete) uniform distribution with min and max parameters \eqn{a}

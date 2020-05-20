@@ -2,17 +2,44 @@
 % Please edit documentation in R/Etronq_unif.R
 \name{Etronq_unif}
 \alias{Etronq_unif}
-\title{Espérance tronquée d'une loi uniforme}
+\title{Truncated mean of the Uniform distribution}
 \usage{
-Etronq_unif(d, a, b)
+Etronq_unif(d, min = 0, max = 1, less.than.d = TRUE)
 }
 \arguments{
-\item{d}{cut-off value}
+\item{d}{cut-off value.}
 
-\item{a}{minimum}
+\item{min, max}{lower and upper limits of the distribution. Must be finite.}
 
-\item{b}{maximum}
+\item{less.than.d}{logical; if \code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.}
 }
 \description{
-Espérance tronquée d'une loi uniforme
+Truncated mean of the Uniform distribution
+ with min \eqn{a} and max \eqn{b}.
 }
+\details{
+The (continuous) uniform distribution with min and max parameters \eqn{a}
+  and \eqn{b} respectively has density:
+  \deqn{f(x) = \frac{1}{b - a} \times \bm{1}_{\{x \in [a, b] \}}}{f(x) = 1 / (b - a) x 1_\{a <= x <= b\}}
+  for \eqn{x \in [a, b]}{a <= x <= b}.
+}
+\examples{
+
+Etronq_unif(d = 3, min = 2, max = 4)
+
+# Values greather than d
+Etronq_unif(d = 3, min = 2, max = 4, less.than.d = FALSE)
+
+}
+\seealso{
+Other Continuous Uniform Distribution: 
+\code{\link{E_unif}()},
+\code{\link{Elim_unif}()},
+\code{\link{Mexcess_unif}()},
+\code{\link{SL_unif}()},
+\code{\link{TVaR_unif}()},
+\code{\link{V_unif}()},
+\code{\link{VaR_unif}()},
+\code{\link{kthmoment_unif}()}
+}
+\concept{Continuous Uniform Distribution}
