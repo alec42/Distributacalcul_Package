@@ -12,3 +12,7 @@ lawParametersBoxUI(id)
 \description{
 Interactive distribution visualisation (UI side)
 }
+\note{
+this function should not be used explicitely,
+ see \link[Distributacalcul]{Distributacalcul_vis}.
+}

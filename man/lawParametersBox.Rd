@@ -18,3 +18,7 @@ lawParametersBox(input, output, session, law)
 \description{
 Interactive distribution visualisation (server side)
 }
+\note{
+this function should not be used explicitely,
+ see \link[Distributacalcul]{Distributacalcul_vis}.
+}

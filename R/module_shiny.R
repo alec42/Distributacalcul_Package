@@ -1,5 +1,8 @@
 #' Interactive distribution visualisation (server side)
 #'
+#' @note this function should not be used explicitely,
+#'  see \link[Distributacalcul]{Distributacalcul_vis}.
+#'
 #' @param input input for server side.
 #' @param output output for server side.
 #' @param session session for server side.
@@ -524,6 +527,9 @@ lawParametersBox <- function(input, output, session, law) {
 
 #' Interactive distribution visualisation (UI side)
 #'
+#' @note this function should not be used explicitely,
+#'  see \link[Distributacalcul]{Distributacalcul_vis}.
+#'
 #' @param id id of module
 #'
 #' @importFrom shiny tags NS fluidRow column uiOutput splitLayout
@@ -631,7 +637,21 @@ lawParametersBoxUI <- function(id) {
 
 #' Interactive distribution visualisation
 #'
-#' @param law Distribution to visualise, one of ...
+#' @description Opens an interactive Shiny app for the selected distribution.
+#'
+#' @param law Distribution to visualise, presently one of these 2 parameter
+#'  continuous distributions :
+#' \itemize{
+#'  \item{"norm": }{Normal distribution.}
+#'  \item{"lnorm": }{Lognormal distribution.}
+#'  \item{"gamma": }{Gamma distribution.}
+#  \item{"exp": }{Exponential distribution.}
+#'  \item{"beta": }{Beta distribution.}
+#'  \item{"unif": }{Uniform distribution.}
+#'  \item{"llogis": }{Log-logistic distribution.}
+#'  \item{"weibull": }{Weibull distribution.}
+#'  \item{"pareto": }{Pareto distribution.}
+#' }
 #'
 #' @importFrom shiny shinyApp callModule
 #' @importFrom shinydashboardPlus dashboardPagePlus dashboardHeaderPlus

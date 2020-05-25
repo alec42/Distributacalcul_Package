@@ -7,10 +7,21 @@
 Distributacalcul_vis(law)
 }
 \arguments{
-\item{law}{Distribution to visualise, one of ...}
+\item{law}{Distribution to visualise, presently one of these 2 parameter
+ continuous distributions :
+\itemize{
+ \item{"norm": }{Normal distribution.}
+ \item{"lnorm": }{Lognormal distribution.}
+ \item{"gamma": }{Gamma distribution.}
+ \item{"beta": }{Beta distribution.}
+ \item{"unif": }{Uniform distribution.}
+ \item{"llogis": }{Log-logistic distribution.}
+ \item{"weibull": }{Weibull distribution.}
+ \item{"pareto": }{Pareto distribution.}
+}}
 }
 \description{
-Interactive distribution visualisation
+Opens an interactive Shiny app for the selected distribution.
 }
 \examples{
 ## Only run this example in interactive R sessions
