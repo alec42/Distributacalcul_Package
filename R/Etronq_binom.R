@@ -16,7 +16,11 @@
 #' Etronq_binom(d = 0, size = 3, prob = 0.5, less.than.d = FALSE)
 #'
 Etronq_binom <- function(d, size, prob, less.than.d = TRUE) {
-    stopifnot(prob >= 0, prob <= 1, size %% 1 == 0, d %% 1 == 0, d <= size)
+    stopifnot(
+        d >= 0, d %% 1 == 0, d <= size,
+        prob <= 1, prob >= 0,
+        size %% 1 == 0, size >= 0
+    )
 
     k <- 0:size
     fx <- stats::dbinom(x = k, size, prob)

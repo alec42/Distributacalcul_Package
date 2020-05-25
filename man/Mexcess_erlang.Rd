@@ -2,22 +2,22 @@
 % Please edit documentation in R/Mexcess_erlang.R
 \name{Mexcess_erlang}
 \alias{Mexcess_erlang}
-\title{Mean excess loss of the Erlang Distribution}
+\title{Mean excess loss of the Erlang distribution}
 \usage{
-Mexcess_erlang(d, shape, scale = 1/rate, rate = 1/scale)
+Mexcess_erlang(d, shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
 \item{d}{cut-off value.}
 
 \item{shape}{shape parameter \eqn{n}, must be positive integer.}
 
-\item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
-
 \item{rate}{\eqn{\beta}{beta} is the rate parameter, must be positive.}
+
+\item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
 \description{
-Mean excess loss of the Erlang distribution with shape
- parameter \eqn{n} and rate parameter \eqn{\beta}{beta}.
+Mean excess loss of the Erlang distribution
+ with shape parameter \eqn{n} and rate parameter \eqn{\beta}{beta}.
 }
 \details{
 The Erlang distribution with shape parameter \eqn{n} and rate parameter
@@ -37,12 +37,13 @@ Mexcess_erlang(d = 2, shape = 2, rate = 0.2)
 }
 \seealso{
 Other Erlang Distribution: 
-\code{\link{.TVaR_erlang}()},
 \code{\link{E_erlang}()},
 \code{\link{Elim_erlang}()},
 \code{\link{Etronq_erlang}()},
 \code{\link{SL_erlang}()},
+\code{\link{TVaR_erlang}()},
 \code{\link{V_erlang}()},
+\code{\link{VaR_erlang}()},
 \code{\link{derlang}()},
 \code{\link{kthmoment_erlang}()},
 \code{\link{perlang}()}

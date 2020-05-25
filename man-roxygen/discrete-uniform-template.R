@@ -1,7 +1,7 @@
 #' @param min,max lower and upper limits of the distribution. Must be finite.
 #'
 #' <%=ifelse(exists("x"), "@param x quantile. By definition, it has no impact on the uniform distribution. Set to 1 by default.", "") %>
-#' <%=ifelse(exists("q") && q, "@param q quantile.", "") %>
+#' <%=ifelse(exists("q", inherits = F), "@param q quantile.", "") %>
 #'
 #' @details
 #'  The (discrete) uniform distribution with min and max parameters \eqn{a}

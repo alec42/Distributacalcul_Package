@@ -21,6 +21,10 @@ E_BNCOMP <- function(size, prob, shape, rate, distr_severity = "Gamma")
     stopifnot(grepl(pattern = "(^Gamma$)|(^Lognormal[e]*$)", x = distr_severity, ignore.case = TRUE))
 
     if (grepl(pattern = "^Gamma$", x = distr_severity, ignore.case = TRUE)) {
+        if (missing(rate)) { # checks if user specified rate
+            rate = 1 / scale
+        }
+        stopifnot(shape > 0, rate | scale > 0)
         E.NBCOMP <- E_negbinom(size, prob, nb_tries = FALSE) * kthmoment_gamma(k = 1, shape, rate)
     } else if (grepl(pattern = "^Lognormal[e]*$", x = distr_severity, ignore.case = TRUE)) {
         E.NBCOMP <- E_negbinom(size, prob, nb_tries = FALSE) * E_lnorm(shape, sqrt(rate))

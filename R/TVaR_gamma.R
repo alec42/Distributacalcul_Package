@@ -7,6 +7,7 @@
 #' @template gamma-template
 #'
 #' @export
+#' @importFrom stats pgamma
 #'
 #' @examples
 #'
@@ -17,7 +18,7 @@
 #' TVaR_gamma(kap = .2, shape = 3, rate = 0.25)
 #'
 TVaR_gamma <- function(kap, shape, rate = 1 / scale, scale = 1 / rate) {
-    stopifnot(shape > 0, rate > 0, kap >= 0, kap < 1)
+    stopifnot(kap >= 0, kap < 1, shape > 0, rate > 0)
 
     (E_gamma(shape, rate) / (1 - kap)) *
         stats::pgamma(q = VaR_gamma(kap, shape, rate), shape = shape + 1, rate = rate, lower.tail = FALSE)

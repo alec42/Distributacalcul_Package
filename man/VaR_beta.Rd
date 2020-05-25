@@ -26,6 +26,10 @@ The Beta distribution with shape parameters \eqn{\alpha}{a} and
    (Γ(a)Γ(b))x^(a - 1)(1 - x)^(b - 1)}
   for \eqn{x \in [0, 1]}{0 ≤ x ≤ 1}, \eqn{\alpha, \beta > 0}{a, b > 0}.
 }
+\note{
+Function VaR_beta is a wrapper for the qbeta function from the
+stats package.
+}
 \examples{
 
 VaR_beta(kap = .99, shape1 = 4, shape2 = 5)

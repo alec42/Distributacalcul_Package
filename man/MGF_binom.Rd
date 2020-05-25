@@ -14,8 +14,8 @@ MGF_binom(t, size, prob)
 \item{prob}{Probability of success on each trial.}
 }
 \description{
-Moment Generating Function (MGF) of the Binomial distribution
-   with size \eqn{n}{n} and probability of success \eqn{p}{p}.
+Moment Generating Function (MGF) of the Binomial
+ distribution with size \eqn{n}{n} and probability of success \eqn{p}{p}.
 }
 \details{
 The Binomial distribution

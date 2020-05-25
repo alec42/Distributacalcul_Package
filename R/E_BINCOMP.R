@@ -1,6 +1,6 @@
 #' Espérance d'une loi binomiale composée
-#' @param n n pour la binomiale
-#' @param q probabilité q pour la binomiale
+#' @param size n pour la binomiale
+#' @param prob probabilité q pour la binomiale
 #' @param shape alpha pour la Gamma et mu pour la lognormale
 #' @param rate beta pour la Gamma et sigma^2 pour la lognormale
 #' @param distr_severity choix de distribution de sévérité. Gamma (par défaut) ou Lognormale
@@ -8,15 +8,16 @@
 #' @export
 #'
 #' @examples
-#' E_BINCOMP(n = 1, q = 0.2, shape = log(1000) - 0.405, rate = 0.9^2,
+#' E_BINCOMP(size = 1, prob = 0.2, shape = log(1000) - 0.405, rate = 0.9^2,
 #'           distr_severity = "Lognormale")
 #'
-E_BINCOMP <- function(n, q, shape, rate, distr_severity = "Gamma")
+E_BINCOMP <- function(size, prob, shape, rate, distr_severity = "Gamma")
 {
+    stopifnot(prob >= 0, prob <= 1, rate > 0)
     if(distr_severity == "Gamma")
     {
-        shape / rate * n * q
+        shape / rate * size * prob
     }
     else if (distr_severity == "Lognormale")
-        n * q * E_lnorm(shape, sqrt(rate))
+        size * prob * E_lnorm(shape, sqrt(rate))
 }

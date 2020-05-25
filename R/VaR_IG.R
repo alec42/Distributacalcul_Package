@@ -10,13 +10,14 @@
 #' @template IG-template
 #'
 #' @export
+#' @importFrom actuar qinvgauss
 #'
 #' @examples
 #'
 #' VaR_IG(kap = 0.99, mean = 2, shape = 5)
 #'
 VaR_IG <- function(kap, mean, shape = dispersion * mean^2, dispersion = shape / mean^2) {
-    stopifnot(mean >= 0, shape >= 0, kap >= 0, kap < 1)
+    stopifnot(kap >= 0, kap < 1, mean >= 0, shape >= 0)
 
     actuar::qinvgauss(p = kap, mean = mean, dispersion = dispersion)
 }

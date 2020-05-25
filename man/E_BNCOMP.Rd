@@ -4,18 +4,18 @@
 \alias{E_BNCOMP}
 \title{Expected value of the compound Negative Binomial distribution}
 \usage{
-E_BNCOMP(size, prob, shape, rate, distr_severity = "Gamma")
+E_BNCOMP(size, prob, distr_severity = "Gamma", ...)
 }
 \arguments{
 \item{size}{r pour la binomiale négative}
 
 \item{prob}{probabilité q pour la binomiale}
 
+\item{distr_severity}{choice of severity distribution Gamma (default) or Lognormal}
+
 \item{shape}{alpha pour la Gamma et mu pour la lognormale}
 
 \item{rate}{beta pour la Gamma et sigma^2 pour la lognormale}
-
-\item{distr_severity}{choice of severity distribution Gamma (default) or Lognormal}
 }
 \description{
 Expected value of the compound Negative Binomial distribution

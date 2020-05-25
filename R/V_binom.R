@@ -5,12 +5,17 @@
 #'
 #' @template binom-template
 #'
+#' @export
+#'
 #' @examples
 #'
 #' V_binom(size = 3, prob = 0.5)
 #'
-#' @export
-#'
 V_binom <- function(size, prob) {
+    stopifnot(
+        prob <= 1, prob >= 0,
+        size %% 1 == 0, size >= 0
+    )
+
     size * prob * (1 - prob)
 }

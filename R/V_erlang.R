@@ -1,10 +1,8 @@
-#' Variance of the Erlang Distribution
+#' Variance of the Erlang distribution
 #'
-#' @description Variance of the Erlang distribution with shape parameter \eqn{n}
-#'  and rate parameter \eqn{\beta}{beta}.
+#' @description Variance of the Erlang distribution
+#'  with shape parameter \eqn{n} and rate parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar q FALSE
-#' @templateVar kappa FALSE
 #' @template erlang-template
 #'
 #' @export
@@ -17,9 +15,8 @@
 #' # With rate parameter
 #' V_erlang(shape = 2, rate = 0.2)
 #'
-V_erlang <- function(shape, scale = 1 / rate, rate = 1 / scale)
-{
-    stopifnot(shape %% 2 == 0, rate > 0)
+V_erlang <- function(shape, rate = 1 / scale, scale = 1 / rate) {
+    stopifnot(shape %% 1 == 0, rate > 0, shape > 0)
 
     shape / rate^2
 }

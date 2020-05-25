@@ -15,10 +15,14 @@ VaR_binom(kap, size, prob)
 }
 \description{
 Value-at-Risk of the Binomial distribution with size
- \eqn{n}{n} and probability of success \eqn{p}{p}. Wrapper of qbinom.
+ \eqn{n}{n} and probability of success \eqn{p}{p}.
 }
 \details{
 The Binomial distribution
+}
+\note{
+Function VaR_binom is a wrapper for the qbinom function from the
+stats package.
 }
 \examples{
 

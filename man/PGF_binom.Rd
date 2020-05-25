@@ -14,8 +14,8 @@ PGF_binom(t, size, prob)
 \item{prob}{Probability of success on each trial.}
 }
 \description{
-Probability Generating Function (PGF) of the Binomial distribution
-   with size \eqn{n}{n} and probability of success \eqn{p}{p}.
+Probability Generating Function (PGF) of the Binomial
+ distribution with size \eqn{n}{n} and probability of success \eqn{p}{p}.
 }
 \details{
 The Binomial distribution

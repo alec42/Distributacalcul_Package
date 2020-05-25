@@ -17,8 +17,7 @@ VaR_gamma(kap, shape, rate = 1/scale, scale = 1/rate)
 }
 \description{
 Value-at-Risk of the Gamma distribution with shape parameter
- \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}. Wrapper of
- qgamma.
+ \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
 }
 \details{
 The Gamma distribution with shape parameter \eqn{\alpha}{a} and rate
@@ -26,6 +25,9 @@ The Gamma distribution with shape parameter \eqn{\alpha}{a} and rate
   \deqn{f\left(x\right) = \frac{\beta^{\alpha}}{\Gamma(\alpha)} x^{\alpha - 1}%
    \textrm{e}^{-\beta x}}{f(x) = b^a / \Gamma(a) x^{a - 1} e^{-b x}}
   for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\beta, \alpha > 0}{b, a > 0}.
+}
+\note{
+Wrapper of qgamma from package stats.
 }
 \examples{
 
