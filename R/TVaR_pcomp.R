@@ -20,7 +20,7 @@ TVaR_PCOMP <- function(kap, lambda, shape, rate, vark, distr_severity = "Gamma",
     }
     else if (distr_severity == "Gamma")
     {
-        sum(sapply(1:k0, function(k) stats::dpois(x = k, lambda) * ( shape * k )/rate * stats::pgamma(q = vark, shape = shape * k + 1, rate, lower.tail = F)))/(1 - kap)
+        sum(sapply(1:k0, function(k) stats::dpois(x = k, lambda) * ( shape * k )/rate * stats::pgamma(q = vark, shape = shape * k + 1, rate, lower.tail = FALSE)))/(1 - kap)
     }
 
 }

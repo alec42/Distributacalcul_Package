@@ -4,14 +4,14 @@
 \alias{p_BINCOMP}
 \title{Fonction de répartition d'une loi binomiale composée}
 \usage{
-p_BINCOMP(x, n, q, shape, rate, ko, distr_severity = "Gamma")
+p_BINCOMP(x, size, prob, shape, rate, ko, distr_severity = "Gamma")
 }
 \arguments{
 \item{x}{x}
 
-\item{n}{n pour la binomiale}
+\item{size}{n pour la binomiale}
 
-\item{q}{probabilité q pour la binomiale}
+\item{prob}{probabilité q pour la binomiale}
 
 \item{shape}{alpha pour la Gamma}
 

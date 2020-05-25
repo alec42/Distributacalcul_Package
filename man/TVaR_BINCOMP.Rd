@@ -4,14 +4,14 @@
 \alias{TVaR_BINCOMP}
 \title{Tail Value-at-Risk d'une loi binomiale composée}
 \usage{
-TVaR_BINCOMP(kap, n, q, shape, rate, vark, ko, distr_severity = "Gamma")
+TVaR_BINCOMP(kap, size, prob, shape, rate, vark, ko, distr_severity = "Gamma")
 }
 \arguments{
 \item{kap}{Niveau de confiance désiré}
 
-\item{n}{n pour la binomiale}
+\item{size}{n pour la binomiale}
 
-\item{q}{probabilité q pour la binomiale}
+\item{prob}{probabilité q pour la binomiale}
 
 \item{shape}{alpha pour la Gamma}
 

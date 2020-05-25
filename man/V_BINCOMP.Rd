@@ -4,12 +4,12 @@
 \alias{V_BINCOMP}
 \title{Variance d'une loi binomiale composée}
 \usage{
-V_BINCOMP(n, q, shape, rate, distr_severity = "Gamma")
+V_BINCOMP(size, prob, shape, rate, distr_severity = "Gamma")
 }
 \arguments{
-\item{n}{n pour la binomiale}
+\item{size}{n pour la binomiale}
 
-\item{q}{probabilité q pour la binomiale}
+\item{prob}{probabilité q pour la binomiale}
 
 \item{shape}{alpha pour la Gamma et mu pour la lognormale}
 

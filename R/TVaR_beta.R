@@ -6,6 +6,9 @@
 #' @templateVar kap TRUE
 #' @template beta-template
 #'
+#' @export
+#' @importFrom stats pbeta qbeta
+#'
 #' @examples
 #'
 #' TVaR_beta(kap = .99, shape1 = 4, shape2 = 5)

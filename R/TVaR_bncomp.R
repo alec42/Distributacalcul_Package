@@ -13,7 +13,7 @@
 #'
 #' @export
 #'
-TVaR_BNCOMP <- function(kap, vark, size, prob, shape, rate, distr_severity = "Gamma", ko) {
+.TVaR_BNCOMP <- function(kap, vark, size, prob, shape, rate, distr_severity = "Gamma", ko) {
     warning("This funciton is not ready for usage")
     stopifnot(prob >= 0, prob <= 1, rate > 0, kap < 1, kap >= 0)
     stopifnot(grepl(pattern = "(^Gamma$)|(^Lognormal[e]*$)", x = distr_severity, ignore.case = TRUE))
@@ -24,12 +24,11 @@ TVaR_BNCOMP <- function(kap, vark, size, prob, shape, rate, distr_severity = "Ga
         TVaR.BNCOMP <- sum(sapply(1:ko, function(i)
             stats::dnbinom(x = i, size = size, prob = prob) *
                 E_gamma(shape, rate) *
-                stats::pgamma(q = vark, shape = shape * i + 1, rate = rate, lower.tail = F))
+                stats::pgamma(q = vark, shape = shape * i + 1, rate = rate, lower.tail = FALSE))
             ) / (1 - kap)
     } else {
         stop("Please enter a valid distribution choice. 'Gamma'")
     }
 
     return(TVaR.BNCOMP)
-
 }

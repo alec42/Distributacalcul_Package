@@ -4,14 +4,14 @@
 \alias{VaR_BINCOMP}
 \title{Value-at-Risk of the compound Binomiale distribution}
 \usage{
-VaR_BINCOMP(kap, n, q, shape, rate, distr_severity = "Gamma", ko)
+VaR_BINCOMP(kap, size, prob, shape, rate, distr_severity = "Gamma", ko)
 }
 \arguments{
 \item{kap}{Niveau de confiance désiré}
 
-\item{n}{n pour la binomiale}
+\item{size}{n pour la binomiale}
 
-\item{q}{probabilité q pour la binomiale}
+\item{prob}{probabilité q pour la binomiale}
 
 \item{shape}{alpha pour la Gamma}
 

@@ -13,8 +13,18 @@ BugReports: https://github.com/alec42/Distributacalcul_Package/issues
 Encoding: UTF-8
 LazyData: true
 Imports:
-    actuar, 
-    stats
+    actuar,
+    stats,
+    shiny,
+    dplyr,
+    ggplot2,
+    plotly,
+    tippy,
+    shinyjs,
+    shinyWidgets,
+    shinydashboardPlus,
+    shinydashboard,
+    rlang
 RoxygenNote: 7.0.2
 Suggests: 
     learnr,

@@ -4,12 +4,12 @@
 \alias{E_BINCOMP}
 \title{Espérance d'une loi binomiale composée}
 \usage{
-E_BINCOMP(n, q, shape, rate, distr_severity = "Gamma")
+E_BINCOMP(size, prob, shape, rate, distr_severity = "Gamma")
 }
 \arguments{
-\item{n}{n pour la binomiale}
+\item{size}{n pour la binomiale}
 
-\item{q}{probabilité q pour la binomiale}
+\item{prob}{probabilité q pour la binomiale}
 
 \item{shape}{alpha pour la Gamma et mu pour la lognormale}
 
@@ -24,7 +24,7 @@ Espérance d'une loi binomiale composée
 Cette formule utilise aussi un choix de 2 distributions pour la sévérité; soit la Gamma ou la Lognormale.
 }
 \examples{
-E_BINCOMP(n = 1, q = 0.2, shape = log(1000) - 0.405, rate = 0.9^2,
+E_BINCOMP(size = 1, prob = 0.2, shape = log(1000) - 0.405, rate = 0.9^2,
           distr_severity = "Lognormale")
 
 }
