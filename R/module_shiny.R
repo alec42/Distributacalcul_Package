@@ -5,14 +5,14 @@
 #' @param session session for server side.
 #' @param law Distribution to visualise, one of ...
 #'
-#' @export
-#' @importFrom rlang .data exec
+#' @importFrom rlang ".data" exec
 #' @importFrom dplyr case_when
 #' @importFrom ggplot2 ggplot stat_function aes labs theme_classic
 #' @importFrom plotly renderPlotly
 #' @importFrom tippy renderTippy tippy_this
 #' @importFrom shiny req reactive renderUI numericInput withMathJax
 #' @importFrom shinyWidgets radioGroupButtons switchInput pickerInput
+#' @export
 #'
 # this function permits to specify within tidyverse functions (i.e., aes())
 #  that the variable is from the data
@@ -423,7 +423,7 @@ lawParametersBox <- function(input, output, session, law) {
     output$Qx <- plotly::renderPlotly({
         shiny::req(shape(), rate(), plot_choice_QX())
         if (plot_choice_QX() == "Quantile Function") {
-            ggplot2::ggplot(data = data.frame(x.limz = c(0, 1)), ggplot2::aes(x = rlang::.data$x.limz)) +
+            ggplot2::ggplot(data = data.frame(x.limz = c(0, 1)), ggplot2::aes_(x = ~x.limz)) +
                 ggplot2::stat_function(
                     fun = function(xx) rlang::exec(
                         .fn = paste0("q", law),
@@ -446,7 +446,7 @@ lawParametersBox <- function(input, output, session, law) {
                     .fn = paste0("VaR_", law),
                     kap = 0.99,
                     as.numeric(shape()), as.numeric(rate())
-                ))), ggplot2::aes(x = rlang::.data$x.limz)) +
+                ))), ggplot2::aes_(x = ~x.limz)) +
                 ggplot2::stat_function(
                     fun = function(xx) rlang::exec(
                         .fn = paste0(ifelse(plot_choice_QX() == "Density Function", "d", "p"), law),
@@ -484,7 +484,7 @@ lawParametersBox <- function(input, output, session, law) {
                 .fn = paste0("VaR_", law),
                 kap = 0.99,
                 as.numeric(shape()), as.numeric(rate())
-            ))), ggplot2::aes(x = rlang::.data$x.limz)) +
+            ))), ggplot2::aes_(x = ~x.limz)) +
             ggplot2::stat_function(
                 fun = function(xx) rlang::exec(
                     .fn = paste0(ifelse(plot_choice_FSX() == "Density Function", "d", "p"), law),
@@ -526,12 +526,12 @@ lawParametersBox <- function(input, output, session, law) {
 #'
 #' @param id id of module
 #'
-#' @export
 #' @importFrom shiny tags NS fluidRow column uiOutput splitLayout
 #' @importFrom shinydashboard box
 #' @importFrom shinydashboardPlus boxPlus
 #' @importFrom tippy tippyOutput
 #' @importFrom plotly plotlyOutput
+#' @export
 #'
 lawParametersBoxUI <- function(id) {
 
@@ -633,10 +633,10 @@ lawParametersBoxUI <- function(id) {
 #'
 #' @param law Distribution to visualise, one of ...
 #'
-#' @export
 #' @importFrom shiny shinyApp callModule
 #' @importFrom shinydashboardPlus dashboardPagePlus dashboardHeaderPlus
 #' @importFrom shinydashboard dashboardSidebar dashboardBody
+#' @export
 #'
 #' @examples
 #' ## Only run this example in interactive R sessions
