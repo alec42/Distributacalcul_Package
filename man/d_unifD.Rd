@@ -2,7 +2,7 @@
 % Please edit documentation in R/d_unifD.R
 \name{d_unifD}
 \alias{d_unifD}
-\title{Probability Mass Function of the (discrete) Uniform Distribution}
+\title{Probability mass function of the (discrete) Uniform Distribution}
 \usage{
 d_unifD(x, min = 0, max = 1)
 }

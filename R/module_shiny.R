@@ -8,6 +8,7 @@
 #' @param session session for server side.
 #' @param law Distribution to visualise, one of ...
 #'
+#' @importFrom actuar dpareto ppareto qparetoo
 #' @importFrom rlang ".data" exec
 #' @importFrom dplyr case_when
 #' @importFrom ggplot2 ggplot stat_function aes labs theme_classic
@@ -281,7 +282,8 @@ lawParametersBox <- function(input, output, session, law) {
             rlang::exec(
                 .fn = paste0("d", law.fct),
                 x = as.numeric(x()),
-                as.numeric(shape()), as.numeric(rate())
+                as.numeric(shape()), as.numeric(rate()),
+                .env = ns_env(x = ifelse(law.fct == "pareto", 'actuar', 'stats'))
             ),
             nsmall = 6
         )
@@ -293,7 +295,8 @@ lawParametersBox <- function(input, output, session, law) {
                 .fn = paste0("p", law.fct),
                 q = as.numeric(x()),
                 as.numeric(shape()), as.numeric(rate()),
-                lower.tail = xlim_distr()
+                lower.tail = xlim_distr(),
+                .env = ns_env(x = ifelse(law.fct == "pareto", 'actuar', 'stats'))
             ),
             nsmall = 6,
             scientific = F
@@ -431,7 +434,8 @@ lawParametersBox <- function(input, output, session, law) {
                     fun = function(xx) rlang::exec(
                         .fn = paste0("q", law),
                         p = xx,
-                        as.numeric(shape()), as.numeric(rate())
+                        as.numeric(shape()), as.numeric(rate()),
+                        .env = ns_env(x = ifelse(law.fct == "pareto", 'actuar', 'stats'))
                     )
                 ) +
                 ggplot2::theme_classic() +
@@ -444,17 +448,20 @@ lawParametersBox <- function(input, output, session, law) {
                 x.limz = c(rlang::exec(
                     .fn = paste0("VaR_", law),
                     kap = 0.01,
-                    as.numeric(shape()), as.numeric(rate())
+                    as.numeric(shape()), as.numeric(rate()),
+                    .env = ns_env(x = ifelse(law.fct == "pareto", 'actuar', 'stats'))
                 ), rlang::exec(
                     .fn = paste0("VaR_", law),
                     kap = 0.99,
-                    as.numeric(shape()), as.numeric(rate())
+                    as.numeric(shape()), as.numeric(rate()),
+                    .env = ns_env(x = ifelse(law.fct == "pareto", 'actuar', 'stats'))
                 ))), ggplot2::aes_(x = ~x.limz)) +
                 ggplot2::stat_function(
                     fun = function(xx) rlang::exec(
                         .fn = paste0(ifelse(plot_choice_QX() == "Density Function", "d", "p"), law),
                         xx,
-                        as.numeric(shape()), as.numeric(rate())
+                        as.numeric(shape()), as.numeric(rate()),
+                        .env = ns_env(x = ifelse(law.fct == "pareto", 'actuar', 'stats'))
                     ),
                     alpha = 0.7
                 ) +
@@ -462,12 +469,14 @@ lawParametersBox <- function(input, output, session, law) {
                     fun = function(xx) rlang::exec(
                         .fn = paste0(ifelse(plot_choice_QX() == "Density Function", "d", "p"), law),
                         xx,
-                        as.numeric(shape()), as.numeric(rate())
+                        as.numeric(shape()), as.numeric(rate()),
+                        .env = ns_env(x = ifelse(law.fct == "pareto", 'actuar', 'stats'))
                     ),
                     xlim = c(VaR(),  rlang::exec(
                         .fn = paste0("VaR_", law),
                         kap = 0.99,
-                        as.numeric(shape()), as.numeric(rate())
+                        as.numeric(shape()), as.numeric(rate()),
+                        .env = ns_env(x = ifelse(law.fct == "pareto", 'actuar', 'stats'))
                     )),
                     geom = "area",
                     fill = "red",
@@ -492,7 +501,8 @@ lawParametersBox <- function(input, output, session, law) {
                 fun = function(xx) rlang::exec(
                     .fn = paste0(ifelse(plot_choice_FSX() == "Density Function", "d", "p"), law),
                     xx,
-                    as.numeric(shape()), as.numeric(rate())
+                    as.numeric(shape()), as.numeric(rate()),
+                    .env = ns_env(x = ifelse(law.fct == "pareto", 'actuar', 'stats'))
                 ),
                 alpha = 0.7
             ) +
@@ -500,7 +510,8 @@ lawParametersBox <- function(input, output, session, law) {
                 fun = function(xx) rlang::exec(
                     .fn = paste0(ifelse(plot_choice_FSX() == "Density Function", "d", "p"), law),
                     xx,
-                    as.numeric(shape()), as.numeric(rate())
+                    as.numeric(shape()), as.numeric(rate()),
+                    .env = ns_env(x = ifelse(law.fct == "pareto", 'actuar', 'stats'))
                 ),
                 xlim = c(
                     ifelse(xlim_distr(), rlang::exec(

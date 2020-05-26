@@ -1,4 +1,4 @@
-#' Probability Mass Function of the (discrete) Uniform Distribution
+#' Probability mass function of the (discrete) Uniform Distribution
 #'
 #' @description Probability mass function of the (discrete) Uniform
 #'  distribution with min \eqn{a} and max \eqn{b}.
