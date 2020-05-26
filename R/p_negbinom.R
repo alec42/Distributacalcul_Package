@@ -36,6 +36,7 @@
 #     if (nb_tries) {
 #         stopifnot(k > r)
 #     }
+#     stopifnot(r > 0, p > 0, p < 1)
 #     start_FX <- ifelse(nb_tries, r, 0)
 #     if (lower.tail) {
 #         sum(sapply(start_FX:k, function(i) d_negbinom(k = i, r = r, p = p, nb_tries = nb_tries)))

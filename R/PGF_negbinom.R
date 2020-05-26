@@ -14,6 +14,8 @@
 #' @export
 #'
 PGF_negbinom <- function(t, r, p = (1 / (1 + beta)), beta = ((1 - p) / p), nb_tries = F) {
+
+    stopifnot(r > 0, p > 0, p < 1)
     (
         p / (1 - (1 - p) * t)
     )^r

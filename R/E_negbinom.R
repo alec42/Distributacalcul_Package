@@ -21,6 +21,8 @@
 #'
 E_negbinom <- function(r, p = (1 / (1 + beta)), beta = ((1 - p) / p), nb_tries = F)
 {
+    stopifnot(r > 0, p > 0, p < 1)
+
     if (nb_tries) {
         r / p
     } else {

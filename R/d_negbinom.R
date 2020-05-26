@@ -33,6 +33,7 @@
 #     if (nb_tries) {
 #         stopifnot(k > r)
 #     }
+#     stopifnot(r > 0, p > 0, p < 1)
 #
 #     if (nb_tries) {
 #         choose((k - 1), (r - 1)) * p^r * (1 - p)^(k - r)
