@@ -5,3 +5,5 @@
 ^pkgdown$
 ^inst/tutorials/test\.Rmd$
 ^README\.Rmd$
+^man-roxygen$
+^build_site_pkgdown\.R$

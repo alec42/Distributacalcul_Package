@@ -1,6 +1,6 @@
 #' kth moment of the Lognormal distribution
 #'
-#' @description kth moment of the Logormal distribution with mean
+#' @description kth moment of the Lognormal distribution with mean
 #'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 #'
 #' @templateVar k TRUE

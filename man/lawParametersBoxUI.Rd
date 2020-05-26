@@ -13,6 +13,6 @@ lawParametersBoxUI(id)
 Interactive distribution visualisation (UI side)
 }
 \note{
-this function should not be used explicitely,
+this function should not be used explicitly,
  see \link[Distributacalcul]{Distributacalcul_vis}.
 }

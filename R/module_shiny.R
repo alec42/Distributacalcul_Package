@@ -1,6 +1,6 @@
 #' Interactive distribution visualisation (server side)
 #'
-#' @note this function should not be used explicitely,
+#' @note this function should not be used explicitly,
 #'  see \link[Distributacalcul]{Distributacalcul_vis}.
 #'
 #' @param input input for server side.
@@ -229,9 +229,9 @@ lawParametersBox <- function(input, output, session, law) {
             inputId = session$ns("plot_choice_QX"),
             # label = "Style : primary",
             choices = c(
-                "Density function",
+                "Density Function",
                 "Cumulative Density Function",
-                "Quantile function"
+                "Quantile Function"
             ),
             selected = "Cumulative Density Function",
             options = list(
@@ -527,7 +527,7 @@ lawParametersBox <- function(input, output, session, law) {
 
 #' Interactive distribution visualisation (UI side)
 #'
-#' @note this function should not be used explicitely,
+#' @note this function should not be used explicitly,
 #'  see \link[Distributacalcul]{Distributacalcul_vis}.
 #'
 #' @param id id of module

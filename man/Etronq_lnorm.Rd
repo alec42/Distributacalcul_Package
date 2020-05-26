@@ -16,7 +16,7 @@ Etronq_lnorm(d, meanlog, sdlog, less.than.d = TRUE)
 \item{less.than.d}{logical; if \code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.}
 }
 \description{
-Truncated mean of the Logormal distribution with mean
+Truncated mean of the Lognormal distribution with mean
  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 }
 \details{

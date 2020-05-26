@@ -14,7 +14,7 @@
 #' VaR_lnorm(kap = 0.8, meanlog = 3, sdlog = 5)
 #'
 VaR_lnorm <- function(kap, meanlog, sdlog) {
-    stopifnot(kap <= 1, kap >= 0, sdlog > 0)
+    stopifnot(kap >= 0, kap <= 1, sdlog > 0)
 
     stats::qlnorm(p = kap, meanlog = meanlog, sdlog = sdlog)
 }

@@ -1,6 +1,6 @@
 #' Truncated mean of the Lognormal distribution
 #'
-#' @description Truncated mean of the Logormal distribution with mean
+#' @description Truncated mean of the Lognormal distribution with mean
 #'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 #'
 #' @templateVar d TRUE

@@ -20,7 +20,7 @@ Truncated mean of the Poisson distribution with rate parameter
  \eqn{\lambda}{lambda}.
 }
 \details{
-
+The Poisson distribution with ... has density ...
 }
 \examples{
 

@@ -1,0 +1,1 @@
+#' @param k kth-moment.

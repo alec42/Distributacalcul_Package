@@ -14,7 +14,7 @@ kthmoment_lnorm(k, meanlog, sdlog)
 \item{sdlog}{standard deviation \eqn{\sigma}{sigma}, must be positive.}
 }
 \description{
-kth moment of the Logormal distribution with mean
+kth moment of the Lognormal distribution with mean
  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 }
 \details{
