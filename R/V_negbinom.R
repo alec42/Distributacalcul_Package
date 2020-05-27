@@ -11,16 +11,16 @@
 #' @examples
 #'
 #' # Where k is the number of trials for a rth success
-#' V_negbinom(r = 2, p = .4)
+#' V_negbinom(size = 2, prob = .4)
 #'
 #' # Where k is the number of failures before a rth success
-#' V_negbinom(r = 2, p = .4, nb_tries = TRUE)
+#' V_negbinom(size = 2, prob = .4, nb_tries = TRUE)
 #'
 #' # With alternative parameterization where k is the number of trials
-#' V_negbinom(r = 2, beta = 1.5)
+#' V_negbinom(size = 2, beta = 1.5)
 #'
-V_negbinom <- function(r, p = (1 / (1 + beta)), beta = ((1 - p) / p), nb_tries = F) {
-    stopifnot(r > 0, p > 0, p < 1)
+V_negbinom <- function(size, prob = (1 / (1 + beta)), beta = ((1 - prob) / prob), nb_tries = F) {
+    stopifnot(size > 0, prob > 0, prob < 1)
 
-    r * ((1 - p) / (p^2))
+    size * ((1 - prob) / (prob^2))
 }

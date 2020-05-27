@@ -15,30 +15,30 @@
 #' @examples
 #'
 #' # Where k is the number of trials for a rth success
-#' d_negbinom(k = 3, r = 2, p = .4)
+#' d_negbinom(k = 3, size = 2, prob = .4)
 #'
 #' # Where k is the number of failures before a rth success
-#' d_negbinom(k = 3, r = 2, p = .4, nb_tries = TRUE)
+#' d_negbinom(k = 3, size = 2, prob = .4, nb_tries = TRUE)
 #'
 #' # By definition, k must be greater than r.
 #' \dontrun{
-#'  d_negbinom(k = 1, r = 2, p = .4, nb_tries = TRUE)
+#'  d_negbinom(k = 1, size = 2, prob = .4, nb_tries = TRUE)
 #' }
 #'
 #' # With alternative parameterization where k is the number of trials
-#' d_negbinom(k = 3, r = 2, beta = 1.5)
+#' d_negbinom(k = 3, size = 2, beta = 1.5)
 #'
-# d_negbinom <- function(k, r, p = (1 / (1 + beta)), beta = ((1 - p) / p), nb_tries = FALSE)
+# d_negbinom <- function(k, size, prob = (1 / (1 + beta)), beta = ((1 - prob) / prob), nb_tries = FALSE)
 # {
 #     if (nb_tries) {
-#         stopifnot(k > r)
+#         stopifnot(k > size)
 #     }
-#     stopifnot(r > 0, p > 0, p < 1)
+#     stopifnot(size > 0, prob > 0, prob < 1)
 #
 #     if (nb_tries) {
-#         choose((k - 1), (r - 1)) * p^r * (1 - p)^(k - r)
+#         choose((k - 1), (size - 1)) * prob^size * (1 - prob)^(k - size)
 #     } else {
-#         choose((r + k - 1), k) * p^r * (1 - p)^k
+#         choose((size + k - 1), k) * prob^size * (1 - prob)^k
 #     }
 #
 # }

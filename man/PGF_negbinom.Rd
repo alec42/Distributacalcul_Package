@@ -4,14 +4,16 @@
 \alias{PGF_negbinom}
 \title{Probability Generating Function of the Negative Binomial distribution}
 \usage{
-PGF_negbinom(t, r, p = (1/(1 + beta)), beta = ((1 - p)/p), nb_tries = F)
+PGF_negbinom(
+  t,
+  size,
+  prob = (1/(1 + beta)),
+  beta = ((1 - prob)/prob),
+  nb_tries = F
+)
 }
 \arguments{
 \item{t}{t}
-
-\item{r}{Number of successful trials.}
-
-\item{p}{Probability of success.}
 
 \item{beta}{Alternative parameterization of the negative binomial
 distribution where beta = (1 - p) / p.}
@@ -19,6 +21,10 @@ distribution where beta = (1 - p) / p.}
 \item{nb_tries}{logical; if \code{FALSE} (default) number of trials
 until the \code{r}th success, otherwise, number of failures until
 the \code{r}th success.}
+
+\item{r}{Number of successful trials.}
+
+\item{p}{Probability of success.}
 }
 \description{
 Probability Generating Function (PGF) of the Negative
@@ -45,7 +51,7 @@ When \eqn{k} is the number of failures until the \eqn{r}th success,
 }
 \examples{
 
-PGF_negbinom(t = 5, r = 3, p = 0.3)
+PGF_negbinom(t = 5, size = 3, prob = 0.3)
 
 }
 \seealso{

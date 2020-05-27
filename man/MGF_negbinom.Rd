@@ -4,14 +4,16 @@
 \alias{MGF_negbinom}
 \title{Moment Generating Function of the Negative Binomial distribution}
 \usage{
-MGF_negbinom(t, r, p = (1/(1 + beta)), beta = ((1 - p)/p), nb_tries = F)
+MGF_negbinom(
+  t,
+  size,
+  prob = (1/(1 + beta)),
+  beta = ((1 - prob)/prob),
+  nb_tries = F
+)
 }
 \arguments{
 \item{t}{t}
-
-\item{r}{Number of successful trials.}
-
-\item{p}{Probability of success.}
 
 \item{beta}{Alternative parameterization of the negative binomial
 distribution where beta = (1 - p) / p.}
@@ -19,6 +21,10 @@ distribution where beta = (1 - p) / p.}
 \item{nb_tries}{logical; if \code{FALSE} (default) number of trials
 until the \code{r}th success, otherwise, number of failures until
 the \code{r}th success.}
+
+\item{r}{Number of successful trials.}
+
+\item{p}{Probability of success.}
 }
 \description{
 Moment Generating Function (PGF) of the Negative
@@ -45,7 +51,7 @@ When \eqn{k} is the number of failures until the \eqn{r}th success,
 }
 \examples{
 
-MGF_negbinom(t = 1, r = 4, p = 0.5)
+MGF_negbinom(t = 1, size = 4, prob = 0.5)
 
 }
 \seealso{

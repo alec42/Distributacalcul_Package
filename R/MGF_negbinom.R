@@ -9,14 +9,14 @@
 #'
 #' @examples
 #'
-#' MGF_negbinom(t = 1, r = 4, p = 0.5)
+#' MGF_negbinom(t = 1, size = 4, prob = 0.5)
 #'
 #' @export
 #'
-MGF_negbinom <- function(t, r, p = (1 / (1 + beta)), beta = ((1 - p) / p), nb_tries = F) {
+MGF_negbinom <- function(t, size, prob = (1 / (1 + beta)), beta = ((1 - prob) / prob), nb_tries = F) {
 
-    stopifnot(r > 0, p > 0, p < 1)
+    stopifnot(size > 0, prob > 0, prob < 1)
     (
-        p / (1 - (1 - p) * exp(t))
-    )^r
+        prob / (1 - (1 - prob) * exp(t))
+    )^size
 }

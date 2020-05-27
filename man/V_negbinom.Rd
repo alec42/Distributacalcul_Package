@@ -4,19 +4,19 @@
 \alias{V_negbinom}
 \title{Variance of the negative binomial distribution}
 \usage{
-V_negbinom(r, p = (1/(1 + beta)), beta = ((1 - p)/p), nb_tries = F)
+V_negbinom(size, prob = (1/(1 + beta)), beta = ((1 - prob)/prob), nb_tries = F)
 }
 \arguments{
-\item{r}{Number of successful trials.}
-
-\item{p}{Probability of success.}
-
 \item{beta}{Alternative parameterization of the negative binomial
 distribution where beta = (1 - p) / p.}
 
 \item{nb_tries}{logical; if \code{FALSE} (default) number of trials
 until the \code{r}th success, otherwise, number of failures until
 the \code{r}th success.}
+
+\item{r}{Number of successful trials.}
+
+\item{p}{Probability of success.}
 }
 \description{
 Variance of the negative binomial distribution with
@@ -44,13 +44,13 @@ When \eqn{k} is the number of failures until the \eqn{r}th success,
 \examples{
 
 # Where k is the number of trials for a rth success
-V_negbinom(r = 2, p = .4)
+V_negbinom(size = 2, prob = .4)
 
 # Where k is the number of failures before a rth success
-V_negbinom(r = 2, p = .4, nb_tries = TRUE)
+V_negbinom(size = 2, prob = .4, nb_tries = TRUE)
 
 # With alternative parameterization where k is the number of trials
-V_negbinom(r = 2, beta = 1.5)
+V_negbinom(size = 2, beta = 1.5)
 
 }
 \seealso{
