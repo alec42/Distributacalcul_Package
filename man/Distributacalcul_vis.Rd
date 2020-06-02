@@ -2,12 +2,12 @@
 % Please edit documentation in R/module_shiny.R
 \name{Distributacalcul_vis}
 \alias{Distributacalcul_vis}
-\title{Interactive distribution visualisation}
+\title{Interactive distribution visualization}
 \usage{
 Distributacalcul_vis(law)
 }
 \arguments{
-\item{law}{Distribution to visualise, presently one of these 2 parameter
+\item{law}{Distribution to visualize, presently one of these 2 parameter
  continuous distributions :
 \itemize{
  \item{"norm": }{Normal distribution.}

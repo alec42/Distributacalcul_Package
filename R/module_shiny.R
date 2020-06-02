@@ -1,4 +1,4 @@
-#' Interactive distribution visualisation (server side)
+#' Interactive distribution visualization (server side)
 #'
 #' @note this function should not be used explicitly,
 #'  see \link[Distributacalcul]{Distributacalcul_vis}.
@@ -6,7 +6,7 @@
 #' @param input input for server side.
 #' @param output output for server side.
 #' @param session session for server side.
-#' @param law Distribution to visualise, one of ...
+#' @param law Distribution to visualize, one of ...
 #'
 #' @importFrom rlang ".data" exec ns_env
 #' @importFrom dplyr case_when
@@ -535,7 +535,7 @@ lawParametersBox <- function(input, output, session, law) {
     })
 }
 
-#' Interactive distribution visualisation (UI side)
+#' Interactive distribution visualization (UI side)
 #'
 #' @note this function should not be used explicitly,
 #'  see \link[Distributacalcul]{Distributacalcul_vis}.
@@ -645,11 +645,11 @@ lawParametersBoxUI <- function(id) {
             )
     }
 
-#' Interactive distribution visualisation
+#' Interactive distribution visualization
 #'
 #' @description Opens an interactive Shiny app for the selected distribution.
 #'
-#' @param law Distribution to visualise, presently one of these 2 parameter
+#' @param law Distribution to visualize, presently one of these 2 parameter
 #'  continuous distributions :
 #' \itemize{
 #'  \item{"norm": }{Normal distribution.}

@@ -5,7 +5,7 @@
 \alias{E_BNCOMP}
 \alias{V_BNCOMP}
 \alias{VaR_BNCOMP}
-\alias{.TVaR_BNCOMP}
+\alias{TVaR_BNCOMP}
 \title{Compound Negative Binomial Distribution}
 \usage{
 p_BNCOMP(
@@ -48,7 +48,7 @@ VaR_BNCOMP(
   distr_severity = "Gamma"
 )
 
-.TVaR_BNCOMP(
+TVaR_BNCOMP(
   kap,
   vark,
   size,
@@ -82,6 +82,8 @@ VaR_BNCOMP(
 }}
 
 \item{kap}{probability.}
+
+\item{vark}{Value-at-Risk (VaR) calculated at the given probability kap.}
 }
 \description{
 Computes various risk measures (mean, variance, Value-at-Risk (VaR),
@@ -96,7 +98,7 @@ p_BNCOMP(x = 2, size = 1, prob = 0.2, shape = log(1000) - 0.405,
           rate = 0.9^2, k0 = 1E2, distr_severity = "Gamma")
 
 
-E_BNCOMP(size = 4, prob = 0.2, shape = 0, rate = 1,
+E_BNCOMP(size = 4, prob = 0.2, shape = 0, scale = 1,
          distr_severity = "Lognormal")
 
 V_BNCOMP(size = 1, prob = 0.2, shape = log(1000) - 0.405, rate = 0.9^2,

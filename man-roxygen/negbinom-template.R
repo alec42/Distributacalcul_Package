@@ -1,5 +1,5 @@
-#' @param r Number of successful trials.
-#' @param p Probability of success.
+#' @param size Number of successful trials.
+#' @param prob Probability of success.
 #' @param beta Alternative parameterization of the negative binomial
 #'  distribution where beta = (1 - p) / p.
 #' @param nb_tries logical; if \code{FALSE} (default) number of trials

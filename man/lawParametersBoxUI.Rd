@@ -2,7 +2,7 @@
 % Please edit documentation in R/module_shiny.R
 \name{lawParametersBoxUI}
 \alias{lawParametersBoxUI}
-\title{Interactive distribution visualisation (UI side)}
+\title{Interactive distribution visualization (UI side)}
 \usage{
 lawParametersBoxUI(id)
 }
@@ -10,7 +10,7 @@ lawParametersBoxUI(id)
 \item{id}{id of module}
 }
 \description{
-Interactive distribution visualisation (UI side)
+Interactive distribution visualization (UI side)
 }
 \note{
 this function should not be used explicitly,

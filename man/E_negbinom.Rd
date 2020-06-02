@@ -7,16 +7,16 @@
 E_negbinom(size, prob = (1/(1 + beta)), beta = ((1 - prob)/prob), nb_tries = F)
 }
 \arguments{
+\item{size}{Number of successful trials.}
+
+\item{prob}{Probability of success.}
+
 \item{beta}{Alternative parameterization of the negative binomial
 distribution where beta = (1 - p) / p.}
 
 \item{nb_tries}{logical; if \code{FALSE} (default) number of trials
 until the \code{r}th success, otherwise, number of failures until
 the \code{r}th success.}
-
-\item{r}{Number of successful trials.}
-
-\item{p}{Probability of success.}
 }
 \description{
 Expected value of the negative binomial distribution with

@@ -14,6 +14,7 @@
 #' @template shape-template
 #' @template rate-template
 #' @template scale-template
+#' @template vark-template
 #'
 #' @export
 #'
@@ -23,9 +24,16 @@
 #' p_PCOMP(x = 2, lambda = 2, shape = log(1000) - 0.405,
 #'           rate = 0.9^2, k0 = 1E2, distr_severity = "Gamma")
 #'
-p_PCOMP <- function(x, lambda, shape, rate = 1 / scale, scale = 1 / rate, k0 = 300, distr_severity = "Gamma")
-{
-    if (distr_severity == "Gamma") {
+p_PCOMP <- function(x, lambda, shape, rate = 1 / scale, scale = 1 / rate, k0, distr_severity = "Gamma") {
+    stopifnot(
+        x >= 0,
+        lambda > 0,
+        rate > 0,
+        k0 >= 0
+    )
+
+    if (grepl(pattern = "^Gamma$", x = distr_severity, ignore.case = TRUE)) {
+        stopifnot(shape > 0)
         stats::dpois(x = 0, lambda = lambda) +
             sum(sapply(1:k0,
                        function(k)
@@ -43,14 +51,16 @@ p_PCOMP <- function(x, lambda, shape, rate = 1 / scale, scale = 1 / rate, k0 = 3
 #' E_PCOMP(lambda = 2, shape = log(1000) - 0.405, rate = 0.9^2,
 #'           distr_severity = "Lognormale")
 #'
-E_PCOMP <- function(lambda, shape, rate = 1 / scale, scale = 1 / rate, distr_severity = "Gamma")
-{
-    stopifnot(lambda > 0, rate > 0)
+E_PCOMP <- function(lambda, shape, rate = 1 / scale, scale = 1 / rate, distr_severity = "Gamma") {
+    stopifnot(
+        lambda > 0,
+        rate > 0
+    )
 
-    if(distr_severity == "Gamma"){
+    if (grepl(pattern = "^Gamma$", x = distr_severity, ignore.case = TRUE)) {
+        stopifnot(shape > 0)
         E_gamma(shape, rate) * lambda
-    }
-    else if (distr_severity == "Lognormale"){
+    } else if (grepl(pattern = "^Lognormal[e]*$", x = distr_severity, ignore.case = TRUE)) {
         E_lnorm(shape, sqrt(rate)) * lambda
     }
 }
@@ -62,12 +72,16 @@ E_PCOMP <- function(lambda, shape, rate = 1 / scale, scale = 1 / rate, distr_sev
 #' V_PCOMP(lambda = 2, shape = log(1000) - 0.405, rate = 0.9^2,
 #'           distr_severity = "Lognormale")
 #'
-V_PCOMP <- function(lambda, shape, rate = 1 / scale, scale = 1 / rate, distr_severity = "Gamma")
-{
-    if(distr_severity == "Gamma"){
+V_PCOMP <- function(lambda, shape, rate = 1 / scale, scale = 1 / rate, distr_severity = "Gamma") {
+    stopifnot(
+        lambda > 0,
+        rate > 0
+    )
+
+    if (grepl(pattern = "^Gamma$", x = distr_severity, ignore.case = TRUE)) {
+        stopifnot(shape > 0)
         lambda * kthmoment_gamma(k = 2, shape, rate)
-    }
-    else if (distr_severity == "Lognormale"){
+    } else if (grepl(pattern = "^Lognormal[e]*$", x = distr_severity, ignore.case = TRUE)) {
         lambda * kthmoment_lnorm(k = 2, shape, sqrt(rate))
     }
 }
@@ -84,15 +98,23 @@ V_PCOMP <- function(lambda, shape, rate = 1 / scale, scale = 1 / rate, distr_sev
 #' VaR_PCOMP(kap = 0.9, lambda = 2, shape = log(1000) - 0.405,
 #'             rate = 0.9^2, k0 = 1E2, distr_severity = "Gamma")
 #'
-VaR_PCOMP <- function(kap, lambda, shape, rate = 1 / scale, scale = 1 / rate, k0, distr_severity = "Gamma")
-{
-    stopifnot(kap >= 0, kap <= 1, rate > 0)
+VaR_PCOMP <- function(kap, lambda, shape, rate = 1 / scale, scale = 1 / rate, k0, distr_severity = "Gamma") {
+    stopifnot(
+        kap >= 0, kap <= 1,
+        lambda > 0,
+        rate > 0,
+        shape > 0,
+        k0 >= 0
+    )
     stopifnot(grepl(pattern = "(^Gamma$)", x = distr_severity, ignore.case = TRUE))
 
-    if(kap <= p_PCOMP(x = 0, lambda = lambda, shape = shape, rate = rate, k0 = k0))
-        0
-    else
-        stats::optimize(function(i) abs(p_PCOMP(x = i, lambda = lambda, shape = shape, rate = rate, k0 = k0) - kap), c(0, k0))$minimum
+    if (kap <= p_PCOMP(x = 0, lambda = lambda, shape = shape, rate = rate, k0 = k0)) {
+        VaR.PCOMP <- 0
+    } else {
+        VaR.PCOMP <- stats::optimize(function(i) abs(p_PCOMP(x = i, lambda = lambda, shape = shape, rate = rate, k0 = k0, distr_severity = distr_severity) - kap), c(0, k0))$minimum
+    }
+
+    return(VaR.PCOMP)
 }
 
 
@@ -107,16 +129,21 @@ VaR_PCOMP <- function(kap, lambda, shape, rate = 1 / scale, scale = 1 / rate, k0
 #' TVaR_PCOMP(kap = 0.9, lambda = 2, shape = 0.59, rate = 0.9^2,
 #'             vark = vark_calc, k0 = 1E2, distr_severity = "Gamma")
 #'
-TVaR_PCOMP <- function(kap, lambda, shape, rate = 1 / scale, scale = 1 / rate, vark, k0, distr_severity = "Gamma")
-{
-    stopifnot(kap >= 0, kap < 1)
+TVaR_PCOMP <- function(kap, lambda, shape, rate = 1 / scale, scale = 1 / rate, vark, k0, distr_severity = "Gamma") {
+    stopifnot(
+        kap >= 0, kap < 1,
+        lambda > 0,
+        rate > 0,
+        k0 >= 0,
+        vark >= 0
+    )
 
-    if (vark == 0)
-    {
-        E_PCOMP(rate, shape, lambda, distr_severity) / (1 - kap)
+    if (vark == 0) {
+        TVaR.PCOMP <- E_PCOMP(rate, shape, lambda, distr_severity) / (1 - kap)
+    } else if (grepl(pattern = "^Gamma$", x = distr_severity, ignore.case = TRUE)) {
+        stopifnot(shape > 0)
+        TVaR.PCOMP <- sum(sapply(1:k0, function(k) stats::dpois(x = k, lambda) * ( shape * k )/rate * stats::pgamma(q = vark, shape = shape * k + 1, rate, lower.tail = FALSE)))/(1 - kap)
     }
-    else if (distr_severity == "Gamma")
-    {
-        sum(sapply(1:k0, function(k) stats::dpois(x = k, lambda) * ( shape * k )/rate * stats::pgamma(q = vark, shape = shape * k + 1, rate, lower.tail = FALSE)))/(1 - kap)
-    }
+
+    return(TVaR.PCOMP)
 }

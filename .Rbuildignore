@@ -7,3 +7,4 @@
 ^README\.Rmd$
 ^man-roxygen$
 ^build_site_pkgdown\.R$
+^cran-comments\.md$

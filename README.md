@@ -67,7 +67,7 @@ SL_beta(d = .3, shape1 = 2, shape2 = 4) # E[max(X - d, 0)]
 
 ##  Risk measures:
 TVaR_beta(kap = 0.99, shape1 = 2, shape2 = 4) # TVaR_{k}(X)
-#> [1] 0.0216053
+#> [1] 0.8239414
 VaR_beta(kap = 0.99, shape1 = 2, shape2 = 4) # VaR_{k}(X) = F_X^(-1)(k)
 #> [1] 0.7779277
 ```
@@ -202,8 +202,10 @@ below
 
 # Updates
 
-|    Date    |                        Modifications                        |
-| :--------: | :---------------------------------------------------------: |
-| 26/07/2019 |                 Initial creation of package                 |
-| 12/09/2019 |   Completion of creation of all necessary function files    |
-| 17/11/2019 | Merger of tvarPackage, beginning of documentation creation. |
+|    Date    |                             Modifications                              |
+| :--------: | :--------------------------------------------------------------------: |
+| 26/07/2019 |                      Initial creation of package                       |
+| 12/09/2019 |         Completion of creation of all necessary function files         |
+| 17/11/2019 |      Merger of tvarPackage, beginning of documentation creation.       |
+| 20/05/2020 |                      Addition of Shiny component.                      |
+| 02/06/2020 | Completion of documentation, first temptative of a submission to CRAN. |

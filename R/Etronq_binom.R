@@ -7,7 +7,7 @@
 #' @templateVar less.than.d TRUE
 #' @template binom-template
 #'
-# @export
+#' @export
 #' @importFrom stats dbinom
 #'
 #' @examples

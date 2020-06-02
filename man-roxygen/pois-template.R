@@ -9,7 +9,10 @@
 #' <%=ifelse(exists("lower.tail"), "@param lower.tail logical; if \\code{TRUE} (default) probabilities are Pr(M <= k), otherwise, Pr(M > k).", "") %>
 #'
 #' @details
-#'  The Poisson distribution with ... has density ...
+#'  The Poisson distribution with rate parameter \eqn{\lambda}{lam}
+#'   has probability mass function :
+#'   \deqn{Pr(X = k) = \frac{\lambda^k \textrm{e}^{-\lambda}}{k!}}{Pr(X = k) = (lam^k e^(-lam)) / k!}
+#'   for \eqn{k = 0, 1, 2, \dots}{k = 0, 1, 2, ...}, and \eqn{\lambda > 0}{lam > 0}
 #'
 #' @family Poisson Distribution
 #'

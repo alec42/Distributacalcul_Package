@@ -14,7 +14,7 @@ p_PCOMP(
   shape,
   rate = 1/scale,
   scale = 1/rate,
-  k0 = 300,
+  k0,
   distr_severity = "Gamma"
 )
 
@@ -75,6 +75,8 @@ TVaR_PCOMP(
 }}
 
 \item{kap}{probability.}
+
+\item{vark}{Value-at-Risk (VaR) calculated at the given probability kap.}
 }
 \description{
 Computes various risk measures (mean, variance, Value-at-Risk (VaR),

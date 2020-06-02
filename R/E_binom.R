@@ -5,7 +5,7 @@
 #'
 #' @template binom-template
 #'
-# @export
+#' @export
 #'
 #' @examples
 #'

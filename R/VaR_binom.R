@@ -9,7 +9,7 @@
 #' @template binom-template
 #' @templateVar kap TRUE
 #'
-# @export
+#' @export
 #'
 #' @importFrom stats qbinom
 #'

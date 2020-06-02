@@ -2,7 +2,7 @@
 % Please edit documentation in R/module_shiny.R
 \name{lawParametersBox}
 \alias{lawParametersBox}
-\title{Interactive distribution visualisation (server side)}
+\title{Interactive distribution visualization (server side)}
 \usage{
 lawParametersBox(input, output, session, law)
 }
@@ -13,10 +13,10 @@ lawParametersBox(input, output, session, law)
 
 \item{session}{session for server side.}
 
-\item{law}{Distribution to visualise, one of ...}
+\item{law}{Distribution to visualize, one of ...}
 }
 \description{
-Interactive distribution visualisation (server side)
+Interactive distribution visualization (server side)
 }
 \note{
 this function should not be used explicitly,

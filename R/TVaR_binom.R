@@ -6,7 +6,7 @@
 #' @templateVar kap TRUE
 #' @template binom-template
 #'
-# @export
+#' @export
 #' @importFrom stats dbinom qbinom pbinom
 #'
 #' @examples

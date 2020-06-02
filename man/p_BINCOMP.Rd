@@ -82,6 +82,8 @@ TVaR_BINCOMP(
 }}
 
 \item{kap}{probability.}
+
+\item{vark}{Value-at-Risk (VaR) calculated at the given probability kap.}
 }
 \description{
 Computes various risk measures (mean, variance, Value-at-Risk (VaR),

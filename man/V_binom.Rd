@@ -16,7 +16,10 @@ Variance of the Binomial distribution with size
  \eqn{n}{n} and probability of success \eqn{p}{p}.
 }
 \details{
-The Binomial distribution
+The Binomial distribution with probability of success \eqn{p}{p} for \eqn{n}{n} trials
+  has probability mass function :
+  \deqn{Pr(X = k) = \left(\frac{n}{k}\right) p^n (1 - p)^{n - k}}{Pr(X = k) = n!/(k!(n - k)!) p^n(1 - p)^(n - k)}
+  for \eqn{k = 0, 1, 2, \dots, n}{k = 0, 1, 2, ..., n}, \eqn{p \in [0, 1]}{0 <= p <= 1}, and \eqn{n > 0}{n > 0}
 }
 \examples{
 

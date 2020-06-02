@@ -6,7 +6,7 @@
 #' @param t t
 #' @template binom-template
 #'
-# @export
+#' @export
 #'
 #' @examples
 #'
