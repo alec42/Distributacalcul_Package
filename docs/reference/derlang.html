@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Density Function of the Erlang Distribution — derlang • Distributacalcul</title>
+<title>Density function of the Erlang distribution — derlang • Distributacalcul</title>
 
 
 <!-- jquery -->
@@ -35,9 +35,9 @@
 
 
 
-<meta property="og:title" content="Density Function of the Erlang Distribution — derlang" />
-<meta property="og:description" content="Density function of the Erlang distribution with shape
- parameter \(n\) and rate parameter \(\beta\)." />
+<meta property="og:title" content="Density function of the Erlang distribution — derlang" />
+<meta property="og:description" content="Density function of the Erlang distribution
+ with shape parameter \(n\) and rate parameter \(\beta\)." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -70,7 +70,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -106,17 +106,17 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Density Function of the Erlang Distribution</h1>
-    <small class="dont-index">Source: <a href='https://github.com/alec42/Distributacalcul_Package/blob/master/R/derlang.R'><code>R/derlang.R</code></a></small>
+    <h1>Density function of the Erlang distribution</h1>
+    <small class="dont-index">Source: <a href='https://github.com/alec42/Distributacalcul_Package/blob/master/R/d_erlang.R'><code>R/d_erlang.R</code></a></small>
     <div class="hidden name"><code>derlang.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Density function of the Erlang distribution with shape
- parameter \(n\) and rate parameter \(\beta\).</p>
+    <p>Density function of the Erlang distribution
+ with shape parameter \(n\) and rate parameter \(\beta\).</p>
     </div>
 
-    <pre class="usage"><span class='fu'>derlang</span>(<span class='no'>x</span>, <span class='no'>shape</span>, <span class='kw'>scale</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>rate</span>, <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>scale</span>)</pre>
+    <pre class="usage"><span class='fu'>derlang</span>(<span class='no'>x</span>, <span class='no'>shape</span>, <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>scale</span>, <span class='kw'>scale</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>rate</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -130,12 +130,12 @@
       <td><p>shape parameter \(n\), must be positive integer.</p></td>
     </tr>
     <tr>
-      <th>scale</th>
-      <td><p>alternative parameterization to rate parameter, scale = 1 / rate.</p></td>
-    </tr>
-    <tr>
       <th>rate</th>
       <td><p>\(\beta\) is the rate parameter, must be positive.</p></td>
+    </tr>
+    <tr>
+      <th>scale</th>
+      <td><p>alternative parameterization to rate parameter, scale = 1 / rate.</p></td>
     </tr>
     </table>
 
@@ -149,13 +149,14 @@
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other Erlang Distribution: 
-<code><a href='dot-TVaR_erlang.html'>.TVaR_erlang</a>()</code>,
 <code><a href='E_erlang.html'>E_erlang</a>()</code>,
 <code><a href='Elim_erlang.html'>Elim_erlang</a>()</code>,
 <code><a href='Etronq_erlang.html'>Etronq_erlang</a>()</code>,
 <code><a href='Mexcess_erlang.html'>Mexcess_erlang</a>()</code>,
 <code><a href='SL_erlang.html'>SL_erlang</a>()</code>,
+<code><a href='TVaR_erlang.html'>TVaR_erlang</a>()</code>,
 <code><a href='V_erlang.html'>V_erlang</a>()</code>,
+<code><a href='VaR_erlang.html'>VaR_erlang</a>()</code>,
 <code><a href='kthmoment_erlang.html'>kthmoment_erlang</a>()</code>,
 <code><a href='perlang.html'>perlang</a>()</code></p></div>
 
@@ -182,7 +183,7 @@
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alec James van Rassel, Gabriel Crépeault-Cauchon.</p>
+  <p>Developed by Alec James van Rassel, Gabriel Crépeault-Cauchon, Laboratoire Act & Risk, École d'actuariat de l'Université Laval, Natural Sciences and Engineering Research Council of Canada.</p>
 </div>
 
 <div class="pkgdown">

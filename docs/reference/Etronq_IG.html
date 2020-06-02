@@ -70,7 +70,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -116,7 +116,13 @@
  mean \(\mu\) and shape parameter \(\beta\).</p>
     </div>
 
-    <pre class="usage"><span class='fu'>Etronq_IG</span>(<span class='no'>d</span>, <span class='no'>mean</span>, <span class='kw'>shape</span> <span class='kw'>=</span> <span class='no'>dispersion</span> * <span class='no'>mean</span>^<span class='fl'>2</span>, <span class='kw'>dispersion</span> <span class='kw'>=</span> <span class='no'>shape</span>/<span class='no'>mean</span>^<span class='fl'>2</span>)</pre>
+    <pre class="usage"><span class='fu'>Etronq_IG</span>(
+  <span class='no'>d</span>,
+  <span class='no'>mean</span>,
+  <span class='kw'>shape</span> <span class='kw'>=</span> <span class='no'>dispersion</span> * <span class='no'>mean</span>^<span class='fl'>2</span>,
+  <span class='kw'>dispersion</span> <span class='kw'>=</span> <span class='no'>shape</span>/<span class='no'>mean</span>^<span class='fl'>2</span>,
+  <span class='kw'>less.than.d</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -136,6 +142,10 @@
     <tr>
       <th>dispersion</th>
       <td><p>alternative parameterization to the shape parameter, dispersion = 1 / rate.</p></td>
+    </tr>
+    <tr>
+      <th>less.than.d</th>
+      <td><p>logical; if <code>TRUE</code> (default) truncated mean for values &lt;= d, otherwise, for values &gt; d.</p></td>
     </tr>
     </table>
 
@@ -177,7 +187,7 @@
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alec James van Rassel, Gabriel Crépeault-Cauchon.</p>
+  <p>Developed by Alec James van Rassel, Gabriel Crépeault-Cauchon, Laboratoire Act & Risk, École d'actuariat de l'Université Laval, Natural Sciences and Engineering Research Council of Canada.</p>
 </div>
 
 <div class="pkgdown">

@@ -37,8 +37,7 @@
 
 <meta property="og:title" content="Value-at-Risk of the Gamma distribution — VaR_gamma" />
 <meta property="og:description" content="Value-at-Risk of the Gamma distribution with shape parameter
- \(\alpha\) and rate parameter \(\beta\). Wrapper of
- qgamma." />
+ \(\alpha\) and rate parameter \(\beta\)." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -71,7 +70,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -114,8 +113,7 @@
 
     <div class="ref-description">
     <p>Value-at-Risk of the Gamma distribution with shape parameter
- \(\alpha\) and rate parameter \(\beta\). Wrapper of
- qgamma.</p>
+ \(\alpha\) and rate parameter \(\beta\).</p>
     </div>
 
     <pre class="usage"><span class='fu'>VaR_gamma</span>(<span class='no'>kap</span>, <span class='no'>shape</span>, <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>scale</span>, <span class='kw'>scale</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>rate</span>)</pre>
@@ -148,6 +146,9 @@
   $$f\left(x\right) = \frac{\beta^{\alpha}}{\Gamma(\alpha)} x^{\alpha - 1}%
    \textrm{e}^{-\beta x}$$
   for \(x \in \mathcal{R}^+\), \(\beta, \alpha &gt; 0\).</p>
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    <p>Wrapper of qgamma from package stats.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other Gamma Distribution: 
@@ -174,6 +175,7 @@
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#details">Details</a></li>
+      <li><a href="#note">Note</a></li>
       <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
@@ -184,7 +186,7 @@
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alec James van Rassel, Gabriel Crépeault-Cauchon.</p>
+  <p>Developed by Alec James van Rassel, Gabriel Crépeault-Cauchon, Laboratoire Act & Risk, École d'actuariat de l'Université Laval, Natural Sciences and Engineering Research Council of Canada.</p>
 </div>
 
 <div class="pkgdown">

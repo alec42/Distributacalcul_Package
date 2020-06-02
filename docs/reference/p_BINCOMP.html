@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Fonction de répartition d'une loi binomiale composée — p_BINCOMP • Distributacalcul</title>
+<title>Compound Binomial Distribution — p_BINCOMP • Distributacalcul</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,9 @@
 
 
 
-<meta property="og:title" content="Fonction de répartition d'une loi binomiale composée — p_BINCOMP" />
-<meta property="og:description" content="Fonction de répartition d'une loi binomiale composée" />
+<meta property="og:title" content="Compound Binomial Distribution — p_BINCOMP" />
+<meta property="og:description" content="Computes various risk measures (mean, variance, Value-at-Risk (VaR),
+  and Tail Value-at-Risk (TVaR)) for the compound Binomial distribution." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -69,7 +70,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -105,56 +106,141 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Fonction de répartition d'une loi binomiale composée</h1>
-    <small class="dont-index">Source: <a href='https://github.com/alec42/Distributacalcul_Package/blob/master/R/p_BINCOMP.R'><code>R/p_BINCOMP.R</code></a></small>
+    <h1>Compound Binomial Distribution</h1>
+    <small class="dont-index">Source: <a href='https://github.com/alec42/Distributacalcul_Package/blob/master/R/BINCOMP.R'><code>R/BINCOMP.R</code></a></small>
     <div class="hidden name"><code>p_BINCOMP.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Fonction de répartition d'une loi binomiale composée</p>
+    <p>Computes various risk measures (mean, variance, Value-at-Risk (VaR),
+  and Tail Value-at-Risk (TVaR)) for the compound Binomial distribution.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>p_BINCOMP</span>(<span class='no'>x</span>, <span class='no'>n</span>, <span class='no'>q</span>, <span class='no'>shape</span>, <span class='no'>rate</span>, <span class='no'>ko</span>, <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Gamma"</span>)</pre>
+    <pre class="usage"><span class='fu'>p_BINCOMP</span>(
+  <span class='no'>x</span>,
+  <span class='no'>size</span>,
+  <span class='no'>prob</span>,
+  <span class='no'>shape</span>,
+  <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>scale</span>,
+  <span class='kw'>scale</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>rate</span>,
+  <span class='no'>k0</span>,
+  <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Gamma"</span>
+)
+
+<span class='fu'>E_BINCOMP</span>(
+  <span class='no'>size</span>,
+  <span class='no'>prob</span>,
+  <span class='no'>shape</span>,
+  <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>scale</span>,
+  <span class='kw'>scale</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>rate</span>,
+  <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Gamma"</span>
+)
+
+<span class='fu'>V_BINCOMP</span>(
+  <span class='no'>size</span>,
+  <span class='no'>prob</span>,
+  <span class='no'>shape</span>,
+  <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>scale</span>,
+  <span class='kw'>scale</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>rate</span>,
+  <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Gamma"</span>
+)
+
+<span class='fu'>VaR_BINCOMP</span>(
+  <span class='no'>kap</span>,
+  <span class='no'>size</span>,
+  <span class='no'>prob</span>,
+  <span class='no'>shape</span>,
+  <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>scale</span>,
+  <span class='kw'>scale</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>rate</span>,
+  <span class='no'>k0</span>,
+  <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Gamma"</span>
+)
+
+<span class='fu'>TVaR_BINCOMP</span>(
+  <span class='no'>kap</span>,
+  <span class='no'>size</span>,
+  <span class='no'>prob</span>,
+  <span class='no'>shape</span>,
+  <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>scale</span>,
+  <span class='kw'>scale</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='no'>rate</span>,
+  <span class='no'>vark</span>,
+  <span class='no'>k0</span>,
+  <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Gamma"</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>x</p></td>
+      <td><p>quantile.</p></td>
     </tr>
     <tr>
-      <th>n</th>
-      <td><p>n pour la binomiale</p></td>
+      <th>size</th>
+      <td><p>Number of trials (0 or more).</p></td>
     </tr>
     <tr>
-      <th>q</th>
-      <td><p>probabilité q pour la binomiale</p></td>
+      <th>prob</th>
+      <td><p>Probability of success in each trial.</p></td>
     </tr>
     <tr>
       <th>shape</th>
-      <td><p>alpha pour la Gamma</p></td>
+      <td><p>shape parameter \(\alpha\), must be positive integer.</p></td>
     </tr>
     <tr>
       <th>rate</th>
-      <td><p>beta pour la Gamma</p></td>
+      <td><p>\(\beta\) is the rate parameter, must be positive.</p></td>
     </tr>
     <tr>
-      <th>ko</th>
-      <td><p>borne pour la somme de la fonction de répartition</p></td>
+      <th>scale</th>
+      <td><p>alternative parameterization to rate parameter, scale = 1 / rate.</p></td>
+    </tr>
+    <tr>
+      <th>k0</th>
+      <td><p>point up to which to sum the distribution for the approximation.</p></td>
     </tr>
     <tr>
       <th>distr_severity</th>
-      <td><p>choix de distribution de sévérité.</p></td>
+      <td><p>Choice of severity distribution.</p><ul>
+<li><p>"gamma" (default)</p></li>
+<li><p>"lognormal" only for the expected value and variance.</p></li>
+</ul></td>
+    </tr>
+    <tr>
+      <th>kap</th>
+      <td><p>probability.</p></td>
+    </tr>
+    <tr>
+      <th>vark</th>
+      <td><p>Value-at-Risk (VaR) calculated at the given probability kap.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
+    <p>The compound Binomial Distribution has density ....</p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>p_BINCOMP</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>prob</span> <span class='kw'>=</span> <span class='fl'>0.2</span>, <span class='kw'>shape</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span>(<span class='fl'>1000</span>) - <span class='fl'>0.405</span>,
+          <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>0.9</span>^<span class='fl'>2</span>, <span class='kw'>k0</span> <span class='kw'>=</span> <span class='fl'>1E2</span>, <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Gamma"</span>)</div><div class='output co'>#&gt; [1] 0.8006133</div><div class='input'>
+<span class='fu'>E_BINCOMP</span>(<span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>prob</span> <span class='kw'>=</span> <span class='fl'>0.2</span>, <span class='kw'>shape</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span>(<span class='fl'>1000</span>) - <span class='fl'>0.405</span>, <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>0.9</span>^<span class='fl'>2</span>,
+          <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Lognormale"</span>)</div><div class='output co'>#&gt; [1] 200</div><div class='input'>
+<span class='fu'>V_BINCOMP</span>(<span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>prob</span> <span class='kw'>=</span> <span class='fl'>0.2</span>, <span class='kw'>shape</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span>(<span class='fl'>1000</span>) - <span class='fl'>0.405</span>, <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>0.9</span>^<span class='fl'>2</span>,
+          <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Lognormale"</span>)</div><div class='output co'>#&gt; [1] 409581.6</div><div class='input'>
+<span class='fu'>VaR_BINCOMP</span>(<span class='kw'>kap</span> <span class='kw'>=</span> <span class='fl'>0.9</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>prob</span> <span class='kw'>=</span> <span class='fl'>0.2</span>, <span class='kw'>shape</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span>(<span class='fl'>1000</span>) - <span class='fl'>0.405</span>,
+            <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>0.9</span>^<span class='fl'>2</span>, <span class='kw'>k0</span> <span class='kw'>=</span> <span class='fl'>1E2</span>, <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Gamma"</span>)</div><div class='output co'>#&gt; [1] 7.620525</div><div class='input'>
+<span class='no'>vark_calc</span> <span class='kw'>&lt;-</span> <span class='fu'>VaR_BINCOMP</span>(<span class='kw'>kap</span> <span class='kw'>=</span> <span class='fl'>0.9</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>prob</span> <span class='kw'>=</span> <span class='fl'>0.2</span>, <span class='kw'>shape</span> <span class='kw'>=</span> <span class='fl'>0.59</span>,
+            <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>0.9</span>^<span class='fl'>2</span>, <span class='kw'>k0</span> <span class='kw'>=</span> <span class='fl'>1E2</span>, <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Gamma"</span>)
+<span class='fu'>TVaR_BINCOMP</span>(<span class='kw'>kap</span> <span class='kw'>=</span> <span class='fl'>0.9</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>prob</span> <span class='kw'>=</span> <span class='fl'>0.2</span>, <span class='kw'>shape</span> <span class='kw'>=</span> <span class='fl'>0.59</span>, <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>0.9</span>^<span class='fl'>2</span>,
+            <span class='kw'>vark</span> <span class='kw'>=</span> <span class='no'>vark_calc</span>, <span class='kw'>k0</span> <span class='kw'>=</span> <span class='fl'>1E2</span>, <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Gamma"</span>)</div><div class='output co'>#&gt; [1] 1.326515</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
@@ -163,7 +249,7 @@
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alec James van Rassel, Gabriel Crépeault-Cauchon.</p>
+  <p>Developed by Alec James van Rassel, Gabriel Crépeault-Cauchon, Laboratoire Act & Risk, École d'actuariat de l'Université Laval, Natural Sciences and Engineering Research Council of Canada.</p>
 </div>
 
 <div class="pkgdown">

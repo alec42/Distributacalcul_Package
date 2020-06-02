@@ -37,7 +37,7 @@
 
 <meta property="og:title" content="Value-at-Risk of the Binomial distribution — VaR_binom" />
 <meta property="og:description" content="Value-at-Risk of the Binomial distribution with size
- \(n\) and probability of success \(p\). Wrapper of qbinom." />
+ \(n\) and probability of success \(p\)." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -70,7 +70,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -113,7 +113,7 @@
 
     <div class="ref-description">
     <p>Value-at-Risk of the Binomial distribution with size
- \(n\) and probability of success \(p\). Wrapper of qbinom.</p>
+ \(n\) and probability of success \(p\).</p>
     </div>
 
     <pre class="usage"><span class='fu'>VaR_binom</span>(<span class='no'>kap</span>, <span class='no'>size</span>, <span class='no'>prob</span>)</pre>
@@ -137,7 +137,14 @@
 
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>The Binomial distribution</p>
+    <p>The Binomial distribution with probability of success \(p\) for \(n\) trials
+  has probability mass function :
+  $$Pr(X = k) = \left(\frac{n}{k}\right) p^n (1 - p)^{n - k}$$
+  for \(k = 0, 1, 2, \dots, n\), \(p \in [0, 1]\), and \(n &gt; 0\)</p>
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    <p>Function VaR_binom is a wrapper for the qbinom function from the
+stats package.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Other Binomial Distribution: 
@@ -158,6 +165,7 @@
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#details">Details</a></li>
+      <li><a href="#note">Note</a></li>
       <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
@@ -168,7 +176,7 @@
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alec James van Rassel, Gabriel Crépeault-Cauchon.</p>
+  <p>Developed by Alec James van Rassel, Gabriel Crépeault-Cauchon, Laboratoire Act & Risk, École d'actuariat de l'Université Laval, Natural Sciences and Engineering Research Council of Canada.</p>
 </div>
 
 <div class="pkgdown">

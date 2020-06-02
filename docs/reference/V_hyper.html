@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Variance d'une loi hypergéométrique — V_hyper • Distributacalcul</title>
+<title>Variance of the Hypergeometric distribution — V_hyper • Distributacalcul</title>
 
 
 <!-- jquery -->
@@ -35,8 +35,10 @@
 
 
 
-<meta property="og:title" content="Variance d'une loi hypergéométrique — V_hyper" />
-<meta property="og:description" content="Variance d'une loi hypergéométrique" />
+<meta property="og:title" content="Variance of the Hypergeometric distribution — V_hyper" />
+<meta property="og:description" content="Variance of the Hypergeometric distribution where we
+ have a sample of k balls from an urn containing N of which m are
+ white and n are black." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -69,7 +71,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -105,40 +107,68 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Variance d'une loi hypergéométrique</h1>
+    <h1>Variance of the Hypergeometric distribution</h1>
     <small class="dont-index">Source: <a href='https://github.com/alec42/Distributacalcul_Package/blob/master/R/V_hyper.R'><code>R/V_hyper.R</code></a></small>
     <div class="hidden name"><code>V_hyper.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Variance d'une loi hypergéométrique</p>
+    <p>Variance of the Hypergeometric distribution where we
+ have a sample of k balls from an urn containing N of which m are
+ white and n are black.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>V_hyper</span>(<span class='no'>N</span>, <span class='no'>m</span>, <span class='no'>n</span>)</pre>
+    <pre class="usage"><span class='fu'>V_hyper</span>(<span class='kw'>N</span> <span class='kw'>=</span> <span class='no'>n</span> + <span class='no'>m</span>, <span class='no'>m</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='no'>N</span> - <span class='no'>m</span>, <span class='no'>k</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>N</th>
-      <td><p>nombre total</p></td>
+      <td><p>Total number of balls (white and black) in the urn. \(N = n + m\)</p></td>
     </tr>
     <tr>
       <th>m</th>
-      <td><p>nombre de type 1</p></td>
+      <td><p>Number of white balls in the urn.</p></td>
     </tr>
     <tr>
       <th>n</th>
-      <td><p>taille de l'échantillon</p></td>
+      <td><p>Number of black balls in the urn. Can specify n instead of N.</p></td>
+    </tr>
+    <tr>
+      <th>k</th>
+      <td><p>Number of balls drawn from the urn, k = 0, 1, ..., m + n.</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
+    <p>The Hypergeometric distribution for \(N\) total items of which
+ \(m\) are of one type and \(n\) of the other and from which
+ \(k\) items are picked
+  has probability mass function :
+  $$Pr(X = x) = \frac{\left(\frac{m}{k}\right)\left(\frac{n}{k - x}\right)}{\left(\frac{N}{k}\right)}$$
+  for \(x = 0, 1, \dots, \min(k, m)\).</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other Hypergeometric Distribution: 
+<code><a href='E_hyper.html'>E_hyper</a>()</code></p></div>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'>
+<span class='co'># With total balls specified</span>
+<span class='fu'>V_hyper</span>(<span class='kw'>N</span> <span class='kw'>=</span> <span class='fl'>5</span>, <span class='kw'>m</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>k</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt; [1] 0.36</div><div class='input'>
+<span class='co'># With number of each colour of balls specified</span>
+<span class='fu'>V_hyper</span>(<span class='kw'>m</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>3</span>, <span class='kw'>k</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt; [1] 0.36</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#details">Details</a></li>
+      <li><a href="#see-also">See also</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
@@ -147,7 +177,7 @@
 
       <footer>
       <div class="copyright">
-  <p>Developed by Alec James van Rassel, Gabriel Crépeault-Cauchon.</p>
+  <p>Developed by Alec James van Rassel, Gabriel Crépeault-Cauchon, Laboratoire Act & Risk, École d'actuariat de l'Université Laval, Natural Sciences and Engineering Research Council of Canada.</p>
 </div>
 
 <div class="pkgdown">
