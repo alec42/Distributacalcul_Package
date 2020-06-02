@@ -1,5 +1,4 @@
 .Rproj.user
-.Rhistory
 .RData
 .Ruserdata
 .DS_Store
@@ -8,5 +7,5 @@ developp.R
 .Rproj.user/shared/notebooks/paths
 inst/doc
 .Rhistory
-.cran-comments.md
 .Rbuildignore
+cran-comments.md
