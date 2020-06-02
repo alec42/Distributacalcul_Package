@@ -6,9 +6,7 @@
 *.sh
 developp.R
 .Rproj.user/shared/notebooks/paths
-.Rhistory
-.Rhistory
 inst/doc
 .Rhistory
-.Rhistory
-.Rhistory
+.cran-comments.md
+.Rbuildignore
