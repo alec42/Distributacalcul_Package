@@ -6,11 +6,11 @@ Authors@R: c(
     person("Alec James", "van Rassel", email = "alec.van-rassel.1@ulaval.ca",
             role = c("aut", "cre", "cph")), 
     person("Gabriel", "Crépeault-Cauchon", role = c("aut", "ccp")),
-    person("Étienne", "Marceau", role = c("tch", "rth")),
-    person("Hélène", "Cossette", role = c("tch", "rth")),
-    person("Laboratoire Act & Risk", role = c("fnd", "sht", "sad")),
+    person("Étienne", "Marceau", role = c("tch", "sad")),
+    person("Hélène", "Cossette", role = c("tch", "sad")),
+    person("Laboratoire Act & Risk", role = c("fnd", "sht")),
     person("École d'actuariat de l'Université Laval", role = c("fnd", "his", "uvp")),
-    person("Natural Sciences and Engineering Research Council of Canada", role = c("fnd", "his")),
+    person("Natural Sciences and Engineering Research Council of Canada", role = c("fnd")),
     person("Marc-André", "Devost", role = c("ccp"))
  )
 Description: Calculates expected values, variance, different moments (kth 
@@ -21,7 +21,7 @@ Description: Calculates expected values, variance, different moments (kth
     to visualize distributions and understand the impact of their parameters.
     This package is intended to expand the 'stats' and 'actuar' packages so as
     to enable students to develop an intuition for probability.
-License: GPL + file LICENSE
+License: MIT + file LICENSE
 URL: https://github.com/alec42/Distributacalcul_Package
 BugReports: https://github.com/alec42/Distributacalcul_Package/issues
 Encoding: UTF-8
