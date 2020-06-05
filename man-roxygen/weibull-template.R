@@ -15,5 +15,20 @@
 #'    e^{(-b x)^t}}
 #'   for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\beta > 0}{b > 0}, \eqn{\tau > 0}{t > 0}
 #'
+#' @return Returns numeric value.
+#'  Function :
+#'  \itemize{
+#'  \item{\code{\link{E_weibull}}}{ gives the expected value.}
+#'  \item{\code{\link{V_weibull}}}{ gives the variance.}
+#'  \item{\code{\link{kthmoment_weibull}}}{ gives the kth moment.}
+#'  \item{\code{\link{Etronq_weibull}}}{ gives the truncated mean.}
+#'  \item{\code{\link{SL_weibull}}}{ gives the stop-loss.}
+#'  \item{\code{\link{Elim_weibull}}}{ gives the limited mean.}
+#'  \item{\code{\link{Mexcess_weibull}}}{ gives the mean excess loss.}
+#'  \item{\code{\link{TVaR_weibull}}}{ gives the Tail Value-at-Risk.}
+#'  \item{\code{\link{VaR_weibull}}}{ gives the Value-at-Risk.}
+#'  }
+#'  Invalid parameter values will return an error detailing which parameter is problematic.
+#'
 #' @family Weibull Distribution
 #'

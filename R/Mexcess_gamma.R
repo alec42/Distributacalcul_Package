@@ -21,7 +21,7 @@ Mexcess_gamma <- function(d, shape, rate = 1 / scale, scale = 1 / rate) {
     stopifnot(d >= 0, shape > 0, rate > 0)
 
     E_gamma(shape, rate) *
-        stats::pgamma(q = d, shape = shape + 1, rate = rate, lower.tail = F) /
-        stats::pgamma(d, q = shape, shape = rate, lower.tail = F) -
+        stats::pgamma(q = d, shape = shape + 1, rate = rate, lower.tail = FALSE) /
+        stats::pgamma(d, q = shape, shape = rate, lower.tail = FALSE) -
         d
 }

@@ -15,6 +15,14 @@ E_hyper(N = n + m, m, n = N - m, k)
 
 \item{k}{Number of balls drawn from the urn, k = 0, 1, ..., m + n.}
 }
+\value{
+Function :
+ \itemize{
+ \item{\code{\link{E_hyper}}}{ gives the expected value.}
+ \item{\code{\link{V_hyper}}}{ gives the variance.}
+ }
+ Invalid parameter values will return an error detailing which parameter is problematic.
+}
 \description{
 Expected value of the Hypergeometric distribution where we
  have a sample of k balls from an urn containing N of which m are

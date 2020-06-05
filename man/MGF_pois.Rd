@@ -11,8 +11,20 @@ MGF_pois(t, lambda)
 
 \item{lambda}{Rate parameter \eqn{\lambda}{lambda}.}
 }
+\value{
+Function :
+ \itemize{
+ \item{\code{\link{MGF_pois}}}{ gives the moment generating function (MGF).}
+ \item{\code{\link{PGF_pois}}}{ gives the probability generating function (PGF).}
+ \item{\code{\link{E_pois}}}{ gives the expected value.}
+ \item{\code{\link{V_beta}}}{ gives the variance.}
+ \item{\code{\link{Etronq_pois}}}{ gives the truncated mean.}
+ \item{\code{\link{TVaR_pois}}}{ gives the Tail Value-at-Risk.}
+ }
+ Invalid parameter values will return an error detailing which parameter is problematic.
+}
 \description{
-Moment Generating Function (PGF) of the Poisson
+Moment Generating Function (MGF) of the Poisson
    distribution with rate parameter \eqn{\lambda}{lambda}.
 }
 \details{
@@ -28,8 +40,10 @@ MGF_pois(t = 1, lambda = 3)
 }
 \seealso{
 Other Poisson Distribution: 
+\code{\link{E_pois}()},
 \code{\link{Etronq_pois}()},
 \code{\link{PGF_pois}()},
-\code{\link{TVaR_pois}()}
+\code{\link{TVaR_pois}()},
+\code{\link{V_pois}()}
 }
 \concept{Poisson Distribution}

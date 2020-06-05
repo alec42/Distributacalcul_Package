@@ -16,9 +16,21 @@
 #' @template scale-template
 #' @template vark-template
 #'
+#' @importFrom stats dbinom pgamma
 #' @export
 #'
-#' @importFrom stats dbinom pgamma
+#' @return
+#'  Function :
+#'  \itemize{
+#'  \item{\code{\link{p_BINCOMP}}}{ gives the cumulative density function.}
+#'  \item{\code{\link{E_BINCOMP}}}{ gives the expected value.}
+#'  \item{\code{\link{V_BINCOMP}}}{ gives the variance.}
+#'  \item{\code{\link{TVaR_BINCOMP}}}{ gives the Tail Value-at-Risk.}
+#'  \item{\code{\link{VaR_BINCOMP}}}{ gives the Value-at-Risk.}
+#'  }
+#'  Returned values are approximations for the cumulative density function,
+#'  TVaR, and VaR.
+#'
 #'
 #' @examples
 #' p_BINCOMP(x = 2, size = 1, prob = 0.2, shape = log(1000) - 0.405,

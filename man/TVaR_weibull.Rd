@@ -15,6 +15,22 @@ TVaR_weibull(kap, shape, rate = 1/scale, scale = 1/rate)
 
 \item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
+\value{
+Returns numeric value.
+ Function :
+ \itemize{
+ \item{\code{\link{E_weibull}}}{ gives the expected value.}
+ \item{\code{\link{V_weibull}}}{ gives the variance.}
+ \item{\code{\link{kthmoment_weibull}}}{ gives the kth moment.}
+ \item{\code{\link{Etronq_weibull}}}{ gives the truncated mean.}
+ \item{\code{\link{SL_weibull}}}{ gives the stop-loss.}
+ \item{\code{\link{Elim_weibull}}}{ gives the limited mean.}
+ \item{\code{\link{Mexcess_weibull}}}{ gives the mean excess loss.}
+ \item{\code{\link{TVaR_weibull}}}{ gives the Tail Value-at-Risk.}
+ \item{\code{\link{VaR_weibull}}}{ gives the Value-at-Risk.}
+ }
+ Invalid parameter values will return an error detailing which parameter is problematic.
+}
 \description{
 Tail Value-at-Risk of the Weibull distribution with shape parameter
  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.

@@ -15,6 +15,21 @@ VaR_IG(kap, mean, shape = dispersion * mean^2, dispersion = shape/mean^2)
 
 \item{dispersion}{alternative parameterization to the shape parameter, dispersion = 1 / rate.}
 }
+\value{
+Function :
+ \itemize{
+ \item{\code{\link{MGF_IG}}}{ gives the moment generating function (MGF).}
+ \item{\code{\link{E_IG}}}{ gives the expected value.}
+ \item{\code{\link{V_IG}}}{ gives the variance.}
+ \item{\code{\link{Etronq_IG}}}{ gives the truncated mean.}
+ \item{\code{\link{SL_IG}}}{ gives the stop-loss.}
+ \item{\code{\link{Elim_IG}}}{ gives the limited mean.}
+ \item{\code{\link{Mexcess_IG}}}{ gives the mean excess loss.}
+ \item{\code{\link{TVaR_IG}}}{ gives the Tail Value-at-Risk.}
+ \item{\code{\link{VaR_IG}}}{ gives the Value-at-Risk.}
+ }
+ Invalid parameter values will return an error detailing which parameter is problematic.
+}
 \description{
 Value-at-Risk of the Inverse Gaussian distribution with
  mean \eqn{\mu}{mu} and shape parameter \eqn{\beta}{beta}.

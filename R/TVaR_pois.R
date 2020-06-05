@@ -25,6 +25,6 @@ TVaR_pois <- function(kap, lambda, k0) {
         Etronq_pois(vark, lambda, k0, less.than.d = FALSE) +
             vark * (stats::ppois(q = vark, lambda = lambda) - kap)
         ) / (1 - kap)
-    # message("This is an approximation") already returned by Etronq_pois
+
     return(TVaR.approx)
 }

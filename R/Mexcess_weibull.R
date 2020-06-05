@@ -25,6 +25,6 @@ Mexcess_weibull <- function(d, shape, rate = 1 / scale, scale = 1 / rate) {
         stats::pgamma(q = d^shape,
                shape = 1 + 1/shape,
                scale = rate^shape,
-               lower.tail = F) -
+               lower.tail = FALSE) -
         d
 }

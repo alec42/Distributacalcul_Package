@@ -29,5 +29,15 @@
 #'    (r + k - 1)!/((r - 1)! k!) (1/(1 + beta))^r (beta/(1 + beta))^(k - r)}
 #'   for \eqn{k \in \{0, 1, \dots \}}{k = 0, 1, 2, ...}
 #'
+#' @return
+#'  Function :
+#'  \itemize{
+#'  \item{\code{\link{MGF_negbinom}}}{ gives the moment generating function (MGF).}
+#'  \item{\code{\link{PGF_negbinom}}}{ gives the probability generating function (PGF).}
+#'  \item{\code{\link{E_negbinom}}}{ gives the expected value.}
+#'  \item{\code{\link{V_negbinom}}}{ gives the variance.}
+#'  }
+#'  Invalid parameter values will return an error detailing which parameter is problematic.
+#'
 #' @family Negative Binomial Distribution
 #'

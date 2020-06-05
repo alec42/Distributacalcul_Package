@@ -15,10 +15,10 @@ lawParametersBox(input, output, session, law)
 
 \item{law}{Distribution to visualize, one of ...}
 }
+\value{
+Server function for the \code{\link{Distributacalcul_vis}} module.
+ Should not be run directly.
+}
 \description{
 Interactive distribution visualization (server side)
-}
-\note{
-this function should not be used explicitly,
- see \link[Distributacalcul]{Distributacalcul_vis}.
 }

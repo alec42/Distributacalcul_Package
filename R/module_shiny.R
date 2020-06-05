@@ -1,12 +1,12 @@
 #' Interactive distribution visualization (server side)
 #'
-#' @note this function should not be used explicitly,
-#'  see \link[Distributacalcul]{Distributacalcul_vis}.
-#'
 #' @param input input for server side.
 #' @param output output for server side.
 #' @param session session for server side.
 #' @param law Distribution to visualize, one of ...
+#'
+#' @return Server function for the \code{\link{Distributacalcul_vis}} module.
+#'  Should not be run directly.
 #'
 #' @importFrom rlang ".data" exec ns_env
 #' @importFrom dplyr case_when
@@ -16,9 +16,6 @@
 #' @importFrom shiny req reactive renderUI numericInput withMathJax
 #' @importFrom shinyWidgets radioGroupButtons switchInput pickerInput
 #' @export
-#'
-# this function permits to specify within tidyverse functions (i.e., aes())
-#  that the variable is from the data
 #'
 lawParametersBox <- function(input, output, session, law) {
     stopifnot(law %in% c("norm", "lnorm",
@@ -139,13 +136,14 @@ lawParametersBox <- function(input, output, session, law) {
             label = shiny::withMathJax(parameters_latex[1]),
             value = dplyr::case_when(
                 law.fct %in% c("pareto", "llogis") ~ 3,
-                TRUE ~ 1
+                TRUE ~ 2
             ),
             min = dplyr::case_when(
                 law.fct %in% c("lnorm", "gamma", "exp", "beta") ~ 0
             )
         )
     })
+
     output$rate <- shiny::renderUI({
         shiny::numericInput(
             inputId = session$ns("rate"),
@@ -298,7 +296,7 @@ lawParametersBox <- function(input, output, session, law) {
                 .env = rlang::ns_env(x = ifelse(law.fct == "pareto", 'actuar', 'stats'))
             ),
             nsmall = 6,
-            scientific = F
+            scientific = FALSE
         )
     })
 
@@ -537,10 +535,10 @@ lawParametersBox <- function(input, output, session, law) {
 
 #' Interactive distribution visualization (UI side)
 #'
-#' @note this function should not be used explicitly,
-#'  see \link[Distributacalcul]{Distributacalcul_vis}.
-#'
 #' @param id id of module
+#'
+#' @return UI function for the \code{\link{Distributacalcul_vis}} module.
+#'  Should not be run directly.
 #'
 #' @importFrom shiny tags NS fluidRow column uiOutput splitLayout
 #' @importFrom shinydashboard box
@@ -667,6 +665,8 @@ lawParametersBoxUI <- function(id) {
 #' @importFrom shinydashboardPlus dashboardPagePlus dashboardHeaderPlus
 #' @importFrom shinydashboard dashboardSidebar dashboardBody
 #' @export
+#'
+#' @return Launches Shiny application.
 #'
 #' @examples
 #' ## Only run this example in interactive R sessions

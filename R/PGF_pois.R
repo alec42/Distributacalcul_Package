@@ -13,5 +13,7 @@
 #' @export
 #'
 PGF_pois <- function(t, lambda) {
+    stopifnot(lambda > 0)
+
     exp(lambda * (t - 1))
 }

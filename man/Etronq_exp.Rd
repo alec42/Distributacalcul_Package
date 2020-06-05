@@ -15,6 +15,22 @@ Etronq_exp(d, rate = 1/scale, scale = 1/rate, less.than.d = TRUE)
 
 \item{less.than.d}{logical; if \code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.}
 }
+\value{
+Function :
+ \itemize{
+ \item{\code{\link{MGF_exp}}}{ gives the moment generating function (MGF).}
+ \item{\code{\link{E_exp}}}{ gives the expected value.}
+ \item{\code{\link{V_exp}}}{ gives the variance.}
+ \item{\code{\link{kthmoment_exp}}}{ gives the kth moment.}
+ \item{\code{\link{Etronq_exp}}}{ gives the truncated mean.}
+ \item{\code{\link{SL_exp}}}{ gives the stop-loss.}
+ \item{\code{\link{Elim_exp}}}{ gives the limited mean.}
+ \item{\code{\link{Mexcess_exp}}}{ gives the mean excess loss.}
+ \item{\code{\link{TVaR_exp}}}{ gives the Tail Value-at-Risk.}
+ \item{\code{\link{VaR_exp}}}{ gives the Value-at-Risk.}
+ }
+ Invalid parameter values will return an error detailing which parameter is problematic.
+}
 \description{
 Truncated mean of the Exponential distribution with
  rate parameter \eqn{\beta}{beta}.

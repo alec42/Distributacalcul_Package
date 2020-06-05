@@ -85,6 +85,18 @@ TVaR_BINCOMP(
 
 \item{vark}{Value-at-Risk (VaR) calculated at the given probability kap.}
 }
+\value{
+Function :
+ \itemize{
+ \item{\code{\link{p_BINCOMP}}}{ gives the cumulative density function.}
+ \item{\code{\link{E_BINCOMP}}}{ gives the expected value.}
+ \item{\code{\link{V_BINCOMP}}}{ gives the variance.}
+ \item{\code{\link{TVaR_BINCOMP}}}{ gives the Tail Value-at-Risk.}
+ \item{\code{\link{VaR_BINCOMP}}}{ gives the Value-at-Risk.}
+ }
+ Returned values are approximations for the cumulative density function,
+ TVaR, and VaR.
+}
 \description{
 Computes various risk measures (mean, variance, Value-at-Risk (VaR),
   and Tail Value-at-Risk (TVaR)) for the compound Binomial distribution.

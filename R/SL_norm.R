@@ -17,7 +17,7 @@ SL_norm <- function(d, mean = 0, sd = 1) {
     stopifnot(sd > 0)
 
     (mean + d) *
-        stats::pnorm(q = d, mean = mean, sd = sd, lower.tail = F) -
+        stats::pnorm(q = d, mean = mean, sd = sd, lower.tail = FALSE) -
         (sd^2) *
         stats::dnorm(x = d, mean = mean, sd = sd)
 }

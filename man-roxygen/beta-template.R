@@ -15,5 +15,20 @@
 #'    (Γ(a)Γ(b))x^(a - 1)(1 - x)^(b - 1)}
 #'   for \eqn{x \in [0, 1]}{0 ≤ x ≤ 1}, \eqn{\alpha, \beta > 0}{a, b > 0}.
 #'
+#' @return
+#'  Function :
+#'  \itemize{
+#'  \item{\code{\link{MGF_beta}}}{ gives the moment generating function (MGF).}
+#'  \item{\code{\link{E_beta}}}{ gives the expected value.}
+#'  \item{\code{\link{V_beta}}}{ gives the variance.}
+#'  \item{\code{\link{kthmoment_beta}}}{ gives the kth moment.}
+#'  \item{\code{\link{Etronq_beta}}}{ gives the truncated mean.}
+#'  \item{\code{\link{SL_beta}}}{ gives the stop-loss.}
+#'  \item{\code{\link{Elim_beta}}}{ gives the limited mean.}
+#'  \item{\code{\link{Mexcess_beta}}}{ gives the mean excess loss.}
+#'  \item{\code{\link{TVaR_beta}}}{ gives the Tail Value-at-Risk.}
+#'  }
+#'  Invalid parameter values will return an error detailing which parameter is problematic.
+#'
 #' @family Beta Distribution
 #'

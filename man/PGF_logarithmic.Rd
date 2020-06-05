@@ -11,6 +11,16 @@ PGF_logarithmic(t, prob)
 
 \item{prob}{probability parameter \eqn{\gamma}{gamma}.}
 }
+\value{
+Function :
+ \itemize{
+ \item{\code{\link{MGF_logarithmic}}}{ gives the moment generating function (MGF).}
+ \item{\code{\link{PGF_logarithmic}}}{ gives the probability generating function (PGF).}
+ \item{\code{\link{E_logarithmic}}}{ gives the expected value.}
+ \item{\code{\link{V_logarithmic}}}{ gives the variance.}
+ }
+ Invalid parameter values will return an error detailing which parameter is problematic.
+}
 \description{
 Probability Generating Function (PGF) of the Logarithmic
  distribution with probability parameter \eqn{\gamma}{gamma}.
@@ -28,8 +38,8 @@ PGF_logarithmic(t = .2, prob = 0.50)
 }
 \seealso{
 Other Logarithmic Distribution: 
-\code{\link{E_logarithmique}()},
+\code{\link{E_logarithmic}()},
 \code{\link{MGF_logarithmic}()},
-\code{\link{V_logarithmique}()}
+\code{\link{V_logarithmic}()}
 }
 \concept{Logarithmic Distribution}

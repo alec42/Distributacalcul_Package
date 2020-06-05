@@ -7,13 +7,13 @@
 #' @param t t
 #' @template negbinom-template
 #'
+#' @export
+#'
 #' @examples
 #'
 #' PGF_negbinom(t = 5, size = 3, prob = 0.3)
 #'
-#' @export
-#'
-PGF_negbinom <- function(t, size, prob = (1 / (1 + beta)), beta = ((1 - prob) / prob), nb_tries = F) {
+PGF_negbinom <- function(t, size, prob = (1 / (1 + beta)), beta = ((1 - prob) / prob), nb_tries = FALSE) {
 
     stopifnot(size > 0, prob > 0, prob < 1)
     (

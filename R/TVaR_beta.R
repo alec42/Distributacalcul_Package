@@ -20,7 +20,7 @@ TVaR_beta <- function(kap, shape1, shape2) {
         stats::pbeta(q = stats::qbeta(p = kap, shape1 = shape1, shape2 = shape2),
               shape1 = shape1 + 1,
               shape2 = shape2,
-              lower.tail = F)
+              lower.tail = FALSE)
 }
 
 

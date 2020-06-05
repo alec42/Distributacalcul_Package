@@ -11,5 +11,13 @@
 #'   \deqn{Pr(X = x) = \frac{\left(\frac{m}{k}\right)\left(\frac{n}{k - x}\right)}{\left(\frac{N}{k}\right)}}{((m)C(k) (n)C(k - x)) / ((N)C(k))}
 #'   for \eqn{x = 0, 1, \dots, \min(k, m)}{x = 0, 1, ..., min(k, m)}.
 #'
+#' @return
+#'  Function :
+#'  \itemize{
+#'  \item{\code{\link{E_hyper}}}{ gives the expected value.}
+#'  \item{\code{\link{V_hyper}}}{ gives the variance.}
+#'  }
+#'  Invalid parameter values will return an error detailing which parameter is problematic.
+#'
 #' @family Hypergeometric Distribution
 #'

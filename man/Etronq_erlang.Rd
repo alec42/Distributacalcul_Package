@@ -17,6 +17,24 @@ Etronq_erlang(d, shape, rate = 1/scale, scale = 1/rate, less.than.d = TRUE)
 
 \item{less.than.d}{logical; if \code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.}
 }
+\value{
+Function :
+ \itemize{
+ \item{\code{\link{MGF_erlang}}}{ gives the moment generating function (MGF).}
+ \item{\code{\link{derlang}}}{ gives the density function.}
+ \item{\code{\link{perlang}}}{ gives the cumulative density function.}
+ \item{\code{\link{E_erlang}}}{ gives the expected value.}
+ \item{\code{\link{V_erlang}}}{ gives the variance.}
+ \item{\code{\link{kthmoment_erlang}}}{ gives the kth moment.}
+ \item{\code{\link{Etronq_erlang}}}{ gives the truncated mean.}
+ \item{\code{\link{SL_erlang}}}{ gives the stop-loss.}
+ \item{\code{\link{Elim_erlang}}}{ gives the limited mean.}
+ \item{\code{\link{Mexcess_erlang}}}{ gives the mean excess loss.}
+ \item{\code{\link{TVaR_erlang}}}{ gives the Tail Value-at-Risk.}
+ \item{\code{\link{VaR_erlang}}}{ gives the Value-at-Risk.}
+ }
+ Invalid parameter values will return an error detailing which parameter is problematic.
+}
 \description{
 Truncated mean of the Erlang distribution
  with shape parameter \eqn{n} and rate parameter \eqn{\beta}{beta}.
@@ -44,6 +62,7 @@ Etronq_erlang(d = 2, shape = 2, rate = 0.2, less.than.d = FALSE)
 Other Erlang Distribution: 
 \code{\link{E_erlang}()},
 \code{\link{Elim_erlang}()},
+\code{\link{MGF_erlang}()},
 \code{\link{Mexcess_erlang}()},
 \code{\link{SL_erlang}()},
 \code{\link{TVaR_erlang}()},

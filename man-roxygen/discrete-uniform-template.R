@@ -9,5 +9,15 @@
 #'   \deqn{\textrm{Pr}\left(X = x \right) = \frac{1}{b - a + 1}}{Pr(X = x) = 1 / (b - a + 1)}
 #'   for \eqn{x \in \{a, a + 1, \dots, b - 1, b\}}{x = a, a + 1, ..., b - 1, b}.
 #'
+#' @return
+#'  Function :
+#'  \itemize{
+#'  \item{\code{\link{E_unifD}}}{ gives the expected value.}
+#'  \item{\code{\link{V_unifD}}}{ gives the variance.}
+#'  \item{\code{\link{d_unifD}}}{ gives the density function.}
+#'  \item{\code{\link{d_unifD}}}{ gives the cumulative density function.}
+#'  }
+#'  Invalid parameter values will return an error detailing which parameter is problematic.
+#'
 #' @family Discrete Uniform Distribution
 #'

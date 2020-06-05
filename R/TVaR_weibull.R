@@ -25,5 +25,5 @@ TVaR_weibull <- function(kap, shape, rate = 1 / scale, scale = 1 / rate) {
         stats::pgamma(q = -log(1 - kap),
                shape = 1 + 1/shape,
                scale = 1,
-               lower.tail = F)
+               lower.tail = FALSE)
 }

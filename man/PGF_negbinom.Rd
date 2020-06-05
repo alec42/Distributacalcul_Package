@@ -9,7 +9,7 @@ PGF_negbinom(
   size,
   prob = (1/(1 + beta)),
   beta = ((1 - prob)/prob),
-  nb_tries = F
+  nb_tries = FALSE
 )
 }
 \arguments{
@@ -25,6 +25,16 @@ distribution where beta = (1 - p) / p.}
 \item{nb_tries}{logical; if \code{FALSE} (default) number of trials
 until the \code{r}th success, otherwise, number of failures until
 the \code{r}th success.}
+}
+\value{
+Function :
+ \itemize{
+ \item{\code{\link{MGF_negbinom}}}{ gives the moment generating function (MGF).}
+ \item{\code{\link{PGF_negbinom}}}{ gives the probability generating function (PGF).}
+ \item{\code{\link{E_negbinom}}}{ gives the expected value.}
+ \item{\code{\link{V_negbinom}}}{ gives the variance.}
+ }
+ Invalid parameter values will return an error detailing which parameter is problematic.
 }
 \description{
 Probability Generating Function (PGF) of the Negative

@@ -18,8 +18,8 @@ Mexcess_beta <- function(d, shape1, shape2) {
 
     (E_beta(shape1, shape2) *
             (
-                stats::pbeta(q = d, shape1 + 1, shape2, lower.tail = F) /
-                    stats::pbeta(q = d, shape1, shape2, lower.tail = F)
+                stats::pbeta(q = d, shape1 + 1, shape2, lower.tail = FALSE) /
+                    stats::pbeta(q = d, shape1, shape2, lower.tail = FALSE)
             )
     ) - d
 }

@@ -15,6 +15,21 @@ Etronq_beta(d, shape1, shape2, less.than.d = TRUE)
 
 \item{less.than.d}{logical; if \code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.}
 }
+\value{
+Function :
+ \itemize{
+ \item{\code{\link{MGF_beta}}}{ gives the moment generating function (MGF).}
+ \item{\code{\link{E_beta}}}{ gives the expected value.}
+ \item{\code{\link{V_beta}}}{ gives the variance.}
+ \item{\code{\link{kthmoment_beta}}}{ gives the kth moment.}
+ \item{\code{\link{Etronq_beta}}}{ gives the truncated mean.}
+ \item{\code{\link{SL_beta}}}{ gives the stop-loss.}
+ \item{\code{\link{Elim_beta}}}{ gives the limited mean.}
+ \item{\code{\link{Mexcess_beta}}}{ gives the mean excess loss.}
+ \item{\code{\link{TVaR_beta}}}{ gives the Tail Value-at-Risk.}
+ }
+ Invalid parameter values will return an error detailing which parameter is problematic.
+}
 \description{
 Truncated mean of the Beta distribution with shape parameters
  \eqn{\alpha}{alpha} and \eqn{\beta}{beta}.

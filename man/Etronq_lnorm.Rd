@@ -15,6 +15,21 @@ Etronq_lnorm(d, meanlog, sdlog, less.than.d = TRUE)
 
 \item{less.than.d}{logical; if \code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.}
 }
+\value{
+Function :
+ \itemize{
+ \item{\code{\link{E_lnorm}}}{ gives the expected value.}
+ \item{\code{\link{V_lnorm}}}{ gives the variance.}
+ \item{\code{\link{kthmoment_lnorm}}}{ gives the kth moment.}
+ \item{\code{\link{Etronq_lnorm}}}{ gives the truncated mean.}
+ \item{\code{\link{SL_lnorm}}}{ gives the stop-loss.}
+ \item{\code{\link{Elim_lnorm}}}{ gives the limited mean.}
+ \item{\code{\link{Mexcess_lnorm}}}{ gives the mean excess loss.}
+ \item{\code{\link{TVaR_lnorm}}}{ gives the Tail Value-at-Risk.}
+ \item{\code{\link{VaR_lnorm}}}{ gives the Value-at-Risk.}
+ }
+ Invalid parameter values will return an error detailing which parameter is problematic.
+}
 \description{
 Truncated mean of the Lognormal distribution with mean
  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.

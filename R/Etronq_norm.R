@@ -21,7 +21,7 @@ Etronq_norm <- function(d, mean = 0, sd = 1, less.than.d = TRUE) {
         Etronq.norm <- mean * stats::pnorm(q = d, mean = mean, sd = sd) -
             sd^2 * stats::dnorm(x = d, mean = mean, sd = sd)
     } else {
-        Etronq.norm <- mean * stats::pnorm(q = d, mean = mean, sd = sd, lower.tail = F) +
+        Etronq.norm <- mean * stats::pnorm(q = d, mean = mean, sd = sd, lower.tail = FALSE) +
             sd^2 * stats::dnorm(x = d, mean = mean, sd = sd)
     }
 

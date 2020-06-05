@@ -202,10 +202,11 @@ below
 
 # Updates
 
-|    Date    |                             Modifications                              |
-| :--------: | :--------------------------------------------------------------------: |
-| 26/07/2019 |                      Initial creation of package                       |
-| 12/09/2019 |         Completion of creation of all necessary function files         |
-| 17/11/2019 |      Merger of tvarPackage, beginning of documentation creation.       |
-| 20/05/2020 |                      Addition of Shiny component.                      |
-| 02/06/2020 | Completion of documentation, first temptative of a submission to CRAN. |
+|    Date    |                            Modifications                            |
+| :--------: | :-----------------------------------------------------------------: |
+| 26/07/2019 |                     Initial creation of package                     |
+| 12/09/2019 |       Completion of creation of all necessary function files        |
+| 17/11/2019 |     Merger of tvarPackage, beginning of documentation creation.     |
+| 20/05/2020 |                    Addition of Shiny component.                     |
+| 02/06/2020 | Completion of documentation, first attempt of a submission to CRAN. |
+| 02/07/2020 |       Modifications according to CRAN’s notes, version 0.2.0.       |

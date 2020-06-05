@@ -13,5 +13,20 @@
 #'   \lambda^{\alpha}}{(\lambda + x)^{\alpha + 1}}}{f(x) = (a lam^a)/ (lam + x)^(a + 1)}
 #'   for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\alpha, \lambda > 0}{a, lam > 0}.
 #'
+#' @return
+#'  Function :
+#'  \itemize{
+#'  \item{\code{\link{E_pareto}}}{ gives the expected value.}
+#'  \item{\code{\link{V_pareto}}}{ gives the variance.}
+#'  \item{\code{\link{kthmoment_pareto}}}{ gives the kth moment.}
+#'  \item{\code{\link{Etronq_pareto}}}{ gives the truncated mean.}
+#'  \item{\code{\link{SL_pareto}}}{ gives the stop-loss.}
+#'  \item{\code{\link{Elim_pareto}}}{ gives the limited mean.}
+#'  \item{\code{\link{Mexcess_pareto}}}{ gives the mean excess loss.}
+#'  \item{\code{\link{TVaR_pareto}}}{ gives the Tail Value-at-Risk.}
+#'  \item{\code{\link{VaR_pareto}}}{ gives the Value-at-Risk.}
+#'  }
+#'  Invalid parameter values will return an error detailing which parameter is problematic.
+#'
 #' @family Pareto Distribution
 #'

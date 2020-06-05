@@ -13,6 +13,18 @@ TVaR_pois(kap, lambda, k0)
 
 \item{k0}{point up to which to sum the distribution to approximate the expected value.}
 }
+\value{
+Function :
+ \itemize{
+ \item{\code{\link{MGF_pois}}}{ gives the moment generating function (MGF).}
+ \item{\code{\link{PGF_pois}}}{ gives the probability generating function (PGF).}
+ \item{\code{\link{E_pois}}}{ gives the expected value.}
+ \item{\code{\link{V_beta}}}{ gives the variance.}
+ \item{\code{\link{Etronq_pois}}}{ gives the truncated mean.}
+ \item{\code{\link{TVaR_pois}}}{ gives the Tail Value-at-Risk.}
+ }
+ Invalid parameter values will return an error detailing which parameter is problematic.
+}
 \description{
 Tail Value-at-Risk of the Poisson distribution with rate parameter
  \eqn{\lambda}{lambda}.
@@ -30,8 +42,10 @@ TVaR_pois(kap = 0.8, lambda = 3, k0 = 2E2)
 }
 \seealso{
 Other Poisson Distribution: 
+\code{\link{E_pois}()},
 \code{\link{Etronq_pois}()},
 \code{\link{MGF_pois}()},
-\code{\link{PGF_pois}()}
+\code{\link{PGF_pois}()},
+\code{\link{V_pois}()}
 }
 \concept{Poisson Distribution}

@@ -13,6 +13,21 @@ SL_norm(d, mean = 0, sd = 1)
 
 \item{sd}{standard deviation \eqn{\sigma}{sigma}, must be positive.}
 }
+\value{
+Function :
+ \itemize{
+ \item{\code{\link{MGF_norm}}}{ gives the moment generating function (MGF).}
+ \item{\code{\link{E_norm}}}{ gives the expected value.}
+ \item{\code{\link{V_norm}}}{ gives the variance.}
+ \item{\code{\link{Etronq_norm}}}{ gives the truncated mean.}
+ \item{\code{\link{SL_norm}}}{ gives the stop-loss.}
+ \item{\code{\link{Elim_norm}}}{ gives the limited mean.}
+ \item{\code{\link{Mexcess_norm}}}{ gives the mean excess loss.}
+ \item{\code{\link{TVaR_norm}}}{ gives the Tail Value-at-Risk.}
+ \item{\code{\link{VaR_norm}}}{ gives the Value-at-Risk.}
+ }
+ Invalid parameter values will return an error detailing which parameter is problematic.
+}
 \description{
 Stop-loss of the Normal distribution with mean
  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.

@@ -70,7 +70,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -84,6 +84,9 @@
 </li>
 <li>
   <a href="../reference/index.html">Reference</a>
+</li>
+<li>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -107,7 +110,7 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Density function of the Erlang distribution</h1>
-    <small class="dont-index">Source: <a href='https://github.com/alec42/Distributacalcul_Package/blob/master/R/d_erlang.R'><code>R/d_erlang.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/alec42/Distributacalcul_Package/blob/master/R/derlang.R'><code>R/derlang.R</code></a></small>
     <div class="hidden name"><code>derlang.Rd</code></div>
     </div>
 
@@ -139,6 +142,22 @@
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>Function :</p><ul>
+<li><p><code><a href='MGF_erlang.html'>MGF_erlang</a></code> gives the moment generating function (MGF).</p></li>
+<li><p><code>derlang</code> gives the density function.</p></li>
+<li><p><code><a href='perlang.html'>perlang</a></code> gives the cumulative density function.</p></li>
+<li><p><code><a href='E_erlang.html'>E_erlang</a></code> gives the expected value.</p></li>
+<li><p><code><a href='V_erlang.html'>V_erlang</a></code> gives the variance.</p></li>
+<li><p><code><a href='kthmoment_erlang.html'>kthmoment_erlang</a></code> gives the kth moment.</p></li>
+<li><p><code><a href='Etronq_erlang.html'>Etronq_erlang</a></code> gives the truncated mean.</p></li>
+<li><p><code><a href='SL_erlang.html'>SL_erlang</a></code> gives the stop-loss.</p></li>
+<li><p><code><a href='Elim_erlang.html'>Elim_erlang</a></code> gives the limited mean.</p></li>
+<li><p><code><a href='Mexcess_erlang.html'>Mexcess_erlang</a></code> gives the mean excess loss.</p></li>
+<li><p><code><a href='TVaR_erlang.html'>TVaR_erlang</a></code> gives the Tail Value-at-Risk.</p></li>
+<li><p><code><a href='VaR_erlang.html'>VaR_erlang</a></code> gives the Value-at-Risk.</p></li>
+</ul><p>Invalid parameter values will return an error detailing which parameter is problematic.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>The Erlang distribution with shape parameter \(n\) and rate parameter
@@ -152,6 +171,7 @@
 <code><a href='E_erlang.html'>E_erlang</a>()</code>,
 <code><a href='Elim_erlang.html'>Elim_erlang</a>()</code>,
 <code><a href='Etronq_erlang.html'>Etronq_erlang</a>()</code>,
+<code><a href='MGF_erlang.html'>MGF_erlang</a>()</code>,
 <code><a href='Mexcess_erlang.html'>Mexcess_erlang</a>()</code>,
 <code><a href='SL_erlang.html'>SL_erlang</a>()</code>,
 <code><a href='TVaR_erlang.html'>TVaR_erlang</a>()</code>,
@@ -172,6 +192,7 @@
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#value">Value</a></li>
       <li><a href="#details">Details</a></li>
       <li><a href="#see-also">See also</a></li>
       <li><a href="#examples">Examples</a></li>

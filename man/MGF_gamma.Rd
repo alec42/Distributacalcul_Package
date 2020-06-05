@@ -15,6 +15,21 @@ MGF_gamma(t, shape, rate = 1/scale, scale = 1/rate)
 
 \item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 }
+\value{
+Function :
+ \itemize{
+ \item{\code{\link{MGF_gamma}}}{ gives the moment generating function (MGF).}
+ \item{\code{\link{E_gamma}}}{ gives the expected value.}
+ \item{\code{\link{V_gamma}}}{ gives the variance.}
+ \item{\code{\link{kthmoment_gamma}}}{ gives the kth moment.}
+ \item{\code{\link{Etronq_gamma}}}{ gives the truncated mean.}
+ \item{\code{\link{SL_gamma}}}{ gives the stop-loss.}
+ \item{\code{\link{Elim_gamma}}}{ gives the limited mean.}
+ \item{\code{\link{Mexcess_gamma}}}{ gives the mean excess loss.}
+ \item{\code{\link{TVaR_gamma}}}{ gives the Tail Value-at-Risk.}
+ }
+ Invalid parameter values will return an error detailing which parameter is problematic.
+}
 \description{
 Moment Generating Function (MGF) of the Gamma distribution
  with shape parameter \eqn{\alpha}{alpha} and rate parameter

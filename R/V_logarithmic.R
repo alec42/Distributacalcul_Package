@@ -9,9 +9,9 @@
 #'
 #' @examples
 #'
-#' V_logarithmique(prob = 0.50)
+#' V_logarithmic(prob = 0.50)
 #'
-V_logarithmique <- function(prob) {
+V_logarithmic <- function(prob) {
     stopifnot(prob > 0, prob < 1)
 
     (prob + log(1 - prob)) / ((1 - prob)^2 * (log(1 - prob))^2)

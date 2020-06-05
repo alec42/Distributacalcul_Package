@@ -11,6 +11,16 @@ d_unifD(x, min = 0, max = 1)
 
 \item{min, max}{lower and upper limits of the distribution. Must be finite.}
 }
+\value{
+Function :
+ \itemize{
+ \item{\code{\link{E_unifD}}}{ gives the expected value.}
+ \item{\code{\link{V_unifD}}}{ gives the variance.}
+ \item{\code{\link{d_unifD}}}{ gives the density function.}
+ \item{\code{\link{d_unifD}}}{ gives the cumulative density function.}
+ }
+ Invalid parameter values will return an error detailing which parameter is problematic.
+}
 \description{
 Probability mass function of the (discrete) Uniform
  distribution with min \eqn{a} and max \eqn{b}.

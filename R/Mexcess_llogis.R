@@ -27,7 +27,7 @@ Mexcess_llogis <- function(d, shape, rate = 1 / scale, scale = 1 / rate) {
             q = (d^shape)/(scale^shape + d^shape),
             shape1 = 1 + 1/shape,
             shape2 = 1 - 1/shape,
-            lower.tail = F
+            lower.tail = FALSE
         ) -
     d
 }

@@ -16,7 +16,7 @@ TVaR_lnorm <- function(kap, meanlog, sdlog) {
     stopifnot(kap < 1, kap >= 0, sdlog > 0)
 
     E_lnorm(meanlog, sdlog) *
-        stats::pnorm(q = stats::qnorm(p = kap) - sdlog, lower.tail = F) /
+        stats::pnorm(q = stats::qnorm(p = kap) - sdlog, lower.tail = FALSE) /
         (1 - kap)
 }
 

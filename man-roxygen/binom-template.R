@@ -16,5 +16,17 @@
 #'   \deqn{Pr(X = k) = \left(\frac{n}{k}\right) p^n (1 - p)^{n - k}}{Pr(X = k) = n!/(k!(n - k)!) p^n(1 - p)^(n - k)}
 #'   for \eqn{k = 0, 1, 2, \dots, n}{k = 0, 1, 2, ..., n}, \eqn{p \in [0, 1]}{0 <= p <= 1}, and \eqn{n > 0}{n > 0}
 #'
+#' @return
+#'  Function :
+#'  \itemize{
+#'  \item{\code{\link{MGF_binom}}}{ gives the moment generating function (MGF).}
+#'  \item{\code{\link{E_binom}}}{ gives the expected value.}
+#'  \item{\code{\link{V_binom}}}{ gives the variance.}
+#'  \item{\code{\link{Etronq_binom}}}{ gives the truncated mean.}
+#'  \item{\code{\link{TVaR_binom}}}{ gives the Tail Value-at-Risk.}
+#'  \item{\code{\link{VaR_binom}}}{ gives the Value-at-Risk.}
+#'  }
+#'  Invalid parameter values will return an error detailing which parameter is problematic.
+#'
 #' @family Binomial Distribution
 #'

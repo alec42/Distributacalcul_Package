@@ -9,10 +9,10 @@ lawParametersBoxUI(id)
 \arguments{
 \item{id}{id of module}
 }
+\value{
+UI function for the \code{\link{Distributacalcul_vis}} module.
+ Should not be run directly.
+}
 \description{
 Interactive distribution visualization (UI side)
-}
-\note{
-this function should not be used explicitly,
- see \link[Distributacalcul]{Distributacalcul_vis}.
 }

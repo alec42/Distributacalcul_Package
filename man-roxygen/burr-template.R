@@ -14,5 +14,20 @@
 #'   \deqn{f\left(x\right) = \frac{\alpha \tau \lambda^{ \alpha } x^{ \tau - 1 }}{(\lambda + x^{ \tau })^{\alpha +1}}}{f(x) = (a t lam^a x^(t - 1))/ (lam + x^t)^(a + 1)}
 #'   for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\alpha, \tau, \lambda > 0}{a, t, lam > 0}.
 #'
+#' @return
+#'  Function :
+#'  \itemize{
+#'  \item{\code{\link{E_burr}}}{ gives the expected value.}
+#'  \item{\code{\link{V_burr}}}{ gives the variance.}
+#'  \item{\code{\link{kthmoment_burr}}}{ gives the kth moment.}
+#'  \item{\code{\link{Etronq_burr}}}{ gives the truncated mean.}
+#'  \item{\code{\link{SL_burr}}}{ gives the stop-loss.}
+#'  \item{\code{\link{Elim_burr}}}{ gives the limited mean.}
+#'  \item{\code{\link{Mexcess_burr}}}{ gives the mean excess loss.}
+#'  \item{\code{\link{TVaR_burr}}}{ gives the Tail Value-at-Risk.}
+#'  \item{\code{\link{VaR_burr}}}{ gives the Value-at-Risk.}
+#'  }
+#'  Invalid parameter values will return an error detailing which parameter is problematic.
+#'
 #' @family Burr Distribution
 #'

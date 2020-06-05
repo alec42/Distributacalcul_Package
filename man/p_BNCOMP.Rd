@@ -85,6 +85,18 @@ TVaR_BNCOMP(
 
 \item{vark}{Value-at-Risk (VaR) calculated at the given probability kap.}
 }
+\value{
+Function :
+ \itemize{
+ \item{\code{\link{p_BNCOMP}}}{ gives the cumulative density function.}
+ \item{\code{\link{E_BNCOMP}}}{ gives the expected value.}
+ \item{\code{\link{V_BNCOMP}}}{ gives the variance.}
+ \item{\code{\link{TVaR_BNCOMP}}}{ gives the Tail Value-at-Risk.}
+ \item{\code{\link{VaR_BNCOMP}}}{ gives the Value-at-Risk.}
+ }
+ Returned values are approximations for the cumulative density function,
+ TVaR, and VaR.
+}
 \description{
 Computes various risk measures (mean, variance, Value-at-Risk (VaR),
   and Tail Value-at-Risk (TVaR)) for the compound Negative Binomial
@@ -107,11 +119,9 @@ V_BNCOMP(size = 1, prob = 0.2, shape = log(1000) - 0.405, rate = 0.9^2,
 VaR_BNCOMP(kap = 0.9, size = 1, prob = 0.2, shape = 0.59,
             rate = 0.9^2, k0 = 1E2, distr_severity = "Gamma")
 
-\dontrun{
 vark_calc <- VaR_BNCOMP(kap = 0.9, size = 1, prob = 0.2, shape = 0.59,
             rate = 0.9^2, k0 = 1E2, distr_severity = "Gamma")
 TVaR_BNCOMP(kap = 0.9, size = 1, prob = 0.2, shape = 0.59, rate = 0.9^2,
             vark = vark_calc, k0 = 1E2, distr_severity = "Gamma")
-}
 
 }

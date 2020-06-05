@@ -20,6 +20,9 @@ Distributacalcul_vis(law)
  \item{"pareto": }{Pareto distribution.}
 }}
 }
+\value{
+Launches Shiny application.
+}
 \description{
 Opens an interactive Shiny app for the selected distribution.
 }

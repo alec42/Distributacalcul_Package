@@ -17,6 +17,21 @@ Etronq_llogis(d, shape, rate = 1/scale, scale = 1/rate, less.than.d = TRUE)
 
 \item{less.than.d}{logical; if \code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.}
 }
+\value{
+Function :
+ \itemize{
+ \item{\code{\link{E_llogis}}}{ gives the expected value.}
+ \item{\code{\link{V_llogis}}}{ gives the variance.}
+ \item{\code{\link{kthmoment_llogis}}}{ gives the kth moment.}
+ \item{\code{\link{Etronq_llogis}}}{ gives the truncated mean.}
+ \item{\code{\link{SL_llogis}}}{ gives the stop-loss.}
+ \item{\code{\link{Elim_llogis}}}{ gives the limited mean.}
+ \item{\code{\link{Mexcess_llogis}}}{ gives the mean excess loss.}
+ \item{\code{\link{TVaR_llogis}}}{ gives the Tail Value-at-Risk.}
+ \item{\code{\link{VaR_llogis}}}{ gives the Value-at-Risk.}
+ }
+ Invalid parameter values will return an error detailing which parameter is problematic.
+}
 \description{
 Truncated mean of the Loglogistic distribution with
  shape parameter \eqn{\tau}{tau} and scale parameter

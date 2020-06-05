@@ -9,9 +9,9 @@
 #'
 #' @examples
 #'
-#' E_logarithmique(prob = 0.50)
+#' E_logarithmic(prob = 0.50)
 #'
-E_logarithmique <- function(prob) {
+E_logarithmic <- function(prob) {
     stopifnot(prob > 0, prob < 1)
 
     (-prob) / (log(1 - prob) * (1 - prob))

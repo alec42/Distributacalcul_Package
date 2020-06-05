@@ -19,7 +19,7 @@
 #' # With alternative parameterization where k is the number of trials
 #' V_negbinom(size = 2, beta = 1.5)
 #'
-V_negbinom <- function(size, prob = (1 / (1 + beta)), beta = ((1 - prob) / prob), nb_tries = F) {
+V_negbinom <- function(size, prob = (1 / (1 + beta)), beta = ((1 - prob) / prob), nb_tries = FALSE) {
     stopifnot(size > 0, prob > 0, prob < 1)
 
     size * ((1 - prob) / (prob^2))

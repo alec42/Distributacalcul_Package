@@ -16,9 +16,20 @@
 #' @template scale-template
 #' @template vark-template
 #'
+#' @importFrom stats dpois pgamma
 #' @export
 #'
-#' @importFrom stats dpois pgamma
+#' @return
+#'  Function :
+#'  \itemize{
+#'  \item{\code{\link{p_PCOMP}}}{ gives the cumulative density function.}
+#'  \item{\code{\link{E_PCOMP}}}{ gives the expected value.}
+#'  \item{\code{\link{V_PCOMP}}}{ gives the variance.}
+#'  \item{\code{\link{TVaR_PCOMP}}}{ gives the Tail Value-at-Risk.}
+#'  \item{\code{\link{VaR_PCOMP}}}{ gives the Value-at-Risk.}
+#'  }
+#'  Returned values are approximations for the cumulative density function,
+#'  TVaR, and VaR.
 #'
 #' @examples
 #' p_PCOMP(x = 2, lambda = 2, shape = log(1000) - 0.405,

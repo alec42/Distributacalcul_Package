@@ -13,6 +13,21 @@ E_pareto(shape, rate = 1/scale, scale = 1/rate)
 
 \item{scale}{alternative parameterization to the rate parameter, scale = 1 / rate.}
 }
+\value{
+Function :
+ \itemize{
+ \item{\code{\link{E_pareto}}}{ gives the expected value.}
+ \item{\code{\link{V_pareto}}}{ gives the variance.}
+ \item{\code{\link{kthmoment_pareto}}}{ gives the kth moment.}
+ \item{\code{\link{Etronq_pareto}}}{ gives the truncated mean.}
+ \item{\code{\link{SL_pareto}}}{ gives the stop-loss.}
+ \item{\code{\link{Elim_pareto}}}{ gives the limited mean.}
+ \item{\code{\link{Mexcess_pareto}}}{ gives the mean excess loss.}
+ \item{\code{\link{TVaR_pareto}}}{ gives the Tail Value-at-Risk.}
+ \item{\code{\link{VaR_pareto}}}{ gives the Value-at-Risk.}
+ }
+ Invalid parameter values will return an error detailing which parameter is problematic.
+}
 \description{
 Expected value of the Pareto distribution with shape
  parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\lambda}{lambda}.

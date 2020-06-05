@@ -22,7 +22,7 @@ Etronq_lnorm <- function(d, meanlog, sdlog, less.than.d = TRUE) {
             stats::pnorm(q = log(d) - sdlog^2, mean = meanlog, sd = sdlog)
     } else {
         Etronq.lnorm <- E_lnorm(meanlog, sdlog) *
-            stats::pnorm(q = log(d) - sdlog^2, mean = meanlog, sd = sdlog, lower.tail = F)
+            stats::pnorm(q = log(d) - sdlog^2, mean = meanlog, sd = sdlog, lower.tail = FALSE)
     }
 
     return(Etronq.lnorm)

@@ -71,7 +71,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -85,6 +85,9 @@
 </li>
 <li>
   <a href="../reference/index.html">Reference</a>
+</li>
+<li>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -218,6 +221,16 @@
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>Function :</p><ul>
+<li><p><code>p_BNCOMP</code> gives the cumulative density function.</p></li>
+<li><p><code>E_BNCOMP</code> gives the expected value.</p></li>
+<li><p><code>V_BNCOMP</code> gives the variance.</p></li>
+<li><p><code>TVaR_BNCOMP</code> gives the Tail Value-at-Risk.</p></li>
+<li><p><code>VaR_BNCOMP</code> gives the Value-at-Risk.</p></li>
+</ul><p>Returned values are approximations for the cumulative density function,
+ TVaR, and VaR.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>The compound Negative Binomial Distribution has density ....</p>
@@ -232,17 +245,17 @@
           <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Lognormale"</span>)</div><div class='output co'>#&gt; [1] 5011632</div><div class='input'>
 <span class='fu'>VaR_BNCOMP</span>(<span class='kw'>kap</span> <span class='kw'>=</span> <span class='fl'>0.9</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>prob</span> <span class='kw'>=</span> <span class='fl'>0.2</span>, <span class='kw'>shape</span> <span class='kw'>=</span> <span class='fl'>0.59</span>,
             <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>0.9</span>^<span class='fl'>2</span>, <span class='kw'>k0</span> <span class='kw'>=</span> <span class='fl'>1E2</span>, <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Gamma"</span>)</div><div class='output co'>#&gt; [1] 7.833102</div><div class='input'>
-<span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
 <span class='no'>vark_calc</span> <span class='kw'>&lt;-</span> <span class='fu'>VaR_BNCOMP</span>(<span class='kw'>kap</span> <span class='kw'>=</span> <span class='fl'>0.9</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>prob</span> <span class='kw'>=</span> <span class='fl'>0.2</span>, <span class='kw'>shape</span> <span class='kw'>=</span> <span class='fl'>0.59</span>,
             <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>0.9</span>^<span class='fl'>2</span>, <span class='kw'>k0</span> <span class='kw'>=</span> <span class='fl'>1E2</span>, <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Gamma"</span>)
 <span class='fu'>TVaR_BNCOMP</span>(<span class='kw'>kap</span> <span class='kw'>=</span> <span class='fl'>0.9</span>, <span class='kw'>size</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>prob</span> <span class='kw'>=</span> <span class='fl'>0.2</span>, <span class='kw'>shape</span> <span class='kw'>=</span> <span class='fl'>0.59</span>, <span class='kw'>rate</span> <span class='kw'>=</span> <span class='fl'>0.9</span>^<span class='fl'>2</span>,
-            <span class='kw'>vark</span> <span class='kw'>=</span> <span class='no'>vark_calc</span>, <span class='kw'>k0</span> <span class='kw'>=</span> <span class='fl'>1E2</span>, <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Gamma"</span>)
-}</div></pre>
+            <span class='kw'>vark</span> <span class='kw'>=</span> <span class='no'>vark_calc</span>, <span class='kw'>k0</span> <span class='kw'>=</span> <span class='fl'>1E2</span>, <span class='kw'>distr_severity</span> <span class='kw'>=</span> <span class='st'>"Gamma"</span>)</div><div class='output co'>#&gt; [1] 1.060235</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#value">Value</a></li>
       <li><a href="#details">Details</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>

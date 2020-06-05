@@ -13,6 +13,21 @@ Etronq_unif(d, min = 0, max = 1, less.than.d = TRUE)
 
 \item{less.than.d}{logical; if \code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.}
 }
+\value{
+Function :
+ \itemize{
+ \item{\code{\link{E_unif}}}{ gives the expected value.}
+ \item{\code{\link{V_unif}}}{ gives the variance.}
+ \item{\code{\link{kthmoment_unif}}}{ gives the kth moment.}
+ \item{\code{\link{Etronq_unif}}}{ gives the truncated mean.}
+ \item{\code{\link{SL_unif}}}{ gives the stop-loss.}
+ \item{\code{\link{Elim_unif}}}{ gives the limited mean.}
+ \item{\code{\link{Mexcess_unif}}}{ gives the mean excess loss.}
+ \item{\code{\link{TVaR_unif}}}{ gives the Tail Value-at-Risk.}
+ \item{\code{\link{VaR_unif}}}{ gives the Value-at-Risk.}
+ }
+ Invalid parameter values will return an error detailing which parameter is problematic.
+}
 \description{
 Truncated mean of the Uniform distribution
  with min \eqn{a} and max \eqn{b}.

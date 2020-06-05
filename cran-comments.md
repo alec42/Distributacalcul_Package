@@ -2,8 +2,7 @@
 
 This is a resubmission. In this version I have:
 
-*   Fixed the license issue from "MIT + file LICENSE" to "GPL + file LICENSE".
-*   Removed GPL as it has an error and only kept an MIT license, final license field is "MIT + file LICENSE".
-
-
-
++   Changed all 'F' and 'T' to 'FALSE' and 'TRUE'.
++   Removed \dontrun{} from the TVaR_BNCOMP example.
++   Added @return field to function documentation to describe what each functions returns.
++   Removed the notes on Distributacalcul_vis module functions and replaced with @return field describing their use.
