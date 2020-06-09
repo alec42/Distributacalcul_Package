@@ -9,3 +9,4 @@ inst/doc
 .Rhistory
 .Rbuildignore
 cran-comments.md
+docs/package-build-site.R
