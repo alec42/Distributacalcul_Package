@@ -1,3 +1,11 @@
+#   Distributacalcul 0.2.1
+Unremarkable release which updates the readme.
+
+## Bug fixes
++   Updated table of functions.
++   Fixed english grammar mistake in readme example.
++   Updated instructions for downloading the package.
+
 #   Distributacalcul 0.2.0
 ##  New features
 +   Added the expected value and variance of the Poisson distribution as functions for eventual addition to Shiny application.
