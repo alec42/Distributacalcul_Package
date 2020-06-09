@@ -20,7 +20,7 @@ Returns numeric value.
  \item{\code{\link{E_weibull}}}{ gives the expected value.}
  \item{\code{\link{V_weibull}}}{ gives the variance.}
  \item{\code{\link{kthmoment_weibull}}}{ gives the kth moment.}
- \item{\code{\link{Etronq_weibull}}}{ gives the truncated mean.}
+ \item{\code{\link{Etrunc_weibull}}}{ gives the truncated mean.}
  \item{\code{\link{SL_weibull}}}{ gives the stop-loss.}
  \item{\code{\link{Elim_weibull}}}{ gives the limited mean.}
  \item{\code{\link{Mexcess_weibull}}}{ gives the mean excess loss.}
@@ -53,7 +53,7 @@ E_weibull(shape = 2, rate = 0.2)
 \seealso{
 Other Weibull Distribution: 
 \code{\link{Elim_weibull}()},
-\code{\link{Etronq_weibull}()},
+\code{\link{Etrunc_weibull}()},
 \code{\link{Mexcess_weibull}()},
 \code{\link{SL_weibull}()},
 \code{\link{TVaR_weibull}()},

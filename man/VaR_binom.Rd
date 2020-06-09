@@ -19,7 +19,7 @@ Function :
  \item{\code{\link{MGF_binom}}}{ gives the moment generating function (MGF).}
  \item{\code{\link{E_binom}}}{ gives the expected value.}
  \item{\code{\link{V_binom}}}{ gives the variance.}
- \item{\code{\link{Etronq_binom}}}{ gives the truncated mean.}
+ \item{\code{\link{Etrunc_binom}}}{ gives the truncated mean.}
  \item{\code{\link{TVaR_binom}}}{ gives the Tail Value-at-Risk.}
  \item{\code{\link{VaR_binom}}}{ gives the Value-at-Risk.}
  }
@@ -47,7 +47,7 @@ VaR_binom(kap = 0.8, size = 5, prob = 0.2)
 \seealso{
 Other Binomial Distribution: 
 \code{\link{E_binom}()},
-\code{\link{Etronq_binom}()},
+\code{\link{Etrunc_binom}()},
 \code{\link{MGF_binom}()},
 \code{\link{PGF_binom}()},
 \code{\link{TVaR_binom}()},

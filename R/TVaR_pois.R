@@ -22,7 +22,7 @@ TVaR_pois <- function(kap, lambda, k0) {
     vark <- stats::qpois(p = kap, lambda = lambda)
 
     TVaR.approx <- (
-        Etronq_pois(vark, lambda, k0, less.than.d = FALSE) +
+        Etrunc_pois(vark, lambda, k0, less.than.d = FALSE) +
             vark * (stats::ppois(q = vark, lambda = lambda) - kap)
         ) / (1 - kap)
 

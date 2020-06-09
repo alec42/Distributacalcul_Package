@@ -22,7 +22,7 @@ Function :
  \item{\code{\link{E_gamma}}}{ gives the expected value.}
  \item{\code{\link{V_gamma}}}{ gives the variance.}
  \item{\code{\link{kthmoment_gamma}}}{ gives the kth moment.}
- \item{\code{\link{Etronq_gamma}}}{ gives the truncated mean.}
+ \item{\code{\link{Etrunc_gamma}}}{ gives the truncated mean.}
  \item{\code{\link{SL_gamma}}}{ gives the stop-loss.}
  \item{\code{\link{Elim_gamma}}}{ gives the limited mean.}
  \item{\code{\link{Mexcess_gamma}}}{ gives the mean excess loss.}
@@ -54,7 +54,7 @@ TVaR_gamma(kap = .2, shape = 3, rate = 0.25)
 Other Gamma Distribution: 
 \code{\link{E_gamma}()},
 \code{\link{Elim_gamma}()},
-\code{\link{Etronq_gamma}()},
+\code{\link{Etrunc_gamma}()},
 \code{\link{MGF_gamma}()},
 \code{\link{Mexcess_gamma}()},
 \code{\link{SL_gamma}()},

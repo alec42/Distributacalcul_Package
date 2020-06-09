@@ -17,7 +17,7 @@ Function :
  \item{\code{\link{E_unif}}}{ gives the expected value.}
  \item{\code{\link{V_unif}}}{ gives the variance.}
  \item{\code{\link{kthmoment_unif}}}{ gives the kth moment.}
- \item{\code{\link{Etronq_unif}}}{ gives the truncated mean.}
+ \item{\code{\link{Etrunc_unif}}}{ gives the truncated mean.}
  \item{\code{\link{SL_unif}}}{ gives the stop-loss.}
  \item{\code{\link{Elim_unif}}}{ gives the limited mean.}
  \item{\code{\link{Mexcess_unif}}}{ gives the mean excess loss.}
@@ -45,7 +45,7 @@ VaR_unif(kap = .99, min = 3, max = 4)
 Other Continuous Uniform Distribution: 
 \code{\link{E_unif}()},
 \code{\link{Elim_unif}()},
-\code{\link{Etronq_unif}()},
+\code{\link{Etrunc_unif}()},
 \code{\link{Mexcess_unif}()},
 \code{\link{SL_unif}()},
 \code{\link{TVaR_unif}()},

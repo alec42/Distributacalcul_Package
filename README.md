@@ -50,9 +50,9 @@ kthmoment_beta(k = 3, shape1 = 2, shape2 = 4) # E[X^k]
 ##  Expected value of functions:
 Elim_beta(d = 0.3, shape1 = 2, shape2 = 4) # E[min(X; d)]
 #> [1] 2.19811
-Etronq_beta(d = .3, shape1 = 2, shape2 = 4, less.than.d = TRUE) # E[X * 1_{X <= d}]
+Etrunc_beta(d = .3, shape1 = 2, shape2 = 4, less.than.d = TRUE) # E[X * 1_{X <= d}]
 #> [1] 0.08523
-Etronq_beta(d = .3, shape1 = 2, shape2 = 4, less.than.d = FALSE) # E[X * 1_{X > d}]
+Etrunc_beta(d = .3, shape1 = 2, shape2 = 4, less.than.d = FALSE) # E[X * 1_{X > d}]
 #> [1] 0.2481033
 Mexcess_beta(d = .3, shape1 = 2, shape2 = 4) # E[(X - d | X > d)]
 #> [1] 0.169697
@@ -72,7 +72,7 @@ VaR_beta(kap = 0.99, shape1 = 2, shape2 = 4) # VaR_{k}(X) = F_X^(-1)(k)
 | ------------------------------- | ----------------------- |
 | Mean                            | E\_distribution         |
 | K-th moment                     | kthmoment\_distribution |
-| Truncated mean                  | Etronq\_distribution    |
+| Truncated mean                  | Etrunc\_distribution    |
 | Limited expected value          | Elim\_distribution      |
 | Variance                        | V\_distribution         |
 | Stop-loss                       | SL\_distribution        |

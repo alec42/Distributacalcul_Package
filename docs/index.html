@@ -102,9 +102,9 @@
 <a class="sourceLine" id="cb3-10" title="10"><span class="co">##  Expected value of functions:</span></a>
 <a class="sourceLine" id="cb3-11" title="11"><span class="kw"><a href="reference/Elim_beta.html">Elim_beta</a></span>(<span class="dt">d =</span> <span class="fl">0.3</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>) <span class="co"># E[min(X; d)]</span></a>
 <a class="sourceLine" id="cb3-12" title="12"><span class="co">#&gt; [1] 2.19811</span></a>
-<a class="sourceLine" id="cb3-13" title="13"><span class="kw"><a href="reference/Etronq_beta.html">Etronq_beta</a></span>(<span class="dt">d =</span> <span class="fl">.3</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>, <span class="dt">less.than.d =</span> <span class="ot">TRUE</span>) <span class="co"># E[X * 1_{X &lt;= d}]</span></a>
+<a class="sourceLine" id="cb3-13" title="13"><span class="kw"><a href="reference/Etrunc_beta.html">Etrunc_beta</a></span>(<span class="dt">d =</span> <span class="fl">.3</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>, <span class="dt">less.than.d =</span> <span class="ot">TRUE</span>) <span class="co"># E[X * 1_{X &lt;= d}]</span></a>
 <a class="sourceLine" id="cb3-14" title="14"><span class="co">#&gt; [1] 0.08523</span></a>
-<a class="sourceLine" id="cb3-15" title="15"><span class="kw"><a href="reference/Etronq_beta.html">Etronq_beta</a></span>(<span class="dt">d =</span> <span class="fl">.3</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>, <span class="dt">less.than.d =</span> <span class="ot">FALSE</span>) <span class="co"># E[X * 1_{X &gt; d}]</span></a>
+<a class="sourceLine" id="cb3-15" title="15"><span class="kw"><a href="reference/Etrunc_beta.html">Etrunc_beta</a></span>(<span class="dt">d =</span> <span class="fl">.3</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>, <span class="dt">less.than.d =</span> <span class="ot">FALSE</span>) <span class="co"># E[X * 1_{X &gt; d}]</span></a>
 <a class="sourceLine" id="cb3-16" title="16"><span class="co">#&gt; [1] 0.2481033</span></a>
 <a class="sourceLine" id="cb3-17" title="17"><span class="kw"><a href="reference/Mexcess_beta.html">Mexcess_beta</a></span>(<span class="dt">d =</span> <span class="fl">.3</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>) <span class="co"># E[(X - d | X &gt; d)]</span></a>
 <a class="sourceLine" id="cb3-18" title="18"><span class="co">#&gt; [1] 0.169697</span></a>
@@ -136,7 +136,7 @@
 </tr>
 <tr class="odd">
 <td>Truncated mean</td>
-<td>Etronq_distribution</td>
+<td>Etrunc_distribution</td>
 </tr>
 <tr class="even">
 <td>Limited expected value</td>

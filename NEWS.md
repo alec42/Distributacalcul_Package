@@ -1,3 +1,7 @@
+#   Distributacalcul 0.2.3
+##  Minor changes
++   Changed the spelling of the truncated mean functions from french spelling 'Etronq' to english spelling 'Etrunc'.
+
 #   Distributacalcul 0.2.2
 ## New features
 +   Added Pareto PDF and CDF.

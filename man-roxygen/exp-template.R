@@ -19,7 +19,7 @@
 #'  \item{\code{\link{E_exp}}}{ gives the expected value.}
 #'  \item{\code{\link{V_exp}}}{ gives the variance.}
 #'  \item{\code{\link{kthmoment_exp}}}{ gives the kth moment.}
-#'  \item{\code{\link{Etronq_exp}}}{ gives the truncated mean.}
+#'  \item{\code{\link{Etrunc_exp}}}{ gives the truncated mean.}
 #'  \item{\code{\link{SL_exp}}}{ gives the stop-loss.}
 #'  \item{\code{\link{Elim_exp}}}{ gives the limited mean.}
 #'  \item{\code{\link{Mexcess_exp}}}{ gives the mean excess loss.}

@@ -18,7 +18,7 @@
 #'  \item{\code{\link{E_lnorm}}}{ gives the expected value.}
 #'  \item{\code{\link{V_lnorm}}}{ gives the variance.}
 #'  \item{\code{\link{kthmoment_lnorm}}}{ gives the kth moment.}
-#'  \item{\code{\link{Etronq_lnorm}}}{ gives the truncated mean.}
+#'  \item{\code{\link{Etrunc_lnorm}}}{ gives the truncated mean.}
 #'  \item{\code{\link{SL_lnorm}}}{ gives the stop-loss.}
 #'  \item{\code{\link{Elim_lnorm}}}{ gives the limited mean.}
 #'  \item{\code{\link{Mexcess_lnorm}}}{ gives the mean excess loss.}

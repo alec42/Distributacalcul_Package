@@ -17,7 +17,7 @@
 #'  \item{\code{\link{E_unif}}}{ gives the expected value.}
 #'  \item{\code{\link{V_unif}}}{ gives the variance.}
 #'  \item{\code{\link{kthmoment_unif}}}{ gives the kth moment.}
-#'  \item{\code{\link{Etronq_unif}}}{ gives the truncated mean.}
+#'  \item{\code{\link{Etrunc_unif}}}{ gives the truncated mean.}
 #'  \item{\code{\link{SL_unif}}}{ gives the stop-loss.}
 #'  \item{\code{\link{Elim_unif}}}{ gives the limited mean.}
 #'  \item{\code{\link{Mexcess_unif}}}{ gives the mean excess loss.}

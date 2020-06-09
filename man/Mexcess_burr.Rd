@@ -23,7 +23,7 @@ Function :
  \item{\code{\link{E_burr}}}{ gives the expected value.}
  \item{\code{\link{V_burr}}}{ gives the variance.}
  \item{\code{\link{kthmoment_burr}}}{ gives the kth moment.}
- \item{\code{\link{Etronq_burr}}}{ gives the truncated mean.}
+ \item{\code{\link{Etrunc_burr}}}{ gives the truncated mean.}
  \item{\code{\link{SL_burr}}}{ gives the stop-loss.}
  \item{\code{\link{Elim_burr}}}{ gives the limited mean.}
  \item{\code{\link{Mexcess_burr}}}{ gives the mean excess loss.}
@@ -56,7 +56,7 @@ Mexcess_burr(d = 2, scale = 0.5, shape1 = 2, shape2 = 5)
 Other Burr Distribution: 
 \code{\link{E_burr}()},
 \code{\link{Elim_burr}()},
-\code{\link{Etronq_burr}()},
+\code{\link{Etrunc_burr}()},
 \code{\link{SL_burr}()},
 \code{\link{TVaR_burr}()},
 \code{\link{V_burr}()},

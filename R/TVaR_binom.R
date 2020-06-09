@@ -25,7 +25,7 @@ TVaR_binom <- function(kap, size, prob) {
     vark <- stats::qbinom(p = kap, size, prob)
 
     (
-        Etronq_binom(d = vark, size, prob, less.than.d = FALSE) +
+        Etrunc_binom(d = vark, size, prob, less.than.d = FALSE) +
             vark * (stats::pbinom(q = vark, size = size, prob = prob) - kap)
     ) /
         (1 - kap)

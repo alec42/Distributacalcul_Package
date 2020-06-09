@@ -26,7 +26,7 @@
 #'  \item{\code{\link{E_erlang}}}{ gives the expected value.}
 #'  \item{\code{\link{V_erlang}}}{ gives the variance.}
 #'  \item{\code{\link{kthmoment_erlang}}}{ gives the kth moment.}
-#'  \item{\code{\link{Etronq_erlang}}}{ gives the truncated mean.}
+#'  \item{\code{\link{Etrunc_erlang}}}{ gives the truncated mean.}
 #'  \item{\code{\link{SL_erlang}}}{ gives the stop-loss.}
 #'  \item{\code{\link{Elim_erlang}}}{ gives the limited mean.}
 #'  \item{\code{\link{Mexcess_erlang}}}{ gives the mean excess loss.}

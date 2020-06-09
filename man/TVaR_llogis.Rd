@@ -21,7 +21,7 @@ Function :
  \item{\code{\link{E_llogis}}}{ gives the expected value.}
  \item{\code{\link{V_llogis}}}{ gives the variance.}
  \item{\code{\link{kthmoment_llogis}}}{ gives the kth moment.}
- \item{\code{\link{Etronq_llogis}}}{ gives the truncated mean.}
+ \item{\code{\link{Etrunc_llogis}}}{ gives the truncated mean.}
  \item{\code{\link{SL_llogis}}}{ gives the stop-loss.}
  \item{\code{\link{Elim_llogis}}}{ gives the limited mean.}
  \item{\code{\link{Mexcess_llogis}}}{ gives the mean excess loss.}
@@ -54,7 +54,7 @@ TVaR_llogis(kap = 0.8, shape = 3, rate = 0.2)
 Other Loglogistic Distribution: 
 \code{\link{E_llogis}()},
 \code{\link{Elim_llogis}()},
-\code{\link{Etronq_llogis}()},
+\code{\link{Etrunc_llogis}()},
 \code{\link{Mexcess_llogis}()},
 \code{\link{SL_llogis}()},
 \code{\link{V_llogis}()},

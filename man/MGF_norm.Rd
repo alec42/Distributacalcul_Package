@@ -19,7 +19,7 @@ Function :
  \item{\code{\link{MGF_norm}}}{ gives the moment generating function (MGF).}
  \item{\code{\link{E_norm}}}{ gives the expected value.}
  \item{\code{\link{V_norm}}}{ gives the variance.}
- \item{\code{\link{Etronq_norm}}}{ gives the truncated mean.}
+ \item{\code{\link{Etrunc_norm}}}{ gives the truncated mean.}
  \item{\code{\link{SL_norm}}}{ gives the stop-loss.}
  \item{\code{\link{Elim_norm}}}{ gives the limited mean.}
  \item{\code{\link{Mexcess_norm}}}{ gives the mean excess loss.}
@@ -47,7 +47,7 @@ MGF_norm(t = 1, mean = 3, sd = 5)
 Other Normal distribution: 
 \code{\link{E_norm}()},
 \code{\link{Elim_norm}()},
-\code{\link{Etronq_norm}()},
+\code{\link{Etrunc_norm}()},
 \code{\link{Mexcess_norm}()},
 \code{\link{SL_norm}()},
 \code{\link{TVaR_norm}()},

@@ -23,7 +23,7 @@ Function :
  \item{\code{\link{E_pareto}}}{ gives the expected value.}
  \item{\code{\link{V_pareto}}}{ gives the variance.}
  \item{\code{\link{kthmoment_pareto}}}{ gives the kth moment.}
- \item{\code{\link{Etronq_pareto}}}{ gives the truncated mean.}
+ \item{\code{\link{Etrunc_pareto}}}{ gives the truncated mean.}
  \item{\code{\link{SL_pareto}}}{ gives the stop-loss.}
  \item{\code{\link{Elim_pareto}}}{ gives the limited mean.}
  \item{\code{\link{Mexcess_pareto}}}{ gives the mean excess loss.}
@@ -56,7 +56,7 @@ d_pareto(x = 2, shape = 2, rate = 5)
 Other Pareto Distribution: 
 \code{\link{E_pareto}()},
 \code{\link{Elim_pareto}()},
-\code{\link{Etronq_pareto}()},
+\code{\link{Etrunc_pareto}()},
 \code{\link{Mexcess_pareto}()},
 \code{\link{SL_pareto}()},
 \code{\link{TVaR_pareto}()},

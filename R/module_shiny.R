@@ -313,10 +313,10 @@ lawParametersBox <- function(input, output, session, law) {
             as.numeric(shape()), as.numeric(rate())
         )
     })
-    Etronq <- shiny::reactive({
+    Etrunc <- shiny::reactive({
         shiny::req(less.than.d())
         rlang::exec(
-            .fn = paste0("Etronq_", law.fct),
+            .fn = paste0("Etrunc_", law.fct),
             d = as.numeric(d()),
             as.numeric(shape()), as.numeric(rate()),
             less.than.d = ifelse(less.than.d(), TRUE, FALSE) ### here
@@ -357,13 +357,13 @@ lawParametersBox <- function(input, output, session, law) {
         )
         )
     })
-    output$Etronq <- shiny::renderUI({
+    output$Etrunc <- shiny::renderUI({
         shiny::withMathJax(
             sprintf(
                 "$$\\text{E}[X \\times 1_{\\{X %s %s\\}}] = %.4f$$",
                 ifelse(less.than.d(), "\\geq", "\\leq"),
                 as.numeric(d()),
-                Etronq()
+                Etrunc()
             )
         )
     })
@@ -599,7 +599,7 @@ lawParametersBoxUI <- function(id) {
                 shiny::uiOutput(ns("d")),
                 shiny::splitLayout(
                     shiny::uiOutput(ns("less.than.d")),
-                    shiny::uiOutput(ns("Etronq")),
+                    shiny::uiOutput(ns("Etrunc")),
                     cellWidths = 'auto'
                 ),
                 shiny::uiOutput(ns("Elim")),

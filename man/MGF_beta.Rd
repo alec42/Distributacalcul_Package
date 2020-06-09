@@ -22,7 +22,7 @@ Function :
  \item{\code{\link{E_beta}}}{ gives the expected value.}
  \item{\code{\link{V_beta}}}{ gives the variance.}
  \item{\code{\link{kthmoment_beta}}}{ gives the kth moment.}
- \item{\code{\link{Etronq_beta}}}{ gives the truncated mean.}
+ \item{\code{\link{Etrunc_beta}}}{ gives the truncated mean.}
  \item{\code{\link{SL_beta}}}{ gives the stop-loss.}
  \item{\code{\link{Elim_beta}}}{ gives the limited mean.}
  \item{\code{\link{Mexcess_beta}}}{ gives the mean excess loss.}
@@ -51,7 +51,7 @@ MGF_beta(t = 1, shape1 = 3, shape2 = 5, k0 = 1E2)
 Other Beta Distribution: 
 \code{\link{E_beta}()},
 \code{\link{Elim_beta}()},
-\code{\link{Etronq_beta}()},
+\code{\link{Etrunc_beta}()},
 \code{\link{Mexcess_beta}()},
 \code{\link{SL_beta}()},
 \code{\link{TVaR_beta}()},

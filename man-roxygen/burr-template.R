@@ -20,7 +20,7 @@
 #'  \item{\code{\link{E_burr}}}{ gives the expected value.}
 #'  \item{\code{\link{V_burr}}}{ gives the variance.}
 #'  \item{\code{\link{kthmoment_burr}}}{ gives the kth moment.}
-#'  \item{\code{\link{Etronq_burr}}}{ gives the truncated mean.}
+#'  \item{\code{\link{Etrunc_burr}}}{ gives the truncated mean.}
 #'  \item{\code{\link{SL_burr}}}{ gives the stop-loss.}
 #'  \item{\code{\link{Elim_burr}}}{ gives the limited mean.}
 #'  \item{\code{\link{Mexcess_burr}}}{ gives the mean excess loss.}

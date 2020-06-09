@@ -19,7 +19,7 @@ Function :
  \item{\code{\link{MGF_IG}}}{ gives the moment generating function (MGF).}
  \item{\code{\link{E_IG}}}{ gives the expected value.}
  \item{\code{\link{V_IG}}}{ gives the variance.}
- \item{\code{\link{Etronq_IG}}}{ gives the truncated mean.}
+ \item{\code{\link{Etrunc_IG}}}{ gives the truncated mean.}
  \item{\code{\link{SL_IG}}}{ gives the stop-loss.}
  \item{\code{\link{Elim_IG}}}{ gives the limited mean.}
  \item{\code{\link{Mexcess_IG}}}{ gives the mean excess loss.}
@@ -46,7 +46,7 @@ E_IG(mean = 2, shape = 5)
 \seealso{
 Other Inverse Gaussian Distribution: 
 \code{\link{Elim_IG}()},
-\code{\link{Etronq_IG}()},
+\code{\link{Etrunc_IG}()},
 \code{\link{MGF_IG}()},
 \code{\link{Mexcess_IG}()},
 \code{\link{SL_IG}()},

@@ -19,7 +19,7 @@ Function :
  \item{\code{\link{E_lnorm}}}{ gives the expected value.}
  \item{\code{\link{V_lnorm}}}{ gives the variance.}
  \item{\code{\link{kthmoment_lnorm}}}{ gives the kth moment.}
- \item{\code{\link{Etronq_lnorm}}}{ gives the truncated mean.}
+ \item{\code{\link{Etrunc_lnorm}}}{ gives the truncated mean.}
  \item{\code{\link{SL_lnorm}}}{ gives the stop-loss.}
  \item{\code{\link{Elim_lnorm}}}{ gives the limited mean.}
  \item{\code{\link{Mexcess_lnorm}}}{ gives the mean excess loss.}
@@ -47,7 +47,7 @@ TVaR_lnorm(kap = 0.8, meanlog = 2, sdlog = 5)
 Other Lognormal distribution: 
 \code{\link{E_lnorm}()},
 \code{\link{Elim_lnorm}()},
-\code{\link{Etronq_lnorm}()},
+\code{\link{Etrunc_lnorm}()},
 \code{\link{Mexcess_lnorm}()},
 \code{\link{SL_lnorm}()},
 \code{\link{V_lnorm}()},

@@ -20,7 +20,7 @@ Function :
  \item{\code{\link{PGF_pois}}}{ gives the probability generating function (PGF).}
  \item{\code{\link{E_pois}}}{ gives the expected value.}
  \item{\code{\link{V_beta}}}{ gives the variance.}
- \item{\code{\link{Etronq_pois}}}{ gives the truncated mean.}
+ \item{\code{\link{Etrunc_pois}}}{ gives the truncated mean.}
  \item{\code{\link{TVaR_pois}}}{ gives the Tail Value-at-Risk.}
  }
  Invalid parameter values will return an error detailing which parameter is problematic.
@@ -43,7 +43,7 @@ TVaR_pois(kap = 0.8, lambda = 3, k0 = 2E2)
 \seealso{
 Other Poisson Distribution: 
 \code{\link{E_pois}()},
-\code{\link{Etronq_pois}()},
+\code{\link{Etrunc_pois}()},
 \code{\link{MGF_pois}()},
 \code{\link{PGF_pois}()},
 \code{\link{V_pois}()}
