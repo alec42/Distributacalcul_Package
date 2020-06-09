@@ -23,7 +23,7 @@ library(tidyverse)
 
 The goal of Distributacalcul is to simplify the life of students and scientists by offering premade functions for various functions of probability distributions. Functions calculate moments of the distribution (mean, variance, kth moment) as well as the expected value of functions of the distribution (truncated mean, stop-loss, mean excess loss, etc.). In addition, the package includes some risk measures (Value-at-Risk and Tail Value-at-Risk).
 
-This package depends primarily on both the stats package and the actuar package (for the Pareto distribution). 
+This package depends primarily the stats package. 
 
 ## Installation
 

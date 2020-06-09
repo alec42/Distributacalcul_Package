@@ -16,6 +16,8 @@
 #' @return
 #'  Function :
 #'  \itemize{
+#'  \item{\code{\link{d_pareto}}}{ gives the density function.}
+#'  \item{\code{\link{p_pareto}}}{ gives the cumulative density function.}
 #'  \item{\code{\link{E_pareto}}}{ gives the expected value.}
 #'  \item{\code{\link{V_pareto}}}{ gives the variance.}
 #'  \item{\code{\link{kthmoment_pareto}}}{ gives the kth moment.}

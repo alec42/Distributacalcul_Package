@@ -14,8 +14,7 @@ of functions of the distribution (truncated mean, stop-loss, mean excess
 loss, etc.). In addition, the package includes some risk measures
 (Value-at-Risk and Tail Value-at-Risk).
 
-This package depends primarily on both the stats package and the actuar
-package (for the Pareto distribution).
+This package depends primarily the stats package.
 
 ## Installation
 

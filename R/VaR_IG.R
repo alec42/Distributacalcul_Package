@@ -4,13 +4,13 @@
 #'  mean \eqn{\mu}{mu} and shape parameter \eqn{\beta}{beta}.
 #'
 #' @note Function VaR_IG is a wrapper for the qinvgauss function from the
-#' actuar package.
+#' statmod package.
 #'
 #' @templateVar kap TRUE
 #' @template IG-template
 #'
 #' @export
-#' @importFrom actuar qinvgauss
+#' @importFrom statmod qinvgauss
 #'
 #' @examples
 #'
@@ -19,5 +19,5 @@
 VaR_IG <- function(kap, mean, shape = dispersion * mean^2, dispersion = shape / mean^2) {
     stopifnot(kap >= 0, kap < 1, mean >= 0, shape >= 0)
 
-    actuar::qinvgauss(p = kap, mean = mean, dispersion = dispersion)
+    statmod::qinvgauss(p = kap, mean = mean, dispersion = dispersion)
 }

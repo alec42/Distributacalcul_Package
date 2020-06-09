@@ -8,7 +8,6 @@
 #' @template pareto-template
 #'
 #' @export
-#' @importFrom actuar ppareto
 #'
 #' @examples
 #'
@@ -22,11 +21,11 @@ Etronq_pareto <- function(d, shape, rate = 1 / scale, scale = 1 / rate, less.tha
     stopifnot(shape > 1, rate > 0, d >= 0)
 
     if (less.than.d) {
-        Etronq.pareto <- E_pareto(shape, rate) * actuar::ppareto(q = d, shape = shape - 1, scale = rate) -
-            d * actuar::ppareto(q = d, shape = shape, scale = rate, lower.tail = FALSE)
+        Etronq.pareto <- E_pareto(shape, rate) * p_pareto(q = d, shape - 1, rate) -
+            d * p_pareto(q = d, shape, rate, lower.tail = FALSE)
     } else {
-        Etronq.pareto <- E_pareto(shape, rate) * actuar::ppareto(q = d, shape = shape - 1, scale = rate, lower.tail = FALSE) +
-            d * actuar::ppareto(q = d, shape = shape, scale = rate, lower.tail = FALSE)
+        Etronq.pareto <- E_pareto(shape, rate) * p_pareto(q = d, shape - 1, rate, lower.tail = FALSE) +
+            d * p_pareto(q = d, shape, rate, lower.tail = FALSE)
     }
 
     return(Etronq.pareto)

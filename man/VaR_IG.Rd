@@ -42,7 +42,7 @@ The Pareto distribution with rate parameter \eqn{\lambda}{lam} as well as shape
 }
 \note{
 Function VaR_IG is a wrapper for the qinvgauss function from the
-actuar package.
+statmod package.
 }
 \examples{
 

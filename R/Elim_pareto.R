@@ -19,5 +19,5 @@
 Elim_pareto <- function(d, shape, rate = 1 / scale, scale = 1 / rate) {
     stopifnot(shape > 1, rate > 0, d >= 0)
 
-    E_pareto(shape, rate) * actuar::ppareto(q = d, shape = shape - 1, scale = rate)
+    E_pareto(shape, rate) * p_pareto(q = d, shape - 1, rate)
 }
