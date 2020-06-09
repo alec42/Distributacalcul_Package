@@ -38,7 +38,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.1</span>
       </span>
     </div>
 
@@ -87,45 +87,42 @@
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<!-- You can install the released version of Distributacalcul from [CRAN](https://CRAN.R-project.org) with: -->
-<!-- ``` r -->
-<!-- install.packages("Distributacalcul") -->
-<!-- ``` -->
-<!-- And the development version from [GitHub](https://github.com/) with: -->
-<p>You can install the most recent development version of Distributacalcul from <a href="https://github.com/">GitHub</a> with:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="co"># install.packages("devtools")</span></a>
-<a class="sourceLine" id="cb1-2" title="2">devtools<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/devtools/man/remote-reexports.html">install_github</a></span>(<span class="st">"alec42/Distributacalcul_Package"</span>)</a></code></pre></div>
+<p>You can install the released version of Distributacalcul from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"Distributacalcul"</span>)</a></code></pre></div>
+<p>And the development version from <a href="https://github.com/">GitHub</a> with:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="co"># install.packages("devtools")</span></a>
+<a class="sourceLine" id="cb2-2" title="2">devtools<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/devtools/man/remote-reexports.html">install_github</a></span>(<span class="st">"alec42/Distributacalcul_Package"</span>)</a></code></pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
-<p>This is a basic example which shows you how the typical use of the functions:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(Distributacalcul)</a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="co">##  Various moments:</span></a>
-<a class="sourceLine" id="cb2-3" title="3"><span class="kw"><a href="reference/E_beta.html">E_beta</a></span>(<span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>) <span class="co"># E[X]</span></a>
-<a class="sourceLine" id="cb2-4" title="4"><span class="co">#&gt; [1] 0.3333333</span></a>
-<a class="sourceLine" id="cb2-5" title="5"><span class="kw"><a href="reference/V_beta.html">V_beta</a></span>(<span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>) <span class="co"># V(X)</span></a>
-<a class="sourceLine" id="cb2-6" title="6"><span class="co">#&gt; [1] 0.03174603</span></a>
-<a class="sourceLine" id="cb2-7" title="7"><span class="kw"><a href="reference/kthmoment_beta.html">kthmoment_beta</a></span>(<span class="dt">k =</span> <span class="dv">3</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>) <span class="co"># E[X^k]</span></a>
-<a class="sourceLine" id="cb2-8" title="8"><span class="co">#&gt; [1] 0.07142857</span></a>
-<a class="sourceLine" id="cb2-9" title="9"></a>
-<a class="sourceLine" id="cb2-10" title="10"><span class="co">##  Expected value of functions:</span></a>
-<a class="sourceLine" id="cb2-11" title="11"><span class="kw"><a href="reference/Elim_beta.html">Elim_beta</a></span>(<span class="dt">d =</span> <span class="fl">0.3</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>) <span class="co"># E[min(X; d)]</span></a>
-<a class="sourceLine" id="cb2-12" title="12"><span class="co">#&gt; [1] 2.19811</span></a>
-<a class="sourceLine" id="cb2-13" title="13"><span class="kw"><a href="reference/Etronq_beta.html">Etronq_beta</a></span>(<span class="dt">d =</span> <span class="fl">.3</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>, <span class="dt">less.than.d =</span> <span class="ot">TRUE</span>) <span class="co"># E[X * 1_{X &lt;= d}]</span></a>
-<a class="sourceLine" id="cb2-14" title="14"><span class="co">#&gt; [1] 0.08523</span></a>
-<a class="sourceLine" id="cb2-15" title="15"><span class="kw"><a href="reference/Etronq_beta.html">Etronq_beta</a></span>(<span class="dt">d =</span> <span class="fl">.3</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>, <span class="dt">less.than.d =</span> <span class="ot">FALSE</span>) <span class="co"># E[X * 1_{X &gt; d}]</span></a>
-<a class="sourceLine" id="cb2-16" title="16"><span class="co">#&gt; [1] 0.2481033</span></a>
-<a class="sourceLine" id="cb2-17" title="17"><span class="kw"><a href="reference/Mexcess_beta.html">Mexcess_beta</a></span>(<span class="dt">d =</span> <span class="fl">.3</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>) <span class="co"># E[(X - d | X &gt; d)]</span></a>
-<a class="sourceLine" id="cb2-18" title="18"><span class="co">#&gt; [1] 0.169697</span></a>
-<a class="sourceLine" id="cb2-19" title="19"><span class="kw"><a href="reference/SL_beta.html">SL_beta</a></span>(<span class="dt">d =</span> <span class="fl">.3</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>) <span class="co"># E[max(X - d, 0)]</span></a>
-<a class="sourceLine" id="cb2-20" title="20"><span class="co">#&gt; [1] 0.4065693</span></a>
-<a class="sourceLine" id="cb2-21" title="21"></a>
-<a class="sourceLine" id="cb2-22" title="22"><span class="co">##  Risk measures:</span></a>
-<a class="sourceLine" id="cb2-23" title="23"><span class="kw"><a href="reference/TVaR_beta.html">TVaR_beta</a></span>(<span class="dt">kap =</span> <span class="fl">0.99</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>) <span class="co"># TVaR_{k}(X)</span></a>
-<a class="sourceLine" id="cb2-24" title="24"><span class="co">#&gt; [1] 0.8239414</span></a>
-<a class="sourceLine" id="cb2-25" title="25"><span class="kw"><a href="reference/VaR_beta.html">VaR_beta</a></span>(<span class="dt">kap =</span> <span class="fl">0.99</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>) <span class="co"># VaR_{k}(X) = F_X^(-1)(k)</span></a>
-<a class="sourceLine" id="cb2-26" title="26"><span class="co">#&gt; [1] 0.7779277</span></a></code></pre></div>
+<p>This is a basic example which shows you the typical use of the functions:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(Distributacalcul)</a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="co">##  Various moments:</span></a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="kw"><a href="reference/E_beta.html">E_beta</a></span>(<span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>) <span class="co"># E[X]</span></a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="co">#&gt; [1] 0.3333333</span></a>
+<a class="sourceLine" id="cb3-5" title="5"><span class="kw"><a href="reference/V_beta.html">V_beta</a></span>(<span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>) <span class="co"># V(X)</span></a>
+<a class="sourceLine" id="cb3-6" title="6"><span class="co">#&gt; [1] 0.03174603</span></a>
+<a class="sourceLine" id="cb3-7" title="7"><span class="kw"><a href="reference/kthmoment_beta.html">kthmoment_beta</a></span>(<span class="dt">k =</span> <span class="dv">3</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>) <span class="co"># E[X^k]</span></a>
+<a class="sourceLine" id="cb3-8" title="8"><span class="co">#&gt; [1] 0.07142857</span></a>
+<a class="sourceLine" id="cb3-9" title="9"></a>
+<a class="sourceLine" id="cb3-10" title="10"><span class="co">##  Expected value of functions:</span></a>
+<a class="sourceLine" id="cb3-11" title="11"><span class="kw"><a href="reference/Elim_beta.html">Elim_beta</a></span>(<span class="dt">d =</span> <span class="fl">0.3</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>) <span class="co"># E[min(X; d)]</span></a>
+<a class="sourceLine" id="cb3-12" title="12"><span class="co">#&gt; [1] 2.19811</span></a>
+<a class="sourceLine" id="cb3-13" title="13"><span class="kw"><a href="reference/Etronq_beta.html">Etronq_beta</a></span>(<span class="dt">d =</span> <span class="fl">.3</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>, <span class="dt">less.than.d =</span> <span class="ot">TRUE</span>) <span class="co"># E[X * 1_{X &lt;= d}]</span></a>
+<a class="sourceLine" id="cb3-14" title="14"><span class="co">#&gt; [1] 0.08523</span></a>
+<a class="sourceLine" id="cb3-15" title="15"><span class="kw"><a href="reference/Etronq_beta.html">Etronq_beta</a></span>(<span class="dt">d =</span> <span class="fl">.3</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>, <span class="dt">less.than.d =</span> <span class="ot">FALSE</span>) <span class="co"># E[X * 1_{X &gt; d}]</span></a>
+<a class="sourceLine" id="cb3-16" title="16"><span class="co">#&gt; [1] 0.2481033</span></a>
+<a class="sourceLine" id="cb3-17" title="17"><span class="kw"><a href="reference/Mexcess_beta.html">Mexcess_beta</a></span>(<span class="dt">d =</span> <span class="fl">.3</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>) <span class="co"># E[(X - d | X &gt; d)]</span></a>
+<a class="sourceLine" id="cb3-18" title="18"><span class="co">#&gt; [1] 0.169697</span></a>
+<a class="sourceLine" id="cb3-19" title="19"><span class="kw"><a href="reference/SL_beta.html">SL_beta</a></span>(<span class="dt">d =</span> <span class="fl">.3</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>) <span class="co"># E[max(X - d, 0)]</span></a>
+<a class="sourceLine" id="cb3-20" title="20"><span class="co">#&gt; [1] 0.4065693</span></a>
+<a class="sourceLine" id="cb3-21" title="21"></a>
+<a class="sourceLine" id="cb3-22" title="22"><span class="co">##  Risk measures:</span></a>
+<a class="sourceLine" id="cb3-23" title="23"><span class="kw"><a href="reference/TVaR_beta.html">TVaR_beta</a></span>(<span class="dt">kap =</span> <span class="fl">0.99</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>) <span class="co"># TVaR_{k}(X)</span></a>
+<a class="sourceLine" id="cb3-24" title="24"><span class="co">#&gt; [1] 0.8239414</span></a>
+<a class="sourceLine" id="cb3-25" title="25"><span class="kw"><a href="reference/VaR_beta.html">VaR_beta</a></span>(<span class="dt">kap =</span> <span class="fl">0.99</span>, <span class="dt">shape1 =</span> <span class="dv">2</span>, <span class="dt">shape2 =</span> <span class="dv">4</span>) <span class="co"># VaR_{k}(X) = F_X^(-1)(k)</span></a>
+<a class="sourceLine" id="cb3-26" title="26"><span class="co">#&gt; [1] 0.7779277</span></a></code></pre></div>
 </div>
 <div id="syntax" class="section level2">
 <h2 class="hasAnchor">
@@ -258,7 +255,7 @@
 </tr>
 <tr class="even">
 <td align="center"><strong>Moment Generating Function</strong></td>
-<td align="center"></td>
+<td align="center">X</td>
 <td align="center">X</td>
 <td align="center"></td>
 <td align="center"></td>
@@ -266,20 +263,20 @@
 <tr class="odd">
 <td align="center"><strong>Probability Density Function</strong></td>
 <td align="center">X</td>
-<td align="center">X</td>
+<td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr class="even">
 <td align="center"><strong>Cumulative Probability Density Function</strong></td>
 <td align="center">X</td>
-<td align="center">X</td>
+<td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 </tr>
 <tr class="odd">
 <td align="center"><strong>Value-at-Risk</strong></td>
-<td align="center"></td>
+<td align="center">X</td>
 <td align="center">X</td>
 <td align="center">X</td>
 <td align="center">X</td>
@@ -355,8 +352,8 @@
 <tr class="even">
 <td align="center"><strong>Moment Generating Function</strong></td>
 <td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
+<td align="center">X</td>
+<td align="center">X</td>
 <td align="center"></td>
 </tr>
 <tr class="odd">
@@ -393,76 +390,7 @@
 <table class="table">
 <thead><tr class="header">
 <th align="center"></th>
-<th align="center">Generalized F-distribution</th>
 <th align="center">Lognormal</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td align="center"><strong>Mean</strong></td>
-<td align="center"></td>
-<td align="center">X</td>
-</tr>
-<tr class="even">
-<td align="center"><strong>kth moment</strong></td>
-<td align="center"></td>
-<td align="center">X</td>
-</tr>
-<tr class="odd">
-<td align="center"><strong>Variance</strong></td>
-<td align="center"></td>
-<td align="center">X</td>
-</tr>
-<tr class="even">
-<td align="center"><strong>Truncated mean</strong></td>
-<td align="center"></td>
-<td align="center">X</td>
-</tr>
-<tr class="odd">
-<td align="center"><strong>Limited mean</strong></td>
-<td align="center"></td>
-<td align="center">X</td>
-</tr>
-<tr class="even">
-<td align="center"><strong>Stop-loss</strong></td>
-<td align="center"></td>
-<td align="center">X</td>
-</tr>
-<tr class="odd">
-<td align="center"><strong>Excess of mean</strong></td>
-<td align="center"></td>
-<td align="center">X</td>
-</tr>
-<tr class="even">
-<td align="center"><strong>Moment Generating Function</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="odd">
-<td align="center"><strong>Probability Density Function</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr class="even">
-<td align="center"><strong>Cumulative Probability Density Function</strong></td>
-<td align="center">X</td>
-<td align="center"></td>
-</tr>
-<tr class="odd">
-<td align="center"><strong>Value-at-Risk</strong></td>
-<td align="center">X</td>
-<td align="center">X</td>
-</tr>
-<tr class="even">
-<td align="center"><strong>Tail Value-at-Risk</strong></td>
-<td align="center"></td>
-<td align="center">X</td>
-</tr>
-</tbody>
-</table>
-<p>Table continues below</p>
-<table class="table">
-<thead><tr class="header">
-<th align="center"></th>
 <th align="center">Exponential</th>
 <th align="center">Uniform</th>
 <th align="center">Normal</th>
@@ -472,10 +400,12 @@
 <td align="center"><strong>Mean</strong></td>
 <td align="center">X</td>
 <td align="center">X</td>
-<td align="center"></td>
+<td align="center">X</td>
+<td align="center">X</td>
 </tr>
 <tr class="even">
 <td align="center"><strong>kth moment</strong></td>
+<td align="center">X</td>
 <td align="center">X</td>
 <td align="center">X</td>
 <td align="center"></td>
@@ -484,10 +414,12 @@
 <td align="center"><strong>Variance</strong></td>
 <td align="center">X</td>
 <td align="center">X</td>
-<td align="center"></td>
+<td align="center">X</td>
+<td align="center">X</td>
 </tr>
 <tr class="even">
 <td align="center"><strong>Truncated mean</strong></td>
+<td align="center">X</td>
 <td align="center">X</td>
 <td align="center">X</td>
 <td align="center">X</td>
@@ -497,9 +429,11 @@
 <td align="center">X</td>
 <td align="center">X</td>
 <td align="center">X</td>
+<td align="center">X</td>
 </tr>
 <tr class="even">
 <td align="center"><strong>Stop-loss</strong></td>
+<td align="center">X</td>
 <td align="center">X</td>
 <td align="center">X</td>
 <td align="center">X</td>
@@ -509,15 +443,18 @@
 <td align="center">X</td>
 <td align="center">X</td>
 <td align="center">X</td>
+<td align="center">X</td>
 </tr>
 <tr class="even">
 <td align="center"><strong>Moment Generating Function</strong></td>
 <td align="center"></td>
+<td align="center">X</td>
 <td align="center"></td>
-<td align="center"></td>
+<td align="center">X</td>
 </tr>
 <tr class="odd">
 <td align="center"><strong>Probability Density Function</strong></td>
+<td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
@@ -527,15 +464,18 @@
 <td align="center"></td>
 <td align="center"></td>
 <td align="center"></td>
+<td align="center"></td>
 </tr>
 <tr class="odd">
 <td align="center"><strong>Value-at-Risk</strong></td>
 <td align="center">X</td>
 <td align="center">X</td>
 <td align="center">X</td>
+<td align="center">X</td>
 </tr>
 <tr class="even">
 <td align="center"><strong>Tail Value-at-Risk</strong></td>
+<td align="center">X</td>
 <td align="center">X</td>
 <td align="center">X</td>
 <td align="center">X</td>
@@ -557,7 +497,7 @@
 <tr class="odd">
 <td align="center"><strong>Mean</strong></td>
 <td align="center">X</td>
-<td align="center"></td>
+<td align="center">X</td>
 <td align="center">X</td>
 </tr>
 <tr class="even">
@@ -569,7 +509,7 @@
 <tr class="odd">
 <td align="center"><strong>Variance</strong></td>
 <td align="center">X</td>
-<td align="center"></td>
+<td align="center">X</td>
 <td align="center">X</td>
 </tr>
 <tr class="even">
@@ -599,13 +539,13 @@
 <tr class="even">
 <td align="center"><strong>Moment Generating Function</strong></td>
 <td align="center">X</td>
-<td align="center"></td>
+<td align="center">X</td>
 <td align="center">X</td>
 </tr>
 <tr class="odd">
 <td align="center"><strong>Probability Generating Function</strong></td>
 <td align="center">X</td>
-<td align="center"></td>
+<td align="center">X</td>
 <td align="center">X</td>
 </tr>
 <tr class="even">
@@ -624,7 +564,7 @@
 <td align="center"><strong>Value-at-Risk</strong></td>
 <td align="center">X</td>
 <td align="center"></td>
-<td align="center">X</td>
+<td align="center"></td>
 </tr>
 <tr class="odd">
 <td align="center"><strong>Tail Value-at-Risk</strong></td>
@@ -688,13 +628,13 @@
 <tr class="even">
 <td align="center"><strong>Moment Generating Function</strong></td>
 <td align="center"></td>
-<td align="center"></td>
+<td align="center">X</td>
 <td align="center"></td>
 </tr>
 <tr class="odd">
 <td align="center"><strong>Probability Generating Function</strong></td>
 <td align="center"></td>
-<td align="center"></td>
+<td align="center">X</td>
 <td align="center"></td>
 </tr>
 <tr class="even">

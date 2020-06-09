@@ -15,23 +15,18 @@ loss, etc.). In addition, the package includes some risk measures
 (Value-at-Risk and Tail Value-at-Risk).
 
 This package depends primarily on both the stats package and the actuar
-package (for the Pareto
-distribution).
+package (for the Pareto distribution).
 
 ## Installation
 
-<!-- You can install the released version of Distributacalcul from [CRAN](https://CRAN.R-project.org) with: -->
+You can install the released version of Distributacalcul from
+[CRAN](https://CRAN.R-project.org) with:
 
-<!-- ``` r -->
+``` r
+install.packages("Distributacalcul")
+```
 
-<!-- install.packages("Distributacalcul") -->
-
-<!-- ``` -->
-
-<!-- And the development version from [GitHub](https://github.com/) with: -->
-
-You can install the most recent development version of Distributacalcul
-from [GitHub](https://github.com/) with:
+And the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -40,7 +35,7 @@ devtools::install_github("alec42/Distributacalcul_Package")
 
 ## Example
 
-This is a basic example which shows you how the typical use of the
+This is a basic example which shows you the typical use of the
 functions:
 
 ``` r
@@ -103,10 +98,10 @@ VaR_beta(kap = 0.99, shape1 = 2, shape2 = 4) # VaR_{k}(X) = F_X^(-1)(k)
 |              **Limited mean**               |   X    |        X         |    X    |  X   |
 |                **Stop-loss**                |   X    |        X         |    X    |  X   |
 |             **Excess of mean**              |   X    |        X         |    X    |  X   |
-|       **Moment Generating Function**        |        |        X         |         |      |
-|      **Probability Density Function**       |   X    |        X         |         |      |
-| **Cumulative Probability Density Function** |   X    |        X         |         |      |
-|              **Value-at-Risk**              |        |        X         |    X    |  X   |
+|       **Moment Generating Function**        |   X    |        X         |         |      |
+|      **Probability Density Function**       |   X    |                  |         |      |
+| **Cumulative Probability Density Function** |   X    |                  |         |      |
+|              **Value-at-Risk**              |   X    |        X         |    X    |  X   |
 |           **Tail Value-at-Risk**            |   X    |        X         |    X    |  X   |
 
 Table continues
@@ -121,7 +116,7 @@ below
 |              **Limited mean**               |      X       |  X   |   X   |   X    |
 |                **Stop-loss**                |      X       |  X   |   X   |   X    |
 |             **Excess of mean**              |      X       |  X   |   X   |   X    |
-|       **Moment Generating Function**        |              |      |       |        |
+|       **Moment Generating Function**        |              |  X   |   X   |        |
 |      **Probability Density Function**       |              |      |       |        |
 | **Cumulative Probability Density Function** |              |      |       |        |
 |              **Value-at-Risk**              |      X       |  X   |   X   |   X    |
@@ -130,55 +125,37 @@ below
 Table continues
 below
 
-|                                             | Generalized F-distribution | Lognormal |
-| :-----------------------------------------: | :------------------------: | :-------: |
-|                  **Mean**                   |                            |     X     |
-|               **kth moment**                |                            |     X     |
-|                **Variance**                 |                            |     X     |
-|             **Truncated mean**              |                            |     X     |
-|              **Limited mean**               |                            |     X     |
-|                **Stop-loss**                |                            |     X     |
-|             **Excess of mean**              |                            |     X     |
-|       **Moment Generating Function**        |                            |           |
-|      **Probability Density Function**       |                            |           |
-| **Cumulative Probability Density Function** |             X              |           |
-|              **Value-at-Risk**              |             X              |     X     |
-|           **Tail Value-at-Risk**            |                            |     X     |
-
-Table continues
-below
-
-|                                             | Exponential | Uniform | Normal |
-| :-----------------------------------------: | :---------: | :-----: | :----: |
-|                  **Mean**                   |      X      |    X    |        |
-|               **kth moment**                |      X      |    X    |        |
-|                **Variance**                 |      X      |    X    |        |
-|             **Truncated mean**              |      X      |    X    |   X    |
-|              **Limited mean**               |      X      |    X    |   X    |
-|                **Stop-loss**                |      X      |    X    |   X    |
-|             **Excess of mean**              |      X      |    X    |   X    |
-|       **Moment Generating Function**        |             |         |        |
-|      **Probability Density Function**       |             |         |        |
-| **Cumulative Probability Density Function** |             |         |        |
-|              **Value-at-Risk**              |      X      |    X    |   X    |
-|           **Tail Value-at-Risk**            |      X      |    X    |   X    |
+|                                             | Lognormal | Exponential | Uniform | Normal |
+| :-----------------------------------------: | :-------: | :---------: | :-----: | :----: |
+|                  **Mean**                   |     X     |      X      |    X    |   X    |
+|               **kth moment**                |     X     |      X      |    X    |        |
+|                **Variance**                 |     X     |      X      |    X    |   X    |
+|             **Truncated mean**              |     X     |      X      |    X    |   X    |
+|              **Limited mean**               |     X     |      X      |    X    |   X    |
+|                **Stop-loss**                |     X     |      X      |    X    |   X    |
+|             **Excess of mean**              |     X     |      X      |    X    |   X    |
+|       **Moment Generating Function**        |           |      X      |         |   X    |
+|      **Probability Density Function**       |           |             |         |        |
+| **Cumulative Probability Density Function** |           |             |         |        |
+|              **Value-at-Risk**              |     X     |      X      |    X    |   X    |
+|           **Tail Value-at-Risk**            |     X     |      X      |    X    |   X    |
 
 ## Discrete distributions
 
 |                                             | Binomial | Negative Binomial | Poisson |
 | :-----------------------------------------: | :------: | :---------------: | :-----: |
-|                  **Mean**                   |    X     |                   |    X    |
+|                  **Mean**                   |    X     |         X         |    X    |
 |               **kth moment**                |          |                   |         |
-|                **Variance**                 |    X     |                   |    X    |
+|                **Variance**                 |    X     |         X         |    X    |
 |             **Truncated mean**              |    X     |         X         |    X    |
 |              **Limited mean**               |          |                   |         |
 |                **Stop-loss**                |          |                   |         |
 |             **Excess of mean**              |          |                   |         |
-|       **Moment Generating Function**        |    X     |                   |    X    |
-|     **Probability Generating Function**     |    X     |                   |    X    |
+|       **Moment Generating Function**        |    X     |         X         |    X    |
+|     **Probability Generating Function**     |    X     |         X         |    X    |
 |      **Probability Density Function**       |          |                   |         |
 | **Cumulative Probability Density Function** |          |                   |         |
-|              **Value-at-Risk**              |    X     |                   |    X    |
+|              **Value-at-Risk**              |    X     |                   |         |
 |           **Tail Value-at-Risk**            |    X     |         X         |    X    |
 
 Table continues
@@ -193,8 +170,8 @@ below
 |              **Limited mean**               |         |             |                |
 |                **Stop-loss**                |         |             |                |
 |             **Excess of mean**              |         |             |                |
-|       **Moment Generating Function**        |         |             |                |
-|     **Probability Generating Function**     |         |             |                |
+|       **Moment Generating Function**        |         |      X      |                |
+|     **Probability Generating Function**     |         |      X      |                |
 |      **Probability Density Function**       |    X    |             |                |
 | **Cumulative Probability Density Function** |    X    |             |                |
 |              **Value-at-Risk**              |         |             |                |

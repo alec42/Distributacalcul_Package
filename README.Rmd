@@ -27,14 +27,13 @@ This package depends primarily on both the stats package and the actuar package 
 
 ## Installation
 
-<!-- You can install the released version of Distributacalcul from [CRAN](https://CRAN.R-project.org) with: -->
+You can install the released version of Distributacalcul from [CRAN](https://CRAN.R-project.org) with:
 
-<!-- ``` r -->
-<!-- install.packages("Distributacalcul") -->
-<!-- ``` -->
+``` r
+install.packages("Distributacalcul")
+```
 
-<!-- And the development version from [GitHub](https://github.com/) with: -->
-You can install the most recent development version of Distributacalcul from [GitHub](https://github.com/) with:
+And the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -43,7 +42,7 @@ devtools::install_github("alec42/Distributacalcul_Package")
 
 ## Example
 
-This is a basic example which shows you how the typical use of the functions:
+This is a basic example which shows you the typical use of the functions:
 
 ```{r beta-example}
 library(Distributacalcul)
@@ -91,14 +90,14 @@ VaR_beta(kap = 0.99, shape1 = 2, shape2 = 4) # VaR_{k}(X) = F_X^(-1)(k)
 cont.distr.support <- cbind(
     Erlang = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
                   `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
-                  `Moment Generating Function` = F, 
+                  `Moment Generating Function` = T, 
                   `Probability Density Function` = T, `Cumulative Probability Density Function` = T, 
-                  `Value-at-Risk` = F, `Tail Value-at-Risk` = T
+                  `Value-at-Risk` = T, `Tail Value-at-Risk` = T
     ),
     `Inverse Gaussian` = list(`Mean` = T, `kth moment` = F, `Variance` = T, 
                               `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
                               `Moment Generating Function` = T, 
-                              `Probability Density Function` = T, `Cumulative Probability Density Function` = T, 
+                              `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
                               `Value-at-Risk` = T, `Tail Value-at-Risk` = T
     ),
     `Weibull` = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
@@ -121,13 +120,13 @@ cont.distr.support <- cbind(
     ),
     `Beta` = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
                   `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
-                  `Moment Generating Function` = F, 
+                  `Moment Generating Function` = T, 
                   `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
                   `Value-at-Risk` = T, `Tail Value-at-Risk` = T
     ),
     `Gamma` = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
                    `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
-                   `Moment Generating Function` = F, 
+                   `Moment Generating Function` = T, 
                    `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
                    `Value-at-Risk` = T, `Tail Value-at-Risk` = T
     ),
@@ -137,12 +136,12 @@ cont.distr.support <- cbind(
                     `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
                     `Value-at-Risk` = T, `Tail Value-at-Risk` = T
     ),
-    `Generalized F-distribution` = list(`Mean` = F, `kth moment` = F, `Variance` = F, 
-                                        `Truncated mean` = F, `Limited mean` = F,  `Stop-loss` = F, `Excess of mean` = F, 
-                                        `Moment Generating Function` = F, 
-                                        `Probability Density Function` = F, `Cumulative Probability Density Function` = T, 
-                                        `Value-at-Risk` = T, `Tail Value-at-Risk` = F
-    ),
+    # `Generalized F-distribution` = list(`Mean` = F, `kth moment` = F, `Variance` = F, 
+    #                                     `Truncated mean` = F, `Limited mean` = F,  `Stop-loss` = F, `Excess of mean` = F, 
+    #                                     `Moment Generating Function` = F, 
+    #                                     `Probability Density Function` = F, `Cumulative Probability Density Function` = T, 
+    #                                     `Value-at-Risk` = T, `Tail Value-at-Risk` = F
+    # ),
     `Lognormal` = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
                   `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
                   `Moment Generating Function` = F, 
@@ -151,7 +150,7 @@ cont.distr.support <- cbind(
     ),
     `Exponential` = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
                   `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
-                  `Moment Generating Function` = F, 
+                  `Moment Generating Function` = T, 
                   `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
                   `Value-at-Risk` = T, `Tail Value-at-Risk` = T
     ),
@@ -161,9 +160,9 @@ cont.distr.support <- cbind(
                      `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
                      `Value-at-Risk` = T, `Tail Value-at-Risk` = T
     ),
-    `Normal` = list(`Mean` = F, `kth moment` = F, `Variance` = F, 
+    `Normal` = list(`Mean` = T, `kth moment` = F, `Variance` = T, 
                      `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
-                     `Moment Generating Function` = F, 
+                     `Moment Generating Function` = T, 
                      `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
                      `Value-at-Risk` = T, `Tail Value-at-Risk` = T
     )
@@ -190,9 +189,9 @@ discr.distr.support <- cbind(
                       `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
                       `Value-at-Risk` = T, `Tail Value-at-Risk` = T
     ),
-    `Negative Binomial` = list(`Mean` = F, `kth moment` = F, `Variance` = F, 
+    `Negative Binomial` = list(`Mean` = T, `kth moment` = F, `Variance` = T, 
                                `Truncated mean` = T, `Limited mean` = F,  `Stop-loss` = F, `Excess of mean` = F, 
-                               `Moment Generating Function` = F, `Probability Generating Function` = F, 
+                               `Moment Generating Function` = T, `Probability Generating Function` = T, 
                                `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
                                `Value-at-Risk` = F, `Tail Value-at-Risk` = T
     ),
@@ -200,7 +199,7 @@ discr.distr.support <- cbind(
                      `Truncated mean` = T, `Limited mean` = F,  `Stop-loss` = F, `Excess of mean` = F, 
                      `Moment Generating Function` = T, `Probability Generating Function` = T, 
                      `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
-                     `Value-at-Risk` = T, `Tail Value-at-Risk` = T
+                     `Value-at-Risk` = F, `Tail Value-at-Risk` = T
     ),
     `Uniform` = list(`Mean` = T, `kth moment` = F, `Variance` = T, 
                      `Truncated mean` = F, `Limited mean` = F,  `Stop-loss` = F, `Excess of mean` = F, 
@@ -210,7 +209,7 @@ discr.distr.support <- cbind(
     ),
     `Logarithmic` = list(`Mean` = T, `kth moment` = F, `Variance` = T, 
                          `Truncated mean` = F, `Limited mean` = F,  `Stop-loss` = F, `Excess of mean` = F, 
-                         `Moment Generating Function` = F, `Probability Generating Function` = F, 
+                         `Moment Generating Function` = T, `Probability Generating Function` = T, 
                          `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
                          `Value-at-Risk` = F, `Tail Value-at-Risk` = F
     ),
