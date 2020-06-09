@@ -10,3 +10,4 @@ inst/doc
 .Rbuildignore
 cran-comments.md
 docs/package-build-site.R
+package-build-site.R
