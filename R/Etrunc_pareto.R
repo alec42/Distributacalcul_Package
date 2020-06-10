@@ -21,11 +21,11 @@ Etrunc_pareto <- function(d, shape, rate = 1 / scale, scale = 1 / rate, less.tha
     stopifnot(shape > 1, rate > 0, d >= 0)
 
     if (less.than.d) {
-        Etrunc.pareto <- E_pareto(shape, rate) * p_pareto(q = d, shape - 1, rate) -
-            d * p_pareto(q = d, shape, rate, lower.tail = FALSE)
+        Etrunc.pareto <- E_pareto(shape, rate) * ppareto(q = d, shape - 1, rate) -
+            d * ppareto(q = d, shape, rate, lower.tail = FALSE)
     } else {
-        Etrunc.pareto <- E_pareto(shape, rate) * p_pareto(q = d, shape - 1, rate, lower.tail = FALSE) +
-            d * p_pareto(q = d, shape, rate, lower.tail = FALSE)
+        Etrunc.pareto <- E_pareto(shape, rate) * ppareto(q = d, shape - 1, rate, lower.tail = FALSE) +
+            d * ppareto(q = d, shape, rate, lower.tail = FALSE)
     }
 
     return(Etrunc.pareto)

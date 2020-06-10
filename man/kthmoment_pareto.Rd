@@ -18,8 +18,8 @@ kthmoment_pareto(k, shape, rate = 1/scale, scale = 1/rate)
 \value{
 Function :
  \itemize{
- \item{\code{\link{d_pareto}}}{ gives the density function.}
- \item{\code{\link{p_pareto}}}{ gives the cumulative density function.}
+ \item{\code{\link{dpareto}}}{ gives the density function.}
+ \item{\code{\link{ppareto}}}{ gives the cumulative density function.}
  \item{\code{\link{E_pareto}}}{ gives the expected value.}
  \item{\code{\link{V_pareto}}}{ gives the variance.}
  \item{\code{\link{kthmoment_pareto}}}{ gives the kth moment.}
@@ -61,7 +61,7 @@ Other Pareto Distribution:
 \code{\link{TVaR_pareto}()},
 \code{\link{V_pareto}()},
 \code{\link{VaR_pareto}()},
-\code{\link{d_pareto}()},
-\code{\link{p_pareto}()}
+\code{\link{dpareto}()},
+\code{\link{ppareto}()}
 }
 \concept{Pareto Distribution}

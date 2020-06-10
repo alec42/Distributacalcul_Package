@@ -19,5 +19,5 @@
 SL_pareto <- function(d, shape, rate = 1 / scale, scale = 1 / rate) {
     stopifnot(shape > 1, rate > 0, d >= 0)
 
-    E_pareto(shape, rate) * p_pareto(q = d, shape - 1, rate, lower.tail = FALSE)
+    E_pareto(shape, rate) * ppareto(q = d, shape - 1, rate, lower.tail = FALSE)
 }

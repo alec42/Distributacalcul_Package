@@ -1,6 +1,15 @@
 #   Distributacalcul 0.2.3
+## New features
++   Added loglogistic PDF and CDF.
++   Added LaTeX formulas for all functions (VaR, TVaR, moments, PDF and CDF) in the Shiny application.
+
+##  Bug  Fixes
++   By adding the PDF and CDF, fixed an error in the quantile function plot in the Shiny application.
++   Fixed name of file for lower.tail variable from 'lowerthan-template' to 'lower.tail-template'.
+
 ##  Minor changes
 +   Changed the spelling of the truncated mean functions from french spelling 'Etronq' to english spelling 'Etrunc'.
++   Changed function name of pareto distribution functions from 'p_' and 'd_' to 'p' and 'd' to be consistent with other packages.
 
 #   Distributacalcul 0.2.2
 ## New features

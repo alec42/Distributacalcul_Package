@@ -94,6 +94,147 @@ lawParametersBox <- function(input, output, session, law) {
             ))
         )
     })
+    output$Etrunc_tip <- tippy::renderTippy({
+        tippy::tippy_this(
+            ns("Etrunc"),
+            tooltip = paste0("$\\text{E}(X \\times 1_{\\{X \\leq d\\}}) = $", dplyr::case_when(
+                law == "norm" ~ "$\\mu \\Phi \\left(\\frac{d - \\mu}{\\sigma}\\right) - \\sigma \\frac{e^{\\frac{-(d - \\mu)^2}{2 \\sigma^2}}}{\\sqrt{2\\pi}}$",
+                law == "lnorm" ~ "$\\exp \\left(\\mu + \\sigma^{2} / 2 \\right) \\Phi \\left(\\frac{\\ln d - \\mu - \\sigma^{2}}{\\sigma}\\right)$",
+                law == "gamma" ~ "$\\frac{\\alpha}{\\beta} H\\left(d; \\alpha + 1, \\beta \\right)$",
+                law == "exp" ~ "$\\frac{1}{\\beta} \\left(1 - \\mathrm{e}^{-\\beta d}\\right) - d\\mathrm{e}^{-\\beta d}$",
+                law == "llogis" ~ "$\\lambda \\Gamma\\left(1 + \\frac{1}{\\tau}\\right) \\Gamma\\left(1 - \\frac{1}{\\tau}\\right) B\\left(\\frac{d^{\\tau}}{\\lambda^{\\tau} + d^{\\tau}}; 1 + \\frac{1}{\\tau}, 1 - \\frac{1}{\\tau}\\right)$",
+                law == "weibull" ~ "$\\frac{1}{\\beta} \\Gamma(1 + \\frac{1}{\\tau}) H(d^{\\tau}; 1 + \\frac{1}{\\tau}, \\beta^{\\tau})$",
+                law == "beta" ~ "$\\frac{\\alpha}{\\alpha + \\beta} B(d; \\alpha + 1, \\beta)$",
+                law == "unif" ~ "$\\frac{d^{2} - a^{2}}{2(b - a)}$",
+                law == "pareto" ~ "$\\frac{\\lambda}{\\alpha - 1} \\left(1 - \\frac{\\lambda^{\\alpha - 1}}{\\left(\\lambda + d\\right)^{\\alpha - 1}}\\right) - d\\left(\\frac{\\lambda}{\\lambda + d}\\right)^{\\alpha}$",
+                TRUE ~ "\\text{E}(X \\times 1_{\\{X \\leq d\\}})"
+            ))
+        )
+    })
+    output$SL_tip <- tippy::renderTippy({
+        tippy::tippy_this(
+            ns("SL"),
+            tooltip = paste0("$\\pi_{X}(d) = $", dplyr::case_when(
+                law == "norm" ~ "$(\\mu + d) \\bar\\Phi\\left(\\frac{d - \\mu}{\\sigma}\\right) - \\sigma \\frac{e^{\\frac{-(d - \\mu)^2}{2 \\sigma^2}}}{\\sqrt{2\\pi}}$",
+                law == "lnorm" ~ "$\\mathrm{e}^{\\mu + \\sigma^{2} / 2} \\left(1 - \\Phi\\left(\\frac{\\ln(d) - \\mu - \\sigma^{2}}{\\sigma}\\right)\\right) - d \\left[1 - \\Phi\\left(\\frac{\\ln d - \\mu}{\\sigma}\\right)\\right]$",
+                law == "gamma" ~ "$\\frac{\\alpha}{\\beta} \\overline{H}\\left(d; \\alpha + 1, \\beta\\right) - d\\overline{H}\\left(d; \\alpha, \\beta\\right)$",
+                law == "exp" ~ "$ \\frac{1}{\\beta} \\mathrm{e}^{-\\beta d}$",
+                law == "llogis" ~ "$\\lambda \\Gamma\\left(1 + \\frac{1}{\\tau}\\right) \\Gamma\\left(1 - \\frac{1}{\\tau}\\right) \\overline{B}\\left(\\frac{d^{\\tau}}{\\lambda^{\\tau} + d^{\\tau}}; 1 + \\frac{1}{\\tau}, 1 - \\frac{1}{\\tau}\\right) - \\frac{d\\lambda^{\\tau}}{\\lambda^{\\tau} + d^{\\tau}}$",
+                law == "weibull" ~ "$\\frac{1}{\\beta} \\Gamma(1 + \\frac{1}{\\tau}) \\overline{H}(d^{\\tau}; 1 + \\frac{1}{\\tau}, \\beta^{\\tau}) - d\\mathrm{e}^{-(\\beta d)^{\\tau}}$",
+                law == "beta" ~ "$\\frac{\\alpha}{\\alpha + \\beta} (1 - B(d; \\alpha + 1, \\beta)) - d(1 - B(d; \\alpha, \\beta))$",
+                law == "unif" ~ "$\\frac{(b - d)^{2}}{2(b - a)}$",
+                law == "pareto" ~ "$\\frac{\\lambda}{\\alpha - 1} \\left(\\frac{\\lambda}{\\lambda + d}\\right)^{\\alpha - 1}$",
+                TRUE ~ "\\pi_{X}(d)"
+            ))
+        )
+    })
+    output$Elim_tip <- tippy::renderTippy({
+        tippy::tippy_this(
+            ns("Elim"),
+            tooltip = paste0("$\\text{E}[\\min(X; d)] = $", dplyr::case_when(
+                law == "norm" ~ "$\\mu \\Phi\\left(\\frac{d - \\mu}{\\sigma}\\right) - \\sigma \\frac{e^{\\frac{-(d - \\mu)^2}{2 \\sigma^2}}}{\\sqrt{2\\pi}} + d \\bar\\Phi\\left(\\frac{d - \\mu}{\\sigma}\\right)$",
+                law == "lnorm" ~ "$\\mathrm{e}^{\\mu + \\sigma^{2} /  2} \\Phi\\left(\\frac{\\ln d - \\mu - \\sigma^{2}}{\\sigma}\\right) + d\\left[1 - \\Phi\\left(\\frac{\\ln d - \\mu}{\\sigma}\\right)\\right]$",
+                law == "gamma" ~ "$\\frac{\\alpha}{\\beta} H\\left(d; \\alpha + 1, \\beta\\right) + d\\overline{H}\\left(d; \\alpha, \\beta\\right)$",
+                law == "exp" ~ "$\\frac{1}{\\beta}\\left(1 - \\mathrm{e}^{-\\beta d}\\right)$",
+                law == "llogis" ~ "$\\lambda \\Gamma\\left(1 + \\frac{1}{\\tau}\\right) \\Gamma\\left(1 - \\frac{1}{\\tau}\\right) B\\left(\\frac{d^{\\tau}}{\\lambda^{\\tau} + d^{\\tau}}; 1 + \\frac{1}{\\tau}, 1 - \\frac{1}{\\tau}\\right) + \\frac{d\\lambda^{\\tau}}{\\lambda^{\\tau} + d^{\\tau}}$",
+                law == "weibull" ~ "$\\frac{1}{\\beta} \\Gamma(1 + \\frac{1}{\\tau}) H(d^{\\tau}; 1 + \\frac{1}{\\tau}, \\beta^{\\tau}) + d\\mathrm{e}^{-(\\beta d)^{\\tau}}$",
+                law == "beta" ~ "$\\frac{\\alpha}{\\alpha + 1}\\frac{1 - d^{\\alpha + 1}}{1 - d^{\\alpha}} -  d$",
+                law == "unif" ~ "$\\frac{d^{2} - a^{2}}{2(b - a)} + d\\frac{b - d}{b - a}$",
+                law == "pareto" ~ "$\\frac{\\lambda}{\\alpha - 1} \\left[1 - (\\frac{\\lambda}{\\lambda + d})^{\\alpha - 1}\\right]$",
+                TRUE ~ "\\text{E}[\\min(X; d)]"
+            ))
+        )
+    })
+    output$Mexcess_tip <- tippy::renderTippy({
+        tippy::tippy_this(
+            ns("Mexcess"),
+            tooltip = paste0("$e_{X}(d) = $", dplyr::case_when(
+                law == "norm" ~ "$(\\mu + d) - \\frac{1}{\\bar\\Phi\\left(\\frac{d - \\mu}{\\sigma}\\right)} \\sigma \\frac{e^{\\frac{-(d - \\mu)^2}{2 \\sigma^2}}}{\\sqrt{2\\pi}}$",
+                law == "lnorm" ~ "$\\frac{1}{\\left[1 - \\Phi\\left(\\frac{\\ln(d) - \\mu}{\\sigma}\\right)\\right]} \\mathrm{e}^{\\mu + \\sigma^{2} / 2} \\left(1 - \\Phi\\left(\\frac{\\ln d - \\mu -\\sigma^{2}}{\\sigma}\\right)\\right) - d$",
+                law == "gamma" ~ "$\\frac{\\alpha}{\\beta} \\frac{\\overline{H}\\left(d; \\alpha + 1, \\beta\\right)}{\\overline{H}\\left(d; \\alpha, \\beta\\right)} - d$",
+                law == "exp" ~ "$\\frac{1}{\\beta}$",
+                law == "llogis" ~ "$\\frac{\\lambda^{\\tau} + d^{\\tau}}{\\lambda^{\\tau - 1}} \\Gamma\\left(1 + \\frac{1}{\\tau}\\right) \\Gamma\\left(1 - \\frac{1}{\\tau}\\right) \\overline{B}\\left(\\frac{d^{\\tau}}{\\lambda^{\\tau} + d^{\\tau}}; 1 + \\frac{1}{\\tau}, 1 - \\frac{1}{\\tau}\\right) - d$",
+                law == "weibull" ~ "$\\frac{e^{(\\beta d)^{\\tau}}}{\\beta} \\Gamma(1 + \\frac{1}{\\tau}) \\overline{H}(d^{\\tau}; 1 + \\frac{1}{\\tau}, \\beta^{\\tau}) - d$",
+                law == "beta" ~ "$\\frac{\\alpha}{\\alpha + 1}\\frac{1 - d^{\\alpha + 1}}{1 - d^{\\alpha}} - d$",
+                law == "unif" ~ "$\\frac{b - d}{2}$",
+                law == "pareto" ~ "$\\frac{\\lambda + d}{\\alpha - 1}$",
+                TRUE ~ "e_{X}(d)"
+            ))
+        )
+    })
+    output$VaR_tip <- tippy::renderTippy({
+        tippy::tippy_this(
+            ns("VaR"),
+            tooltip = paste0("$VaR_{\\kappa}(X) = $", dplyr::case_when(
+                law == "norm" ~ "$\\mu + \\sigma \\Phi^{-1}(\\kappa)$",
+                law == "lnorm" ~ "$\\mathrm{e}^{\\mu + \\sigma VaR_{\\kappa}\\left(Z\\right)}$",
+                # law == "gamma" ~ "$$",
+                law == "exp" ~ "$-\\frac{1}{\\beta} \\ln\\left(1 - \\kappa\\right)$",
+                law == "llogis" ~ "$\\lambda \\left(\\kappa^{-1} - 1\\right)^{-1 / \\tau}$",
+                law == "weibull" ~ "$\\frac{1}{\\beta}(-\\ln\\left(1 - \\kappa\\right))^{\\frac{1}{\\tau}}$",
+                # law == "beta" ~ "$$",
+                law == "unif" ~ "$a + \\left(b - a\\right) \\kappa$",
+                law == "pareto" ~ "$\\lambda \\left(\\left(1 - \\kappa\\right)^{-\\frac{1}{\\alpha}} - 1\\right)$",
+                TRUE ~ "VaR_{\\kappa}(X)"
+            ))
+        )
+    })
+    output$TVaR_tip <- tippy::renderTippy({
+        tippy::tippy_this(
+            ns("TVaR"),
+            tooltip = paste0("$TVaR_{\\kappa}(X) = $", dplyr::case_when(
+                law == "norm" ~ "$\\mu + \\sigma TVaR_{\\kappa}(Z)$",
+                law == "lnorm" ~ "$\\frac{1}{1 - \\kappa}\\mathrm{e}^{\\mu + \\sigma^{2} / 2} (1 - \\Phi(VaR_{\\kappa}(Z) - \\sigma))$",
+                law == "gamma" ~ "$\\frac{1}{1 - \\kappa}\\frac{\\alpha}{\\beta} \\overline{H}\\left(VaR_{\\kappa}\\left(X\\right); \\alpha + 1, \\beta\\right)$",
+                law == "exp" ~ "$VaR_{\\kappa}\\left(X\\right) + \\text{E}\\left[X\\right]$",
+                law == "llogis" ~ "$\\frac{\\lambda}{1 - \\kappa}\\Gamma \\left(1 + \\frac{1}{\\tau }\\right) \\Gamma\\left(1 - \\frac{1}{\\tau}\\right) \\overline{B}\\left(\\kappa; 1 + \\frac{1}{\\tau}, 1 - \\frac{1}{\\tau}\\right)$",
+                law == "weibull" ~ "$\\frac{1}{\\beta (1 - \\kappa)}\\Gamma\\left(1 + \\frac{1}{\\tau}\\right) \\bar{\\text{H}}\\left(-\\ln(1 - \\kappa); 1 + \\frac{1}{\\tau}, 1\\right)$",
+                law == "beta" ~ "$\\frac{1}{(1 - \\kappa)} \\frac{\\alpha}{\\alpha + \\beta} (1 - B(VaR_{\\kappa}(X); \\alpha + 1, \\beta))$",
+                law == "unif" ~ "$a + \\frac{\\left(b - a\\right)}{2} \\left(1 + \\kappa\\right) $",
+                law == "pareto" ~ "$\\lambda \\left(\\frac{\\alpha}{\\alpha - 1}\\left(1 - \\kappa\\right)^{-\\frac{1}{\\alpha}} - 1\\right)$",
+                TRUE ~ "TVaR_{\\kappa}(X)"
+            ))
+        )
+    })
+    output$density_distr_tip <- tippy::renderTippy({
+        tippy::tippy_this(
+            ns("density_distr"),
+            tooltip = paste0("$f(x) = $", dplyr::case_when(
+                law == "norm" ~ "$\\frac{{e}^{-\\frac{(x - \\mu)^{2}}{2 \\sigma^{2}}}}{\\sqrt{2\\pi}\\sigma}$",
+                law == "lnorm" ~ "$\\frac{1}{x \\sqrt{2\\pi} \\sigma} \\mathrm{e}^{-\\frac{(\\ln(x) - \\mu )^{2}}{2 \\sigma^{2}}}$",
+                law == "gamma" ~ "$\\frac{\\beta^{\\alpha}}{\\Gamma (\\alpha)} x^{\\alpha - 1} \\mathrm{e}^{-\\beta x}$",
+                law == "exp" ~ "$\\beta \\mathrm{e}^{-\\beta x}$",
+                law == "llogis" ~ "$\\frac{\\tau \\lambda^\\tau x^{\\tau - 1}}{(\\lambda^{\\tau} + x^{\\tau})^{2}}$",
+                law == "weibull" ~ "$\\beta \\tau \\left(\\beta x\\right)^{\\tau - 1} \\mathrm{e}^{-\\left(\\beta x\\right)^{\\tau}}$",
+                law == "beta" ~ "$\\frac{x^{\\alpha -1}\\left(1 - x\\right)^{\\beta - 1}}{I\\left(\\alpha, \\beta\\right)} \\times 1_{\\left\\{x \\in \\left[0, 1\\right]\\right\\}}$",
+                law == "unif" ~ "$\\frac{1}{b - a}\\times 1_{\\left\\{x \\in \\left[a, b\\right]\\right\\} }$",
+                law == "pareto" ~ "$\\frac{\\alpha \\lambda^{\\alpha}}{\\left(\\lambda + x\\right)^{\\alpha + 1}}$",
+                TRUE ~ "f(x)"
+            ))
+        )
+    })
+    output$repartSurvie_distr_tip <- tippy::renderTippy({
+        tippy::tippy_this(
+            ns("repartSurvie_distr"),
+            tooltip = paste0("$F_{X}(x) = $", dplyr::case_when(
+                law == "norm" ~ "$\\Phi\\left(\\frac{x - \\mu}{\\sigma}\\right)$",
+                law == "lnorm" ~ "$\\Phi\\left(\\frac{\\ln(x) - \\mu}{\\sigma}\\right)$",
+                law == "gamma" ~ "$H\\left(x; \\alpha, \\beta \\right)$",
+                law == "exp" ~ "$1 - \\mathrm{e}^{-\\beta x}$",
+                law == "llogis" ~ "$1 - \\frac{\\lambda^{\\tau}}{\\lambda^\\tau + x^\\tau}$",
+                law == "weibull" ~ "$1 - \\mathrm{e}^{-\\left(\\beta x\\right)^{\\tau}}$",
+                law == "beta" ~ "$B\\left(x; \\alpha, \\beta\\right)$",
+                # law == "unif" ~ "$\\left\\{\\begin{array}{ll}
+                # 0, & x<a \\\\
+                # \\frac{x-a}{b-a}, & a\\leq x\\leq b \\\\
+                # 1, & x>b%
+                # \\end{array}$",
+                law == "pareto" ~ "$1 - \\left(\\frac{\\lambda}{\\lambda + x}\\right)^{\\alpha}$",
+                TRUE ~ "F_{X}(x)"
+            ))
+        )
+    })
+
     #### Creates parameters (shape, rate) ####
     shape <- shiny::reactive({
         input$shape
@@ -148,7 +289,7 @@ lawParametersBox <- function(input, output, session, law) {
         shiny::numericInput(
             inputId = session$ns("rate"),
             label = shiny::withMathJax(parameters_latex[2]),
-            value = 2,
+            value = 3,
             min = dplyr::case_when(
                 law.fct %in% c("lnorm", "norm", "gamma", "beta") ~ 0
             )
@@ -161,7 +302,10 @@ lawParametersBox <- function(input, output, session, law) {
         shiny::numericInput(
             inputId = session$ns("d"),
             label = shiny::withMathJax("$$d$$"),
-            value = 1,
+            value = dplyr::case_when(
+                law.fct == "unif" ~ 2,
+                TRUE ~ 1
+            ),
             min = dplyr::case_when(
                 law.fct %in% c("lnorm", "gamma", "exp", "beta") ~ 0,
                 law.fct == c("unif") ~ as.numeric(shape())
@@ -277,10 +421,10 @@ lawParametersBox <- function(input, output, session, law) {
     density_distr <- shiny::reactive({
         format(
             rlang::exec(
-                .fn = ifelse(law.fct == "pareto", paste0("d_", law.fct), paste0("d", law.fct)),
+                .fn = paste0("d", law.fct),
                 x = as.numeric(x()),
                 as.numeric(shape()), as.numeric(rate()),
-                .env = rlang::ns_env(x = ifelse(law.fct == "pareto", 'Distributacalcul', 'stats'))
+                .env = rlang::ns_env(x = ifelse(law.fct %in% c("pareto", "llogis"), 'Distributacalcul', 'stats'))
             ),
             nsmall = 6
         )
@@ -289,11 +433,11 @@ lawParametersBox <- function(input, output, session, law) {
     repartSurvie_distr <- shiny::reactive({
         format(
             rlang::exec(
-                .fn = ifelse(law.fct == "pareto", paste0("p_", law.fct), paste0("p", law.fct)),
+                .fn = paste0("p", law.fct),
                 q = as.numeric(x()),
                 as.numeric(shape()), as.numeric(rate()),
                 lower.tail = xlim_distr(),
-                .env = rlang::ns_env(x = ifelse(law.fct == "pareto", 'Distributacalcul', 'stats'))
+                .env = rlang::ns_env(x = ifelse(law.fct %in% c("pareto", "llogis"), 'Distributacalcul', 'stats'))
             ),
             nsmall = 6,
             scientific = FALSE
@@ -429,10 +573,10 @@ lawParametersBox <- function(input, output, session, law) {
             ggplot2::ggplot(data = data.frame(x.limz = c(0, 1)), ggplot2::aes_(x = ~x.limz)) +
                 ggplot2::stat_function(
                     fun = function(xx) rlang::exec(
-                        .fn = ifelse(law.fct == "pareto", paste0("VaR_", law.fct), paste0("q", law.fct)),
-                        p = xx,
+                        .fn = ifelse(law.fct %in% c("pareto", "llogis"), paste0("VaR_", law.fct), paste0("q", law.fct)),
+                        xx,
                         as.numeric(shape()), as.numeric(rate()),
-                        .env = rlang::ns_env(x = ifelse(law.fct == "pareto", 'Distributacalcul', 'stats'))
+                        .env = rlang::ns_env(x = ifelse(law.fct %in% c("pareto", "llogis"), 'Distributacalcul', 'stats'))
                     )
                 ) +
                 ggplot2::theme_classic() +
@@ -455,23 +599,23 @@ lawParametersBox <- function(input, output, session, law) {
                 ))), ggplot2::aes_(x = ~x.limz)) +
                 ggplot2::stat_function(
                     fun = Vectorize(function(xx) rlang::exec(
-                        .fn = paste0(ifelse(plot_choice_QX() == "Density Function", ifelse(law == "pareto", "d_", "d"), ifelse(law == "pareto", "p_", "p")), law),
+                        .fn = paste0(ifelse(plot_choice_QX() == "Density Function", "d", "p"), law),
                         xx,
                         as.numeric(shape()), as.numeric(rate()),
-                        .env = rlang::ns_env(x = ifelse(law.fct == "pareto", 'Distributacalcul', 'stats'))
+                        .env = rlang::ns_env(x = ifelse(law.fct %in% c("pareto", "llogis"), 'Distributacalcul', 'stats'))
                     )),
                     alpha = 0.7
                 ) +
                 ggplot2::stat_function(
                     fun = Vectorize(function(xx) rlang::exec(
                         .fn = paste0(ifelse(plot_choice_QX() == "Density Function",
-                                            ifelse(law == "pareto", "d_", "d"),
-                                            ifelse(law == "pareto", "p_", "p"))
+                                            "d",
+                                            "p")
                                      ,law
                         ),
                         xx,
                         as.numeric(shape()), as.numeric(rate()),
-                        .env = rlang::ns_env(x = ifelse(law.fct == "pareto", 'Distributacalcul', 'stats'))
+                        .env = rlang::ns_env(x = ifelse(law.fct %in% c("pareto", "llogis"), 'Distributacalcul', 'stats'))
                     )),
                     xlim = c(VaR(),  rlang::exec(
                         .fn = paste0("VaR_", law),
@@ -500,19 +644,19 @@ lawParametersBox <- function(input, output, session, law) {
             ))), ggplot2::aes_(x = ~x.limz)) +
             ggplot2::stat_function(
                 fun = Vectorize(function(xx) rlang::exec(
-                    .fn = paste0(ifelse(plot_choice_FSX() == "Density Function", ifelse(law.fct == "pareto", "d_", "d"), ifelse(law.fct == "pareto", "p_", "p")), law),
+                    .fn = paste0(ifelse(plot_choice_FSX() == "Density Function", "d", "p"), law),
                     xx,
                     as.numeric(shape()), as.numeric(rate()),
-                    .env = rlang::ns_env(x = ifelse(law.fct == "pareto", 'Distributacalcul', 'stats'))
+                    .env = rlang::ns_env(x = ifelse(law.fct %in% c("pareto", "llogis"), 'Distributacalcul', 'stats'))
                 )),
                 alpha = 0.7
             ) +
             ggplot2::stat_function(
                 fun = Vectorize(function(xx) rlang::exec(
-                    .fn = paste0(ifelse(plot_choice_FSX() == "Density Function", ifelse(law.fct == "pareto", "d_", "d"), ifelse(law.fct == "pareto", "p_", "p")), law),
+                    .fn = paste0(ifelse(plot_choice_FSX() == "Density Function", "d", "p"), law),
                     xx,
                     as.numeric(shape()), as.numeric(rate()),
-                    .env = rlang::ns_env(x = ifelse(law.fct == "pareto", 'Distributacalcul', 'stats'))
+                    .env = rlang::ns_env(x = ifelse(law.fct %in% c("pareto", "llogis"), 'Distributacalcul', 'stats'))
                 )),
                 xlim = c(
                     ifelse(xlim_distr(), rlang::exec(
@@ -593,18 +737,22 @@ lawParametersBoxUI <- function(id) {
                 solidHeader = TRUE,
                 status = "warning",
                 shiny::uiOutput(ns("E")),
-                tippy::tippyOutput(ns("E_tip")),
+                shiny::withMathJax(tippy::tippyOutput(ns("E_tip"))),
                 shiny::uiOutput(ns("V")),
-                tippy::tippyOutput(ns("V_tip")),
+                shiny::withMathJax(tippy::tippyOutput(ns("V_tip"))),
                 shiny::uiOutput(ns("d")),
                 shiny::splitLayout(
                     shiny::uiOutput(ns("less.than.d")),
                     shiny::uiOutput(ns("Etrunc")),
+                    shiny::withMathJax(tippy::tippyOutput(ns("Etrunc_tip"))),
                     cellWidths = 'auto'
                 ),
                 shiny::uiOutput(ns("Elim")),
+                shiny::withMathJax(tippy::tippyOutput(ns("Elim_tip"))),
                 shiny::uiOutput(ns("SL")),
-                shiny::uiOutput(ns("Mexcess"))
+                shiny::withMathJax(tippy::tippyOutput(ns("SL_tip"))),
+                shiny::uiOutput(ns("Mexcess")),
+                shiny::withMathJax(tippy::tippyOutput(ns("Mexcess_tip")))
             )
                 ),
 
@@ -619,7 +767,9 @@ lawParametersBoxUI <- function(id) {
                 status = "success",
                 shiny::uiOutput(ns("kap")),
                 shiny::uiOutput(ns("VaR")),
+                shiny::withMathJax(tippy::tippyOutput(ns("VaR_tip"))),
                 shiny::uiOutput(ns("TVaR")),
+                shiny::withMathJax(tippy::tippyOutput(ns("TVaR_tip"))),
                 shiny::uiOutput(ns("plot_choice_QX")),
                 plotly::plotlyOutput(ns("Qx"))
             ),
@@ -637,8 +787,10 @@ lawParametersBoxUI <- function(id) {
                 status = "danger",
                 shiny::uiOutput(ns("x")),
                 shiny::uiOutput(ns("density_distr")),
+                shiny::withMathJax(tippy::tippyOutput(ns("density_distr_tip"))),
                 shiny::uiOutput(ns("xlim_distr")),
                 shiny::uiOutput(ns("repartSurvie_distr")),
+                shiny::withMathJax(tippy::tippyOutput(ns("repartSurvie_distr_tip"))),
                 shiny::uiOutput(ns("plot_choice_FSX")),
                 plotly::plotlyOutput(ns("FSx"))
             ),

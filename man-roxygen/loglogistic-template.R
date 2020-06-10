@@ -16,6 +16,8 @@
 #' @return
 #'  Function :
 #'  \itemize{
+#'  \item{\code{\link{dllogis}}}{ gives the density function.}
+#'  \item{\code{\link{pllogis}}}{ gives the cumulative density function.}
 #'  \item{\code{\link{E_llogis}}}{ gives the expected value.}
 #'  \item{\code{\link{V_llogis}}}{ gives the variance.}
 #'  \item{\code{\link{kthmoment_llogis}}}{ gives the kth moment.}

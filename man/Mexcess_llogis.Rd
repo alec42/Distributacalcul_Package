@@ -18,6 +18,8 @@ Mexcess_llogis(d, shape, rate = 1/scale, scale = 1/rate)
 \value{
 Function :
  \itemize{
+ \item{\code{\link{dllogis}}}{ gives the density function.}
+ \item{\code{\link{pllogis}}}{ gives the cumulative density function.}
  \item{\code{\link{E_llogis}}}{ gives the expected value.}
  \item{\code{\link{V_llogis}}}{ gives the variance.}
  \item{\code{\link{kthmoment_llogis}}}{ gives the kth moment.}
@@ -59,6 +61,8 @@ Other Loglogistic Distribution:
 \code{\link{TVaR_llogis}()},
 \code{\link{V_llogis}()},
 \code{\link{VaR_llogis}()},
-\code{\link{kthmoment_llogis}()}
+\code{\link{dllogis}()},
+\code{\link{kthmoment_llogis}()},
+\code{\link{pllogis}()}
 }
 \concept{Loglogistic Distribution}
