@@ -45,3 +45,4 @@ Suggests:
     rmarkdown,
     spelling
 Language: en-CA
+VignetteBuilder: knitr

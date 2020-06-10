@@ -8,7 +8,7 @@
 #' @return Server function for the \code{\link{Distributacalcul_vis}} module.
 #'  Should not be run directly.
 #'
-#' @importFrom rlang ".data" exec ns_env
+#' @importFrom rlang exec ns_env
 #' @importFrom dplyr case_when
 #' @importFrom ggplot2 ggplot stat_function aes labs theme_classic
 #' @importFrom plotly renderPlotly
@@ -284,7 +284,6 @@ lawParametersBox <- function(input, output, session, law) {
             )
         )
     })
-
     output$rate <- shiny::renderUI({
         shiny::numericInput(
             inputId = session$ns("rate"),
@@ -429,7 +428,6 @@ lawParametersBox <- function(input, output, session, law) {
             nsmall = 6
         )
     })
-
     repartSurvie_distr <- shiny::reactive({
         format(
             rlang::exec(
@@ -831,6 +829,7 @@ lawParametersBoxUI <- function(id) {
 #' }
 #'
 Distributacalcul_vis <- function(law) {
+    .Deprecated(new = 'distributacalculVis', package = 'Distributacalcul', msg = "Deprecated. Use new and improved distributacalculVis instead.")
     shiny::shinyApp(
         ui = shinydashboardPlus::dashboardPagePlus(
             header = shinydashboardPlus::dashboardHeaderPlus(title = law),

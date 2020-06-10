@@ -9,3 +9,5 @@
 ^package-build-site\.R$
 ^cran-comments\.md$
 ^CRAN-RELEASE$
+^doc$
+^Meta$

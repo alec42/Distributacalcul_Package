@@ -2,6 +2,11 @@
 ## New features
 +   Added loglogistic PDF and CDF.
 +   Added LaTeX formulas for all functions (VaR, TVaR, moments, PDF and CDF) in the Shiny application.
++   Created vignette explaining the various parameters of distributions (scale, rate, location).
+    +   Still need to add shape and dispersion.
+    +   Still need to fix viewing of vignette.
++   Seperated module into 4 different modules for the parameters, functions, risk measures and moments.
++   Created new visualisation function which can choose which modules to execute.
 
 ##  Bug  Fixes
 +   By adding the PDF and CDF, fixed an error in the quantile function plot in the Shiny application.
@@ -9,7 +14,8 @@
 
 ##  Minor changes
 +   Changed the spelling of the truncated mean functions from french spelling 'Etronq' to english spelling 'Etrunc'.
-+   Changed function name of pareto distribution functions from 'p_' and 'd_' to 'p' and 'd' to be consistent with other packages.
++   Changed function name of pareto distribution functions from 'p_' and 'd_' to 'p' and 'd' to be consistent with other packages (also updated return field of the 'pareto-template' file.
++   Added loglogistic density functions to the return field of the 'loglogistic-template' file.
 
 #   Distributacalcul 0.2.2
 ## New features
