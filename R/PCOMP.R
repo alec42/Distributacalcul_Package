@@ -45,13 +45,10 @@ p_PCOMP <- function(x, lambda, shape, rate = 1 / scale, scale = 1 / rate, k0, di
 
     if (grepl(pattern = "^Gamma$", x = distr_severity, ignore.case = TRUE)) {
         stopifnot(shape > 0)
-        stats::dpois(x = 0, lambda = lambda) +
-            sum(sapply(1:k0,
-                       function(k)
-                           stats::dpois(x = k, lambda = lambda) *
-                           stats::pgamma(q = x, shape = shape * k, rate = rate)
-                       )
-            )
+        stats::dpois(x = 0, lambda = lambda) + sum(
+            stats::dpois(x = 1:k0, lambda = lambda) *
+                stats::pgamma(q = x, shape = shape * 1:k0, rate = rate)
+        )
     }
 }
 
@@ -153,7 +150,11 @@ TVaR_PCOMP <- function(kap, lambda, shape, rate = 1 / scale, scale = 1 / rate, v
         TVaR.PCOMP <- E_PCOMP(rate, shape, lambda, distr_severity) / (1 - kap)
     } else if (grepl(pattern = "^Gamma$", x = distr_severity, ignore.case = TRUE)) {
         stopifnot(shape > 0)
-        TVaR.PCOMP <- sum(sapply(1:k0, function(k) stats::dpois(x = k, lambda) * ( shape * k )/rate * stats::pgamma(q = vark, shape = shape * k + 1, rate, lower.tail = FALSE)))/(1 - kap)
+        TVaR.PCOMP <- sum(
+            stats::dpois(x = 1:k0, lambda) *
+                E_gamma(shape, rate) * 1:k0 *
+                stats::pgamma(q = vark, shape = shape * 1:k0 + 1, rate, lower.tail = FALSE)
+        ) / (1 - kap)
     }
 
     return(TVaR.PCOMP)

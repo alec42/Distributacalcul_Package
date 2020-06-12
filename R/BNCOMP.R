@@ -47,8 +47,10 @@ p_BNCOMP <- function(x, size, prob, shape, rate = 1 / scale, scale = 1 / rate, k
 
     if (grepl(pattern = "^Gamma$", x = distr_severity, ignore.case = TRUE)) {
         stopifnot(shape > 0)
-        stats::dnbinom(x = 0, size = size, prob = prob) +
-            sum(sapply(1:k0, function(i) stats::dnbinom(x = i, size = size, prob = prob) * stats::pgamma(q = x, shape = shape * i, rate = rate)))
+        stats::dnbinom(x = 0, size = size, prob = prob) + sum(
+            stats::dnbinom(x = 1:k0, size = size, prob = prob) *
+                stats::pgamma(q = x, shape = shape * 1:k0, rate = rate)
+        )
     }
 }
 
@@ -156,10 +158,10 @@ TVaR_BNCOMP <- function(kap, vark, size, prob, shape, rate = 1 / scale, scale = 
         TVaR.BNCOMP <- E_BNCOMP(size, prob, shape, rate, distr_severity = distr_severity) / (1 - kap)
     } else if (grepl(pattern = "^Gamma$", x = distr_severity, ignore.case = TRUE)) {
         stopifnot(shape > 0)
-        TVaR.BNCOMP <- sum(sapply(1:k0, function(i)
-            stats::dnbinom(x = i, size = size, prob = prob) *
-                E_gamma(shape, rate) *
-                stats::pgamma(q = vark, shape = shape * i + 1, rate = rate, lower.tail = FALSE))
+        TVaR.BNCOMP <- sum(
+            stats::dnbinom(x = 1:k0, size = size, prob = prob) *
+                E_gamma(shape, rate) * 1:k0 *
+                stats::pgamma(q = vark, shape = shape * 1:k0 + 1, rate = rate, lower.tail = FALSE)
         ) / (1 - kap)
     }
 

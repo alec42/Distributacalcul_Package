@@ -7,6 +7,7 @@
     +   Still need to fix viewing of vignette.
 +   Seperated module into 4 different modules for the parameters, functions, risk measures and moments.
 +   Created new visualisation function which can choose which modules to execute.
++   Added both definitions of the PGF and MGF for the negative binomial (number of trials or number of failures).
 
 ##  Bug  Fixes
 +   By adding the PDF and CDF, fixed an error in the quantile function plot in the Shiny application.
@@ -16,6 +17,7 @@
 +   Changed the spelling of the truncated mean functions from french spelling 'Etronq' to english spelling 'Etrunc'.
 +   Changed function name of pareto distribution functions from 'p_' and 'd_' to 'p' and 'd' to be consistent with other packages (also updated return field of the 'pareto-template' file.
 +   Added loglogistic density functions to the return field of the 'loglogistic-template' file.
++   Optimized code for the CDF and TVaR of the compound distributions by removing the sapplies and using R's vector operations.
 
 #   Distributacalcul 0.2.2
 ## New features

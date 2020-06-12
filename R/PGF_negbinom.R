@@ -14,9 +14,11 @@
 #' PGF_negbinom(t = 5, size = 3, prob = 0.3)
 #'
 PGF_negbinom <- function(t, size, prob = (1 / (1 + beta)), beta = ((1 - prob) / prob), nb_tries = FALSE) {
-
     stopifnot(size > 0, prob > 0, prob < 1)
-    (
-        prob / (1 - (1 - prob) * t)
-    )^size
+
+    if (nb_tries == FALSE) {
+        (prob / (1 - (1 - prob) * t))^size
+    } else if (nb_tries == TRUE) {
+        ((prob * t) / (1 - (1 - prob) * t))^size
+    }
 }

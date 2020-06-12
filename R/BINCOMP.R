@@ -48,7 +48,10 @@ p_BINCOMP <- function(x, size, prob, shape, rate = 1 / scale, scale = 1 / rate, 
 
     if(grepl(pattern = "^Gamma$", x = distr_severity, ignore.case = TRUE)) {
         stopifnot(shape > 0)
-        stats::dbinom(x = 0, size = size, prob = prob) + sum(sapply(1:k0, function(i) stats::dbinom(x = i, size = size, prob = prob) * stats::pgamma(q = x, shape = shape * i, rate = rate)))
+        stats::dbinom(x = 0, size = size, prob = prob) + sum(
+            stats::dbinom(x = 1:k0, size = size, prob = prob) *
+                stats::pgamma(q = x, shape = shape * 1:k0, rate = rate)
+        )
     }
 }
 
@@ -152,7 +155,11 @@ TVaR_BINCOMP <- function(kap, size, prob, shape, rate = 1 / scale, scale = 1 / r
         TVaR.BNCOMP <- E_BINCOMP(size, prob, shape, rate, distr_severity = distr_severity) / (1 - kap)
     } else if (grepl(pattern = "^Gamma$", x = distr_severity, ignore.case = TRUE)) {
         stopifnot(shape > 0)
-        TVaR.BNCOMP <- (sum(sapply(1:k0, function(i) stats::dbinom(x = i, size = size, prob = prob) * (shape * i / rate) * stats::pgamma(q = vark, shape = shape * i + 1, rate = rate, lower.tail = FALSE))) / (1 - kap))
+        TVaR.BNCOMP <- sum(
+            stats::dbinom(x = 1:k0, size = size, prob = prob) *
+                E_gamma(shape, rate) * 1:k0 *
+                stats::pgamma(q = vark, shape = shape * 1:k0 + 1, rate = rate, lower.tail = FALSE)
+        ) / (1 - kap)
     }
 
     return(TVaR.BNCOMP)
