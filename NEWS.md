@@ -1,13 +1,19 @@
 #   Distributacalcul 0.2.3
 ## New features
 +   Added loglogistic PDF and CDF.
-+   Added LaTeX formulas for all functions (VaR, TVaR, moments, PDF and CDF) in the Shiny application.
 +   Created vignette explaining the various parameters of distributions (scale, rate, location).
     +   Still need to add shape and dispersion.
     +   Still need to fix viewing of vignette.
-+   Seperated module into 4 different modules for the parameters, functions, risk measures and moments.
-+   Created new visualisation function which can choose which modules to execute.
 +   Added both definitions of the PGF and MGF for the negative binomial (number of trials or number of failures).
++   Seperated Shiny module into 4 different modules for the parameters, functions, risk measures and moments.
+    +   Created new visualisation function which can choose which modules to execute.
++   Added LaTeX formulas for all functions (VaR, TVaR, moments, PDF and CDF) in the Shiny application.
++   Added language translation to the Shiny Application (English and French).
+    +   Added package shiny.i18n to the imports.
+    +   Added (bilingual) labels to the plots.
+    +   Changed titles and user inputs to be bilingual.
+    +   Added language input at the top right of the screen.
+    +   Added json file for the translations under man-roxygen/translations.
 
 ##  Bug  Fixes
 +   By adding the PDF and CDF, fixed an error in the quantile function plot in the Shiny application.

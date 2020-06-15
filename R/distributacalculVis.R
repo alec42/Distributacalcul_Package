@@ -28,6 +28,7 @@
 #' @importFrom shiny column fluidRow tags shinyApp callModule
 #' @importFrom shinydashboardPlus dashboardPagePlus dashboardHeaderPlus
 #' @importFrom shinydashboard dashboardSidebar dashboardBody
+#' @importFrom shiny.i18n Translator
 #' @export
 #'
 #' @return Launches Shiny application.
@@ -49,22 +50,29 @@ distributacalculVis <- function(law, mod) {
     )
     shiny::shinyApp(
         ui = shinydashboardPlus::dashboardPagePlus(
-            header = shinydashboardPlus::dashboardHeaderPlus(title = law),
+            header = shinydashboardPlus::dashboardHeaderPlus(
+                # title = law
+                title = shiny::textOutput("mainTitle"),
+                .list = list(
+                    shiny::tags$li(
+                        class = "dropdown",
+                        shiny::uiOutput("languageSelectorUI")
+                    )
+                )
+            ),
             sidebar = shinydashboard::dashboardSidebar(width = NULL, collapsed = TRUE, disable = TRUE),
             body = shinydashboard::dashboardBody(
                 shiny::tags$head(
-                    shiny::tags$style(
-                        type = "text/css",
-                        "
-                        label {
-                        display: table-cell;
-                        text-align: center;
-                        vertical-align: middle;
-                        }
-                        .form-group {
-                        display: table-row;
-                        }
-                        "
+                    shiny::tags$style(type = "text/css",
+                                      "label {
+                                         display: table-cell;
+                                         text-align: center;
+                                         vertical-align: middle;
+                                       }
+                                       .form-group {
+                                         display: table-row;
+                                       }
+                                      "
                     )
                 ),
                 shiny::fluidRow(
@@ -97,29 +105,62 @@ distributacalculVis <- function(law, mod) {
             shiny::callModule(
                 module = parametersBox,
                 id = toupper(law),
-                law = law
+                law = law,
+                lang = i18n
             )
             if ("functions" %in% mod | "all" %in% mod) {
                 shiny::callModule(
                     module = functionsBox,
                     id = toupper(law),
-                    law = law
+                    law = law,
+                    lang = i18n
                 )
             }
             if ("moments" %in% mod | "all" %in% mod) {
                 shiny::callModule(
                     module = momentsBox,
                     id = toupper(law),
-                    law = law
+                    law = law,
+                    lang = i18n
                 )
             }
             if ("riskMeasures" %in% mod | "all" %in% mod) {
                 shiny::callModule(
                     module = riskMeasuresBox,
                     id = toupper(law),
-                    law = law
+                    law = law,
+                    lang = i18n
                 )
             }
+
+            ####  Translations  ####
+            translator <- shiny.i18n::Translator$new(
+                translation_json_path = "man-roxygen/translations/translation.json"
+            )
+            i18n <- shiny::reactive({
+                selected <- input$selectedLanguage
+                if (length(selected) > 0 && selected %in% translator$languages) {
+                    translator$set_translation_language(selected)
+                }
+                translator
+            })
+            output$languageSelectorUI <- shiny::renderUI({
+                shiny::selectInput(
+                    inputId = 'selectedLanguage',
+                    label = "",
+                    choices = c(
+                        "English" = "en",
+                        "Francais" = "fr"
+                    ),
+                    selected = input$selectedLanguage
+                )
+            })
+            output$mainTitle <- shiny::renderText({
+                i18n()$t("Probability Distributions")
+            })
+            output$riskMeasuresTitle <- shiny::renderText({
+                i18n()$t("Risk measures")
+            })
         }
     )
 }

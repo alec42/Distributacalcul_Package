@@ -1,0 +1,215 @@
+{
+    "languages":
+    [
+        "en",
+        "fr"
+    ],
+    "translation":
+    [
+        {
+            "en": "Probability Distributions",
+            "fr": "Lois de probabilité"
+        },
+        {
+            "en": "Continuous Distributions",
+            "fr": "Lois continues"
+        },
+        {
+            "en": "Discrete Distributions",
+            "fr": "Lois discrètes"
+        },
+        {
+            "en": "Compound Distributions",
+            "fr": "Lois composées"
+        },
+        {
+            "en": "Binomial",
+            "fr": "Binomiale"
+        },
+        {
+            "en": "Negative Binomial",
+            "fr": "Binomiale négative"
+        },
+        {
+            "en": "Logarithmic",
+            "fr": "Logarithmique"
+        },
+        {
+            "en": "Hypergeometric",
+            "fr": "Hypergéométrique"
+        },
+        {
+            "en": "Poisson",
+            "fr": "Poisson"
+        },
+        {
+            "en": "Negative binomial and geometric",
+            "fr": "Binomiale négative et géométrique"
+        },
+        {
+            "en": "Binomial and Bernoulli",
+            "fr": "Binomiale et bernoulli"
+        },
+        {
+            "en": "Uniform",
+            "fr": "Uniforme"
+        },
+        {
+            "en": "Inverse Gaussian",
+            "fr": "Inverse Gaussienne"
+        },
+        {
+            "en": "Log-logistic",
+            "fr": "Log-logistique"
+        },
+        {
+            "en": "Erlang",
+            "fr": "Erlang"
+        },
+        {
+            "en": "Beta",
+            "fr": "Bêta"
+        },
+        {
+            "en": "Burr",
+            "fr": "Burr"
+        },
+        {
+            "en": "Pareto",
+            "fr": "Pareto"
+        },
+        {
+            "en": "Weibull",
+            "fr": "Weibull"
+        },
+        {
+            "en": "Gamma, Exponential, & Chi-Squared",
+            "fr": "Gamma, exponentielle et khi-Carré"
+        },
+        {
+            "en": "Exponential",
+            "fr": "Exponentielle"
+        },
+        {
+            "en": "Chi-Squared",
+            "fr": "Khi-Carré"
+        },
+        {
+            "en": "Lognormal",
+            "fr": "Lognormale"
+        },
+        {
+            "en": "Normal",
+            "fr": "Normale"
+        },
+        {
+            "en": "Compound Negative Binomial",
+            "fr": "Binomiale négative composée"
+        },
+        {
+            "en": "Compound Binomial",
+            "fr": "Binomiale composée"
+        },
+        {
+            "en": "Compound Poisson",
+            "fr": "Poisson composée"
+        },
+        {
+        	"en": "Tools",
+        	"fr": "Outils"
+        },
+        {
+        	"en": "Mean excess",
+        	"fr": "Excès-moyen"
+        },
+        {
+        	"en": "Approximations",
+        	"fr": "Approximations"
+        },
+        {
+        	"en": "About",
+        	"fr": "À propos"
+        },
+        {
+        	"en": "GitHub",
+        	"fr": "GitHub"
+        },
+        {
+        	"en": "Notation",
+        	"fr": "Notation"
+        },
+        {
+        	"en": "Contact us",
+        	"fr": "Nous contacter"
+        },
+        {
+
+        	"en": "Gamma",
+        	"fr": "Gamma"
+        },
+        {
+        	"en": "Parameters",
+        	"fr": "Paramètres"
+        },
+        {
+        	"en": "Functions",
+        	"fr": "Fonctions"
+        },
+        {
+        	"en": "Moments",
+        	"fr": "Moments"
+        },
+        {
+        	"en": "Rate",
+        	"fr": "Fréquence"
+        },
+        {
+        	"en": "Scale",
+        	"fr": "Échelle"
+        },
+        {
+        	"en": "Density Function",
+        	"fr": "Fonction de densité"
+        },
+        {
+        	"en": "Cumulative Density Function",
+        	"fr": "Fonction de répartition"
+        },
+        {
+        	"en": "Survival Function",
+        	"fr": "Fonction de survie"
+        },
+        {
+        	"en": "Quantile Function",
+        	"fr": "Fonction quantile"
+        },
+        {
+        	"en": "Density",
+        	"fr": "Densité"
+        },
+        {
+        	"en": "Density function",
+        	"fr": "Fonction de densité"
+        },
+        {
+        	"en": "Survival",
+        	"fr": "Survie"
+        },
+        {
+            "en": "Developers",
+            "fr": "Développeurs"
+        },
+        {
+        	"en": "Law of large numbers",
+        	"fr": "Loi des grands nombres"
+        },
+        {
+        	"en": "Risk measures",
+        	"fr": "Mesures de risque"
+        },
+        {
+        	"en": "",
+        	"fr": ""
+        }
+    ]
+}

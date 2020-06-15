@@ -4,6 +4,7 @@
 #' @param output output for server side.
 #' @param session session for server side.
 #' @param law Distribution to visualize, one of ...
+#' @param lang Internal function to ensure translation works and input is communicated between modules.
 #'
 #' @return Server function for the parameter module.
 #'  Should not be run directly.
@@ -13,7 +14,7 @@
 #' @importFrom shiny reactive renderUI numericInput withMathJax
 #' @export
 #'
-parametersBox <- function(input, output, session, law) {
+parametersBox <- function(input, output, session, law, lang) {
     ns <- session$ns
 
     ####    Define distributions    ####
@@ -63,6 +64,10 @@ parametersBox <- function(input, output, session, law) {
             )
         )
     })
+    ####    Render translation  ####
+    output$parametersTitle <- shiny::renderText({
+        lang()$t("Parameters")
+    })
 }
 
 #' Interactive parameter chooser (UI side)
@@ -80,7 +85,7 @@ parametersBoxUI <- function(id) {
     ns <- shiny::NS(id)
     #### Parameters ####
     shinydashboardPlus::boxPlus(
-        title = "Parameters",
+        title = shiny::textOutput(ns("parametersTitle")),
         status = "primary",
         background = "blue",
         solidHeader = TRUE,

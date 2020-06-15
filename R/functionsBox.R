@@ -4,18 +4,20 @@
 #' @param output output for server side.
 #' @param session session for server side.
 #' @param law Distribution to visualize, one of ...
+#' @param lang Internal function to ensure translation works and input is communicated between modules.
 #'
 #' @return Server function for the functions module.
 #'  Should not be run directly.
 #'
 #' @importFrom rlang exec
+#' @importFrom ggplot2 ggplot stat_function aes labs theme_classic
 #' @importFrom dplyr case_when
 #' @importFrom tippy renderTippy tippy_this
 #' @importFrom shiny req reactive renderUI numericInput withMathJax
 #' @importFrom shinyWidgets switchInput pickerInput
 #' @export
 #'
-functionsBox <- function(input, output, session, law) {
+functionsBox <- function(input, output, session, law, lang) {
     ns <- session$ns
 
     ####    Define distributions    ####
@@ -109,9 +111,9 @@ functionsBox <- function(input, output, session, law) {
         shinyWidgets::switchInput(
             inputId = session$ns("xlim_distr"),
             onStatus = "success",
-            onLabel = "Repartition",
+            onLabel = lang()$t("Cumulative Density Function"),
             offStatus = "info",
-            offLabel = "Survie",
+            offLabel = lang()$t("Survival Function"),
             value = TRUE,
             labelWidth = "10px"
         )
@@ -122,10 +124,10 @@ functionsBox <- function(input, output, session, law) {
         shinyWidgets::pickerInput(
             inputId = session$ns("plot_choice_FSX"),
             choices = c(
-                "Density Function",
-                "Cumulative Density Function"
+                lang()$t("Density Function"),
+                lang()$t("Cumulative Density Function")
             ),
-            selected = "Density Function",
+            selected = lang()$t("Density Function"),
             options = list(
                 style = "btn-success"
             )
@@ -191,7 +193,7 @@ functionsBox <- function(input, output, session, law) {
             ))), ggplot2::aes_(x = ~x.limz)) +
             ggplot2::stat_function(
                 fun = Vectorize(function(xx) rlang::exec(
-                    .fn = paste0(ifelse(plot_choice_FSX() == "Density Function", "d", "p"), law),
+                    .fn = paste0(ifelse(plot_choice_FSX() == lang()$t("Density Function"), "d", "p"), law),
                     xx,
                     as.numeric(input$shape), as.numeric(input$rate),
                     .env = rlang::ns_env(x = ifelse(law.fct %in% c("pareto", "llogis"), 'Distributacalcul', 'stats'))
@@ -200,7 +202,7 @@ functionsBox <- function(input, output, session, law) {
             ) +
             ggplot2::stat_function(
                 fun = Vectorize(function(xx) rlang::exec(
-                    .fn = paste0(ifelse(plot_choice_FSX() == "Density Function", "d", "p"), law),
+                    .fn = paste0(ifelse(plot_choice_FSX() == lang()$t("Density Function"), "d", "p"), law),
                     xx,
                     as.numeric(input$shape), as.numeric(input$rate),
                     .env = rlang::ns_env(x = ifelse(law.fct %in% c("pareto", "llogis"), 'Distributacalcul', 'stats'))
@@ -224,7 +226,18 @@ functionsBox <- function(input, output, session, law) {
                 fill = ifelse(xlim_distr(), "Dark Green", "Royal Blue"),
                 alpha = 0.7
             ) +
-            ggplot2::theme_classic()
+            ggplot2::theme_classic() +
+            ggplot2::labs(
+                x = "$$x$$",
+                y = dplyr::case_when(
+                    plot_choice_FSX() == lang()$t("Cumulative Density Function") ~ "$$F_{X}(x)$$",
+                    plot_choice_FSX() == lang()$t("Density Function") ~ "$$f_{X}(x)$$"
+                )
+            )
+    })
+    ####    Render translation  ####
+    output$functionsTitle <- shiny::renderText({
+        lang()$t("Functions")
     })
 }
 
@@ -245,7 +258,7 @@ functionsBoxUI <- function(id) {
     ns <- shiny::NS(id)
 
     shinydashboardPlus::boxPlus(
-        title = "Functions",
+        title = shiny::textOutput(ns("functionsTitle")),
         width = NULL,
         solidHeader = TRUE,
         closable = FALSE,

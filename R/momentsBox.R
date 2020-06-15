@@ -4,6 +4,7 @@
 #' @param output output for server side.
 #' @param session session for server side.
 #' @param law Distribution to visualize, one of ...
+#' @param lang Internal function to ensure translation works and input is communicated between modules.
 #'
 #' @return Server function for the moments module.
 #'  Should not be run directly.
@@ -15,7 +16,7 @@
 #' @importFrom shinyWidgets radioGroupButtons
 #' @export
 #'
-momentsBox <- function(input, output, session, law) {
+momentsBox <- function(input, output, session, law, lang) {
     ns <- session$ns
 
     ####    Define distributions    ####
@@ -262,6 +263,10 @@ momentsBox <- function(input, output, session, law) {
                                    Mexcess()))
     })
 
+    ####    Render translation  ####
+    output$momentsTitle <- shiny::renderText({
+        lang()$t("Moments")
+    })
 }
 
 #' Interactive moments visualization (UI side)
@@ -281,7 +286,7 @@ momentsBoxUI <- function(id) {
     ns <- shiny::NS(id)
 
     shinydashboard::box(
-        title = "Moments",
+        title = shiny::textOutput(ns("momentsTitle")),
         width = NULL,
         solidHeader = TRUE,
         status = "warning",

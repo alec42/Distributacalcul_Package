@@ -4,6 +4,7 @@
 #' @param output output for server side.
 #' @param session session for server side.
 #' @param law Distribution to visualize, one of ...
+#' @param lang Internal function to ensure translation works and input is communicated between modules.
 #'
 #' @return Server function for the risk measures module.
 #'  Should not be run directly.
@@ -17,7 +18,7 @@
 #' @importFrom shinyWidgets pickerInput
 #' @export
 #'
-riskMeasuresBox <- function(input, output, session, law) {
+riskMeasuresBox <- function(input, output, session, law, lang) {
     ns <- session$ns
 
     ####    Define distributions    ####
@@ -98,11 +99,11 @@ riskMeasuresBox <- function(input, output, session, law) {
             inputId = session$ns("plot_choice_QX"),
             # label = "Style : primary",
             choices = c(
-                "Density Function",
-                "Cumulative Density Function",
-                "Quantile Function"
+                lang()$t("Density Function"),
+                lang()$t("Cumulative Density Function"),
+                lang()$t("Quantile Function")
             ),
-            selected = "Cumulative Density Function",
+            selected = lang()$t("Cumulative Density Function"),
             options = list(
                 style = "btn-success"
             )
@@ -151,7 +152,7 @@ riskMeasuresBox <- function(input, output, session, law) {
     #### Render plots ####
     output$Qx <- plotly::renderPlotly({
         shiny::req(input$shape, input$rate, plot_choice_QX())
-        if (plot_choice_QX() == "Quantile Function") {
+        if (plot_choice_QX() == lang()$t("Quantile Function")) {
             ggplot2::ggplot(data = data.frame(x.limz = c(0, 1)), ggplot2::aes_(x = ~x.limz)) +
                 ggplot2::stat_function(
                     fun = function(xx) rlang::exec(
@@ -164,7 +165,7 @@ riskMeasuresBox <- function(input, output, session, law) {
                 ggplot2::theme_classic() +
                 ggplot2::labs(
                     x = "$$\\kappa$$",
-                    y = "$$y$$"
+                    y = "$$F_{X}^{-1}(x)$$"
                 )
         } else {
             ggplot2::ggplot(data = data.frame(
@@ -181,7 +182,7 @@ riskMeasuresBox <- function(input, output, session, law) {
                 ))), ggplot2::aes_(x = ~x.limz)) +
                 ggplot2::stat_function(
                     fun = Vectorize(function(xx) rlang::exec(
-                        .fn = paste0(ifelse(plot_choice_QX() == "Density Function", "d", "p"), law),
+                        .fn = paste0(ifelse(plot_choice_QX() == lang()$t("Density Function"), "d", "p"), law),
                         xx,
                         as.numeric(input$shape), as.numeric(input$rate),
                         .env = rlang::ns_env(x = ifelse(law.fct %in% c("pareto", "llogis"), 'Distributacalcul', 'stats'))
@@ -190,7 +191,7 @@ riskMeasuresBox <- function(input, output, session, law) {
                 ) +
                 ggplot2::stat_function(
                     fun = Vectorize(function(xx) rlang::exec(
-                        .fn = paste0(ifelse(plot_choice_QX() == "Density Function",
+                        .fn = paste0(ifelse(plot_choice_QX() == lang()$t("Density Function"),
                                             "d",
                                             "p")
                                      ,law
@@ -209,8 +210,20 @@ riskMeasuresBox <- function(input, output, session, law) {
                     fill = "red",
                     alpha = 0.7
                 ) +
-                ggplot2::theme_classic()
+                ggplot2::theme_classic() +
+                ggplot2::labs(
+                    x = "$$x$$",
+                    y = dplyr::case_when(
+                        plot_choice_QX() == lang()$t("Cumulative Density Function") ~ "$$F_{X}(x)$$",
+                        plot_choice_QX() == lang()$t("Density Function") ~ "$$f_{X}(x)$$"
+                    )
+                )
         }
+    })
+
+    ####    Render translation  ####
+    output$riskMeasuresTitle <- shiny::renderText({
+        lang()$t("Risk measures")
     })
 }
 
@@ -231,7 +244,7 @@ riskMeasuresBoxUI <- function(id) {
     ns <- shiny::NS(id)
 
     shinydashboardPlus::boxPlus(
-        title = "Risk measures",
+        title = shiny::textOutput(ns("riskMeasuresTitle")),
         width = NULL,
         solidHeader = TRUE,
         closable = FALSE,

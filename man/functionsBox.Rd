@@ -4,7 +4,7 @@
 \alias{functionsBox}
 \title{Interactive functions visualization (server side)}
 \usage{
-functionsBox(input, output, session, law)
+functionsBox(input, output, session, law, lang)
 }
 \arguments{
 \item{input}{input for server side.}
@@ -14,6 +14,8 @@ functionsBox(input, output, session, law)
 \item{session}{session for server side.}
 
 \item{law}{Distribution to visualize, one of ...}
+
+\item{lang}{Internal function to ensure translation works and input is communicated between modules.}
 }
 \value{
 Server function for the functions module.

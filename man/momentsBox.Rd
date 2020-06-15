@@ -4,7 +4,7 @@
 \alias{momentsBox}
 \title{Interactive moments visualization (server side)}
 \usage{
-momentsBox(input, output, session, law)
+momentsBox(input, output, session, law, lang)
 }
 \arguments{
 \item{input}{input for server side.}
@@ -14,6 +14,8 @@ momentsBox(input, output, session, law)
 \item{session}{session for server side.}
 
 \item{law}{Distribution to visualize, one of ...}
+
+\item{lang}{Internal function to ensure translation works and input is communicated between modules.}
 }
 \value{
 Server function for the moments module.

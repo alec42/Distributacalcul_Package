@@ -2,6 +2,7 @@ Package: Distributacalcul
 Type: Package
 Title: Probability Distribution Functions
 Version: 0.2.3
+Date: 2020-06-
 Authors@R: c(
     person("Alec James", "van Rassel", email = "alec.van-rassel.1@ulaval.ca",
             role = c("aut", "cre", "cph")), 
@@ -37,7 +38,8 @@ Imports:
     shinyWidgets,
     shinydashboardPlus,
     shinydashboard,
-    rlang
+    rlang,
+    shiny.i18n
 RoxygenNote: 7.0.2
 Suggests: 
     learnr,
