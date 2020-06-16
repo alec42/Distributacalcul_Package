@@ -1,5 +1,5 @@
 #   Distributacalcul 0.3.0
-## New features
+## New Features
 +   Added `pllogis()` and `dllogis()` functions.
     +   Added the functions to the return field of the `loglogistic-template` file.
 +   Created vignette `distributionParameters`:
@@ -36,7 +36,7 @@
 +   Improved title case and style according to the Tidyverse style guide.
 +   Changed filename of `riskMeasuresBoxVis` to `riskMeasuresBox`
 
-##  Minor changes
+##  Minor Changes
 +   Changed `Etronq_` functions to `Etrunc_` functions.
     +   French spelling to english spelling.
 +   Changed Pareto PDF and CDF from `p_` and `d_` to `p` and `d`: 
@@ -58,28 +58,28 @@
 
 
 #   Distributacalcul 0.2.2
-## New features
+## New Features
 +   Added Pareto PDF and CDF.
 +   Updated IG VaR from 'statmod' package.
 
-## Bug fixed
+## Bug Fixes
 +   Updated URL in description file to github.io site.
 
 #   Distributacalcul 0.2.1
 Unremarkable release which updates the readme.
 
-## Bug fixes
+## Bug Fixes
 +   Updated table of functions.
 +   Fixed English grammar mistake in readme example.
 +   Updated instructions for downloading the package.
 
 #   Distributacalcul 0.2.0
-##  New features
+##  New Features
 +   Added the expected value and variance of the Poisson distribution as functions for eventual addition to Shiny application.
 +   Added the MGF of the Erlang distribution to ensure all distributions which have a MGF have the function defined.
 +   Added NEWS.md file.
 
-##  Bug fixes
+##  Bug Fixes
 +   Added @return field to function documentation to describe what each functions returns.
 +   Changed the filenames for d_negbinom and p_negbinom to dnegbinom and pnegbinom as per function name.
 +   Changed function names for E_logarithmique and V_logarithmique to E_logarithmic and V_logarithmic as per other english function names.

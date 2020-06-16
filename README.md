@@ -1,3 +1,4 @@
+[![](https://www.r-pkg.org/badges/version/Distributacalcul)](https://cran.r-project.org/web/packages/Distributacalcul/index.html)
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # Distributacalcul
