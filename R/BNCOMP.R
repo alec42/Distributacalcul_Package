@@ -1,12 +1,12 @@
-#' Compound Negative Binomial Distribution
+#' Compound negative binomial distribution
 #'
 #' @description
-#'  Computes various risk measures (mean, variance, Value-at-Risk (VaR),
-#'   and Tail Value-at-Risk (TVaR)) for the compound Negative Binomial
-#'   distribution.
+#' Computes various risk measures (mean, variance, Value-at-Risk (VaR),
+#' and Tail Value-at-Risk (TVaR)) for the compound Negative Binomial
+#' distribution.
 #'
 #' @details
-#'  The compound Negative Binomial Distribution has density ....
+#' The compound Negative Binomial Distribution has density ....
 #'
 #' @template size-prob-negbinom-template
 #' @template distr_severity-template
@@ -17,20 +17,25 @@
 #' @template scale-template
 #' @template vark-template
 #'
+#' @return
+#' Function :
+#'   \itemize{
+#'     \item{\code{\link{p_BNCOMP}}}{ gives the cumulative density function.}
+#'     \item{\code{\link{E_BNCOMP}}}{ gives the expected value.}
+#'     \item{\code{\link{V_BNCOMP}}}{ gives the variance.}
+#'     \item{\code{\link{TVaR_BNCOMP}}}{ gives the Tail Value-at-Risk.}
+#'     \item{\code{\link{VaR_BNCOMP}}}{ gives the Value-at-Risk.}
+#'   }
+#' Returned values are approximations for the cumulative density function,
+#' TVaR, and VaR.
+#'
+#' @name BNCOMP
+NULL
+
+#' @rdname BNCOMP
+#'
 #' @importFrom stats dbinom pgamma
 #' @export
-#'
-#' @return
-#'  Function :
-#'  \itemize{
-#'  \item{\code{\link{p_BNCOMP}}}{ gives the cumulative density function.}
-#'  \item{\code{\link{E_BNCOMP}}}{ gives the expected value.}
-#'  \item{\code{\link{V_BNCOMP}}}{ gives the variance.}
-#'  \item{\code{\link{TVaR_BNCOMP}}}{ gives the Tail Value-at-Risk.}
-#'  \item{\code{\link{VaR_BNCOMP}}}{ gives the Value-at-Risk.}
-#'  }
-#'  Returned values are approximations for the cumulative density function,
-#'  TVaR, and VaR.
 #'
 #' @examples
 #' p_BNCOMP(x = 2, size = 1, prob = 0.2, shape = log(1000) - 0.405,
@@ -54,7 +59,8 @@ p_BNCOMP <- function(x, size, prob, shape, rate = 1 / scale, scale = 1 / rate, k
     }
 }
 
-#' @rdname p_BNCOMP
+#' @rdname BNCOMP
+#'
 #' @export
 #'
 #' @examples
@@ -80,7 +86,8 @@ E_BNCOMP <- function(size, prob, shape, rate = 1 / scale, scale = 1 / rate, dist
 }
 
 
-#' @rdname p_BNCOMP
+#' @rdname BNCOMP
+#'
 #' @export
 #'
 #' @examples
@@ -104,10 +111,11 @@ V_BNCOMP <- function(size, prob, shape, rate = 1 / scale, scale = 1 / rate, dist
     return(V.BNCOMP)
 }
 
-#' @rdname p_BNCOMP
-#' @export
+#' @rdname BNCOMP
 #'
 #' @template kap-template
+#'
+#' @export
 #'
 #' @examples
 #' VaR_BNCOMP(kap = 0.9, size = 1, prob = 0.2, shape = 0.59,
@@ -133,10 +141,10 @@ VaR_BNCOMP <- function(kap, size, prob, shape, rate = 1 / scale, scale = 1 / rat
     return(VaR.BNCOMP)
 }
 
-#' @rdname p_BNCOMP
-#' @export
+#' @rdname BNCOMP
 #'
 #' @importFrom stats dbinom pgamma
+#' @export
 #'
 #' @examples
 #' vark_calc <- VaR_BNCOMP(kap = 0.9, size = 1, prob = 0.2, shape = 0.59,

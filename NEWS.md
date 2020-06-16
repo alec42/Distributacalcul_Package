@@ -24,11 +24,17 @@
         +   Added language input at the top right of the screen.
         +   Added a json file containing the translations under man-roxygen/translations.
 
-##  Bug  Fixes
+##  Bug Fixes
 +   Added `ppareto()` and `dpareto()` functions. 
     +   Fixed environment error in the quantile function plot of the Shiny app.
 +   Changed the name of file `lowerthan-template` to `lower.tail-template` :
     +   Typo, it contains the template for the `lower.tail` parameter.
+    +   Updated binomial distribution template file reference to the new one.
++   Fixed the documentation of the compound distributions.
+    +   Now one input under BINCOMP / BNCOMP / PCOMP for the family of distributions.
+    +   All functions appear there instead of having their individual entries in the documentation.
++   Improved title case and style according to the Tidyverse style guide.
++   Changed filename of `riskMeasuresBoxVis` to `riskMeasuresBox`
 
 ##  Minor changes
 +   Changed `Etronq_` functions to `Etrunc_` functions.
@@ -37,7 +43,19 @@
     +   To be consistent with other packages.
     +   Also updated return field of the `pareto-template` file.
 +   Optimized compound distributions' `p_` (CDF) and `TVaR_` codes 
-    +   Removed `sapply` and used R's vector operations instead.
+    +   Removed `sapply` and used R's vector operations instead
++   Merged documentation of families under one file.
+    +   The procedure is to : 
+        1.  Create a new file under the distribution's name 
+        2.  Copy all functions to it.
+        3.  Remove all individual function files.
+        4.  Remove the template file from `man-roxygen/`.
+    +   This helps simplify the package and the documentation.
+    +   The same procedure is used by other stats packages.
+    +   Distributions merged : 
+        1.  Binomial (06/16/2020).
+        2.  Compound distributions (06/16/2020).
+
 
 #   Distributacalcul 0.2.2
 ## New features
@@ -71,6 +89,7 @@ Unremarkable release which updates the readme.
 +   Removed d_negbinom and p_negbinom (instead of not exporting the function) until I can fix the mistake in the function.
 +   Removed the notes on Distributacalcul_vis module functions and replaced with 'return' field describing their use.
 +   Added domain restrictions for the Poisson distribution.
+
 
 #   Distributacalcul 0.1.0
 +   initial release.

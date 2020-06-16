@@ -1,11 +1,11 @@
-#' Compound Poisson Distribution
+#' Compound Poisson distribution
 #'
 #' @description
-#'  Computes various risk measures (mean, variance, Value-at-Risk (VaR),
-#'   and Tail Value-at-Risk (TVaR)) for the compound Poisson distribution.
+#' Computes various risk measures (mean, variance, Value-at-Risk (VaR),
+#' and Tail Value-at-Risk (TVaR)) for the compound Poisson distribution.
 #'
 #' @details
-#'  The compound Binomial Distribution with parameters ... has density ....
+#' The compound Binomial Distribution with parameters ... has density ....
 #'
 #' @template lambda-template
 #' @template distr_severity-template
@@ -16,20 +16,25 @@
 #' @template scale-template
 #' @template vark-template
 #'
+#' @return
+#' Function :
+#'   \itemize{
+#'     \item{\code{\link{p_PCOMP}}}{ gives the cumulative density function.}
+#'     \item{\code{\link{E_PCOMP}}}{ gives the expected value.}
+#'     \item{\code{\link{V_PCOMP}}}{ gives the variance.}
+#'     \item{\code{\link{TVaR_PCOMP}}}{ gives the Tail Value-at-Risk.}
+#'     \item{\code{\link{VaR_PCOMP}}}{ gives the Value-at-Risk.}
+#'   }
+#' Returned values are approximations for the cumulative density function,
+#' TVaR, and VaR.
+#'
+#' @name PCOMP
+NULL
+
+#' @rdname PCOMP
+#'
 #' @importFrom stats dpois pgamma
 #' @export
-#'
-#' @return
-#'  Function :
-#'  \itemize{
-#'  \item{\code{\link{p_PCOMP}}}{ gives the cumulative density function.}
-#'  \item{\code{\link{E_PCOMP}}}{ gives the expected value.}
-#'  \item{\code{\link{V_PCOMP}}}{ gives the variance.}
-#'  \item{\code{\link{TVaR_PCOMP}}}{ gives the Tail Value-at-Risk.}
-#'  \item{\code{\link{VaR_PCOMP}}}{ gives the Value-at-Risk.}
-#'  }
-#'  Returned values are approximations for the cumulative density function,
-#'  TVaR, and VaR.
 #'
 #' @examples
 #' p_PCOMP(x = 2, lambda = 2, shape = log(1000) - 0.405,
@@ -52,7 +57,8 @@ p_PCOMP <- function(x, lambda, shape, rate = 1 / scale, scale = 1 / rate, k0, di
     }
 }
 
-#' @rdname p_PCOMP
+#' @rdname PCOMP
+#'
 #' @export
 #'
 #' @examples
@@ -73,7 +79,8 @@ E_PCOMP <- function(lambda, shape, rate = 1 / scale, scale = 1 / rate, distr_sev
     }
 }
 
-#' @rdname p_PCOMP
+#' @rdname PCOMP
+#'
 #' @export
 #'
 #' @examples
@@ -94,13 +101,12 @@ V_PCOMP <- function(lambda, shape, rate = 1 / scale, scale = 1 / rate, distr_sev
     }
 }
 
-
-#' @rdname p_PCOMP
-#' @export
-#'
-#' @importFrom stats optimize dpois
+#' @rdname PCOMP
 #'
 #' @template kap-template
+#'
+#' @importFrom stats optimize dpois
+#' @export
 #'
 #' @examples
 #' VaR_PCOMP(kap = 0.9, lambda = 2, shape = log(1000) - 0.405,
@@ -125,11 +131,10 @@ VaR_PCOMP <- function(kap, lambda, shape, rate = 1 / scale, scale = 1 / rate, k0
     return(VaR.PCOMP)
 }
 
-
-#' @rdname p_PCOMP
-#' @export
+#' @rdname PCOMP
 #'
 #' @importFrom stats pgamma dpois
+#' @export
 #'
 #' @examples
 #' vark_calc <- VaR_PCOMP(kap = 0.9, lambda = 2, shape = 0.59,

@@ -1,11 +1,11 @@
-#' Compound Binomial Distribution
+#' Compound binomial distribution
 #'
 #' @description
-#'  Computes various risk measures (mean, variance, Value-at-Risk (VaR),
-#'   and Tail Value-at-Risk (TVaR)) for the compound Binomial distribution.
+#' Computes various risk measures (mean, variance, Value-at-Risk (VaR),
+#' and Tail Value-at-Risk (TVaR)) for the compound Binomial distribution.
 #'
 #' @details
-#'  The compound Binomial Distribution has density ....
+#' The compound Binomial Distribution has density ....
 #'
 #' @template size-prob-template
 #' @template distr_severity-template
@@ -16,21 +16,25 @@
 #' @template scale-template
 #' @template vark-template
 #'
+#' @return
+#' Function :
+#'   \itemize{
+#'     \item{\code{\link{p_BINCOMP}}}{ gives the cumulative density function.}
+#'     \item{\code{\link{E_BINCOMP}}}{ gives the expected value.}
+#'     \item{\code{\link{V_BINCOMP}}}{ gives the variance.}
+#'     \item{\code{\link{TVaR_BINCOMP}}}{ gives the Tail Value-at-Risk.}
+#'     \item{\code{\link{VaR_BINCOMP}}}{ gives the Value-at-Risk.}
+#'   }
+#' Returned values are approximations for the cumulative density function,
+#' TVaR, and VaR.
+#'
+#' @name BINCOMP
+NULL
+
+#' @rdname BINCOMP
+#'
 #' @importFrom stats dbinom pgamma
 #' @export
-#'
-#' @return
-#'  Function :
-#'  \itemize{
-#'  \item{\code{\link{p_BINCOMP}}}{ gives the cumulative density function.}
-#'  \item{\code{\link{E_BINCOMP}}}{ gives the expected value.}
-#'  \item{\code{\link{V_BINCOMP}}}{ gives the variance.}
-#'  \item{\code{\link{TVaR_BINCOMP}}}{ gives the Tail Value-at-Risk.}
-#'  \item{\code{\link{VaR_BINCOMP}}}{ gives the Value-at-Risk.}
-#'  }
-#'  Returned values are approximations for the cumulative density function,
-#'  TVaR, and VaR.
-#'
 #'
 #' @examples
 #' p_BINCOMP(x = 2, size = 1, prob = 0.2, shape = log(1000) - 0.405,
@@ -55,7 +59,8 @@ p_BINCOMP <- function(x, size, prob, shape, rate = 1 / scale, scale = 1 / rate, 
     }
 }
 
-#' @rdname p_BINCOMP
+#' @rdname BINCOMP
+#'
 #' @export
 #'
 #' @examples
@@ -78,7 +83,8 @@ E_BINCOMP <- function(size, prob, shape, rate = 1 / scale, scale = 1 / rate, dis
     }
 }
 
-#' @rdname p_BINCOMP
+#' @rdname BINCOMP
+#'
 #' @export
 #'
 #' @examples
@@ -101,10 +107,11 @@ V_BINCOMP <- function(size, prob, shape, rate = 1 / scale, scale = 1 / rate, dis
     }
 }
 
-#' @rdname p_BINCOMP
-#' @export
+#' @rdname BINCOMP
 #'
 #' @template kap-template
+#'
+#' @export
 #'
 #' @examples
 #' VaR_BINCOMP(kap = 0.9, size = 1, prob = 0.2, shape = log(1000) - 0.405,
@@ -130,10 +137,10 @@ VaR_BINCOMP <- function(kap, size, prob, shape, rate = 1 / scale, scale = 1 / ra
     return(VaR.BINCOMP)
 }
 
-#' @rdname p_BINCOMP
-#' @export
+#' @rdname BINCOMP
 #'
 #' @importFrom stats dbinom pgamma
+#' @export
 #'
 #' @examples
 #' vark_calc <- VaR_BINCOMP(kap = 0.9, size = 1, prob = 0.2, shape = 0.59,
