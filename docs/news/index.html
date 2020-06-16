@@ -67,7 +67,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
       </span>
     </div>
 
@@ -81,6 +81,18 @@
 </li>
 <li>
   <a href="../reference/index.html">Reference</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/distributionParameters.html">Shape, Rate, Scale, Location Parameters</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="../news/index.html">Changelog</a>
@@ -105,13 +117,103 @@
       
     </div>
 
-    <div id="distributacalcul-022" class="section level1">
+    <div id="distributacalcul-030" class="section level1">
 <h1 class="page-header">
-<a href="#distributacalcul-022" class="anchor"></a>Distributacalcul 0.2.2<small> Unreleased </small>
+<a href="#distributacalcul-030" class="anchor"></a>Distributacalcul 0.3.0<small> Unreleased </small>
 </h1>
 <div id="new-features" class="section level2">
 <h2 class="hasAnchor">
 <a href="#new-features" class="anchor"></a>New features</h2>
+<ul>
+<li>Added <code><a href="../reference/pllogis.html">pllogis()</a></code> and <code><a href="../reference/dllogis.html">dllogis()</a></code> functions.
+<ul>
+<li>Added the functions to the return field of the <code>loglogistic-template</code> file.</li>
+</ul>
+</li>
+<li>Created vignette <code>distributionParameters</code>:
+<ul>
+<li>Explains the various parameters of distributions (scale, rate, location).</li>
+<li>Still need to add shape and dispersion.</li>
+<li>Still need to fix viewing of vignette.</li>
+</ul>
+</li>
+<li>Added functionality to <code><a href="../reference/MGF_negbinom.html">MGF_negbinom()</a></code> and <code><a href="../reference/PGF_negbinom.html">PGF_negbinom()</a></code> functions:
+<ul>
+<li>Now have both definitions of the Negative Binomial (number of trials or number of failures).</li>
+</ul>
+</li>
+<li>Replaced Shiny module <code><a href="../reference/Distributacalcul_vis.html">Distributacalcul_vis()</a></code> by <code><a href="../reference/distributacalculVis.html">distributacalculVis()</a></code> :
+<ul>
+<li>The new visualisation function can choose which modules to execute.</li>
+<li>There are 4 different modules for :
+<ol>
+<li>The input parameters <code><a href="../reference/parametersBox.html">parametersBox()</a></code>.</li>
+<li>The PDF and CDF <code><a href="../reference/functionsBox.html">functionsBox()</a></code>.</li>
+<li>The risk measures (VaR and TVaR) <code><a href="../reference/riskMeasuresBox.html">riskMeasuresBox()</a></code>.</li>
+<li>Various moments <code><a href="../reference/momentsBox.html">momentsBox()</a></code>.</li>
+</ol>
+</li>
+<li>Added LaTeX formulas for all functions (VaR and TVaR, moments, PDF and CDF).</li>
+<li>Added language translation with package shiny.i18n.
+<ul>
+<li>English and French translation.</li>
+<li>Added shiny.i18n to the imports section of the <code>DESCRIPTION</code> file.</li>
+<li>Changed titles and user inputs to be bilingual.</li>
+<li>Added (bilingual) labels to the plots.</li>
+<li>Added language input at the top right of the screen.</li>
+<li>Added a json file containing the translations under man-roxygen/translations.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="bug-fixes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#bug-fixes" class="anchor"></a>Bug Fixes</h2>
+<ul>
+<li>Added <code><a href="../reference/ppareto.html">ppareto()</a></code> and <code><a href="../reference/dpareto.html">dpareto()</a></code> functions.
+<ul>
+<li>Fixed environment error in the quantile function plot of the Shiny app.</li>
+</ul>
+</li>
+<li>Changed the name of file <code>lowerthan-template</code> to <code>lower.tail-template</code> :
+<ul>
+<li>Typo, it contains the template for the <code>lower.tail</code> parameter.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="minor-changes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#minor-changes" class="anchor"></a>Minor changes</h2>
+<ul>
+<li>Changed <code>Etronq_</code> functions to <code>Etrunc_</code> functions.
+<ul>
+<li>French spelling to english spelling.</li>
+</ul>
+</li>
+<li>Changed Pareto PDF and CDF from <code>p_</code> and <code>d_</code> to <code>p</code> and <code>d</code>:
+<ul>
+<li>To be consistent with other packages.</li>
+<li>Also updated return field of the <code>pareto-template</code> file.</li>
+</ul>
+</li>
+<li>Optimized compound distributions’ <code>p_</code> (CDF) and <code>TVaR_</code> codes
+<ul>
+<li>Removed <code>sapply</code> and used R’s vector operations instead.</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+    <div id="distributacalcul-022" class="section level1">
+<h1 class="page-header">
+<a href="#distributacalcul-022" class="anchor"></a>Distributacalcul 0.2.2<small> 2020-06-13 </small>
+</h1>
+<div id="new-features-1" class="section level2">
+<h2 class="hasAnchor">
+<a href="#new-features-1" class="anchor"></a>New features</h2>
 <ul>
 <li>Added Pareto PDF and CDF.</li>
 <li>Updated IG VaR from ‘statmod’ package.</li>
@@ -130,9 +232,9 @@
 <a href="#distributacalcul-021" class="anchor"></a>Distributacalcul 0.2.1<small> Unreleased </small>
 </h1>
 <p>Unremarkable release which updates the readme.</p>
-<div id="bug-fixes" class="section level2">
+<div id="bug-fixes-1" class="section level2">
 <h2 class="hasAnchor">
-<a href="#bug-fixes" class="anchor"></a>Bug fixes</h2>
+<a href="#bug-fixes-1" class="anchor"></a>Bug fixes</h2>
 <ul>
 <li>Updated table of functions.</li>
 <li>Fixed English grammar mistake in readme example.</li>
@@ -144,18 +246,18 @@
 <h1 class="page-header">
 <a href="#distributacalcul-020" class="anchor"></a>Distributacalcul 0.2.0<small> 2020-06-09 </small>
 </h1>
-<div id="new-features-1" class="section level2">
+<div id="new-features-2" class="section level2">
 <h2 class="hasAnchor">
-<a href="#new-features-1" class="anchor"></a>New features</h2>
+<a href="#new-features-2" class="anchor"></a>New features</h2>
 <ul>
 <li>Added the expected value and variance of the Poisson distribution as functions for eventual addition to Shiny application.</li>
 <li>Added the MGF of the Erlang distribution to ensure all distributions which have a MGF have the function defined.</li>
 <li>Added NEWS.md file.</li>
 </ul>
 </div>
-<div id="bug-fixes-1" class="section level2">
+<div id="bug-fixes-2" class="section level2">
 <h2 class="hasAnchor">
-<a href="#bug-fixes-1" class="anchor"></a>Bug fixes</h2>
+<a href="#bug-fixes-2" class="anchor"></a>Bug fixes</h2>
 <ul>
 <li>Added <a href='https://github.com/return'>@return</a> field to function documentation to describe what each functions returns.</li>
 <li>Changed the filenames for d_negbinom and p_negbinom to dnegbinom and pnegbinom as per function name.</li>
@@ -184,6 +286,7 @@
     <div id="tocnav">
       <h2>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
+        <li><a href="#distributacalcul-030">0.3.0</a></li>
         <li><a href="#distributacalcul-022">0.2.2</a></li>
         <li><a href="#distributacalcul-021">0.2.1</a></li>
         <li><a href="#distributacalcul-020">0.2.0</a></li>

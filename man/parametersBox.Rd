@@ -24,3 +24,4 @@ Server function for the parameter module.
 \description{
 Interactive parameter chooser (server side)
 }
+\keyword{internal}

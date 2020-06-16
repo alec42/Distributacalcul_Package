@@ -16,3 +16,4 @@ UI function for the moments module.
 \description{
 Interactive moments visualization (UI side)
 }
+\keyword{internal}

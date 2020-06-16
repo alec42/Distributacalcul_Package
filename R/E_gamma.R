@@ -1,7 +1,8 @@
 #' Expected value of the Gamma distribution
 #'
-#' @description Expected value of the Gamma distribution with shape
-#'  parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
+#' @description
+#' Expected value of the Gamma distribution with shape parameter
+#' \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
 #'
 #' @template gamma-template
 #'

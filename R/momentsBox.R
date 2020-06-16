@@ -16,6 +16,8 @@
 #' @importFrom shinyWidgets radioGroupButtons
 #' @export
 #'
+#' @keywords internal
+#'
 momentsBox <- function(input, output, session, law, lang) {
     ns <- session$ns
 
@@ -281,6 +283,8 @@ momentsBox <- function(input, output, session, law, lang) {
 #' @importFrom tippy tippyOutput
 #' @importFrom plotly plotlyOutput
 #' @export
+#'
+#' @keywords internal
 #'
 momentsBoxUI <- function(id) {
     ns <- shiny::NS(id)

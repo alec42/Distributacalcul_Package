@@ -1,29 +1,43 @@
-#   Distributacalcul 0.2.3
+#   Distributacalcul 0.3.0
 ## New features
-+   Added loglogistic PDF and CDF.
-+   Created vignette explaining the various parameters of distributions (scale, rate, location).
++   Added `pllogis()` and `dllogis()` functions.
+    +   Added the functions to the return field of the `loglogistic-template` file.
++   Created vignette `distributionParameters`:
+    +   Explains the various parameters of distributions (scale, rate, location).
     +   Still need to add shape and dispersion.
     +   Still need to fix viewing of vignette.
-+   Added both definitions of the PGF and MGF for the negative binomial (number of trials or number of failures).
-+   Seperated Shiny module into 4 different modules for the parameters, functions, risk measures and moments.
-    +   Created new visualisation function which can choose which modules to execute.
-+   Added LaTeX formulas for all functions (VaR, TVaR, moments, PDF and CDF) in the Shiny application.
-+   Added language translation to the Shiny Application (English and French).
-    +   Added package shiny.i18n to the imports.
-    +   Added (bilingual) labels to the plots.
-    +   Changed titles and user inputs to be bilingual.
-    +   Added language input at the top right of the screen.
-    +   Added json file for the translations under man-roxygen/translations.
++   Added functionality to `MGF_negbinom()` and `PGF_negbinom()` functions:
+    +   Now have both definitions of the Negative Binomial (number of trials or number of failures).
++   Replaced Shiny module `Distributacalcul_vis()` by `distributacalculVis()` :
+    +   The new visualisation function can choose which modules to execute.
+    +   There are 4 different modules for :
+        1.  The input parameters `parametersBox()`.
+        2.  The PDF and CDF `functionsBox()`.
+        3.  The risk measures (VaR and TVaR) `riskMeasuresBox()`.
+        4.  Various moments `momentsBox()`.
+    +   Added LaTeX formulas for all functions (VaR and TVaR, moments, PDF and CDF).
+    +   Added language translation with package shiny.i18n.
+        +   English and French translation.
+        +   Added shiny.i18n to the imports section of the `DESCRIPTION` file.
+        +   Changed titles and user inputs to be bilingual.
+        +   Added (bilingual) labels to the plots.
+        +   Added language input at the top right of the screen.
+        +   Added a json file containing the translations under man-roxygen/translations.
 
 ##  Bug  Fixes
-+   By adding the PDF and CDF, fixed an error in the quantile function plot in the Shiny application.
-+   Fixed name of file for lower.tail variable from 'lowerthan-template' to 'lower.tail-template'.
++   Added `ppareto()` and `dpareto()` functions. 
+    +   Fixed environment error in the quantile function plot of the Shiny app.
++   Changed the name of file `lowerthan-template` to `lower.tail-template` :
+    +   Typo, it contains the template for the `lower.tail` parameter.
 
 ##  Minor changes
-+   Changed the spelling of the truncated mean functions from french spelling 'Etronq' to english spelling 'Etrunc'.
-+   Changed function name of pareto distribution functions from 'p_' and 'd_' to 'p' and 'd' to be consistent with other packages (also updated return field of the 'pareto-template' file.
-+   Added loglogistic density functions to the return field of the 'loglogistic-template' file.
-+   Optimized code for the CDF and TVaR of the compound distributions by removing the sapplies and using R's vector operations.
++   Changed `Etronq_` functions to `Etrunc_` functions.
+    +   French spelling to english spelling.
++   Changed Pareto PDF and CDF from `p_` and `d_` to `p` and `d`: 
+    +   To be consistent with other packages.
+    +   Also updated return field of the `pareto-template` file.
++   Optimized compound distributions' `p_` (CDF) and `TVaR_` codes 
+    +   Removed `sapply` and used R's vector operations instead.
 
 #   Distributacalcul 0.2.2
 ## New features

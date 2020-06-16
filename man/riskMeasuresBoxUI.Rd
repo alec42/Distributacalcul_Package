@@ -16,3 +16,4 @@ UI function for the risk measures module.
 \description{
 Interactive risk measures visualization (UI side)
 }
+\keyword{internal}

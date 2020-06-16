@@ -17,6 +17,8 @@
 #' @importFrom shinyWidgets switchInput pickerInput
 #' @export
 #'
+#' @keywords internal
+#'
 functionsBox <- function(input, output, session, law, lang) {
     ns <- session$ns
 
@@ -253,6 +255,8 @@ functionsBox <- function(input, output, session, law, lang) {
 #' @importFrom tippy tippyOutput
 #' @importFrom plotly plotlyOutput
 #' @export
+#'
+#' @keywords internal
 #'
 functionsBoxUI <- function(id) {
     ns <- shiny::NS(id)

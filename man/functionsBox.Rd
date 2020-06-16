@@ -24,3 +24,4 @@ Server function for the functions module.
 \description{
 Interactive functions visualization (server side)
 }
+\keyword{internal}

@@ -24,3 +24,4 @@ Server function for the risk measures module.
 \description{
 Interactive risk measures visualization (server side)
 }
+\keyword{internal}

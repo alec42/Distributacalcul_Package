@@ -14,6 +14,8 @@
 #' @importFrom shiny reactive renderUI numericInput withMathJax
 #' @export
 #'
+#' @keywords internal
+#'
 parametersBox <- function(input, output, session, law, lang) {
     ns <- session$ns
 
@@ -80,6 +82,8 @@ parametersBox <- function(input, output, session, law, lang) {
 #' @importFrom shiny NS uiOutput
 #' @importFrom shinydashboardPlus boxPlus
 #' @export
+#'
+#' @keywords internal
 #'
 parametersBoxUI <- function(id) {
     ns <- shiny::NS(id)

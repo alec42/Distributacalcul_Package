@@ -24,3 +24,4 @@ Server function for the moments module.
 \description{
 Interactive moments visualization (server side)
 }
+\keyword{internal}

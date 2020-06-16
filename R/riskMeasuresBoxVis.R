@@ -18,6 +18,8 @@
 #' @importFrom shinyWidgets pickerInput
 #' @export
 #'
+#' @keywords internal
+#'
 riskMeasuresBox <- function(input, output, session, law, lang) {
     ns <- session$ns
 
@@ -239,6 +241,8 @@ riskMeasuresBox <- function(input, output, session, law, lang) {
 #' @importFrom tippy tippyOutput
 #' @importFrom plotly plotlyOutput
 #' @export
+#'
+#' @keywords internal
 #'
 riskMeasuresBoxUI <- function(id) {
     ns <- shiny::NS(id)

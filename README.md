@@ -186,3 +186,4 @@ below
 | 20/05/2020 |                    Addition of Shiny component.                     |
 | 02/06/2020 | Completion of documentation, first attempt of a submission to CRAN. |
 | 02/07/2020 |       Modifications according to CRAN’s notes, version 0.2.0.       |
+| 02/13/2020 |                     Small fixes, version 0.2.2.                     |

@@ -16,3 +16,4 @@ UI function for the parameter module.
 \description{
 Interactive parameter chooser (UI side)
 }
+\keyword{internal}

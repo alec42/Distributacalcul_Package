@@ -29,8 +29,8 @@ Function :
  Invalid parameter values will return an error detailing which parameter is problematic.
 }
 \description{
-Expected value of the Gamma distribution with shape
- parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
+Expected value of the Gamma distribution with shape parameter
+\eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
 }
 \details{
 The Gamma distribution with shape parameter \eqn{\alpha}{a} and rate
