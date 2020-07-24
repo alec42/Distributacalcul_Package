@@ -3,7 +3,7 @@
 #' @description Value-at-Risk of the Normal distribution with mean
 #'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}. Wrapper of qnorm.
 #'
-#' @templateVar kap TRUE
+#' @template kap-template
 #' @template norm-template
 #'
 #' @export

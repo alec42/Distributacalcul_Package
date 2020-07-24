@@ -3,7 +3,7 @@
 #' @description Value-at-Risk of the Uniform distribution
 #'  with min \eqn{a} and max \eqn{b}.
 #'
-#' @templateVar kap TRUE
+#' @template kap-template
 #' @template continuous-uniform-template
 #'
 #' @export

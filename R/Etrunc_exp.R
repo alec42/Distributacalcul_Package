@@ -3,8 +3,8 @@
 #' @description Truncated mean of the Exponential distribution with
 #'  rate parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar d TRUE
-#' @templateVar less.than.d TRUE
+#' @template d-template
+#' @template less.than.d-template
 #' @template exp-template
 #'
 #' @export

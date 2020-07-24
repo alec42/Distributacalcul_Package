@@ -5,7 +5,7 @@
 #'
 #' @note Wrapper of qgamma from package stats.
 #'
-#' @templateVar kap TRUE
+#' @template kap-template
 #' @template gamma-template
 #'
 #' @export

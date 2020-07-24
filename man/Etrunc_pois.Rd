@@ -11,7 +11,7 @@ Etrunc_pois(d, lambda, k0, less.than.d = TRUE)
 
 \item{lambda}{Rate parameter \eqn{\lambda}{lambda}.}
 
-\item{k0}{point up to which to sum the distribution to approximate the expected value.}
+\item{k0}{point up to which to sum the distribution for the approximation.}
 
 \item{less.than.d}{logical; if \code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.}
 }

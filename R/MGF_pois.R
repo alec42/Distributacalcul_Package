@@ -3,7 +3,7 @@
 #' @description Moment Generating Function (MGF) of the Poisson
 #'    distribution with rate parameter \eqn{\lambda}{lambda}.
 #'
-#' @param t t
+#' @template t-template
 #' @template pois-template
 #'
 #' @examples

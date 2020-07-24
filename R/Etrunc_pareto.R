@@ -3,8 +3,8 @@
 #' @description Truncated mean of the Pareto distribution with shape
 #'  parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\lambda}{lambda}.
 #'
-#' @templateVar d TRUE
-#' @templateVar less.than.d TRUE
+#' @template d-template
+#' @template less.than.d-template
 #' @template pareto-template
 #'
 #' @export

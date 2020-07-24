@@ -3,7 +3,7 @@
 #' @description Stop-loss of the Inverse Gaussian distribution with
 #'  mean \eqn{\mu}{mu} and shape parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar d TRUE
+#' @template d-template
 #' @template IG-template
 #'
 #' @export

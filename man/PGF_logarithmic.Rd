@@ -14,12 +14,16 @@ PGF_logarithmic(t, prob)
 \value{
 Function :
  \itemize{
+ \item{\code{\link{dlogarithmic}}}{ gives the probability mass function (PMF).}
+ \item{\code{\link{plogarithmic}}}{ gives the cumulative mass function (CMF).}
+ \item{\code{\link{VaR_logarithmic}}}{ gives the Value-at-Risk (VaR), a.k.a quantile, function.}
  \item{\code{\link{MGF_logarithmic}}}{ gives the moment generating function (MGF).}
  \item{\code{\link{PGF_logarithmic}}}{ gives the probability generating function (PGF).}
  \item{\code{\link{E_logarithmic}}}{ gives the expected value.}
  \item{\code{\link{V_logarithmic}}}{ gives the variance.}
  }
  Invalid parameter values will return an error detailing which parameter is problematic.
+ Returned values of the VaR are approximations.
 }
 \description{
 Probability Generating Function (PGF) of the Logarithmic
@@ -40,6 +44,9 @@ PGF_logarithmic(t = .2, prob = 0.50)
 Other Logarithmic Distribution: 
 \code{\link{E_logarithmic}()},
 \code{\link{MGF_logarithmic}()},
-\code{\link{V_logarithmic}()}
+\code{\link{V_logarithmic}()},
+\code{\link{VaR_logarithmic}()},
+\code{\link{dlogarithmic}()},
+\code{\link{plogarithmic}()}
 }
 \concept{Logarithmic Distribution}

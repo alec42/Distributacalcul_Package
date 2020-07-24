@@ -3,7 +3,7 @@
 #' @description kth moment of the Loglogistic distribution with shape parameter
 #'  \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.
 #'
-#' @templateVar k TRUE
+#' @template k-template
 #' @template loglogistic-template
 #'
 #' @export

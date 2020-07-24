@@ -3,7 +3,7 @@
 #' @description Tail Value-at-Risk of the Gamma distribution with shape
 #'  parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar kap TRUE
+#' @template kap-template
 #' @template gamma-template
 #'
 #' @export

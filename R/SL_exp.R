@@ -3,7 +3,7 @@
 #' @description Stop-loss of the Exponential distribution with
 #'  rate parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar d TRUE
+#' @template d-template
 #' @template exp-template
 #'
 #' @export

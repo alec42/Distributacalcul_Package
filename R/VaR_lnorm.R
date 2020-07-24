@@ -3,7 +3,7 @@
 #' @description Value-at-Risk of the Lognormal distribution with mean
 #'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}. Wrapper of qlnorm.
 #'
-#' @templateVar kap TRUE
+#' @template kap-template
 #' @template lnorm-template
 #'
 #' @export

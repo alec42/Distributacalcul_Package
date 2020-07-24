@@ -3,7 +3,7 @@
 #' @description kth moment of the Uniform distribution
 #'  with min \eqn{a} and max \eqn{b}.
 #'
-#' @templateVar k TRUE
+#' @template k-template
 #' @template continuous-uniform-template
 #'
 #' @export

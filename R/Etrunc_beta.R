@@ -3,8 +3,8 @@
 #' @description Truncated mean of the Beta distribution with shape parameters
 #'  \eqn{\alpha}{alpha} and \eqn{\beta}{beta}.
 #'
-#' @templateVar d TRUE
-#' @templateVar less.than.d TRUE
+#' @template d-template
+#' @template less.than.d-template
 #' @template beta-template
 #'
 #' @export

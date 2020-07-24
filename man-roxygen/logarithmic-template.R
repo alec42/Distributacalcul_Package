@@ -9,12 +9,16 @@
 #' @return
 #'  Function :
 #'  \itemize{
+#'  \item{\code{\link{dlogarithmic}}}{ gives the probability mass function (PMF).}
+#'  \item{\code{\link{plogarithmic}}}{ gives the cumulative mass function (CMF).}
+#'  \item{\code{\link{VaR_logarithmic}}}{ gives the Value-at-Risk (VaR), a.k.a quantile, function.}
 #'  \item{\code{\link{MGF_logarithmic}}}{ gives the moment generating function (MGF).}
 #'  \item{\code{\link{PGF_logarithmic}}}{ gives the probability generating function (PGF).}
 #'  \item{\code{\link{E_logarithmic}}}{ gives the expected value.}
 #'  \item{\code{\link{V_logarithmic}}}{ gives the variance.}
 #'  }
 #'  Invalid parameter values will return an error detailing which parameter is problematic.
+#'  Returned values of the VaR are approximations.
 #'
 #' @family Logarithmic Distribution
 #'

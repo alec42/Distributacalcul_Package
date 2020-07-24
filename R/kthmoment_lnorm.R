@@ -3,7 +3,7 @@
 #' @description kth moment of the Lognormal distribution with mean
 #'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 #'
-#' @templateVar k TRUE
+#' @template k-template
 #' @template lnorm-template
 #'
 #' @export

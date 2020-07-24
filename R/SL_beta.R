@@ -3,7 +3,7 @@
 #' @description Stop-loss of the Beta distribution with shape parameters
 #'  \eqn{\alpha}{alpha} and \eqn{\beta}{alpha}.
 #'
-#' @templateVar d TRUE
+#' @template d-template
 #' @template beta-template
 #'
 #' @examples

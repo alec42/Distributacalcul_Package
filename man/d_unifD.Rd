@@ -7,7 +7,7 @@
 d_unifD(x, min = 0, max = 1)
 }
 \arguments{
-\item{x}{quantile. By definition, it has no impact on the uniform distribution. Set to 1 by default.}
+\item{x}{quantile.}
 
 \item{min, max}{lower and upper limits of the distribution. Must be finite.}
 }
@@ -17,7 +17,7 @@ Function :
  \item{\code{\link{E_unifD}}}{ gives the expected value.}
  \item{\code{\link{V_unifD}}}{ gives the variance.}
  \item{\code{\link{d_unifD}}}{ gives the density function.}
- \item{\code{\link{d_unifD}}}{ gives the cumulative density function.}
+ \item{\code{\link{p_unifD}}}{ gives the cumulative density function.}
  }
  Invalid parameter values will return an error detailing which parameter is problematic.
 }

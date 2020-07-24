@@ -11,7 +11,7 @@ TVaR_pois(kap, lambda, k0)
 
 \item{lambda}{Rate parameter \eqn{\lambda}{lambda}.}
 
-\item{k0}{point up to which to sum the distribution to approximate the expected value.}
+\item{k0}{point up to which to sum the distribution for the approximation.}
 }
 \value{
 Function :

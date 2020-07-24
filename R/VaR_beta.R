@@ -7,7 +7,7 @@
 #' @note Function VaR_beta is a wrapper for the qbeta function from the
 #' stats package.
 #'
-#' @templateVar kap TRUE
+#' @template kap-template
 #' @template beta-template
 #'
 #' @export

@@ -3,8 +3,8 @@
 #' @description Tail Value-at-Risk of the Poisson distribution with rate parameter
 #'  \eqn{\lambda}{lambda}.
 #'
-#' @templateVar kap TRUE
-#' @templateVar k0 TRUE
+#' @template kap-template
+#' @template k0-template
 #' @template pois-template
 #'
 #' @export

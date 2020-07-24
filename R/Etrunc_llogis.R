@@ -4,8 +4,8 @@
 #'  shape parameter \eqn{\tau}{tau} and scale parameter
 #'  \eqn{\lambda}{lambda}.
 #'
-#' @templateVar d TRUE
-#' @templateVar less.than.d TRUE
+#' @template d-template
+#' @template less.than.d-template
 #' @template loglogistic-template
 #'
 #' @export

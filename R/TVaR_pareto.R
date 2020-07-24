@@ -3,7 +3,7 @@
 #' @description Tail Value-at-Risk of the Pareto distribution with shape
 #'  parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\lambda}{lambda}.
 #'
-#' @templateVar kap TRUE
+#' @template kap-template
 #' @template pareto-template
 #'
 #' @export

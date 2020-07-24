@@ -3,7 +3,7 @@
 #' @description Limited mean of the Pareto distribution with shape
 #'  parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\lambda}{lambda}.
 #'
-#' @templateVar d TRUE
+#' @template d-template
 #' @template pareto-template
 #'
 #' @export

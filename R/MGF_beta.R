@@ -3,8 +3,8 @@
 #' @description Moment Generating Function (MGF) of the Beta distribution
 #'  with shape parameters \eqn{\alpha}{alpha} and \eqn{\beta}{beta}.
 #'
-#' @param t t.
-#' @templateVar k0 TRUE
+#' @template t-template
+#' @template k0-template
 #' @template beta-template
 #'
 #' @export

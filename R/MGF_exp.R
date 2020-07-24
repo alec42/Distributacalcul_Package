@@ -3,7 +3,7 @@
 #' @description Moment Generating Function (MGF) of the Exponential
 #'  distribution with rate parameter \eqn{\beta}{beta}.
 #'
-#' @param t t.
+#' @template t-template
 #' @template exp-template
 #'
 #' @export

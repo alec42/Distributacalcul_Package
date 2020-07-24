@@ -2,11 +2,6 @@
 #' @param rate \eqn{\beta}{beta} is the rate parameter, must be positive.
 #' @param scale alternative parameterization to rate parameter, scale = 1 / rate.
 #'
-#' <%=ifelse(exists("d"), "@param d cut-off value.", "") %>
-#' <%=ifelse(exists("kap"), "@param kap probability.", "") %>
-#' <%=ifelse(exists("k"), "@param k kth-moment.", "") %>
-#' <%=ifelse(exists("less.than.d"), "@param less.than.d logical; if \\code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.", "") %>
-#'
 #' @details
 #'  The Gamma distribution with shape parameter \eqn{\alpha}{a} and rate
 #'    parameter \eqn{\beta}{b} has density:
@@ -26,6 +21,7 @@
 #'  \item{\code{\link{Elim_gamma}}}{ gives the limited mean.}
 #'  \item{\code{\link{Mexcess_gamma}}}{ gives the mean excess loss.}
 #'  \item{\code{\link{TVaR_gamma}}}{ gives the Tail Value-at-Risk.}
+#'  \item{\code{\link{VaR_gamma}}}{ gives the Value-at-Risk.}
 #'  }
 #'  Invalid parameter values will return an error detailing which parameter is problematic.
 #'

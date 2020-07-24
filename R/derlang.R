@@ -3,7 +3,7 @@
 #' @description Density function of the Erlang distribution
 #'  with shape parameter \eqn{n} and rate parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar x TRUE
+#' @template x-template
 #' @template erlang-template
 #'
 #' @export

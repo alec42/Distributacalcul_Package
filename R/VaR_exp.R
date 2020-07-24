@@ -3,7 +3,7 @@
 #' @description Value-at-Risk of the Exponential distribution with rate
 #'   parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar kap TRUE
+#' @template kap-template
 #' @template exp-template
 #'
 #' @export

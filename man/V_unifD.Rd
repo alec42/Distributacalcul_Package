@@ -15,7 +15,7 @@ Function :
  \item{\code{\link{E_unifD}}}{ gives the expected value.}
  \item{\code{\link{V_unifD}}}{ gives the variance.}
  \item{\code{\link{d_unifD}}}{ gives the density function.}
- \item{\code{\link{d_unifD}}}{ gives the cumulative density function.}
+ \item{\code{\link{p_unifD}}}{ gives the cumulative density function.}
  }
  Invalid parameter values will return an error detailing which parameter is problematic.
 }

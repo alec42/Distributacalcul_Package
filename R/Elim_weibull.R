@@ -3,7 +3,7 @@
 #' @description Limited mean of the Weibull distribution with shape
 #'  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar d TRUE
+#' @template d-template
 #' @template weibull-template
 #'
 #' @export

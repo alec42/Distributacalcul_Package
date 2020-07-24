@@ -27,6 +27,7 @@ Function :
  \item{\code{\link{Elim_beta}}}{ gives the limited mean.}
  \item{\code{\link{Mexcess_beta}}}{ gives the mean excess loss.}
  \item{\code{\link{TVaR_beta}}}{ gives the Tail Value-at-Risk.}
+ \item{\code{\link{VaR_beta}}}{ gives the Value-at-Risk.}
  }
  Invalid parameter values will return an error detailing which parameter is problematic.
 }

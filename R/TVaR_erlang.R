@@ -3,7 +3,7 @@
 #' @description Tail Value-at-Risk of the Erlang distribution
 #'  with shape parameter \eqn{n} and rate parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar kap TRUE
+#' @template kap-template
 #' @template erlang-template
 #'
 #' @export

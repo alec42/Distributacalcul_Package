@@ -3,8 +3,8 @@
 #' @description Cumulative density function of the Erlang distribution
 #'  with shape parameter \eqn{n} and rate parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar q TRUE
-#' @templateVar lower.tail TRUE
+#' @template q-template
+#' @template lower.tail-template
 #' @template erlang-template
 #'
 #' @export

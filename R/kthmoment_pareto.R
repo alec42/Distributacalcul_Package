@@ -3,7 +3,7 @@
 #' @description kth moment of the Pareto distribution with shape
 #'  parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\lambda}{lambda}.
 #'
-#' @templateVar k TRUE
+#' @template k-template
 #' @template pareto-template
 #'
 #' @export

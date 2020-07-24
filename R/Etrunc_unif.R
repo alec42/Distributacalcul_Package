@@ -3,8 +3,8 @@
 #' @description Truncated mean of the Uniform distribution
 #'  with min \eqn{a} and max \eqn{b}.
 #'
-#' @templateVar d TRUE
-#' @templateVar less.than.d TRUE
+#' @template d-template
+#' @template less.than.d-template
 #' @template continuous-uniform-template
 #'
 #' @export

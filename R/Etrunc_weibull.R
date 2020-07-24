@@ -3,8 +3,8 @@
 #' @description Truncated mean of the Weibull distribution with shape parameter
 #'  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar d TRUE
-#' @templateVar less.than.d TRUE
+#' @template d-template
+#' @template less.than.d-template
 #' @template weibull-template
 #'
 #' @export

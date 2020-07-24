@@ -3,7 +3,7 @@
 #' @description Tail Value-at-Risk of the Weibull distribution with shape parameter
 #'  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar kap TRUE
+#' @template kap-template
 #' @template weibull-template
 #'
 #' @export

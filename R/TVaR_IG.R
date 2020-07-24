@@ -3,7 +3,7 @@
 #' @description Tail Value-at-Risk of the Inverse Gaussian distribution with
 #'  mean \eqn{\mu}{mu} and shape parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar kap TRUE
+#' @template kap-template
 #' @template IG-template
 #'
 #' @export

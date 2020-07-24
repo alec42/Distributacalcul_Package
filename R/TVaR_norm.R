@@ -3,7 +3,7 @@
 #' @description Tail Value-at-Risk of the Normal distribution with mean
 #'  \eqn{\mu}{mu} and variance \eqn{\sigma}{sigma}.
 #'
-#' @templateVar kap TRUE
+#' @template kap-template
 #' @template norm-template
 #'
 #' @export

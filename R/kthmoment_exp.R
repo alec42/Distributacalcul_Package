@@ -3,7 +3,7 @@
 #' @description kth moment of the Exponential distribution with rate parameter
 #'  \eqn{\beta}{beta}.
 #'
-#' @templateVar k TRUE
+#' @template k-template
 #' @template exp-template
 #'
 #' @export

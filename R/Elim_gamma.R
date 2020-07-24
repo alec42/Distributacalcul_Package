@@ -3,7 +3,7 @@
 #' @description Limited mean of the Gamma distribution with shape
 #'  parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar d TRUE
+#' @template d-template
 #' @template gamma-template
 #'
 #' @export

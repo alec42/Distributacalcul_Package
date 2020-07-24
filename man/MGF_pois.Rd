@@ -7,7 +7,7 @@
 MGF_pois(t, lambda)
 }
 \arguments{
-\item{t}{t}
+\item{t}{t.}
 
 \item{lambda}{Rate parameter \eqn{\lambda}{lambda}.}
 }

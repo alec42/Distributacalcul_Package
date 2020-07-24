@@ -4,7 +4,7 @@
 #'  \eqn{\alpha}{alpha} (shape1) and \eqn{\tau}{tau} (shape2) as well as rate
 #'  parameter \eqn{\lambda}{lambda}.
 #'
-#' @templateVar d TRUE
+#' @template d-template
 #' @template burr-template
 #'
 #' @export

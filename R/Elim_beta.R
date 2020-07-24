@@ -3,7 +3,7 @@
 #' @description Limited mean of the Beta distribution with shape parameters
 #'  \eqn{\alpha}{alpha} and \eqn{\beta}{beta}.
 #'
-#' @templateVar d TRUE
+#' @template d-template
 #' @template beta-template
 #'
 #' @examples

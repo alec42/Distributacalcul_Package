@@ -3,7 +3,7 @@
 #' @description kth moment of the Erlang distribution
 #'  with shape parameter \eqn{n} and rate parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar k TRUE
+#' @template k-template
 #' @template erlang-template
 #'
 #' @export

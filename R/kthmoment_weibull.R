@@ -3,7 +3,7 @@
 #' @description kth moment of the Weibull distribution with shape parameter
 #'  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar k TRUE
+#' @template k-template
 #' @template weibull-template
 #'
 #' @export

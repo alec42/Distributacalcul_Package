@@ -6,7 +6,7 @@
 #' @note Function VaR_IG is a wrapper for the qinvgauss function from the
 #' statmod package.
 #'
-#' @templateVar kap TRUE
+#' @template kap-template
 #' @template IG-template
 #'
 #' @export

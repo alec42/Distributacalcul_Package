@@ -3,7 +3,7 @@
 #' @description Moment Generating Function (MGF) of the Erlang distribution
 #'  with shape parameter \eqn{n}{n} and rate parameter \eqn{\beta}{beta}.
 #'
-#' @param t t.
+#' @template t-template
 #' @template erlang-template
 #'
 #' @export

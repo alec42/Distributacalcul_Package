@@ -3,7 +3,7 @@
 #' @description kth moment of the Gamma distribution with shape
 #'  parameter \eqn{\alpha}{alpha} and rate parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar k TRUE
+#' @template k-template
 #' @template gamma-template
 #'
 #' @export

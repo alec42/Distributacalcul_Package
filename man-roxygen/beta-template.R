@@ -1,12 +1,6 @@
 #' @param shape1 shape parameter \eqn{\alpha}{alpha}, must be positive.
 #' @param shape2 shape parameter \eqn{\beta}{beta}, must be positive.
 #'
-#' <%=ifelse(exists("d"), "@param d cut-off value. Recall the the domain is limited between 0 and 1.", "") %>
-#' <%=ifelse(exists("k"), "@param k kth-moment.", "") %>
-#' <%=ifelse(exists("kap"), "@param kap probability.", "") %>
-#' <%=ifelse(exists("k0"), "@param k0 point up to which to sum the distribution for the approximation.", "") %>
-#' <%=ifelse(exists("less.than.d"), "@param less.than.d logical; if \\code{TRUE} (default) truncated mean for values <= d, otherwise, for values > d.", "") %>
-#'
 #' @details
 #'  The Beta distribution with shape parameters \eqn{\alpha}{a} and
 #'   \eqn{\beta}{b} has density:
@@ -27,6 +21,7 @@
 #'  \item{\code{\link{Elim_beta}}}{ gives the limited mean.}
 #'  \item{\code{\link{Mexcess_beta}}}{ gives the mean excess loss.}
 #'  \item{\code{\link{TVaR_beta}}}{ gives the Tail Value-at-Risk.}
+#'  \item{\code{\link{VaR_beta}}}{ gives the Value-at-Risk.}
 #'  }
 #'  Invalid parameter values will return an error detailing which parameter is problematic.
 #'

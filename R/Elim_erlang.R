@@ -3,7 +3,7 @@
 #' @description Limited mean of the Erlang distribution
 #'  with shape parameter \eqn{n} and rate parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar d TRUE
+#' @template d-template
 #' @template erlang-template
 #'
 #' @export

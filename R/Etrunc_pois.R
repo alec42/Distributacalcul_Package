@@ -3,9 +3,9 @@
 #' @description Truncated mean of the Poisson distribution with rate parameter
 #'  \eqn{\lambda}{lambda}.
 #'
-#' @templateVar d TRUE
-#' @templateVar less.than.d TRUE
-#' @templateVar k0 TRUE
+#' @template d-template
+#' @template less.than.d-template
+#' @template k0-template
 #' @template pois-template
 #'
 #' @export

@@ -3,7 +3,7 @@
 #' @description Tail Value-at-Risk of the Beta distribution with shape
 #'  parameters \eqn{\alpha}{alpha} and \eqn{\beta}{beta}.
 #'
-#' @templateVar kap TRUE
+#' @template kap-template
 #' @template beta-template
 #'
 #' @export

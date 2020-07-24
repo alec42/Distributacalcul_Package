@@ -2,6 +2,8 @@
 ## New Features
 +   Added `pllogis()` and `dllogis()` functions.
     +   Added the functions to the return field of the `loglogistic-template` file.
++   Added `plogarithmic()`, `dlogarithmic()`, and `VaR_logarithmic()`functions.
+    +   Added the functions to the return field of the `logarithmic-template` file.
 +   Created vignette `distributionParameters`:
     +   Explains the various parameters of distributions (scale, rate, location).
     +   Still need to add shape and dispersion.
@@ -35,6 +37,7 @@
     +   All functions appear there instead of having their individual entries in the documentation.
 +   Improved title case and style according to the Tidyverse style guide.
 +   Changed filename of `riskMeasuresBoxVis` to `riskMeasuresBox`
++   Fixed mistake in discrete uniform template file which linked the PDF instead of the CDF in the return field of the description.
 
 ##  Minor Changes
 +   Changed `Etronq_` functions to `Etrunc_` functions.
@@ -55,7 +58,10 @@
     +   Distributions merged : 
         1.  Binomial (06/16/2020).
         2.  Compound distributions (06/16/2020).
-
++   Replaced(ing) `@templateVar` calls for `@template` calls with files for each variable.
+    +   Makes it so each distribution's template file doesn't individually define the parameters and it's easier to change the definition of a parameter for all the distributions.
+    +   Removed(ing) the conditional calls for the variables from the distributions' template files.
+    +   Done: beta, burr, uniform (both), exp, gamma, hyper, IG.
 
 #   Distributacalcul 0.2.2
 ## New Features

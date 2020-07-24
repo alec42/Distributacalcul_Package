@@ -3,7 +3,7 @@
 #' @description kth moment of the Beta distribution with shape parameters
 #'  \eqn{\alpha}{alpha} and \eqn{\beta}{beta}.
 #'
-#' @templateVar k TRUE
+#' @template k-template
 #' @template beta-template
 #'
 #' @export

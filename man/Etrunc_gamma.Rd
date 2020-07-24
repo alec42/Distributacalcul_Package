@@ -29,6 +29,7 @@ Function :
  \item{\code{\link{Elim_gamma}}}{ gives the limited mean.}
  \item{\code{\link{Mexcess_gamma}}}{ gives the mean excess loss.}
  \item{\code{\link{TVaR_gamma}}}{ gives the Tail Value-at-Risk.}
+ \item{\code{\link{VaR_gamma}}}{ gives the Value-at-Risk.}
  }
  Invalid parameter values will return an error detailing which parameter is problematic.
 }

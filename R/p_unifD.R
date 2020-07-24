@@ -3,7 +3,7 @@
 #' @description Cumulative probability mass function of the (discrete) Uniform
 #'  distribution with min \eqn{a} and max \eqn{b}.
 #'
-#' @templateVar q TRUE
+#' @template q-template
 #' @template discrete-uniform-template
 #'
 #' @export

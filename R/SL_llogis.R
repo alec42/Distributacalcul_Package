@@ -3,7 +3,7 @@
 #' @description Stop-loss of the Loglogistic distribution with shape parameter
 #'  \eqn{\tau}{tau} and scale parameter \eqn{\lambda}{lambda}.
 #'
-#' @templateVar d TRUE
+#' @template d-template
 #' @template loglogistic-template
 #'
 #' @export

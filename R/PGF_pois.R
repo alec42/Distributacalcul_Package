@@ -3,7 +3,7 @@
 #' @description Probability Generating Function (PGF) of the Poisson
 #'    distribution with rate parameter \eqn{\lambda}{lambda}.
 #'
-#' @param t t
+#' @template t-template
 #' @template pois-template
 #'
 #' @examples

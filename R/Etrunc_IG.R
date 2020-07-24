@@ -3,8 +3,8 @@
 #' @description Truncated mean of the Inverse Gaussian distribution with
 #'  mean \eqn{\mu}{mu} and shape parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar d TRUE
-#' @templateVar less.than.d TRUE
+#' @template d-template
+#' @template less.than.d-template
 #' @template IG-template
 #'
 #' @export

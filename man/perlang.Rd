@@ -15,7 +15,7 @@ perlang(q, shape, rate = 1/scale, scale = 1/rate, lower.tail = TRUE)
 
 \item{scale}{alternative parameterization to rate parameter, scale = 1 / rate.}
 
-\item{lower.tail}{logical; if \code{TRUE} (default) probabilities are Pr(M <= k), otherwise, Pr(M > k).}
+\item{lower.tail}{logical; if \\code{TRUE} (default) probabilities are Pr(M <= k), otherwise, Pr(M > k).}
 }
 \value{
 Function :

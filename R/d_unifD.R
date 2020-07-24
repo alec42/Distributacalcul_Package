@@ -3,7 +3,7 @@
 #' @description Probability mass function of the (discrete) Uniform
 #'  distribution with min \eqn{a} and max \eqn{b}.
 #'
-#' @templateVar x TRUE
+#' @template x-template
 #' @template discrete-uniform-template
 #'
 #' @export

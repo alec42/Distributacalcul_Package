@@ -3,7 +3,7 @@
 #' @description Stop-loss of the Weibull distribution with shape parameter
 #'  parameter \eqn{\tau}{tau} and rate parameter \eqn{\beta}{beta}.
 #'
-#' @templateVar d TRUE
+#' @template d-template
 #' @template weibull-template
 #'
 #' @export
