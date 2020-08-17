@@ -10,14 +10,14 @@ distributacalculVis(law, mod)
 \item{law}{Distribution to visualize, presently one of these 2 parameter
  continuous distributions :
 \itemize{
- \item{"norm": }{Normal distribution.}
- \item{"lnorm": }{Lognormal distribution.}
- \item{"gamma": }{Gamma distribution.}
- \item{"beta": }{Beta distribution.}
- \item{"unif": }{Uniform distribution.}
- \item{"llogis": }{Log-logistic distribution.}
- \item{"weibull": }{Weibull distribution.}
- \item{"pareto": }{Pareto distribution.}
+ \item{"Norm": }{Normal distribution.}
+ \item{"Lnorm": }{Lognormal distribution.}
+ \item{"Gamma": }{Gamma distribution.}
+ \item{"Beta": }{Beta distribution.}
+ \item{"Unif": }{Uniform distribution.}
+ \item{"Llogis": }{Log-logistic distribution.}
+ \item{"Weibull": }{Weibull distribution.}
+ \item{"Pareto": }{Pareto distribution.}
 }}
 
 \item{mod}{Vector of modules to visualize, one of :
@@ -38,7 +38,7 @@ and modules.
 \examples{
 ## Only run this example in interactive R sessions
 if (interactive()) {
-   distributacalculVis(law = "norm", mod = "functions")
+   distributacalculVis(law = "Norm", mod = "functions")
 }
 
 }

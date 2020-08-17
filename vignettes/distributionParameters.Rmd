@@ -28,7 +28,7 @@ It is only when I started using R that I realized they were called "shape", "rat
 To get a feel for this, see what happens to the density of the Normal distribution when you change $\mu$ : 
 
 ```{r norm-location}
-distributacalculVis(law = "norm", mod = "functions")
+distributacalculVis(law = "Norm", mod = "functions")
 ```
 
 If you notice, changing $\mu$ only changes where on the x-axis the density is centered or, _located_. We call this a __location parameter__. 
@@ -41,7 +41,7 @@ The scale parameter changes the scale of the distribution.
 
 To get a feel for this, try changing the scale parameter of the Gamma distribution $\beta$ below from 1 to 2 to 3 :
 ```{r gamma-scale}
-distributacalculVis(law = "gamma", mod = "functions")
+distributacalculVis(law = "Gamma", mod = "functions")
 ```
 
 As you increase the scale parameter, the distribution becomes increasingly compressed. \
@@ -74,7 +74,7 @@ The $\lambda$ parameter of a discrete Poisson random variable is a _rate_ parame
     See what happens when you change the _rate_ parameter below of a Poisson distribution : 
 -->
 ```{r rate-parameter}
-distributacalculVis(law = "gamma", mod = "functions")
+distributacalculVis(law = "Gamma", mod = "functions")
 ```
 
 You can observe it has the opposite effect of the scale parameter. \

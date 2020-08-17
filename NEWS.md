@@ -1,4 +1,33 @@
 #   Distributacalcul 0.3.0
+##  Significant structural change
++   Changed syntax of all package functions (see README for summary of new syntax).
+    +   As per comments of peers, the syntax was inconsistent.
+    +   Changed all functions names to follow lowerCamelCase.
+    +   E_d -> expValD; V_d -> varD; Elim_d -> expValLimD; Etrunc_d -> expValTruncD; Mexcess_d -> meanExcessD; SL_d -> stopLossD; VaR_d -> VatRD; TVaR_d -> TVatRD; kthmoment_d -> kthMomentD; MGF_d -> mgfD; PGF_d -> pgfD; p_d -> pD; d_d -> dD.
++   Added MGF for the Uniform distribution.
++   Combined all separate function files to files containing the entire distribution.
+    +   Amongst other things, it simplifies working with the package.
++   Added template files for the parameters which didn't already have some.
+    +   dispersion parameter; mean parameters for the Normal (mu), lognormal, and Inverse Gaussian (location) distributions; min/max parameters for the Uniform distributions; number of tries parameter for the Negative Binomial; prob parameter of the logarithmic distribution; rate as the normal beta, as an alternative parameter and as lambda; scale parameter as normal and as lambda; standard deviation parameter for both the normal and lognormal distributions; shape parameter as the normal alpha, the n for the Erlang, and as tau; shape1 and shape2 for the Beta.
++   Changed name of compound distributions as well as the others.
++   Changed negative binomial functions names from negbinom to nbinom.
+
+##  Significant New Features
++   Added copulas ! 
+    +   copula functions `cCopula`, density functions associated with the copulas `cdCopula`, and simulation functions `crCopula`.
++   Added copulas are : 
+    1.  Independence Copula
+    1.  Fréchet Lower Bound Copula
+    1.  Fréchet Upper Bound Copula
+    1.  Fréchet Copula
+    1.  Bivariate Gumbel Copula
+    1.  Bivariate Clayton Copula
+    1.  Bivariate Ali-Mikhail-Haq Copula
+    1.  Bivariate Cuadras-Augé Copula
+    1.  Bivariate Marshall-Olkin Copula
+    1.  Bivariate Frank Copula
+    1.  Bivariate Eyraud-Farlie-Gumbel-Morgenstern (EFGM) Copula
+
 ## New Features
 +   Added `pllogis()` and `dllogis()` functions.
     +   Added the functions to the return field of the `loglogistic-template` file.
@@ -25,9 +54,13 @@
         +   Added (bilingual) labels to the plots.
         +   Added language input at the top right of the screen.
         +   Added a json file containing the translations under man-roxygen/translations.
+    +   Removed old function.
++   Updated Shiny functions with new syntax.
++   Updated vignette with new syntax.
++   Updated README with new syntax.
 
-##  Bug Fixes
-+   Added `ppareto()` and `dpareto()` functions. 
+##  Bug Fixes and Changes
++   Added `pPareto()` and `dPareto()` functions. 
     +   Fixed environment error in the quantile function plot of the Shiny app.
 +   Changed the name of file `lowerthan-template` to `lower.tail-template` :
     +   Typo, it contains the template for the `lower.tail` parameter.
@@ -41,7 +74,8 @@
 
 ##  Minor Changes
 +   Changed `Etronq_` functions to `Etrunc_` functions.
-    +   French spelling to english spelling.
+    +   French spelling to English spelling.
+    +   Later on, with change of all syntax, changed to expValTrunc
 +   Changed Pareto PDF and CDF from `p_` and `d_` to `p` and `d`: 
     +   To be consistent with other packages.
     +   Also updated return field of the `pareto-template` file.
@@ -58,6 +92,7 @@
     +   Distributions merged : 
         1.  Binomial (06/16/2020).
         2.  Compound distributions (06/16/2020).
+        3.  All of them (08/17/2020)
 +   Replaced(ing) `@templateVar` calls for `@template` calls with files for each variable.
     +   Makes it so each distribution's template file doesn't individually define the parameters and it's easier to change the definition of a parameter for all the distributions.
     +   Removed(ing) the conditional calls for the variables from the distributions' template files.
@@ -69,14 +104,14 @@
 +   Updated IG VaR from 'statmod' package.
 
 ## Bug Fixes
-+   Updated URL in description file to github.io site.
++   Updated URL in description file to GitHub.io site.
 
 #   Distributacalcul 0.2.1
-Unremarkable release which updates the readme.
+Unremarkable release which updates the README.
 
 ## Bug Fixes
 +   Updated table of functions.
-+   Fixed English grammar mistake in readme example.
++   Fixed English grammar mistake in README example.
 +   Updated instructions for downloading the package.
 
 #   Distributacalcul 0.2.0

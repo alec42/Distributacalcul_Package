@@ -1,1 +1,1 @@
-#' @param scale alternative parameterization to rate parameter, scale = 1 / rate.
+#' @param scale alternative parameterization to the rate parameter, scale = 1 / rate.

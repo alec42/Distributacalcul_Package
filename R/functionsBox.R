@@ -23,17 +23,17 @@ functionsBox <- function(input, output, session, law, lang) {
     ns <- session$ns
 
     ####    Define distributions    ####
-    law.fct <- ifelse(law == "exp", "gamma", law)
+    law.fct <- ifelse(law == "Exp", "Gamma", law)
     parameters_latex <- dplyr::case_when(
-        law %in% c("norm", "lnorm") ~ c("$$\\mu$$", "$$\\sigma$$"),
-        law %in% c("gamma", "exp", "beta") ~ c("$$\\alpha$$", "$$\\beta$$"),
-        law == "erlang" ~ c("$$n$$", "$$\\beta$$"),
-        law == "unif" ~ c("$$a$$", "$$b$$"),
-        law == "weibull" ~ c("$$\\tau$$", "$$\\beta$$"),
-        law == "pareto" ~ c("$$\\alpha$$", "$$\\lambda$$"),
-        law == "llogis" ~ c("$$\\lambda$$", "$$\\tau$$"),
+        law %in% c("Norm", "Lnorm") ~ c("$$\\mu$$", "$$\\sigma$$"),
+        law %in% c("Gamma", "Exp", "Beta") ~ c("$$\\alpha$$", "$$\\beta$$"),
+        law == "Erlang" ~ c("$$n$$", "$$\\beta$$"),
+        law == "Unif" ~ c("$$a$$", "$$b$$"),
+        law == "Weibull" ~ c("$$\\tau$$", "$$\\beta$$"),
+        law == "Pareto" ~ c("$$\\alpha$$", "$$\\lambda$$"),
+        law == "Llogis" ~ c("$$\\lambda$$", "$$\\tau$$"),
         law == "IG" ~ c("$$\\mu$$", "$$\\beta$$"),
-        # law == "burr" ~ c("$$\\alpha$$", "$$\\lambda$$", "$$\\tau$$"),
+        # law == "Burr" ~ c("$$\\alpha$$", "$$\\lambda$$", "$$\\tau$$"),
         TRUE ~ c("shape", "rate")
     )
 
@@ -42,15 +42,15 @@ functionsBox <- function(input, output, session, law, lang) {
         tippy::tippy_this(
             ns("density_distr"),
             tooltip = paste0("$f(x) = $", dplyr::case_when(
-                law == "norm" ~ "$\\frac{{e}^{-\\frac{(x - \\mu)^{2}}{2 \\sigma^{2}}}}{\\sqrt{2\\pi}\\sigma}$",
-                law == "lnorm" ~ "$\\frac{1}{x \\sqrt{2\\pi} \\sigma} \\mathrm{e}^{-\\frac{(\\ln(x) - \\mu )^{2}}{2 \\sigma^{2}}}$",
-                law == "gamma" ~ "$\\frac{\\beta^{\\alpha}}{\\Gamma (\\alpha)} x^{\\alpha - 1} \\mathrm{e}^{-\\beta x}$",
-                law == "exp" ~ "$\\beta \\mathrm{e}^{-\\beta x}$",
-                law == "llogis" ~ "$\\frac{\\tau \\lambda^\\tau x^{\\tau - 1}}{(\\lambda^{\\tau} + x^{\\tau})^{2}}$",
-                law == "weibull" ~ "$\\beta \\tau \\left(\\beta x\\right)^{\\tau - 1} \\mathrm{e}^{-\\left(\\beta x\\right)^{\\tau}}$",
-                law == "beta" ~ "$\\frac{x^{\\alpha -1}\\left(1 - x\\right)^{\\beta - 1}}{I\\left(\\alpha, \\beta\\right)} \\times 1_{\\left\\{x \\in \\left[0, 1\\right]\\right\\}}$",
-                law == "unif" ~ "$\\frac{1}{b - a}\\times 1_{\\left\\{x \\in \\left[a, b\\right]\\right\\} }$",
-                law == "pareto" ~ "$\\frac{\\alpha \\lambda^{\\alpha}}{\\left(\\lambda + x\\right)^{\\alpha + 1}}$",
+                law == "Norm" ~ "$\\frac{{e}^{-\\frac{(x - \\mu)^{2}}{2 \\sigma^{2}}}}{\\sqrt{2\\pi}\\sigma}$",
+                law == "Lnorm" ~ "$\\frac{1}{x \\sqrt{2\\pi} \\sigma} \\mathrm{e}^{-\\frac{(\\ln(x) - \\mu )^{2}}{2 \\sigma^{2}}}$",
+                law == "Gamma" ~ "$\\frac{\\beta^{\\alpha}}{\\Gamma (\\alpha)} x^{\\alpha - 1} \\mathrm{e}^{-\\beta x}$",
+                law == "Exp" ~ "$\\beta \\mathrm{e}^{-\\beta x}$",
+                law == "Llogis" ~ "$\\frac{\\tau \\lambda^\\tau x^{\\tau - 1}}{(\\lambda^{\\tau} + x^{\\tau})^{2}}$",
+                law == "Weibull" ~ "$\\beta \\tau \\left(\\beta x\\right)^{\\tau - 1} \\mathrm{e}^{-\\left(\\beta x\\right)^{\\tau}}$",
+                law == "Beta" ~ "$\\frac{x^{\\alpha -1}\\left(1 - x\\right)^{\\beta - 1}}{I\\left(\\alpha, \\beta\\right)} \\times 1_{\\left\\{x \\in \\left[0, 1\\right]\\right\\}}$",
+                law == "Unif" ~ "$\\frac{1}{b - a}\\times 1_{\\left\\{x \\in \\left[a, b\\right]\\right\\} }$",
+                law == "Pareto" ~ "$\\frac{\\alpha \\lambda^{\\alpha}}{\\left(\\lambda + x\\right)^{\\alpha + 1}}$",
                 TRUE ~ "f(x)"
             ))
         )
@@ -59,19 +59,19 @@ functionsBox <- function(input, output, session, law, lang) {
         tippy::tippy_this(
             ns("repartSurvie_distr"),
             tooltip = paste0("$F_{X}(x) = $", dplyr::case_when(
-                law == "norm" ~ "$\\Phi\\left(\\frac{x - \\mu}{\\sigma}\\right)$",
-                law == "lnorm" ~ "$\\Phi\\left(\\frac{\\ln(x) - \\mu}{\\sigma}\\right)$",
-                law == "gamma" ~ "$H\\left(x; \\alpha, \\beta \\right)$",
-                law == "exp" ~ "$1 - \\mathrm{e}^{-\\beta x}$",
-                law == "llogis" ~ "$1 - \\frac{\\lambda^{\\tau}}{\\lambda^\\tau + x^\\tau}$",
-                law == "weibull" ~ "$1 - \\mathrm{e}^{-\\left(\\beta x\\right)^{\\tau}}$",
-                law == "beta" ~ "$B\\left(x; \\alpha, \\beta\\right)$",
-                # law == "unif" ~ "$\\left\\{\\begin{array}{ll}
+                law == "Norm" ~ "$\\Phi\\left(\\frac{x - \\mu}{\\sigma}\\right)$",
+                law == "Lnorm" ~ "$\\Phi\\left(\\frac{\\ln(x) - \\mu}{\\sigma}\\right)$",
+                law == "Gamma" ~ "$H\\left(x; \\alpha, \\beta \\right)$",
+                law == "Exp" ~ "$1 - \\mathrm{e}^{-\\beta x}$",
+                law == "Llogis" ~ "$1 - \\frac{\\lambda^{\\tau}}{\\lambda^\\tau + x^\\tau}$",
+                law == "Weibull" ~ "$1 - \\mathrm{e}^{-\\left(\\beta x\\right)^{\\tau}}$",
+                law == "Beta" ~ "$B\\left(x; \\alpha, \\beta\\right)$",
+                # law == "Unif" ~ "$\\left\\{\\begin{array}{ll}
                 # 0, & x<a \\\\
                 # \\frac{x-a}{b-a}, & a\\leq x\\leq b \\\\
                 # 1, & x>b%
                 # \\end{array}$",
-                law == "pareto" ~ "$1 - \\left(\\frac{\\lambda}{\\lambda + x}\\right)^{\\alpha}$",
+                law == "Pareto" ~ "$1 - \\left(\\frac{\\lambda}{\\lambda + x}\\right)^{\\alpha}$",
                 TRUE ~ "F_{X}(x)"
             ))
         )
@@ -99,12 +99,12 @@ functionsBox <- function(input, output, session, law, lang) {
             label = shiny::withMathJax("$$x$$"),
             value = 2,
             min = dplyr::case_when(
-                law.fct %in% c("lnorm", "gamma", "exp", "beta") ~ 0,
-                law.fct == c("unif") ~ as.numeric(input$shape)
+                law.fct %in% c("Lnorm", "Gamma", "Exp", "Beta") ~ 0,
+                law.fct == c("Unif") ~ as.numeric(input$shape)
             ),
             max = dplyr::case_when(
-                law.fct == "beta" ~ 1,
-                law.fct == "unif" ~ as.numeric(input$rate)
+                law.fct == "Beta" ~ 1,
+                law.fct == "Unif" ~ as.numeric(input$rate)
             ),
             width = "20px"
         )
@@ -140,10 +140,10 @@ functionsBox <- function(input, output, session, law, lang) {
     density_distr <- shiny::reactive({
         format(
             rlang::exec(
-                .fn = paste0("d", law.fct),
+                .fn = paste0("d", ifelse(law.fct %in% c("Pareto", "Llogis"), law.fct, tolower(law.fct))),
                 x = as.numeric(x()),
                 as.numeric(input$shape), as.numeric(input$rate),
-                .env = rlang::ns_env(x = ifelse(law.fct %in% c("pareto", "llogis"), 'Distributacalcul', 'stats'))
+                .env = rlang::ns_env(x = ifelse(law.fct %in% c("Pareto", "Llogis"), 'Distributacalcul', 'stats'))
             ),
             nsmall = 6
         )
@@ -151,11 +151,11 @@ functionsBox <- function(input, output, session, law, lang) {
     repartSurvie_distr <- shiny::reactive({
         format(
             rlang::exec(
-                .fn = paste0("p", law.fct),
+                .fn = paste0("p", ifelse(law.fct %in% c("Pareto", "Llogis"), law.fct, tolower(law.fct))),
                 q = as.numeric(x()),
                 as.numeric(input$shape), as.numeric(input$rate),
                 lower.tail = xlim_distr(),
-                .env = rlang::ns_env(x = ifelse(law.fct %in% c("pareto", "llogis"), 'Distributacalcul', 'stats'))
+                .env = rlang::ns_env(x = ifelse(law.fct %in% c("Pareto", "Llogis"), 'Distributacalcul', 'stats'))
             ),
             nsmall = 6,
             scientific = FALSE
@@ -185,40 +185,40 @@ functionsBox <- function(input, output, session, law, lang) {
         shiny::req(input$shape, input$rate, x(), plot_choice_FSX())
         ggplot2::ggplot(data = data.frame(
             x.limz = c(rlang::exec(
-                .fn = paste0("VaR_", law),
+                .fn = paste0("VatR", law),
                 kap = 0.01,
                 as.numeric(input$shape), as.numeric(input$rate)
             ), rlang::exec(
-                .fn = paste0("VaR_", law),
+                .fn = paste0("VatR", law),
                 kap = 0.99,
                 as.numeric(input$shape), as.numeric(input$rate)
             ))), ggplot2::aes_(x = ~x.limz)) +
             ggplot2::stat_function(
                 fun = Vectorize(function(xx) rlang::exec(
-                    .fn = paste0(ifelse(plot_choice_FSX() == lang()$t("Density Function"), "d", "p"), law),
+                    .fn = paste0(ifelse(plot_choice_FSX() == lang()$t("Density Function"), "d", "p"), ifelse(law.fct %in% c("Pareto", "Llogis"), law.fct, tolower(law.fct))),
                     xx,
                     as.numeric(input$shape), as.numeric(input$rate),
-                    .env = rlang::ns_env(x = ifelse(law.fct %in% c("pareto", "llogis"), 'Distributacalcul', 'stats'))
+                    .env = rlang::ns_env(x = ifelse(law.fct %in% c("Pareto", "Llogis"), 'Distributacalcul', 'stats'))
                 )),
                 alpha = 0.7
             ) +
             ggplot2::stat_function(
                 fun = Vectorize(function(xx) rlang::exec(
-                    .fn = paste0(ifelse(plot_choice_FSX() == lang()$t("Density Function"), "d", "p"), law),
+                    .fn = paste0(ifelse(plot_choice_FSX() == lang()$t("Density Function"), "d", "p"), ifelse(law.fct %in% c("Pareto", "Llogis"), law.fct, tolower(law.fct))),
                     xx,
                     as.numeric(input$shape), as.numeric(input$rate),
-                    .env = rlang::ns_env(x = ifelse(law.fct %in% c("pareto", "llogis"), 'Distributacalcul', 'stats'))
+                    .env = rlang::ns_env(x = ifelse(law.fct %in% c("Pareto", "Llogis"), 'Distributacalcul', 'stats'))
                 )),
                 xlim = c(
                     ifelse(xlim_distr(), rlang::exec(
-                        .fn = paste0("VaR_", law),
+                        .fn = paste0("VatR", law),
                         kap = 0.01,
                         as.numeric(input$shape), as.numeric(input$rate)
                     ), x()),
                     ifelse(xlim_distr(),
                            x(),
                            rlang::exec(
-                               .fn = paste0("VaR_", law),
+                               .fn = paste0("VatR", law),
                                kap = 0.99,
                                as.numeric(input$shape), as.numeric(input$rate)
                            )

@@ -5,7 +5,6 @@
 .Rproj.user/shared/notebooks/paths
 .RData
 .Ruserdata
-README.Rmd
 package-build-site.R
 cran-comments.md
 *.sh

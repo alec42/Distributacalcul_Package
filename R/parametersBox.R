@@ -20,15 +20,15 @@ parametersBox <- function(input, output, session, law, lang) {
     ns <- session$ns
 
     ####    Define distributions    ####
-    law.fct <- ifelse(law == "exp", "gamma", law)
+    law.fct <- ifelse(law == "Exp", "Gamma", law)
     parameters_latex <- dplyr::case_when(
-        law %in% c("norm", "lnorm") ~ c("$$\\mu$$", "$$\\sigma$$"),
-        law %in% c("gamma", "exp", "beta") ~ c("$$\\alpha$$", "$$\\beta$$"),
-        law == "erlang" ~ c("$$n$$", "$$\\beta$$"),
-        law == "unif" ~ c("$$a$$", "$$b$$"),
-        law == "weibull" ~ c("$$\\tau$$", "$$\\beta$$"),
-        law == "pareto" ~ c("$$\\alpha$$", "$$\\lambda$$"),
-        law == "llogis" ~ c("$$\\lambda$$", "$$\\tau$$"),
+        law %in% c("Norm", "Lnorm") ~ c("$$\\mu$$", "$$\\sigma$$"),
+        law %in% c("Gamma", "Exp", "Beta") ~ c("$$\\alpha$$", "$$\\beta$$"),
+        law == "Erlang" ~ c("$$n$$", "$$\\beta$$"),
+        law == "Unif" ~ c("$$a$$", "$$b$$"),
+        law == "Weibull" ~ c("$$\\tau$$", "$$\\beta$$"),
+        law == "Pareto" ~ c("$$\\alpha$$", "$$\\lambda$$"),
+        law == "Llogis" ~ c("$$\\lambda$$", "$$\\tau$$"),
         law == "IG" ~ c("$$\\mu$$", "$$\\beta$$"),
         # law == "burr" ~ c("$$\\alpha$$", "$$\\lambda$$", "$$\\tau$$"),
         TRUE ~ c("shape", "rate")
@@ -48,11 +48,11 @@ parametersBox <- function(input, output, session, law, lang) {
             inputId = session$ns("shape"),
             label = shiny::withMathJax(parameters_latex[1]),
             value = dplyr::case_when(
-                law.fct %in% c("pareto", "llogis") ~ 3,
+                law.fct %in% c("Pareto", "Llogis") ~ 3,
                 TRUE ~ 2
             ),
             min = dplyr::case_when(
-                law.fct %in% c("lnorm", "gamma", "exp", "beta") ~ 0
+                law.fct %in% c("Lnorm", "Gamma", "Exp", "Beta") ~ 0
             )
         )
     })
@@ -62,7 +62,7 @@ parametersBox <- function(input, output, session, law, lang) {
             label = shiny::withMathJax(parameters_latex[2]),
             value = 3,
             min = dplyr::case_when(
-                law.fct %in% c("lnorm", "norm", "gamma", "beta") ~ 0
+                law.fct %in% c("Lnorm", "Norm", "Gamma", "Beta") ~ 0
             )
         )
     })

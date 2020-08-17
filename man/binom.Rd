@@ -2,28 +2,28 @@
 % Please edit documentation in R/binom.R
 \name{binom}
 \alias{binom}
-\alias{E_binom}
-\alias{V_binom}
-\alias{Etrunc_binom}
-\alias{VaR_binom}
-\alias{TVaR_binom}
-\alias{PGF_binom}
-\alias{MGF_binom}
-\title{Binomial distribution}
+\alias{expValBinom}
+\alias{varBinom}
+\alias{expValTruncBinom}
+\alias{VatRBinom}
+\alias{TVatRBinom}
+\alias{pgfBinom}
+\alias{mgfBinom}
+\title{Binomial Distribution}
 \usage{
-E_binom(size, prob)
+expValBinom(size, prob)
 
-V_binom(size, prob)
+varBinom(size, prob)
 
-Etrunc_binom(d, size, prob, less.than.d = TRUE)
+expValTruncBinom(d, size, prob, less.than.d = TRUE)
 
-VaR_binom(kap, size, prob)
+VatRBinom(kap, size, prob)
 
-TVaR_binom(kap, size, prob)
+TVatRBinom(kap, size, prob)
 
-PGF_binom(t, size, prob)
+pgfBinom(t, size, prob)
 
-MGF_binom(t, size, prob)
+mgfBinom(t, size, prob)
 }
 \arguments{
 \item{size}{Number of trials (0 or more).}
@@ -41,12 +41,13 @@ MGF_binom(t, size, prob)
 \value{
 Function :
   \itemize{
-    \item{\code{\link{MGF_binom}}}{ gives the moment generating function (MGF).}
-    \item{\code{\link{E_binom}}}{ gives the expected value.}
-    \item{\code{\link{V_binom}}}{ gives the variance.}
-    \item{\code{\link{Etrunc_binom}}}{ gives the truncated mean.}
-    \item{\code{\link{TVaR_binom}}}{ gives the Tail Value-at-Risk.}
-    \item{\code{\link{VaR_binom}}}{ gives the Value-at-Risk.}
+    \item{\code{\link{mgfBinom}}}{ gives the moment generating function (MGF).}
+    \item{\code{\link{pgfBinom}}}{ gives the probability generating function (PGF).}
+    \item{\code{\link{expValBinom}}}{ gives the expected value.}
+    \item{\code{\link{varBinom}}}{ gives the variance.}
+    \item{\code{\link{expValTruncBinom}}}{ gives the truncated mean.}
+    \item{\code{\link{TVatRBinom}}}{ gives the Tail Value-at-Risk.}
+    \item{\code{\link{VatRBinom}}}{ gives the Value-at-Risk.}
   }
 Invalid parameter values will return an error detailing which parameter is problematic.
 }
@@ -55,32 +56,32 @@ Binomial distribution with size \eqn{n}{n} and probability of
 success \eqn{p}{p}.
 }
 \details{
-The Binomial distribution with probability of success \eqn{p}{p} for \eqn{n}{n} trials
+The binomial distribution with probability of success \eqn{p}{p} for \eqn{n}{n} trials
 has probability mass function :
   \deqn{Pr(X = k) = \left(\frac{n}{k}\right) p^n (1 - p)^{n - k}}{Pr(X = k) = n!/(k!(n - k)!) p^n(1 - p)^(n - k)}
 for \eqn{k = 0, 1, 2, \dots, n}{k = 0, 1, 2, ..., n}, \eqn{p \in [0, 1]}{0 <= p <= 1}, and \eqn{n > 0}{n > 0}
 }
 \note{
-Function VaR_binom is a wrapper of the qbinom function from the
+Function VatRBinom is a wrapper of the qbinom function from the
 stats package.
 }
 \examples{
-E_binom(size = 3, prob = 0.5)
+expValBinom(size = 3, prob = 0.5)
 
-V_binom(size = 3, prob = 0.5)
-
-
-Etrunc_binom(d = 2, size = 3, prob = 0.5)
-Etrunc_binom(d = 0, size = 3, prob = 0.5, less.than.d = FALSE)
+varBinom(size = 3, prob = 0.5)
 
 
-VaR_binom(kap = 0.8, size = 5, prob = 0.2)
+expValTruncBinom(d = 2, size = 3, prob = 0.5)
+expValTruncBinom(d = 0, size = 3, prob = 0.5, less.than.d = FALSE)
 
-TVaR_binom(kap = 0.8, size = 5, prob = 0.2)
+
+VatRBinom(kap = 0.8, size = 5, prob = 0.2)
+
+TVatRBinom(kap = 0.8, size = 5, prob = 0.2)
 
 
-PGF_binom(t = 1, size = 3, prob = 0.5)
+pgfBinom(t = 1, size = 3, prob = 0.5)
 
-MGF_binom(t = 1, size = 3, prob = 0.5)
+mgfBinom(t = 1, size = 3, prob = 0.5)
 
 }

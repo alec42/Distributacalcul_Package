@@ -1,1 +1,1 @@
-#' @param rate \eqn{\beta}{beta} is the rate parameter, must be positive.
+#' @param rate rate parameter \eqn{\beta}{beta}, must be positive.
