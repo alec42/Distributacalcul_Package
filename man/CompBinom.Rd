@@ -62,7 +62,7 @@ TVatRCompBinom(
 )
 }
 \arguments{
-\item{x}{quantile.}
+\item{x}{vector of quantiles.}
 
 \item{size}{Number of trials (0 or more).}
 

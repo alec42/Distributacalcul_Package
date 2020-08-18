@@ -92,7 +92,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/distributionParameters.html">Shape, Rate, Scale, Location Parameters</a>
+      <a href="../articles/distributionParameters.html">Shape, Rate, Scale, and Location Parameters</a>
     </li>
   </ul>
 </li>
@@ -197,6 +197,10 @@
   $$f\left(x\right) = \frac{1}{\beta}\textrm{e}^{-\beta x}$$<!-- % -->
   f(x) = b^a e^-b x
 for \(x \in \mathcal{R}^+\), \(\beta &gt; 0\).</p>
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    <p>Function VatRExp is a wrapper of the <code><a href='https://rdrr.io/r/stats/Exponential.html'>qexp</a></code>
+function from the stats package.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># With scale parameter</span>
@@ -244,6 +248,7 @@ for \(x \in \mathcal{R}^+\), \(\beta &gt; 0\).</p>
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
       <li><a href="#details">Details</a></li>
+      <li><a href="#note">Note</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 

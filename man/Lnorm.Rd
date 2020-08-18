@@ -69,8 +69,8 @@ The Log-normal distribution with mean \eqn{\mu}{mu} and standard deviation
 for \eqn{x \in \mathcal{R}^{+}}{x >= 0}, \eqn{\mu \in \mathcal{R}, \sigma > 0}{mu real, sigma > 0}.
 }
 \note{
-Function VatRLnorm is a wrapper for the qlnorm function from the
-stats package.
+Function VatRLnorm is a wrapper of the \code{\link[stats]{qlnorm}}
+function from the stats package.
 }
 \examples{
 expValLnorm(meanlog = 3, sdlog = 5)

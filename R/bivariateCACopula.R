@@ -7,9 +7,9 @@
 #' The bivariate Cuadras-Augé copula has CDF :
 #'   \deqn{C(u_{1}, u_{2}) = u_{1}u_{2}^{1 - \alpha} \times%
 #'   \textbf{1}_{\{u_{1} \leq u_{2}\}} + u_{1}^{1 - \alpha}u_{2} \times%
-#'   \textbf{1}_{\{u_{1} \geq u_{2}\}}}{C(u1, u2) = u1 u2^(1 - α) * %
-#'   1_(u1 ≤ u2) + u1^(1 - α) u2 * 1_(u1 ≥ u2)}
-#' for \eqn{u_{1}, u_{2}, \alpha \in [0, 1]}{0 ≤ u1, u2, α ≤ 1}.
+#'   \textbf{1}_{\{u_{1} \geq u_{2}\}}}{C(u1, u2) = u1 u2^(1 - alpha) * %
+#'   1_(u1 <= u2) + u1^(1 - alpha) u2 * 1_(u1 >= u2)}
+#' for \eqn{u_{1}, u_{2}, \alpha \in [0, 1]}{0 <= u1, u2, alpha <= 1}.
 #' It is the geometric mean of the independance and upper Fréchet bound copulas.
 #'
 #' @template u1u2-template

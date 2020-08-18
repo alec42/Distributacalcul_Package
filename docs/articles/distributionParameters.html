@@ -5,12 +5,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shape, Rate, Scale, Location Parameters • Distributacalcul</title>
+<title>Shape, Rate, Scale, and Location Parameters • Distributacalcul</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="Shape, Rate, Scale, Location Parameters">
+<script src="../pkgdown.js"></script><meta property="og:title" content="Shape, Rate, Scale, and Location Parameters">
 <meta property="og:description" content="">
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -54,7 +54,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../articles/distributionParameters.html">Shape, Rate, Scale, Location Parameters</a>
+      <a href="../articles/distributionParameters.html">Shape, Rate, Scale, and Location Parameters</a>
     </li>
   </ul>
 </li>
@@ -75,7 +75,8 @@
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1>Shape, Rate, Scale, Location Parameters</h1>
+      <h1>Shape, Rate, Scale, and Location Parameters</h1>
+                        <h4 class="author">Alec James van Rassel</h4>
             
       
       
@@ -97,7 +98,7 @@
 <a href="#section-the-location-parameter" class="anchor"></a>The location parameter</h2>
 <p>To get a feel for this, see what happens to the density of the Normal distribution when you change <span class="math inline">\(\mu\)</span> :</p>
 <div class="sourceCode" id="section-cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="../reference/distributacalculVis.html">distributacalculVis</a></span>(<span class="dt">law =</span> <span class="st">"Norm"</span>, <span class="dt">mod =</span> <span class="st">"functions"</span>)</a></code></pre></div>
-<iframe data-deferred-src="app3a957efc52cd590b8749eb2dc7b3a531/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
+<iframe data-deferred-src="app48e04eecb8637929c2efb9c6b3fe2d38/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
 <p>If you notice, changing <span class="math inline">\(\mu\)</span> only changes where on the x-axis the density is centered or, <em>located</em>. We call this a <strong>location parameter</strong>.</p>
 <p>In brief, the location parameter is exactly what it sounds like.</p>
 </div>
@@ -107,7 +108,7 @@
 <p>The scale parameter changes the scale of the distribution.</p>
 <p>To get a feel for this, try changing the scale parameter of the Gamma distribution <span class="math inline">\(\beta\)</span> below from 1 to 2 to 3 :</p>
 <div class="sourceCode" id="section-cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw"><a href="../reference/distributacalculVis.html">distributacalculVis</a></span>(<span class="dt">law =</span> <span class="st">"Gamma"</span>, <span class="dt">mod =</span> <span class="st">"functions"</span>)</a></code></pre></div>
-<iframe data-deferred-src="appa4720c343ed3b75c57949bbd55d618a5/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
+<iframe data-deferred-src="app744b4160cde92d03cdc68a8c2d5b6a21/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
 <p>As you increase the scale parameter, the distribution becomes increasingly compressed.<br></p>
 <p>To understand why this happens mathematically, suppose we scale a random variable <span class="math inline">\(X\)</span> by 3. That is to say, we multiply <span class="math inline">\(X\)</span> by 3: <span class="math display">\[
 \Pr(3 \times X \leq x)
@@ -130,7 +131,7 @@ The <span class="math inline">\(\lambda\)</span> parameter of a discrete Poisson
     See what happens when you change the _rate_ parameter below of a Poisson distribution : 
 --></p>
 <div class="sourceCode" id="section-cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw"><a href="../reference/distributacalculVis.html">distributacalculVis</a></span>(<span class="dt">law =</span> <span class="st">"Gamma"</span>, <span class="dt">mod =</span> <span class="st">"functions"</span>)</a></code></pre></div>
-<iframe data-deferred-src="appb85dc9529618c108ea385e063df5394d/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
+<iframe data-deferred-src="app0ec28b729165647f01f643178d7dc83e/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
 <p>You can observe it has the opposite effect of the scale parameter.<br></p>
 <p>In brief, mathematically the rate parameter is just the inverse of the scale parameter. In practice, however, it has very useful applications.</p>
 </div>

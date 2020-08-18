@@ -38,7 +38,7 @@ VatRLlogis(kap, shape, rate = 1/scale, scale = 1/rate)
 TVatRLlogis(kap, shape, rate = 1/scale, scale = 1/rate)
 }
 \arguments{
-\item{x}{quantile.}
+\item{x}{vector of quantiles.}
 
 \item{shape}{shape parameter \eqn{\tau}{tau}, must be positive}
 
@@ -46,9 +46,10 @@ TVatRLlogis(kap, shape, rate = 1/scale, scale = 1/rate)
 
 \item{scale}{alternative parameterization to the rate parameter, scale = 1 / rate.}
 
-\item{q}{quantile.}
+\item{q}{vector of quantiles.}
 
-\item{lower.tail}{logical; if \\code{TRUE} (default) probabilities are Pr(M <= k), otherwise, Pr(M > k).}
+\item{lower.tail}{logical; if TRUE (default), probabilities are
+    \eqn{P[X \le x]}, otherwise, \eqn{P[X > x]}.}
 
 \item{k}{kth-moment.}
 

@@ -32,7 +32,7 @@ Computes CDF of the Fréchet lower bound copula.
 \details{
 The Fréchet lower bound copula has CDF :
   \deqn{C(u_{1}, u_{2}) = \max(u_{1} + u_{2} - 1, 0)}{C(u1, u2) = max(u1 + u2 - 1, 0)}
-  for \eqn{u_{1}, u_{2} \in [0, 1]}{0 ≤ u1, u2 ≤ 1}.
+  for \eqn{u_{1}, u_{2} \in [0, 1]}{0 <= u1, u2 <= 1}.
 }
 \examples{
 cFrechetLowerBound(u1 = .76, u2 = 0.4)

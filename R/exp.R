@@ -175,6 +175,9 @@ meanExcessExp <- function(d, rate = 1 / scale, scale = 1 / rate) {
 
 #' @rdname Exp
 #'
+#' @note Function VatRExp is a wrapper of the \code{\link[stats]{qexp}}
+#' function from the stats package.
+#'
 #' @template kap-template
 #'
 #' @export

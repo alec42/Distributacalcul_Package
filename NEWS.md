@@ -58,6 +58,8 @@
 +   Updated Shiny functions with new syntax.
 +   Updated vignette with new syntax.
 +   Updated README with new syntax.
++   Added structure for tests.
+    +   Included basic tests to learn how it works.
 
 ##  Bug Fixes and Changes
 +   Added `pPareto()` and `dPareto()` functions. 
@@ -71,6 +73,8 @@
 +   Improved title case and style according to the Tidyverse style guide.
 +   Changed filename of `riskMeasuresBoxVis` to `riskMeasuresBox`
 +   Fixed mistake in discrete uniform template file which linked the PDF instead of the CDF in the return field of the description.
++   Added rmarkdown to the vignette builder section of the `DESCRIPTION` file as per [this rubric](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file) of the writing R extensions guide.
++   Added `CITATION` file for custom citation.
 
 ##  Minor Changes
 +   Changed `Etronq_` functions to `Etrunc_` functions.
@@ -97,6 +101,11 @@
     +   Makes it so each distribution's template file doesn't individually define the parameters and it's easier to change the definition of a parameter for all the distributions.
     +   Removed(ing) the conditional calls for the variables from the distributions' template files.
     +   Done: beta, burr, uniform (both), exp, gamma, hyper, IG.
++   Pulled x, q, min and max, and lower.tail parameter descriptions directly from functions of the stats package with `@inheritParams` call.
++   Added notes for `VatR` functions which are just wrappers and added direct links to the underlying functions.
++   Removed special symbols in LaTeX formulas.
++   Added `distributacalcul-package.R` file which describes the package ! 
++   Added author, and did other minor changes, to the vignette.
 
 #   Distributacalcul 0.2.2
 ## New Features

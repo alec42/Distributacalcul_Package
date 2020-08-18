@@ -1,1 +1,1 @@
-#' @param x quantile.
+#' @inheritParams stats::dexp

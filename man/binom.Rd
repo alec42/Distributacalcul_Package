@@ -62,8 +62,8 @@ has probability mass function :
 for \eqn{k = 0, 1, 2, \dots, n}{k = 0, 1, 2, ..., n}, \eqn{p \in [0, 1]}{0 <= p <= 1}, and \eqn{n > 0}{n > 0}
 }
 \note{
-Function VatRBinom is a wrapper of the qbinom function from the
-stats package.
+Function VatRBinom is a wrapper of the \code{\link[stats]{qbinom}}
+function from the stats package.
 }
 \examples{
 expValBinom(size = 3, prob = 0.5)

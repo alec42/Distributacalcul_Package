@@ -158,8 +158,8 @@ meanExcessLnorm <- function(d, meanlog, sdlog) {
 
 #' @rdname Lnorm
 #'
-#' @note Function VatRLnorm is a wrapper for the qlnorm function from the
-#' stats package.
+#' @note Function VatRLnorm is a wrapper of the \code{\link[stats]{qlnorm}}
+#' function from the stats package.
 #'
 #' @template kap-template
 #'

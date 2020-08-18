@@ -68,6 +68,10 @@ The Normal distribution with mean \eqn{\mu}{mu} and standard deviation
   \deqn{\frac{1}{\sqrt{2\pi}\sigma}\textrm{e}^{-\frac{1}{2}\left(\frac{x - \mu}{\sigma}\right)^2}}{f(x) = e^(-(1/2) ((x - mu)/sigma)^2) / ((2 pi)^(1/2) sigma}
 for \eqn{x \in \mathcal{R}}{x real}, \eqn{\mu \in \mathcal{R}, \sigma > 0}{mu real, sigma > 0}.
 }
+\note{
+Function VatRNorm is a wrapper of the \code{\link[stats]{qnorm}}
+function from the stats package.
+}
 \examples{
 expValNorm(mean = 3, sd = 5)
 

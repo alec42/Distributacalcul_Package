@@ -79,8 +79,8 @@ The Beta distribution with shape parameters \eqn{\alpha}{a} and
 for \eqn{x \in [0, 1]}{0 ≤ x ≤ 1}, \eqn{\alpha, \beta > 0}{a, b > 0}.
 }
 \note{
-Function VatRBeta is a wrapper for the qbeta function from the
-stats package.
+Function VatRBeta is a wrapper for the \code{\link[stats]{qbeta}}
+function from the stats package.
 }
 \examples{
 expValBeta(shape1 = 3, shape2 = 5)

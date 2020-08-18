@@ -36,9 +36,9 @@ The bivariate Marshall-Olkin copula has CDF :
   \deqn{C(u_{1}, u_{2}) = u_{1}u_{2}^{1 - \beta} \times%
     \textbf{1}_{\{u_{1}^{\alpha} \leq u_{2}^{\beta}\}} + %
     u_{1}^{1 - \alpha}u_{2} \times \textbf{1}_{\{u_{1}^{\alpha}%
-    \geq u_{2}^{\beta}\}}}{C(u1, u2) = u1 u2^(1 - β) * %
-    1_(u1^α ≤ u2^β) + u1^(1 - α) u2 * 1_(u1^α ≥ u2^β)}
-for \eqn{u_{1}, u_{2}, \alpha, \beta \in [0, 1]}{0 ≤ u1, u2, α, β ≤ 1}.
+    \geq u_{2}^{\beta}\}}}{C(u1, u2) = u1 u2^(1 - beta) * %
+    1_(u1^alpha <= u2^beta) + u1^(1 - alpha) u2 * 1_(u1^alpha >= u2^beta}
+for \eqn{u_{1}, u_{2}, \alpha, \beta \in [0, 1]}{0 <= u1, u2, alpha, beta <= 1}.
 It is the geometric mean of the independance and upper Fréchet bound copulas.
 }
 \examples{

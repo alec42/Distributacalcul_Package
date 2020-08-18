@@ -26,13 +26,14 @@ mgfLogarithmic(t, prob)
 pgfLogarithmic(t, prob)
 }
 \arguments{
-\item{x}{quantile.}
+\item{x}{vector of quantiles.}
 
 \item{prob}{probability parameter \eqn{\gamma}{gamma}.}
 
-\item{q}{quantile.}
+\item{q}{vector of quantiles.}
 
-\item{lower.tail}{logical; if \\code{TRUE} (default) probabilities are Pr(M <= k), otherwise, Pr(M > k).}
+\item{lower.tail}{logical; if TRUE (default), probabilities are
+    \eqn{P[X \le x]}, otherwise, \eqn{P[X > x]}.}
 
 \item{kap}{probability.}
 

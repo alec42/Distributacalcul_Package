@@ -32,7 +32,7 @@ Computes CDF of the independence copula.
 \details{
 The independence copula has CDF :
   \deqn{C(u_{1}, u_{2}) = u_{1} \times u_{2}}{C(u1, u2) = u1 * u2}
-  for \eqn{u_{1}, u_{2} \in [0, 1]}{0 ≤ u1, u2 ≤ 1}.
+  for \eqn{u_{1}, u_{2} \in [0, 1]}{0 <= u1, u2 <= 1}.
 }
 \examples{
 cIndependent(u1 = .76, u2 = 0.4)

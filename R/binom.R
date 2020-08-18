@@ -99,8 +99,8 @@ expValTruncBinom <- function(d, size, prob, less.than.d = TRUE) {
 #' @importFrom stats qbinom
 #' @export
 #'
-#' @note Function VatRBinom is a wrapper of the qbinom function from the
-#' stats package.
+#' @note Function VatRBinom is a wrapper of the \code{\link[stats]{qbinom}}
+#' function from the stats package.
 #'
 #' @examples
 #'

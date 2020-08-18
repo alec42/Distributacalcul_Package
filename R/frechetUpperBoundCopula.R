@@ -6,7 +6,7 @@
 #' @details
 #'  The Fréchet upper bound copula has CDF :
 #'   \deqn{C(u_{1}, u_{2}) = \min(u_{1}, u_{2})}{C(u1, u2) = min(u1, u2)}
-#'   for \eqn{u_{1}, u_{2} \in [0, 1]}{0 ≤ u1, u2 ≤ 1}.
+#'   for \eqn{u_{1}, u_{2} \in [0, 1]}{0 <= u1, u2 <= 1}.
 #'
 #' @template u1u2-template
 #' @template dots-template

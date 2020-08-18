@@ -93,7 +93,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/distributionParameters.html">Shape, Rate, Scale, Location Parameters</a>
+      <a href="../articles/distributionParameters.html">Shape, Rate, Scale, and Location Parameters</a>
     </li>
   </ul>
 </li>
@@ -155,7 +155,7 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>quantile.</p></td>
+      <td><p>vector of quantiles.</p></td>
     </tr>
     <tr>
       <th>shape</th>
@@ -171,11 +171,12 @@
     </tr>
     <tr>
       <th>q</th>
-      <td><p>quantile.</p></td>
+      <td><p>vector of quantiles.</p></td>
     </tr>
     <tr>
       <th>lower.tail</th>
-      <td><p>logical; if \codeTRUE (default) probabilities are Pr(M &lt;= k), otherwise, Pr(M &gt; k).</p></td>
+      <td><p>logical; if TRUE (default), probabilities are
+    \(P[X \le x]\), otherwise, \(P[X &gt; x]\).</p></td>
     </tr>
     <tr>
       <th>k</th>
@@ -223,6 +224,10 @@
   \mathrm{e}^{-\beta x}$$
 for \(x \in \mathcal{R}^+\), \(\beta &gt; 0\),<!-- % -->
 \(n \in \mathcal{N}^+\).</p>
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    <p>Function VatRErlang is a wrapper of the <code><a href='https://rdrr.io/r/stats/GammaDist.html'>qgamma</a></code>
+function from the stats package.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>dErlang</span>(<span class='kw'>x</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>shape</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>scale</span> <span class='kw'>=</span> <span class='fl'>4</span>)</div><div class='output co'>#&gt; [1] 0.07581633</div><div class='input'>
@@ -254,6 +259,7 @@ for \(x \in \mathcal{R}^+\), \(\beta &gt; 0\),<!-- % -->
       <li><a href="#arguments">Arguments</a></li>
       <li><a href="#value">Value</a></li>
       <li><a href="#details">Details</a></li>
+      <li><a href="#note">Note</a></li>
       <li><a href="#examples">Examples</a></li>
     </ul>
 

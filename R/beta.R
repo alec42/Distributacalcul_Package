@@ -162,8 +162,8 @@ meanExcessBeta <- function(d, shape1, shape2) {
 
 #' @rdname Beta
 #'
-#' @note Function VatRBeta is a wrapper for the qbeta function from the
-#' stats package.
+#' @note Function VatRBeta is a wrapper for the \code{\link[stats]{qbeta}}
+#' function from the stats package.
 #'
 #' @template kap-template
 #'

@@ -144,6 +144,9 @@ meanExcessNorm <- function(d, mean = 0, sd = 1) {
 
 #' @rdname Norm
 #'
+#' @note Function VatRNorm is a wrapper of the \code{\link[stats]{qnorm}}
+#' function from the stats package.
+#'
 #' @template kap-template
 #'
 #' @importFrom stats qnorm

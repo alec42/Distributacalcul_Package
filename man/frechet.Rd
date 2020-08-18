@@ -34,10 +34,10 @@ Computes CDF and PDF of the Fréchet copula.
 \details{
 The Fréchet copula has CDF :
   \deqn{C(u_{1}, u_{2}) = (1 - \alpha - \beta)(u_{1} \times u_{2}) + \alpha\min(u_{1}, u_{2})%
-    + \beta\max(u_{1} + u_{2} - 1, 0)}{C(u1, u2) = (1 - α - β) (u1 * u2) %
-    + α min(u1, u2) + β max(u1 + u2 - 1, 0)}
-  for \eqn{u_{1}, u_{2}, \alpha, \beta \in [0, 1]}{0 ≤ u1, u2, α, β ≤ 1} %
-   and \eqn{\alpha + \beta \leq 1}{α + β ≤ 1}.
+    + \beta\max(u_{1} + u_{2} - 1, 0)}{C(u1, u2) = (1 - alpha - beta) (u1 * u2) %
+    + alpha min(u1, u2) + beta max(u1 + u2 - 1, 0)}
+  for \eqn{u_{1}, u_{2}, \alpha, \beta \in [0, 1]}{0 <= u1, u2, alpha, beta <= 1} %
+   and \eqn{\alpha + \beta \leq 1}{alpha + beta <= 1}.
 }
 \examples{
 cFrechet(u1 = .76, u2 = 0.4, dependencyParameter = c(0.2, 0.3))

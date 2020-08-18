@@ -1,1 +1,1 @@
-#' @param q quantile.
+#' @inheritParams stats::pexp

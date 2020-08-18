@@ -1,13 +1,15 @@
 ---
-title: "Shape, Rate, Scale, Location Parameters"
+title: "Shape, Rate, Scale, and Location Parameters"
+author: "Alec James van Rassel"
 output: rmarkdown::html_vignette
 runtime: shiny
 vignette: >
-  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteIndexEntry{Shape, Rate, Scale, Location Parameters}
+  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
-```{r, include = FALSE}
+
+```{r setup knitr, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"

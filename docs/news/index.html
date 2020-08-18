@@ -90,7 +90,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/distributionParameters.html">Shape, Rate, Scale, Location Parameters</a>
+      <a href="../articles/distributionParameters.html">Shape, Rate, Scale, and Location Parameters</a>
     </li>
   </ul>
 </li>
@@ -227,6 +227,11 @@
 <li>Updated Shiny functions with new syntax.</li>
 <li>Updated vignette with new syntax.</li>
 <li>Updated README with new syntax.</li>
+<li>Added structure for tests.
+<ul>
+<li>Included basic tests to learn how it works.</li>
+</ul>
+</li>
 </ul>
 </div>
 <div id="bug-fixes-and-changes" class="section level2">
@@ -254,6 +259,8 @@
 <li>Changed filename of <code>riskMeasuresBoxVis</code> to <code>riskMeasuresBox</code>
 </li>
 <li>Fixed mistake in discrete uniform template file which linked the PDF instead of the CDF in the return field of the description.</li>
+<li>Added rmarkdown to the vignette builder section of the <code>DESCRIPTION</code> file as per <a href="https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file">this rubric</a> of the writing R extensions guide.</li>
+<li>Added <code>CITATION</code> file for custom citation.</li>
 </ul>
 </div>
 <div id="minor-changes" class="section level2">
@@ -305,6 +312,11 @@
 <li>Done: beta, burr, uniform (both), exp, gamma, hyper, IG.</li>
 </ul>
 </li>
+<li>Pulled x, q, min and max, and lower.tail parameter descriptions directly from functions of the stats package with <code>@inheritParams</code> call.</li>
+<li>Added notes for <code>VatR</code> functions which are just wrappers and added direct links to the underlying functions.</li>
+<li>Removed special symbols in LaTeX formulas.</li>
+<li>Added <code>distributacalcul-package.R</code> file which describes the package !</li>
+<li>Added author, and did other minor changes, to the vignette.</li>
 </ul>
 </div>
 </div>

@@ -193,6 +193,9 @@ meanExcessGamma <- function(d, shape, rate = 1 / scale, scale = 1 / rate) {
 
 #' @rdname Gamma
 #'
+#' @note Function VatRGamma is a wrapper for the \code{\link[stats]{qgamma}}
+#' function stats package.
+#'
 #' @template kap-template
 #'
 #' @importFrom stats qgamma

@@ -8,3 +8,5 @@
 package-build-site.R
 cran-comments.md
 *.sh
+doc
+Meta

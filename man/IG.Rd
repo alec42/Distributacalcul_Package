@@ -75,8 +75,8 @@ Inverse Gaussian distribution with mean \eqn{\mu}{mu} and shape parameter
 The Inverse Gaussian distribution with
 }
 \note{
-Function VatRIG is a wrapper for the qinvgauss function from the
-statmod package.
+Function VatRIG is a wrapper for the \code{\link[statmod]{qinvgauss}}
+function from the statmod package.
 }
 \examples{
 expValIG(mean = 2, shape = 5)

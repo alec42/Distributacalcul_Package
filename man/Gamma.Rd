@@ -78,6 +78,10 @@ parameter \eqn{\beta}{b} has density:
   \textrm{e}^{-\beta x}}{f(x) = b^a / \Gamma(a) x^{a - 1} e^{-b x}}
 for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\beta, \alpha > 0}{b, a > 0}.
 }
+\note{
+Function VatRGamma is a wrapper for the \code{\link[stats]{qgamma}}
+function stats package.
+}
 \examples{
 
 # With scale parameter

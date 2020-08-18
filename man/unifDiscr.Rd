@@ -17,11 +17,13 @@ varUnifD(min = 0, max = 1)
 expValUnifD(min = 0, max = 1)
 }
 \arguments{
-\item{q}{quantile.}
+\item{q}{vector of quantiles.}
 
-\item{min, max}{lower and upper limits of the distribution. Must be finite.}
+\item{min}{lower and upper limits of the distribution.  Must be finite.}
 
-\item{x}{quantile.}
+\item{max}{lower and upper limits of the distribution.  Must be finite.}
+
+\item{x}{vector of quantiles.}
 }
 \value{
 Function :

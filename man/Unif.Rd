@@ -35,7 +35,9 @@ TVatRUnif(kap, min = 0, max = 1)
 mgfUnif(t, min = 0, max = 1)
 }
 \arguments{
-\item{min, max}{lower and upper limits of the distribution. Must be finite.}
+\item{min}{lower and upper limits of the distribution.  Must be finite.}
+
+\item{max}{lower and upper limits of the distribution.  Must be finite.}
 
 \item{k}{kth-moment.}
 

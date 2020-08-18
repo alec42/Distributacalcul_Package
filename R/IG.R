@@ -150,8 +150,8 @@ meanExcessIG <- function(d, mean, shape = dispersion * mean^2, dispersion = shap
 
 #' @rdname IG
 #'
-#' @note Function VatRIG is a wrapper for the qinvgauss function from the
-#' statmod package.
+#' @note Function VatRIG is a wrapper for the \code{\link[statmod]{qinvgauss}}
+#' function from the statmod package.
 #'
 #' @template kap-template
 #'

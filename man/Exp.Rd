@@ -74,6 +74,10 @@ The Exponential distribution with rate parameter \eqn{\beta}{b} has density:
   {f(x) = b^a e^{-b x}}
 for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\beta > 0}{b > 0}.
 }
+\note{
+Function VatRExp is a wrapper of the \code{\link[stats]{qexp}}
+function from the stats package.
+}
 \examples{
 # With scale parameter
 expValExp(scale = 4)

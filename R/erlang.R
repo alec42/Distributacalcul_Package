@@ -235,6 +235,9 @@ meanExcessErlang <- function(d, shape, rate = 1 / scale, scale = 1 / rate) {
 
 #' @rdname erlang
 #'
+#' @note Function VatRErlang is a wrapper of the \code{\link[stats]{qgamma}}
+#' function from the stats package.
+#'
 #' @template kap-template
 #'
 #' @importFrom stats qgamma

@@ -92,7 +92,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
     <li>
-      <a href="../articles/distributionParameters.html">Shape, Rate, Scale, Location Parameters</a>
+      <a href="../articles/distributionParameters.html">Shape, Rate, Scale, and Location Parameters</a>
     </li>
   </ul>
 </li>
@@ -143,7 +143,7 @@
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>quantile.</p></td>
+      <td><p>vector of quantiles.</p></td>
     </tr>
     <tr>
       <th>prob</th>
@@ -151,11 +151,12 @@
     </tr>
     <tr>
       <th>q</th>
-      <td><p>quantile.</p></td>
+      <td><p>vector of quantiles.</p></td>
     </tr>
     <tr>
       <th>lower.tail</th>
-      <td><p>logical; if \codeTRUE (default) probabilities are Pr(M &lt;= k), otherwise, Pr(M &gt; k).</p></td>
+      <td><p>logical; if TRUE (default), probabilities are
+    \(P[X \le x]\), otherwise, \(P[X &gt; x]\).</p></td>
     </tr>
     <tr>
       <th>kap</th>
