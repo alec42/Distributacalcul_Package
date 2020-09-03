@@ -1,7 +1,7 @@
 #' Fréchet Lower Bound Copula
 #'
 #' @description
-#' Computes CDF of the Fréchet lower bound copula.
+#' Computes CDF and simulations of the Fréchet lower bound copula.
 #'
 #' @details
 #'  The Fréchet lower bound copula has CDF :

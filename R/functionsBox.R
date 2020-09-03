@@ -1,10 +1,10 @@
 #' Interactive functions visualization (server side)
 #'
-#' @param input input for server side.
-#' @param output output for server side.
-#' @param session session for server side.
+#' @template input-template
+#' @template output-template
+#' @template session-template
 #' @param law Distribution to visualize, one of ...
-#' @param lang Internal function to ensure translation works and input is communicated between modules.
+#' @template lang-template
 #'
 #' @return Server function for the functions module.
 #'  Should not be run directly.

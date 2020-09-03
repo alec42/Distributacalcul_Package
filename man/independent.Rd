@@ -27,7 +27,7 @@ Function :
   }
 }
 \description{
-Computes CDF of the independence copula.
+Computes CDF and simulations of the independence copula.
 }
 \details{
 The independence copula has CDF :

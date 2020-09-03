@@ -27,7 +27,7 @@ Function :
   }
 }
 \description{
-Computes CDF of the Fréchet upper bound copula.
+Computes CDF and simulations of the Fréchet upper bound copula.
 }
 \details{
 The Fréchet upper bound copula has CDF :

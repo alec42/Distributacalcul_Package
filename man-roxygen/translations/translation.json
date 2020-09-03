@@ -152,8 +152,28 @@
         	"fr": "Paramètres"
         },
         {
+        	"en": "Parameter",
+        	"fr": "Paramètre"
+        },
+        {
         	"en": "Functions",
         	"fr": "Fonctions"
+        },
+        {
+        	"en": "Copula Simulations",
+        	"fr": "Simulations de la copule"
+        },
+        {
+        	"en": "Simulated Observations",
+        	"fr": "Réalisations de la copule"
+        },
+        {
+        	"en": "Point intensity",
+        	"fr": "Concentration des points"
+        },
+        {
+        	"en": "Copula Distribution",
+        	"fr": "Distribution de la copule"
         },
         {
         	"en": "Moments",
@@ -208,8 +228,28 @@
         	"fr": "Mesures de risque"
         },
         {
-        	"en": "",
-        	"fr": ""
+        	"en": "Copulas",
+        	"fr": "Copules"
+        },
+        {
+        	"en": "Copula",
+        	"fr": "Copule"
+        },
+        {
+        	"en": "Number of data points (3D)",
+        	"fr": "Nombre d'observations (3D)"
+        },
+        {
+        	"en": "Number of data points (simulations)",
+        	"fr": "Nombre d'observations (simulations)"
+        },
+        {
+        	"en": "Fréchet Boundaries",
+        	"fr": "Bornes de Fréchet"
+        },
+        {
+        	"en": "Contour",
+        	"fr": "Contour"
         }
     ]
 }

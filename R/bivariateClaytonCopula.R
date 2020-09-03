@@ -1,7 +1,7 @@
 #' Bivariate Clayton Copula
 #'
 #' @description
-#' Computes CDF of the bivariate Clayton copula.
+#' Computes CDF, PDF and simulations of the bivariate Clayton copula.
 #'
 #' @details
 #'  The bivariate Clayton copula has CDF :

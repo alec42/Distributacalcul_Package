@@ -29,7 +29,7 @@ Function :
   }
 }
 \description{
-Computes CDF of the bivariate Cuadras-Augé copula.
+Computes CDF and simulations of the bivariate Cuadras-Augé copula.
 }
 \details{
 The bivariate Cuadras-Augé copula has CDF :

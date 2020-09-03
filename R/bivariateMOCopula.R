@@ -1,7 +1,7 @@
 #' Bivariate Marshall-Olkin Copula
 #'
 #' @description
-#' Computes CDF of the bivariate Marshall-Olkin copula.
+#' Computes CDF and simulations of the bivariate Marshall-Olkin copula.
 #'
 #' @details
 #' The bivariate Marshall-Olkin copula has CDF :

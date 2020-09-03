@@ -171,6 +171,13 @@
 <li>Bivariate Eyraud-Farlie-Gumbel-Morgenstern (EFGM) Copula</li>
 </ol>
 </li>
+<li>Added visualisation function <code>copulaVis</code> for Copulas.
+<ul>
+<li>Internal functions are distributionPlotBoxCopulas (3D plot of distribution), simulationPlotBoxCopulas (hexagon plot of simulated observations) and parametersBoxCopulas (parameters box).</li>
+</ul>
+</li>
+<li>
+</li>
 </ul>
 </div>
 <div id="new-features" class="section level2">
@@ -232,6 +239,7 @@
 <li>Included basic tests to learn how it works.</li>
 </ul>
 </li>
+<li>Added function to generate plot of simulation observations from a copula.</li>
 </ul>
 </div>
 <div id="bug-fixes-and-changes" class="section level2">
@@ -261,6 +269,8 @@
 <li>Fixed mistake in discrete uniform template file which linked the PDF instead of the CDF in the return field of the description.</li>
 <li>Added rmarkdown to the vignette builder section of the <code>DESCRIPTION</code> file as per <a href="https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file">this rubric</a> of the writing R extensions guide.</li>
 <li>Added <code>CITATION</code> file for custom citation.</li>
+<li>Converted parameters into templates for both Shiny applications.</li>
+<li>Added more translations for the second Shiny app.</li>
 </ul>
 </div>
 <div id="minor-changes" class="section level2">
@@ -317,6 +327,8 @@
 <li>Removed special symbols in LaTeX formulas.</li>
 <li>Added <code>distributacalcul-package.R</code> file which describes the package !</li>
 <li>Added author, and did other minor changes, to the vignette.</li>
+<li>Added <code>%&gt;%</code> from dplyr to NAMESPACE file.</li>
+<li>Fixed documentation of Copula functions.</li>
 </ul>
 </div>
 </div>

@@ -33,7 +33,7 @@ Function :
   }
 }
 \description{
-Computes CDF of the bivariate Frank copula.
+Computes CDF, PDF and simulations of the bivariate Frank copula.
 }
 \details{
 The bivariate Frank copula has CDF :

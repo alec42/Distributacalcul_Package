@@ -1,10 +1,10 @@
 #' Interactive parameter chooser (server side)
 #'
-#' @param input input for server side.
-#' @param output output for server side.
-#' @param session session for server side.
+#' @template input-template
+#' @template output-template
+#' @template session-template
 #' @param law Distribution to visualize, one of ...
-#' @param lang Internal function to ensure translation works and input is communicated between modules.
+#' @template lang-template
 #'
 #' @return Server function for the parameter module.
 #'  Should not be run directly.
@@ -79,7 +79,7 @@ parametersBox <- function(input, output, session, law, lang) {
 #' @return UI function for the parameter module.
 #'  Should not be run directly.
 #'
-#' @importFrom shiny NS uiOutput
+#' @importFrom shiny NS uiOutput textOutput
 #' @importFrom shinydashboardPlus boxPlus
 #' @export
 #'
@@ -87,6 +87,7 @@ parametersBox <- function(input, output, session, law, lang) {
 #'
 parametersBoxUI <- function(id) {
     ns <- shiny::NS(id)
+
     #### Parameters ####
     shinydashboardPlus::boxPlus(
         title = shiny::textOutput(ns("parametersTitle")),

@@ -27,6 +27,10 @@
     1.  Bivariate Marshall-Olkin Copula
     1.  Bivariate Frank Copula
     1.  Bivariate Eyraud-Farlie-Gumbel-Morgenstern (EFGM) Copula
++   Added visualisation function `copulaVis` for Copulas.
+    +   Internal functions are distributionPlotBoxCopulas (3D plot of distribution), simulationPlotBoxCopulas (hexagon plot of simulated observations) and parametersBoxCopulas (parameters box).
+    
++
 
 ## New Features
 +   Added `pllogis()` and `dllogis()` functions.
@@ -60,6 +64,7 @@
 +   Updated README with new syntax.
 +   Added structure for tests.
     +   Included basic tests to learn how it works.
++   Added function to generate plot of simulation observations from a copula.
 
 ##  Bug Fixes and Changes
 +   Added `pPareto()` and `dPareto()` functions. 
@@ -75,6 +80,8 @@
 +   Fixed mistake in discrete uniform template file which linked the PDF instead of the CDF in the return field of the description.
 +   Added rmarkdown to the vignette builder section of the `DESCRIPTION` file as per [this rubric](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file) of the writing R extensions guide.
 +   Added `CITATION` file for custom citation.
++   Converted parameters into templates for both Shiny applications.
++   Added more translations for the second Shiny app.
 
 ##  Minor Changes
 +   Changed `Etronq_` functions to `Etrunc_` functions.
@@ -106,6 +113,8 @@
 +   Removed special symbols in LaTeX formulas.
 +   Added `distributacalcul-package.R` file which describes the package ! 
 +   Added author, and did other minor changes, to the vignette.
++   Added `%>%` from dplyr to NAMESPACE file.
++   Fixed documentation of Copula functions.
 
 #   Distributacalcul 0.2.2
 ## New Features

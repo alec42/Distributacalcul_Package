@@ -33,7 +33,8 @@ Function :
   }
 }
 \description{
-Computes CDF of the bivariate Ali-Mikhail-Haq copula.
+Computes CDF, PDF and simulations of of the bivariate Ali-Mikhail-Haq
+copula.
 }
 \details{
 The bivariate Ali-Mikhail-Haq copula has CDF :

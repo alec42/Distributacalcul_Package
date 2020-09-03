@@ -33,7 +33,7 @@ Function :
   }
 }
 \description{
-Computes CDF of the bivariate Gumbel copula.
+Computes CDF, PDF and simulations of the bivariate Gumbel copula.
 }
 \details{
 The bivariate Gumbel copula has CDF :

@@ -31,7 +31,7 @@ Function :
   }
 }
 \description{
-Computes CDF of the EFGM copula.
+Computes CDF, PDF and simulations of the EFGM copula.
 }
 \details{
 The EFGM copula has CDF :

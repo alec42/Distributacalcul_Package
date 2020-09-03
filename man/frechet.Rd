@@ -29,7 +29,7 @@ Function :
   }
 }
 \description{
-Computes CDF and PDF of the Fréchet copula.
+Computes CDF and simulations of the Fréchet copula.
 }
 \details{
 The Fréchet copula has CDF :
