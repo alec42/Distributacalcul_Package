@@ -1,0 +1,1 @@
+#' @param dependencyParameter correlation parameter.

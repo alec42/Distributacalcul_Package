@@ -1,7 +1,8 @@
 Package: Distributacalcul
 Type: Package
 Title: Probability Distribution Functions
-Version: 0.2.2
+Version: 0.3.0
+Date: 2020-06-
 Authors@R: c(
     person("Alec James", "van Rassel", email = "alec.van-rassel.1@ulaval.ca",
             role = c("aut", "cre", "cph")), 
@@ -22,7 +23,7 @@ Description: Calculates expected values, variance, different moments (kth
     This package is intended to expand the 'stats' package so as
     to enable students to develop an intuition for probability.
 License: MIT + file LICENSE
-URL: https://alec42.github.io/Distributacalcul_Package/
+URL: https://alec42.github.io/Distributacalcul_Package
 BugReports: https://github.com/alec42/Distributacalcul_Package/issues
 Encoding: UTF-8
 LazyData: true
@@ -37,11 +38,16 @@ Imports:
     shinyWidgets,
     shinydashboardPlus,
     shinydashboard,
-    rlang
+    rlang,
+    shiny.i18n
 RoxygenNote: 7.0.2
 Suggests: 
     learnr,
     knitr,
     rmarkdown,
-    spelling
+    spelling,
+    testthat
 Language: en-CA
+VignetteBuilder: 
+    knitr,
+    rmarkdown

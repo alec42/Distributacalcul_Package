@@ -1,0 +1,15 @@
+citHeader("To cite package 'Distributacalcul' in publications use:")
+
+citEntry(entry = "Unpublished",
+  title        = "Distributacalcul: Probability Distribution Functions",
+  author       = c(person("Alec James", "van Rassel", role = c("aut", "cre", "cph")),
+                   person("Gabriel", "Crépeault-Cauchon", role = c("aut", "ccp"))),
+  year         = "2020",
+  url          = "https://alec42.github.io/Distributacalcul_Package",
+  note         = "R package version 0.3.0.",
+  textVersion  =
+  paste("Alec James van Rassel and Gabriel Crépeault-Cauchon (2020).",
+        "Distributacalcul: Probability Distribution Functions.",
+        "R package version 0.3.0.",
+        "URL https://alec42.github.io/Distributacalcul_Package.")
+)

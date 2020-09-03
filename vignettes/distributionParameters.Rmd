@@ -1,0 +1,87 @@
+---
+title: "Shape, Rate, Scale, and Location Parameters"
+author: "Alec James van Rassel"
+output: rmarkdown::html_vignette
+runtime: shiny
+vignette: >
+  %\VignetteIndexEntry{Shape, Rate, Scale, Location Parameters}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup knitr, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(Distributacalcul)
+```
+
+##  Context
+When I started learning about probability distributions, the parameters of distributions were simply "alpha", "beta", "mu", etc. to me. 
+
+It is only when I started using R that I realized they were called "shape", "rate", and "scale" parameters. Sometimes, there was even a "location" or a "dispersion" parameter ! But what do these mean ? That's what this vignette explains.
+
+
+##  The location parameter
+To get a feel for this, see what happens to the density of the Normal distribution when you change $\mu$ : 
+
+```{r norm-location}
+distributacalculVis(law = "Norm", mod = "functions")
+```
+
+If you notice, changing $\mu$ only changes where on the x-axis the density is centered or, _located_. We call this a __location parameter__. 
+
+In brief, the location parameter is exactly what it sounds like.
+
+
+##  The scale parameter
+The scale parameter changes the scale of the distribution.
+
+To get a feel for this, try changing the scale parameter of the Gamma distribution $\beta$ below from 1 to 2 to 3 :
+```{r gamma-scale}
+distributacalculVis(law = "Gamma", mod = "functions")
+```
+
+As you increase the scale parameter, the distribution becomes increasingly compressed. \
+
+To understand why this happens mathematically, suppose we scale a random variable $X$ by 3. That is to say, we multiply $X$ by 3:
+$$
+\Pr(3 \times X \leq x)
+=   \Pr\left(X \leq \frac{x}{3}\right)
+$$
+
+We see that scaling __up__ a random variable by a constant scales __down__ the values it takes. \
+
+Converting between centimeters and meters doesn't change a number, only its scale. Similarly, the scale parameter doesn't change the 'shape' of a distribution, only its scale.
+
+
+##  The rate parameter
+Mathematically, the rate parameter is one over the scale parameter : $\text{rate} = \frac{1}{\text{scale}}$.    \
+
+To understand the logic behind this, suppose that we scale a random variable $X$ by $\frac{1}{3}$. That is to say, we multiply $X$ by $\frac{1}{3}$:
+$$
+\Pr\left(\frac{1}{3} \times X \leq x\right)
+=   \Pr\left(X \leq 3x\right)
+$$
+
+We see that scaling ___down___ a random variable by a __fraction__ scales __up__ the values it takes. \
+
+In practice, the Poisson distribution is often used to model the frequency of events. Particularly, it is used in actuarial science to model the number of accidents which occur. \
+The $\lambda$ parameter of a discrete Poisson random variable is a _rate_ parameter. Enter the $\beta$ parameter as a proportion below (0.20, 0.30, etc.) and see what changing it does :
+<!-- Add Poisson distribution to Shiny app.
+    See what happens when you change the _rate_ parameter below of a Poisson distribution : 
+-->
+```{r rate-parameter}
+distributacalculVis(law = "Gamma", mod = "functions")
+```
+
+You can observe it has the opposite effect of the scale parameter. \
+
+In brief, mathematically the rate parameter is just the inverse of the scale parameter. In practice, however, it has very useful applications.
+
+
+##  The shape parameter

@@ -3,7 +3,7 @@ output:
   md_document:
     variant: gfm
 ---
-
+[![](https://www.r-pkg.org/badges/version/Distributacalcul)](https://CRAN.R-project.org/package=Distributacalcul)
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
@@ -22,6 +22,8 @@ library(tidyverse)
 <!-- badges: end -->
 
 The goal of Distributacalcul is to simplify the life of students and scientists by offering premade functions for various functions of probability distributions. Functions calculate moments of the distribution (mean, variance, kth moment) as well as the expected value of functions of the distribution (truncated mean, stop-loss, mean excess loss, etc.). In addition, the package includes some risk measures (Value-at-Risk and Tail Value-at-Risk).
+
+In addition, this package has recently added probability functions for various bivariate copulas. Functions calculate the density associated with the copula, the distribution function and also simulations.
 
 This package depends primarily the stats package. 
 
@@ -47,39 +49,42 @@ This is a basic example which shows you the typical use of the functions:
 ```{r beta-example}
 library(Distributacalcul)
 ##  Various moments:
-E_beta(shape1 = 2, shape2 = 4) # E[X]
-V_beta(shape1 = 2, shape2 = 4) # V(X)
-kthmoment_beta(k = 3, shape1 = 2, shape2 = 4) # E[X^k]
+expValBeta(shape1 = 2, shape2 = 4) # E[X]
+varBeta(shape1 = 2, shape2 = 4) # V(X)
+kthMomentBeta(k = 3, shape1 = 2, shape2 = 4) # E[X^k]
 
 ##  Expected value of functions:
-Elim_beta(d = 0.3, shape1 = 2, shape2 = 4) # E[min(X; d)]
-Etronq_beta(d = .3, shape1 = 2, shape2 = 4, less.than.d = TRUE) # E[X * 1_{X <= d}]
-Etronq_beta(d = .3, shape1 = 2, shape2 = 4, less.than.d = FALSE) # E[X * 1_{X > d}]
-Mexcess_beta(d = .3, shape1 = 2, shape2 = 4) # E[(X - d | X > d)]
-SL_beta(d = .3, shape1 = 2, shape2 = 4) # E[max(X - d, 0)]
+expValLimBeta(d = 0.3, shape1 = 2, shape2 = 4) # E[min(X; d)]
+expValTruncBeta(d = .3, shape1 = 2, shape2 = 4, less.than.d = TRUE) # E[X * 1_{X <= d}]
+expValTruncBeta(d = .3, shape1 = 2, shape2 = 4, less.than.d = FALSE) # E[X * 1_{X > d}]
+meanExcessBeta(d = .3, shape1 = 2, shape2 = 4) # E[(X - d | X > d)]
+stopLossBeta(d = .3, shape1 = 2, shape2 = 4) # E[max(X - d, 0)]
 
 ##  Risk measures:
-TVaR_beta(kap = 0.99, shape1 = 2, shape2 = 4) # TVaR_{k}(X)
-VaR_beta(kap = 0.99, shape1 = 2, shape2 = 4) # VaR_{k}(X) = F_X^(-1)(k)
+TVatRBeta(kap = 0.99, shape1 = 2, shape2 = 4) # TVaR_{k}(X)
+VatRBeta(kap = 0.99, shape1 = 2, shape2 = 4) # VaR_{k}(X) = F_X^(-1)(k)
 ```
 
 ## Syntax:
 
-| Function                    | Syntax                 |
-| --------------------------- | ---------------------- |
-| Mean                        | E_distribution         |
-| K-th moment                 | kthmoment_distribution |
-| Truncated mean              | Etronq_distribution    |
-| Limited expected value      | Elim_distribution      |
-| Variance                    | V_distribution         |
-| Stop-loss                   | SL_distribution        |
-| Excess of mean              | Mexcess_distribution   |
-| Moment Generating Function  | MGF_distribution       |
-| Probability Generating Function  | PGF_distribution       |
-| Density                     | ddistribution          |
-| Cumulative density function | pdistribution          |
-| Value-at-Risk (percentile)  | TVaR_distribution      |
-| Tail Value-at-Risk          | VaR_distribution       |
+| Function                          | Syntax                  |
+| ---------------------------       | ----------------------  |
+| Mean                              | expValDistribution      |
+| K-th moment                       | kthMomentDistribution   |
+| Truncated mean                    | expValTruncDistribution |
+| Limited expected value            | expValLimDistribution   |
+| Variance                          | varDistribution         |
+| Stop-loss                         | stopLossDistribution    |
+| Excess of mean                    | meanExcessDistribution  |
+| Moment Generating Function        | mgfDistribution         |
+| Probability Generating Function   | pgfDistribution         |
+| Density                           | dDistribution           |
+| Cumulative density function       | pDistribution           |
+| Value-at-Risk (percentile)        | TVatRDistribution       |
+| Tail Value-at-Risk                | VatRDistribution        |
+| Copula Density                    | cdCopula                |
+| Copula Distribution Function      | cCopula                 |
+| Copula Simulation Function        | crCopula                |
 
 
 #   Included distributions and functions
@@ -115,7 +120,7 @@ cont.distr.support <- cbind(
     `Log-logistic` = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
                           `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
                           `Moment Generating Function` = F, 
-                          `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
+                          `Probability Density Function` = T, `Cumulative Probability Density Function` = T, 
                           `Value-at-Risk` = T, `Tail Value-at-Risk` = T
     ),
     `Beta` = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
@@ -133,7 +138,7 @@ cont.distr.support <- cbind(
     `Pareto` = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
                     `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
                     `Moment Generating Function` = F, 
-                    `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
+                    `Probability Density Function` = T, `Cumulative Probability Density Function` = T, 
                     `Value-at-Risk` = T, `Tail Value-at-Risk` = T
     ),
     # `Generalized F-distribution` = list(`Mean` = F, `kth moment` = F, `Variance` = F, 
@@ -156,7 +161,7 @@ cont.distr.support <- cbind(
     ),
     `Uniform` = list(`Mean` = T, `kth moment` = T, `Variance` = T, 
                      `Truncated mean` = T, `Limited mean` = T,  `Stop-loss` = T, `Excess of mean` = T, 
-                     `Moment Generating Function` = F, 
+                     `Moment Generating Function` = T, 
                      `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
                      `Value-at-Risk` = T, `Tail Value-at-Risk` = T
     ),
@@ -211,7 +216,7 @@ discr.distr.support <- cbind(
                          `Truncated mean` = F, `Limited mean` = F,  `Stop-loss` = F, `Excess of mean` = F, 
                          `Moment Generating Function` = T, `Probability Generating Function` = T, 
                          `Probability Density Function` = F, `Cumulative Probability Density Function` = F, 
-                         `Value-at-Risk` = F, `Tail Value-at-Risk` = F
+                         `Value-at-Risk` = T, `Tail Value-at-Risk` = F
     ),
     `Hypergeometric` = list(`Mean` = T, `kth moment` = F, `Variance` = T, 
                          `Truncated mean` = F, `Limited mean` = F,  `Stop-loss` = F, `Excess of mean` = F, 
@@ -233,6 +238,21 @@ discr.distr.support %>%
 ```
 
 
+
+##  Copulas
+1.  Independence Copula
+1.  Fréchet Lower Bound Copula
+1.  Fréchet Upper Bound Copula
+1.  Fréchet Copula
+1.  Bivariate Gumbel Copula
+1.  Bivariate Clayton Copula
+1.  Bivariate Ali-Mikhail-Haq Copula
+1.  Bivariate Cuadras-Augé Copula
+1.  Bivariate Marshall-Olkin Copula
+1.  Bivariate Frank Copula
+1.  Bivariate Eyraud-Farlie-Gumbel-Morgenstern (EFGM) Copula
+
+
 # Updates
 
 | Date       | Modifications                                               |
@@ -240,6 +260,8 @@ discr.distr.support %>%
 | 26/07/2019 | Initial creation of package                                 |
 | 12/09/2019 | Completion of creation of all necessary function files      |
 | 17/11/2019 | Merger of tvarPackage, beginning of documentation creation. |
-| 20/05/2020 | Addition of Shiny component. |
+| 20/05/2020 | Addition of Shiny component.                                |
 | 02/06/2020 | Completion of documentation, first attempt of a submission to CRAN. |
-| 02/07/2020 | Modifications according to CRAN's notes, version 0.2.0. |
+| 02/07/2020 | Modifications according to CRAN's notes, version 0.2.0.     |
+| 02/13/2020 | Small fixes, version 0.2.2.                                 |
+| 31/08/2020 | Significant changes and additions, version 0.3.0.            |

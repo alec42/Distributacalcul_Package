@@ -67,7 +67,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
       </span>
     </div>
 
@@ -81,6 +81,18 @@
 </li>
 <li>
   <a href="../reference/index.html">Reference</a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/distributionParameters.html">Shape, Rate, Scale, and Location Parameters</a>
+    </li>
+  </ul>
 </li>
 <li>
   <a href="../news/index.html">Changelog</a>
@@ -105,23 +117,238 @@
       
     </div>
 
-    <div id="distributacalcul-022" class="section level1">
+    <div id="distributacalcul-030" class="section level1">
 <h1 class="page-header">
-<a href="#distributacalcul-022" class="anchor"></a>Distributacalcul 0.2.2<small> Unreleased </small>
+<a href="#distributacalcul-030" class="anchor"></a>Distributacalcul 0.3.0<small> Unreleased </small>
 </h1>
+<div id="significant-structural-change" class="section level2">
+<h2 class="hasAnchor">
+<a href="#significant-structural-change" class="anchor"></a>Significant structural change</h2>
+<ul>
+<li>Changed syntax of all package functions (see README for summary of new syntax).
+<ul>
+<li>As per comments of peers, the syntax was inconsistent.</li>
+<li>Changed all functions names to follow lowerCamelCase.</li>
+<li>E_d -&gt; expValD; V_d -&gt; varD; Elim_d -&gt; expValLimD; Etrunc_d -&gt; expValTruncD; Mexcess_d -&gt; meanExcessD; SL_d -&gt; stopLossD; VaR_d -&gt; VatRD; TVaR_d -&gt; TVatRD; kthmoment_d -&gt; kthMomentD; MGF_d -&gt; mgfD; PGF_d -&gt; pgfD; p_d -&gt; pD; d_d -&gt; dD.</li>
+</ul>
+</li>
+<li>Added MGF for the Uniform distribution.</li>
+<li>Combined all separate function files to files containing the entire distribution.
+<ul>
+<li>Amongst other things, it simplifies working with the package.</li>
+</ul>
+</li>
+<li>Added template files for the parameters which didn’t already have some.
+<ul>
+<li>dispersion parameter; mean parameters for the Normal (mu), lognormal, and Inverse Gaussian (location) distributions; min/max parameters for the Uniform distributions; number of tries parameter for the Negative Binomial; prob parameter of the logarithmic distribution; rate as the normal beta, as an alternative parameter and as lambda; scale parameter as normal and as lambda; standard deviation parameter for both the normal and lognormal distributions; shape parameter as the normal alpha, the n for the Erlang, and as tau; shape1 and shape2 for the Beta.</li>
+</ul>
+</li>
+<li>Changed name of compound distributions as well as the others.</li>
+<li>Changed negative binomial functions names from negbinom to nbinom.</li>
+</ul>
+</div>
+<div id="significant-new-features" class="section level2">
+<h2 class="hasAnchor">
+<a href="#significant-new-features" class="anchor"></a>Significant New Features</h2>
+<ul>
+<li>Added copulas !
+<ul>
+<li>copula functions <code>cCopula</code>, density functions associated with the copulas <code>cdCopula</code>, and simulation functions <code>crCopula</code>.</li>
+</ul>
+</li>
+<li>Added copulas are :
+<ol>
+<li>Independence Copula</li>
+<li>Fréchet Lower Bound Copula</li>
+<li>Fréchet Upper Bound Copula</li>
+<li>Fréchet Copula</li>
+<li>Bivariate Gumbel Copula</li>
+<li>Bivariate Clayton Copula</li>
+<li>Bivariate Ali-Mikhail-Haq Copula</li>
+<li>Bivariate Cuadras-Augé Copula</li>
+<li>Bivariate Marshall-Olkin Copula</li>
+<li>Bivariate Frank Copula</li>
+<li>Bivariate Eyraud-Farlie-Gumbel-Morgenstern (EFGM) Copula</li>
+</ol>
+</li>
+<li>Added visualisation function <code>copulaVis</code> for Copulas.
+<ul>
+<li>Internal functions are distributionPlotBoxCopulas (3D plot of distribution), simulationPlotBoxCopulas (hexagon plot of simulated observations) and parametersBoxCopulas (parameters box).</li>
+</ul>
+</li>
+<li>
+</li>
+</ul>
+</div>
 <div id="new-features" class="section level2">
 <h2 class="hasAnchor">
-<a href="#new-features" class="anchor"></a>New features</h2>
+<a href="#new-features" class="anchor"></a>New Features</h2>
+<ul>
+<li>Added <code>pllogis()</code> and <code>dllogis()</code> functions.
+<ul>
+<li>Added the functions to the return field of the <code>loglogistic-template</code> file.</li>
+</ul>
+</li>
+<li>Added <code>plogarithmic()</code>, <code>dlogarithmic()</code>, and <code>VaR_logarithmic()</code>functions.
+<ul>
+<li>Added the functions to the return field of the <code>logarithmic-template</code> file.</li>
+</ul>
+</li>
+<li>Created vignette <code>distributionParameters</code>:
+<ul>
+<li>Explains the various parameters of distributions (scale, rate, location).</li>
+<li>Still need to add shape and dispersion.</li>
+<li>Still need to fix viewing of vignette.</li>
+</ul>
+</li>
+<li>Added functionality to <code>MGF_negbinom()</code> and <code>PGF_negbinom()</code> functions:
+<ul>
+<li>Now have both definitions of the Negative Binomial (number of trials or number of failures).</li>
+</ul>
+</li>
+<li>Replaced Shiny module <code>Distributacalcul_vis()</code> by <code><a href="../reference/distributacalculVis.html">distributacalculVis()</a></code> :
+<ul>
+<li>The new visualisation function can choose which modules to execute.</li>
+<li>There are 4 different modules for :
+<ol>
+<li>The input parameters <code><a href="../reference/parametersBox.html">parametersBox()</a></code>.</li>
+<li>The PDF and CDF <code><a href="../reference/functionsBox.html">functionsBox()</a></code>.</li>
+<li>The risk measures (VaR and TVaR) <code><a href="../reference/riskMeasuresBox.html">riskMeasuresBox()</a></code>.</li>
+<li>Various moments <code><a href="../reference/momentsBox.html">momentsBox()</a></code>.</li>
+</ol>
+</li>
+<li>Added LaTeX formulas for all functions (VaR and TVaR, moments, PDF and CDF).</li>
+<li>Added language translation with package shiny.i18n.
+<ul>
+<li>English and French translation.</li>
+<li>Added shiny.i18n to the imports section of the <code>DESCRIPTION</code> file.</li>
+<li>Changed titles and user inputs to be bilingual.</li>
+<li>Added (bilingual) labels to the plots.</li>
+<li>Added language input at the top right of the screen.</li>
+<li>Added a json file containing the translations under man-roxygen/translations.</li>
+</ul>
+</li>
+<li>Removed old function.</li>
+</ul>
+</li>
+<li>Updated Shiny functions with new syntax.</li>
+<li>Updated vignette with new syntax.</li>
+<li>Updated README with new syntax.</li>
+<li>Added structure for tests.
+<ul>
+<li>Included basic tests to learn how it works.</li>
+</ul>
+</li>
+<li>Added function to generate plot of simulation observations from a copula.</li>
+</ul>
+</div>
+<div id="bug-fixes-and-changes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#bug-fixes-and-changes" class="anchor"></a>Bug Fixes and Changes</h2>
+<ul>
+<li>Added <code><a href="../reference/Pareto.html">pPareto()</a></code> and <code><a href="../reference/Pareto.html">dPareto()</a></code> functions.
+<ul>
+<li>Fixed environment error in the quantile function plot of the Shiny app.</li>
+</ul>
+</li>
+<li>Changed the name of file <code>lowerthan-template</code> to <code>lower.tail-template</code> :
+<ul>
+<li>Typo, it contains the template for the <code>lower.tail</code> parameter.</li>
+<li>Updated binomial distribution template file reference to the new one.</li>
+</ul>
+</li>
+<li>Fixed the documentation of the compound distributions.
+<ul>
+<li>Now one input under BINCOMP / BNCOMP / PCOMP for the family of distributions.</li>
+<li>All functions appear there instead of having their individual entries in the documentation.</li>
+</ul>
+</li>
+<li>Improved title case and style according to the Tidyverse style guide.</li>
+<li>Changed filename of <code>riskMeasuresBoxVis</code> to <code>riskMeasuresBox</code>
+</li>
+<li>Fixed mistake in discrete uniform template file which linked the PDF instead of the CDF in the return field of the description.</li>
+<li>Added rmarkdown to the vignette builder section of the <code>DESCRIPTION</code> file as per <a href="https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file">this rubric</a> of the writing R extensions guide.</li>
+<li>Added <code>CITATION</code> file for custom citation.</li>
+<li>Converted parameters into templates for both Shiny applications.</li>
+<li>Added more translations for the second Shiny app.</li>
+</ul>
+</div>
+<div id="minor-changes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#minor-changes" class="anchor"></a>Minor Changes</h2>
+<ul>
+<li>Changed <code>Etronq_</code> functions to <code>Etrunc_</code> functions.
+<ul>
+<li>French spelling to English spelling.</li>
+<li>Later on, with change of all syntax, changed to expValTrunc</li>
+</ul>
+</li>
+<li>Changed Pareto PDF and CDF from <code>p_</code> and <code>d_</code> to <code>p</code> and <code>d</code>:
+<ul>
+<li>To be consistent with other packages.</li>
+<li>Also updated return field of the <code>pareto-template</code> file.</li>
+</ul>
+</li>
+<li>Optimized compound distributions’ <code>p_</code> (CDF) and <code>TVaR_</code> codes
+<ul>
+<li>Removed <code>sapply</code> and used R’s vector operations instead</li>
+</ul>
+</li>
+<li>Merged documentation of families under one file.
+<ul>
+<li>The procedure is to :
+<ol>
+<li>Create a new file under the distribution’s name</li>
+<li>Copy all functions to it.</li>
+<li>Remove all individual function files.</li>
+<li>Remove the template file from <code>man-roxygen/</code>.</li>
+</ol>
+</li>
+<li>This helps simplify the package and the documentation.</li>
+<li>The same procedure is used by other stats packages.</li>
+<li>Distributions merged :
+<ol>
+<li>Binomial (06/16/2020).</li>
+<li>Compound distributions (06/16/2020).</li>
+<li>All of them (08/17/2020)</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Replaced(ing) <code>@templateVar</code> calls for <code>@template</code> calls with files for each variable.
+<ul>
+<li>Makes it so each distribution’s template file doesn’t individually define the parameters and it’s easier to change the definition of a parameter for all the distributions.</li>
+<li>Removed(ing) the conditional calls for the variables from the distributions’ template files.</li>
+<li>Done: beta, burr, uniform (both), exp, gamma, hyper, IG.</li>
+</ul>
+</li>
+<li>Pulled x, q, min and max, and lower.tail parameter descriptions directly from functions of the stats package with <code>@inheritParams</code> call.</li>
+<li>Added notes for <code>VatR</code> functions which are just wrappers and added direct links to the underlying functions.</li>
+<li>Removed special symbols in LaTeX formulas.</li>
+<li>Added <code>distributacalcul-package.R</code> file which describes the package !</li>
+<li>Added author, and did other minor changes, to the vignette.</li>
+<li>Added <code>%&gt;%</code> from dplyr to NAMESPACE file.</li>
+<li>Fixed documentation of Copula functions.</li>
+</ul>
+</div>
+</div>
+    <div id="distributacalcul-022" class="section level1">
+<h1 class="page-header">
+<a href="#distributacalcul-022" class="anchor"></a>Distributacalcul 0.2.2<small> 2020-06-13 </small>
+</h1>
+<div id="new-features-1" class="section level2">
+<h2 class="hasAnchor">
+<a href="#new-features-1" class="anchor"></a>New Features</h2>
 <ul>
 <li>Added Pareto PDF and CDF.</li>
 <li>Updated IG VaR from ‘statmod’ package.</li>
 </ul>
 </div>
-<div id="bug-fixed" class="section level2">
+<div id="bug-fixes" class="section level2">
 <h2 class="hasAnchor">
-<a href="#bug-fixed" class="anchor"></a>Bug fixed</h2>
+<a href="#bug-fixes" class="anchor"></a>Bug Fixes</h2>
 <ul>
-<li>Updated URL in description file to github.io site.</li>
+<li>Updated URL in description file to GitHub.io site.</li>
 </ul>
 </div>
 </div>
@@ -129,13 +356,13 @@
 <h1 class="page-header">
 <a href="#distributacalcul-021" class="anchor"></a>Distributacalcul 0.2.1<small> Unreleased </small>
 </h1>
-<p>Unremarkable release which updates the readme.</p>
-<div id="bug-fixes" class="section level2">
+<p>Unremarkable release which updates the README.</p>
+<div id="bug-fixes-1" class="section level2">
 <h2 class="hasAnchor">
-<a href="#bug-fixes" class="anchor"></a>Bug fixes</h2>
+<a href="#bug-fixes-1" class="anchor"></a>Bug Fixes</h2>
 <ul>
 <li>Updated table of functions.</li>
-<li>Fixed English grammar mistake in readme example.</li>
+<li>Fixed English grammar mistake in README example.</li>
 <li>Updated instructions for downloading the package.</li>
 </ul>
 </div>
@@ -144,18 +371,18 @@
 <h1 class="page-header">
 <a href="#distributacalcul-020" class="anchor"></a>Distributacalcul 0.2.0<small> 2020-06-09 </small>
 </h1>
-<div id="new-features-1" class="section level2">
+<div id="new-features-2" class="section level2">
 <h2 class="hasAnchor">
-<a href="#new-features-1" class="anchor"></a>New features</h2>
+<a href="#new-features-2" class="anchor"></a>New Features</h2>
 <ul>
 <li>Added the expected value and variance of the Poisson distribution as functions for eventual addition to Shiny application.</li>
 <li>Added the MGF of the Erlang distribution to ensure all distributions which have a MGF have the function defined.</li>
 <li>Added NEWS.md file.</li>
 </ul>
 </div>
-<div id="bug-fixes-1" class="section level2">
+<div id="bug-fixes-2" class="section level2">
 <h2 class="hasAnchor">
-<a href="#bug-fixes-1" class="anchor"></a>Bug fixes</h2>
+<a href="#bug-fixes-2" class="anchor"></a>Bug Fixes</h2>
 <ul>
 <li>Added <a href='https://github.com/return'>@return</a> field to function documentation to describe what each functions returns.</li>
 <li>Changed the filenames for d_negbinom and p_negbinom to dnegbinom and pnegbinom as per function name.</li>
@@ -184,6 +411,7 @@
     <div id="tocnav">
       <h2>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
+        <li><a href="#distributacalcul-030">0.3.0</a></li>
         <li><a href="#distributacalcul-022">0.2.2</a></li>
         <li><a href="#distributacalcul-021">0.2.1</a></li>
         <li><a href="#distributacalcul-020">0.2.0</a></li>

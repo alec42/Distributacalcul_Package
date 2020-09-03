@@ -1,1 +1,1 @@
-#' @param shape shape parameter \eqn{\alpha}{alpha}, must be positive integer.
+#' @param shape shape parameter \eqn{\alpha}{alpha}, must be positive.
