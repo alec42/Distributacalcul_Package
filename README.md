@@ -75,22 +75,22 @@ VatRBeta(kap = 0.99, shape1 = 2, shape2 = 4) # VaR_{k}(X) = F_X^(-1)(k)
 
 | Function                        | Syntax                  |
 | ------------------------------- | ----------------------- |
-| Mean                            | expValDistribution      |
-| K-th moment                     | kthMomentDistribution   |
-| Truncated mean                  | expValTruncDistribution |
-| Limited expected value          | expValLimDistribution   |
-| Variance                        | varDistribution         |
-| Stop-loss                       | stopLossDistribution    |
-| Excess of mean                  | meanExcessDistribution  |
-| Moment Generating Function      | mgfDistribution         |
-| Probability Generating Function | pgfDistribution         |
-| Density                         | dDistribution           |
-| Cumulative density function     | pDistribution           |
-| Value-at-Risk (percentile)      | TVatRDistribution       |
-| Tail Value-at-Risk              | VatRDistribution        |
-| Copula Density                  | cdCopula                |
-| Copula Distribution Function    | cCopula                 |
-| Copula Simulation Function      | crCopula                |
+| Mean                            | expVal*Distribution*      |
+| K-th moment                     | kthMoment*Distribution*   |
+| Truncated mean                  | expValTrunc*Distribution* |
+| Limited expected value          | expValLim*Distribution*   |
+| Variance                        | var*Distribution*         |
+| Stop-loss                       | stopLoss*Distribution*    |
+| Excess of mean                  | meanExcess*Distribution*  |
+| Moment Generating Function      | mgf*Distribution*         |
+| Probability Generating Function | pgf*Distribution*         |
+| Density                         | d*Distribution*           |
+| Cumulative density function     | p*Distribution*           |
+| Value-at-Risk (percentile)      | TVatR*Distribution*       |
+| Tail Value-at-Risk              | VatR*Distribution*        |
+| Copula Density                  | cd*Copula*                |
+| Copula Distribution Function    | c*Copula*                 |
+| Copula Simulation Function      | cr*Copula*                |
 
 # Included distributions and functions
 
