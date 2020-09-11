@@ -34,7 +34,7 @@ the moments and risk measures.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://alec42.github.io/Distributacalcul_Package}
+  \item \url{https://alec42.github.io/Distributacalcul_Package/}
   \item Report bugs at \url{https://github.com/alec42/Distributacalcul_Package/issues}
 }
 
