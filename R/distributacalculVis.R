@@ -49,7 +49,7 @@ distributacalculVis <- function(law, mod) {
     stopifnot(mod %in% c("all", "functions", "moments", "riskMeasures")
     )
     translator <- shiny.i18n::Translator$new(
-        translation_json_path = "../man-roxygen/translations/translation.json"
+        translation_json_path = "man-roxygen/translations/translation.json"
     )
     shiny::shinyApp(
         ui = shinydashboardPlus::dashboardPagePlus(

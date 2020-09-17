@@ -18,7 +18,7 @@
 #'
 copulaVis <- function(copula, modules) {
     translator <- shiny.i18n::Translator$new(
-        translation_json_path = "../man-roxygen/translations/translation.json"
+        translation_json_path = "man-roxygen/translations/translation.json"
     )
     copulaChoices <- c(
         # "Independent",

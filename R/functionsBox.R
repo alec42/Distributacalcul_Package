@@ -200,7 +200,8 @@ functionsBox <- function(input, output, session, law, lang) {
                     as.numeric(input$shape), as.numeric(input$rate),
                     .env = rlang::ns_env(x = ifelse(law.fct %in% c("Pareto", "Llogis"), 'Distributacalcul', 'stats'))
                 )),
-                alpha = 0.7
+                alpha = 0.7,
+                geom = "line"
             ) +
             ggplot2::stat_function(
                 fun = Vectorize(function(xx) rlang::exec(
