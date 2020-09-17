@@ -104,7 +104,7 @@ distributacalculVis <- function(law, mod) {
         server = function(input, output, session) {
             ####  Translations  ####
             translator <- shiny.i18n::Translator$new(
-                translation_json_path = "translations/translation.json"
+                translation_json_path = "translations"
             )
             i18n <- shiny::reactive({
                 selected <- input$selectedLanguage
