@@ -48,6 +48,9 @@ distributacalculVis <- function(law, mod) {
     )
     stopifnot(mod %in% c("all", "functions", "moments", "riskMeasures")
     )
+    translator <- shiny.i18n::Translator$new(
+        translation_json_path = "../man-roxygen/translations/translation.json"
+    )
     shiny::shinyApp(
         ui = shinydashboardPlus::dashboardPagePlus(
             header = shinydashboardPlus::dashboardHeaderPlus(
@@ -103,9 +106,6 @@ distributacalculVis <- function(law, mod) {
         ),
         server = function(input, output, session) {
             ####  Translations  ####
-            translator <- shiny.i18n::Translator$new(
-                translation_json_path = "translations"
-            )
             i18n <- shiny::reactive({
                 selected <- input$selectedLanguage
                 if (length(selected) > 0 && selected %in% translator$languages) {

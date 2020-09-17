@@ -1,9 +1,5 @@
 {
-    "languages":
-    [
-        "en",
-        "fr"
-    ],
+    "languages": ["en", "fr"],
     "translation":
     [
         {
@@ -252,4 +248,3 @@
         }
     ]
 }
-
