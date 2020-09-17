@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">Distributacalcul</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.3.1</span>
       </span>
     </div>
 
@@ -98,7 +98,7 @@
 <a href="#section-the-location-parameter" class="anchor"></a>The location parameter</h2>
 <p>To get a feel for this, see what happens to the density of the Normal distribution when you change <span class="math inline">\(\mu\)</span> :</p>
 <div class="sourceCode" id="section-cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="../reference/distributacalculVis.html">distributacalculVis</a></span>(<span class="dt">law =</span> <span class="st">"Norm"</span>, <span class="dt">mod =</span> <span class="st">"functions"</span>)</a></code></pre></div>
-<iframe data-deferred-src="appfe4581444bc0323972670040dba374df/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
+<iframe data-deferred-src="appd38b4a51e6a8cb570f686ab55077dea2/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
 <p>If you notice, changing <span class="math inline">\(\mu\)</span> only changes where on the x-axis the density is centered or, <em>located</em>. We call this a <strong>location parameter</strong>.</p>
 <p>In brief, the location parameter is exactly what it sounds like.</p>
 </div>
@@ -108,7 +108,7 @@
 <p>The scale parameter changes the scale of the distribution.</p>
 <p>To get a feel for this, try changing the scale parameter of the Gamma distribution <span class="math inline">\(\beta\)</span> below from 1 to 2 to 3 :</p>
 <div class="sourceCode" id="section-cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw"><a href="../reference/distributacalculVis.html">distributacalculVis</a></span>(<span class="dt">law =</span> <span class="st">"Gamma"</span>, <span class="dt">mod =</span> <span class="st">"functions"</span>)</a></code></pre></div>
-<iframe data-deferred-src="appba49550408caeb2b52935c6e0abd1d71/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
+<iframe data-deferred-src="app124e2ba339f167c0abf095138b6396d7/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
 <p>As you increase the scale parameter, the distribution becomes increasingly compressed.<br></p>
 <p>To understand why this happens mathematically, suppose we scale a random variable <span class="math inline">\(X\)</span> by 3. That is to say, we multiply <span class="math inline">\(X\)</span> by 3: <span class="math display">\[
 \Pr(3 \times X \leq x)
@@ -131,7 +131,7 @@ The <span class="math inline">\(\lambda\)</span> parameter of a discrete Poisson
     See what happens when you change the _rate_ parameter below of a Poisson distribution : 
 --></p>
 <div class="sourceCode" id="section-cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw"><a href="../reference/distributacalculVis.html">distributacalculVis</a></span>(<span class="dt">law =</span> <span class="st">"Gamma"</span>, <span class="dt">mod =</span> <span class="st">"functions"</span>)</a></code></pre></div>
-<iframe data-deferred-src="app5ef3d5f8da45006d16984fdc4f6f26d4/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
+<iframe data-deferred-src="app9dad0ef25d51fc14d588acfeb23ff71a/?w=&amp;__subapp__=1" width="100%" height="400" class="shiny-frame shiny-frame-deferred"></iframe>
 <p>You can observe it has the opposite effect of the scale parameter.<br></p>
 <p>In brief, mathematically the rate parameter is just the inverse of the scale parameter. In practice, however, it has very useful applications.</p>
 </div>

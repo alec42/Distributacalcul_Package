@@ -18,6 +18,7 @@
 #'
 copulaVis <- function(copula, modules) {
     copulaChoices <- c(
+        # "Independent",
         "FrechetLowerBound", "FrechetUpperBound", "Frechet",
         "BivariateEFGM",
         "BivariateCA", "BivariateMO",
@@ -83,6 +84,18 @@ display: table-row;
                     )
             ),
         server = function(input, output, session) {
+            ####  Translations  ####
+            translator <- shiny.i18n::Translator$new(
+                translation_json_path = "translations/translation.json"
+            )
+            i18n <- shiny::reactive({
+                selected <- input$selectedLanguage
+                if (length(selected) > 0 && selected %in% translator$languages) {
+                    translator$set_translation_language(selected)
+                }
+                translator
+            })
+
             shiny::callModule(
                 module = parametersBoxCopulas,
                 id = toupper(copula),
@@ -106,17 +119,7 @@ display: table-row;
                 )
             }
 
-            ####  Translations  ####
-            translator <- shiny.i18n::Translator$new(
-                translation_json_path = "man-roxygen/translations/translation.json"
-            )
-            i18n <- shiny::reactive({
-                selected <- input$selectedLanguage
-                if (length(selected) > 0 && selected %in% translator$languages) {
-                    translator$set_translation_language(selected)
-                }
-                translator
-            })
+            ####  Translations II  ####
             output$languageSelectorUI <- shiny::renderUI({
                 shiny::selectInput(
                     inputId = 'selectedLanguage',

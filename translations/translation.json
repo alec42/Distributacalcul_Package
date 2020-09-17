@@ -84,7 +84,7 @@
         },
         {
             "en": "Gamma, Exponential, & Chi-Squared",
-            "fr": "Gamma, exponentielle et khi-Carré"
+            "fr": "Gamma, exponentielle et khi-carré"
         },
         {
             "en": "Exponential",
@@ -143,7 +143,6 @@
         	"fr": "Nous contacter"
         },
         {
-
         	"en": "Gamma",
         	"fr": "Gamma"
         },
@@ -253,3 +252,4 @@
         }
     ]
 }
+

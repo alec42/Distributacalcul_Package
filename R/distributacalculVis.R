@@ -102,6 +102,18 @@ distributacalculVis <- function(law, mod) {
             )
         ),
         server = function(input, output, session) {
+            ####  Translations  ####
+            translator <- shiny.i18n::Translator$new(
+                translation_json_path = "translations/translation.json"
+            )
+            i18n <- shiny::reactive({
+                selected <- input$selectedLanguage
+                if (length(selected) > 0 && selected %in% translator$languages) {
+                    translator$set_translation_language(selected)
+                }
+                translator
+            })
+
             shiny::callModule(
                 module = parametersBox,
                 id = toupper(law),
@@ -133,17 +145,7 @@ distributacalculVis <- function(law, mod) {
                 )
             }
 
-            ####  Translations  ####
-            translator <- shiny.i18n::Translator$new(
-                translation_json_path = "man-roxygen/translations/translation.json"
-            )
-            i18n <- shiny::reactive({
-                selected <- input$selectedLanguage
-                if (length(selected) > 0 && selected %in% translator$languages) {
-                    translator$set_translation_language(selected)
-                }
-                translator
-            })
+            #### Translations PT2 ####
             output$languageSelectorUI <- shiny::renderUI({
                 shiny::selectInput(
                     inputId = 'selectedLanguage',
