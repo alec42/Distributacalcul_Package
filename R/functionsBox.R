@@ -113,9 +113,11 @@ functionsBox <- function(input, output, session, law) { #, lang
         shinyWidgets::switchInput(
             inputId = session$ns("xlim_distr"),
             onStatus = "success",
-            onLabel = lang()$t("Cumulative Density Function"),
+            # onLabel = lang()$t("Cumulative Density Function"),
+            onLabel = "Cumulative Density Function",
             offStatus = "info",
-            offLabel = lang()$t("Survival Function"),
+            # offLabel = lang()$t("Survival Function"),
+            offLabel = "Survival Function",
             value = TRUE,
             labelWidth = "10px"
         )
@@ -126,10 +128,10 @@ functionsBox <- function(input, output, session, law) { #, lang
         shinyWidgets::pickerInput(
             inputId = session$ns("plot_choice_FSX"),
             choices = c(
-                lang()$t("Density Function"),
-                lang()$t("Cumulative Density Function")
+                "Density Function",
+                "Cumulative Density Function"
             ),
-            selected = lang()$t("Density Function"),
+            selected = "Density Function",
             options = list(
                 style = "btn-success"
             )
@@ -195,7 +197,7 @@ functionsBox <- function(input, output, session, law) { #, lang
             ))), ggplot2::aes_(x = ~x.limz)) +
             ggplot2::stat_function(
                 fun = Vectorize(function(xx) rlang::exec(
-                    .fn = paste0(ifelse(plot_choice_FSX() == lang()$t("Density Function"), "d", "p"), ifelse(law.fct %in% c("Pareto", "Llogis"), law.fct, tolower(law.fct))),
+                    .fn = paste0(ifelse(plot_choice_FSX() == "Density Function", "d", "p"), ifelse(law.fct %in% c("Pareto", "Llogis"), law.fct, tolower(law.fct))),
                     xx,
                     as.numeric(input$shape), as.numeric(input$rate),
                     .env = rlang::ns_env(x = ifelse(law.fct %in% c("Pareto", "Llogis"), 'Distributacalcul', 'stats'))
@@ -205,7 +207,7 @@ functionsBox <- function(input, output, session, law) { #, lang
             ) +
             ggplot2::stat_function(
                 fun = Vectorize(function(xx) rlang::exec(
-                    .fn = paste0(ifelse(plot_choice_FSX() == lang()$t("Density Function"), "d", "p"), ifelse(law.fct %in% c("Pareto", "Llogis"), law.fct, tolower(law.fct))),
+                    .fn = paste0(ifelse(plot_choice_FSX() == "Density Function", "d", "p"), ifelse(law.fct %in% c("Pareto", "Llogis"), law.fct, tolower(law.fct))),
                     xx,
                     as.numeric(input$shape), as.numeric(input$rate),
                     .env = rlang::ns_env(x = ifelse(law.fct %in% c("Pareto", "Llogis"), 'Distributacalcul', 'stats'))
@@ -233,8 +235,8 @@ functionsBox <- function(input, output, session, law) { #, lang
             ggplot2::labs(
                 x = "$$x$$",
                 y = dplyr::case_when(
-                    plot_choice_FSX() == lang()$t("Cumulative Density Function") ~ "$$F_{X}(x)$$",
-                    plot_choice_FSX() == lang()$t("Density Function") ~ "$$f_{X}(x)$$"
+                    plot_choice_FSX() == "Cumulative Density Function" ~ "$$F_{X}(x)$$",
+                    plot_choice_FSX() == "Density Function" ~ "$$f_{X}(x)$$"
                 )
             )
     })

@@ -100,11 +100,11 @@ riskMeasuresBox <- function(input, output, session, law) { #, lang
         shinyWidgets::pickerInput(
             inputId = session$ns("plot_choice_QX"),
             choices = c(
-                lang()$t("Density Function"),
-                lang()$t("Cumulative Density Function"),
-                lang()$t("Quantile Function")
+ 				"Density Function",
+ 				"Cumulative Density Function",
+ 				"Quantile Function"
             ),
-            selected = lang()$t("Cumulative Density Function"),
+ 			selected = "Cumulative Density Function",
             options = list(
                 style = "btn-success"
             )
@@ -153,7 +153,7 @@ riskMeasuresBox <- function(input, output, session, law) { #, lang
     #### Render plots ####
     output$Qx <- plotly::renderPlotly({
         shiny::req(input$shape, input$rate, plot_choice_QX())
-        if (plot_choice_QX() == lang()$t("Quantile Function")) {
+        if (plot_choice_QX() == "Quantile Function") {
             ggplot2::ggplot(data = data.frame(x.limz = c(0, 1)), ggplot2::aes_(x = ~x.limz)) +
                 ggplot2::stat_function(
                     fun = function(xx) rlang::exec(
@@ -183,7 +183,7 @@ riskMeasuresBox <- function(input, output, session, law) { #, lang
                 ))), ggplot2::aes_(x = ~x.limz)) +
                 ggplot2::stat_function(
                     fun = Vectorize(function(xx) rlang::exec(
-                        .fn = paste0(ifelse(plot_choice_QX() == lang()$t("Density Function"), "d", "p"), ifelse(law.fct %in% c("Pareto", "Llogis"), law, tolower(law))),
+                        .fn = paste0(ifelse(plot_choice_QX() == "Density Function", "d", "p"), ifelse(law.fct %in% c("Pareto", "Llogis"), law, tolower(law))),
                         xx,
                         as.numeric(input$shape), as.numeric(input$rate),
                         .env = rlang::ns_env(x = ifelse(law.fct %in% c("Pareto", "Llogis"), 'Distributacalcul', 'stats'))
@@ -193,7 +193,7 @@ riskMeasuresBox <- function(input, output, session, law) { #, lang
                 ) +
                 ggplot2::stat_function(
                     fun = Vectorize(function(xx) rlang::exec(
-                        .fn = paste0(ifelse(plot_choice_QX() == lang()$t("Density Function"), "d", "p"), ifelse(law.fct %in% c("Pareto", "Llogis"), law, tolower(law))),
+                        .fn = paste0(ifelse(plot_choice_QX() == "Density Function", "d", "p"), ifelse(law.fct %in% c("Pareto", "Llogis"), law, tolower(law))),
                         xx,
                         as.numeric(input$shape), as.numeric(input$rate),
                         .env = rlang::ns_env(x = ifelse(law.fct %in% c("Pareto", "Llogis"), 'Distributacalcul', 'stats'))
@@ -212,8 +212,8 @@ riskMeasuresBox <- function(input, output, session, law) { #, lang
                 ggplot2::labs(
                     x = "$$x$$",
                     y = dplyr::case_when(
-                        plot_choice_QX() == lang()$t("Cumulative Density Function") ~ "$$F_{X}(x)$$",
-                        plot_choice_QX() == lang()$t("Density Function") ~ "$$f_{X}(x)$$"
+                        plot_choice_QX() == "Cumulative Density Function" ~ "$$F_{X}(x)$$",
+                        plot_choice_QX() == "Density Function" ~ "$$f_{X}(x)$$"
                     )
                 )
         }
