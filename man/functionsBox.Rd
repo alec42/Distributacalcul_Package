@@ -4,7 +4,7 @@
 \alias{functionsBox}
 \title{Interactive functions visualization (server side)}
 \usage{
-functionsBox(input, output, session, law, lang)
+functionsBox(input, output, session, law)
 }
 \arguments{
 \item{input}{input for server side.}

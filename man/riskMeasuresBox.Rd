@@ -4,7 +4,7 @@
 \alias{riskMeasuresBox}
 \title{Interactive risk measures visualization (server side)}
 \usage{
-riskMeasuresBox(input, output, session, law, lang)
+riskMeasuresBox(input, output, session, law)
 }
 \arguments{
 \item{input}{input for server side.}

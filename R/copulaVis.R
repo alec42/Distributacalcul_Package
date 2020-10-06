@@ -17,9 +17,9 @@
 #' }
 #'
 copulaVis <- function(copula, modules) {
-    translator <- shiny.i18n::Translator$new(
-        translation_json_path = "man-roxygen/translations/translation.json"
-    )
+    # translator <- shiny.i18n::Translator$new(
+    #     translation_json_path = "man-roxygen/translations/translation.json"
+    # )
     copulaChoices <- c(
         # "Independent",
         "FrechetLowerBound", "FrechetUpperBound", "Frechet",
@@ -43,7 +43,7 @@ copulaVis <- function(copula, modules) {
         ui = shinydashboardPlus::dashboardPagePlus(
             header = shinydashboardPlus::dashboardHeaderPlus(
                 # title = shiny::textOutput("mainTitle"),
-                title = NULL,
+                title = 'Copulas',
                 .list = list(
                     shiny::tags$li(
                         class = "dropdown",
@@ -88,55 +88,55 @@ display: table-row;
             ),
         server = function(input, output, session) {
             ####  Translations  ####
-            i18n <- shiny::reactive({
-                selected <- input$selectedLanguage
-                if (length(selected) > 0 && selected %in% translator$languages) {
-                    translator$set_translation_language(selected)
-                }
-                translator
-            })
+            # i18n <- shiny::reactive({
+            #     selected <- input$selectedLanguage
+            #     if (length(selected) > 0 && selected %in% translator$languages) {
+            #         translator$set_translation_language(selected)
+            #     }
+            #     translator
+            # })
 
             shiny::callModule(
                 module = parametersBoxCopulas,
                 id = toupper(copula),
-                copula = copula,
-                lang = i18n
+                copula = copula
+                # ,lang = i18n
             )
             if ("distributionPlot" %in% modules | "all" %in% modules) {
                 shiny::callModule(
                     module = distributionPlotBoxCopulas,
                     id = toupper(copula),
-                    copula = copula,
-                    lang = i18n
+                    copula = copula
+                    # ,lang = i18n
                 )
             }
             if ("simulationsPlot" %in% modules | "all" %in% modules) {
                 shiny::callModule(
                     module = simulationsPlotBoxCopulas,
                     id = toupper(copula),
-                    copula = copula,
-                    lang = i18n
+                    copula = copula
+                    # ,lang = i18n
                 )
             }
 
             ####  Translations II  ####
-            output$languageSelectorUI <- shiny::renderUI({
-                shiny::selectInput(
-                    inputId = 'selectedLanguage',
-                    label = "",
-                    choices = c(
-                        "English" = "en",
-                        "Francais" = "fr"
-                    ),
-                    selected = input$selectedLanguage
-                )
-            })
-            output$mainTitle <- shiny::renderText({
-                i18n()$t("Copulas")
-            })
-            output$riskMeasuresTitle <- shiny::renderText({
-                i18n()$t("Risk measures")
-            })
+            # output$languageSelectorUI <- shiny::renderUI({
+            #     shiny::selectInput(
+            #         inputId = 'selectedLanguage',
+            #         label = "",
+            #         choices = c(
+            #             "English" = "en",
+            #             "Francais" = "fr"
+            #         ),
+            #         selected = input$selectedLanguage
+            #     )
+            # })
+            # output$mainTitle <- shiny::renderText({
+            #     i18n()$t("Copulas")
+            # })
+            # output$riskMeasuresTitle <- shiny::renderText({
+            #     i18n()$t("Risk measures")
+            # })
         }
     )
 }

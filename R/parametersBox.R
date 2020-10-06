@@ -16,7 +16,7 @@
 #'
 #' @keywords internal
 #'
-parametersBox <- function(input, output, session, law, lang) {
+parametersBox <- function(input, output, session, law) {# , lang
     ns <- session$ns
 
     ####    Define distributions    ####
@@ -67,9 +67,9 @@ parametersBox <- function(input, output, session, law, lang) {
         )
     })
     ####    Render translation  ####
-    output$parametersTitle <- shiny::renderText({
-        lang()$t("Parameters")
-    })
+    # output$parametersTitle <- shiny::renderText({
+    #     lang()$t("Parameters")
+    # })
 }
 
 #' Interactive parameter chooser (UI side)
@@ -90,7 +90,8 @@ parametersBoxUI <- function(id) {
 
     #### Parameters ####
     shinydashboardPlus::boxPlus(
-        title = shiny::textOutput(ns("parametersTitle")),
+        # title = shiny::textOutput(ns("parametersTitle")),
+        title = 'Parameters',
         status = "primary",
         background = "blue",
         solidHeader = TRUE,

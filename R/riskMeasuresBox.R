@@ -20,7 +20,7 @@
 #'
 #' @keywords internal
 #'
-riskMeasuresBox <- function(input, output, session, law, lang) {
+riskMeasuresBox <- function(input, output, session, law) { #, lang
     ns <- session$ns
 
     ####    Define distributions    ####
@@ -220,9 +220,9 @@ riskMeasuresBox <- function(input, output, session, law, lang) {
     })
 
     ####    Render translation  ####
-    output$riskMeasuresTitle <- shiny::renderText({
-        lang()$t("Risk measures")
-    })
+    # output$riskMeasuresTitle <- shiny::renderText({
+    #     lang()$t("Risk measures")
+    # })
 }
 
 #' Interactive risk measures visualization (UI side)
@@ -244,7 +244,8 @@ riskMeasuresBoxUI <- function(id) {
     ns <- shiny::NS(id)
 
     shinydashboardPlus::boxPlus(
-        title = shiny::textOutput(ns("riskMeasuresTitle")),
+        # title = shiny::textOutput(ns("riskMeasuresTitle")),
+        title = "Risk measures",
         width = NULL,
         solidHeader = TRUE,
         closable = FALSE,

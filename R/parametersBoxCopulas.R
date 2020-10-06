@@ -13,7 +13,7 @@
 #'
 #' @keywords internal
 #'
-parametersBoxCopulas <- function(input, output, session, copula, lang) {
+parametersBoxCopulas <- function(input, output, session, copula) { #, lang
     unboundeddependencyParameter <- c("BivariateClayton", "BivariateFrank", "BivariateGumbel")
     twoParameterCopulas <- c("Frechet", "BivariateMO")
     ns <- session$ns
@@ -61,9 +61,9 @@ parametersBoxCopulas <- function(input, output, session, copula, lang) {
 
 
     ####    Render translation  ####
-    output$parametersTitle <- shiny::renderText({
-        lang()$t("Parameters")
-    })
+    # output$parametersTitle <- shiny::renderText({
+    #     lang()$t("Parameters")
+    # })
 }
 
 
@@ -86,7 +86,8 @@ parametersBoxCopulasUI <- function(id) {
 
     #### Parameters ####
     shinydashboardPlus::boxPlus(
-        title = shiny::textOutput(ns("parametersTitle")),
+        # title = shiny::textOutput(ns("parametersTitle")),
+        title = "Parameters",
         status = "info",
         background = "light-blue",
         solidHeader = TRUE,

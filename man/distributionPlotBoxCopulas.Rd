@@ -4,7 +4,7 @@
 \alias{distributionPlotBoxCopulas}
 \title{Interactive functions visualization (server side) for copulas}
 \usage{
-distributionPlotBoxCopulas(input, output, session, copula, lang)
+distributionPlotBoxCopulas(input, output, session, copula)
 }
 \arguments{
 \item{input}{input for server side.}

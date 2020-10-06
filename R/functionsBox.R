@@ -19,7 +19,7 @@
 #'
 #' @keywords internal
 #'
-functionsBox <- function(input, output, session, law, lang) {
+functionsBox <- function(input, output, session, law) { #, lang
     ns <- session$ns
 
     ####    Define distributions    ####
@@ -239,9 +239,9 @@ functionsBox <- function(input, output, session, law, lang) {
             )
     })
     ####    Render translation  ####
-    output$functionsTitle <- shiny::renderText({
-        lang()$t("Functions")
-    })
+    # output$functionsTitle <- shiny::renderText({
+    #     lang()$t("Functions")
+    # })
 }
 
 #' Interactive moments visualization (UI side)
@@ -263,7 +263,8 @@ functionsBoxUI <- function(id) {
     ns <- shiny::NS(id)
 
     shinydashboardPlus::boxPlus(
-        title = shiny::textOutput(ns("functionsTitle")),
+        # title = shiny::textOutput(ns("functionsTitle")),
+        title = "Functions",
         width = NULL,
         solidHeader = TRUE,
         closable = FALSE,

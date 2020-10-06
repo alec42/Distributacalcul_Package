@@ -4,7 +4,7 @@
 \alias{parametersBox}
 \title{Interactive parameter chooser (server side)}
 \usage{
-parametersBox(input, output, session, law, lang)
+parametersBox(input, output, session, law)
 }
 \arguments{
 \item{input}{input for server side.}

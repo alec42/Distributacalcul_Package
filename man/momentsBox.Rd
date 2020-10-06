@@ -4,7 +4,7 @@
 \alias{momentsBox}
 \title{Interactive moments visualization (server side)}
 \usage{
-momentsBox(input, output, session, law, lang)
+momentsBox(input, output, session, law)
 }
 \arguments{
 \item{input}{input for server side.}

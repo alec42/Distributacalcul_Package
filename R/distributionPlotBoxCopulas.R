@@ -14,7 +14,7 @@
 #'
 #' @keywords internal
 #'
-distributionPlotBoxCopulas <- function(input, output, session, copula, lang) {
+distributionPlotBoxCopulas <- function(input, output, session, copula) { #, lang
     twoParameterCopulas <- c("Frechet", "BivariateMO")
     ns <- session$ns
 
@@ -150,7 +150,8 @@ distributionPlotBoxCopulas <- function(input, output, session, copula, lang) {
                 ),
                 scene = list(
                     xaxis = list(title = "U1"), yaxis = list(title = "U2"),
-                    zaxis = list(title = shiny::textOutput(ns("CopulaLabel"))),
+                    # zaxis = list(title = shiny::textOutput(ns("CopulaLabel"))),
+                    zaxis = "Copula",
                     camera = list(
                         eye = list(x = -2.5, y = -.75, z = 0.25)
                     )
@@ -175,9 +176,9 @@ distributionPlotBoxCopulas <- function(input, output, session, copula, lang) {
 
 
     ####    Render translations ####
-    output$distributionPlotTitle <- shiny::renderText({
-        lang()$t("Copula Distribution")
-    })
+    # output$distributionPlotTitle <- shiny::renderText({
+    #     lang()$t("Copula Distribution")
+    # })
 
 }
 
@@ -201,7 +202,8 @@ distributionPlotBoxCopulasUI <- function(id) {
     ns <- shiny::NS(id)
 
     shinydashboardPlus::boxPlus(
-        title = shiny::textOutput(ns("distributionPlotTitle")),
+        # title = shiny::textOutput(ns("distributionPlotTitle")),
+        title = "Plot",
         width = NULL,
         solidHeader = TRUE,
         closable = FALSE,

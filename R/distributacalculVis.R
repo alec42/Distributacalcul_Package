@@ -48,20 +48,20 @@ distributacalculVis <- function(law, mod) {
     )
     stopifnot(mod %in% c("all", "functions", "moments", "riskMeasures")
     )
-    translator <- shiny.i18n::Translator$new(
-        translation_json_path = "man-roxygen/translations/translation.json"
-    )
+    # translator <- shiny.i18n::Translator$new(
+    #     translation_json_path = "man-roxygen/translations/translation.json"
+    # )
     shiny::shinyApp(
         ui = shinydashboardPlus::dashboardPagePlus(
             header = shinydashboardPlus::dashboardHeaderPlus(
-                # title = law
-                title = shiny::textOutput("mainTitle"),
-                .list = list(
-                    shiny::tags$li(
-                        class = "dropdown",
-                        shiny::uiOutput("languageSelectorUI")
-                    )
-                )
+                title = 'Law'
+                # title = shiny::textOutput("mainTitle"),
+                # .list = list(
+                #     shiny::tags$li(
+                #         class = "dropdown",
+                #         shiny::uiOutput("languageSelectorUI")
+                #     )
+                # )
             ),
             sidebar = shinydashboard::dashboardSidebar(width = NULL, collapsed = TRUE, disable = TRUE),
             body = shinydashboard::dashboardBody(
@@ -106,63 +106,63 @@ distributacalculVis <- function(law, mod) {
         ),
         server = function(input, output, session) {
             ####  Translations  ####
-            i18n <- shiny::reactive({
-                selected <- input$selectedLanguage
-                if (length(selected) > 0 && selected %in% translator$languages) {
-                    translator$set_translation_language(selected)
-                }
-                translator
-            })
+            # i18n <- shiny::reactive({
+            #     selected <- input$selectedLanguage
+            #     if (length(selected) > 0 && selected %in% translator$languages) {
+            #         translator$set_translation_language(selected)
+            #     }
+            #     translator
+            # })
 
             shiny::callModule(
                 module = parametersBox,
                 id = toupper(law),
-                law = law,
-                lang = i18n
+                law = law
+                # ,lang = i18n
             )
             if ("functions" %in% mod | "all" %in% mod) {
                 shiny::callModule(
                     module = functionsBox,
                     id = toupper(law),
-                    law = law,
-                    lang = i18n
+                    law = law
+                    # ,lang = i18n
                 )
             }
             if ("moments" %in% mod | "all" %in% mod) {
                 shiny::callModule(
                     module = momentsBox,
                     id = toupper(law),
-                    law = law,
-                    lang = i18n
+                    law = law
+                    # ,lang = i18n
                 )
             }
             if ("riskMeasures" %in% mod | "all" %in% mod) {
                 shiny::callModule(
                     module = riskMeasuresBox,
                     id = toupper(law),
-                    law = law,
-                    lang = i18n
+                    law = law
+                    # ,lang = i18n
                 )
             }
 
             #### Translations PT2 ####
-            output$languageSelectorUI <- shiny::renderUI({
-                shiny::selectInput(
-                    inputId = 'selectedLanguage',
-                    label = "",
-                    choices = c(
-                        "English" = "en",
-                        "Francais" = "fr"
-                    ),
-                    selected = input$selectedLanguage
-                )
-            })
-            output$mainTitle <- shiny::renderText({
-                i18n()$t("Probability Distributions")
-            })
-            output$riskMeasuresTitle <- shiny::renderText({
-                i18n()$t("Risk measures")
-            })
+            # output$languageSelectorUI <- shiny::renderUI({
+            #     shiny::selectInput(
+            #         inputId = 'selectedLanguage',
+            #         label = "",
+            #         choices = c(
+            #             "English" = "en",
+            #             "Francais" = "fr"
+            #         ),
+            #         selected = input$selectedLanguage
+            #     )
+            # })
+            # output$mainTitle <- shiny::renderText({
+            #     i18n()$t("Probability Distributions")
+            # })
+            # output$riskMeasuresTitle <- shiny::renderText({
+            #     i18n()$t("Risk measures")
+            # })
         }
     )
 }

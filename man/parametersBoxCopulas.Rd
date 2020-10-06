@@ -4,7 +4,7 @@
 \alias{parametersBoxCopulas}
 \title{Interactive parameter chooser (server side) for copulas}
 \usage{
-parametersBoxCopulas(input, output, session, copula, lang)
+parametersBoxCopulas(input, output, session, copula)
 }
 \arguments{
 \item{input}{input for server side.}

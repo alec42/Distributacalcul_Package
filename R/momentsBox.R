@@ -18,7 +18,7 @@
 #'
 #' @keywords internal
 #'
-momentsBox <- function(input, output, session, law, lang) {
+momentsBox <- function(input, output, session, law) { #, lang
     ns <- session$ns
 
     ####    Define distributions    ####
@@ -266,9 +266,9 @@ momentsBox <- function(input, output, session, law, lang) {
     })
 
     ####    Render translation  ####
-    output$momentsTitle <- shiny::renderText({
-        lang()$t("Moments")
-    })
+    # output$momentsTitle <- shiny::renderText({
+    #     lang()$t("Moments")
+    # })
 }
 
 #' Interactive moments visualization (UI side)
@@ -290,7 +290,8 @@ momentsBoxUI <- function(id) {
     ns <- shiny::NS(id)
 
     shinydashboard::box(
-        title = shiny::textOutput(ns("momentsTitle")),
+        # title = shiny::textOutput(ns("momentsTitle")),
+        title = 'Moments',
         width = NULL,
         solidHeader = TRUE,
         status = "warning",
