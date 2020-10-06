@@ -4,7 +4,7 @@
 #' @template output-template
 #' @template session-template
 #' @template copula-param-template
-#' @template lang-template
+# @template lang-template
 #'
 #' @return Server function for the distribution plot module of the Copula
 #'   Shiny function. Should not be run directly.
@@ -151,7 +151,7 @@ distributionPlotBoxCopulas <- function(input, output, session, copula) { #, lang
                 scene = list(
                     xaxis = list(title = "U1"), yaxis = list(title = "U2"),
                     # zaxis = list(title = shiny::textOutput(ns("CopulaLabel"))),
-                    zaxis = "Copula",
+                    zaxis = list(title = "Copula"),
                     camera = list(
                         eye = list(x = -2.5, y = -.75, z = 0.25)
                     )

@@ -4,7 +4,7 @@
 #' and modules.
 #'
 #' @template copula-param-template
-#' @template modules-param-template
+# @template modules-param-template
 #'
 #' @return Launches Shiny application.
 #'
@@ -43,13 +43,13 @@ copulaVis <- function(copula, modules) {
         ui = shinydashboardPlus::dashboardPagePlus(
             header = shinydashboardPlus::dashboardHeaderPlus(
                 # title = shiny::textOutput("mainTitle"),
-                title = 'Copulas',
-                .list = list(
-                    shiny::tags$li(
-                        class = "dropdown",
-                        shiny::uiOutput("languageSelectorUI")
-                    )
-                )
+                title = 'Copulas'
+                # .list = list(
+                #     shiny::tags$li(
+                #         class = "dropdown",
+                #         shiny::uiOutput("languageSelectorUI")
+                #     )
+                # )
             ),
             sidebar = shinydashboard::dashboardSidebar(width = NULL, collapsed = TRUE, disable = TRUE),
             body = shinydashboard::dashboardBody(

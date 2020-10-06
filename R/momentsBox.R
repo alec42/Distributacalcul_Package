@@ -32,6 +32,7 @@ momentsBox <- function(input, output, session, law) { #, lang
         law == "Pareto" ~ c("$$\\alpha$$", "$$\\lambda$$"),
         law == "Llogis" ~ c("$$\\lambda$$", "$$\\tau$$"),
         law == "IG" ~ c("$$\\mu$$", "$$\\beta$$"),
+        law == "Pois" ~ c(NA_character_, "$$\\lambda$$"),
         # law == "burr" ~ c("$$\\alpha$$", "$$\\lambda$$", "$$\\tau$$"),
         TRUE ~ c("shape", "rate")
     )
@@ -139,6 +140,13 @@ momentsBox <- function(input, output, session, law) { #, lang
             ))
         )
     })
+    parameters <- shiny::reactive({
+        if (law %in% c("Exp", "Pois")) {
+            list(as.numeric(input$rate))
+        } else {
+            list(as.numeric(input$shape), as.numeric(input$rate))
+        }
+    })
 
     ####    Creates input (d, less.than.d) ####
     d <- shiny::reactive({
@@ -182,13 +190,13 @@ momentsBox <- function(input, output, session, law) { #, lang
     E <- shiny::reactive({
         rlang::exec(
             .fn = paste0("expVal", law.fct),
-            as.numeric(input$shape), as.numeric(input$rate)
+            !!!parameters()
         )
     })
     V <- shiny::reactive({
         rlang::exec(
             .fn = paste0("var", law.fct),
-            as.numeric(input$shape), as.numeric(input$rate)
+            !!!parameters()
         )
     })
     Etrunc <- shiny::reactive({
@@ -196,7 +204,7 @@ momentsBox <- function(input, output, session, law) { #, lang
         rlang::exec(
             .fn = paste0("expValTrunc", law.fct),
             d = as.numeric(d()),
-            as.numeric(input$shape), as.numeric(input$rate),
+            !!!parameters(),
             less.than.d = ifelse(less.than.d(), TRUE, FALSE) ### here
         )
     })
@@ -204,21 +212,21 @@ momentsBox <- function(input, output, session, law) { #, lang
         rlang::exec(
             .fn = paste0("stopLoss", law.fct),
             d = as.numeric(d()),
-            as.numeric(input$shape), as.numeric(input$rate)
+            !!!parameters()
         )
     })
     Elim <- shiny::reactive({
         rlang::exec(
             .fn = paste0("expValLim", law.fct),
             d = as.numeric(d()),
-            as.numeric(input$shape), as.numeric(input$rate)
+            !!!parameters()
         )
     })
     Mexcess <- shiny::reactive({
         rlang::exec(
             .fn = paste0("meanExcess", law.fct),
             d = as.numeric(d()),
-            as.numeric(input$shape), as.numeric(input$rate)
+            !!!parameters()
         )
     })
 

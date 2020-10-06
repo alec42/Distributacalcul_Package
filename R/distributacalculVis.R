@@ -43,6 +43,7 @@ distributacalculVis <- function(law, mod) {
     stopifnot(law %in% c("Norm", "Lnorm",
                          "Gamma", "Exp",
                          # "Erlang",
+                         # "Pois",
                          "Llogis", "Weibull", "Pareto",
                          "Beta", "Unif")
     )

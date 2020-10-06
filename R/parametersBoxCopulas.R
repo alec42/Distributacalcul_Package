@@ -4,7 +4,7 @@
 #' @template output-template
 #' @template session-template
 #' @template copula-param-template
-#' @template lang-template
+# @template lang-template
 #'
 #' @return Server function for the parameter module of the Copula Shiny
 #'   function. Should not be run directly.

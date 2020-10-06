@@ -33,6 +33,7 @@ functionsBox <- function(input, output, session, law) { #, lang
         law == "Pareto" ~ c("$$\\alpha$$", "$$\\lambda$$"),
         law == "Llogis" ~ c("$$\\lambda$$", "$$\\tau$$"),
         law == "IG" ~ c("$$\\mu$$", "$$\\beta$$"),
+        law == "Pois" ~ c(NA_character_, "$$\\lambda$$"),
         # law == "Burr" ~ c("$$\\alpha$$", "$$\\lambda$$", "$$\\tau$$"),
         TRUE ~ c("shape", "rate")
     )
@@ -51,6 +52,7 @@ functionsBox <- function(input, output, session, law) { #, lang
                 law == "Beta" ~ "$\\frac{x^{\\alpha -1}\\left(1 - x\\right)^{\\beta - 1}}{I\\left(\\alpha, \\beta\\right)} \\times 1_{\\left\\{x \\in \\left[0, 1\\right]\\right\\}}$",
                 law == "Unif" ~ "$\\frac{1}{b - a}\\times 1_{\\left\\{x \\in \\left[a, b\\right]\\right\\} }$",
                 law == "Pareto" ~ "$\\frac{\\alpha \\lambda^{\\alpha}}{\\left(\\lambda + x\\right)^{\\alpha + 1}}$",
+                law == "Pois" ~ "$\\frac{\\lambda \\mathrm{e}^{-\\lambda}}{x!}$",
                 TRUE ~ "f(x)"
             ))
         )
@@ -76,6 +78,13 @@ functionsBox <- function(input, output, session, law) { #, lang
             ))
         )
     })
+    parameters <- shiny::reactive({
+        if (law %in% c("Exp", "Pois")) {
+            list(as.numeric(input$rate))
+        } else {
+            list(as.numeric(input$shape), as.numeric(input$rate))
+        }
+    })
 
 
     #### Creates input (x, xlim_distr) ####
@@ -85,6 +94,7 @@ functionsBox <- function(input, output, session, law) { #, lang
     xlim_distr <- shiny::reactive({
         input$xlim_distr
     })
+
 
     #### Creates input for the plots (which function to plot) ####
     plot_choice_FSX <- shiny::reactive({
@@ -144,7 +154,7 @@ functionsBox <- function(input, output, session, law) { #, lang
             rlang::exec(
                 .fn = paste0("d", ifelse(law.fct %in% c("Pareto", "Llogis"), law.fct, tolower(law.fct))),
                 x = as.numeric(x()),
-                as.numeric(input$shape), as.numeric(input$rate),
+                !!!parameters(),
                 .env = rlang::ns_env(x = ifelse(law.fct %in% c("Pareto", "Llogis"), 'Distributacalcul', 'stats'))
             ),
             nsmall = 6
@@ -155,7 +165,7 @@ functionsBox <- function(input, output, session, law) { #, lang
             rlang::exec(
                 .fn = paste0("p", ifelse(law.fct %in% c("Pareto", "Llogis"), law.fct, tolower(law.fct))),
                 q = as.numeric(x()),
-                as.numeric(input$shape), as.numeric(input$rate),
+                !!!parameters(),
                 lower.tail = xlim_distr(),
                 .env = rlang::ns_env(x = ifelse(law.fct %in% c("Pareto", "Llogis"), 'Distributacalcul', 'stats'))
             ),
@@ -189,17 +199,17 @@ functionsBox <- function(input, output, session, law) { #, lang
             x.limz = c(rlang::exec(
                 .fn = paste0("VatR", law),
                 kap = 0.01,
-                as.numeric(input$shape), as.numeric(input$rate)
+                !!!parameters()
             ), rlang::exec(
                 .fn = paste0("VatR", law),
                 kap = 0.99,
-                as.numeric(input$shape), as.numeric(input$rate)
+                !!!parameters()
             ))), ggplot2::aes_(x = ~x.limz)) +
             ggplot2::stat_function(
                 fun = Vectorize(function(xx) rlang::exec(
                     .fn = paste0(ifelse(plot_choice_FSX() == "Density Function", "d", "p"), ifelse(law.fct %in% c("Pareto", "Llogis"), law.fct, tolower(law.fct))),
                     xx,
-                    as.numeric(input$shape), as.numeric(input$rate),
+                    !!!parameters(),
                     .env = rlang::ns_env(x = ifelse(law.fct %in% c("Pareto", "Llogis"), 'Distributacalcul', 'stats'))
                 )),
                 alpha = 0.7,
@@ -209,21 +219,21 @@ functionsBox <- function(input, output, session, law) { #, lang
                 fun = Vectorize(function(xx) rlang::exec(
                     .fn = paste0(ifelse(plot_choice_FSX() == "Density Function", "d", "p"), ifelse(law.fct %in% c("Pareto", "Llogis"), law.fct, tolower(law.fct))),
                     xx,
-                    as.numeric(input$shape), as.numeric(input$rate),
+                    !!!parameters(),
                     .env = rlang::ns_env(x = ifelse(law.fct %in% c("Pareto", "Llogis"), 'Distributacalcul', 'stats'))
                 )),
                 xlim = c(
                     ifelse(xlim_distr(), rlang::exec(
                         .fn = paste0("VatR", law),
                         kap = 0.01,
-                        as.numeric(input$shape), as.numeric(input$rate)
+                        !!!parameters()
                     ), x()),
                     ifelse(xlim_distr(),
                            x(),
                            rlang::exec(
                                .fn = paste0("VatR", law),
                                kap = 0.99,
-                               as.numeric(input$shape), as.numeric(input$rate)
+                               !!!parameters()
                            )
                     )
                 ),

@@ -30,6 +30,7 @@ parametersBox <- function(input, output, session, law) {# , lang
         law == "Pareto" ~ c("$$\\alpha$$", "$$\\lambda$$"),
         law == "Llogis" ~ c("$$\\lambda$$", "$$\\tau$$"),
         law == "IG" ~ c("$$\\mu$$", "$$\\beta$$"),
+        law == "Pois" ~ c(NA_character_, "$$\\lambda$$"),
         # law == "burr" ~ c("$$\\alpha$$", "$$\\lambda$$", "$$\\tau$$"),
         TRUE ~ c("shape", "rate")
     )

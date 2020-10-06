@@ -34,6 +34,7 @@ riskMeasuresBox <- function(input, output, session, law) { #, lang
         law == "Pareto" ~ c("$$\\alpha$$", "$$\\lambda$$"),
         law == "Llogis" ~ c("$$\\lambda$$", "$$\\tau$$"),
         law == "IG" ~ c("$$\\mu$$", "$$\\beta$$"),
+        law == "Pois" ~ c(NA_character_, "$$\\lambda$$"),
         # law == "Burr" ~ c("$$\\alpha$$", "$$\\lambda$$", "$$\\tau$$"),
         TRUE ~ c("shape", "rate")
     )
@@ -52,6 +53,7 @@ riskMeasuresBox <- function(input, output, session, law) { #, lang
                 # law == "Beta" ~ "$$",
                 law == "Unif" ~ "$a + \\left(b - a\\right) \\kappa$",
                 law == "Pareto" ~ "$\\lambda \\left(\\left(1 - \\kappa\\right)^{-\\frac{1}{\\alpha}} - 1\\right)$",
+                law == "Pois" ~ "$\\frac{\\lambda \\mathrm{e}^{-\\lambda}}{x!}$",
                 TRUE ~ "VaR_{\\kappa}(X)"
             ))
         )
@@ -72,6 +74,13 @@ riskMeasuresBox <- function(input, output, session, law) { #, lang
                 TRUE ~ "TVaR_{\\kappa}(X)"
             ))
         )
+    })
+    parameters <- shiny::reactive({
+        if (law %in% c("Exp", "Pois")) {
+            list(as.numeric(input$rate))
+        } else {
+            list(as.numeric(input$shape), as.numeric(input$rate))
+        }
     })
 
     ####    Creates input (kap) ####
@@ -117,7 +126,7 @@ riskMeasuresBox <- function(input, output, session, law) { #, lang
             rlang::exec(
                 .fn = paste0("VatR", law.fct),
                 kap = as.numeric(kap()),
-                as.numeric(input$shape), as.numeric(input$rate)
+                !!!parameters()
             ),
             nsmall = 6
         )
@@ -127,7 +136,7 @@ riskMeasuresBox <- function(input, output, session, law) { #, lang
             rlang::exec(
                 .fn = paste0("TVatR", law.fct),
                 kap = as.numeric(kap()),
-                as.numeric(input$shape), as.numeric(input$rate)
+                !!!parameters()
             ),
             nsmall = 6
         )
@@ -159,7 +168,7 @@ riskMeasuresBox <- function(input, output, session, law) { #, lang
                     fun = function(xx) rlang::exec(
                         .fn = ifelse(law.fct %in% c("Pareto", "Llogis"), paste0("VatR", law.fct), paste0("q", tolower(law.fct))),
                         xx,
-                        as.numeric(input$shape), as.numeric(input$rate),
+                        !!!parameters(),
                         .env = rlang::ns_env(x = ifelse(law.fct %in% c("Pareto", "Llogis"), 'Distributacalcul', 'stats'))
                     )
                 ) +
@@ -173,19 +182,19 @@ riskMeasuresBox <- function(input, output, session, law) { #, lang
                 x.limz = c(rlang::exec(
                     .fn = paste0("VatR", law),
                     kap = 0.01,
-                    as.numeric(input$shape), as.numeric(input$rate),
+                    !!!parameters(),
                     .env = rlang::ns_env(x = "Distributacalcul")
                 ), rlang::exec(
                     .fn = paste0("VatR", law),
                     kap = 0.99,
-                    as.numeric(input$shape), as.numeric(input$rate),
+                    !!!parameters(),
                     .env = rlang::ns_env(x = "Distributacalcul")
                 ))), ggplot2::aes_(x = ~x.limz)) +
                 ggplot2::stat_function(
                     fun = Vectorize(function(xx) rlang::exec(
                         .fn = paste0(ifelse(plot_choice_QX() == "Density Function", "d", "p"), ifelse(law.fct %in% c("Pareto", "Llogis"), law, tolower(law))),
                         xx,
-                        as.numeric(input$shape), as.numeric(input$rate),
+                        !!!parameters(),
                         .env = rlang::ns_env(x = ifelse(law.fct %in% c("Pareto", "Llogis"), 'Distributacalcul', 'stats'))
                     )),
                     alpha = 0.7,
@@ -195,13 +204,13 @@ riskMeasuresBox <- function(input, output, session, law) { #, lang
                     fun = Vectorize(function(xx) rlang::exec(
                         .fn = paste0(ifelse(plot_choice_QX() == "Density Function", "d", "p"), ifelse(law.fct %in% c("Pareto", "Llogis"), law, tolower(law))),
                         xx,
-                        as.numeric(input$shape), as.numeric(input$rate),
+                        !!!parameters(),
                         .env = rlang::ns_env(x = ifelse(law.fct %in% c("Pareto", "Llogis"), 'Distributacalcul', 'stats'))
                     )),
                     xlim = c(VaR(),  rlang::exec(
                         .fn = paste0("VatR", law),
                         kap = 0.99,
-                        as.numeric(input$shape), as.numeric(input$rate),
+                        !!!parameters(),
                         .env = rlang::ns_env(x = "Distributacalcul")
                     )),
                     geom = "area",

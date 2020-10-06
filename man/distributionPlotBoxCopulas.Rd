@@ -27,8 +27,6 @@ distributionPlotBoxCopulas(input, output, session, copula)
  \item{"BivariateFrank": }{ Bivariate Frank copula.}
  \item{"BivariateGumbel": }{ Bivariate Gumbel copula.}
 }}
-
-\item{lang}{Internal function to ensure translation works and input is communicated between modules.}
 }
 \value{
 Server function for the distribution plot module of the Copula
