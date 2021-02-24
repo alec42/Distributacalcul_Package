@@ -80,8 +80,8 @@ VatRBeta(kap = 0.99, shape1 = 2, shape2 = 4) # VaR_{k}(X) = F_X^(-1)(k)
 | Probability Generating Function   | pgfDistribution         |
 | Density                           | dDistribution           |
 | Cumulative density function       | pDistribution           |
-| Value-at-Risk (percentile)        | TVatRDistribution       |
-| Tail Value-at-Risk                | VatRDistribution        |
+| Value-at-Risk (percentile)        | VatRDistribution       |
+| Tail Value-at-Risk                | TVatRDistribution        |
 | Copula Density                    | cdCopula                |
 | Copula Distribution Function      | cCopula                 |
 | Copula Simulation Function        | crCopula                |
