@@ -86,8 +86,8 @@ VatRBeta(kap = 0.99, shape1 = 2, shape2 = 4) # VaR_{k}(X) = F_X^(-1)(k)
 | Probability Generating Function | pgf*Distribution*         |
 | Density                         | d*Distribution*           |
 | Cumulative density function     | p*Distribution*           |
-| Value-at-Risk (percentile)      | TVatR*Distribution*       |
-| Tail Value-at-Risk              | VatR*Distribution*        |
+| Value-at-Risk (percentile)      | VatR*Distribution*       |
+| Tail Value-at-Risk              | TVatR*Distribution*        |
 | Copula Density                  | cd*Copula*                |
 | Copula Distribution Function    | c*Copula*                 |
 | Copula Simulation Function      | cr*Copula*                |
