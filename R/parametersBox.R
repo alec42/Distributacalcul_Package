@@ -81,7 +81,7 @@ parametersBox <- function(input, output, session, law) {# , lang
 #'  Should not be run directly.
 #'
 #' @importFrom shiny NS uiOutput textOutput
-#' @importFrom shinydashboardPlus boxPlus
+#' @importFrom shinydashboardPlus box
 #' @export
 #'
 #' @keywords internal
@@ -90,7 +90,7 @@ parametersBoxUI <- function(id) {
     ns <- shiny::NS(id)
 
     #### Parameters ####
-    shinydashboardPlus::boxPlus(
+    shinydashboardPlus::box(
         # title = shiny::textOutput(ns("parametersTitle")),
         title = 'Parameters',
         status = "primary",

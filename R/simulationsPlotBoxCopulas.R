@@ -84,7 +84,7 @@ simulationsPlotBoxCopulas <- function(input, output, session, copula, lang) {
 #'  function. Should not be run directly.
 #'
 #' @importFrom shiny NS uiOutput
-#' @importFrom shinydashboardPlus boxPlus
+#' @importFrom shinydashboardPlus box
 #' @importFrom tippy tippyOutput
 #' @importFrom plotly plotlyOutput
 #' @export
@@ -94,7 +94,7 @@ simulationsPlotBoxCopulas <- function(input, output, session, copula, lang) {
 simulationsPlotBoxCopulasUI <- function(id) {
     ns <- shiny::NS(id)
 
-    shinydashboardPlus::boxPlus(
+    shinydashboardPlus::box(
         title = shiny::textOutput(ns("simulationsPlotTitle")),
         width = NULL,
         solidHeader = TRUE,

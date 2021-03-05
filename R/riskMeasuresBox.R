@@ -242,7 +242,7 @@ riskMeasuresBox <- function(input, output, session, law) { #, lang
 #'  Should not be run directly.
 #'
 #' @importFrom shiny tags NS uiOutput
-#' @importFrom shinydashboardPlus boxPlus
+#' @importFrom shinydashboardPlus box
 #' @importFrom tippy tippyOutput
 #' @importFrom plotly plotlyOutput
 #' @export
@@ -252,7 +252,7 @@ riskMeasuresBox <- function(input, output, session, law) { #, lang
 riskMeasuresBoxUI <- function(id) {
     ns <- shiny::NS(id)
 
-    shinydashboardPlus::boxPlus(
+    shinydashboardPlus::box(
         # title = shiny::textOutput(ns("riskMeasuresTitle")),
         title = "Risk measures",
         width = NULL,
