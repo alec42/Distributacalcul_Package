@@ -191,7 +191,7 @@ distributionPlotBoxCopulas <- function(input, output, session, copula) { #, lang
 #'  function. Should not be run directly.
 #'
 #' @importFrom shiny NS uiOutput
-#' @importFrom shinydashboardPlus boxPlus
+#' @importFrom shinydashboardPlus box
 #' @importFrom tippy tippyOutput
 #' @importFrom plotly plotlyOutput
 #' @export
@@ -201,7 +201,7 @@ distributionPlotBoxCopulas <- function(input, output, session, copula) { #, lang
 distributionPlotBoxCopulasUI <- function(id) {
     ns <- shiny::NS(id)
 
-    shinydashboardPlus::boxPlus(
+    shinydashboardPlus::box(
         # title = shiny::textOutput(ns("distributionPlotTitle")),
         title = "Plot",
         width = NULL,
