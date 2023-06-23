@@ -36,7 +36,7 @@ Imports:
     plotly,
     tippy,
     shinyWidgets,
-    shinydashboardPlus,
+    shinydashboardPlus (>= 2.0.0),
     shinydashboard,
     rlang,
     shiny.i18n

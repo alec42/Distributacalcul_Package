@@ -264,7 +264,7 @@ functionsBox <- function(input, output, session, law) { #, lang
 #'  Should not be run directly.
 #'
 #' @importFrom shiny NS uiOutput
-#' @importFrom shinydashboardPlus boxPlus
+#' @importFrom shinydashboardPlus box
 #' @importFrom tippy tippyOutput
 #' @importFrom plotly plotlyOutput
 #' @export
@@ -274,7 +274,7 @@ functionsBox <- function(input, output, session, law) { #, lang
 functionsBoxUI <- function(id) {
     ns <- shiny::NS(id)
 
-    shinydashboardPlus::boxPlus(
+    shinydashboardPlus::box(
         # title = shiny::textOutput(ns("functionsTitle")),
         title = "Functions",
         width = NULL,
