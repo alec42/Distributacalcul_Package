@@ -8,10 +8,10 @@
 #' @details
 #' The compound negative binomial distribution has density ....
 #'
+#' @param x vector of quantiles
 #' @template size-prob-negbinom-template
 #' @template distr_severity-template
 #' @template k0-template
-#' @template x-template
 #' @template shape-template
 #' @template rate-template
 #' @template scale-template

@@ -4,7 +4,6 @@
 # Distributacalcul
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
 The goal of Distributacalcul is to simplify the life of students and
@@ -74,30 +73,30 @@ VatRBeta(kap = 0.99, shape1 = 2, shape2 = 4) # VaR_{k}(X) = F_X^(-1)(k)
 ## Syntax:
 
 | Function                        | Syntax                  |
-| ------------------------------- | ----------------------- |
-| Mean                            | expVal*Distribution*      |
-| K-th moment                     | kthMoment*Distribution*   |
-| Truncated mean                  | expValTrunc*Distribution* |
-| Limited expected value          | expValLim*Distribution*   |
-| Variance                        | var*Distribution*         |
-| Stop-loss                       | stopLoss*Distribution*    |
-| Excess of mean                  | meanExcess*Distribution*  |
-| Moment Generating Function      | mgf*Distribution*         |
-| Probability Generating Function | pgf*Distribution*         |
-| Density                         | d*Distribution*           |
-| Cumulative density function     | p*Distribution*           |
-| Value-at-Risk (percentile)      | VatR*Distribution*       |
-| Tail Value-at-Risk              | TVatR*Distribution*        |
-| Copula Density                  | cd*Copula*                |
-| Copula Distribution Function    | c*Copula*                 |
-| Copula Simulation Function      | cr*Copula*                |
+|---------------------------------|-------------------------|
+| Mean                            | expValDistribution      |
+| K-th moment                     | kthMomentDistribution   |
+| Truncated mean                  | expValTruncDistribution |
+| Limited expected value          | expValLimDistribution   |
+| Variance                        | varDistribution         |
+| Stop-loss                       | stopLossDistribution    |
+| Excess of mean                  | meanExcessDistribution  |
+| Moment Generating Function      | mgfDistribution         |
+| Probability Generating Function | pgfDistribution         |
+| Density                         | dDistribution           |
+| Cumulative density function     | pDistribution           |
+| Value-at-Risk (percentile)      | VatRDistribution        |
+| Tail Value-at-Risk              | TVatRDistribution       |
+| Copula Density                  | cdCopula                |
+| Copula Distribution Function    | cCopula                 |
+| Copula Simulation Function      | crCopula                |
 
 # Included distributions and functions
 
 ## Continuous distributions
 
-|                                             | Erlang | Inverse Gaussian | Weibull | Burr |
-| :-----------------------------------------: | :----: | :--------------: | :-----: | :--: |
+|                                             | Erlang | Inverse Gaussian | Weibull | Burr |
+|:-------------------------------------------:|:------:|:----------------:|:-------:|:----:|
 |                  **Mean**                   |   X    |        X         |    X    |  X   |
 |               **kth moment**                |   X    |                  |    X    |  X   |
 |                **Variance**                 |   X    |        X         |    X    |  X   |
@@ -111,11 +110,10 @@ VatRBeta(kap = 0.99, shape1 = 2, shape2 = 4) # VaR_{k}(X) = F_X^(-1)(k)
 |              **Value-at-Risk**              |   X    |        X         |    X    |  X   |
 |           **Tail Value-at-Risk**            |   X    |        X         |    X    |  X   |
 
-Table continues
-below
+Table continues below
 
-|                                             | Log-logistic | Beta | Gamma | Pareto |
-| :-----------------------------------------: | :----------: | :--: | :---: | :----: |
+|                                             | Log-logistic | Beta | Gamma | Pareto |
+|:-------------------------------------------:|:------------:|:----:|:-----:|:------:|
 |                  **Mean**                   |      X       |  X   |   X   |   X    |
 |               **kth moment**                |      X       |  X   |   X   |   X    |
 |                **Variance**                 |      X       |  X   |   X   |   X    |
@@ -129,11 +127,10 @@ below
 |              **Value-at-Risk**              |      X       |  X   |   X   |   X    |
 |           **Tail Value-at-Risk**            |      X       |  X   |   X   |   X    |
 
-Table continues
-below
+Table continues below
 
-|                                             | Lognormal | Exponential | Uniform | Normal |
-| :-----------------------------------------: | :-------: | :---------: | :-----: | :----: |
+|                                             | Lognormal | Exponential | Uniform | Normal |
+|:-------------------------------------------:|:---------:|:-----------:|:-------:|:------:|
 |                  **Mean**                   |     X     |      X      |    X    |   X    |
 |               **kth moment**                |     X     |      X      |    X    |        |
 |                **Variance**                 |     X     |      X      |    X    |   X    |
@@ -149,8 +146,8 @@ below
 
 ## Discrete distributions
 
-|                                             | Binomial | Negative Binomial | Poisson |
-| :-----------------------------------------: | :------: | :---------------: | :-----: |
+|                                             | Binomial | Negative Binomial | Poisson |
+|:-------------------------------------------:|:--------:|:-----------------:|:-------:|
 |                  **Mean**                   |    X     |         X         |    X    |
 |               **kth moment**                |          |                   |         |
 |                **Variance**                 |    X     |         X         |    X    |
@@ -165,11 +162,10 @@ below
 |              **Value-at-Risk**              |    X     |                   |         |
 |           **Tail Value-at-Risk**            |    X     |         X         |    X    |
 
-Table continues
-below
+Table continues below
 
-|                                             | Uniform | Logarithmic | Hypergeometric |
-| :-----------------------------------------: | :-----: | :---------: | :------------: |
+|                                             | Uniform | Logarithmic | Hypergeometric |
+|:-------------------------------------------:|:-------:|:-----------:|:--------------:|
 |                  **Mean**                   |    X    |      X      |       X        |
 |               **kth moment**                |         |             |                |
 |                **Variance**                 |    X    |      X      |       X        |
@@ -196,13 +192,12 @@ below
 8.  Bivariate Cuadras-Augé Copula
 9.  Bivariate Marshall-Olkin Copula
 10. Bivariate Frank Copula
-11. Bivariate Eyraud-Farlie-Gumbel-Morgenstern (EFGM)
-Copula
+11. Bivariate Eyraud-Farlie-Gumbel-Morgenstern (EFGM) Copula
 
 # Updates
 
 |    Date    |                            Modifications                            |
-| :--------: | :-----------------------------------------------------------------: |
+|:----------:|:-------------------------------------------------------------------:|
 | 26/07/2019 |                     Initial creation of package                     |
 | 12/09/2019 |       Completion of creation of all necessary function files        |
 | 17/11/2019 |     Merger of tvarPackage, beginning of documentation creation.     |
@@ -211,3 +206,4 @@ Copula
 | 02/07/2020 |       Modifications according to CRAN’s notes, version 0.2.0.       |
 | 02/13/2020 |                     Small fixes, version 0.2.2.                     |
 | 31/08/2020 |          Significant changes and additions, version 0.3.0.          |
+| 31/12/2023 |      Removal of shiny components and vignetts, version 0.4.0.       |

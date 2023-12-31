@@ -1,3 +1,8 @@
+#   Distributacalcul 0.4.0
+##  Bug fixes
++   Removed vignette and shiny components to republish to CRAN
+
+
 #   Distributacalcul 0.3.1
 ##  Bug fixes
 +   Changed location of translations file to not be ignored when built and and published.

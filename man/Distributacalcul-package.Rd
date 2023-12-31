@@ -25,12 +25,6 @@ These include functions for calculating distribution functions and
 simulating observations from the copulas.
 }
 
-\section{Shiny Applications}{
-
-These include functions to plot the distributions as well as to calculate
-the moments and risk measures.
-}
-
 \seealso{
 Useful links:
 \itemize{

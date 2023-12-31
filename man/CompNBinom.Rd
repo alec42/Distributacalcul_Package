@@ -62,7 +62,7 @@ TVatRCompNBinom(
 )
 }
 \arguments{
-\item{x}{vector of quantiles.}
+\item{x}{vector of quantiles}
 
 \item{size}{Number of successful trials.}
 

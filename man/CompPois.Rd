@@ -57,7 +57,7 @@ TVatRCompPois(
 )
 }
 \arguments{
-\item{x}{vector of quantiles.}
+\item{x}{vector of quantiles}
 
 \item{lambda}{Rate parameter \eqn{\lambda}{lambda}.}
 

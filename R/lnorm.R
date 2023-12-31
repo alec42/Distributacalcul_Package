@@ -122,7 +122,7 @@ expValTruncLnorm <- function(d, meanlog, sdlog, less.than.d = TRUE) {
 #'
 #' @template d-template
 #'
-#' @importFrom stats pnormm
+#' @importFrom stats pnorm
 #' @export
 #'
 #' @examples

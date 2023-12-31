@@ -7,10 +7,10 @@
 #' @details
 #' The compound Poisson distribution with parameters ... has density ....
 #'
+#' @param x vector of quantiles
 #' @template lambda-template
 #' @template distr_severity-template
 #' @template k0-template
-#' @template x-template
 #' @template shape-template
 #' @template rate-template
 #' @template scale-template

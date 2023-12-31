@@ -265,3 +265,4 @@ discr.distr.support %>%
 | 02/07/2020 | Modifications according to CRAN's notes, version 0.2.0.     |
 | 02/13/2020 | Small fixes, version 0.2.2.                                 |
 | 31/08/2020 | Significant changes and additions, version 0.3.0.            |
+| 31/12/2023 | Removal of shiny components and vignetts, version 0.4.0.            |

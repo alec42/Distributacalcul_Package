@@ -1,7 +1,7 @@
 Package: Distributacalcul
 Type: Package
 Title: Probability Distribution Functions
-Version: 0.3.1
+Version: 0.4.0
 Date: 2020-09-17
 Authors@R: c(
     person("Alec James", "van Rassel", email = "alec.van-rassel.1@ulaval.ca",
@@ -30,17 +30,9 @@ LazyData: true
 Imports:
     statmod,
     stats,
-    shiny,
     dplyr,
-    ggplot2,
-    plotly,
-    tippy,
-    shinyWidgets,
-    shinydashboardPlus (>= 2.0.0),
-    shinydashboard,
-    rlang,
-    shiny.i18n
-RoxygenNote: 7.0.2
+    rlang
+RoxygenNote: 7.2.3
 Suggests: 
     learnr,
     knitr,
