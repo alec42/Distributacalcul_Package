@@ -19,15 +19,15 @@
 #' @return
 #' Function :
 #'   \itemize{
-#'     \item{\code{\link{expValWeibull}}}{ gives the expected value.}
-#'     \item{\code{\link{varWeibull}}}{ gives the variance.}
-#'     \item{\code{\link{kthMomentWeibull}}}{ gives the kth moment.}
-#'     \item{\code{\link{expValLimWeibull}}}{ gives the limited mean.}
-#'     \item{\code{\link{expValTruncWeibull}}}{ gives the truncated mean.}
-#'     \item{\code{\link{stopLossWeibull}}}{ gives the stop-loss.}
-#'     \item{\code{\link{meanExcessWeibull}}}{ gives the mean excess loss.}
-#'     \item{\code{\link{VatRWeibull}}}{ gives the Value-at-Risk.}
-#'     \item{\code{\link{TVatRWeibull}}}{ gives the Tail Value-at-Risk.}
+#'     \item \code{\link{expValWeibull}}  gives the expected value.
+#'     \item \code{\link{varWeibull}}  gives the variance.
+#'     \item \code{\link{kthMomentWeibull}}  gives the kth moment.
+#'     \item \code{\link{expValLimWeibull}}  gives the limited mean.
+#'     \item \code{\link{expValTruncWeibull}}  gives the truncated mean.
+#'     \item \code{\link{stopLossWeibull}}  gives the stop-loss.
+#'     \item \code{\link{meanExcessWeibull}}  gives the mean excess loss.
+#'     \item \code{\link{VatRWeibull}}  gives the Value-at-Risk.
+#'     \item \code{\link{TVatRWeibull}}  gives the Tail Value-at-Risk.
 #'   }
 #'  Invalid parameter values will return an error detailing which parameter is problematic.
 #'

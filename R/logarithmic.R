@@ -15,13 +15,13 @@
 #' @return
 #' Function :
 #'   \itemize{
-#'     \item{\code{\link{dLogarithmic}}}{ gives the probability density function (PDF).}
-#'     \item{\code{\link{pLogarithmic}}}{ gives the cumulative density function (CDF).}
-#'     \item{\code{\link{expValLogarithmic}}}{ gives the expected value.}
-#'     \item{\code{\link{varLogarithmic}}}{ gives the variance.}
-#'     \item{\code{\link{VatRLogarithmic}}}{ gives the Value-at-Risk.}
-#'     \item{\code{\link{mgfLogarithmic}}}{ gives the moment generating function (MGF).}
-#'     \item{\code{\link{pgfLogarithmic}}}{ gives the probability generating function (MGF).}
+#'     \item \code{\link{dLogarithmic}}  gives the probability density function (PDF).
+#'     \item \code{\link{pLogarithmic}}  gives the cumulative density function (CDF).
+#'     \item \code{\link{expValLogarithmic}}  gives the expected value.
+#'     \item \code{\link{varLogarithmic}}  gives the variance.
+#'     \item \code{\link{VatRLogarithmic}}  gives the Value-at-Risk.
+#'     \item \code{\link{mgfLogarithmic}}  gives the moment generating function (MGF).
+#'     \item \code{\link{pgfLogarithmic}}  gives the probability generating function (MGF).
 #'   }
 #'  Invalid parameter values will return an error detailing which parameter is problematic.
 #'

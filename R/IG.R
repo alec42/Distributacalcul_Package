@@ -14,15 +14,15 @@
 #' @return
 #' Function :
 #'   \itemize{
-#'     \item{\code{\link{expValIG}}}{ gives the expected value.}
-#'     \item{\code{\link{varIG}}}{ gives the variance.}
-#'     \item{\code{\link{expValLimIG}}}{ gives the limited mean.}
-#'     \item{\code{\link{expValTruncIG}}}{ gives the truncated mean.}
-#'     \item{\code{\link{stopLossIG}}}{ gives the stop-loss.}
-#'     \item{\code{\link{meanExcessIG}}}{ gives the mean excess loss.}
-#'     \item{\code{\link{VatRIG}}}{ gives the Value-at-Risk.}
-#'     \item{\code{\link{TVatRIG}}}{ gives the Tail Value-at-Risk.}
-#'     \item{\code{\link{mgfIG}}}{ gives the moment generating function (MGF).}
+#'     \item \code{\link{expValIG}}  gives the expected value.
+#'     \item \code{\link{varIG}}  gives the variance.
+#'     \item \code{\link{expValLimIG}}  gives the limited mean.
+#'     \item \code{\link{expValTruncIG}}  gives the truncated mean.
+#'     \item \code{\link{stopLossIG}}  gives the stop-loss.
+#'     \item \code{\link{meanExcessIG}}  gives the mean excess loss.
+#'     \item \code{\link{VatRIG}}  gives the Value-at-Risk.
+#'     \item \code{\link{TVatRIG}}  gives the Tail Value-at-Risk.
+#'     \item \code{\link{mgfIG}}  gives the moment generating function (MGF).
 #'   }
 #'  Invalid parameter values will return an error detailing which parameter is problematic.
 #'

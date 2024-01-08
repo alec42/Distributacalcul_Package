@@ -54,16 +54,16 @@ mgfGamma(t, shape, rate = 1/scale, scale = 1/rate)
 \value{
 Function :
   \itemize{
-    \item{\code{\link{expValGamma}}}{ gives the expected value.}
-    \item{\code{\link{varGamma}}}{ gives the variance.}
-    \item{\code{\link{kthMomentGamma}}}{ gives the kth moment.}
-    \item{\code{\link{expValLimGamma}}}{ gives the limited mean.}
-    \item{\code{\link{expValTruncGamma}}}{ gives the truncated mean.}
-    \item{\code{\link{stopLossGamma}}}{ gives the stop-loss.}
-    \item{\code{\link{meanExcessGamma}}}{ gives the mean excess loss.}
-    \item{\code{\link{VatRGamma}}}{ gives the Value-at-Risk.}
-    \item{\code{\link{TVatRGamma}}}{ gives the Tail Value-at-Risk.}
-    \item{\code{\link{mgfGamma}}}{ gives the moment generating function (MGF).}
+    \item \code{\link{expValGamma}}  gives the expected value.
+    \item \code{\link{varGamma}}  gives the variance.
+    \item \code{\link{kthMomentGamma}}  gives the kth moment.
+    \item \code{\link{expValLimGamma}}  gives the limited mean.
+    \item \code{\link{expValTruncGamma}}  gives the truncated mean.
+    \item \code{\link{stopLossGamma}}  gives the stop-loss.
+    \item \code{\link{meanExcessGamma}}  gives the mean excess loss.
+    \item \code{\link{VatRGamma}}  gives the Value-at-Risk.
+    \item \code{\link{TVatRGamma}}  gives the Tail Value-at-Risk.
+    \item \code{\link{mgfGamma}}  gives the moment generating function (MGF).
   }
  Invalid parameter values will return an error detailing which parameter is problematic.
 }

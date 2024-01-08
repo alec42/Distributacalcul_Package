@@ -29,10 +29,10 @@
 #' @return
 #' Function :
 #'   \itemize{
-#'     \item{\code{\link{expValNBinom}}}{ gives the expected value.}
-#'     \item{\code{\link{varNBinom}}}{ gives the variance.}
-#'     \item{\code{\link{mgfNBinom}}}{ gives the moment generating function (MGF).}
-#'     \item{\code{\link{pgfNBinom}}}{ gives the probability generating function (PGF).}
+#'     \item \code{\link{expValNBinom}}  gives the expected value.
+#'     \item \code{\link{varNBinom}}  gives the variance.
+#'     \item \code{\link{mgfNBinom}}  gives the moment generating function (MGF).
+#'     \item \code{\link{pgfNBinom}}  gives the probability generating function (PGF).
 #'   }
 #' Invalid parameter values will return an error detailing which parameter is problematic.
 #'

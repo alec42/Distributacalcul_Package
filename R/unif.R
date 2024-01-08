@@ -14,15 +14,15 @@
 #' @return
 #' Function :
 #'   \itemize{
-#'     \item{\code{\link{expValUnif}}}{ gives the expected value.}
-#'     \item{\code{\link{varUnif}}}{ gives the variance.}
-#'     \item{\code{\link{kthMomentUnif}}}{ gives the kth moment.}
-#'     \item{\code{\link{expValLimUnif}}}{ gives the limited mean.}
-#'     \item{\code{\link{expValTruncUnif}}}{ gives the truncated mean.}
-#'     \item{\code{\link{stopLossUnif}}}{ gives the stop-loss.}
-#'     \item{\code{\link{meanExcessUnif}}}{ gives the mean excess loss.}
-#'     \item{\code{\link{VatRUnif}}}{ gives the Value-at-Risk.}
-#'     \item{\code{\link{TVatRUnif}}}{ gives the Tail Value-at-Risk.}
+#'     \item \code{\link{expValUnif}}  gives the expected value.
+#'     \item \code{\link{varUnif}}  gives the variance.
+#'     \item \code{\link{kthMomentUnif}}  gives the kth moment.
+#'     \item \code{\link{expValLimUnif}}  gives the limited mean.
+#'     \item \code{\link{expValTruncUnif}}  gives the truncated mean.
+#'     \item \code{\link{stopLossUnif}}  gives the stop-loss.
+#'     \item \code{\link{meanExcessUnif}}  gives the mean excess loss.
+#'     \item \code{\link{VatRUnif}}  gives the Value-at-Risk.
+#'     \item \code{\link{TVatRUnif}}  gives the Tail Value-at-Risk.
 #'   }
 #'  Invalid parameter values will return an error detailing which parameter is problematic.
 #'

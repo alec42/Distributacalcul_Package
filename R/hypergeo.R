@@ -19,8 +19,8 @@
 #' @return
 #' Function :
 #'   \itemize{
-#'     \item{\code{\link{expValErl}}}{ gives the expected value.}
-#'     \item{\code{\link{varErl}}}{ gives the variance.}
+#'     \item \code{\link{expValErl}}  gives the expected value.
+#'     \item \code{\link{varErl}}  gives the variance.
 #'   }
 #'  Invalid parameter values will return an error detailing which parameter is problematic.
 #'

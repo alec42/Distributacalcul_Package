@@ -47,15 +47,15 @@ mgfNorm(t, mean = 0, sd = 1)
 \value{
 Function :
   \itemize{
-    \item{\code{\link{expValNorm}}}{ gives the expected value.}
-    \item{\code{\link{varNorm}}}{ gives the variance.}
-    \item{\code{\link{expValLimNorm}}}{ gives the limited mean.}
-    \item{\code{\link{expValTruncNorm}}}{ gives the truncated mean.}
-    \item{\code{\link{stopLossNorm}}}{ gives the stop-loss.}
-    \item{\code{\link{meanExcessNorm}}}{ gives the mean excess loss.}
-    \item{\code{\link{VatRNorm}}}{ gives the Value-at-Risk.}
-    \item{\code{\link{TVatRNorm}}}{ gives the Tail Value-at-Risk.}
-    \item{\code{\link{mgfNorm}}}{ gives the moment generating function (MGF).}
+    \item \code{\link{expValNorm}}  gives the expected value.
+    \item \code{\link{varNorm}}  gives the variance.
+    \item \code{\link{expValLimNorm}}  gives the limited mean.
+    \item \code{\link{expValTruncNorm}}  gives the truncated mean.
+    \item \code{\link{stopLossNorm}}  gives the stop-loss.
+    \item \code{\link{meanExcessNorm}}  gives the mean excess loss.
+    \item \code{\link{VatRNorm}}  gives the Value-at-Risk.
+    \item \code{\link{TVatRNorm}}  gives the Tail Value-at-Risk.
+    \item \code{\link{mgfNorm}}  gives the moment generating function (MGF).
   }
  Invalid parameter values will return an error detailing which parameter is problematic.
 }

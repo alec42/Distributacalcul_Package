@@ -22,8 +22,8 @@ crIndependent(numberSimulations = 10000, seed = 42)
 \value{
 Function :
   \itemize{
-    \item{\code{\link{cIndependent}}}{ returns the value of the copula.}
-    \item{\code{\link{crIndependent}}}{ returns simulated values of the copula.}
+    \item \code{\link{cIndependent}}  returns the value of the copula.
+    \item \code{\link{crIndependent}}  returns simulated values of the copula.
   }
 }
 \description{

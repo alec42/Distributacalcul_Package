@@ -14,8 +14,8 @@
 #' @return
 #' Function :
 #'   \itemize{
-#'     \item{\code{\link{cFrechetLowerBound}}}{ returns the value of the copula.}
-#'     \item{\code{\link{crFrechetLowerBound}}}{ returns simulated values of the copula.}
+#'     \item \code{\link{cFrechetLowerBound}}  returns the value of the copula.
+#'     \item \code{\link{crFrechetLowerBound}}  returns simulated values of the copula.
 #'   }
 #'
 #'

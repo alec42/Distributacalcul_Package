@@ -14,9 +14,9 @@
 #' @return
 #' Function :
 #'   \itemize{
-#'     \item{\code{\link{cBivariateGumbel}}}{ returns the value of the copula.}
-#'     \item{\code{\link{cdBivariateGumbel}}}{ returns the value of the density function associated to the copula.}
-#'     \item{\code{\link{crBivariateGumbel}}}{ returns simulated values of the copula.}
+#'     \item \code{\link{cBivariateGumbel}}  returns the value of the copula.
+#'     \item \code{\link{cdBivariateGumbel}}  returns the value of the density function associated to the copula.
+#'     \item \code{\link{crBivariateGumbel}}  returns simulated values of the copula.
 #'   }
 #'
 #'

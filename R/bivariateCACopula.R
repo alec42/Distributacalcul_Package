@@ -19,8 +19,8 @@
 #' @return
 #' Function :
 #'   \itemize{
-#'     \item{\code{\link{cBivariateCA}}}{ returns the value of the copula.}
-#'     \item{\code{\link{crBivariateCA}}}{ returns simulated values of the copula.}
+#'     \item \code{\link{cBivariateCA}}  returns the value of the copula.
+#'     \item \code{\link{crBivariateCA}}  returns simulated values of the copula.
 #'   }
 #'
 #'

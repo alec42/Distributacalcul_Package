@@ -47,15 +47,15 @@ TVatRLnorm(kap, meanlog, sdlog)
 \value{
 Function :
   \itemize{
-    \item{\code{\link{expValLnorm}}}{ gives the expected value.}
-    \item{\code{\link{varLnorm}}}{ gives the variance.}
-    \item{\code{\link{kthMomentLnorm}}}{ gives the kth moment.}
-    \item{\code{\link{expValLimLnorm}}}{ gives the limited mean.}
-    \item{\code{\link{expValTruncLnorm}}}{ gives the truncated mean.}
-    \item{\code{\link{stopLossLnorm}}}{ gives the stop-loss.}
-    \item{\code{\link{meanExcessLnorm}}}{ gives the mean excess loss.}
-    \item{\code{\link{VatRLnorm}}}{ gives the Value-at-Risk.}
-    \item{\code{\link{TVatRLnorm}}}{ gives the Tail Value-at-Risk.}
+    \item \code{\link{expValLnorm}}  gives the expected value.
+    \item \code{\link{varLnorm}}  gives the variance.
+    \item \code{\link{kthMomentLnorm}}  gives the kth moment.
+    \item \code{\link{expValLimLnorm}}  gives the limited mean.
+    \item \code{\link{expValTruncLnorm}}  gives the truncated mean.
+    \item \code{\link{stopLossLnorm}}  gives the stop-loss.
+    \item \code{\link{meanExcessLnorm}}  gives the mean excess loss.
+    \item \code{\link{VatRLnorm}}  gives the Value-at-Risk.
+    \item \code{\link{TVatRLnorm}}  gives the Tail Value-at-Risk.
   }
  Invalid parameter values will return an error detailing which parameter is problematic.
 }

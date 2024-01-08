@@ -14,9 +14,9 @@
 #' @return
 #' Function :
 #'   \itemize{
-#'     \item{\code{\link{cBivariateAMH}}}{ returns the value of the copula.}
-#'     \item{\code{\link{cdBivariateAMH}}}{ returns the value of the density copula.}
-#'     \item{\code{\link{crBivariateAMH}}}{ returns simulated values of the copula.}
+#'     \item \code{\link{cBivariateAMH}}  returns the value of the copula.
+#'     \item \code{\link{cdBivariateAMH}}  returns the value of the density copula.
+#'     \item \code{\link{crBivariateAMH}}  returns simulated values of the copula.
 #'   }
 #'
 #'

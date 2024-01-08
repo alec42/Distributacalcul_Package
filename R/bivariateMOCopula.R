@@ -20,8 +20,8 @@
 #' @return
 #' Function :
 #'   \itemize{
-#'     \item{\code{\link{cBivariateMO}}}{ returns the value of the copula.}
-#'     \item{\code{\link{crBivariateMO}}}{ returns simulated values of the copula.}
+#'     \item \code{\link{cBivariateMO}}  returns the value of the copula.
+#'     \item \code{\link{crBivariateMO}}  returns simulated values of the copula.
 #'   }
 #'
 #'

@@ -22,8 +22,8 @@ crFrechetUpperBound(numberSimulations = 10000, seed = 42)
 \value{
 Function :
   \itemize{
-    \item{\code{\link{cFrechetUpperBound}}}{ returns the value of the copula.}
-    \item{\code{\link{crFrechetUpperBound}}}{ returns simulated values of the copula.}
+    \item \code{\link{cFrechetUpperBound}}  returns the value of the copula.
+    \item \code{\link{crFrechetUpperBound}}  returns simulated values of the copula.
   }
 }
 \description{

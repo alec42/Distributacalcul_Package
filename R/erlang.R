@@ -19,18 +19,18 @@
 #' @return
 #'  Function :
 #'  \itemize{
-#'  \item{\code{\link{dErlang}}}{ gives the probability density function (PDF).}
-#'  \item{\code{\link{pErlang}}}{ gives the cumulative density function (CDF).}
-#'  \item{\code{\link{expValErlang}}}{ gives the expected value.}
-#'  \item{\code{\link{varErlang}}}{ gives the variance.}
-#'  \item{\code{\link{kthMomentErlang}}}{ gives the kth moment.}
-#'  \item{\code{\link{expValLimErlang}}}{ gives the limited mean.}
-#'  \item{\code{\link{expValTruncErlang}}}{ gives the truncated mean.}
-#'  \item{\code{\link{stopLossErlang}}}{ gives the stop-loss.}
-#'  \item{\code{\link{meanExcessErlang}}}{ gives the mean excess loss.}
-#'  \item{\code{\link{VatRErlang}}}{ gives the Value-at-Risk.}
-#'  \item{\code{\link{TVatRErlang}}}{ gives the Tail Value-at-Risk.}
-#'  \item{\code{\link{mgfErlang}}}{ gives the moment generating function (MGF).}
+#'  \item \code{\link{dErlang}}  gives the probability density function (PDF).
+#'  \item \code{\link{pErlang}}  gives the cumulative density function (CDF).
+#'  \item \code{\link{expValErlang}}  gives the expected value.
+#'  \item \code{\link{varErlang}}  gives the variance.
+#'  \item \code{\link{kthMomentErlang}}  gives the kth moment.
+#'  \item \code{\link{expValLimErlang}}  gives the limited mean.
+#'  \item \code{\link{expValTruncErlang}}  gives the truncated mean.
+#'  \item \code{\link{stopLossErlang}}  gives the stop-loss.
+#'  \item \code{\link{meanExcessErlang}}  gives the mean excess loss.
+#'  \item \code{\link{VatRErlang}}  gives the Value-at-Risk.
+#'  \item \code{\link{TVatRErlang}}  gives the Tail Value-at-Risk.
+#'  \item \code{\link{mgfErlang}}  gives the moment generating function (MGF).
 #'  }
 #'  Invalid parameter values will return an error detailing which parameter is problematic.
 #'

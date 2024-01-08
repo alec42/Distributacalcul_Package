@@ -41,13 +41,13 @@ mgfBinom(t, size, prob)
 \value{
 Function :
   \itemize{
-    \item{\code{\link{mgfBinom}}}{ gives the moment generating function (MGF).}
-    \item{\code{\link{pgfBinom}}}{ gives the probability generating function (PGF).}
-    \item{\code{\link{expValBinom}}}{ gives the expected value.}
-    \item{\code{\link{varBinom}}}{ gives the variance.}
-    \item{\code{\link{expValTruncBinom}}}{ gives the truncated mean.}
-    \item{\code{\link{TVatRBinom}}}{ gives the Tail Value-at-Risk.}
-    \item{\code{\link{VatRBinom}}}{ gives the Value-at-Risk.}
+    \item \code{\link{mgfBinom}}  gives the moment generating function (MGF).
+    \item \code{\link{pgfBinom}}  gives the probability generating function (PGF).
+    \item \code{\link{expValBinom}}  gives the expected value.
+    \item \code{\link{varBinom}}  gives the variance.
+    \item \code{\link{expValTruncBinom}}  gives the truncated mean.
+    \item \code{\link{TVatRBinom}}  gives the Tail Value-at-Risk.
+    \item \code{\link{VatRBinom}}  gives the Value-at-Risk.
   }
 Invalid parameter values will return an error detailing which parameter is problematic.
 }

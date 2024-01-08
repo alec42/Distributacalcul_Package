@@ -12,9 +12,9 @@
 #' @return
 #' Function :
 #'   \itemize{
-#'     \item{\code{\link{cBivariateEFGM}}}{ returns the value of the copula.}
-#'     \item{\code{\link{cdBivariateEFGM}}}{ returns the value of the density function associated to the copula.}
-#'     \item{\code{\link{crBivariateEFGM}}}{ returns simulated values of the copula.}
+#'     \item \code{\link{cBivariateEFGM}}  returns the value of the copula.
+#'     \item \code{\link{cdBivariateEFGM}}  returns the value of the density function associated to the copula.
+#'     \item \code{\link{crBivariateEFGM}}  returns simulated values of the copula.
 #'   }
 #'
 #'

@@ -18,8 +18,8 @@
 #' @return
 #' Function :
 #'   \itemize{
-#'     \item{\code{\link{cFrechet}}}{ returns the value of the copula.}
-#'     \item{\code{\link{crFrechet}}}{ returns simulated values of the copula.}
+#'     \item \code{\link{cFrechet}}  returns the value of the copula.
+#'     \item \code{\link{crFrechet}}  returns simulated values of the copula.
 #'   }
 #'
 #'

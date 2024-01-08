@@ -17,16 +17,16 @@
 #' @return
 #' Function :
 #'   \itemize{
-#'     \item{\code{\link{expValBeta}}}{ gives the expected value.}
-#'     \item{\code{\link{varBeta}}}{ gives the variance.}
-#'     \item{\code{\link{kthMomentBeta}}}{ gives the kth moment.}
-#'     \item{\code{\link{expValLimBeta}}}{ gives the limited mean.}
-#'     \item{\code{\link{expValTruncBeta}}}{ gives the truncated mean.}
-#'     \item{\code{\link{stopLossBeta}}}{ gives the stop-loss.}
-#'     \item{\code{\link{meanExcessBeta}}}{ gives the mean excess loss.}
-#'     \item{\code{\link{VatRBeta}}}{ gives the Value-at-Risk.}
-#'     \item{\code{\link{TVatRBeta}}}{ gives the Tail Value-at-Risk.}
-#'     \item{\code{\link{mgfBeta}}}{ gives the moment generating function (MGF).}
+#'     \item \code{\link{expValBeta}}  gives the expected value.
+#'     \item \code{\link{varBeta}}  gives the variance.
+#'     \item \code{\link{kthMomentBeta}}  gives the kth moment.
+#'     \item \code{\link{expValLimBeta}}  gives the limited mean.
+#'     \item \code{\link{expValTruncBeta}}  gives the truncated mean.
+#'     \item \code{\link{stopLossBeta}}  gives the stop-loss.
+#'     \item \code{\link{meanExcessBeta}}  gives the mean excess loss.
+#'     \item \code{\link{VatRBeta}}  gives the Value-at-Risk.
+#'     \item \code{\link{TVatRBeta}}  gives the Tail Value-at-Risk.
+#'     \item \code{\link{mgfBeta}}  gives the moment generating function (MGF).
 #'   }
 #'  Invalid parameter values will return an error detailing which parameter is problematic.
 #'

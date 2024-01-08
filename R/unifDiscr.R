@@ -14,10 +14,10 @@
 #' @return
 #' Function :
 #'   \itemize{
-#'     \item{\code{\link{dUnifD}}}{ gives the probability density function (PDF).}
-#'     \item{\code{\link{pUnifD}}}{ gives the cumulative density function (CDF).}
-#'     \item{\code{\link{expValUnifD}}}{ gives the expected value.}
-#'     \item{\code{\link{varUnifD}}}{ gives the variance.}
+#'     \item \code{\link{dUnifD}}  gives the probability density function (PDF).
+#'     \item \code{\link{pUnifD}}  gives the cumulative density function (CDF).
+#'     \item \code{\link{expValUnifD}}  gives the expected value.
+#'     \item \code{\link{varUnifD}}  gives the variance.
 #'   }
 #' Invalid parameter values will return an error detailing which parameter is problematic.
 #'

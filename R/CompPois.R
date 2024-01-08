@@ -19,11 +19,11 @@
 #' @return
 #' Function :
 #'   \itemize{
-#'     \item{\code{\link{pCompPois}}}{ gives the cumulative density function.}
-#'     \item{\code{\link{expValCompPois}}}{ gives the expected value.}
-#'     \item{\code{\link{varCompPois}}}{ gives the variance.}
-#'     \item{\code{\link{TVatRCompPois}}}{ gives the Tail Value-at-Risk.}
-#'     \item{\code{\link{VatRCompPois}}}{ gives the Value-at-Risk.}
+#'     \item \code{\link{pCompPois}}  gives the cumulative density function.
+#'     \item \code{\link{expValCompPois}}  gives the expected value.
+#'     \item \code{\link{varCompPois}}  gives the variance.
+#'     \item \code{\link{TVatRCompPois}}  gives the Tail Value-at-Risk.
+#'     \item \code{\link{VatRCompPois}}  gives the Value-at-Risk.
 #'   }
 #' Returned values are approximations for the cumulative density function,
 #' TVaR, and VaR.

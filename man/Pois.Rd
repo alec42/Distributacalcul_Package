@@ -38,12 +38,12 @@ pgfPois(t, lambda)
 \value{
 Function :
   \itemize{
-    \item{\code{\link{expValPois}}}{ gives the expected value.}
-    \item{\code{\link{varPois}}}{ gives the variance.}
-    \item{\code{\link{expValTruncPois}}}{ gives the truncated mean.}
-    \item{\code{\link{TVatRPois}}}{ gives the Tail Value-at-Risk.}
-    \item{\code{\link{mgfPois}}}{ gives the moment generating function (MGF).}
-    \item{\code{\link{pgfPois}}}{ gives the probability generating function (PGF).}
+    \item \code{\link{expValPois}}  gives the expected value.
+    \item \code{\link{varPois}}  gives the variance.
+    \item \code{\link{expValTruncPois}}  gives the truncated mean.
+    \item \code{\link{TVatRPois}}  gives the Tail Value-at-Risk.
+    \item \code{\link{mgfPois}}  gives the moment generating function (MGF).
+    \item \code{\link{pgfPois}}  gives the probability generating function (PGF).
   }
  Invalid parameter values will return an error detailing which parameter is problematic.
 }
