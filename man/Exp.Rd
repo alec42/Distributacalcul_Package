@@ -70,8 +70,7 @@ Exponential distribution with rate parameter \eqn{\beta}{beta}.
 }
 \details{
 The Exponential distribution with rate parameter \eqn{\beta}{b} has density:
-  \deqn{f\left(x\right) = \frac{1}{\beta}\textrm{e}^{-\beta x}}%
-  {f(x) = b^a e^{-b x}}
+  \deqn{f\left(x\right) = \frac{1}{\beta}\textrm{e}^{-\beta x}}{f(x) = b^a e^{-b x}}
 for \eqn{x \in \mathcal{R}^+}{x > 0}, \eqn{\beta > 0}{b > 0}.
 }
 \note{
