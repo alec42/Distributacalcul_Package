@@ -194,6 +194,9 @@ Table continues below
 10. Bivariate Frank Copula
 11. Bivariate Eyraud-Farlie-Gumbel-Morgenstern (EFGM) Copula
 
+# Use of library
+- Thanks to Faculty of Science at the Universidad Nacional Autónoma de México for using the library [for homework](https://rstudio-pubs-static.s3.amazonaws.com/827502_3fb7c36f9f474c7dab7fe257b8244443.html) and [a report](https://rpubs.com/jp_6/778522)
+
 # Updates
 
 |    Date    |                            Modifications                            |
