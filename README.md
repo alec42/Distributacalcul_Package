@@ -1,4 +1,5 @@
 [![](https://www.r-pkg.org/badges/version/Distributacalcul)](https://CRAN.R-project.org/package=Distributacalcul)
+![](https://cranlogs.r-pkg.org/badges/grand-total/Distributacalcul)
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # Distributacalcul
